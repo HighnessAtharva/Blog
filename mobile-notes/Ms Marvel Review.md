@@ -1,9 +1,7 @@
 ---
 created: 2022-07-08T01:32:08+05:30
-modified: 2022-07-08T01:33:32+05:30
+modified: 2022-07-08T01:34:09+05:30
 ---
-
-# Ms Marvel Review
 
 # Ms Marvel Review
 
