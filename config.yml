@@ -1,0 +1,50 @@
+baseURL: ""
+languageCode: en-us
+title: Atharva Shah Blog
+paginate: 10
+theme: PaperMod
+
+params:
+    ShowReadingTime: true
+    ShowShareButtons: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowWordCount: true
+    ShowRssButtonInSectionTermList: true
+    UseHugoToc: true
+    disableSpecial1stPost: false
+    disableScrollToTop: false
+    comments: true
+    hidemeta: false
+    hideSummary: false
+    showtoc: true
+    tocopen: false
+
+
+    homeInfoParams:
+      Title: "Howdy \U0001F44B"
+      Content: Welcome, this is where I blog about programming, entertainment and life.
+    socialIcons:
+      - name: twitter
+        url: "https://twitter.com/HighnessAlex"
+      - name: github
+        url: "https://github.com/HighnessAtharva"
+
+
+menu:
+  main:
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: archives
+      name: Timeline
+      url: /archives/
+      weight: 30
+
+
