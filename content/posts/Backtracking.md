@@ -3,7 +3,7 @@ title: "DSA in Python - Backtracking"
 date: 2022-07-07T23:18:34+05:30
 draft: false
 cover: 
-    image: img/backtracking.jpg
+    image: dsa/backtracking.jpg
     alt: Backtracking
     caption: Learn Backtracking Algorithms in Python
 tags: ["DSA-Python"] 
@@ -12,7 +12,7 @@ tags: ["DSA-Python"]
 
 # BackTracking
 
-## [Rat in a maze Problem](https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem/1)
+## Rat in a maze Problem
 
 ```python
 """
@@ -69,7 +69,7 @@ n = len(m)
 print(findPath(m, n))
 ```
 
-## [Printing all solutions in N-Queen Problem](https://www.geeksforgeeks.org/printing-solutions-n-queen-problem/)
+## Printing all solutions in N-Queen Problem
 
 ```python
 
@@ -138,7 +138,7 @@ mat = [['–' for x in range(N)] for y in range(N)]
 nQueen(mat, 0)
 ```
 
-## [Word Break Problem using Backtracking](https://practice.geeksforgeeks.org/problems/word-break-part-2/0)
+## Word Break Problem using Backtracking
 
 ```python
 # A recursive program to print all possible partitions of a given string into dictionary words
@@ -189,7 +189,7 @@ wordBreak("ilovesamsungmobile")
  
 ```
 
-## [Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)
+## Remove Invalid Parentheses
 
 ```python
 
@@ -256,7 +256,7 @@ print(removeInvalidParentheses('(((a))) ((a))()'))
 
 ```
 
-## [Sudoku Solver](https://practice.geeksforgeeks.org/problems/solve-the-sudoku/0)
+## Sudoku Solver
 
 ```python
 
@@ -346,7 +346,7 @@ else:
     print("no solution exists ")
 ```
 
-## [m-Colouring Problem](https://practice.geeksforgeeks.org/problems/m-coloring-problem/0)
+## m-Colouring Problem
 
 ```python
 """
@@ -433,7 +433,7 @@ for _ in range(n):
 print(canPaint(nodes, n, m))
 ```
 
-## [Print all palindromic partitions of a string](https://www.geeksforgeeks.org/given-a-string-print-all-possible-palindromic-partition/)
+## Print all palindromic partitions of a string
 
 ```python
 def isPalindrome(string: str,
@@ -503,7 +503,7 @@ string = "nitin"
 allPalPartitions(string)
 ```
 
-## [Subset Sum Problem](https://practice.geeksforgeeks.org/problems/subset-sum-problem2014/1)
+## Subset Sum Problem
 
 ```python
 """
@@ -545,7 +545,7 @@ else:
     print("NO")
 ```
 
-## [The Knight’s tour problem](https://www.geeksforgeeks.org/the-knights-tour-problem-backtracking-1/)
+## The Knight’s tour problem
 
 ```python
 # Chessboard Size
@@ -629,7 +629,7 @@ def solveKTUtil(n, board, curr_x, curr_y, move_x, move_y, pos):
 solveKT(n)
 ```
 
-## [Tug of War](https://www.geeksforgeeks.org/tug-of-war/)
+## Tug of War
 
 ```python
 # function that tries every possible solution by calling itself recursively
@@ -707,7 +707,7 @@ tugOfWar(arr, n)
 
 ```
 
-## [Find shortest safe route in a path with landmines](https://www.geeksforgeeks.org/find-shortest-safe-route-in-a-path-with-landmines/)
+## Find shortest safe route in a path with landmines
 
 ```python
 # Python3 program to find shortest safe Route
@@ -854,7 +854,7 @@ mat = [
 findShortestPath(mat)
 ```
 
-## [Combinational Sum](https://practice.geeksforgeeks.org/problems/combination-sum/0)
+## Combinational Sum
 
 ```python
 """Find all combinations that sum to a given value.
@@ -917,7 +917,7 @@ for i in range(len(ans)):
 
 ```
 
-## [Find Maximum number possible by doing at-most K swaps](https://practice.geeksforgeeks.org/problems/largest-number-in-k-swaps/0)
+## Find Maximum number possible by doing at-most K swaps
 
 ```python
 """
@@ -975,7 +975,7 @@ findMaximumNum(string, k, maxm, 0)
 print(maxm[0])
 ```
 
-## [Print all permutations of a string](https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string/0)
+## Print all permutations of a string
 
 ```python
 def permute(s, answer):
@@ -997,7 +997,7 @@ permute(s, answer)
 
 ```
 
-## [Find if there is a path of more than k length from a source](https://www.geeksforgeeks.org/find-if-there-is-a-path-of-more-than-k-length-from-a-source/)
+## Find if there is a path of more than k length from a source
 
 ```python
 # Program to find if there is a simple path with weight more than k
@@ -1088,7 +1088,7 @@ print("Yes") if g.pathMoreThanK(src, k) else print("No")
 
 ```
 
-## [Longest Possible Route in a Matrix with Hurdles](https://www.geeksforgeeks.org/longest-possible-route-in-a-matrix-with-hurdles/)
+## Longest Possible Route in a Matrix with Hurdles
 
 ```python
 # Python program to find Longest Possible Route in a matrix with hurdles
@@ -1187,7 +1187,7 @@ mat = [ [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
 findLongestPath(mat, 0, 0, 1, 7)
 ```
 
-## [Print all possible paths from top left to bottom right of a mXn matrix](https://www.geeksforgeeks.org/print-all-possible-paths-from-top-left-to-bottom-right-of-a-mxn-matrix/)
+## Print all possible paths from top left to bottom right of a mXn matrix
 
 ```python
 """
@@ -1237,7 +1237,7 @@ for i in res:
 
 ```
 
-## [Partition of a set intoK subsets with equal sum](https://practice.geeksforgeeks.org/problems/partition-array-to-k-subsets/1)
+## Partition of a set intoK subsets with equal sum
 
 ```python
 """
@@ -1350,7 +1350,7 @@ else:
   print("Partitions into equal sum is not possible.\n")
 ```
 
-## [Find the K-th Permutation Sequence of first N natural numbers](https://www.geeksforgeeks.org/find-the-k-th-permutation-sequence-of-first-n-natural-numbers/)
+## Find the K-th Permutation Sequence of first N natural numbers
 
 ```python
 """

@@ -1,6 +1,6 @@
 baseURL: "https://atharvashah.netlify.app/"
 languageCode: en-us
-title: Atharva Shah Blog
+title: Atharva Shah
 paginate: 10
 theme: PaperMod
 
@@ -31,12 +31,12 @@ params:
       - name: github
         url: "https://github.com/HighnessAtharva"
 
-
+# SITE MENU
 menu:
   main:
-    - identifier: categories
-      name: Categories
-      url: /categories/
+    - identifier: search
+      name: Search
+      url: /search/
       weight: 10
     - identifier: tags
       name: Tags
@@ -47,4 +47,9 @@ menu:
       url: /archives/
       weight: 30
 
-
+# REQUIRED FOR SEARCH FUNCTIONALITY.
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary

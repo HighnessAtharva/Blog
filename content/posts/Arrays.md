@@ -3,7 +3,7 @@ title: "DSA in Python - Arrays"
 date: 2022-07-07T23:18:34+05:30
 draft: false
 cover: 
-    image: img/array.jpg
+    image: dsa/array.jpg
     alt: Arrays
     caption: Learn Array Algorithms in Python
 tags: ["DSA-Python"] 
@@ -12,7 +12,7 @@ tags: ["DSA-Python"]
 
 # Array
 
-## [Reverse the array](https://practice.geeksforgeeks.org/problems/reverse-an-array/0)
+## Reverse the array
 
 ```python
 def reverseArray(A: list):
@@ -28,7 +28,7 @@ reverseArray(A)
 print("After reversing:", A)
 ```
 
-## [Find the maximum and minimum element in an array](https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1)
+## Find the maximum and minimum element in an array
 
 ```python
 def getMinMax(arr: list, n: int):
@@ -68,7 +68,7 @@ if __name__ == "__main__":
  
 ```
 
-## [Find the "Kth" max and min element of an array](https://practice.geeksforgeeks.org/problems/kth-smallest-element/0)
+## Find the "Kth" max and min element of an array
 
 ```python
 import sys
@@ -108,7 +108,7 @@ k = 3
 print("K'th smallest element is", kthSmallest(nums, k))
 ```
 
-## [Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo](https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s/0)
+## Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo
 
 ```python
 def sort012(arr):
@@ -134,7 +134,7 @@ sort012(A)
 print("After sorting:", A)
 ```
 
-## [Move all the negative elements to one side of the array](https://practice.geeksforgeeks.org/problems/move-all-negative-elements-to-end1813/1)
+## Move all the negative elements to one side of the array
 
 ```python
 def RearrangePosNeg(arr):
@@ -165,7 +165,7 @@ if __name__ == "__main__":
  print(arr)
 ```
 
-## [Find the Union and Intersection of the two sorted arrays.](https://practice.geeksforgeeks.org/problems/union-of-two-arrays/0)
+## Find the Union and Intersection of the two sorted arrays.
 
 ```python
 def printUnion(arr1, arr2, n1, n2):
@@ -207,7 +207,7 @@ printIntersection(arr1, arr2, n1, n2)
 
 ```
 
-## [Write a program to cyclically rotate an array by one.](https://practice.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one/0)
+## Write a program to cyclically rotate an array by one.
 
 ```python
 def rotate(arr):
@@ -224,9 +224,7 @@ rotate(arr)
 print(arr)
 ```
 
-## [Find Largest sum contiguous Subarray [V. IMP] / Kadne's Algorithm](https://practice.geeksforgeeks.org/problems/kadanes-algorithm/0)
-
-## <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/kadane-Algorithm.png" style="zoom: 50%;" />
+## Find Largest sum contiguous Subarray [V. IMP] / Kadne's Algorithm
 
 ```python
 def maxSubArraySum(a):
@@ -243,7 +241,7 @@ a = [-2, -3, 4, -1, -2, 1, 5, -3]
 print ("Maximum contiguous sum is" , maxSubArraySum(a))
 ```
 
-## [Minimise the maximum difference between heights [V.IMP]](https://practice.geeksforgeeks.org/problems/minimize-the-heights3351/1)
+## Minimise the maximum difference between heights 
 
 ```python
 """
@@ -278,7 +276,7 @@ arr = [7, 4, 8, 8, 8, 9] # height of each array
 print("Maximum difference of height between all towers (minimized as much as possible) is", getMinDiff(arr, k))
 ```
 
-## [Minimum no. of Jumps to reach end of an array](https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps/0)
+## Minimum no. of Jumps to reach end of an array
 
 ```python
 """
@@ -339,7 +337,7 @@ size = len(arr)
 print("Minimum number of jumps to reach end is: ", minJumps(arr, size))
 ```
 
-## [Find duplicate in an array of N+1 Integers](https://leetcode.com/problems/find-the-duplicate-number/)
+## Find duplicate in an array of N+1 Integers
 
 ```python
 """
@@ -354,7 +352,7 @@ A=[3,1,2,4,2]
 print(findDuplicate(A))
 ```
 
-## [Merge 2 sorted arrays without using Extra space.](https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays5135/1)
+## Merge 2 sorted arrays without using Extra space.
 
 ```python
 def merge(X, Y):
@@ -391,7 +389,7 @@ print("X:", X)
 print("Y:", Y)
 ```
 
-## [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+## Merge Intervals
 
 ```python
 def mergeIntervals(arr):
@@ -423,7 +421,7 @@ arr = [[6, 8], [1, 3], [2, 4], [4, 7]]
 mergeIntervals(arr)
 ```
 
-## [Next Permutation](https://leetcode.com/problems/next-permutation/)
+## Next Permutation
 
 ```python
 """
@@ -452,7 +450,7 @@ def nextPermutation(arr):
 print(nextPermutation("218765"))
 ```
 
-## [Count Inversion](https://practice.geeksforgeeks.org/problems/inversion-of-array/0)
+## Count Inversion
 
 ```python
 def mergeSort(arr, n):
@@ -529,7 +527,7 @@ result = mergeSort(arr, n)
 print("Number of inversions are", result)
 ```
 
-## [Best time to buy and Sell stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+## Best time to buy and Sell stock
 
 ```python
 """
@@ -548,7 +546,7 @@ def maxProfit(prices):
 print(maxProfit([7,1,5,3,6,4]))
 ```
 
-## [Find all pairs on integer array whose sum is equal to given number](https://practice.geeksforgeeks.org/problems/count-pairs-with-given-sum5022/1)
+## Find all pairs on integer array whose sum is equal to given number
 
 ```python
 """
@@ -574,7 +572,7 @@ sum = 6
 print('Count of pairs is', getPairsCount(arr, n, sum))
 ```
 
-## [Find common elements In 3 sorted arrays](https://practice.geeksforgeeks.org/problems/common-elements1132/1)
+## Find common elements In 3 sorted arrays
 
 ```python
 """
@@ -624,7 +622,7 @@ findCommon(ar1, ar2, ar3, n1, n2, n3)
 
 ```
 
-## [Rearrange the array in alternating positive and negative items with O(1) extra space](https://practice.geeksforgeeks.org/problems/array-of-alternate-ve-and-ve-nos1401/1)
+## Rearrange the array in alternating positive and negative items with O(1) extra space
 
 ```python
 def rearrange(arr, n):
@@ -664,7 +662,7 @@ rearrange(arr, n)
 print("Rearranged array is", arr)
 ```
 
-## [Find if there is any subarray with sum equal to 0](https://practice.geeksforgeeks.org/problems/subarray-with-0-sum/0)
+## Find if there is any subarray with sum equal to 0
 
 ```python
 """
@@ -698,7 +696,7 @@ def subArrayExists(arr):
 print(subArrayExists([4, 2, -3, 1, 6]))
 ```
 
-## [Find factorial of a large number](https://practice.geeksforgeeks.org/problems/factorials-of-large-numbers/0)
+## Find factorial of a large number
 
 ```python
 def range_prod(low,high):
@@ -717,7 +715,7 @@ def factorial(n):
 print(factorial(12))
 ```
 
-## [Find maximum product subarray](https://practice.geeksforgeeks.org/problems/maximum-product-subarray3604/1)
+## Find maximum product subarray
 
 ```python
 def maxProduct(arr):
@@ -741,7 +739,7 @@ print(maxProduct([6, -3, -10, 0, 2]))
 
 ```
 
-## [Find longest consecutive subsequence](https://practice.geeksforgeeks.org/problems/longest-consecutive-subsequence/0)
+## Find longest consecutive subsequence
 
 ```python
 """
@@ -778,7 +776,7 @@ def findLongestConseqSubseq(arr):
 print(findLongestConseqSubseq([1, 9, 3, 10, 4, 20, 2]))
 ```
 
-## [Given an array of size n and a number k, find all elements that appear more than " n/k " times.](https://leetcode.com/problems/majority-element-ii/)
+## Given an array of size n and a number k, find all elements that appear more than " n/k " times.
 
 ```python
 """
@@ -810,7 +808,7 @@ def majorityElement(nums):
 print(majorityElement([3,2,3]))
 ```
 
-## [Maximum profit by buying and selling a share atmost twice](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)
+## Maximum profit by buying and selling a share atmost twice
 
 ```python
 """
@@ -832,7 +830,7 @@ def maxProfit(prices):
 print(maxProfit([3,3,5,0,0,3,1,4]))
 ```
 
-## [Find whether an array is a subset of another array](https://practice.geeksforgeeks.org/problems/array-subset-of-another-array/0)
+## Find whether an array is a subset of another array
 
 ```python
 def isSubset( a1, a2):
@@ -853,7 +851,7 @@ b=[11, 3, 7, 1]
 print(isSubset(a, b))
 ```
 
-## [Find the triplet that sum to a given value](https://practice.geeksforgeeks.org/problems/triplet-sum-in-array/0)
+## Find the triplet that sum to a given value
 
 ```python
 def findTriplets(arr, X): 
@@ -875,7 +873,7 @@ sum= 3
 findTriplets(arr, sum) 
 ```
 
-## [Trapping Rain water problem](https://practice.geeksforgeeks.org/problems/trapping-rain-water/0)
+## Trapping Rain water problem
 
 ```python
 def trap(heights):
@@ -905,7 +903,7 @@ heights = [7, 0, 4, 2, 5, 0, 6, 4, 0, 5]
 print("The maximum amount of water that can be trapped is", trap(heights))
 ```
 
-## [Chocolate Distribution problem](https://practice.geeksforgeeks.org/problems/chocolate-distribution-problem/0)
+## Chocolate Distribution problem
 
 ```python
 """
@@ -945,7 +943,7 @@ print("Minimum difference is", findMinDiff(arr, m))
 
 ```
 
-## [Smallest Subarray with sum greater than a given value](https://leetcode.com/problems/minimum-size-subarray-sum/)
+## Smallest Subarray with sum greater than a given value
 
 ```python
 """
@@ -967,7 +965,7 @@ sum=7
 print(minSubArrayLen([2,3,1,2,4,3], sum))
 ```
 
-## [Three way partitioning of an array around a given value](https://practice.geeksforgeeks.org/problems/three-way-partitioning/1)
+## Three way partitioning of an array around a given value
 
 ```python
 def threeWayPartition(arr, lowVal, highVal):
@@ -1004,7 +1002,7 @@ print(arr)
 
 ```
 
-## [Minimum swaps required bring elements less equal K together](https://practice.geeksforgeeks.org/problems/minimum-swaps-required-to-bring-all-elements-less-than-or-equal-to-k-together/0)
+## Minimum swaps required bring elements less equal K together
 
 ```python
 """
@@ -1056,7 +1054,7 @@ k = 5
 print (minSwap(arr1, k))
 ```
 
-## [Minimum no. of operations required to make an array palindrome](https://app.glider.ai/practice/problem/basic-programming/make-array-palindrome/problem)
+## Minimum no. of operations required to make an array palindrome
 
 ```python
 """
@@ -1098,7 +1096,7 @@ min = findMin(arr)
 print("The minimum number of operations required:", min)
 ```
 
-## [Median of 2 sorted arrays of different size](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+## Median of 2 sorted arrays of different size
 
 ```python
 def Solution(arr1, arr2):
