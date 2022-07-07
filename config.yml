@@ -1,4 +1,4 @@
-baseURL: ""
+baseURL: "https://atharvashah.netlify.app/"
 languageCode: en-us
 title: Atharva Shah Blog
 paginate: 10
