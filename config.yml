@@ -4,7 +4,8 @@ title: Atharva Shah
 paginate: 5
 theme: PaperMod
 
-googleAnalytics: UA-322427603-1
+googleAnalytics: UA-216150796-2 #This will stop tracking in July 2023. Just migrate to Analytics 4 and make changes in hugo. Google it. You'll be fine. 
+
 # COMMENTS
 disqusShortname: https-atharvashah-netlify-app
 
