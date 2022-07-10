@@ -9911,6 +9911,310 @@ test("ACA", "DAS", "DAACSA")
 
 # Searching & Sorting
 
+## Bubble Sort
+
+```python
+def bubble_sort(array):
+    n=len(array)
+    for i in range(n):
+        for j in range(n-i-1):
+            if array[j] > array[j + 1]:
+                array[j], array[j + 1] = array[j + 1], array[j] 
+
+
+array=[5,2,3,1,4, -99, 0]
+bubble_sort(array)
+print(array)
+```
+
+## Selection Sort
+```python
+def selection_sort(array):
+    global iterations
+    iterations = 0
+    for i in range(len(array)):
+        minimum_index = i
+        for j in range(i + 1, len(array)):
+            iterations += 1
+            if array[minimum_index] > array[j]:
+                minimum_index = j
+        
+        # Swap the found minimum element with  the first element
+        if minimum_index != i:
+            array[i], array[minimum_index] = array[minimum_index], array[i]
+
+array=[5,2,3,1,4, -99, 0]
+selection_sort(array)
+print(array)
+```
+
+## Insertion Sort
+```python
+def insertion_sort(array):
+    global iterations
+    iterations = 0
+    for i in range(1, len(array)):
+        current_value = array[i]
+        for j in range(i - 1, -1, -1):
+            iterations += 1
+            if array[j] > current_value:
+                array[j], array[j + 1] = array[j + 1], array[j] # swap
+            else:
+                array[j + 1] = current_value
+                break
+
+array=[5,2,3,1,4, -99, 0]
+insertion_sort(array)
+print(array)
+```
+
+## Merge Sort
+```python
+def merge_sort(array):
+    if len(array) < 2:
+        return array
+    mid = len(array) // 2
+    left = merge_sort(array[:mid])
+    right = merge_sort(array[mid:])
+    return merge(left, right)
+
+def merge(left, right):
+    result = []
+    i, j = 0, 0
+    while i < len(left) or j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+        if i == len(left) or j == len(right):
+            result.extend(left[i:] or right[j:])
+            break
+    return result
+
+array=[5,2,3,1,4, -99, 0]
+print(merge_sort(array))
+```
+
+## Quick Sort
+```python
+def partition(array, low, high):
+    i = low - 1            # index of smaller element
+    pivot = array[high]    # pivot 
+    
+    for j in range(low, high):
+        # If current element is smaller than the pivot
+        
+        if array[j] < pivot:
+        # increment index of smaller element
+        
+            i += 1
+            array[i], array[j] = array[j], array[i]
+            
+    array[i + 1], array[high] = array[high], array[i + 1]
+    return i + 1
+
+def quick_sort(array, low, high):
+    if low < high:
+        # pi is partitioning index, arr[p] is now at right place 
+        temp = partition(array, low, high)
+        
+        # Separately sort elements before partition and after partition 
+        quick_sort(array, low, temp - 1)
+        quick_sort(array, temp + 1, high)
+
+array=[5,2,3,1,4, -99, 0]
+quick_sort(array, 0, len(array)-1)
+print(array)
+```
+
+## Counting Sort
+```python
+# Counting sort in Python programming
+
+
+def countingSort(array):
+    size = len(array)
+    output = [0] * size
+
+    # Initialize count array
+    count = [0] * 10
+
+    # Store the count of each elements in count array
+    for i in range(size):
+        count[array[i]] += 1
+
+    # Store the cummulative count
+    for i in range(1, 10):
+        count[i] += count[i - 1]
+
+    # Find the index of each element of the original array in count array
+    # place the elements in output array
+    i = size - 1
+    while i >= 0:
+        output[count[array[i]] - 1] = array[i]
+        count[array[i]] -= 1
+        i -= 1
+
+    # Copy the sorted elements into original array
+    for i in range(size):
+        array[i] = output[i]
+
+
+array = [4,0,2, 2, 8, 3, 3, 1]
+countingSort(array)
+print(array)
+```
+
+## Heap Sort
+```python
+def heapify(nums, heap_size, root_index):
+    # Assume the index of the largest element is the root index
+    largest = root_index
+    left_child = (2 * root_index) + 1
+    right_child = (2 * root_index) + 2
+
+    if left_child < heap_size and nums[left_child] > nums[largest]:
+        largest = left_child
+
+    if right_child < heap_size and nums[right_child] > nums[largest]:
+        largest = right_child
+
+    if largest != root_index:
+        nums[root_index], nums[largest] = nums[largest], nums[root_index]
+        # Heapify the new root element to ensure it's the largest
+        heapify(nums, heap_size, largest)
+
+
+def heap_sort(nums):
+    n = len(nums)
+    
+    for i in range(n, -1, -1):
+        heapify(nums, n, i)
+
+    # Move the root of the max heap to the end of
+    for i in range(n - 1, 0, -1):
+        nums[i], nums[0] = nums[0], nums[i]
+        heapify(nums, i, 0)
+
+random_list_of_nums = [35, 12, 43, 8, 51]
+heap_sort(random_list_of_nums)
+print(random_list_of_nums)
+```
+
+## Radix Sort
+```python
+from math import log10
+from random import randint
+
+def get_num(num, base, pos):
+  return (num // base ** pos) % base
+
+def prefix_sum(array):
+  for i in range(1, len(array)):
+    array[i] = array[i] + array[i-1]
+  return array
+
+def radixsort(l, base=10):
+  passes = int(log10(max(l))+1)
+  output = [0] * len(l)
+
+  for pos in range(passes):
+    count = [0] * base
+
+    for i in l:
+      digit = get_num(i, base, pos)
+      count[digit] +=1
+
+    count = prefix_sum(count)
+
+    for i in reversed(l):
+      digit = get_num(i, base, pos)
+      count[digit] -= 1
+      new_pos = count[digit]
+      output[new_pos] = i
+
+    l = list(output)
+  return output
+
+l = [randint(1, 99999) for _ in range(100)]
+sortedarr = radixsort(l)
+print(sortedarr)
+```
+
+## Linear Search
+
+```python
+def linearSearch(array, n, x):
+    for i in range(n):
+        if (array[i] == x):
+            return i
+    return -1
+
+array = [2, 4, 0, 1, 9]
+x = 1
+n = len(array)
+result = linearSearch(array, n, x)
+if(result == -1):
+    print("Element not found")
+else:
+    print("Element found at index: ", result)
+```
+
+## Binary Search
+
+```python
+def binarySearch(array, x, low, high):
+    while low <= high:
+        mid = low + (high - low)//2
+        if array[mid] == x:
+            return mid
+        elif array[mid] < x:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+
+array = [3, 4, 5, 6, 7, 8, 9]
+x = 4
+result = binarySearch(array, x, 0, len(array)-1)
+if result != -1:
+    print(f"Element is present at index {str(result)}")
+else:
+    print("Not found")
+
+```
+## Binary Search
+
+```python
+# Function to determine if target exists in the sorted list `A` or not
+# using an interpolation search algorithm
+def interpolationSearch(A, target):
+    if not A:
+        return -1
+    (left, right) = (0, len(A) - 1)
+    while A[right] != A[left] and A[left] <= target <= A[right]:
+        mid = left + (target - A[left]) * (right - left) // (A[right] - A[left])
+        if target == A[mid]:
+            return mid
+        elif target < A[mid]:
+            right = mid - 1
+        else:
+            left = mid + 1
+    if target == A[left]:
+        return left
+    return -1
+ 
+A = [2, 5, 6, 8, 9, 10]
+key = 5
+index = interpolationSearch(A, key)
+if index != -1:
+    print('Element found at index', index)
+else:
+    print('Element found not in the list')
+```
+
 ## [Find first and last positions of an element in a sorted array](https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x/0)
 
 ```python
