@@ -3,7 +3,7 @@
 - [x] Binary Trees
 - [x] Bit Manipulation
 - [x] Binary Search Trees
-- [ ] Dynamic Programming
+- [x] Dynamic Programming
 - [ ] Graph
 - [ ] Greedy
 - [ ] Heap
@@ -7949,127 +7949,1096 @@ print("Size of the Largest Independent Set is ", liss(root))
 ## [Partition problem](https://practice.geeksforgeeks.org/problems/subset-sum-problem2014/1)
 
 ```python
-
+def isPossible(elements, target):
+    dp = [False]*(target+1)
+    dp[0] = True
+    for ele in elements:
+        for j in range(target, ele - 1, -1):
+            if dp[j - ele]:
+                dp[j] = True
+    return dp[target]
+ 
+arr = [6, 2, 5]
+target = 7
+if isPossible(arr, target):
+    print("YES")
+else:
+    print("NO")
 ```
 
 ## [Longest Palindromic Subsequence](https://practice.geeksforgeeks.org/problems/longest-palindromic-subsequence-1612327878/1/)
 
 ```python
 
+"""   
+As another example, if the given sequence is “BBABCBCAB”, then the output should be 7 as “BABCBAB” is the longest palindromic subsequence in it. “BBBBB” and “BBCBB” are also palindromic subsequences of the given sequence, but not the longest ones.
+"""
+
+dp = [[-1 for _ in range(1001)] for _ in range(1001)]
+def lps(s1, s2, n1, n2):
+	if (n1 == 0 or n2 == 0):
+		return 0
+
+	if (dp[n1][n2] != -1):
+		return dp[n1][n2]
+
+	if (s1[n1 - 1] == s2[n2 - 1]):
+		dp[n1][n2] = 1 + lps(s1, s2, n1 - 1, n2 - 1)
+	else:
+		dp[n1][n2] = max(lps(s1, s2, n1 - 1, n2), lps(s1, s2, n1, n2 - 1))
+
+	return dp[n1][n2]
+
+
+seq = "GEEKSFORGEEKS"
+n = len(seq)
+s2 = seq
+s2 = s2[::-1]
+print(f"The length of the LPS is {lps(s2, seq, n, n)}")
 ```
 
 ## [Count All Palindromic Subsequence in a given String](https://practice.geeksforgeeks.org/problems/count-palindromic-subsequences/1)
 
 ```python
+"""   
+Input : str = "abcd"
+Output : 4
+Explanation :- palindromic  subsequence are : "a" ,"b", "c" ,"d" 
+
+Input : str = "aab"
+Output : 4
+Explanation :- palindromic subsequence are :"a", "a", "b", "aa"
+
+Input : str = "aaaa"
+Output : 15
+"""
+
+def countPS(i, j):
+	if(i > j):
+		return 0
+
+	if(dp[i][j] != -1):
+		return dp[i][j]
+
+	if (i == j):
+		dp[i][j] = 1
+	elif str[i] == str[j]:
+		dp[i][j] = (countPS(i + 1, j) + countPS(i, j - 1) + 1)
+	else:
+		dp[i][j] = (countPS(i + 1, j) + countPS(i, j - 1) - countPS(i + 1, j - 1))
+
+	return dp[i][j]
+
+str = "abcb" # remember to use variable name str otherwise program will fail
+dp = [[-1 for _ in range(1000)] for _ in range(1000)]
+n = len(str)
+print("Total palindromic subsequence are :", countPS(0, n - 1))
 
 ```
 
 ## [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
 
 ```python
+"""   
+Suppose we have a string S. We have to find the longest palindromic substring in S. We are assuming that the length of the string S is 1000. So if the string is “BABAC”, then the longest palindromic substring is “BAB”.
+"""
 
+def longestPalindrome( s):
+   dp = [[False for _ in range(len(s))] for _ in range(len(s))]
+   for i in range(len(s)):
+      dp[i][i] = True
+   max_length = 1
+   start = 0
+   for l in range(2,len(s)+1):
+      for i in range(len(s)-l+1):
+         end = i+l
+         if l==2:
+            if s[i] == s[end-1]:
+               dp[i][end-1]=True
+               max_length = l
+               start = i
+         elif s[i] == s[end-1] and dp[i+1][end-2]:
+            dp[i][end-1]=True
+            max_length = l
+            start = i
+   return s[start:start+max_length]
+
+print(longestPalindrome("ABBABBC"))
 ```
 
 ## [Longest alternating subsequence](https://practice.geeksforgeeks.org/problems/longest-alternating-subsequence/0)
 
 ```python
+"""   
+Input: arr[] = {1, 5, 4}
+Output: 3
+The whole arrays is of the form  x1 < x2 > x3 
+
+Input: arr[] = {1, 4, 5}
+Output: 2
+All subsequences of length 2 are either of the form 
+x1 < x2; or x1 > x2
+
+Input: arr[] = {10, 22, 9, 33, 49, 50, 31, 60}
+Output: 6
+The subsequences {10, 22, 9, 33, 31, 60} or
+{10, 22, 9, 49, 31, 60} or {10, 22, 9, 50, 31, 60}
+are longest subsequence of length 6.
+"""
+
+def LAS(arr, n):
+	# "inc" and "dec" initialized as 1 as single element is still LAS
+	inc = 1
+	dec = 1
+	
+	# Iterate from second element
+	for i in range(1,n):
+		if (arr[i] > arr[i-1]):
+			# "inc" changes iff "dec" changes
+			inc = dec + 1
+			
+		elif (arr[i] < arr[i-1]):
+			# "dec" changes iff "inc" changes
+			dec = inc + 1
+			
+	# Return the maximum length
+	return max(inc, dec)
+
+arr = [10, 22, 9, 33, 49, 50, 31, 60]
+n = len(arr)
+print(LAS(arr, n))
 
 ```
 
 ## [Weighted Job Scheduling](https://www.geeksforgeeks.org/weighted-job-scheduling/)
 
 ```python
+"""   
+Given N jobs where every job is represented by following three elements of it.
 
+Start Time
+Finish Time
+Profit or Value Associated (>= 0)
+Find the maximum profit subset of jobs such that no two jobs in the subset overlap. 
+
+Example: 
+
+Input: Number of Jobs n = 4
+       Job Details {Start Time, Finish Time, Profit}
+       Job 1:  {1, 2, 50} 
+       Job 2:  {3, 5, 20}
+       Job 3:  {6, 19, 100}
+       Job 4:  {2, 100, 200}
+Output: The maximum profit is 250.
+We can get the maximum profit by scheduling jobs 1 and 4.
+Note that there is longer schedules possible Jobs 1, 2 and 3 
+but the profit with this schedule is 20+50+100 which is less than 250.
+"""
+
+# Importing the following module to sort array based on our custom comparison function
+from functools import cmp_to_key
+
+# A job has start time, finish time and profit
+class Job:
+	def __init__(self, start, finish, profit):
+		self.start = start
+		self.finish = finish
+		self.profit = profit
+
+# A utility function that is used for sorting events according to finish time
+def jobComparator(s1, s2):
+	return s1.finish < s2.finish
+
+# Find the latest job (in sorted array) that doesn't conflict with the job[i]. If there is no compatible job, then it returns -1
+def latestNonConflict(arr, i):
+	for j in range(i - 1, -1, -1):
+		if arr[j].finish <= arr[i - 1].start:
+			return j
+	return -1
+
+# A recursive function that returns the maximum possible profit from given array of jobs. The array of jobs must be sorted according to finish time
+def findMaxProfitRec(arr, n):
+	# Base case
+	if n == 1:
+		return arr[n - 1].profit
+
+	# Find profit when current job is included
+	inclProf = arr[n - 1].profit
+	i = latestNonConflict(arr, n)
+	
+	if i != -1:
+		inclProf += findMaxProfitRec(arr, i + 1)
+
+	# Find profit when current job is excluded
+	exclProf = findMaxProfitRec(arr, n - 1)
+	return max(inclProf, exclProf)
+
+# The main function that returns the maximum possible profit from given array of jobs
+def findMaxProfit(arr, n):
+	
+	# Sort jobs according to finish time
+	arr = sorted(arr, key = cmp_to_key(jobComparator))
+	return findMaxProfitRec(arr, n)
+
+values = [ (3, 10, 20), (1, 2, 50), (6, 19, 100), (2, 100, 200) ]
+arr = [Job(i[0], i[1], i[2]) for i in values]
+n = len(arr)
+print("The optimal profit is", findMaxProfit(arr, n))
 ```
 
 ## [Coin game winner where every player has three choices](https://www.geeksforgeeks.org/coin-game-winner-every-player-three-choices/)
 
 ```python
+"""   
+A and B are playing a game. At the beginning there are n coins. Given two more numbers x and y. In each move a player can pick x or y or 1 coins. A always starts the game. The player who picks the last coin wins the game or the person who is not able to pick any coin loses the game. For a given value of n, find whether A will win the game or not if both are playing optimally.
 
+Examples: 
+
+Input :  n = 5, x = 3, y = 4
+Output : A
+There are 5 coins, every player can pick 1 or
+3 or 4 coins on his/her turn.
+A can win by picking 3 coins in first chance.
+Now 2 coins will be left so B will pick one 
+coin and now A can win by picking the last coin.
+
+Input : 2 3 4
+Output : B
+"""
+
+# To find winner of game
+def findWinner(x, y, n):
+	
+	# To store results
+	dp = [0 for _ in range(n + 1)]
+
+	# Initial values
+	dp[0] = False
+	dp[1] = True
+
+	# Computing other values.
+	for i in range(2, n + 1):
+		# If A losses any of i-1 or i-x or i-y game then he will definitely win game i
+		if i >= 1 and not dp[i - 1]:
+			dp[i] = True
+		elif (i - x >= 0 and not dp[i - x]):
+			dp[i] = True
+		elif (i - y >= 0 and not dp[i - y]):
+			dp[i] = True
+		else:
+			dp[i] = False
+
+	# If dp[n] is true then A will game otherwise he losses
+	return dp[n]
+
+x = 3; y = 4; n = 5
+if (findWinner(x, y, n)):
+	print('A')
+else:
+	print('B')
 ```
 
 ## [Count Derangements (Permutation such that no element appears in its original position) [ IMPORTANT ]](https://www.geeksforgeeks.org/count-derangements-permutation-such-that-no-element-appears-in-its-original-position/)
 
 ```python
+"""   
+A and B are playing a game. At the beginning there are n coins. Given two more numbers x and y. In each move a player can pick x or y or 1 coins. A always starts the game. The player who picks the last coin wins the game or the person who is not able to pick any coin loses the game. For a given value of n, find whether A will win the game or not if both are playing optimally.
 
+Examples: 
+
+A Derangement is a permutation of n elements, such that no element appears in its original position. For example, a derangement of {0, 1, 2, 3} is {2, 3, 1, 0}.
+Given a number n, find the total number of Derangements of a set of n elements.
+
+Examples : 
+
+Input: n = 2
+Output: 1
+For two elements say {0, 1}, there is only one 
+possible derangement {1, 0}
+
+Input: n = 3
+Output: 2
+For three elements say {0, 1, 2}, there are two 
+possible derangements {2, 0, 1} and {1, 2, 0}
+"""
+
+def countDer(n):
+	if n in [1, 2]:
+		return n-1
+	a = 0
+	b = 1
+	for i in range(3, n + 1):
+		cur = (i-1)*(a+b)
+		a = b
+		b = cur
+	return b
+
+n = 4
+print("Count of Derangements is ", countDer(n))
 ```
 
 ## [Maximum profit by buying and selling a share at most twice [ IMP ]](https://www.geeksforgeeks.org/maximum-profit-by-buying-and-selling-a-share-at-most-twice/)
 
 ```python
+"""   
+In daily share trading, a buyer buys shares in the morning and sells them on the same day. If the trader is allowed to make at most 2 transactions in a day, whereas the second transaction can only start after the first one is complete (Buy->sell->Buy->sell). Given stock prices throughout the day, find out the maximum profit that a share trader could have made.
 
+Examples: 
+
+Input:   price[] = {10, 22, 5, 75, 65, 80}
+Output:  87
+Trader earns 87 as sum of 12, 75 
+Buy at 10, sell at 22, 
+Buy at 5 and sell at 80
+Input:   price[] = {2, 30, 15, 10, 8, 25, 80}
+Output:  100
+Trader earns 100 as sum of 28 and 72
+Buy at price 2, sell at 30, buy at 8 and sell at 80
+Input:   price[] = {100, 30, 15, 10, 8, 25, 80};
+Output:  72
+Buy at price 8 and sell at 80.
+Input:   price[] = {90, 80, 70, 60, 50}
+Output:  0
+Not possible to earn.
+"""
+
+import sys
+def maxtwobuysell(arr, size):
+	first_buy = -sys.maxsize;
+	first_sell = 0;
+	second_buy = -sys.maxsize;
+	second_sell = 0;
+
+	for i in range(size):
+		first_buy = max(first_buy, -arr[i]);
+		first_sell = max(first_sell, first_buy + arr[i]);
+		second_buy = max(second_buy, first_sell - arr[i]);
+		second_sell = max(second_sell, second_buy + arr[i]);
+	return second_sell;
+
+arr = [ 2, 30, 15, 10, 8, 25, 80 ];
+size = len(arr);
+print(maxtwobuysell(arr, size));
 ```
 
 ## [Optimal Strategy for a Game](https://practice.geeksforgeeks.org/problems/optimal-strategy-for-a-game/0)
 
 ```python
+"""   
+Consider a row of n coins of values v1 . . . vn, where n is even. We play a game against an opponent by alternating turns. In each turn, a player selects either the first or last coin from the row, removes it from the row permanently, and receives the value of the coin. Determine the maximum possible amount of money we can definitely win if we move first.
+Note: The opponent is as clever as the user.
 
+Let us understand the problem with few examples:  
+
+5, 3, 7, 10 : The user collects maximum value as 15(10 + 5)
+8, 15, 3, 7 : The user collects maximum value as 22(7 + 15)
+Does choosing the best at each move gives an optimal solution? No. 
+In the second example, this is how the game can be finished:
+
+> User chooses 8. 
+> Opponent chooses 15. 
+> User chooses 7. 
+> Opponent chooses 3. 
+Total value collected by user is 15(8 + 7)
+> User chooses 7. 
+> Opponent chooses 8. 
+> User chooses 15. 
+> Opponent chooses 3. 
+Total value collected by user is 22(7 + 15)
+So if the user follows the second game state, the maximum value can be collected although the first move is not the best. 
+"""
+def optimalStrategyOfGame(arr, n):
+	memo = {}
+	# recursive top down memoized solution
+	def solve(i, j):
+		if i > j or i >= n or j < 0:
+			return 0
+
+		k = (i, j)
+		if k in memo:
+			return memo[k]
+
+		# if the user chooses ith coin, the opponent can choose from i+1th or jth coin.
+		# if he chooses i+1th coin, user is left with [i+2,j] range.
+		# if opp chooses jth coin, then user is left with [i+1,j-1] range to choose from.
+		# Also opponent tries to choose in such a way that the user has minimum value left.
+		option1 = arr[i] + min(solve(i+2, j), solve(i+1, j-1))
+
+		# if user chooses jth coin, opponent can choose ith coin or j-1th coin.
+		# if opp chooses ith coin, user can choose in range [i+1,j-1].
+		# if opp chooses j-1th coin, user can choose in range [i,j-2].
+		option2 = arr[j] + min(solve(i+1, j-1), solve(i, j-2))
+
+		# since the user wants to get maximum money
+		memo[k] = max(option1, option2)
+		return memo[k]
+
+	return solve(0, n-1)
+
+arr1 = [8, 15, 3, 7]
+n = len(arr1)
+print(optimalStrategyOfGame(arr1, n))
+ 
+arr2 = [2, 2, 2, 2]
+n = len(arr2)
+print(optimalStrategyOfGame(arr2, n))
+ 
+arr3 = [20, 30, 2, 2, 2, 10]
+n = len(arr3)
+print(optimalStrategyOfGame(arr3, n))
 ```
 
 ## [Optimal Binary Search Tree](https://www.geeksforgeeks.org/optimal-binary-search-tree-dp-24/)
 
 ```python
+"""   
+Given a sorted array key [0.. n-1] of search keys and an array freq[0.. n-1] of frequency counts, where freq[i] is the number of searches for keys[i]. Construct a binary search tree of all keys such that the total cost of all the searches is as small as possible.
+Let us first define the cost of a BST. The cost of a BST node is the level of that node multiplied by its frequency. The level of the root is 1.
 
+Examples:  
+
+Input:  keys[] = {10, 12}, freq[] = {34, 50}
+There can be following two possible BSTs 
+        10                       12
+          \                     / 
+           12                 10
+          I                     II
+Frequency of searches of 10 and 12 are 34 and 50 respectively.
+The cost of tree I is 34*1 + 50*2 = 134
+The cost of tree II is 50*1 + 34*2 = 118 
+"""
+
+def optCost(freq, i, j):
+	if j < i:	 # no elements in this subarray
+		return 0
+	if j == i:	 # one element in this subarray
+		return freq[i]
+	
+	# Get sum of freq[i], freq[i+1], ... freq[j]
+	fsum = Sum(freq, i, j)
+	
+	# Initialize minimum value
+	Min = float('inf')
+	
+	# One by one consider all elements as root and recursively find cost of the BST, compare the cost with min and update min if needed
+	for r in range(i, j + 1):
+		cost = (optCost(freq, i, r - 1) +
+				optCost(freq, r + 1, j))
+		if cost < Min:
+			Min = cost
+	
+	# Return minimum value
+	return Min + fsum
+
+# The main function that calculates minimum cost of a Binary Search Tree. It mainly uses optCost() to find the optimal cost.
+def optimalSearchTree(keys, freq, n):
+	
+	# Here array keys[] is assumed to be sorted in increasing order. If keys[]
+	# is not sorted, then add code to sort keys, and rearrange freq[] accordingly.
+	return optCost(freq, 0, n - 1)
+
+# A utility function to get sum of array elements freq[i] to freq[j]
+def Sum(freq, i, j):
+	return sum(freq[k] for k in range(i, j + 1))
+
+if __name__ == '__main__':
+	keys = [10, 12, 20]
+	freq = [34, 8, 50]
+	n = len(keys)
+	print("Cost of Optimal BST is",
+		optimalSearchTree(keys, freq, n))
+        
 ```
 
 ## [Palindrome PartitioningProblem](https://practice.geeksforgeeks.org/problems/palindromic-patitioning4845/1)
 
 ```python
+"""   
+Input : str = “geek” 
+Output : 2 
+We need to make minimum 2 cuts, i.e., “g ee k”
+Input : str = “aaaa” 
+Output : 0 
+The string is already a palindrome.
+Input : str = “abcde” 
+Output : 4
+Input : str = “abbac” 
+Output : 1 
 
+"""
+
+def isPalindrome(x):
+	return x == x[::-1]
+
+def minPalPartion(string, i, j):
+	if i >= j or isPalindrome(string[i:j + 1]):
+		return 0
+	ans = float('inf')
+	for k in range(i, j):
+		count = (
+			1 + minPalPartion(string, i, k)
+			+ minPalPartion(string, k + 1, j)
+		)
+		ans = min(ans, count)
+	return ans
+
+string = "ababbbabbababa"
+print("Min cuts needed for Palindrome Partitioning is ", minPalPartion(string, 0, len(string) - 1))
 ```
 
 ## [Word Wrap Problem](https://practice.geeksforgeeks.org/problems/word-wrap/0)
 
 ```python
+"""   
+Given a sequence of words, and a limit on the number of characters that can be put in one line (line width). Put line breaks in the given sequence such that the lines are printed neatly. Assume that the length of each word is smaller than the line width.
+The word processors like MS Word do task of placing line breaks. The idea is to have balanced lines. In other words, not have few lines with lots of extra spaces and some lines with small amount of extra spaces. 
+ 
 
+The extra spaces includes spaces put at the end of every line except the last one.  
+The problem is to minimize the following total cost.
+ Cost of a line = (Number of extra spaces in the line)^3
+ Total Cost = Sum of costs for all lines
+
+For example, consider the following string and line width M = 15
+ "Geeks for Geeks presents word wrap problem" 
+     
+Following is the optimized arrangement of words in 3 lines
+Geeks for Geeks
+presents word
+wrap problem 
+
+The total extra spaces in line 1, line 2 and line 3 are 0, 2 and 3 respectively. 
+So optimal value of total cost is 0 + 2*2*2 + 3*3*3 = 35
+Please note that the total cost function is not sum of extra spaces, but sum of cubes (or square is also used) of extra spaces. 
+"""
+
+# A Dynamic programming solution
+# for Word Wrap Problem
+
+# A utility function to print
+# the solution
+# l[] represents lengths of different
+# words in input sequence. For example,
+# l[] = {3, 2, 2, 5} is for a sentence
+# like "aaa bb cc ddddd". n is size of
+# l[] and M is line width (maximum no.
+# of characters that can fit in a line)
+INF = 2147483647
+def printSolution(p, n):
+	k = 0
+	if p[n] == 1:
+		k = 1
+	else:
+		k = printSolution(p, p[n] - 1) + 1
+	print('Line number ', k, ': From word no. ',
+								p[n], 'to ', n)
+	return k
+
+def solveWordWrap(l, n, M):
+	# For simplicity, 1 extra space is used in all below arrays
+	# extras[i][j] will have number of extra spaces if words from i to j are put in a single line
+	extras = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
+
+	# lc[i][j] will have cost of a line which has words from i to j
+	lc = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
+
+	# c[i] will have total cost of optimal arrangement of words from 1 to i
+	c = [0 for _ in range(n + 1)]
+
+	# p[] is used to print the solution.
+	p = [0 for _ in range(n + 1)]
+
+	# calculate extra spaces in a single line. The value extra[i][j] indicates
+	# extra spaces if words from word number i to j are placed in a single line
+	for i in range(n + 1):
+		extras[i][i] = M - l[i - 1]
+		for j in range(i + 1, n + 1):
+			extras[i][j] = (extras[i][j - 1] -
+									l[j - 1] - 1)
+
+	# Calculate line cost corresponding to the above calculated extra
+	# spaces. The value lc[i][j] indicates cost of putting words from word number i to j in a single line
+	for i in range(n + 1):
+		for j in range(i, n + 1):
+			if extras[i][j] < 0:
+				lc[i][j] = INF;
+			elif j == n:
+				lc[i][j] = 0
+			else:
+				lc[i][j] = (extras[i][j] *
+							extras[i][j])
+
+	# Calculate minimum cost and find minimum cost arrangement. The value
+	# c[j] indicates optimized cost to arrange words from word number 1 to j.
+	c[0] = 0
+	for j in range(1, n + 1):
+		c[j] = INF
+		for i in range(1, j + 1):
+			if (c[i - 1] != INF and
+				lc[i][j] != INF and
+				((c[i - 1] + lc[i][j]) < c[j])):
+				c[j] = c[i-1] + lc[i][j]
+				p[j] = i
+	printSolution(p, n)
+
+l = [3, 2, 2, 5]
+n = len(l)
+M = 6
+solveWordWrap(l, n, M)
 ```
 
 ## [Mobile Numeric Keypad Problem [ IMP ]](https://practice.geeksforgeeks.org/problems/mobile-numeric-keypad5456/1)
 
 ```python
+"""   
+Given the mobile numeric keypad. You can only press buttons that are up, left, right or down to the current button. You are not allowed to press bottom row corner buttons (i.e. * and # ).
 
+Mobile-keypad
+
+Given a number N, find out the number of possible numbers of given length. 
+
+Examples: 
+
+For N=1, number of possible numbers would be 10 (0, 1, 2, 3, …., 9) 
+For N=2, number of possible numbers would be 36 
+Possible numbers: 00,08 11,12,14 22,21,23,25 and so on. 
+If we start with 0, valid numbers will be 00, 08 (count: 2) 
+If we start with 1, valid numbers will be 11, 12, 14 (count: 3) 
+If we start with 2, valid numbers will be 22, 21, 23,25 (count: 4) 
+If we start with 3, valid numbers will be 33, 32, 36 (count: 3) 
+If we start with 4, valid numbers will be 44,41,45,47 (count: 4) 
+If we start with 5, valid numbers will be 55,54,52,56,58 (count: 5) 
+.................................... 
+....................................
+We need to print the count of possible numbers.
+"""
+
+# left, up, right, down move from current location
+row = [0, 0, -1, 0, 1]
+col = [0, -1, 0, 1, 0]
+
+# Returns count of numbers of length n starting from key position (i, j) in a numeric keyboard.
+def getCountUtil(keypad, i, j, n):
+	if (keypad == None or n <= 0):
+		return 0
+
+	# From a given key, only one number is possible of length 1
+	if (n == 1):
+		return 1
+	k = 0
+	move = 0
+	ro = 0
+	co = 0
+	totalCount = 0
+
+	# move left, up, right, down from current location and if
+	# new location is valid, then get number count of length
+	# (n-1) from that new position and add in count obtained so far
+	for move in range(5):
+		ro = i + row[move]
+		co = j + col[move]
+		if (ro >= 0 and ro <= 3 and co >= 0 and co <= 2 and
+				keypad[ro][co] != '*' and keypad[ro][co] != '#'):
+			totalCount += getCountUtil(keypad, ro, co, n - 1)
+	return totalCount
+
+# Return count of all possible numbers of length n in a given numeric keyboard
+def getCount(keypad, n):
+	if keypad is None or n <= 0:
+		return 0
+	if (n == 1):
+		return 10
+	i = 0
+	j = 0
+	totalCount = 0
+	for i in range(4): # Loop on keypad row
+		for j in range(3): # Loop on keypad column
+			# Process for 0 to 9 digits
+			if (keypad[i][j] != '*' and keypad[i][j] != '#'):
+			# Get count when number is starting from key position (i, j) and add in count obtained so far
+				totalCount += getCountUtil(keypad, i, j, n)
+	return totalCount
+
+keypad = [['1', '2', '3'],
+		['4', '5', '6'],
+		['7', '8', '9'],
+		['*', '0', '#']]
+print("Count for numbers of length 1:", getCount(keypad, 1))
+print("Count for numbers of length 2:", getCount(keypad, 2))
+print("Count for numbers of length 3:", getCount(keypad, 3))
+print("Count for numbers of length 4:", getCount(keypad, 4))
+print("Count for numbers of length 5:", getCount(keypad, 5))
 ```
 
 ## [Boolean Parenthesization Problem](https://practice.geeksforgeeks.org/problems/boolean-parenthesization/0)
 
 ```python
+"""   
+Given a boolean expression with the following symbols. 
 
+Symbols
+    'T' ---> true 
+    'F' ---> false 
+And following operators filled between symbols 
+
+Operators
+    &   ---> boolean AND
+    |   ---> boolean OR
+    ^   ---> boolean XOR 
+Count the number of ways we can parenthesize the expression so that the value of expression evaluates to true. 
+Let the input be in form of two arrays one contains the symbols (T and F) in order and the other contains operators (&, | and ^}
+
+Examples: 
+
+Input: symbol[]    = {T, F, T}
+       operator[]  = {^, &}
+Output: 2
+The given expression is "T ^ F & T", it evaluates true
+in two ways "((T ^ F) & T)" and "(T ^ (F & T))"
+
+Input: symbol[]    = {T, F, F}
+       operator[]  = {^, |}
+Output: 2
+The given expression is "T ^ F | F", it evaluates true
+in two ways "( (T ^ F) | F )" and "( T ^ (F | F) )". 
+
+Input: symbol[]    = {T, T, F, T}
+       operator[]  = {|, &, ^}
+"""
+
+def countParenth(symb, oper, n):
+	F = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
+	T = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
+
+	# Fill diagonal entries first
+	# All diagonal entries in T[i][i] are 1 if symbol[i] is T (true). Similarly, all F[i][i] entries are 1 if
+	# symbol[i] is F (False)
+	for i in range(n):
+		F[i][i] = 1 if symb[i] == 'F' else 0
+		T[i][i] = 1 if symb[i] == 'T' else 0
+
+	# Now fill T[i][i+1], T[i][i+2],
+	# T[i][i+3]... in order And F[i][i+1], F[i][i+2], F[i][i+3]... in order
+	for gap in range(1, n):
+		for i, j in enumerate(range(gap, n)):
+			T[i][j] = F[i][j] = 0
+			for g in range(gap):
+
+				# Find place of parenthesization using current value of gap
+				k = i + g
+
+				# Store Total[i][k] and Total[k+1][j]
+				tik = T[i][k] + F[i][k]
+				tkj = T[k + 1][j] + F[k + 1][j]
+
+				# Follow the recursive formulas according to the current operator
+				if oper[k] == '&':
+					T[i][j] += T[i][k] * T[k + 1][j]
+					F[i][j] += (tik * tkj - T[i][k] *
+								T[k + 1][j])
+				if oper[k] == '|':
+					F[i][j] += F[i][k] * F[k + 1][j]
+					T[i][j] += (tik * tkj - F[i][k] *
+								F[k + 1][j])
+				if oper[k] == '^':
+					T[i][j] += (F[i][k] * T[k + 1][j] +
+								T[i][k] * F[k + 1][j])
+					F[i][j] += (T[i][k] * T[k + 1][j] +
+								F[i][k] * F[k + 1][j])
+	return T[0][n - 1]
+
+
+symbols = "TTFT"
+operators = "|&^"
+n = len(symbols)
+
+# There are 4 ways
+# ((T|T)&(F^T)), (T|(T&(F^T))),
+# (((T|T)&F)^T) and (T|((T&F)^T))
+print(countParenth(symbols, operators, n))
 ```
 
 ## [Largest rectangular sub-matrix whose sum is 0](https://www.geeksforgeeks.org/largest-rectangular-sub-matrix-whose-sum-0/)
 
 ```python
+"""
+Given a 2D matrix, find the number non-empty sub matrices, such that the sum of the elements inside the sub matrix is equal to 0. (note:  elements might be negative).
+"""
+import itertools
+def solve(A):
+    if not A or not A[0]: return 0  # SC & guard
+    cols = len(A[0]) + 1            # pad left to guard [c - 1]
+    A = [[0] + row for row in A]
+    for row, c in itertools.product(A, range(2, cols)):
+        row[c] += row[c - 1]
+    zeros = 0
+    for c1 in range(cols - 1):                  # each pair of (c, c2]
+        for c2 in range(c1 + 1, cols):
+            sofar = 0
+            seen = {0: 1}                   # {sum : cnt}, dict to cnt dups
+            for row in A:                   # scan top-down as 1D sum 0
+                sofar += row[c2] - row[c1]
+                if sofar-0 in seen:
+                    zeros += seen[sofar-0]
+                if sofar in seen:
+                    seen[sofar] += 1
+                else: seen[sofar] = 1
+    return zeros
 
-```
-
-## [Largest area rectangular sub-matrix with equal number of 1’s and 0’s [ IMP ]](https://www.geeksforgeeks.org/largest-area-rectangular-sub-matrix-equal-number-1s-0s/)
-
-```python
-
+A=[[-8, 5,  7],
+[3 , 7, -8],
+[5 ,-8,  9]
+]
+print(solve(A))
 ```
 
 ## [Maximum sum rectangle in a 2D matrix](https://practice.geeksforgeeks.org/problems/maximum-sum-rectangle/0)
 
 ```python
+# Implementation of Kadane's algorithm for 1D array. The function returns the maximum sum and stores starting
+#  and ending indexes of the maximum sum subarray at addresses pointed by start and finish pointers respectively.
+def kadane(arr, start, finish, n):
+	Sum = 0
+	maxSum = -999999999999
+	i = None
 
+	# Just some initial value to check for all negative values case
+	finish[0] = -1
+
+	# local variable
+	local_start = 0
+
+	for i in range(n):
+		Sum += arr[i]
+		if Sum < 0:
+			Sum = 0
+			local_start = i + 1
+		elif Sum > maxSum:
+			maxSum = Sum
+			start[0] = local_start
+			finish[0] = i
+
+	# There is at-least one non-negative number
+	if finish[0] != -1:
+		return maxSum
+
+	# Special Case: When all numbers in arr[] are negative
+	maxSum = arr[0]
+	start[0] = finish[0] = 0
+
+	# Find the maximum element in array
+	for i in range(1, n):
+		if arr[i] > maxSum:
+			maxSum = arr[i]
+			start[0] = finish[0] = i
+	return maxSum
+
+def findMaxSum(M):
+	global ROW, COL
+
+	# Variables to store the final output
+	maxSum, finalLeft = -999999999999, None
+	finalRight, finalTop, finalBottom = None, None, None
+	left, right, i = None, None, None
+
+	temp = [None] * ROW
+	Sum = 0
+	start = [0]
+	finish = [0]
+
+	# Set the left column
+	for left in range(COL):
+
+		# Initialize all elements of temp as 0
+		temp = [0] * ROW
+
+		# Set the right column for the left column set by outer loop
+		for right in range(left, COL):
+
+			# Calculate sum between current left and right for every row 'i'
+			for i in range(ROW):
+				temp[i] += M[i][right]
+
+			# Find the maximum sum subarray in temp[]. The kadane() function also
+			# sets values of start and finish So 'sum' is sum of rectangle between
+			# (start, left) and (finish, right) which is the maximum sum with boundary columns
+			# strictly as left and right.
+			Sum = kadane(temp, start, finish, ROW)
+
+			# Compare sum with maximum sum so far. If sum is more, then update maxSum and other output values
+			if Sum > maxSum:
+				maxSum = Sum
+				finalLeft = left
+				finalRight = right
+				finalTop = start[0]
+				finalBottom = finish[0]
+
+	# Prfinal values
+	print("(Top, Left)", "(", finalTop,
+		finalLeft, ")")
+	print("(Bottom, Right)", "(", finalBottom,
+		finalRight, ")")
+	print("Max sum is:", maxSum)
+
+ROW = 4
+COL = 5
+M = [[1, 2, -1, -4, -20],
+	[-8, -3, 4, 2, 1],
+	[3, 8, 10, 1, 3],
+	[-4, -1, 1, 7, -6]]
+findMaxSum(M)
 ```
 
 ## [Maximum profit by buying and selling a share at most k times](https://practice.geeksforgeeks.org/problems/maximum-profit4657/1)
 
 ```python
+"""
+Input:  
+Price = [10, 22, 5, 75, 65, 80]
+    K = 2
+Output:  87
+Trader earns 87 as sum of 12 and 75
+Buy at price 10, sell at 22, buy at 
+5 and sell at 80
 
+Input:  
+Price = [12, 14, 17, 10, 14, 13, 12, 15]
+    K = 3
+Output:  12
+Trader earns 12 as the sum of 5, 4 and 3
+Buy at price 12, sell at 17, buy at 10 
+and sell at 14 and buy at 12 and sell
+at 15
+ 
+Input:  
+Price = [100, 30, 15, 10, 8, 25, 80]
+    K = 3
+Output:  72
+Only one transaction. Buy at price 8 
+and sell at 80.
+
+Input:  
+Price = [90, 80, 70, 60, 50]
+    K = 1
+Output:  0
+Not possible to earn. 
+"""
+def maxProfit(prices, n, k):
+	profit = [[0 for _ in range(k + 1)] for _ in range(n)]
+	# Profit is zero for the first day and for zero transactions
+	for i in range(1, n):
+		for j in range(1, k + 1):
+			max_so_far = 0
+			for l in range(i):
+				max_so_far = max(max_so_far, prices[i] -
+							prices[l] + profit[l][j - 1])
+			profit[i][j] = max(profit[i - 1][j], max_so_far)
+	return profit[n - 1][k]
+
+k = 2
+prices = [10, 22, 5, 75, 65, 80]
+n = len(prices)
+print("Maximum profit is:",
+	maxProfit(prices, n, k))
 ```
 
 ## [Find if a string is interleaved of two other strings](https://practice.geeksforgeeks.org/problems/interleaved-strings/1)
 
 ```python
+"""
+Given three strings A, B and C. Write a function that checks whether C is an interleaving of A and B. C is said to be interleaving A and B, if it contains all and only characters of A and B and order of all characters in individual strings is preserved. 
 
-```
+Example: 
 
-## [Maximum Length of Pair Chain](https://leetcode.com/problems/maximum-length-of-pair-chain/)
+Input: strings: "XXXXZY", "XXY", "XXZ"
+Output: XXXXZY is interleaved of XXY and XXZ
+The string XXXXZY can be made by 
+interleaving XXY and XXZ
+String:    XXXXZY
+String 1:    XX Y
+String 2:  XX  Z
 
-```python
+Input: strings: "XXY", "YX", "X"
+Output: XXY is not interleaved of YX and X
+XXY cannot be formed by interleaving YX and X.
+The strings that can be formed are YXX and XYX
+"""
 
+dp = [[0]*101]*101
+def dfs(i, j, A, B, C):
+	
+	# If path has already been calculated from this index then return calculated value.
+	if(dp[i][j]!=-1):
+		return dp[i][j]
+		
+	# If we reach the destination return 1
+	n,m=len(A),len(B)
+	if(i==n and j==m):
+		return 1
+	
+	# If C[i+j] matches with both A[i] and B[j] we explore both the paths
+	if (i<n and A[i]==C[i + j] and j<m and B[j]==C[i + j]):
+		# go down and store the calculated value in x
+		# and go right and store the calculated value in y.
+		x = dfs(i + 1, j, A, B, C)
+		y = dfs(i, j + 1, A, B, C)
+		
+		# return the best of both.
+		dp[i][j] = x|y
+		return dp[i][j]
+	
+	# If C[i+j] matches with A[i].
+	if (i < n and A[i] == C[i + j]):
+		# go down
+		x = dfs(i + 1, j, A, B, C)
+		
+		# Return the calculated value.
+		dp[i][j] = x
+		return dp[i][j]
+	
+	# If C[i+j] matches with B[j].
+	if (j < m and B[j] == C[i + j]):
+		y = dfs(i, j + 1, A, B, C)
+		
+		# Return the calculated value.
+		dp[i][j] = y
+		return dp[i][j]
+	
+	# if nothing matches we return 0
+	dp[i][j] = 0
+	return dp[i][j]
+
+# The main function that returns true if C is
+# an interleaving of A and B, otherwise false.
+def isInterleaved(A, B, C):
+
+	# Storing the length in n,m
+	n = len(A)
+	m = len(B)
+
+	# C can be an interleaving of A and B only of the sum
+	# of lengths of A & B is equal to the length of C.
+	if((n+m)!=len(C)):
+		return 0
+	# initializing dp array with -1
+	for i in range(n+1):
+		for j in range(m+1):
+			dp[i][j]=-1
+	# calling and returning the answer
+	return dfs(0,0,A,B,C)
+	
+def test(A, B, C):
+	if (isInterleaved(A, B, C)):
+		print(C, "is interleaved of", A, "and", B)
+	else:
+		print(C, "is not interleaved of", A, "and", B)
+
+test("XXY", "XXZ", "XXZXXXY")
+test("XY", "WZ", "WZXY")
+test("XY", "X", "XXY")
+test("YX", "X", "XXY")
+test("XXY", "XXZ", "XXXXZY")
+test("ACA", "DAS", "DAACSA")
 ```
 
 # Graph
@@ -9457,18 +10426,6 @@ print("Size of the Largest Independent Set is ", liss(root))
 ```
 
 ## [Split the Binary string into two substring with equal 0’s and 1’s](https://www.geeksforgeeks.org/split-the-binary-string-into-substrings-with-equal-number-of-0s-and-1s/)
-
-```python
-
-```
-
-## [Word Wrap Problem [VERY IMP].](https://practice.geeksforgeeks.org/problems/word-wrap/0)
-
-```python
-
-```
-
-## [EDIT Distance [Very Imp]](https://practice.geeksforgeeks.org/problems/edit-distance3702/1)
 
 ```python
 
