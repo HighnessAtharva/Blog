@@ -1,10 +1,46 @@
 baseURL: "https://atharvashah.netlify.app/"
 languageCode: en-us
 title: Atharva Shah
-paginate: 10
+paginate: 5
 theme: PaperMod
 
+googleAnalytics: UA-216150796-2 #This will stop tracking in July 2023. Just migrate to Analytics 4 and make changes in hugo. Google it. You'll be fine. 
+
+# COMMENTS
+disqusShortname: https-atharvashah-netlify-app
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+imaging:
+  anchor: Smart
+  bgColor: '#ffffff'
+  hint: photo
+  quality:    
+  resampleFilter: Box
 params:
+    assets:
+      favicon: "/favicon.ico"
+      favicon16x16:  "/favicon-16x16.png"
+      favicon32x32:  "/favicon-32x32.png"
+      disableHLJS: true
+    env: production
+    
+    label:
+      text: "Atharva Shah"
+      icon: "/profile/header_button.gif"
+      iconHeight: 30
+    title: Atharva Shah
+    description: "Howdy 👋! I am Atharva Shah and on this blog I ruminate about tech, programming, entertainment and the fine things in life."
+    keywords: [Blog, AtharvaShah, Entertainment, Technology]
+    
+    cover:
+      hidden: false # hide everywhere but not in structured data
+      hiddenInList: true # hide on list pages and home
+      hiddenInSingle: false # hide on single page
+      responsiveImages: false # Reduce generation time and size of the site, you can disable this feature
+    DateFormat: "January 2, 2006"
     ShowReadingTime: true
     ShowShareButtons: true
     ShowPostNavLinks: true
@@ -12,16 +48,24 @@ params:
     ShowCodeCopyButtons: true
     ShowWordCount: true
     ShowRssButtonInSectionTermList: true
-    UseHugoToc: true
+    UseHugoToc: false
     disableSpecial1stPost: false
     disableScrollToTop: false
     comments: true
     hidemeta: false
     hideSummary: false
-    showtoc: true
+    showtoc: false
     tocopen: false
-
-
+    comments: true
+    # SEARCH
+    fuseOpts:
+      isCaseSensitive: false
+      useExtendedSearch: true
+      tokenize: true
+      threshold: 0
+      distance: 0
+      location: 0
+      keys: ["title","content", "tags", "date", "description"]
     homeInfoParams:
       Title: "Howdy \U0001F44B"
       Content: Welcome, this is where I blog about programming, entertainment and life.
@@ -30,23 +74,47 @@ params:
         url: "https://twitter.com/HighnessAlex"
       - name: github
         url: "https://github.com/HighnessAtharva"
-
+      - name : linkedin
+        url : https://www.linkedin.com/in/atharva-shah-5873a2111/
+      - name: email
+        url: "mailto:highnessatharva@gmail.com"
+    profileMode:
+      enabled: true # needs to be explicitly set
+      title: Atharva Shah
+      subtitle: "Howdy 👋! I ruminate about tech, programming, entertainment and the fine things in life."
+                                  
+      imageUrl: "/profile/profile_icon.gif"
+      imageWidth: 250
+      imageHeight: 250
+      linkFullImages: false
+      imageTitle: AS
+      buttons:
+        - name: About Me 👋
+          url: /about/
+        - name: Blog 📝
+          url: blog
+        - name : Archive ⌛
+          url: /archives/
+        - name : Tags 🏷️
+          url: /tags/
+        - name : Resume 🎓
+          url: https://github.com/HighnessAtharva #Replace later
 # SITE MENU
 menu:
   main:
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight : 1
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 2
+    
     - identifier: search
       name: Search
       url: /search/
-      weight: 10
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 20
-    - identifier: archives
-      name: Timeline
-      url: /archives/
-      weight: 30
-
+      weight: 3
 # REQUIRED FOR SEARCH FUNCTIONALITY.
 outputs:
     home:
