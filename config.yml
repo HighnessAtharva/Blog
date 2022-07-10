@@ -97,12 +97,12 @@ params:
           url: blog
         # - name : Projects 🔭
         #   url: /projects/
-        - name : Resume 🎓
-          url: https://github.com/HighnessAtharva #Replace later
         - name : Archive ⌛
           url: /archives/
         - name : Tags 🏷️
           url: /tags/
+        - name : Resume 🎓
+          url: https://github.com/HighnessAtharva #Replace later
 
 
 # SITE MENU
