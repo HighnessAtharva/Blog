@@ -9475,127 +9475,1278 @@ for r in mat:
 ## [Clone a graph](https://leetcode.com/problems/clone-graph/)
 
 ```python
-
+TODO
 ```
 
 ## [Making wired Connections](https://leetcode.com/problems/number-of-operations-to-make-network-connected/)
 
 ```python
+"""There are n computers numbered from 0 to n-1 connected by ethernet cables connections forming a network where connections[i] = [a, b] represents a connection between computers a and b. Any computer can reach any other computer directly or indirectly through the network.
 
+Given an initial computer network connections. You can extract certain cables between two directly connected computers, and place them between any pair of disconnected computers to make them directly connected. Return the minimum number of times you need to do this in order to make all the computers connected. If it’s not possible, return -1.
+
+Example 1:
+
+Input: n = 4, connections = [[0,1],[0,2],[1,2]]
+Output: 1
+Explanation: Remove cable between computer 1 and 2 and place between computers 1 and 3.
+Example 2:
+
+Input: n = 6, connections = [[0,1],[0,2],[0,3],[1,2],[1,3]]
+Output: 2
+Example 3:
+
+Input: n = 6, connections = [[0,1],[0,2],[0,3],[1,2]]
+Output: -1
+Explanation: There are not enough cables.
+Example 4:
+
+Input: n = 5, connections = [[0,1],[0,2],[3,4],[2,3]]
+Output: 0
+"""
+
+def makeConnected(n, connections):
+    uf = {i: i for i in range(n)}
+
+    def find(x):
+        uf.setdefault(x, x)
+        if uf[x] != x:
+            uf[x] = find(uf[x])
+        return uf[x]
+
+    def union(a, b):
+        uf[find(a)] = find(b)
+    if len(connections) < n - 1:
+        return -1
+    for a, b in connections:
+        union(a, b)
+    islands = len({find(x) for x in uf})
+    return islands - 1
+n = 4
+
+connections = [[0,1],[0,2],[1,2]]
+print(makeConnected(n, connections))
 ```
 
 ## [word Ladder](https://leetcode.com/problems/word-ladder/)
 
 ```python
+"""
+Given two words (beginWord and endWord), and a dictionary's word list,
+find the length of shortest transformation sequence from beginWord to endWord, such that:
+(i) Only one letter can be changed at a time, and (ii) each transformed word must exist in
+the word list. Note that beginWord is not a transformed word.
 
+EXAMPLES
+beginWord = "hit"
+endWord = "cog"
+wordList = ["hot","dot","dog","lot","log","cog"]
+-> 5 (because "hit" -> "hot" -> "dot" -> "dog" -> "cog")
+
+"""
+
+from collections import deque
+def ladderLength(beginWord, endWord, wordList):
+    """
+    :type beginWord: str
+    :type endWord: str
+    :type wordList: Set[str]
+    :rtype: int
+    """
+
+    queue = deque()
+    queue.append((beginWord, [beginWord]))
+    while queue:
+        node, path = queue.popleft()
+        for next in next_nodes(node, wordList) - set(path):
+            if next == endWord:
+                return len(path) + 1
+            else:
+                queue.append((next, path + [next]))
+    return 0
+
+def next_nodes(word, word_list):
+    to_return = set()
+    for w in word_list:
+        mismatch_count, w_length = 0, len(w)
+        for i in range(w_length):
+            if w[i] != word[i]:
+                mismatch_count += 1
+        if mismatch_count == 1:
+            to_return.add(w)
+    return to_return
+
+beginWord = "hit"
+endWord = "cog"
+wordList = ["hot","dot","dog","lot","log","cog"]
+print(ladderLength(beginWord, endWord, wordList))
 ```
 
 ## [Dijkstra algo](https://practice.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1/)
 
 ```python
+"""
+Given a source vertex s from a set of vertices V in a weighted digraph where all its edge weights w(u, v) are non-negative, find the shortest path weights d(s, v) from source s for all vertices v present in the graph    
+"""
+import sys
+from heapq import heappop, heappush
+ 
+class Node:
+    def __init__(self, vertex, weight=0):
+        self.vertex = vertex
+        self.weight = weight
+ 
+    # Override the __lt__() function to make `Node` class work with a min-heap
+    def __lt__(self, other):
+        return self.weight < other.weight
+ 
+class Graph:
+    def __init__(self, edges, n):
+        # allocate memory for the adjacency list
+        self.adjList = [[] for _ in range(n)]
+ 
+        # add edges to the directed graph
+        for (source, dest, weight) in edges:
+            self.adjList[source].append((dest, weight))
+ 
+def get_route(prev, i, route):
+    if i >= 0:
+        get_route(prev, prev[i], route)
+        route.append(i)
+ 
 
+def findShortestPaths(graph, source, n):
+ 
+    # create a min-heap and push source node having distance 0
+    pq = []
+    heappush(pq, Node(source))
+ 
+    # set initial distance from the source to `v` as infinity
+    dist = [sys.maxsize] * n
+ 
+    # distance from the source to itself is zero
+    dist[source] = 0
+ 
+    # list to track vertices for which minimum cost is already found
+    done = [False] * n
+    done[source] = True
+ 
+    # stores predecessor of a vertex (to a print path)
+    prev = [-1] * n
+ 
+    # run till min-heap is empty
+    while pq:
+ 
+        node = heappop(pq)      # Remove and return the best vertex
+        u = node.vertex         # get the vertex number
+ 
+        # do for each neighbor `v` of `u`
+        for (v, weight) in graph.adjList[u]:
+            if not done[v] and (dist[u] + weight) < dist[v]:        # Relaxation step
+                dist[v] = dist[u] + weight
+                prev[v] = u
+                heappush(pq, Node(v, dist[v]))
+ 
+        # mark vertex `u` as done so it will not get picked up again
+        done[u] = True
+ 
+    route = []
+    for i in range(n):
+        if i != source and dist[i] != sys.maxsize:
+            get_route(prev, i, route)
+            print(f'Path ({source} —> {i}): Minimum cost = {dist[i]}, Route = {route}')
+            route.clear()
+
+# initialize edges as per the above diagram (u, v, w) represent edge from vertex `u` to vertex `v` having weight `w`
+edges = [(0, 1, 10), (0, 4, 3), (1, 2, 2), (1, 4, 4), (2, 3, 9), (3, 2, 7),
+        (4, 1, 1), (4, 2, 8), (4, 3, 2)]
+# total number of nodes in the graph (labelled from 0 to 4)
+n = 5
+graph = Graph(edges, n)
+for source in range(n):
+    findShortestPaths(graph, source, n)
 ```
 
 ## [Implement Topological Sort](https://practice.geeksforgeeks.org/problems/topological-sort/1)
 
 ```python
+"""
+Given a Directed Acyclic Graph (DAG), print it in topological order using topological sort algorithm. If the graph has more than one topological ordering, output any of them. Assume valid Directed Acyclic Graph (DAG).
 
+A Topological sort or Topological ordering of a directed graph is a linear ordering of its vertices such that for every directed edge uv from vertex u to vertex v, u comes before v in the ordering. A topological ordering is possible if and only if the graph has no directed cycles, i.e. if the graph is DAG.
+
+"""
+# A class to represent a graph object
+class Graph:
+    def __init__(self, edges, n):
+        self.adjList = [[] for _ in range(n)]
+        for (src, dest) in edges:
+            self.adjList[src].append(dest)
+ 
+ 
+# Perform DFS on the graph and set the departure time of all vertices of the graph
+def DFS(graph, v, discovered, departure, time):
+    discovered[v] = True
+    time = time + 1
+    for u in graph.adjList[v]:
+        if not discovered[u]:
+            time = DFS(graph, u, discovered, departure, time)
+    departure[time] = v
+    time = time + 1
+    return time
+ 
+ 
+# Function to perform a topological sort on a given DAG
+def doTopologicalSort(graph, n):
+ 
+    # departure[] stores the vertex number using departure time as an index
+    departure = [-1] * 2 * n
+ 
+    ''' If we had done it the other way around, i.e., fill the array
+        with departure time using vertex number as an index, we would
+        need to sort it later '''
+ 
+    # to keep track of whether a vertex is discovered or not
+    discovered = [False] * n
+    time = 0
+ 
+    # perform DFS on all undiscovered vertices
+    for i in range(n):
+        if not discovered[i]:
+            time = DFS(graph, i, discovered, departure, time)
+ 
+    # Print the vertices in order of their decreasing
+    # departure time in DFS, i.e., in topological order
+    for i in reversed(range(2*n)):
+        if departure[i] != -1:
+            print(departure[i], end=' ')
+ 
+
+# List of graph edges as per the above diagram
+edges = [(0, 6), (1, 2), (1, 4), (1, 6), (3, 0), (3, 4), (5, 1), (7, 0), (7, 1)] 
+# total number of nodes in the graph (labelled from 0 to 7)
+n = 8
+graph = Graph(edges, n) 
+doTopologicalSort(graph, n)
 ```
 
 ## [Minimum time taken by each job to be completed given by a Directed Acyclic Graph](https://www.geeksforgeeks.org/minimum-time-taken-by-each-job-to-be-completed-given-by-a-directed-acyclic-graph/)
 
 ```python
+"""
+Given a Directed Acyclic Graph having V vertices and E edges, where each edge {U, V} represents the Jobs U and V such that Job V can only be started only after completion of Job U. The task is to determine the minimum time taken by each job to be completed where each Job takes unit time to get completed.   
+"""
+
+from collections import defaultdict
+
+class Graph:
+	def __init__(self, vertices, edges):
+		self.graph = defaultdict(list)
+		self.n = vertices
+		self.m = edges
+		
+	# Function to add an edge to graph
+	def addEdge(self, u, v):
+		self.graph[u].append(v)
+	
+	# Function to find the minimum time needed by each node to get the task
+	def printOrder(self, n, m):
+	
+		# Create a vector to store indegrees of all vertices. Initialize all indegrees as 0.
+		indegree = [0] * (self.n + 1)
+		
+		# Traverse adjacency lists to fill indegrees of vertices. This step takes O(V + E) time
+		for i in self.graph:
+			for j in self.graph[i]:
+				indegree[j] += 1
+				
+		# Array to store the time in which the job i can be done
+		job = [0] * (self.n + 1)
+		
+		# Create an queue and enqueue all vertices with indegree 0
+		q = []
+		
+		# Update the time of the jobs who don't require any job to be completed before this job
+		for i in range(1, self.n + 1):
+			if indegree[i] == 0:
+				q.append(i)
+				job[i] = 1
+				
+		# Iterate until queue is empty
+		while q:
+			
+			# Get front element of queue
+			cur = q.pop(0)
+			
+			for adj in self.graph[cur]:
+				
+				# Decrease in-degree of the current node
+				indegree[adj] -= 1
+			
+				# Push its adjacent elements
+				if (indegree[adj] == 0):
+					job[adj] = 1 + job[cur]
+					q.append(adj)
+					
+		# Print the time to complete the job
+		for i in range(1, n + 1):
+			print(job[i], end = " ")
+			
+		print()
+
+# Given Nodes N and edges M
+n = 10
+m = 13
+g = Graph(n, m)
+g.addEdge(1, 3)
+g.addEdge(1, 4)
+g.addEdge(1, 5)
+g.addEdge(2, 3)
+g.addEdge(2, 8)
+g.addEdge(2, 9)
+g.addEdge(3, 6)
+g.addEdge(4, 6)
+g.addEdge(4, 8)
+g.addEdge(5, 8)
+g.addEdge(6, 7)
+g.addEdge(7, 8)
+g.addEdge(8, 10)
+g.printOrder(n, m)
 
 ```
 
 ## [Find whether it is possible to finish all tasks or not from given dependencies](https://www.geeksforgeeks.org/find-whether-it-is-possible-to-finish-all-tasks-or-not-from-given-dependencies/)
 
 ```python
+"""
+There are a total of n tasks you have to pick, labelled from 0 to n-1. Some tasks may have prerequisites, for example to pick task 0 you have to first pick task 1, which is expressed as a pair: [0, 1]
+Given the total number of tasks and a list of prerequisite pairs, is it possible for you to finish all tasks?
+Examples:
+ 
 
+Input: 2, [[1, 0]] 
+Output: true 
+Explanation: There are a total of 2 tasks to pick. To pick task 1 you should have finished task 0. So it is possible.
+Input: 2, [[1, 0], [0, 1]] 
+Output: false 
+Explanation: There are a total of 2 tasks to pick. To pick task 1 you should have finished task 0, and to pick task 0 you should also have finished task 1. So it is impossible.
+Input: 3, [[1, 0], [2, 1], [3, 2]] 
+Output: true 
+Explanation: There are a total of 3 tasks to pick. To pick tasks 1 you should have finished task 0, and to pick task 2 you should have finished task 1 and to pick task 3 you should have finished task 2. So it is possible. 
+"""
+
+
+class Solution:
+	
+	arr = []
+	# parameterized constructor
+	def __init__(self,n):
+		# Initially, everyone is their own child
+		self.arr = list(range(n))
+
+	def makeParent(self,a, b):
+		# find parent of b and make it a's parent
+		self.arr[a] = self.findParent(b)
+
+	def findParent(self,c):
+		# when an independent task is found
+		return c if (c == self.arr) else self.findParent(self.arr)
+
+	def isPossible(self,N , prerequisites):
+		# traverse through pre-requisites array
+		for i in range(len(prerequisites)):
+			# check whether given pre-requisite pair already have a common pre-requisite(parent)
+			if (self.findParent(prerequisites[i][0]) == self.findParent(prerequisites[i][1])):
+			# tasks cannot be completed because there was a cyclic condition in the tasks
+				return False
+			# make parent-child relation between pre-requisite task and the task dependent on it
+			self.makeParent(prerequisites[i][0], prerequisites[i][1])
+		# if there was no cycle found, tasks can be completed
+		return True
+	
+
+prerequisites = [[1, 0], [2, 1], [3, 2]]
+ob = Solution(4)
+if ob.isPossible(4,prerequisites ):
+	print("Yes")
+else:
+	print("No")
 ```
 
 ## [Find the no. of Islands](https://practice.geeksforgeeks.org/problems/find-the-number-of-islands/1)
 
 ```python
+"""
+Given a boolean 2D matrix, find the number of islands. A group of connected 1s forms an island. For example, the below matrix contains 5 islands
+
+Example: 
+
+Input : mat[][] = {{1, 1, 0, 0, 0},
+                   {0, 1, 0, 0, 1},
+                   {1, 0, 0, 1, 1},
+                   {0, 0, 0, 0, 0},
+                   {1, 0, 1, 0, 1}}
+Output : 5
+"""
+
+
+# Program to count islands in boolean 2D matrix
+class Graph:
+	def __init__(self, row, col, graph):
+		self.ROW = row
+		self.COL = col
+		self.graph = graph
+
+	# A utility function to do DFS for a 2D boolean matrix. It only considers the 8 neighbours as adjacent vertices
+	def DFS(self, i, j):
+		if i < 0 or i >= len(self.graph) or j < 0 or j >= len(self.graph[0]) or self.graph[i][j] != 1:
+			return
+
+		# mark it as visited
+		self.graph[i][j] = -1
+
+		# Recur for 8 neighbours
+		self.DFS(i - 1, j - 1)
+		self.DFS(i - 1, j)
+		self.DFS(i - 1, j + 1)
+		self.DFS(i, j - 1)
+		self.DFS(i, j + 1)
+		self.DFS(i + 1, j - 1)
+		self.DFS(i + 1, j)
+		self.DFS(i + 1, j + 1)
+
+	# The main function that returns count of islands in a given boolean 2D matrix
+	def countIslands(self):
+		# Initialize count as 0 and traverse through the all cells of given matrix
+		count = 0
+		for i in range(self.ROW):
+			for j in range(self.COL):
+				# If a cell with value 1 is not visited yet, then new island found
+				if self.graph[i][j] == 1:
+					# Visit all cells in this island and increment island count
+					self.DFS(i, j)
+					count += 1
+
+		return count
+
+
+graph = [
+	[1, 1, 0, 0, 0],
+	[0, 1, 0, 0, 1],
+	[1, 0, 0, 1, 1],
+	[0, 0, 0, 0, 0],
+	[1, 0, 1, 0, 1]
+]
+row = len(graph)
+col = len(graph[0])
+g = Graph(row, col, graph)
+print("Number of islands is:", g.countIslands())
 
 ```
 
 ## [Given a sorted Dictionary of an Alien Language, find order of characters](https://practice.geeksforgeeks.org/problems/alien-dictionary/1)
 
 ```python
+"""
+Given a dictionary of ancient origin where the words are arranged alphabetically, find the correct order of alphabets in the ancient language.
 
+For example,
+
+Input:  Ancient dictionary { ¥€±, €±€, €±‰ð, ðß, ±±ð, ±ßß }
+Output: The correct order of alphabets in the ancient language is {¥ € ‰ ð ± ß}.
+ 
+Since the input is small, more than one ordering is possible. Another such ordering is {¥ € ð ± ß ‰}.
+ 
+ 
+Input:  Ancient dictionary { ÿ€±š, €€€ß, €€‰ð, ðß, ±ß¥š }
+Output: The correct order of alphabets in the ancient language is {ÿ € ‰ ð ±}.
+ 
+The alphabets {š, ß, ¥} are not included in the order as they are not properly defined.
+"""
+
+
+class Graph:
+    def __init__(self, N):
+        self.adj = [[] for _ in range(N)]
+ 
+
+def DFS(graph, v, discovered, departure, time):
+    discovered[v] = True
+    time = time + 1
+    for u in graph.adj[v]:
+        if not discovered[u]:
+            time = DFS(graph, u, discovered, departure, time)
+    departure[time] = v
+    return time + 1
+ 
+ 
+# Utility function to performs topological sort on a given DAG
+def doTopologicalSort(graph, d):
+ 
+    # `departure[]` stores the vertex number using departure time as an index
+    departure = [-1] * (2 * N)
+ 
+    ''' If we had done it the other way around, i.e., fill the array
+        with departure time using vertex number as an index, we would
+        need to sort it later '''
+ 
+    # to keep track of whether a vertex is discovered or not
+    discovered = [False] * N
+    time = 0
+ 
+    # perform DFS on all undiscovered connected vertices
+    for i in range(N):
+        if not discovered[i] and len(graph.adj[i]):
+            time = DFS(graph, i, discovered, departure, time)
+ 
+    print('\nThe correct order of alphabets in the ancient language is', end=' ')
+ 
+    # Print the vertices in order of their decreasing
+    # departure time in DFS, i.e., in topological order
+    for i in reversed(range(2*N)):
+        if departure[i] != -1:
+            print(d[departure[i]], end=' ')
+ 
+ 
+# Utility function to print adjacency list representation of a graph
+def printGraph(graph, d):
+ 
+    for i in range(N):
+        # ignore vertices with no outgoing edges
+        if graph.adj[i]:
+            # print current vertex and all neighboring vertices of a vertex `i`
+            print(d[i], '—>', [d[v] for v in graph.adj[i]])
+ 
+ 
+# Function to find the correct order of alphabets in a given dictionary of
+# ancient origin. This function assumes that the input is correct.
+def findAlphabetsOrder(dictionary):
+    # create a dictionary to map each non-ASCII character present in the given dictionary with a unique integer
+    d = {}
+    k = 0
+    # do for each word
+    for word in dictionary:
+        # do for each non-ASCII character of the word
+        for s in word:
+            # if the current character is not present in the dictionary, insert it
+            d.setdefault(s, k)
+            k = k + 1
+    # create a graph containing `N` nodes
+    graph = Graph(N)
+
+    # iterate through the complete dictionary and compare adjacent words for character mismatch
+    for i in range(1, len(dictionary)):
+        # previous word in the dictionary
+        prev = dictionary[i - 1]
+
+        # current word in the dictionary
+        curr = dictionary[i]
+
+        # iterate through both `prev` and `curr` simultaneously and find the first mismatching character
+        j = 0
+        while j < len(prev) and j < len(curr):
+            # mismatch found
+            if prev[j] is not curr[j]:
+
+                # add an edge from the current character of `prev` to the
+                # current character of `curr` in the graph
+                graph.adj[d[prev[j]]].append(d[curr[j]])
+                break
+
+            j += 1
+
+    # create a reverse dict
+    reverse = {v: k for k, v in d.items()}
+    printGraph(graph, reverse)
+    # perform a topological sort on the above graph
+    doTopologicalSort(graph, reverse)
+ 
+
+# define the maximum number of alphabets in the ancient dictionary
+N = 100
+dictionary = [
+    ["¥", "€", "±"],
+    ["€", "±", "€"],
+    ["€", "±", "‰", "ð"],
+    ["ð", "ß"],
+    ["±", "±", "ð"],
+    ["±", "ß", "ß"]
+]
+findAlphabetsOrder(dictionary)
 ```
 
 ## [Implement Kruksal’sAlgorithm](https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/)
 
 ```python
+"""
+Below are the steps for finding MST using Kruskal’s algorithm
 
+1. Sort all the edges in non-decreasing order of their weight. 
+2. Pick the smallest edge. Check if it forms a cycle with the spanning tree formed so far. If cycle is not formed, include this edge. Else, discard it. 
+3. Repeat step#2 until there are (V-1) edges in the spanning tree.
+"""
+
+from collections import defaultdict
+class Graph:
+
+	def __init__(self, vertices):
+		self.V = vertices # No. of vertices
+		self.graph = [] # default dictionary
+		# to store graph
+
+	# function to add an edge to graph
+	def addEdge(self, u, v, w):
+		self.graph.append([u, v, w])
+
+	# A utility function to find set of an element i (uses path compression technique)
+	def find(self, parent, i):
+		return i if parent[i] == i else self.find(parent, parent[i])
+
+	# A function that does union of two sets of x and y (uses union by rank)
+	def union(self, parent, rank, x, y):
+		xroot = self.find(parent, x)
+		yroot = self.find(parent, y)
+
+		# Attach smaller rank tree under root of high rank tree (Union by Rank)
+		if rank[xroot] < rank[yroot]:
+			parent[xroot] = yroot
+		elif rank[xroot] > rank[yroot]:
+			parent[yroot] = xroot
+
+		# If ranks are same, then make one as root and increment its rank by one
+		else:
+			parent[yroot] = xroot
+			rank[xroot] += 1
+
+	# The main function to construct MST using Kruskal's algorithm
+	def KruskalMST(self):
+
+		result = [] # This will store the resultant MST
+		i = 0 # An index variable, used for sorted edges
+		e = 0 # An index variable, used for result[]
+
+		# Step 1: Sort all the edges in non-decreasing order of their
+		# weight. If we are not allowed to change the given graph, we can create a copy of graph
+		self.graph = sorted(self.graph, key=lambda item: item[2])
+
+		parent = []
+		rank = []
+
+		# Create V subsets with single elements
+		for node in range(self.V):
+			parent.append(node)
+			rank.append(0)
+
+		# Number of edges to be taken is equal to V-1
+		while e < self.V - 1:
+
+			# Step 2: Pick the smallest edge and increment the index for next iteration
+			u, v, w = self.graph[i]
+			i = i + 1
+			x = self.find(parent, u)
+			y = self.find(parent, v)
+
+			# If including this edge doesn't cause cycle, include it in result and increment the indexof 
+            # result for next edge
+			if x != y:
+				e += 1
+				result.append([u, v, w])
+				self.union(parent, rank, x, y)
+				# Else discard the edge
+
+		minimumCost = 0
+		print ("Edges in the constructed MST")
+		for u, v, weight in result:
+			minimumCost += weight
+			print("%d -- %d == %d" % (u, v, weight))
+		print("Minimum Spanning Tree" , minimumCost)
+
+g = Graph(4)
+g.addEdge(0, 1, 10)
+g.addEdge(0, 2, 6)
+g.addEdge(0, 3, 5)
+g.addEdge(1, 3, 15)
+g.addEdge(2, 3, 4)
+g.KruskalMST()
 ```
 
 ## [Implement Prim’s Algorithm](https://www.geeksforgeeks.org/prims-minimum-spanning-tree-mst-greedy-algo-5/)
 
 ```python
+# A Python program for Prim's Minimum Spanning Tree (MST) algorithm.
+# The program is for adjacency matrix representation of the graph
 
+import sys # Library for INT_MAX
+
+class Graph():
+
+	def __init__(self, vertices):
+		self.V = vertices
+		self.graph = [[0 for column in range(vertices)]
+					for row in range(vertices)]
+
+	# A utility function to print the constructed MST stored in parent[]
+	def printMST(self, parent):
+		print ("Edge \tWeight")
+		for i in range(1, self.V):
+			print (parent[i], "-", i, "\t", self.graph[i][parent[i]])
+
+	# A utility function to find the vertex with minimum distance value, from the set of vertices not yet included in shortest path tree
+	def minKey(self, key, mstSet):
+
+		# Initialize minValue value
+		minValue = sys.maxsize
+
+		for v in range(self.V):
+			if key[v] < minValue and mstSet[v] == False:
+				minValue = key[v]
+				min_index = v
+
+		return min_index
+
+	# Function to construct and print MST for a graph represented using adjacency matrix representation
+	def primMST(self):
+
+		# Key values used to pick minimum weight edge in cut
+		key = [sys.maxsize] * self.V
+		parent = [None] * self.V # Array to store constructed MST
+		# Make key 0 so that this vertex is picked as first vertex
+		key[0] = 0
+		mstSet = [False] * self.V
+
+		parent[0] = -1 # First node is always the root of
+
+		for cout in range(self.V):
+
+			# Pick the minimum distance vertex from the set of vertices not yet processed. u is always equal to src in first iteration
+			u = self.minKey(key, mstSet)
+
+			# Put the minimum distance vertex in the shortest path tree
+			mstSet[u] = True
+
+			# Update dist value of the adjacent vertices of the picked vertex only if the current
+			# distance is greater than new distance and the vertex in not in the shortest path tree
+			for v in range(self.V):
+
+				# graph[u][v] is non zero only for adjacent vertices of m mstSet[v] is false for vertices not yet included in MST
+				# Update the key only if graph[u][v] is smaller than key[v]
+				if self.graph[u][v] > 0 and mstSet[v] == False and key[v] > self.graph[u][v]:
+						key[v] = self.graph[u][v]
+						parent[v] = u
+		self.printMST(parent)
+
+g = Graph(5)
+g.graph = [ [0, 2, 0, 6, 0],
+			[2, 0, 3, 8, 5],
+			[0, 3, 0, 0, 7],
+			[6, 8, 0, 0, 9],
+			[0, 5, 7, 9, 0]]
+g.primMST();
 ```
 
 ## [Total no. of Spanning tree in a graph](https://www.geeksforgeeks.org/total-number-spanning-trees-graph/)
 
 ```python
-
+TODO
 ```
 
 ## [Implement Bellman Ford Algorithm](https://practice.geeksforgeeks.org/problems/negative-weight-cycle/0)
 
 ```python
+"""
+We are given a directed graph. We need to compute whether the graph has a negative cycle or not. A negative cycle is one in which the overall sum of the cycle becomes negative.
+"""
+
+# a structure to represent a weighted edge in graph
+class Edge:
+	def __init__(self):
+		self.src = 0
+		self.dest = 0
+		self.weight = 0
+
+# a structure to represent a connected, directed and weighted graph
+class Graph:
+	def __init__(self):
+		# V. Number of vertices, E. Number of edges
+		self.V = 0
+		self.E = 0
+
+		# graph is represented as an array of edges.
+		self.edge = None
+
+# Creates a graph with V vertices and E edges
+def createGraph(V, E):
+
+	graph = Graph()
+	graph.V = V;
+	graph.E = E;
+	graph.edge = [Edge() for _ in range(graph.E)]
+	return graph;
+
+# The main function that finds shortest distances from src to all other vertices using Bellman- Ford algorithm. The function also detects negative weight cycle
+def isNegCycleBellmanFord(graph, src):
+
+	V = graph.V;
+	E = graph.E;
+	dist = [1000000 for _ in range(V)];
+	dist[src] = 0;
+
+	# Step 2: Relax all edges |V| - 1 times. 
+    # A simple shortest path from src to any other vertex can have at-most |V| - 1 edges
+	for _ in range(1, V):
+		for j in range(E):
+
+			u = graph.edge[j].src;
+			v = graph.edge[j].dest;
+			weight = graph.edge[j].weight;
+			if (dist[u] != 1000000 and dist[u] + weight < dist[v]):
+				dist[v] = dist[u] + weight;
+
+	# Step 3: check for negative-weight cycles.
+	# The above step guarantees shortest distances if graph doesn't contain negative weight cycle.
+	# If we get a shorter path, then there is a cycle.
+	for i in range(E):
+
+		u = graph.edge[i].src;
+		v = graph.edge[i].dest;
+		weight = graph.edge[i].weight;
+		if (dist[u] != 1000000 and dist[u] + weight < dist[v]):
+			return True;
+
+	return False;
+
+
+# Let us create the graph given in above example
+V = 5; # Number of vertices in graph
+E = 8; # Number of edges in graph
+graph = createGraph(V, E)
+
+source= [0,0,1,1,1,3,3,4]
+destination= [1,2,2,3,4,2,1,3]
+weight=[-1,4,3,2,2,5,1,-3]
+
+for i in range(E):
+    graph.edge[i].src=source[i]
+    graph.edge[i].dest=destination[i]
+    graph.edge[i].weight=weight[i]
+
+if (isNegCycleBellmanFord(graph, 0)):
+	print("Yes")
+else:
+	print("No")
 
 ```
 
 ## [Implement Floyd warshallAlgorithm](https://practice.geeksforgeeks.org/problems/implementing-floyd-warshall/0)
 
 ```python
+"""
+The Floyd Warshall Algorithm is for solving the All Pairs Shortest Path problem. The problem is to find shortest distances between every pair of vertices in a given edge weighted directed Graph. 
+Example: 
+
+Input:
+       graph[][] = { {0,   5,  INF, 10},
+                    {INF,  0,  3,  INF},
+                    {INF, INF, 0,   1},
+                    {INF, INF, INF, 0} }
+which represents the following graph
+             10
+       (0)------->(3)
+        |         /|\
+      5 |          |
+        |          | 1
+       \|/         |
+       (1)------->(2)
+            3       
+Note that the value of graph[i][j] is 0 if i is equal to j 
+And graph[i][j] is INF (infinite) if there is no edge from vertex i to j.
+
+Output:
+Shortest distance matrix
+      0      5      8      9
+    INF      0      3      4
+    INF    INF      0      1
+    INF    INF    INF      0
+"""
+
+
+def floydWarshall(graph):
+	dist = list(map(lambda i: list(map(lambda j: j, i)), graph))
+	for k in range(V):
+		# pick all vertices as source one by one
+		for i in range(V):
+			# Pick all vertices as destination for the above picked source
+			for j in range(V):
+
+				# If vertex k is on the shortest path from i to j, then update the value of dist[i][j]
+				dist[i][j] = min(dist[i][j],dist[i][k] + dist[k][j])
+	printSolution(dist)
+
+
+# A utility function to print the solution
+def printSolution(dist):
+	print ("Following matrix shows the shortest distances\
+between every pair of vertices")
+	for i in range(V):
+		for j in range(V):
+			if(dist[i][j] == INF):
+				print ("%7s" % ("INF"),end=" ")
+			else:
+				print ("%7d\t" % (dist[i][j]),end=' ')
+			if j == V-1:
+				print ()
+
+
+
+# Let us create the following weighted graph
+"""
+			10
+	(0)------->(3)
+		|		 /|\
+	5 |		 |
+		|		 | 1
+	\|/		 |
+	(1)------->(2)
+			3		 
+"""
+# Number of vertices in the graph
+V = 4
+INF = 99999
+
+graph = [[0, 5, INF, 10],
+		[INF, 0, 3, INF],
+		[INF, INF, 0, 1],
+		[INF, INF, INF, 0]
+		]
+
+floydWarshall(graph)
 
 ```
 
 ## [Travelling Salesman Problem](https://www.geeksforgeeks.org/travelling-salesman-problem-set-1/)
 
 ```python
+"""
+Travelling Salesman Problem (TSP): 
 
+Given a set of cities and the distance between every pair of cities, the problem is to find the shortest possible route that visits every city exactly once and returns to the starting point.
+"""
+n = 4 # there are four nodes in example graph (graph is 1-based)
+
+# dist[i][j] represents shortest distance to go from i to  this matrix can be calculated for any given graph usin all-pair shortest path algorithms
+dist = [[0, 0, 0, 0, 0], [0, 0, 10, 15, 20], [
+	0, 10, 0, 25, 25], [0, 15, 25, 0, 30], [0, 20, 25, 30, 0]]
+
+# memoization for top down recursion
+memo = [[-1]*(1 << (n+1)) for _ in range(n+1)]
+
+
+def fun(i, mask):
+	# base case
+	# if only ith bit and 1st bit is set in our mask, it implies we have visited all other nodes already
+	if mask == ((1 << i) | 3):
+		return dist[1][i]
+
+	# memoization
+	if memo[i][mask] != -1:
+		return memo[i][mask]
+
+	res = 10**9 # result of this sub-problem
+
+	# we have to travel all nodes j in mask and end the path at ith node so for every node j in mask, recursively calculate cost of travelling all nodes in mask except i and then travel back from node j to node i taking
+	# the shortest path take the minimum of all possible j nodes
+	for j in range(1, n+1):
+		if (mask & (1 << j)) != 0 and j != i and j != 1:
+			res = min(res, fun(j, mask & (~(1 << i))) + dist[j][i])
+	memo[i][mask] = res # storing the minimum value
+	return res
+
+
+
+ans = 10**9
+for i in range(1, n+1):
+	# try to go from node 1 visiting all nodes in between to i then return from i taking the shortest route to 1
+	ans = min(ans, fun(i, (1 << (n+1))-1) + dist[i][1])
+print(f"The cost of most efficient tour = {str(ans)}")
 ```
 
 ## [Graph ColouringProblem](https://www.geeksforgeeks.org/graph-coloring-applications/)
 
 ```python
-
+TODO
 ```
 
 ## [Snake and Ladders Problem](https://leetcode.com/problems/snakes-and-ladders/)
 
 ```python
+"""
+On an N x N board, the numbers from 1 to N*N are written boustrophedonically starting from the bottom left of the board, and alternating direction each row. For example, for a 6 x 6 board, the numbers are written as follows:
 
+You start on square 1 of the board (which is always in the last row and first column). Each move, starting from square x, consists of the following:
+
+You choose a destination square S with number x+1, x+2, x+3, x+4, x+5, or x+6, provided this number is <= N*N.
+(This choice simulates the result of a standard 6-sided die roll: ie., there are always at most 6 destinations, regardless of the size of the board.)
+If S has a snake or ladder, you move to the destination of that snake or ladder. Otherwise, you move to S. A board square on row r and column c has a “snake or ladder” if board[r][c] != -1. The destination of that snake or ladder is board[r][c].
+Note that you only take a snake or ladder at most once per move: if the destination to a snake or ladder is the start of another snake or ladder, you do not continue moving. (For example, if the board is [[4,-1],[-1,3]], and on the first move your destination square is 2, then you finish your first move at 3, because you do not continue moving to 4.)
+
+Return the least number of moves required to reach square N*N. If it is not possible, return -1.
+"""
+import collections
+def snakesAndLadders(board):
+        rows = len(board)
+        total_square = rows*rows
+
+        def next_square(step):
+                quot, rem = divmod(step-1, rows)
+                row = (rows - 1) - quot
+                col = rem if row%2 != rows%2 else (rows - 1) - rem
+                return row, col
+
+        dist = {1: 0}#square and step
+        queue = collections.deque([1])
+        while queue:
+            square = queue.popleft()
+            if square == total_square:
+                return dist[square]
+            for new_square in range(square+1, min(square+6, total_square) + 1):
+                r, c = next_square(new_square)
+                if board[r][c] != -1:
+                    new_square = board[r][c]
+                if new_square not in dist:
+                    dist[new_square] = dist[square] + 1
+                    queue.append(new_square)
+board=[
+[-1,-1,-1,-1,-1,-1],
+[-1,-1,-1,-1,-1,-1],
+[-1,-1,-1,-1,-1,-1],
+[-1,35,-1,-1,13,-1],
+[-1,-1,-1,-1,-1,-1],
+[-1,15,-1,-1,-1,-1]]
+print(snakesAndLadders(board))
 ```
 
 ## [Find bridge in a graph](https://www.geeksforgeeks.org/bridge-in-a-graph/)
 
 ```python
+from collections import defaultdict
 
+#This class represents an undirected graph using adjacency list representation
+class Graph:
+
+	def __init__(self,vertices):
+		self.V= vertices #No. of vertices
+		self.graph = defaultdict(list) # default dictionary to store graph
+		self.Time = 0
+
+	# function to add an edge to graph
+	def addEdge(self,u,v):
+		self.graph[u].append(v)
+		self.graph[v].append(u)
+
+	'''
+    A recursive function that finds and prints bridges
+	using DFS traversal
+	u --> The vertex to be visited next
+	visited[] --> keeps track of visited vertices
+	disc[] --> Stores discovery times of visited vertices
+	parent[] --> Stores parent vertices in DFS tree
+    '''
+	def bridgeUtil(self, u, visited, parent, low, disc):
+
+		# Mark the current node as visited and print it
+		visited[u]= True
+
+		# Initialize discovery time and low value
+		disc[u] = self.Time
+		low[u] = self.Time
+		self.Time += 1
+
+		#Recur for all the vertices adjacent to this vertex
+		for v in self.graph[u]:
+			# If v is not visited yet, then make it a child of u in DFS tree and recur for it
+			if visited[v] == False :
+				parent[v] = u
+				self.bridgeUtil(v, visited, parent, low, disc)
+
+				# Check if the subtree rooted with v has a connection to one of the ancestors of u
+				low[u] = min(low[u], low[v])
+
+
+				''' If the lowest vertex reachable from subtree
+				under v is below u in DFS tree, then u-v is
+				a bridge'''
+				if low[v] > disc[u]:
+					print ("%d %d" %(u,v))
+	
+					
+			elif v != parent[u]: # Update low value of u for parent function calls.
+				low[u] = min(low[u], disc[v])
+
+
+	# DFS based function to find all bridges. It uses recursive function bridgeUtil()
+	def bridge(self):
+
+		# Mark all the vertices as not visited and Initialize parent and visited, and ap(articulation point) arrays
+		visited = [False] * (self.V)
+		disc = [float("Inf")] * (self.V)
+		low = [float("Inf")] * (self.V)
+		parent = [-1] * (self.V)
+
+		# Call the recursive helper function to find bridges in DFS tree rooted with vertex 'i'
+		for i in range(self.V):
+			if visited[i] == False:
+				self.bridgeUtil(i, visited, parent, low, disc)
+		
+
+
+g1 = Graph(5)
+g1.addEdge(1, 0)
+g1.addEdge(0, 2)
+g1.addEdge(2, 1)
+g1.addEdge(0, 3)
+g1.addEdge(3, 4)
+
+
+print ("Bridges in first graph ")
+g1.bridge()
+
+g2 = Graph(4)
+g2.addEdge(0, 1)
+g2.addEdge(1, 2)
+g2.addEdge(2, 3)
+print ("\nBridges in second graph ")
+g2.bridge()
+
+
+g3 = Graph (7)
+g3.addEdge(0, 1)
+g3.addEdge(1, 2)
+g3.addEdge(2, 0)
+g3.addEdge(1, 3)
+g3.addEdge(1, 4)
+g3.addEdge(1, 6)
+g3.addEdge(3, 5)
+g3.addEdge(4, 5)
+print ("\nBridges in third graph ")
+g3.bridge()
 ```
 
 ## [Count Strongly connected Components(Kosaraju Algo)](https://practice.geeksforgeeks.org/problems/strongly-connected-components-kosarajus-algo/1)
 
 ```python
+from collections import defaultdict
+class Graph:
+	def __init__(self,vertices):
+		self.V= vertices 
+		self.graph = defaultdict(list) 
 
+	def addEdge(self,u,v):
+		self.graph[u].append(v)
+
+	# A function used by DFS
+	def DFSUtil(self,v,visited):
+		# Mark the current node as visited and print it
+		visited[v]= True
+		print (v)
+		#Recur for all the vertices adjacent to this vertex
+		for i in self.graph[v]:
+			if visited[i]==False:
+				self.DFSUtil(i,visited)
+
+
+	def fillOrder(self,v,visited, stack):
+		# Mark the current node as visited
+		visited[v]= True
+		#Recur for all the vertices adjacent to this vertex
+		for i in self.graph[v]:
+			if visited[i]==False:
+				self.fillOrder(i, visited, stack)
+		stack = stack.append(v)
+	
+
+	# Function that returns reverse (or transpose) of this graph
+	def getTranspose(self):
+		g = Graph(self.V)
+
+		# Recur for all the vertices adjacent to this vertex
+		for i in self.graph:
+			for j in self.graph[i]:
+				g.addEdge(j,i)
+		return g
+
+
+
+	# The main function that finds and prints all strongly connected components
+	def printSCCs(self):
+		
+		stack = []
+		# Mark all the vertices as not visited (For first DFS)
+		visited =[False]*(self.V)
+		# Fill vertices in stack according to their finishing times
+		for i in range(self.V):
+			if visited[i]==False:
+				self.fillOrder(i, visited, stack)
+
+		# Create a reversed graph
+		gr = self.getTranspose()
+		
+		# Mark all the vertices as not visited (For second DFS)
+		visited =[False]*(self.V)
+
+		# Now process all vertices in order defined by Stack
+		while stack:
+			i = stack.pop()
+			if visited[i]==False:
+				gr.DFSUtil(i, visited)
+				print()
+
+# Create a graph given in the above diagram
+g = Graph(5)
+g.addEdge(1, 0)
+g.addEdge(0, 2)
+g.addEdge(2, 1)
+g.addEdge(0, 3)
+g.addEdge(3, 4)
+print ("Following are strongly connected components " + "in given graph")
+g.printSCCs()
 ```
 
 ## [Check whether a graph is Bipartite or Not](https://www.geeksforgeeks.org/bipartite-graph/)
 
 ```python
+V = 4
 
-```
+def colorGraph(G, color, pos, c):
+	if color[pos] not in [-1, c]:
+		return False
 
-## [Detect Negative cycle in a graph](https://www.geeksforgeeks.org/detect-negative-cycle-graph-bellman-ford/)
+	# color this pos as c and all its neighbours and 1-c
+	color[pos] = c
+	ans = True
+	for i in range(V):
+		if G[pos][i]:
+			if color[i] == -1:
+				ans &= colorGraph(G, color, i, 1-c)
+			if color[i] not in [-1, 1 - c]:
+				return False
+		if not ans:
+			return False
+	return True
 
-```python
+def isBipartite(G):
+	color = [-1] * V
+	#start is vertex 0
+	pos = 0
+	# two colors 1 and 0
+	return colorGraph(G, color, pos, 1)
 
+G = [[0, 1, 0, 1],
+	[1, 0, 1, 0],
+	[0, 1, 0, 1],
+	[1, 0, 1, 0]]
+
+if isBipartite(G): print("Yes")
+else: print("No")
 ```
 
 ## [Longest path in a Directed Acyclic Graph](https://www.geeksforgeeks.org/find-longest-path-directed-acyclic-graph/)
