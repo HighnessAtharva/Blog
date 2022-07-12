@@ -9042,58 +9042,434 @@ test("ACA", "DAS", "DAACSA")
 
 # Graph
 
-## [Create a Graph, print it](https://1drv.ms/t/s!AqTOHFO77CqEiRua06v1PATyiFg5)
+## Implement Graph
 
 ```python
-
+class Graph:
+    def __init__(self, edges, n):
+        self.adjList = [[] for _ in range(n)]
+        for (src, dest) in edges:
+            self.adjList[src].append(dest)
+ 
+ 
+def printGraph(graph):
+    for src in range(len(graph.adjList)):
+        for dest in graph.adjList[src]:
+            print(f'({src} —> {dest}) ', end='')
+        print()
+ 
+edges = [(0, 1), (1, 2), (2, 0), (2, 1), (3, 2), (4, 5), (5, 4)]
+n = 6
+graph = Graph(edges, n)
+printGraph(graph)
 ```
 
-## [Create a Graph (for practice)](https://practice.geeksforgeeks.org/problems/print-adjacency-list-1587115620/1)
+## Implement Weighted Graph
 
 ```python
-
+class Graph:
+    def __init__(self, edges, n):
+        self.adjList = [None] * n
+        for i in range(n):
+            self.adjList[i] = []
+        for (src, dest, weight) in edges:
+            self.adjList[src].append((dest, weight))
+ 
+ 
+def printGraph(graph):
+    for src in range(len(graph.adjList)):
+        for (dest, weight) in graph.adjList[src]:
+            print(f'({src} —> {dest}, {weight}) ', end='')
+        print()
+ 
+ 
+# Input: Edges in a weighted digraph (as per the above diagram)
+# Edge (x, y, w) represents an edge from `x` to `y` having weight `w`
+edges = [(0, 1, 6), (1, 2, 7), (2, 0, 5), (2, 1, 4), (3, 2, 10),
+        (4, 5, 1), (5, 4, 3)]
+n = 6
+graph = Graph(edges, n)
+printGraph(graph)
 ```
 
 ## [Implement BFS algorithm](https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1)
 
 ```python
+from collections import deque
+
+class Graph:
+    def __init__(self, edges, n):
+        self.adjList = [[] for _ in range(n)]
+        for (src, dest) in edges:
+            self.adjList[src].append(dest)
+            self.adjList[dest].append(src)
+
+
+def BFS(graph, v, discovered):
+    q = deque()
+    discovered[v] = True
+    q.append(v)
+    while q:
+        v = q.popleft()
+        print(v, end=' ')
+        for u in graph.adjList[v]:
+            if not discovered[u]:
+                discovered[u] = True
+                q.append(u)
+
+edges = [
+    (1, 2), (1, 3), (1, 4), (2, 5), (2, 6), (5, 9),
+    (5, 10), (4, 7), (4, 8), (7, 11), (7, 12)
+    # vertex 0, 13, and 14 are single nodes
+]
+n = 15
+graph = Graph(edges, n)
+discovered = [False] * n
+for i in range(n):
+    if not discovered[i]:
+        BFS(graph, i, discovered)
 
 ```
 
 ## [Implement DFS Algo](https://practice.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1)
 
 ```python
-
+from collections import deque
+class Graph:
+    def __init__(self, edges, n):
+        self.adjList = [[] for _ in range(n)]
+        for (src, dest) in edges:
+            self.adjList[src].append(dest)
+            self.adjList[dest].append(src)
+ 
+def iterativeDFS(graph, v, discovered):
+    stack = deque()
+    stack.append(v)
+    while stack:
+        v = stack.pop()
+        if discovered[v]:
+            continue
+        discovered[v] = True
+        print(v, end=' ')
+        adjList = graph.adjList[v]
+        for i in reversed(range(len(adjList))):
+            u = adjList[i]
+            if not discovered[u]:
+                stack.append(u)
+ 
+ 
+edges = [
+    # Notice that node 0 is unconnected
+    (1, 2), (1, 7), (1, 8), (2, 3), (2, 6), (3, 4),
+    (3, 5), (8, 9), (8, 12), (9, 10), (9, 11)
+    # (6, 9) introduces a cycle
+]
+n = 13
+graph = Graph(edges, n)
+discovered = [False] * n
+for i in range(n):
+    if not discovered[i]:
+        iterativeDFS(graph, i, discovered)
 ```
 
 ## [Detect Cycle in Directed Graph using BFS/DFS Algo](https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1)
 
 ```python
+class Graph:
+    def __init__(self, edges, n):
+        self.adjList = [[] for _ in range(n)]
+        for (src, dest) in edges:
+            self.adjList[src].append(dest)
+ 
+ 
+# Perform DFS on the graph and set the departure time of all vertices of the graph
+def DFS(graph, v, discovered, departure, time):
+ 
+    # mark the current node as discovered
+    discovered[v] = True
+ 
+    # do for every edge (v, u)
+    for u in graph.adjList[v]:
+        # if `u` is not yet discovered
+        if not discovered[u]:
+            time = DFS(graph, u, discovered, departure, time)
+ 
+    # ready to backtrack set departure time of vertex `v`
+    departure[v] = time
+    time = time + 1
+ 
+    return time
+ 
+ 
+# Returns true if the given directed graph is DAG
+def isDAG(graph, n):
+ 
+    # keep track of whether a vertex is discovered or not
+    discovered = [False] * n
+ 
+    # keep track of the departure time of a vertex in DFS
+    departure = [None] * n
+ 
+    time = 0
+ 
+    # Perform DFS traversal from all undiscovered vertices to visit all connected components of a graph
+    for i in range(n):
+        if not discovered[i]:
+            time = DFS(graph, i, discovered, departure, time)
+ 
+    # check if the given directed graph is DAG or not
+    for u in range(n):
+ 
+        # check if (u, v) forms a back-edge.
+        for v in graph.adjList[u]:
+ 
+            # If the departure time of vertex `v` is greater than equal
+            # to the departure time of `u`, they form a back edge.
+ 
+            # Note that `departure[u]` will be equal to `departure[v]`
+            # only if `u = v`, i.e., vertex contain an edge to itself
+            if departure[u] <= departure[v]:
+                return False
+ 
+    # no back edges
+    return True
+ 
+ 
 
+# List of graph edges as per the above diagram
+edges = [(0, 1), (0, 3), (1, 2), (1, 3), (3, 2), (3, 4), (3, 0), (5, 6), (6, 3)]
+# total number of nodes in the graph (labelled from 0 to 6)
+n = 7
+graph = Graph(edges, n)
+if isDAG(graph, n):
+    print('Does not contain a Cycle')
+else:
+    print('Contains a Cycle')
+ 
 ```
 
 ## [Detect Cycle in UnDirected Graph using BFS/DFS Algo](https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1)
 
 ```python
+class Graph:
+    def __init__(self, edges, n):
+        self.adjList = [[] for _ in range(n)]
+        for (src, dest) in edges:
+            self.adjList[src].append(dest)
+            self.adjList[dest].append(src)
+ 
+ 
+# Function to perform DFS traversal on the graph on a graph
+def DFS(graph, v, discovered, parent=-1):
+ 
+    # mark the current node as discovered
+    discovered[v] = True
+ 
+    # do for every edge (v, w)
+    for w in graph.adjList[v]:
+ 
+        # if `w` is not discovered
+        if not discovered[w]:
+            if DFS(graph, w, discovered, v):
+                return True
+ 
+        # if `w` is discovered, and `w` is not a parent
+        elif w != parent:
+            # we found a back-edge (cycle)
+            return True
+ 
+    # No back-edges were found in the graph
+    return False
+ 
+ 
 
+edges = [
+    (0, 1), (0, 6), (0, 7), (1, 2), (1, 5), (2, 3),
+    (2, 4), (7, 8), (7, 11), (8, 9), (8, 10), (10, 11)
+    # edge (10, 11) introduces a cycle in the graph
+]
+
+# total number of nodes in the graph (0 to 11)
+n = 12
+
+graph = Graph(edges, n)
+discovered = [False] * n
+if DFS(graph, 0, discovered):
+    print('The graph contains a cycle')
+else:
+    print('The graph doesn\'t contain any cycle')
 ```
 
-## [Search in a Maze](https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem/1)
-
-```python
-
-```
 
 ## [Minimum Step by Knight](https://practice.geeksforgeeks.org/problems/steps-by-knight/0)
 
 ```python
+"""Given a chessboard, find the shortest distance (minimum number of steps) taken by a knight to reach a given destination from a given source.
 
+For example,
+
+Input:
+ 
+N = 8 (8 × 8 board)
+Source = (7, 0)
+Destination = (0, 7)
+ 
+Output: Minimum number of steps required is 6
+"""
+
+import sys
+from collections import deque
+ 
+ 
+class Node:
+    # (x, y) represents chessboard coordinates `dist` represents its minimum distance from the source
+    def __init__(self, x, y, dist=0):
+        self.x = x
+        self.y = y
+        self.dist = dist
+ 
+    # As we are using `Node` as a key in a dictionary, we need to override the `__hash__()` and `__eq__()` function
+    def __hash__(self):
+        return hash((self.x, self.y, self.dist))
+ 
+    def __eq__(self, other):
+        return (self.x, self.y, self.dist) == (other.x, other.y, other.dist)
+ 
+ 
+# Below lists detail all eight possible movements for a knight
+row = [2, 2, -2, -2, 1, 1, -1, -1]
+col = [-1, 1, 1, -1, 2, -2, 2, -2]
+ 
+ 
+# Check if (x, y) is valid chessboard coordinates.
+# Note that a knight cannot go out of the chessboard
+def isValid(x, y, N):
+    return x >= 0 and y >= 0 and x < N and y < N
+ 
+ 
+# Find the minimum number of steps taken by the knight
+# from the source to reach the destination using BFS
+def findShortestDistance(src, dest, N):
+
+    # set to check if the matrix cell is visited before or not
+    visited = set()
+ 
+    # create a queue and enqueue the first node
+    q = deque()
+    q.append(src)
+ 
+    # loop till queue is empty
+    while q:
+ 
+        # dequeue front node and process it
+        node = q.popleft()
+ 
+        x = node.x
+        y = node.y
+        dist = node.dist
+ 
+        # if the destination is reached, return distance
+        if x == dest.x and y == dest.y:
+            return dist
+ 
+        # skip if the location is visited before
+        if node not in visited:
+            # mark the current node as visited
+            visited.add(node)
+ 
+            # check for all eight possible movements for a knight
+            # and enqueue each valid movement
+            for i in range(len(row)):
+                # get the knight's valid position from the current position on
+                # the chessboard and enqueue it with +1 distance
+                x1 = x + row[i]
+                y1 = y + col[i]
+ 
+                if isValid(x1, y1, N):
+                    q.append(Node(x1, y1, dist + 1))
+ 
+    # return infinity if the path is not possible
+    return sys.maxsize
+
+
+N = 8               # N x N matrix
+src = Node(0, 7)    # source coordinates
+dest = Node(7, 0)   # destination coordinates
+print("The minimum number of steps required is",findShortestDistance(src, dest, N))
+ 
 ```
 
 ## [flood fill algo](https://leetcode.com/problems/flood-fill/)
 
 ```python
+"""Flood fill (also known as seed fill) is an algorithm that determines the area connected to a given node in a multi-dimensional array.
+"""
 
+# Below lists detail all eight possible movements
+row = [-1, -1, -1, 0, 0, 1, 1, 1]
+col = [-1, 0, 1, -1, 1, -1, 0, 1]
+ 
+ 
+# check if it is possible to go to pixel (x, y) from the
+# current pixel. The function returns false if the pixel
+# has a different color, or it's not a valid pixel
+def isSafe(mat, x, y, target):
+    return 0 <= x < len(mat) and 0 <= y < len(mat[0]) and mat[x][y] == target
+ 
+ 
+# Flood fill using DFS
+def floodfill(mat, x, y, replacement):
+ 
+    # base case
+    if not mat or not len(mat):
+        return
+ 
+    # get the target color
+    target = mat[x][y]
+ 
+    # target color is same as replacement
+    if target == replacement:
+        return
+ 
+    # replace the current pixel color with that of replacement
+    mat[x][y] = replacement
+ 
+    # process all eight adjacent pixels of the current pixel and
+    # recur for each valid pixel
+    for k in range(len(row)):
+ 
+        # if the adjacent pixel at position (x + row[k], y + col[k]) is
+        # a valid pixel and has the same color as that of the current pixel
+        if isSafe(mat, x + row[k], y + col[k], target):
+            floodfill(mat, x + row[k], y + col[k], replacement)
+ 
+ 
+
+mat = [
+        ['Y', 'Y', 'Y', 'G', 'G', 'G', 'G', 'G', 'G', 'G'],
+        ['Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'G', 'X', 'X', 'X'],
+        ['G', 'G', 'G', 'G', 'G', 'G', 'G', 'X', 'X', 'X'],
+        ['W', 'W', 'W', 'W', 'W', 'G', 'G', 'G', 'G', 'X'],
+        ['W', 'R', 'R', 'R', 'R', 'R', 'G', 'X', 'X', 'X'],
+        ['W', 'W', 'W', 'R', 'R', 'G', 'G', 'X', 'X', 'X'],
+        ['W', 'B', 'W', 'R', 'R', 'R', 'R', 'R', 'R', 'X'],
+        ['W', 'B', 'B', 'B', 'B', 'R', 'R', 'X', 'X', 'X'],
+        ['W', 'B', 'B', 'X', 'B', 'B', 'B', 'B', 'X', 'X'],
+        ['W', 'B', 'B', 'X', 'X', 'X', 'X', 'X', 'X', 'X']
+    ]
+
+# start node
+x, y = (3, 9)   # having a target color `X`
+
+# replacement color
+replacement = 'C'
+
+# replace the target color with a replacement color using DFS
+floodfill(mat, x, y, replacement)
+
+# print the colors after replacement
+for r in mat:
+    print(r)
 ```
 
 ## [Clone a graph](https://leetcode.com/problems/clone-graph/)
@@ -9623,7 +9999,7 @@ test("ACA", "DAS", "DAACSA")
 
 ```
 
-# LinkedList
+# Linked List
 
 ## [Write a Program to reverse the Linked List. (Both Iterative and recursive)](https://www.geeksforgeeks.org/reverse-a-linked-list/)
 
