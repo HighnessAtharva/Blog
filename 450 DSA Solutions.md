@@ -4,7 +4,7 @@
 - [x] Bit Manipulation
 - [x] Binary Search Trees
 - [x] Dynamic Programming
-- [ ] Graph
+- [x] Graph
 - [ ] Greedy
 - [ ] Heap
 - [ ] LinkedList
@@ -10752,84 +10752,694 @@ else: print("No")
 ## [Longest path in a Directed Acyclic Graph](https://www.geeksforgeeks.org/find-longest-path-directed-acyclic-graph/)
 
 ```python
+def topologicalSortUtil(v):
+	global Stack, visited, adj
+	visited[v] = True
+	for i in adj[v]:
+		if (not visited[i[0]]):
+			topologicalSortUtil(i[0])
+	Stack.append(v)
 
+# The function to find longest distances from a given vertex. It uses recursive topologicalSortUtil() to get topological sorting.
+def longestPath(s):
+	global Stack, visited, adj, V
+	dist = [-10**9 for _ in range(V)]
+
+	# Call the recursive helper function to store Topological Sort starting from all vertices one by one
+	for i in range(V):
+		if (visited[i] == False):
+			topologicalSortUtil(i)
+
+	# Initialize distances to all vertices as infinite and distance to source as 0
+	dist[s] = 0
+
+	# Process vertices in topological order
+	while (len(Stack) > 0):
+
+		# Get the next vertex from topological order
+		u = Stack[-1]
+		del Stack[-1]
+
+		# Update distances of all adjacent vertices
+		if (dist[u] != 10**9):
+			for i in adj[u]:
+				if (dist[i[0]] < dist[u] + i[1]):
+					dist[i[0]] = dist[u] + i[1]
+
+	# Print calculated longest distances print(dist)
+	for i in range(V):
+		print("INF ",end="") if (dist[i] == -10**9) else print(dist[i],end=" ")
+
+
+V, Stack, visited = 6, [], [False for _ in range(7)]
+adj = [[] for _ in range(7)]
+# Create a graph given in the above diagram.
+# Here vertex numbers are 0, 1, 2, 3, 4, 5 with following mappings:
+# 0=r, 1=s, 2=t, 3=x, 4=y, 5=z
+adj[0].append([1, 5])
+adj[0].append([2, 3])
+adj[1].append([3, 6])
+adj[1].append([2, 2])
+adj[2].append([4, 4])
+adj[2].append([5, 2])
+adj[2].append([3, 7])
+adj[3].append([5, 1])
+adj[3].append([4, -1])
+adj[4].append([5, -2])
+s = 1
+print("Following are longest distances from source vertex ",s)
+longestPath(s)
 ```
 
 ## [Journey to the Moon](https://www.hackerrank.com/challenges/journey-to-the-moon/problem)
 
 ```python
-
+TODO
 ```
 
 ## [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/description/)
 
 ```python
-
+TODO
 ```
 
 ## [Oliver and the Game](https://www.hackerearth.com/practice/algorithms/graphs/topological-sort/practice-problems/algorithm/oliver-and-the-game-3/)
 
 ```python
-
+TODO
 ```
 
 ## [Water Jug problem using BFS](https://www.geeksforgeeks.org/water-jug-problem-using-bfs/)
 
 ```python
+"""
+You are given an m liter jug and a n liter jug. Both the jugs are initially empty. The jugs don’t have markings to allow measuring smaller quantities. You have to use the jugs to measure d liters of water where d is less than n. 
 
+(X, Y) corresponds to a state where X refers to the amount of water in Jug1 and Y refers to the amount of water in Jug2 
+Determine the path from the initial state (xi, yi) to the final state (xf, yf), where (xi, yi) is (0, 0) which indicates both Jugs are initially empty and (xf, yf) indicates a state which could be (0, d) or (d, 0).
+
+The operations you can perform are: 
+
+Empty a Jug, (X, Y)->(0, Y) Empty Jug 1
+Fill a Jug, (0, 0)->(X, 0) Fill Jug 1
+Pour water from one jug to the other until one of the jugs is either empty or full, (X, Y) -> (X-d, Y+d)
+Examples: 
+
+Input : 4 3 2
+Output : {(0, 0), (0, 3), (3, 0), (3, 3), (4, 2), (0, 2)}
+"""
+
+from collections import deque
+
+def BFS(a, b, target):
+	
+	# Map is used to store the states, every state is hashed to binary value to indicate either that state is visited before or not
+	m = {}
+	isSolvable = False
+	path = []
+	
+	# Queue to maintain states
+	q = deque()
+	
+	# Initialing with initial state
+	q.append((0, 0))
+
+	while (len(q) > 0):
+		# Current state
+		u = q.popleft()
+
+		#q.pop() #pop off used state
+
+		# If this state is already visited
+		if ((u[0], u[1]) in m):
+			continue
+
+		# Doesn't met jug constraints
+		if ((u[0] > a or u[1] > b or
+			u[0] < 0 or u[1] < 0)):
+			continue
+
+		# Filling the vector for constructing the solution path
+		path.append([u[0], u[1]])
+
+		# Marking current state as visited
+		m[(u[0], u[1])] = 1
+
+		# If we reach solution state, put ans=1
+		if (u[0] == target or u[1] == target):
+			isSolvable = True
+			
+			if (u[0] == target):
+				if (u[1] != 0):
+					
+					# Fill final state
+					path.append([u[0], 0])
+			else:
+				if (u[0] != 0):
+
+					# Fill final state
+					path.append([0, u[1]])
+
+			# Print the solution path
+			sz = len(path)
+			for i in range(sz):
+				print("(", path[i][0], ",",
+						path[i][1], ")")
+			break
+
+		# If we have not reached final state then, start developing intermediate states to reach solution state
+		q.append([u[0], b]) # Fill Jug2
+		q.append([a, u[1]]) # Fill Jug1
+
+		for ap in range(max(a, b) + 1):
+
+			# Pour amount ap from Jug2 to Jug1
+			c = u[0] + ap
+			d = u[1] - ap
+
+			# Check if this state is possible or not
+			if (c == a or (d == 0 and d >= 0)):
+				q.append([c, d])
+
+			# Pour amount ap from Jug 1 to Jug2
+			c = u[0] - ap
+			d = u[1] + ap
+
+			# Check if this state is possible or not
+			if ((c == 0 and c >= 0) or d == b):
+				q.append([c, d])
+		
+		# Empty Jug2
+		q.append([a, 0])
+		
+		# Empty Jug1
+		q.append([0, b])
+
+	# No, solution exists if ans=0
+	if (not isSolvable):
+		print ("No solution")
+
+
+Jug1, Jug2, target = 4, 3, 2
+print("Path from initial state to solution state ::")
+BFS(Jug1, Jug2, target)
 ```
 
 ## [Find if there is a path of more thank length from a source](https://www.geeksforgeeks.org/find-if-there-is-a-path-of-more-than-k-length-from-a-source/)
 
 ```python
+"""
+Given a graph, a source vertex in the graph and a number k, find if there is a simple path (without any cycle) starting from given source and ending at any other vertex such that the distance from source to that vertex is atleast ‘k’ length.
 
-```
+Example:
 
-## [M-ColouringProblem](https://practice.geeksforgeeks.org/problems/m-coloring-problem/0)
+Input  : Source s = 0, k = 58
+Output : True
+There exists a simple path 0 -> 7 -> 1
+-> 2 -> 8 -> 6 -> 5 -> 3 -> 4
+Which has a total distance of 60 km which
+is more than 58.
 
-```python
+Input  : Source s = 0, k = 62
+Output : False
 
+In the above graph, the longest simple
+path has distance 61 (0 -> 7 -> 1-> 2
+ -> 3 -> 4 -> 5-> 6 -> 8, so output 
+should be false for any input greater 
+than 61.
+"""
+# Program to find if there is a simple path with
+# weight more than k
+	
+# This class represents a dipathted graph using
+# adjacency list representation
+class Graph:
+	# Allocates memory for adjacency list
+	def __init__(self, V):
+		self.V = V
+		self.adj = [[] for _ in range(V)]
+	
+	# Returns true if graph has path more than k length
+	def pathMoreThanK(self,src, k):
+		# Create a path array with nothing included in path
+		path = [False]*self.V
+		
+		# Add source vertex to path
+		path[src] = 1
+		
+		return self.pathMoreThanKUtil(src, k, path)
+		
+	# Prints shortest paths from src to all other vertices
+	def pathMoreThanKUtil(self,src, k, path):
+		# If k is 0 or negative, return true
+		if (k <= 0):
+			return True
+		
+		# Get all adjacent vertices of source vertex src and recursively explore all paths from src.
+		i = 0
+		while i != len(self.adj[src]):
+			# Get adjacent vertex and weight of edge
+			v = self.adj[src][i][0]
+			w = self.adj[src][i][1]
+			i += 1
+		
+			# If vertex v is already there in path, then there is a cycle (we ignore this edge)
+			if (path[v] == True):
+				continue
+		
+			# If weight of is more than k, return true
+			if (w >= k):
+				return True
+		
+			# Else add this vertex to path
+			path[v] = True
+		
+			# If this adjacent can provide a path longer than k, return true.
+			if (self.pathMoreThanKUtil(v, k-w, path)):
+				return True
+		
+			# Backtrack
+			path[v] = False
+		
+		# If no adjacent could produce longer path, return false
+		return False
+	
+	# Utility function to an edge (u, v) of weight w
+	def addEdge(self,u, v, w):
+		self.adj[u].append([v, w])
+		self.adj[v].append([u, w])
+
+# create the graph given in above figure
+V = 9
+g = Graph(V)
+
+# making above shown graph
+g.addEdge(0, 1, 4)
+g.addEdge(0, 7, 8)
+g.addEdge(1, 2, 8)
+g.addEdge(1, 7, 11)
+g.addEdge(2, 3, 7)
+g.addEdge(2, 8, 2)
+g.addEdge(2, 5, 4)
+g.addEdge(3, 4, 9)
+g.addEdge(3, 5, 14)
+g.addEdge(4, 5, 10)
+g.addEdge(5, 6, 2)
+g.addEdge(6, 7, 1)
+g.addEdge(6, 8, 6)
+g.addEdge(7, 8, 7)
+
+src = 0
+k = 62
+if g.pathMoreThanK(src, k):
+	print("Yes")
+else:
+	print("No")
+
+k = 60
+if g.pathMoreThanK(src, k):
+	print("Yes")
+else:
+	print("No")
 ```
 
 ## [Minimum edges to reverse o make path from source to destination](https://www.geeksforgeeks.org/minimum-edges-reverse-make-path-source-destination/)
 
 ```python
+"""
+Given a directed graph and a source node and destination node, we need to find how many edges we need to reverse in order to make at least 1 path from the source node to the destination node.
+"""
 
+def addEdge(u, v, w):
+	global adj
+	adj[u].append((v, w))
+
+def shortestPath(src):
+
+	# Create a set to store vertices that are being preprocessed
+	setds = {}
+
+	# Create a vector for distances and initialize all distances as infinite (INF)
+	dist = [10**18 for _ in range(V)]
+
+	# Insert source itself in Set and initialize its
+	global adj
+	setds[(0, src)] = 1
+	dist[src] = 0
+
+	while setds:
+
+		# The first vertex in Set is the minimum distance vertex, extract it from set.
+		tmp = list(setds.keys())[0]
+		del setds[tmp]
+
+		# vertex label is stored in second of pair (it has to be done this way to keep the vertices sorted distance (distance must be first item in pair)
+		u = tmp[1]
+
+		# 'i' is used to get all adjacent vertices of a vertex
+		# list< pair<int, int> >::iterator i;
+		for i in adj[u]:
+
+			# Get vertex label and weight of current adjacent
+			# of u.
+			v = i[0];
+			weight = i[1]
+
+			# If there is shorter path to v through u.
+			if (dist[v] > dist[u] + weight):
+
+				# /* If distance of v is not INF then it must be in
+				#	 our set, so removing it and inserting again
+				#	 with updated less distance.
+				#	 Note : We extract only those vertices from Set
+				#	 for which distance is finalized. So for them,
+				#	 we would never reach here. */
+				if (dist[v] != 10**18):
+					del setds[(dist[v], v)]
+
+				# Updating distance of v
+				dist[v] = dist[u] + weight
+				setds[(dist[v], v)] = 1
+
+	return dist
+
+# method adds reverse edge of each original edge in the graph. It gives reverse edge a weight = 1 and all original edges a weight of 0. Now, the length of the shortest path will give us the answer. If shortest path is p: it means we used p reverse edges in the shortest path. 
+def modelGraphWithEdgeWeight(edge, E, V):
+	global adj
+	for i in range(E):
+		addEdge(edge[i][0], edge[i][1], 0) # original edge : weight 0
+		addEdge(edge[i][1], edge[i][0], 1) # reverse edge : weight 1
+
+# Method returns minimum number of edges to be reversed to reach from src to dest
+def getMinEdgeReversal(edge, E, V,src, dest):
+	# get modified graph with edge weight
+	modelGraphWithEdgeWeight(edge, E, V)
+
+	# get shortes path vector
+	dist = shortestPath(src)
+
+	# If distance of destination is still INF, not possible
+	return -1 if (dist[dest] == 10**18) else dist[dest]
+
+
+V = 7
+edge = [[0, 1], [2, 1], [2, 3], [5, 1],[4, 5], [6, 4], [6, 3]]
+E, adj = len(edge), [[] for _ in range(V + 1)]
+minEdgeToReverse = getMinEdgeReversal(edge, E, V, 0, 6)
+if (minEdgeToReverse != -1):
+	print(minEdgeToReverse)
+else:
+	print("Not possible")
 ```
 
 ## [Paths to travel each nodes using each edge(Seven Bridges)](https://www.geeksforgeeks.org/paths-travel-nodes-using-edgeseven-bridges-konigsberg/)
 
 ```python
-
+TODO
 ```
 
 ## [Vertex Cover Problem](https://www.geeksforgeeks.org/vertex-cover-problem-set-1-introduction-approximate-algorithm-2/)
 
 ```python
+"""
+There are n nodes and m bridges in between these nodes. Print the possible path through each node using each edges (if possible), traveling through each edges only once.
+"""
 
+from collections import defaultdict
+
+class Graph:
+	def __init__(self, vertices):
+		self.V = vertices
+		self.graph = defaultdict(list)
+
+
+	def addEdge(self, u, v):
+		self.graph[u].append(v)
+
+
+	def printVertexCover(self):
+		# Initialize all vertices as not visited.
+		visited = [False] * (self.V)
+		
+		# Consider all edges one by one
+		for u in range(self.V):
+			
+			# An edge is only picked when both visited[u] and visited[v] are false
+			if not visited[u]:
+				
+				# Go through all adjacents of u and pick the first not yet visited
+				# vertex (We are basically picking an edge (u, v) from remaining edges.
+				for v in self.graph[u]:
+					if not visited[v]:
+						
+						# Add the vertices (u, v) to the
+						# result set. We make the vertex u and v visited so that all
+						# edges from/to them would be ignored
+						visited[v] = True
+						visited[u] = True
+						break
+
+		# Print the vertex cover
+		for j in range(self.V):
+			if visited[j]:
+				print(j, end = ' ')
+		print()
+
+g = Graph(7)
+g.addEdge(0, 1)
+g.addEdge(0, 2)
+g.addEdge(1, 3)
+g.addEdge(3, 4)
+g.addEdge(4, 5)
+g.addEdge(5, 6)
+g.printVertexCover()
 ```
 
 ## [Chinese Postman or Route Inspection](https://www.geeksforgeeks.org/chinese-postman-route-inspection-set-1-introduction/)
 
 ```python
-
+TODO
 ```
 
 ## [Number of Triangles in a Directed and Undirected Graph](https://www.geeksforgeeks.org/number-of-triangles-in-directed-and-undirected-graphs/)
 
 ```python
+"""
+Given a Graph, count number of triangles in it. The graph is can be directed or undirected.
 
+Example: 
+
+Input: digraph[V][V] = { {0, 0, 1, 0},
+                        {1, 0, 0, 1},
+                        {0, 1, 0, 0},
+                        {0, 0, 1, 0}
+                      };
+Output: 2
+Give adjacency matrix represents following 
+directed graph.
+"""
+
+# function to calculate the number of triangles in a simple directed/undirected graph.
+# isDirected is true if the graph is directed, its false otherwise
+def countTriangle(g, isDirected):
+    nodes = len(g)
+    count_Triangle = 0
+    # Consider every possible triplet of edges in graph
+    for i in range(nodes):
+        for j in range(nodes):
+            for k in range(nodes):
+                # check the triplet if it satisfies the condition
+                if(i != j and i != k and j != k and g[i][j] and g[j][k] and g[k][i]):
+                    count_Triangle += 1
+          
+    # If graph is directed , division is done by 3 else division by 6 is done
+    if isDirected:
+      return (count_Triangle//3)
+    else: 
+      return (count_Triangle//6)
+
+
+# Create adjacency matrix of an undirected graph
+graph = [[0, 1, 1, 0],
+		[1, 0, 1, 1],
+		[1, 1, 0, 1],
+		[0, 1, 1, 0]]
+# Create adjacency matrix of a directed graph
+digraph = [[0, 0, 1, 0],
+		[1, 0, 0, 1],
+		[0, 1, 0, 0],
+		[0, 0, 1, 0]]
+
+print("The Number of triangles in undirected graph : %d" %
+	countTriangle(graph, False))
+
+print("The Number of triangles in directed graph : %d" %
+	countTriangle(digraph, True))
 ```
 
 ## [Minimise the cashflow among a given set of friends who have borrowed money from each other](https://www.geeksforgeeks.org/minimize-cash-flow-among-given-set-friends-borrowed-money/)
 
 ```python
+"""
+Given a number of friends who have to give or take some amount of money from one another. Design an algorithm by which the total cash flow among all the friends is minimized. 
+"""
 
+# Number of persons(or vertices in graph)
+N = 3
+
+# A utility function that returns index of minimum value in arr[]
+def getMin(arr):
+	minInd = 0
+	for i in range(1, N):
+		if (arr[i] < arr[minInd]):
+			minInd = i
+	return minInd
+
+# A utility function that returns index of maximum value in arr[]
+def getMax(arr):
+	maxInd = 0
+	for i in range(1, N):
+		if (arr[i] > arr[maxInd]):
+			maxInd = i
+	return maxInd
+
+
+def minOf2(x, y):
+	return x if x < y else y
+
+# amount[p] indicates the net amount to be credited/debited to/from person 'p' If amount[p] is positive, then i'th person will amount[i] If amount[p] is negative, then i'th person will give -amount[i]
+def minCashFlowRec(amount):
+
+	# Find the indexes of minimum and maximum values in amount[] amount[mxCredit] indicates the maximum amount to be given(or credited) to any person. And amount[mxDebit] indicates the maximum amount to be taken (or debited) from any person. So if there is a positive value in amount[], then there must be a negative value
+	mxCredit = getMax(amount)
+	mxDebit = getMin(amount)
+
+	# If both amounts are 0, then all amounts are settled
+	if (amount[mxCredit] == 0 and amount[mxDebit] == 0):
+		return 0
+
+	# Find the minimum of two amounts
+	min = minOf2(-amount[mxDebit], amount[mxCredit])
+	amount[mxCredit] -=min
+	amount[mxDebit] += min
+
+	# If minimum is the maximum amount to be
+	print("Person " , mxDebit , " pays " , min
+		, " to " , "Person " , mxCredit)
+
+	# Recur for the amount array. Note that it is guaranteed that the recursion would terminate as either amount[mxCredit] or amount[mxDebit] becomes 0
+	minCashFlowRec(amount)
+
+# Given a set of persons as graph[] where graph[i][j] indicates the amount that person i needs to pay person j, this function finds and prints the minimum cash flow to settle all debts.
+def minCashFlow(graph):
+
+	# Create an array amount[], initialize all value in it as 0.
+	amount = [0 for _ in range(N)]
+
+	# Calculate the net amount to be paid to person 'p', and stores it in amount[p]. The value of amount[p] can be calculated by subtracting debts of 'p' from credits of 'p'
+	for p in range(N):
+		for i in range(N):
+			amount[p] += (graph[i][p] - graph[p][i])
+
+	minCashFlowRec(amount)
+
+
+# graph[i][j] indicates the amount that person i needs to pay person j
+graph = [ [0, 1000, 2000],
+		[0, 0, 5000],
+		[0, 0, 0] ]
+minCashFlow(graph)
 ```
 
 ## [Two Clique Problem](https://www.geeksforgeeks.org/two-clique-problem-check-graph-can-divided-two-cliques/)
 
 ```python
+"""
+A Clique is a subgraph of graph such that all vertices in subgraph are completely connected with each other. Given a Graph, find if it can be divided into two Cliques.
+
+Examples:
+
+Input : G[][] =   {{0, 1, 1, 0, 0},
+                  {1, 0, 1, 1, 0},
+                  {1, 1, 0, 0, 0},
+                  {0, 1, 0, 0, 1},
+                  {0, 0, 0, 1, 0}};
+Output : Yes
+"""
+
+from queue import Queue
+
+# This function returns true if subgraph reachable from src is Bipartite or not.
+def isBipartiteUtil(G, src, colorArr):
+	global V
+	colorArr[src] = 1
+
+	# Create a queue (FIFO) of vertex numbers and enqueue source vertex for BFS traversal
+	q = Queue()
+	q.put(src)
+
+	# Run while there are vertices in queue (Similar to BFS)
+	while (not q.empty()):
+		
+		# Dequeue a vertex from queue
+		u = q.get()
+
+		# Find all non-colored adjacent vertices
+		for v in range(V):
+			
+			# An edge from u to v exists and destination v is not colored
+			if (G[u][v] and colorArr[v] == -1):
+				
+				# Assign alternate color to this adjacent v of u
+				colorArr[v] = 1 - colorArr[u]
+				q.put(v)
+
+			# An edge from u to v exists and destination v is colored with same color as u
+			elif (G[u][v] and colorArr[v] == colorArr[u]):
+				return False
+
+	# If we reach here, then all adjacent vertices can be colored with alternate color
+	return True
+
+# Returns true if a Graph G[][] is Bipartite or Note that G may not be connected.
+def isBipartite(G):
+	global V
+	# Create a color array to store colors assigned to all vertices. Vertex number is used as index in this array. The value '-1' of colorArr[i] is used to indicate that no color is assigned to vertex 'i'. The value 1 is used to indicate first color is assigned and value 0 indicates second color is assigned.
+	colorArr = [-1] * V
+
+	# One by one check all not yet colored vertices.
+	for i in range(V):
+		if (colorArr[i] == -1):
+			if (isBipartiteUtil(G, i, colorArr) == False):
+				return False
+
+	return True
+
+# Returns true if G can be divided into
+# two Cliques, else false.
+def canBeDividedinTwoCliques(G):
+	global V
+	# Find complement of G[][] All values are complemented except diagonal ones
+	GC = [[None] * V for _ in range(V)]
+	for i in range(V):
+		for j in range(V):
+			GC[i][j] = not G[i][j] if i != j else 0
+
+	# Return true if complement is Bipartite else false.
+	return isBipartite(GC)
+
+
+V = 5
+G = [[0, 1, 1, 1, 0],
+	[1, 0, 1, 0, 0],
+	[1, 1, 0, 0, 0],
+	[0, 1, 0, 0, 1],
+	[0, 0, 0, 1, 0]]
+if canBeDividedinTwoCliques(G):
+	print("Yes")
+else:
+	print("No")
 
 ```
 
