@@ -6,9 +6,9 @@
 - [x] Dynamic Programming
 - [x] Graph
 - [x] Greedy
-- [ ] Heap
-- [ ] LinkedList
-- [ ] Matrix
+- [x] Heap
+- [x] LinkedList
+- [x] Matrix
 - [x] Searching & Sorting
 - [ ] Stacks & Queues
 - [ ] String
@@ -13500,217 +13500,2377 @@ print("Sum is ", solve(arr, n))
 ## [Write a Program to reverse the Linked List. (Both Iterative and recursive)](https://www.geeksforgeeks.org/reverse-a-linked-list/)
 
 ```python
+class Node:
+	def __init__(self, data):
+		self.data = data
+		self.next = None
 
+class LinkedList:
+	def __init__(self):
+		self.head = None
+
+	def reverse(self):
+		prev = None
+		current = self.head
+		while current is not None:
+			next = current.next
+			current.next = prev
+			prev = current
+			current = next
+		self.head = prev
+
+	# Function to insert a new node at the beginning
+	def push(self, new_data):
+		new_node = Node(new_data)
+		new_node.next = self.head
+		self.head = new_node
+
+	# Utility function to print the linked LinkedList
+	def printList(self):
+		temp = self.head
+		while(temp):
+			print (temp.data)
+			temp = temp.next
+
+
+llist = LinkedList()
+llist.push(20)
+llist.push(4)
+llist.push(15)
+llist.push(85)
+print ("Given Linked List")
+llist.printList()
+llist.reverse()
+print ("\nReversed Linked List")
+llist.printList()
 ```
 
 ## [Reverse a Linked List in group of Given Size. [Very Imp]](https://practice.geeksforgeeks.org/problems/reverse-a-linked-list-in-groups-of-given-size/1)
 
 ```python
+class Node(object):
+	def __init__(self, data = None, next = None):
+		self.data = data
+		self.next = next
+
+	def __repr__(self):
+		return repr(self.data)
+
+class LinkedList(object):
+	def __init__(self):
+		self.head = None
+
+	def __repr__(self):
+		nodes = []
+		curr = self.head
+		while curr:
+			nodes.append(repr(curr))
+			curr = curr.next
+		return '[' + ', '.join(nodes) + ']'
+
+	# Function to insert a new node at the beginning
+	def prepend(self, data):
+		self.head = Node(data = data,
+						next = self.head)
+
+	# Reverses the linked list in groups of size k and returns the pointer to the new head node.
+	def reverse(self, k = 1):
+		if self.head is None:
+			return
+
+		curr = self.head
+		prev = None
+		new_stack = []
+		while curr is not None:
+			val = 0
+			
+			# Terminate the loop whichever comes first either current == None or value >= k
+			while curr is not None and val < k:
+				new_stack.append(curr.data)
+				curr = curr.next
+				val += 1
+
+			# Now pop the elements of stack one by one
+			while new_stack:
+				
+				# If final list has not been started yet.
+				if prev is None:
+					prev = Node(new_stack.pop())
+					self.head = prev
+				else:
+					prev.next = Node(new_stack.pop())
+					prev = prev.next
+					
+		# Next of last element will point to None.
+		prev.next = None
+		return self.head
+
+# Driver Code
+llist = LinkedList()
+llist.prepend(9)
+llist.prepend(8)
+llist.prepend(7)
+llist.prepend(6)
+llist.prepend(5)
+llist.prepend(4)
+llist.prepend(3)
+llist.prepend(2)
+llist.prepend(1)
+
+print("Given linked list")
+print(llist)
+llist.head = llist.reverse(3)
+
+print("Reversed Linked list")
+print(llist)
 
 ```
 
-## [Write a program to Detect loop in a linked list.](https://practice.geeksforgeeks.org/problems/detect-loop-in-linked-list/1)
+## [Write a program to Detect and Delete loop in a linked list.](https://practice.geeksforgeeks.org/problems/remove-loop-in-linked-list/1)
 
 ```python
+class Node:
+	def __init__(self, data):
+		self.data = data
+		self.next = None
 
-```
+class LinkedList:
+	def __init__(self):
+		self.head = None
 
-## [Write a program to Delete loop in a linked list.](https://practice.geeksforgeeks.org/problems/remove-loop-in-linked-list/1)
+	def detectAndRemoveLoop(self):
+		slow_p = fast_p = self.head
+		while(slow_p and fast_p and fast_p.next):
+			slow_p = slow_p.next
+			fast_p = fast_p.next.next
 
-```python
+			# If slow_p and fast_p meet at some point then there is a loop
+			if slow_p == fast_p:
+				self.removeLoop(slow_p)
+		
+				# Return 1 to indicate that loop is found
+				return 1
+		
+		# Return 0 to indicate that there is no loop
+		return 0
 
+	# Function to remove loop
+	# loop_node --> pointer to one of the loop nodes
+	# head --> Pointer to the start node of the linked list
+	def removeLoop(self, loop_node):
+		ptr1 = loop_node
+		ptr2 = loop_node
+		# Count the number of nodes in loop
+		k = 1
+		while(ptr1.next != ptr2):
+			ptr1 = ptr1.next
+			k += 1
+
+		# Fix one pointer to head
+		ptr1 = self.head
+		# And the other pointer to k nodes after head
+		ptr2 = self.head
+		for _ in range(k):
+			ptr2 = ptr2.next
+
+		# Move both pointers at the same place they will meet at loop starting node
+		while(ptr2 != ptr1):
+			ptr1 = ptr1.next
+			ptr2 = ptr2.next
+
+		# Get pointer to the last node
+		while(ptr2.next != ptr1):
+			ptr2 = ptr2.next
+
+		# Set the next node of the loop ending node to fix the loop
+		ptr2.next = None
+
+	# Function to insert a new node at the beginning
+	def push(self, new_data):
+		new_node = Node(new_data)
+		new_node.next = self.head
+		self.head = new_node
+
+	# Utility function to print the LinkedList
+	def printList(self):
+		temp = self.head
+		while(temp):
+			print(temp.data, end = ' ')
+			temp = temp.next
+
+
+llist = LinkedList()
+llist.push(10)
+llist.push(4)
+llist.push(15)
+llist.push(20)
+llist.push(50)
+llist.head.next.next.next.next.next = llist.head.next.next
+llist.detectAndRemoveLoop()
+print("Linked List after removing loop")
+llist.printList()
 ```
 
 ## [Find the starting point of the loop.](https://www.geeksforgeeks.org/find-first-node-of-loop-in-a-linked-list/)
 
 ```python
+class Node:
+	def __init__(self, key):
+		self.key = key
+		self.next = None
 
+def newNode(key):  # sourcery skip: inline-immediately-returned-variable
+	temp = Node(key)
+	return temp
+
+# A utility function to print a linked list
+def printList(head):
+	while head is not None:
+		print(head.key, end = ' ')
+		head = head.next
+	print()
+	
+# Function to detect and remove loop in a linked list that may contain loop
+def detectAndRemoveLoop(head):
+	
+	# If list is empty or has only one node without loop
+	if head is None or head.next is None:
+		return None
+
+	slow = head
+	fast = head
+
+	# Move slow and fast 1 and 2 steps ahead respectively.
+	slow = slow.next
+	fast = fast.next.next
+
+	# Search for loop using slow and fast pointers
+	while (fast and fast.next) and slow != fast:
+		slow = slow.next
+		fast = fast.next.next
+
+	# If loop does not exist
+	if (slow != fast):
+		return None
+
+	# If loop exists. Start slow from head and fast from meeting point.
+	slow = head
+
+	while (slow != fast):
+		slow = slow.next
+		fast = fast.next
+
+	return slow
+
+
+	
+head = newNode(50)
+head.next = newNode(20)
+head.next.next = newNode(15)
+head.next.next.next = newNode(4)
+head.next.next.next.next = newNode(10)
+# create a loop for testing
+head.next.next.next.next.next = head.next.next
+res = detectAndRemoveLoop(head)
+
+if res is None:
+	print("Loop does not exist")
+else:
+	print(f"Loop starting node is {str(res.key)}")
 ```
 
 ## [Remove Duplicates in a sorted Linked List.](https://practice.geeksforgeeks.org/problems/remove-duplicate-element-from-sorted-linked-list/1)
 
 ```python
+import math
 
+class Node:
+	def __init__(self, data):
+		self.data = data
+		self.next = None
+
+# The function removes duplicates from the given linked list
+def removeDuplicates(head):
+	
+	# Do nothing if the list consist of only one element or empty
+	if head is None and head.next is None:
+		return
+
+	# Construct a pointer pointing towards head
+	current = head
+
+	# Initialise a while loop till the second last node of the linkedlist
+	while (current.next):
+
+		# If the data of current and next node is equal we will skip the node between them
+		if current.data == current.next.data:
+			current.next = current.next.next
+
+		# If the data of current and next node is different move the pointer to the next node
+		else:
+			current = current.next
+
+	return
+
+
+def push(head_ref, new_data):
+	new_node = Node(new_data)
+	new_node.data = new_data
+	new_node.next = head_ref	
+	head_ref = new_node
+	return head_ref
+
+def printList(node):
+	while (node != None):
+		print(node.data, end = " ")
+		node = node.next
+	
+
+head = None
+head = push(head, 20)
+head = push(head, 13)
+head = push(head, 13)
+head = push(head, 11)
+head = push(head, 11)
+head = push(head, 11)								
+print("List before removal of duplicates ", end = "")
+printList(head)
+removeDuplicates(head)
+print("\nList after removal of elements ", end = "")
+printList(head)		
 ```
 
 ## [Remove Duplicates in a Un-sorted Linked List.](https://practice.geeksforgeeks.org/problems/remove-duplicates-from-an-unsorted-linked-list/1)
 
 ```python
+class Node():
+	def __init__(self, data):
+		self.data = data
+		self.next = None
 
+
+class LinkedList():
+	def __init__(self):
+		self.head = None
+
+	def remove_duplicates(self):
+		ptr1 = None
+		ptr2 = None
+		dup = None
+		ptr1 = self.head
+
+		# Pick elements one by one
+		while (ptr1 != None and ptr1.next != None):
+			ptr2 = ptr1
+			# Compare the picked element with rest of the elements
+			while (ptr2.next != None):
+				# If duplicate then delete it
+				if (ptr1.data == ptr2.next.data):
+					# Sequence of steps is important here
+					dup = ptr2.next
+					ptr2.next = ptr2.next.next
+				else:
+					ptr2 = ptr2.next
+			ptr1 = ptr1.next
+
+
+	def printList(self):
+		temp = self.head
+		while(temp != None):
+			print(temp.data, end=" ")
+			temp = temp.next
+		print()
+
+
+list1 = LinkedList()
+list1.head = Node(10)
+list1.head.next = Node(12)
+list1.head.next.next = Node(11)
+list1.head.next.next.next = Node(11)
+list1.head.next.next.next.next = Node(12)
+list1.head.next.next.next.next.next = Node(11)
+list1.head.next.next.next.next.next.next = Node(10)
+print("Linked List before removing duplicates :")
+list1.printList()
+list1.remove_duplicates()
+print()
+print("Linked List after removing duplicates :")
+list1.printList()
 ```
 
 ## [Write a Program to Move the last element to Front in a Linked List.](https://www.geeksforgeeks.org/move-last-element-to-front-of-a-given-linked-list/)
 
 ```python
+class Node:
+	def __init__(self, data):
+		self.data = data
+		self.next = None
+
+class LinkedList:
+	def __init__(self):
+		self.head = None
+
+	def push(self, data):
+		new_node = Node(data)
+		new_node.next = self.head
+		self.head = new_node
+		
+
+	def printList(self):
+		tmp = self.head
+		while tmp is not None:
+			print(tmp.data, end=", ")
+			tmp = tmp.next
+		print()
+
+	# Function to bring the last node to the front
+	def moveToFront(self):
+		tmp = self.head
+		sec_last = None # To maintain the track of  the second last node
+
+	# To check whether we have not received the empty list or list with a single node
+		if not tmp or not tmp.next:
+			return
+
+		# Iterate till the end to get the last and second last node
+		while tmp and tmp.next :
+			sec_last = tmp
+			tmp = tmp.next
+
+		# point the next of the second last node to None
+		sec_last.next = None
+
+		# Make the last node as the first Node
+		tmp.next = self.head
+		self.head = tmp
+
+
+llist = LinkedList()
+llist.push(5)
+llist.push(4)
+llist.push(3)
+llist.push(2)
+llist.push(1)
+print ("Linked List before moving last to front ")
+llist.printList()
+llist.moveToFront()
+print ("Linked List after moving last to front ")
+llist.printList()
 
 ```
 
 ## [Add “1” to a number represented as a Linked List.](https://practice.geeksforgeeks.org/problems/add-1-to-a-number-represented-as-linked-list/1)
 
 ```python
+import sys
+import math
 
+class Node:
+	def __init__(self, data):
+		self.data = data
+		self.next = None
+
+
+def newNode(data):
+	return Node(data)
+
+def reverseList(head):
+	if not head:
+		return
+	curNode = head
+	prevNode = head
+	nextNode = head.next
+	curNode.next = None
+	while(nextNode):
+		curNode = nextNode
+		nextNode = nextNode.next
+		curNode.next = prevNode
+		prevNode = curNode
+	return curNode
+
+
+def addOne(head):
+	# Reverse linked list and add one to head
+	head = reverseList(head)
+	k = head
+	carry = 0
+	prev = None
+	head.data += 1
+
+	# update carry for next calculation
+	while (head != None) and (head.data > 9 or carry > 0):
+		prev = head
+		head.data += carry
+		carry = head.data // 10
+		head.data %= 10
+		head = head.next
+
+	if carry > 0:
+		prev.next = Node(carry)
+	# Reverse the modified list
+	return reverseList(k)
+
+def printList(head):
+	if not head:
+		return
+	while head:
+		print(f"{head.data}", end="")
+		head = head.next
+
+head = newNode(1)
+head.next = newNode(9)
+head.next.next = newNode(9)
+head.next.next.next = newNode(9)
+print("List is: ", end="")
+printList(head)
+head = addOne(head)
+print("\nResultant list is: ", end="")
+printList(head)
 ```
 
 ## [Add two numbers represented by linked lists.](https://practice.geeksforgeeks.org/problems/add-two-numbers-represented-by-linked-lists/1)
 
 ```python
+    class Node:
+	def __init__(self, data):
+		self.data = data
+		self.next = None
 
+class LinkedList:
+	def __init__(self):
+		self.head = None
+
+	# Method to traverse list and return it in a format
+	def traverse(self):
+		linkedListStr = ""
+		temp = self.head
+		while temp:
+			linkedListStr += f"{str(temp.data)} -> "
+			temp = temp.next
+		return f"{linkedListStr}NULL"
+
+	# Method to insert data in linked list
+	def insert(self, data):
+		newNode = Node(data)
+		if self.head is not None:
+			newNode.next = self.head
+		self.head = newNode
+
+# Helper function to reverse the list
+def reverse(Head):
+	
+	if (Head is None and
+		Head.next is None):
+		return Head
+		
+	prev = None
+	curr = Head
+	
+	while curr:
+		temp = curr.next
+		curr.next = prev
+		prev = curr
+		curr = temp
+		
+	Head = prev
+	return Head
+
+# Function to add two lists
+def listSum(l1, l2):
+
+	if l1 is None:
+		return l1
+	if l2 is None:
+		return l2
+
+	# Reverse first list
+	l1 = reverse(l1)
+
+	# Reverse second list
+	l2 = reverse(l2)
+
+	# Storing head whose reverse is to be returned This is where which will be final node
+	head = l1
+	prev = None
+	c = 0
+	sum = 0
+	while l1 is not None and l2 is not None:
+		sum = c + l1.data + l2.data
+		l1.data = sum % 10
+		c = int(sum / 10)
+		prev = l1
+		l1 = l1.next
+		l2 = l2.next
+		
+	if l1 is not None or l2 is not None:
+		if l2 is not None:
+			prev.next = l2
+		l1 = prev.next
+		
+		while l1 is not None:
+			sum = c + l1.data
+			l1.data = sum % 10
+			c = int(sum / 10)
+			prev = l1
+			l1 = l1.next	
+	if c > 0:
+		prev.next = Node(c)
+	return reverse(head)
+	
+
+linkedList1 = LinkedList()
+linkedList1.insert(3)
+linkedList1.insert(6)
+linkedList1.insert(5)
+
+linkedList2 = LinkedList()
+linkedList2.insert(2)
+linkedList2.insert(4)
+linkedList2.insert(8)
+
+linkedList3 = LinkedList()
+linkedList3.head = listSum(linkedList1.head, linkedList2.head)
+print(linkedList3.traverse())
 ```
 
 ## [Intersection of two Sorted Linked List.](https://practice.geeksforgeeks.org/problems/intersection-of-two-sorted-linked-lists/1)
 
 ```python
+class Node:
+	def __init__(self):
+		self.data = 0
+		self.next = None
 
+def printList(node):
+	while (node != None):
+		print(node.data, end=" ")
+		node = node.next
+
+def new_node(data):
+	return Node()
+	
+def push(head_ref, new_data):
+	new_node = Node()
+	new_node.data = new_data
+	new_node.next = head_ref
+	head_ref = new_node
+	return head_ref
+
+
+def intersection(tmp1,tmp2,k):
+	res = [0]*k
+	set1 = set()
+	while (tmp1 != None):
+		set1.add(tmp1.data)
+		tmp1 = tmp1.next
+	cnt = 0
+	while (tmp2 != None):
+		if tmp2.data in set1:
+			res[cnt] = tmp2.data
+			cnt += 1
+		tmp2 = tmp2.next
+	return res
+
+def printList(node):
+	while (node != None):
+		print(node.data, end=" ")
+		node = node.next	
+
+# Start with the empty lists
+ll = None
+ll1 = None
+		
+ll = push(ll , 7)
+ll = push(ll , 6)
+ll = push(ll , 5)
+ll = push(ll , 4)
+ll = push(ll , 3)
+ll = push(ll , 2)
+ll = push(ll , 1)
+ll = push(ll , 0)
+		
+ll1 = push(ll1 , 7)
+ll1 = push(ll1 , 6)
+ll1 = push(ll1 , 5)
+ll1 = push(ll1 , 4)
+ll1 = push(ll1 , 3)
+ll1 = push(ll1 , 12)
+ll1 = push(ll1 , 0)
+ll1 = push(ll1 , 9)
+
+arr = intersection(ll , ll1 , 6)
+print(arr)
 ```
 
 ## [Intersection Point of two Linked Lists.](https://practice.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1)
 
 ```python
+class Node:
+	def __init__(self, data):
+		self.data = data
+		self.next = None
 
+# function to get the intersection point of two linked lists head1 and head
+def getIntersectionNode(head1, head2):
+	while head2:
+		temp = head1
+		while temp:
+			# if both Nodes are same
+			if temp == head2:
+				return head2
+			temp = temp.next
+		head2 = head2.next
+	# intersection is not present between the lists
+	return None
+
+'''
+Create two linked lists
+1st 3->6->9->15->30
+2nd 10->15->30
+15 is the intersection point
+'''
+newNode = Node(10)
+head1 = newNode
+newNode = Node(3)
+head2 = newNode
+newNode = Node(6)
+head2.next = newNode
+newNode = Node(9)
+head2.next.next = newNode
+newNode = Node(15)
+head1.next = newNode
+head2.next.next.next = newNode
+newNode = Node(30)
+head1.next.next = newNode
+if intersectionPoint := getIntersectionNode(head1, head2):
+	print("Intersection Point:", intersectionPoint.data)
+else:
+	print(" No Intersection Point ")
 ```
 
 ## [Merge Sort For Linked lists.[Very Important]](https://practice.geeksforgeeks.org/problems/sort-a-linked-list/1)
 
 ```python
+class Node:
+	def __init__(self, data):
+		self.data = data
+		self.next = None
 
+class LinkedList:
+	def __init__(self):
+		self.head = None
+	
+	# push new value to linked list using append method
+	def append(self, new_value):
+		
+		# Allocate new node
+		new_node = Node(new_value)
+		
+		# if head is None, initialize it to new node
+		if self.head is None:
+			self.head = new_node
+			return
+		curr_node = self.head
+		while curr_node.next is not None:
+			curr_node = curr_node.next
+			
+		# Append the new node at the end of the linked list
+		curr_node.next = new_node
+		
+	def sortedMerge(self, a, b):
+		result = None
+		
+		# Base cases
+		if a is None:
+			return b
+		if b is  None:
+			return a
+			
+		# pick either a or b and recur..
+		if a.data <= b.data:
+			result = a
+			result.next = self.sortedMerge(a.next, b)
+		else:
+			result = b
+			result.next = self.sortedMerge(a, b.next)
+		return result
+	
+	def mergeSort(self, h):
+		# Base case if head is None
+		if h is None or h.next is None:
+			return h
+
+		# get the middle of the list
+		middle = self.getMiddle(h)
+		nexttomiddle = middle.next
+
+		# set the next of middle node to None
+		middle.next = None
+
+		# Apply mergeSort on left list
+		left = self.mergeSort(h)
+
+		# Apply mergeSort on right list
+		right = self.mergeSort(nexttomiddle)
+
+		return self.sortedMerge(left, right)
+
+	def getMiddle(self, head):
+		if head is None:
+			return head
+		slow = head
+		fast = head
+		while (fast.next != None and
+			fast.next.next != None):
+			slow = slow.next
+			fast = fast.next.next
+		return slow
+		
+def printList(head):
+	if head is None:
+		print(' ')
+		return
+	curr_node = head
+	while curr_node:
+		print(curr_node.data, end = " ")
+		curr_node = curr_node.next
+	print(' ')
+	
+
+li = LinkedList()
+li.append(15)
+li.append(10)
+li.append(5)
+li.append(20)
+li.append(3)
+li.append(2)
+li.head = li.mergeSort(li.head)
+print ("Sorted Linked List is:")
+printList(li.head)
 ```
 
 ## [Quicksort for Linked Lists.[Very Important]](https://practice.geeksforgeeks.org/problems/quick-sort-on-linked-list/1)
 
 ```python
+class Node:
+	def __init__(self, val):
+		self.data = val
+		self.next = None
+
+class QuickSortLinkedList:
+	def __init__(self):
+		self.head=None
+
+	def addNode(self,data):
+		if self.head is None:
+			self.head = Node(data)
+			return
+		curr = self.head
+		while (curr.next != None):
+			curr = curr.next
+		newNode = Node(data)
+		curr.next = newNode
+
+	def printList(self,n):
+		while (n != None):
+			print(n.data, end=" ")
+			n = n.next
+
+	''' takes first and last node,but do not
+	break any links in the whole linked list'''
+	def paritionLast(self,start, end):
+		if start == end or start is None or end is None:
+			return start
+
+		pivot_prev = start
+		curr = start
+		pivot = end.data
+
+		'''iterate till one before the end,
+		no need to iterate till the end because end is pivot'''
+
+		while (start != end):
+			if (start.data < pivot):
+
+				# keep tracks of last modified item
+				pivot_prev = curr
+				temp = curr.data
+				curr.data = start.data
+				start.data = temp
+				curr = curr.next
+			start = start.next
+
+		'''swap the position of curr i.e. next suitable index and pivot'''
+		temp = curr.data
+		curr.data = pivot
+		end.data = temp
+
+		''' return one previous to current because current is now pointing to pivot '''
+		return pivot_prev
+
+	def sort(self, start, end):
+		if start is None or start == end or start == end.next:
+			return
+
+		# split list and partition recurse
+		pivot_prev = self.paritionLast(start, end)
+		self.sort(start, pivot_prev)
+
+		'''
+		if pivot is picked and moved to the start, that means start and pivot is same so pick from next of pivot
+		'''
+		if(pivot_prev != None and pivot_prev == start):
+			self.sort(pivot_prev.next, end)
+
+		# if pivot is in between of the list,start from next of pivot, since we have pivot_prev, so we move two nodes
+		elif (pivot_prev != None and pivot_prev.next != None):
+			self.sort(pivot_prev.next.next, end)
+
+
+ll = QuickSortLinkedList()
+ll.addNode(30)
+ll.addNode(3)
+ll.addNode(4)
+ll.addNode(20)
+ll.addNode(5)
+n = ll.head
+while n.next is not None:
+	n = n.next
+print("\nLinked List before sorting")
+ll.printList(ll.head)
+ll.sort(ll.head, n)
+print("\nLinked List after sorting");
+ll.printList(ll.head)
 
 ```
 
 ## [Find the middle Element of a linked list.](https://leetcode.com/problems/middle-of-the-linked-list/)
 
 ```python
+class Node:
+	def __init__(self, data):
+		self.data = data
+		self.next = None 
+
+
+class LinkedList:
+	def __init__(self):
+		self.head = None
+
+	def push(self, new_data):
+		new_node = Node(new_data)
+		new_node.next = self.head
+		self.head = new_node
+
+	def printList(self):
+		node = self.head
+		while node:
+			print(f"{str(node.data)}->", end="")
+			node = node.next
+		print("NULL")
+
+
+	def printMiddle(self):
+		# Initialize two pointers, one will go one step a time (slow), another two at a time (fast)
+		slow = self.head
+		fast = self.head
+		# Iterate till fast's next is null (fast reaches end)
+		while fast and fast.next:
+			slow = slow.next
+			fast = fast.next.next
+		# return the slow's data, which would be the middle element.
+		print("The middle element is ", slow.data)
+
+
+# Start with the empty list
+llist = LinkedList()
+for i in range(5, 0, -1):
+	llist.push(i)
+llist.printList()
+llist.printMiddle()
 
 ```
 
 ## [Check if a linked list is a circular linked list.](https://practice.geeksforgeeks.org/problems/circular-linked-list/1)
 
 ```python
+class Node:
+	def __init__(self, data):
+		self.data = data # Assign data
+		self.next = None # Initialize next as null
 
+
+class LinkedList:
+	def __init__(self):
+		self.head = None
+
+def Circular(head):
+	if head is None:
+		return True
+	node = head.next
+	i = 0
+	while((node is not None) and (node is not head)):
+		i = i + 1
+		node = node.next
+	return node==head
+
+
+llist = LinkedList()
+llist.head = Node(1)
+second = Node(2)
+third = Node(3)
+fourth = Node(4)
+
+llist.head.next = second;
+second.next = third;
+third.next = fourth
+
+if (Circular(llist.head)):
+	print('Yes')
+else:
+	print('No')
+
+fourth.next = llist.head
+
+if (Circular(llist.head)):
+	print('Yes')
+else:
+	print('No')
 ```
 
 ## [Split a Circular linked list into two halves.](https://practice.geeksforgeeks.org/problems/split-a-circular-linked-list-into-two-halves/1)
 
 ```python
+class Node:
+	def __init__(self, data):
+		self.data = data
+		self.next = None
 
+class CircularLinkedList:
+	def __init__(self):
+		self.head = None
+	# circular linked list
+	def push(self, data):
+		ptr1 = Node(data)
+		temp = self.head
+		
+		ptr1.next = self.head
+
+		# If linked list is not None then set the next of last node
+		if self.head is not None:
+			while(temp.next != self.head):
+				temp = temp.next
+			temp.next = ptr1
+
+		else:
+			ptr1.next = ptr1 # For the first node
+
+		self.head = ptr1
+
+
+	def printList(self):
+		temp = self.head
+		if self.head is not None:
+			while(True):
+				print ("%d" %(temp.data),end=' ')
+				temp = temp.next
+				if (temp == self.head):
+					break
+
+
+	# Function to split a list (starting with head) into two lists. head1 and head2 are the head nodes of the two resultant linked lists
+	def splitList(self, head1, head2):
+		slow_ptr = self.head
+		fast_ptr = self.head
+	
+		if self.head is None:
+			return
+		
+		# If there are odd nodes in the circular list then fast_ptr->next becomes head and for even nodes fast_ptr->next->next becomes head
+		while(fast_ptr.next != self.head and
+			fast_ptr.next.next != self.head ):
+			fast_ptr = fast_ptr.next.next
+			slow_ptr = slow_ptr.next
+
+		# If there are even elements in list then move fast_ptr
+		if fast_ptr.next.next == self.head:
+			fast_ptr = fast_ptr.next
+
+		# Set the head pointer of first half
+		head1.head = self.head
+
+		# Set the head pointer of second half
+		if self.head.next != self.head:
+			head2.head = slow_ptr.next
+
+		# Make second half circular
+		fast_ptr.next = slow_ptr.next
+	
+		# Make first half circular
+		slow_ptr.next = self.head
+
+
+# Initialize lists as empty
+head = CircularLinkedList()
+head1 = CircularLinkedList()
+head2 = CircularLinkedList()
+
+head.push(12)
+head.push(56)
+head.push(2)
+head.push(11)
+
+print ("Original Circular Linked List")
+head.printList()
+
+# Split the list
+head.splitList(head1 , head2)
+
+print ("\nFirst Circular Linked List")
+head1.printList()
+
+print ("\nSecond Circular Linked List")
+head2.printList()
 ```
 
 ## [Write a Program to check whether the Singly Linked list is a palindrome or not.](https://practice.geeksforgeeks.org/problems/check-if-linked-list-is-pallindrome/1)
 
 ```python
+class Node:
+	def __init__(self,data):
+		self.data = data
+		self.ptr = None
 
+def ispalindrome(head):
+	# Temp pointer
+	slow = head
+
+	# Declare a stack
+	stack = []
+	
+	ispalin = True
+
+	# Push all elements of the list to the stack
+	while slow != None:
+		stack.append(slow.data)
+		# Move ahead
+		slow = slow.ptr
+
+	# Iterate in the list again and check by popping from the stack
+	while head != None:
+		# Get the top most element
+		i = stack.pop()
+		
+		# Check if data is not same as popped element
+		if head.data == i:
+			ispalin = True
+		else:
+			ispalin = False
+			break
+
+		# Move ahead
+		head = head.ptr
+	return ispalin
+
+
+# Addition of linked list
+one = Node(1)
+two = Node(2)
+three = Node(3)
+four = Node(4)
+five = Node(3)
+six = Node(2)
+seven = Node(1)
+
+# Initialize the next pointer of every current pointer
+one.ptr = two
+two.ptr = three
+three.ptr = four
+four.ptr = five
+five.ptr = six
+six.ptr = seven
+seven.ptr = None
+
+result = ispalindrome(one)
+print("isPalindrome:", result)
 ```
 
 ## [Deletion from a Circular Linked List.](https://practice.geeksforgeeks.org/problems/deletion-and-reverse-in-linked-list/1/)
 
 ```python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
 
+
+def deleteNode(head, key):
+    t = head
+    while t and t.next != head:
+        if t.next.data == key:
+            t.next = t.next.next
+        t = t.next
+
+def reverse(head):
+    arr = []
+    t = head
+    arr.append(t.data)
+    t = t.next
+    while t != head:
+        arr.append(t.data)
+        t = t.next
+    arr = arr[::-1]
+    t = head
+    i = 0 
+    while t != None:
+        if t.next == head:
+            t.data = arr[len(arr)-1]
+            break
+        else:
+            t.data = arr[i]
+        t = t.next
+        i+=1
+def push(data, prev):
+    if prev is None:
+        prev = Node(data)
+        return prev
+    tmp = Node(data)
+    prev.next = tmp
+    return tmp
+
+def printList(head):
+    flg = False
+    tmp = head
+    while flg is False or tmp != head:
+        flg = True
+        print(tmp.data, end=" ")
+        tmp = tmp.next
+    print()
+
+n = 5
+arr = [1,2,3,4,5]
+delNode = 4
+
+head = Node(None)
+prev = head
+for i in arr:
+    prev = push(i, prev)
+head = head.next
+prev.next = head
+deleteNode(head, delNode)
+reverse(head)
+printList(head)
 ```
 
 ## [Reverse a Doubly Linked list.](https://practice.geeksforgeeks.org/problems/reverse-a-doubly-linked-list/1)
 
 ```python
+class Node:
+	def __init__(self, data):
+		self.data = data
+		self.next = None
+		self.prev = None
+
+
+class DoublyLinkedList:
+	
+	def __init__(self):
+		self.head = None
+	
+	def reverse(self):
+		temp = None
+		current = self.head
+
+		# Swap next and prev for all nodes of doubly linked list
+		while current is not None:
+			temp = current.prev
+			current.prev = current.next
+			current.next = temp
+			current = current.prev
+
+		# Before changing head, check for the cases like empty list and list with only one node
+		if temp is not None:
+			self.head = temp.prev
+
+	# Given a reference to the head of a list and an integer,inserts a new node on the front of list
+	def push(self, new_data):
+		new_node = Node(new_data)
+		new_node.next = self.head
+		if self.head is not None:
+			self.head.prev = new_node
+		self.head = new_node
+
+	def printList(self, node):
+		while(node is not None):
+			print(node.data,end=' ')
+			node = node.next
+
+
+dll = DoublyLinkedList()
+dll.push(2)
+dll.push(4)
+dll.push(8)
+dll.push(10)
+
+print ("\nOriginal Linked List")
+dll.printList(dll.head)
+
+dll.reverse()
+print ("\nReversed Linked List")
+dll.printList(dll.head)
 
 ```
 
 ## [Find pairs with a given sum in a DLL.](https://www.geeksforgeeks.org/find-pairs-given-sum-doubly-linked-list/)
 
 ```python
+class Node:
+	def __init__(self, x):
+		self.data = x
+		self.next = None
+		self.prev = None
 
+
+def pairSum(head, x):
+	
+	# Set two pointers, first to the beginning of DLL and second to the end of DLL.
+	first = head
+	second = head
+	while (second.next != None):
+		second = second.next
+
+	# To track if we find a pair or not
+	found = False
+
+	# The loop terminates when they cross each other (second.next == first), or they become same (first == second)
+	while (first != second and second.next != first):
+			
+		# Pair found
+		if ((first.data + second.data) == x):
+			found = True
+			print("Pair found: ", first.data, second.data)
+			# Move first in forward direction
+			first = first.next
+			# Move second in backward direction
+			second = second.prev
+		elif ((first.data + second.data) < x):
+			first = first.next
+		else:
+			second = second.prev
+
+	# If pair is not present
+	if not found:
+		print("No pair found")
+
+def insert(head, data):
+	temp = Node(data)
+	if head:
+		temp.next = head
+		head.prev = temp
+	head = temp
+	return head
+
+
+head = None
+head = insert(head, 9)
+head = insert(head, 8)
+head = insert(head, 6)
+head = insert(head, 5)
+head = insert(head, 4)
+head = insert(head, 2)
+head = insert(head, 1)
+x = 7
+pairSum(head, x)
 ```
 
 ## [Count triplets in a sorted DLL whose sum is equal to given value “X”.](https://www.geeksforgeeks.org/count-triplets-sorted-doubly-linked-list-whose-sum-equal-given-value-x/)
 
 ```python
+class Node:
+	def __init__(self, x):
+		self.data = x
+		self.next = None
+		self.prev = None
+
+
+def countPairs(first, second, value):
+	count = 0
+
+	# The loop terminates when either of two pointers become None, or they cross each other (second.next == first), or they become same (first == second)
+	while (first != None and second != None and
+		first != second and second.next != first):
+
+		# Pair found
+		if ((first.data + second.data) == value):
+			
+			# Increment count
+			count += 1
+
+			# Move first in forward direction
+			first = first.next
+
+			# Move second in backward direction
+			second = second.prev
+
+		# If sum is greater than 'value' move second in backward direction
+		elif ((first.data + second.data) > value):
+			second = second.prev
+
+		# Else move first in forward direction
+		else:
+			first = first.next
+
+	# Required count of pairs
+	return count
+
+
+def countTriplets(head, x):
+	
+	# If list is empty
+	if head is None:
+		return 0
+
+	current, first, last = head, None, None
+	count = 0
+
+	# Get pointer to the last node of the doubly linked list
+	last = head
+
+	while (last.next != None):
+		last = last.next
+
+	# Traversing the doubly linked list
+	while current != None:
+
+		# For each current node
+		first = current.next
+
+		# count pairs with sum(x - current.data) in the range first to last and add it to the 'count' of triplets
+		count, current = count + countPairs(
+			first, last, x - current.data), current.next
+
+	# Required count of triplets
+	return count
+
+
+def insert(head, data):
+	temp = Node(data)
+	if head != None:
+		temp.next = head
+		head.prev = temp
+	head = temp
+	return head
+
+
+head = None
+head = insert(head, 9)
+head = insert(head, 8)
+head = insert(head, 6)
+head = insert(head, 5)
+head = insert(head, 4)
+head = insert(head, 2)
+head = insert(head, 1)
+x = 17
+print("Count = ", countTriplets(head, x))
 
 ```
 
 ## [Sort a “k”sorted Doubly Linked list.[Very IMP]](https://www.codingninjas.com/codestudio/problems/sort-a-k-sorted-doubly-linked-list_1118118)
 
 ```python
+class Node:
+	def __init__(self, val):
+		self.data = val
+		self.prev = None
+		self.next = None
 
+# function to sort a k sorted doubly linked list Using Insertion Sort
+# Time Complexity: O(n*k)
+# Space Complexity: O(1)
+def sortAKSortedDLL(head , k):
+	if head is None or head.next is None:
+		return head
+
+	# perform on all the nodes in list
+	i = head.next
+	while (i != None):
+		j = i
+
+		# There will be atmost k swaps for each element in the list since each node is k steps away from its correct position
+		while (j.prev != None and j.data < j.prev.data):
+
+			# swap j and j.prev node
+			temp = j.prev.prev
+			temp2 = j.prev
+			temp3 = j.next
+			j.prev.next = temp3
+			j.prev.prev = j
+			j.prev = temp
+			j.next = temp2
+			if (temp != None):
+				temp.next = j
+			if (temp3 != None):
+				temp3.prev = temp2
+
+			# if j is now the new head then reset head
+		if j.prev is None:
+			head = j
+		i = i.next
+
+	return head
+
+# Function to insert a node at the beginning of the Doubly Linked List
+def push(new_data):
+	global head
+	new_node = Node(new_data)
+	new_node.prev = None
+	new_node.next = head
+	if (head != None):
+		head.prev = new_node
+	head = new_node
+
+
+def printList(node):
+	while (node != None):
+		print(node.data,end = " ")
+		node = node.next
+
+
+head = None
+# Let us create a k sorted doubly linked list to test the functions Created doubly linked list will be 3<->6<->2<->12<->56<->8
+push(8)
+push(56)
+push(12)
+push(2)
+push(6)
+push(3)
+
+k = 2
+
+print("Original Doubly linked list:")
+printList(head)
+sortedDLL = sortAKSortedDLL(head, k)
+print("")
+print("Doubly Linked List after sorting:")
+printList(sortedDLL)
 ```
 
 ## [Rotate DoublyLinked list by N nodes.](https://www.geeksforgeeks.org/rotate-doubly-linked-list-n-nodes/)
 
 ```python
+class Node:
+	def __init__(self, next = None, prev = None, data = None):
+		self.next = next 
+		self.prev = prev 
+		self.data = data
 
+def push(head, new_data):
+	new_node = Node(data = new_data)
+	new_node.next = head
+	new_node.prev = None
+	if head is not None:
+		head.prev = new_node
+	head = new_node
+	return head
+
+def printList(head):
+	node = head
+	print("Given linked list")
+	while(node is not None):
+		print(node.data, end = " ")
+		last = node
+		node = node.next
+	
+def rotate(start, N):
+	if N == 0 :
+		return
+
+	# Let us understand the below code for example N = 2 and list = a <-> b <-> c <-> d <-> e.
+	current = start
+
+	# current will either point to Nth or None after this loop. Current will point to node 'b' in the above example
+	count = 1
+	while count < N and current != None :
+		current = current.next
+		count += 1
+
+	# If current is None, N is greater than or equal to count of nodes in linked list. Don't change the list in this case
+	if current is None:
+		return
+
+	# current points to Nth node. Store it in a variable. NthNode points to node 'b' in the above example
+	NthNode = current
+
+	# current will point to last node after this loop current will point to node 'e' in the above example
+	while current.next != None :
+		current = current.next
+
+	# Change next of last node to previous head. Next of 'e' is now changed to node 'a'
+	current.next = start
+
+	# Change prev of Head node to current Prev of 'a' is now changed to node 'e'
+	start.prev = current
+
+	# Change head to (N+1)th node head is now changed to node 'c'
+	start = NthNode.next
+
+	# Change prev of New Head node to None Because Prev of Head Node in Doubly linked list is None
+	start.prev = None
+
+	# change next of Nth node to None next of 'b' is now None
+	NthNode.next = None
+
+	return start
+
+
+head = None
+head = push(head, 'e')
+head = push(head, 'd')
+head = push(head, 'c')
+head = push(head, 'b')
+head = push(head, 'a')
+printList(head)
+print("\n")
+N = 2
+head = rotate(head, N)
+printList(head)
 ```
 
 ## [Rotate a Doubly Linked list in group of Given Size.[Very IMP]](https://www.geeksforgeeks.org/reverse-doubly-linked-list-groups-given-size/)
 
 ```python
+class Node:
+	def __init__(self):
+		self.data = 0
+		self.next = None
+		self.next = None
 
+
+def insertAtEnd(head, data):
+	new_Node = Node()
+	new_Node.data = data
+	new_Node.next = None
+	temp = head
+	if head is None:
+		new_Node.prev = None
+		head = new_Node
+		return head
+	while (temp.next != None):
+		temp = temp.next
+	temp.next = new_Node
+	new_Node.prev = temp
+	return head
+
+
+def printDLL(head):
+	while (head != None):
+		print(head.data, end=" ")
+		head = head.next
+	print()
+
+
+# Function to Reverse a doubly linked list in groups of given size
+def reverseByN(head, k):
+	if head is None:
+		return None
+
+	head.prev = None
+	temp=None
+	curr = head
+	newHead = None
+	count = 0
+
+	while (curr != None and count < k):
+		newHead = curr
+		temp = curr.prev
+		curr.prev = curr.next
+		curr.next = temp
+		curr = curr.prev
+		count += 1
+
+	# Checking if the reversed LinkedList size is equal to K or not. If it is not equal to k that means we have reversed the last set of size K and we don't need to call the recursive function
+	if (count >= k):
+		rest = reverseByN(curr, k)
+		head.next = rest
+		if (rest != None):
+
+			# it is required for prev link otherwise u wont be backtrack list due to broken links
+			rest.prev = head
+	return newHead
+
+
+head = None
+for i in range(1,11):
+	head = insertAtEnd(head, i)
+printDLL(head)
+n = 4
+head = reverseByN(head, n)
+printDLL(head)
 ```
 
 ## [Can we reverse a linked list in less than O(n) ?](https://www.geeksforgeeks.org/can-we-reverse-a-linked-list-in-less-than-on/)
 
 ```python
+It is not possible to reverse a simple singly linked list in less than O(n). A simple singly linked list can only be reversed in O(n) time using recursive and iterative methods. 
 
+A doubly linked list with head and tail pointers while only requiring swapping the head and tail pointers which require lesser operations than a singly linked list can also not be done in less than O(n) since we need to traverse till the end of the list anyway to find the tail node.
 ```
 
 ## [Why Quicksort is preferred for. Arrays and Merge Sort for LinkedLists ?](https://www.geeksforgeeks.org/why-quick-sort-preferred-for-arrays-and-merge-sort-for-linked-lists/)
 
 ```python
+Quick Sort in its general form is an in-place sort (i.e. it doesn’t require any extra storage) whereas merge sort requires O(N) extra storage, N denoting the array size which may be quite expensive. Allocating and de-allocating the extra space used for merge sort increases the running time of the algorithm.
+Comparing average complexity we find that both type of sorts have O(NlogN) average complexity but the constants differ. For arrays, merge sort loses due to the use of extra O(N) storage space.
+Most practical implementations of Quick Sort use randomized version. The randomized version has expected time complexity of O(nLogn). The worst case is possible in randomized version also, but worst case doesn’t occur for a particular pattern (like sorted array) and randomized Quick Sort works well in practice.
+Quick Sort is also a cache friendly sorting algorithm as it has good locality of reference when used for arrays.
+Quick Sort is also tail recursive, therefore tail call optimizations is done.
 
+Why is Merge Sort preferred for Linked Lists?
+In case of linked lists the case is different mainly due to difference in memory allocation of arrays and linked lists. Unlike arrays, linked list nodes may not be adjacent in memory.
+Unlike array, in linked list, we can insert items in the middle in O(1) extra space and O(1) time if we are given reference/pointer to the previous node. Therefore merge operation of merge sort can be implemented without extra space for linked lists.
+In arrays, we can do random access as elements are continuous in memory. Let us say we have an integer (4-byte) array A and let the address of A[0] be x then to access A[i], we can directly access the memory at (x + i*4). Unlike arrays, we can not do random access in linked list.
+Quick Sort requires a lot of this kind of access. In linked list to access i’th index, we have to travel each and every node from the head to i’th node as we don’t have continuous block of memory. Therefore, the overhead increases for quick sort. Merge sort accesses data sequentially and the need of random access is low.
 ```
 
 ## [Flatten a Linked List](https://practice.geeksforgeeks.org/problems/flattening-a-linked-list/1)
 
 ```python
+class Node():
+	def __init__(self,data):
+		self.data = data
+		self.right = None
+		self.down = None
 
+class LinkedList():
+	def __init__(self):
+		self.head = None
+
+	def push(self,head_ref,data):
+		new_node = Node(data)
+		new_node.down = head_ref
+		head_ref = new_node
+		return head_ref
+
+	def printList(self):
+		temp = self.head
+		while(temp != None):
+			print(temp.data,end=" ")
+			temp = temp.down
+		print()
+
+	
+	def merge(self, a, b):
+		# if first linked list is empty then second is the answer
+		if a is None:
+			return b
+
+		# if second linked list is empty then first is the result
+		if b is None:
+			return a
+
+		# compare the data members of the two linked lists and put the larger one in the result
+		result = None
+
+		if (a.data < b.data):
+			result = a
+			result.down = self.merge(a.down,b)
+		else:
+			result = b
+			result.down = self.merge(a,b.down)
+
+		result.right = None
+		return result
+
+	def flatten(self, root):
+
+		# Base Case
+		if root is None or root.right is None:
+			return root
+
+		# recur for list on right
+		root.right = self.flatten(root.right)
+
+		# now merge
+		root = self.merge(root, root.right)
+
+		# return the root it will be in turn merged with its left
+		return root
+
+
+
+
+'''
+Let us create the following linked list
+			5 -> 10 -> 19 -> 28
+			| |	 |	 |
+			V V	 V	 V
+			7 20 22 35
+			|		 |	 |
+			V		 V	 V
+			8		 50 40
+			|			 |
+			V			 V
+			30			 45
+'''
+L = LinkedList()
+L.head = L.push(L.head, 30);
+L.head = L.push(L.head, 8);
+L.head = L.push(L.head, 7);
+L.head = L.push(L.head, 5);
+
+L.head.right = L.push(L.head.right, 20);
+L.head.right = L.push(L.head.right, 10);
+
+L.head.right.right = L.push(L.head.right.right, 50);
+L.head.right.right = L.push(L.head.right.right, 22);
+L.head.right.right = L.push(L.head.right.right, 19);
+
+L.head.right.right.right = L.push(L.head.right.right.right, 45);
+L.head.right.right.right = L.push(L.head.right.right.right, 40);
+L.head.right.right.right = L.push(L.head.right.right.right, 35);
+L.head.right.right.right = L.push(L.head.right.right.right, 20);
+
+L.head = L.flatten(L.head);
+L.printList()
 ```
 
 ## [Sort a LL of 0's, 1's and 2's](https://practice.geeksforgeeks.org/problems/given-a-linked-list-of-0s-1s-and-2s-sort-it/1)
 
 ```python
+import math
 
+class Node:
+	def __init__(self, data):
+		self.data = data
+		self.next = None
+
+
+def sortList(head):
+	if head is None or head.next is None:
+		return head
+
+	# Create three dummy nodes to point to beginning of three linked lists. These dummy nodes are created to avoid many None checks.
+	zeroD = Node(0)
+	oneD = Node(0)
+	twoD = Node(0)
+
+	# Initialize current pointers for three lists and whole list.
+	zero = zeroD
+	one = oneD
+	two = twoD
+
+	# Traverse list
+	curr = head
+	while curr:
+		if (curr.data == 0):
+			zero.next = curr
+			zero = zero.next
+		elif curr.data == 1:
+			one.next = curr
+			one = one.next
+		else:
+			two.next = curr
+			two = two.next
+		curr = curr.next
+	# Attach three lists
+	zero.next = oneD.next or twoD.next
+	one.next = twoD.next
+	two.next = None
+
+	# Updated head
+	head = zeroD.next
+
+	# Delete dummy nodes
+	return head
+
+# function to create and return a node
+def newNode(data):
+	newNode = Node(data)
+	newNode.data = data
+	newNode.next = None
+	return newNode
+
+# Function to print linked list
+def printList(node):
+	while (node != None):
+		print(node.data, end = " ")
+		node = node.next
+	
+
+head = newNode(1)
+head.next = newNode(2)
+head.next.next = newNode(0)
+head.next.next.next = newNode(1)
+print("Linked List Before Sorting")
+printList(head)
+head = sortList(head)
+print("\nLinked List After Sorting")
+printList(head)
 ```
 
 ## [Clone a linked list with next and random pointer](https://practice.geeksforgeeks.org/problems/clone-a-linked-list-with-next-and-random-pointer/1)
 
 ```python
+class Node:
+	def __init__(self, data):
+		self.data = data	
+		self.next = None
+		self.random = None
 
+
+class MyDictionary(dict):
+	def __init__(self):
+		super().__init__()
+		self = {}
+
+	def add(self, key, value):
+		self[key] = value
+
+
+class LinkedList:
+	def __init__(self, node):
+		self.head = node
+
+	def __repr__(self):
+		temp = self.head
+		while temp is not None:
+			random = temp.random
+			random_data = (random.data if
+						random is not None else -1)
+							
+			data = temp.data
+			print(
+				f"Data-{data}, Random data: {random_data}")
+			temp = temp.next
+			
+		return "\n"
+
+	def push(self, data):
+		node = Node(data)
+		node.next = self.head
+		self.head = node
+
+
+	def clone(self):
+		
+		# Initialize two references, one with original list's head.
+		original = self.head
+		clone = None
+
+		# Initialize two references, one with original list's head.
+		mp = MyDictionary()
+
+		# Traverse the original list and make a copy of that in the clone linked list
+		while original is not None:
+			clone = Node(original.data)
+			mp.add(original, clone)
+			original = original.next
+
+		# Adjusting the original list reference again.
+		original = self.head
+
+		# Traversal of original list again to adjust the next and random references of clone list using hash map.
+		while original is not None:
+			clone = mp.get(original)
+			clone.next = mp.get(original.next)
+			clone.random = mp.get(original.random)
+			original = original.next
+			
+		# Return the head reference of the clone list.
+		return LinkedList(self.head)
+
+
+l = LinkedList(Node(5))
+l.push(4)
+l.push(3)
+l.push(2)
+l.push(1)
+
+l.head.random = l.head.next.next
+l.head.next.random = l.head.next.next.next
+l.head.next.next.random = l.head.next.next.next.next
+l.head.next.next.next.random = (l.head.next.next.next. next.next)
+l.head.next.next.next.next.random = l.head.next
+
+clone = l.clone()
+print("Original linked list")
+print(l)
+print("Cloned linked list")
+print(clone)
 ```
 
 ## [Merge K sorted Linked list](https://practice.geeksforgeeks.org/problems/merge-k-sorted-linked-lists/1)
 
 ```python
+class Node:
+	def __init__(self):
+		self.data = 0
+		self.next = None
 
+
+def printList(node):
+	while (node != None):
+		print(node.data, end = ' ')
+		node = node.next
+
+def SortedMerge(a, b):
+	result = None
+	# Base cases
+	if a is None:
+		return b
+	elif b is None:
+		return a 
+
+	# Pick either a or b, and recur
+	if (a.data <= b.data):
+		result = a
+		result.next = SortedMerge(a.next, b)
+	else:
+		result = b
+		result.next = SortedMerge(a, b.next)
+	return result
+
+
+def mergeKLists(arr, last):
+	# Repeat until only one list is left
+	while (last != 0):
+		i = 0
+		j = last
+
+		# (i, j) forms a pair
+		while (i < j):
+			
+			# Merge List i with List j and store merged list in List i
+			arr[i] = SortedMerge(arr[i], arr[j])
+
+			# Consider next pair
+			i += 1
+			j -= 1
+			
+			# If all pairs are merged, update last
+			if (i >= j):
+				last = j
+	return arr[0]
+
+
+def newNode(data):
+	temp = Node()
+	temp.data = data
+	temp.next = None
+	return temp
+
+
+k = 3  # Number of linked lists
+n = 4  # Number of elements in each list
+arr = [0 for _ in range(k)]
+arr[0] = newNode(1)
+arr[0].next = newNode(3)
+arr[0].next.next = newNode(5)
+arr[0].next.next.next = newNode(7)
+arr[1] = newNode(2)
+arr[1].next = newNode(4)
+arr[1].next.next = newNode(6)
+arr[1].next.next.next = newNode(8)
+arr[2] = newNode(0)
+arr[2].next = newNode(9)
+arr[2].next.next = newNode(10)
+arr[2].next.next.next = newNode(11)
+head = mergeKLists(arr, k - 1)
+printList(head)
 ```
 
 ## [Multiply 2 no. represented by LL](https://practice.geeksforgeeks.org/problems/multiply-two-linked-lists/1)
 
 ```python
+class Node:
+	def __init__(self, data):
+		self.data = data
+		self.next = None
 
+class LinkedList:
+	def __init__(self):
+		self.head = None
+
+	def push(self, new_data):
+		new_node = Node(new_data)
+		new_node.next = self.head
+		self.head = new_node
+			
+	def printList(self):
+		ptr = self.head
+		while (ptr != None):
+			print(ptr.data, end = '')
+			if ptr.next != None:
+				print('->', end = '')
+			ptr = ptr.next	
+		print()
+	
+# Multiply contents of two Linked Lists
+def multiplyTwoLists(first, second):
+	num1 = 0
+	num2 = 0
+	first_ptr = first.head
+	second_ptr = second.head
+	while first_ptr != None or second_ptr != None:
+		if first_ptr != None:
+			num1 = (num1 * 10) + first_ptr.data
+			first_ptr = first_ptr.next
+		if second_ptr != None:
+			num2 = (num2 * 10) + second_ptr.data
+			second_ptr = second_ptr.next
+	return num1 * num2
+	
+
+first = LinkedList()
+second = LinkedList()
+
+# Create first Linked List 9->4->6
+first.push(6)
+first.push(4)
+first.push(9)
+print("First list is: ", end = '')
+first.printList()
+
+# Create second Linked List 8->4
+second.push(4)
+second.push(8)
+print("Second List is: ", end = '')
+second.printList()
+
+result = multiplyTwoLists(first, second)
+print("Result is: ", result)
 ```
 
 ## [Delete nodes which have a greater value on right side](https://practice.geeksforgeeks.org/problems/delete-nodes-having-greater-value-on-right/1)
 
 ```python
+class Node:
+	def __init__(self, data):
+		self.data = data
+		self.next = None
 
+class LinkedList:
+
+	def __init__(self):
+		self.head = None
+
+	def push(self, new_data):
+		new_node = Node(new_data)
+		new_node.next = self.head
+		self.head = new_node
+
+	def printList(self):
+		temp = self.head
+		while(temp):
+			print (temp.data,end=" ")
+			temp = temp.next
+
+	def del_gr_right(self):
+		i = self.head
+		
+		while i:
+			value = i.data
+			found = False
+			j = i.next
+			
+			while j:
+				if j.data > value:
+					found = True
+					break
+				j = j.next
+			
+			if found:
+				temp = i.next
+				i.data = i.next.data
+				i.next = i.next.next
+				temp = None
+			else:
+				i = i.next
+
+
+llist = LinkedList()
+llist.push(11)
+llist.push(18)
+llist.push(20)
+llist.push(14)
+llist.push(15)
+
+print ("Given Linked List is:")
+llist.printList()
+print()
+
+llist.del_gr_right()
+
+print ("\nLinked list after deletion is")
+llist.printList()
 ```
 
 ## [Segregate even and odd nodes in a Linked List](https://practice.geeksforgeeks.org/problems/segregate-even-and-odd-nodes-in-a-linked-list/0)
 
 ```python
 
+class Node:
+
+	def __init__(self, data):
+		self.data = data 
+		self.next =None
+
+# Function to segregate even and odd nodes.
+def segregateEvenOdd():
+	global head
+	evenStart = None 	# Starting node of list having even values.
+	evenEnd = None 	# Ending node of even values list.	
+	oddStart = None 	# Starting node of odd values list.	
+	oddEnd = None 	# Ending node of odd values list.		
+	currNode = head # Node to traverse the list.
+
+	while (currNode != None):
+		val = currNode.data
+
+		# If current value is even, add it to even values list.
+		if (val % 2 == 0):
+			if evenStart is None:
+				evenStart = currNode
+				evenEnd = evenStart
+			else:
+				evenEnd . next = currNode
+				evenEnd = evenEnd . next
+
+		elif oddStart is None:
+			oddStart = currNode
+			oddEnd = oddStart
+		else:
+			oddEnd . next = currNode
+			oddEnd = oddEnd . next
+
+		# Move head pointer one step in forward direction
+		currNode = currNode . next
+
+	# If either odd list or even list is empty, no change is required as all elements are either even or odd.
+	if oddStart is None or evenStart is None:
+		return
+
+	# Add odd list after even list.	
+	evenEnd.next = oddStart
+	oddEnd.next = None
+
+	# Modify head pointer to starting of even list.
+	head = evenStart
+
+
+def push(new_data):
+	global head
+	new_node = Node(new_data)
+	new_node.next = head
+	head = new_node
+
+def printList():
+	global head
+	node = head
+	while (node != None):
+		print(node.data, end = " ")
+		node = node.next
+	print()
+	
+
+''' Let us create a sample linked list as following
+0.1.4.6.9.10.11 '''
+
+head = None 
+push(11)
+push(10)
+push(9)
+push(6)
+push(4)
+push(1)
+push(0)
+
+print("Original Linked list")
+printList()
+segregateEvenOdd()
+print("Modified Linked list")
+printList()
 ```
 
 ## [Program for n’th node from the end of a Linked List](https://practice.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/1)
 
 ```python
+class Node:
+	def __init__(self, new_data):
+		self.data = new_data
+		self.next = None
+	
+class LinkedList:
+	def __init__(self):
+		self.head = None
 
+	def push(self, new_data):
+		new_node = Node(new_data)
+		new_node.next = self.head
+		self.head = new_node
+
+	def printNthFromLast(self, n):
+		temp = self.head # used temp variable
+		length = 0
+		while temp is not None:
+			temp = temp.next
+			length += 1
+
+		# print count
+		if n > length: 
+			# if entered location is greater than length of linked list
+			print('Location is greater than the length of LinkedList')
+			return
+		temp = self.head
+
+		for _ in range(length - n):
+			temp = temp.next
+		print(temp.data)
+
+
+llist = LinkedList()
+llist.push(20)
+llist.push(4)
+llist.push(15)
+llist.push(35)
+llist.printNthFromLast(4)
 ```
 
 ## [Find the first non-repeating character from a stream of characters](https://practice.geeksforgeeks.org/problems/first-non-repeating-character-in-a-stream/0)
 
 ```python
+from queue import Queue
 
+def firstnonrepeating(Str):
+	global MAX_CHAR
+	q = Queue()
+	charCount = [0] * MAX_CHAR
+	
+	# traverse whole Stream
+	for i in range(len(Str)):
+
+		# push each character in queue
+		q.put(Str[i])
+
+		# increment the frequency count
+		charCount[ord(Str[i]) -
+				ord('a')] += 1
+
+		# check for the non repeating character
+		while (not q.empty()):
+			if (charCount[ord(q.queue[0]) - ord('a')] > 1):
+				q.get()
+			else:
+				print(q.queue[0], end = " ")
+				break
+
+		if (q.empty()):
+			print(-1, end = " ")
+	print()
+
+MAX_CHAR = 26
+Str = "aabc"
+firstnonrepeating(Str)
 ```
 
 # Matrix
@@ -13718,61 +15878,384 @@ print("Sum is ", solve(arr, n))
 ## [Spiral traversal on a Matrix](https://practice.geeksforgeeks.org/problems/spirally-traversing-a-matrix/0)
 
 ```python
+def spiralOrder(matrix):
+	ans = []
 
+	if (len(matrix) == 0):
+		return ans
+
+	m = len(matrix)
+	n = len(matrix[0])
+	seen = [[0 for _ in range(n)] for _ in range(m)]
+	dr = [0, 1, 0, -1]
+	dc = [1, 0, -1, 0]
+	x = 0
+	y = 0
+	di = 0
+
+	# Iterate from 0 to R * C - 1
+	for _ in range(m * n):
+		ans.append(matrix[x][y])
+		seen[x][y] = True
+		cr = x + dr[di]
+		cc = y + dc[di]
+
+		if cr >= 0 and cr < m and cc >= 0 and cc < n and not (seen[cr][cc]):
+			x = cr
+			y = cc
+		else:
+			di = (di + 1) % 4
+			x += dr[di]
+			y += dc[di]
+	return ans
+
+
+a = [[1, 2, 3, 4],
+	[5, 6, 7, 8],
+	[9, 10, 11, 12],
+	[13, 14, 15, 16]]
+
+for x in spiralOrder(a):
+	print(x, end=" ")
+print()
 ```
 
-## [Search an element in a matriix](https://leetcode.com/problems/search-a-2d-matrix/)
+## [Search an element in a matrix](https://leetcode.com/problems/search-a-2d-matrix/)
 
 ```python
+def search(mat, n, x):
+	if(n == 0):
+		return -1
+	for i in range(n):
+		for j in range(n):
+			if(mat[i][j] == x):
+				print("Element found at (", i, ",", j, ")")
+				return 1
+	print(" Element not found")
+	return 0
 
+
+mat = [[10, 20, 30, 40], [15, 25, 35, 45],[27, 29, 37, 48],[32, 33, 39, 50]]
+search(mat, 4, 29)
 ```
 
 ## [Find median in a row wise sorted matrix](https://practice.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1)
 
 ```python
+from bisect import bisect_right as upper_bound
+MAX = 100;
 
+def binaryMedian(m, r, d):
+	mi = m[0][0]
+	mx = 0
+	for i in range(r):
+		if m[i][0] < mi:
+			mi = m[i][0]
+		if m[i][d-1] > mx :
+			mx = m[i][d-1]
+	
+	desired = (r * d + 1) // 2
+	
+	while (mi < mx):
+		mid = mi + (mx - mi) // 2
+		place = [0];
+		
+		for i in range(r):
+			j = upper_bound(m[i], mid)
+			place[0] = place[0] + j
+		if place[0] < desired:
+			mi = mid + 1
+		else:
+			mx = mid
+	print ("Median is", mi)
+	return
+	
+r, d = 3, 3
+m = [ [1, 3, 5], [2, 6, 9], [3, 6, 9]]
+binaryMedian(m, r, d)
 ```
 
 ## [Find row with maximum no. of 1's](https://practice.geeksforgeeks.org/problems/row-with-max-1s0023/1)
 
 ```python
+def first(arr , low , high):
+	if(high >= low):
+		# Get the middle index
+		mid = low + (high - low)//2
+		# Check if the element at middle index is first 1
+		if ( ( mid == 0 or arr[mid-1] == 0) and arr[mid] == 1):
+			return mid
+		# If the element is 0, recur for right side
+		elif (arr[mid] == 0):
+			return first(arr, (mid + 1), high);
+		# If element is not first 1, recur for left side
+		else:
+			return first(arr, low, (mid -1));
+	return -1
+
+def rowWithMax1s(mat):
+	# Initialize max values
+	max_row_index,Max = 0,-1
+
+	# Traverse for each row and count number of 1s by finding the index of first 1
+	for i in range(R):
+		index = first (mat[i], 0, C-1)
+		if (index != -1 and C-index > Max):
+			Max = C - index;
+			max_row_index = i
+	return max_row_index
+
+R,C = 4,4
+
+mat = [[0, 0, 0, 1],
+	[0, 1, 1, 1],
+	[1, 1, 1, 1],
+	[0, 0, 0, 0]]
+print(f"Index of row with maximum 1s is {str(rowWithMax1s(mat))}")
 
 ```
 
 ## [Print elements in sorted order using row-column wise sorted matrix](https://practice.geeksforgeeks.org/problems/sorted-matrix/0)
 
 ```python
+import sys
+INF = sys.maxsize
 
+# A utility function to youngify a Young Tableau. This is different from standard youngify. It assumes that the value at mat[0][0] is infinite.
+def youngify(mat, i, j):
+	# Find the values at down and right sides of mat[i][j]
+	downVal = mat[i + 1][j] if (i + 1 < N) else INF
+	rightVal = mat[i][j + 1] if (j + 1 < N) else INF
+
+	# If mat[i][j] is the down right corner element, return
+	if (downVal == INF and rightVal == INF):
+		return
+
+	# Move the smaller of two values (downVal and rightVal) to mat[i][j] and recur for smaller value
+	if (downVal < rightVal):
+		mat[i][j] = downVal
+		mat[i + 1][j] = INF
+		youngify(mat, i + 1, j)
+	
+	else:
+		mat[i][j] = rightVal
+		mat[i][j + 1] = INF
+		youngify(mat, i, j + 1)
+
+# A utility function to extract minimum element from Young tableau
+def extractMin(mat):
+	ret = mat[0][0]
+	mat[0][0] = INF
+	youngify(mat, 0, 0)
+	return ret
+
+def printSorted(mat):
+	print("Elements of matrix in sorted order n")
+	i = 0
+	while i < N * N:
+		print(extractMin(mat), end = " ")
+		i += 1
+
+N = 4
+mat = [[10, 20, 30, 40],
+	[15, 25, 35, 45],
+	[27, 29, 37, 48],
+	[32, 33, 39, 50]]
+printSorted(mat)
 ```
 
 ## [Maximum size rectangle](https://practice.geeksforgeeks.org/problems/max-rectangle/1)
 
 ```python
+class Solution():
+	def maxHist(self, row):
+		# Create an empty stack. The stack holds indexes of hist array / The bars stored in stack are always in increasing order of their heights.
+		result = []
+		top_val = 0 # Top of stack
+		max_area = 0 # Initialize max area in current
+		area = 0 # Initialize area with current top
 
+		# Run through all bars of given histogram (or row)
+		i = 0
+		while (i < len(row)):
+
+			# If this bar is higher than the bar on top stack, push it to stack
+			if not result or row[result[-1]] <= row[i]:
+				result.append(i)
+				i += 1
+			else:
+
+				# If this bar is lower than top of stack, then calculate area of rectangle with stack top as the smallest (or minimum height) bar. 'i' is 'right index' for the top and element before top in stack is 'left index'
+				top_val = row[result.pop()]
+				area = top_val * i
+
+				if (len(result)):
+					area = top_val * (i - result[-1] - 1)
+				max_area = max(area, max_area)
+
+		# Now pop the remaining bars from stack and calculate area with every popped bar as the smallest bar
+		while (len(result)):
+			top_val = row[result.pop()]
+			area = top_val * i
+			if (len(result)):
+				area = top_val * (i - result[-1] - 1)
+
+			max_area = max(area, max_area)
+
+		return max_area
+
+	# Returns area of the largest rectangle with all 1s in A
+	def maxRectangle(self, A):
+
+		# Calculate area for first row and initialize it as result
+		result = self.maxHist(A[0])
+
+		# iterate over row to find maximum rectangular area considering each row as histogram
+		for i in range(1, len(A)):
+			for j in range(len(A[i])):
+
+				# if A[i][j] is 1 then add A[i -1][j]
+				if (A[i][j]):
+					A[i][j] += A[i - 1][j]
+
+			# Update result if area with current row (as last row) of rectangle) is more
+			result = max(result, self.maxHist(A[i]))
+
+		return result
+
+A = [[0, 1, 1, 0],
+	[1, 1, 1, 1],
+	[1, 1, 1, 1],
+	[1, 1, 0, 0]]
+ans = Solution()
+print("Area of maximum rectangle is", ans.maxRectangle(A))
 ```
 
 ## [Find a specific pair in matrix](https://www.geeksforgeeks.org/find-a-specific-pair-in-matrix/)
 
 ```python
+import sys
 
+# The function returns maximum value A(c,d) - A(a,b) over all choices of indexes such that both c > a and d > b.
+def findMaxValue(mat):
+
+	# stores maximum value
+	maxValue = -sys.maxsize -1
+
+	# maxArr[i][j] stores max of elements in matrix from (i, j) to (N-1, N-1)
+	maxArr = [[0 for _ in range(N)] for _ in range(N)]
+
+	# last element of maxArr will be same's as of the input matrix
+	maxArr[N - 1][N - 1] = mat[N - 1][N - 1]
+
+	# preprocess last row
+	maxv = mat[N - 1][N - 1]
+	for j in range (N - 2, -1, -1):
+
+		if (mat[N - 1][j] > maxv):
+			maxv = mat[N - 1][j]
+		maxArr[N - 1][j] = maxv
+
+	# preprocess last column
+	maxv = mat[N - 1][N - 1] # Initialize max
+	for i in range (N - 2, -1, -1):
+
+		if (mat[i][N - 1] > maxv):
+			maxv = mat[i][N - 1]
+		maxArr[i][N - 1] = maxv
+
+	# preprocess rest of the matrix from bottom
+	for i in range (N - 2, -1, -1):
+
+		for j in range (N - 2, -1, -1):
+
+			# Update maxValue
+			if (maxArr[i + 1][j + 1] -
+				mat[i][j] > maxValue):
+				maxValue = (maxArr[i + 1][j + 1] - mat[i][j])
+
+			# set maxArr (i, j)
+			maxArr[i][j] = max(mat[i][j], max(maxArr[i][j + 1], maxArr[i + 1][j]))
+
+	return maxValue
+
+N = 5
+mat = [[ 1, 2, -1, -4, -20 ],
+	[-8, -3, 4, 2, 1 ],
+	[ 3, 8, 6, 1, 3 ],
+	[ -4, -1, 1, 7, -6] ,
+	[0, -4, 10, -5, 1 ]]
+					
+print ("Maximum Value is", findMaxValue(mat))
 ```
 
 ## [Rotate matrix by 90 degrees](https://www.geeksforgeeks.org/rotate-a-matrix-by-90-degree-in-clockwise-direction-without-using-any-extra-space/)
 
 ```python
-
+N = 4
+def rotate90Clockwise(arr) :
+	global N
+	for j in range(N) :
+		for i in range(N - 1, -1, -1) :
+			print(arr[i][j], end = " ")
+		print()
+		
+# Driver code	
+arr = [ [ 1, 2, 3, 4 ],
+		[ 5, 6, 7, 8 ],
+		[ 9, 10, 11, 12 ],
+		[ 13, 14, 15, 16 ] ]
+rotate90Clockwise(arr);
 ```
 
 ## [Kth smallest element in a row-column wise sorted matrix](https://practice.geeksforgeeks.org/problems/kth-element-in-matrix/1)
 
 ```python
+def kthSmallest(mat, n, k):
+	a = [0 for _ in range(n*n)]
+	v=0
+	for i in range(n):
+		for j in range(n):
+			a[v] = mat[i][j]
+			v += 1
+	a.sort()
+	return a[k - 1]
 
+mat = [ [ 10, 20, 30, 40 ],
+			[ 15, 25, 35, 45 ],
+			[ 25, 29, 37, 48 ],
+			[ 32, 33, 39, 50 ] ]
+res = kthSmallest(mat, 4, 7)
+print(f"7th smallest element is {str(res)}")
 ```
 
 ## [Common elements in all rows of a given matrix](https://www.geeksforgeeks.org/common-elements-in-all-rows-of-a-given-matrix/)
 
 ```python
+def printCommonElements(mat):
+	mp = {mat[0][j]: 1 for j in range(N)}
 
+	# traverse the matrix
+	for i in range(1, M):
+		for j in range(N):
+
+			# If element is present in the map and is not duplicated in current row.
+			if mat[i][j] in mp and mp[mat[i][j]] == i:
+			# we increment count of the element in map by 1
+				mp[mat[i][j]] = i + 1
+
+				# If this is last row
+				if i == M - 1:
+					print(mat[i][j], end = " ")
+
+# Specify number of rows and columns
+M = 4
+N = 5
+mat = [[1, 2, 1, 4, 8],
+	[3, 7, 8, 5, 1],
+	[8, 7, 7, 3, 1],
+	[8, 1, 2, 7, 9]]
+printCommonElements(mat)
 ```
 
 # Searching & Sorting

@@ -1,37 +1,25 @@
-"""
-Given an array of digits (values are from 0 to 9), find the minimum possible sum of two numbers formed from digits of the array. All digits of given array must be used to form the two numbers. 
-Examples : 
- 
+def printCommonElements(mat):
+	mp = {mat[0][j]: 1 for j in range(N)}
 
-Input: [6, 8, 4, 5, 2, 3]
-Output: 604
-The minimum sum is formed by numbers 
-358 and 246
+	# traverse the matrix
+	for i in range(1, M):
+		for j in range(N):
 
-Input: [5, 3, 0, 7, 4]
-Output: 82
-The minimum sum is formed by numbers 
-35 and 047 
-"""
+			# If element is present in the map and is not duplicated in current row.
+			if mat[i][j] in mp and mp[mat[i][j]] == i:
+			# we increment count of the element in map by 1
+				mp[mat[i][j]] = i + 1
 
-def solve(arr, n):
-	# sort the array
-	arr.sort()
+				# If this is last row
+				if i == M - 1:
+					print(mat[i][j], end = " ")
 
-	# let two numbers be a and b
-	a = 0; b = 0
-	
-	for i in range(n):
-		# Fill a and b with every alternate digit of input array
-		if (i % 2 != 0):
-			a = a * 10 + arr[i]
-		else:
-			b = b * 10 + arr[i]
-	return a + b
-
-
-arr = [6, 8, 4, 5, 2, 3]
-n = len(arr)
-print("Sum is ", solve(arr, n))
-
+# Specify number of rows and columns
+M = 4
+N = 5
+mat = [[1, 2, 1, 4, 8],
+	[3, 7, 8, 5, 1],
+	[8, 7, 7, 3, 1],
+	[8, 1, 2, 7, 9]]
+printCommonElements(mat)
 

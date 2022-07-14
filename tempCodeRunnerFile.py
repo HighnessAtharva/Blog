@@ -1,1 +1,2 @@
-n
+
+	# Initialize max values
