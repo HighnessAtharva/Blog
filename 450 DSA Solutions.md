@@ -10,7 +10,7 @@
 - [x] LinkedList
 - [x] Matrix
 - [x] Searching & Sorting
-- [ ] Stacks & Queues
+- [x] Stacks & Queues
 - [ ] String
 - [x] Trie
 
@@ -12270,12 +12270,6 @@ print(findMinSum(a, b, n))
 TODO
 ```
 
-## [Program for Least Recently Used (LRU) Page Replacement algorithm](https://practice.geeksforgeeks.org/problems/page-faults-in-lru/0)
-
-```python
-TODO
-```
-
 ## [Smallest subset with sum greater than all other elements](https://www.geeksforgeeks.org/smallest-subset-sum-greater-elements/)
 
 ```python
@@ -16995,7 +16989,6 @@ The integers in their binary representation are:
 hence the non-increasing sorted order is:
 {15}, {7}, {5, 3, 9, 6}, {2, 4, 32}
 """
-
 def countSetBits(val):
 	cnt = 0
 	while val:
@@ -17439,91 +17432,644 @@ print(arr)
 ## [Implement Stack from Scratch](https://www.tutorialspoint.com/javaexamples/data_stack.htm)
 
 ```python
+class Stack:
+    def __init__(self, size):
+        self.arr = [None] * size
+        self.capacity = size
+        self.top = -1
 
+    def push(self, val):
+        if self.isFull():
+            print('Stack Overflow!! Calling exit()…')
+            exit(-1)
+ 
+        print(f'Inserting {val} into the stack…')
+        self.top = self.top + 1
+        self.arr[self.top] = val
+
+    def pop(self):
+        if self.isEmpty():
+            print('Stack Underflow!! Calling exit()…')
+            exit(-1)
+ 
+        print(f'Removing {self.peek()} from the stack')
+ 
+        # decrease stack size by 1 and (optionally) return the popped element
+        top = self.arr[self.top]
+        self.top = self.top - 1
+        return top
+
+    def peek(self):
+        if self.isEmpty():
+            exit(-1)
+        return self.arr[self.top]
+
+    def size(self):
+        return self.top + 1
+
+    def isEmpty(self):
+        return self.size() == 0
+
+    def isFull(self):
+        return self.size() == self.capacity
+ 
+
+stack = Stack(3)
+stack.push(1)       # Inserting 1 in the stack
+stack.push(2)       # Inserting 2 in the stack
+stack.pop()         # removing the top element (2)
+stack.pop()         # removing the top element (1)
+stack.push(3)       # Inserting 3 in the stack
+
+print('Top element is', stack.peek())
+print('The stack size is', stack.size())
+
+stack.pop()         # removing the top element (3)
+if stack.isEmpty():
+    print('The stack is empty')
+else:
+    print('The stack is not empty')
 ```
 
 ## [Implement Queue from Scratch](https://www.geeksforgeeks.org/queue-set-1introduction-and-array-implementation/)
 
 ```python
+class Queue:
+    def __init__(self, size=1000):
+        self.q = [None] * size      # list to store queue elements
+        self.capacity = size        # maximum capacity of the queue
+        self.front = 0              # front points to the front element in the queue
+        self.rear = -1              # rear points to the last element in the queue
+        self.count = 0              # current size of the queue
+ 
+    def dequeue(self):
+        # check for queue underflow
+        if self.isEmpty():
+            print('Queue Underflow!! Terminating process.')
+            exit(-1)
+        x = self.q[self.front]
+        print('Removing element…', x)
+        self.front = (self.front + 1) % self.capacity
+        self.count = self.count - 1
+        return x
+    def enqueue(self, value):
+        # check for queue overflow
+        if self.isFull():
+            print('Overflow!! Terminating process.')
+            exit(-1)
+        print('Inserting element…', value)
+        self.rear = (self.rear + 1) % self.capacity
+        self.q[self.rear] = value
+        self.count = self.count + 1
 
+    def peek(self):
+        if self.isEmpty():
+            print('Queue UnderFlow!! Terminating process.')
+            exit(-1)
+        return self.q[self.front]
+ 
+    def size(self):
+        return self.count
+
+    def isEmpty(self):
+        return self.size() == 0
+ 
+    def isFull(self):
+        return self.size() == self.capacity
+ 
+ 
+# create a queue of capacity 5
+q = Queue(5)
+q.enqueue(1)
+q.enqueue(2)
+q.enqueue(3)
+print('The queue size is', q.size())
+print('The front element is', q.peek())
+q.dequeue()
+print('The front element is', q.peek())
+q.dequeue()
+q.dequeue()
+if q.isEmpty():
+    print('The queue is empty')
+else:
+    print('The queue is not empty')
 ```
 
 ## [Implement 2 stack in an array](https://practice.geeksforgeeks.org/problems/implement-two-stacks-in-an-array/1)
 
 ```python
+class Stack:
+    # Constructor
+    def __init__(self, n):
+        self.capacity = n
+        self.A = [None] * n
+        self.top1 = -1
+        self.top2 = n
+ 
+    # Function to insert a given element into the first stack
+    def push_first(self, key):
+        # check if the list is full
+        if self.top1 + 1 == self.top2:
+            print('Stack Overflow')
+            exit(-1)
+        self.top1 = self.top1 + 1
+        self.A[self.top1] = key
+ 
+    # Function to insert a given element into the second stack
+    def push_second(self, key):
+        # check if the list is full
+        if self.top1 + 1 == self.top2:
+            print('Stack Overflow')
+            exit(-1)
+        self.top2 = self.top2 - 1
+        self.A[self.top2] = key
+ 
+    # Function to pop an element from the first stack
+    def pop_first(self):
+        # if no elements are left in the list
+        if self.top1 < 0:
+            print('Stack Underflow')
+            exit(-1)
+        top = self.A[self.top1]
+        self.top1 = self.top1 - 1
+        return top
+ 
+    # Function to pop an element from the second stack
+    def pop_second(self):
+        # if no elements are left in the list
+        if self.top2 >= self.capacity:
+            print('Stack Underflow')
+            exit(-1)
+        top = self.A[self.top2]
+        self.top2 = self.top2 + 1
+        return top
+ 
 
+first = [1, 2, 3, 4, 5]
+second = [6, 7, 8, 9, 10]
+stack = Stack(len(first) + len(second))
+[stack.push_first(i) for i in first]
+[stack.push_second(j) for j in second]
+print('Popping element from the first stack:', stack.pop_first())
+print('Popping element from the second stack:', stack.pop_second())
 ```
 
 ## [find the middle element of a stack](https://www.geeksforgeeks.org/design-a-stack-with-find-middle-operation/)
 
 ```python
-
+# Recursive function to find the peak element in a list
+def findPeak(nums, left=None, right=None):
+ 
+    # Initialize left and right
+    if left is None and right is None:
+        left, right = 0, len(nums) - 1
+ 
+    # find the middle element. To avoid overflow, use mid = left + (right - left) / 2
+    mid = (left + right) // 2
+ 
+    # check if the middle element is greater than its neighbors
+    if ((mid == 0 or nums[mid - 1] <= nums[mid]) and (mid == len(nums) - 1 or nums[mid + 1] <= nums[mid])):
+        return mid
+  
+def findMiddleElement(nums):
+    if not nums:
+        exit(-1)
+    index = findPeak(nums)
+    return nums[index]
+ 
+nums = [8, 9, 10, 11, 2, 5, 6]
+print('The middle element is', findPeakElement(nums))
+ 
 ```
 
 ## [Implement "N" stacks in an Array](https://www.geeksforgeeks.org/efficiently-implement-k-stacks-single-array/)
 
 ```python
+class KStacks:	
+	def __init__(self, k, n):
+		self.k = k # Number of stacks.
+		self.n = n # Total size of array holding  all the 'k' stacks.
 
+		# Array which holds 'k' stacks.
+		self.arr = [0] * self.n
+
+		# All stacks are empty to begin with (-1 denotes stack is empty).
+		self.top = [-1] * self.k
+
+		# Top of the free stack.
+		self.free = 0
+
+		# Points to the next element in either 1. One of the 'k' stacks or, 2. The 'free' stack.
+		self.next = [i + 1 for i in range(self.n)]
+		self.next[self.n - 1] = -1
+
+	# Check whether given stack is empty.
+	def isEmpty(self, sn):
+		return self.top[sn] == -1
+
+	# Check whether there is space left for pushing new elements or not.
+	def isFull(self):
+		return self.free == -1
+
+	# Push 'item' onto given stack number 'sn'.
+	def push(self, item, sn):
+		if self.isFull():
+			print("Stack Overflow")
+			return
+
+		# Get the first free position to insert at.
+		insert_at = self.free
+
+		# Adjust the free position.
+		self.free = self.next[self.free]
+
+		# Insert the item at the free position we obtained above.
+		self.arr[insert_at] = item
+
+		# Adjust next to point to the old top of stack element.
+		self.next[insert_at] = self.top[sn]
+
+		# Set the new top of the stack.
+		self.top[sn] = insert_at
+
+	# Pop item from given stack number 'sn'.
+	def pop(self, sn):
+		if self.isEmpty(sn):
+			return None
+
+		# Get the item at the top of the stack.
+		top_of_stack = self.top[sn]
+
+		# Set new top of stack.
+		self.top[sn] = self.next[self.top[sn]]
+
+		# Push the old top_of_stack to  the 'free' stack.
+		self.next[top_of_stack] = self.free
+		self.free = top_of_stack
+		return self.arr[top_of_stack]
+
+	def printstack(self, sn):
+		top_index = self.top[sn]
+		while (top_index != -1):
+			print(self.arr[top_index])
+			top_index = self.next[top_index]
+
+
+# Create 3 stacks using an array of size 10.
+kstacks = KStacks(3, 10)
+# Push some items onto stack number 2.
+kstacks.push(15, 2)
+kstacks.push(45, 2)
+# Push some items onto stack number 1.
+kstacks.push(17, 1)
+kstacks.push(49, 1)
+kstacks.push(39, 1)
+# Push some items onto stack number 0.
+kstacks.push(11, 0)
+kstacks.push(9, 0)
+kstacks.push(7, 0)
+print(f"Popped element from stack 2 is {str(kstacks.pop(2))}")
+print(f"Popped element from stack 1 is {str(kstacks.pop(1))}")
+print(f"Popped element from stack 0 is {str(kstacks.pop(0))}")
+kstacks.printstack(0)
 ```
 
 ## [Check the expression has valid or Balanced parenthesis or not.](https://practice.geeksforgeeks.org/problems/parenthesis-checker/0)
 
 ```python
-
+from collections import deque
+ 
+def isBalanced(exp):
+    if not exp or len(exp) & 1:
+        return False
+ 
+    # take an empty stack of characters
+    stack = deque()
+ 
+    # traverse the input expression
+    for ch in exp:
+ 
+        # if the current character in the expression is an opening brace, push the corresponding closing brace into the stack.
+        if ch == '(':
+            stack.append(')')
+        elif ch == '{':
+            stack.append('}')
+        elif ch == '[':
+            stack.append(']')
+ 
+        # return false if the popped character is not the same as the current character
+        elif not stack or stack.pop() != ch:
+            return False
+ 
+    # the expression is only balanced if the stack is empty at this point
+    return not stack
+ 
+exp = '{()}[{}]'
+if isBalanced(exp):
+    print('The expression is balanced')
+else:
+    print('The expression is not balanced')
 ```
 
 ## [Reverse a String using Stack](https://practice.geeksforgeeks.org/problems/reverse-a-string-using-stack/1)
 
 ```python
-
+from collections import deque
+ 
+def reverse(s):
+    stack = deque(s)
+    return ''.join(stack.pop() for _ in range(len(s)))
+ 
+s = 'Reverse me'
+s = reverse(s)
+print(s)
+ 
 ```
 
 ## [Design a Stack that supports getMin() in O(1) time and O(1) extra space.](https://practice.geeksforgeeks.org/problems/special-stack/1)
 
 ```python
+class stack:
+  def __init__(self):
+    self.array = []
+    self.top = -1
+    self.max = 100  
+  
+  def isEmpty(self):
+    return self.top == -1  
 
+  def isFull(self):  
+    return self.top == self.max - 1   
+  
+  def push(self, data):
+    if self.isFull():
+      print('Stack OverFlow')
+      return
+    else:
+      self.top += 1
+      self.array.append(data)     
+  
+  def pop(self):
+    if self.isEmpty():
+      print('Stack UnderFlow')
+      return
+    else: 
+      self.top -= 1
+      return self.array.pop()
+  
+# A class that supports all the stack   operations and one additional  operation getMin() that returns the  minimum element from stack at  any time.  This class inherits from the stack class and uses an  auxiliary stack that holds  minimum elements  
+class SpecialStack(stack):
+  def __init__(self):
+    super().__init__()
+    self.Min = stack()  
+
+  def push(self, x):
+    if self.isEmpty():
+      super().push(x)
+      self.Min.push(x)
+    else:
+      super().push(x)
+      y = self.Min.pop()
+      self.Min.push(y)
+      if x <= y:
+        self.Min.push(x)
+      else:
+        self.Min.push(y)  
+  
+  
+  def pop(self):
+    x = super().pop()
+    self.Min.pop()
+    return x  
+  
+  def getmin(self):
+    x = self.Min.pop()
+    self.Min.push(x)
+    return x
+  
+s = SpecialStack()
+s.push(10)
+s.push(20)
+s.push(30)
+print(s.getmin())
+s.push(5)
+print(s.getmin())
 ```
 
 ## [Find the next Greater element](https://practice.geeksforgeeks.org/problems/next-larger-element/0)
 
 ```python
+from collections import deque
 
+def findNextGreaterElements(arr):
+    if not arr:
+        return
+    result = [-1] * len(arr)
+    s = deque()
+    for i in range(len(arr)):
+        # loop till we have a greater element on top or stack becomes empty. Keep popping elements from the stack smaller than the current element, and set their next greater element to the current element
+        while s and arr[s[-1]] < arr[i]:
+            result[s[-1]] = arr[i]
+            s.pop()
+ 
+        # push current "index" into the stack
+        s.append(i)
+    return result
+ 
+ 
+arr = [2, 7, 3, 5, 4, 6, 8]
+print(findNextGreaterElements(arr))
 ```
 
 ## [The celebrity Problem](https://practice.geeksforgeeks.org/problems/the-celebrity-problem/1)
 
 ```python
+"""
+In a party of N people, only one person is known to everyone. Such a person may be present in the party, if yes, (s)he doesn’t know anyone in the party. We can only ask questions like “does A know B? “. Find the stranger (celebrity) in the minimum number of questions.
+We can describe the problem input as an array of numbers/characters representing persons in the party. We also have a hypothetical function HaveAcquaintance(A, B) which returns true if A knows B, false otherwise. How can we solve the problem. 
 
-```
+Examples:  
 
-## [Arithmetic Expression evaluation](https://www.geeksforgeeks.org/arithmetic-expression-evalution/)
+Input:
+MATRIX = { {0, 0, 1, 0},
+           {0, 0, 1, 0},
+           {0, 0, 0, 0},
+           {0, 0, 1, 0} }
+Output:id = 2
+Explanation: The person with ID 2 does not 
+know anyone but everyone knows him
 
-```python
+Input:
+MATRIX = { {0, 0, 1, 0},
+           {0, 0, 1, 0},
+           {0, 1, 0, 0},
+           {0, 0, 1, 0} }
+Output: No celebrity
+Explanation: There is no celebrity.
+"""
 
+
+# Max # of persons in the party
+N = 8
+
+# Person with 2 is celebrity
+MATRIX = [ [ 0, 0, 1, 0 ],
+		[ 0, 0, 1, 0 ],
+		[ 0, 0, 0, 0 ],
+		[ 0, 0, 1, 0 ] ]
+
+def knows(a, b):
+	return MATRIX[a][b]
+
+
+def findCelebrity(n):
+	# Handle trivial case of size = 2
+	s = list(range(n))
+
+	# Find a potential celebrity
+	while (len(s) > 1):
+
+		# Pop out the first two elements from stack
+		A = s.pop()
+		B = s.pop()
+
+		# if A knows B, we find that B might be the celebrity and vice versa
+		if (knows(A, B)):
+			s.append(B)
+		else:
+			s.append(A)
+
+	# If there are only two people and there is no potential candidate
+	if not s:
+		return -1
+
+	# Potential candidate?
+	C = s.pop();
+
+	# Last candidate was not examined, it leads one excess comparison (optimize)
+	if (knows(C, B)):
+		C = B
+
+	if (knows(C, A)):
+		C = A
+
+	# Check if C is actually a celebrity or not
+	for i in range(n):
+
+		# If any person doesn't know 'a' or 'a' doesn't know any person, return -1
+		if ((i != C) and (knows(C, i) or not(knows(i, C)))):
+			return -1
+	return C
+
+	
+n = 4
+id_ = findCelebrity(n)
+
+if id_ == -1:
+	print("No celebrity")
+else:
+	print("Celebrity ID ", id_)
 ```
 
 ## [Evaluation of Postfix expression](https://practice.geeksforgeeks.org/problems/evaluation-of-postfix-expression/0)
 
 ```python
-
-```
-
-## [Implement a method to insert an element at its bottom without using any other data structure.](https://stackoverflow.com/questions/45130465/inserting-at-the-end-of-stack)
-
-```python
-
+from collections import deque
+ def evalPostfix(exp):
+    if not exp:
+        exit(-1)
+    stack = deque()
+ 
+    for ch in exp:
+ 
+        # if the current is an operand, push it into the stack
+        if ch.isdigit():
+            stack.append(int(ch))
+ 
+        # if the current is an operator
+        else:
+            # remove the top two elements from the stack
+            x = stack.pop()
+            y = stack.pop()
+ 
+            # evaluate the expression 'x op y', and push the result back to the stack
+            if ch == '+':
+                stack.append(y + x)
+            elif ch == '-':
+                stack.append(y - x)
+            elif ch == '*':
+                stack.append(y * x)
+            elif ch == '/':
+                stack.append(y // x)
+ 
+    # At this point, the stack is left with only one element, i.e., expression result
+    return stack.pop()
+  
+exp = '138*+'
+print(evalPostfix(exp))
 ```
 
 ## [Reverse a stack using recursion](https://www.geeksforgeeks.org/reverse-a-stack-using-recursion/)
 
 ```python
 
+from collections import deque
+def insertAtBottom(s, item):
+    # base case: if the stack is empty, insert the given item at the bottom
+    if not s:
+        s.append(item)
+        return
+ 
+    # Pop all items from the stack and hold them in the call stack
+    top = s.pop()
+    insertAtBottom(s, item)
+ 
+    # After the recursion unfolds, push each item in the call stack  at the top of the stack
+    s.append(top)
+ 
+
+def reverseStack(s):
+    if not s:
+        return
+    item = s.pop()
+    reverseStack(s)
+    insertAtBottom(s, item)
+
+s = deque(range(1, 6))
+print('Original stack is', s)
+reverseStack(s)
+print('Reversed stack is', s)
 ```
 
 ## [Sort a Stack using recursion](https://practice.geeksforgeeks.org/problems/sort-a-stack/1)
 
 ```python
-
+from collections import deque
+ 
+def sortedInsert(stack, key):
+ 
+    # base case: if the stack is empty or the key is greater than all elements in the stack
+    if not stack or key > stack[-1]:
+        stack.append(key)
+        return
+ 
+    ''' We reach here when the key is smaller than the top element '''
+    top = stack.pop()
+    sortedInsert(stack, key)
+    stack.append(top)
+ 
+def sortStack(stack):
+    if not stack:
+        return
+    top = stack.pop()
+    sortStack(stack)
+    sortedInsert(stack, top)
+ 
+A = [5, -2, 9, -7, 3] 
+stack = deque(A)
+print('Stack before sorting:', list(stack))
+sortStack(stack)
+print('Stack after sorting:', list(stack))
 ```
 
 ## [Merge Overlapping Intervals](https://practice.geeksforgeeks.org/problems/overlapping-intervals/0)
@@ -17578,375 +18124,2776 @@ findMaxGuests(arrival, departure)
 ## [Largest rectangular Area in Histogram](https://practice.geeksforgeeks.org/problems/maximum-rectangular-area-in-a-histogram/0)
 
 ```python
+"""
+ind the largest rectangular area possible in a given histogram where the largest rectangle can be made of a number of contiguous bars. For simplicity, assume that all bars have same width and the width is 1 unit. 
+For example, consider the following histogram with 7 bars of heights {6, 2, 5, 4, 5, 1, 6}. The largest possible rectangle possible is 12 (see the below figure, the max area rectangle is highlighted in red)
+"""
 
+def getMaxArea(arr):
+  s = [-1]
+  n = len(arr)
+  area = 0
+  left_smaller = [-1]*n
+  right_smaller = [n]*n
+  for i in range(n):
+    while s and (s[-1] != -1) and (arr[s[-1]] > arr[i]):
+        right_smaller[s[-1]] = i
+        s.pop()
+    if((i > 0) and (arr[i] == arr[i-1])):
+        left_smaller[i] = left_smaller[i-1]
+    else:
+        left_smaller[i] = s[-1]
+    s.append(i)
+  for j in range(n):
+    area = max(area, arr[j]*(right_smaller[j]-left_smaller[j]-1))
+  return area
+
+hist = [6, 2, 5, 4, 5, 1, 6]
+print("maxArea = ", getMaxArea(hist))
 ```
 
 ## [Length of the Longest Valid Substring](https://practice.geeksforgeeks.org/problems/valid-substring0624/1)
 
 ```python
 
+from collections import deque
+def findMaxLen(s):
+    if not s:
+        return 0
+ 
+    # create a stack of integers for storing an index of parenthesis in the string
+    stack = deque()
+ 
+    # initialize the stack by -1
+    stack.append(-1)
+ 
+    # stores the length of the longest balanced parenthesis
+    length = 0
+ 
+    # iterate over the characters of the string
+    for i, e in enumerate(s):
+ 
+        # if the current character is an opening parenthesis, push its index in the stack
+        if e == '(':
+            stack.append(i)
+ 
+        # if the current character is a closing parenthesis
+        else:
+            # pop the top index from the stack
+            stack.pop()
+ 
+            # if the stack becomes empty, push the current index into the stack
+            if not stack:
+                stack.append(i)
+                continue
+ 
+            # get the length of the longest balanced parenthesis ending at the current character
+            curr_len = i - stack[-1]
+ 
+            # update the length of the longest balanced parenthesis
+            if length < curr_len:
+                length = curr_len
+    return length
+
+print(findMaxLen('((()()'))         # prints 4
+print(findMaxLen('(((()'))          # prints 2
+print(findMaxLen('(((('))           # prints 0
+print(findMaxLen('()()'))           # prints 4
+print(findMaxLen('(()())(()'))      # prints 6
 ```
 
 ## [Expression contains redundant bracket or not](https://www.geeksforgeeks.org/expression-contains-redundant-bracket-not/)
 
 ```python
 
+from collections import deque 
+def hasDuplicateParenthesis(exp):
+    if not exp or len(exp) <= 3:
+        return False
+    stack = deque()
+ 
+    # traverse the input expression
+    for c in exp:
+        # if the current char in the expression is not a closing parenthesis
+        if c != ')':
+            stack.append(c)
+        # if the current char in the expression is a closing parenthesis
+        else:
+            # if the stack's top element is an opening parenthesis, the subexpression of the form ((exp)) is found
+            if stack[-1] == '(':
+                return True
+ 
+            # pop till '(' is found for current ')'
+            while stack[-1] != '(':
+                stack.pop()
+ 
+            # pop '('
+            stack.pop()
+ 
+    # if we reach here, then the expression does not have any duplicate parenthesis
+    return False
+ 
+
+exp = '((x+y))' # assumes valid expression
+if hasDuplicateParenthesis(exp):
+    print('The expression has duplicate parenthesis.')
+else:
+    print('The expression does not have duplicate parenthesis')
 ```
 
 ## [Implement Stack using Queue](https://practice.geeksforgeeks.org/problems/stack-using-two-queues/1)
 
 ```python
+from collections import deque
+ 
+class Stack:
+    def __init__(self):
+        self.q1 = deque()
+        self.q2 = deque()
+ 
+    # Insert an item into the stack
+    def add(self, data):
+        # Move all elements from the first queue to the second queue
+        while len(self.q1):
+            self.q2.append(self.q1.pop())
+ 
+        # Push the given item into the first queue
+        self.q1.append(data)
+ 
+        # Move all elements back to the first queue from the second queue
+        while len(self.q2):
+            self.q1.append(self.q2.pop())
 
+    def pop(self):
+        # if the first queue is empty
+        if not self.q1:
+            print('Underflow!!')
+            exit(0)
+        front = self.q1.popleft()
+        return front
+ 
+ 
+keys = [1, 2, 3, 4, 5]
+s = Stack()
+for key in keys:
+    s.add(key)
+while s:
+    print(s.pop())
+print(s.pop())
 ```
 
 ## [Implement Stack using Deque](https://www.geeksforgeeks.org/implement-stack-queue-using-deque/)
 
 ```python
 
+from collections import deque
+
+class Stack:
+    def __init__(self):
+        self.q1 = deque()
+        self.q2 = deque()
+ 
+    # Insert an item into the stack
+    def add(self, data):
+        self.q1.append(data)
+ 
+    # Remove the top item from the stack
+    def poll(self):
+        # if the first queue is empty
+        if not self.q1:
+            print('Stack Underflow!!')
+            exit(0)
+ 
+        # Move all elements except last from the first queue to the second queue
+        front = None
+        while self.q1:
+            if len(self.q1) == 1:
+                front = self.q1.popleft()
+            else:
+                self.q2.append(self.q1.popleft())
+ 
+        # Return the last element after moving all elements back to the first queue.
+        while self.q2:
+            self.q1.append(self.q2.popleft())
+        return front
+ 
+  
+keys = [1, 2, 3, 4, 5]
+s = Stack()
+for key in keys:
+    s.add(key)
+while s:
+    print(s.poll())
 ```
 
 ## [Stack Permutations (Check if an array is stack permutation of other)](https://www.geeksforgeeks.org/stack-permutations-check-if-an-array-is-stack-permutation-of-other/)
 
 ```python
+"""
+Given two arrays, both of unique elements. One represents the input queue and the other represents the output queue. Our task is to check if the given output is possible through stack permutation.
 
+Examples: 
+
+Input : First array: 1, 2, 3  
+        Second array: 2, 1, 3
+Output : Yes
+Procedure:
+push 1 from input to stack
+push 2 from input to stack
+pop 2 from stack to output
+pop 1 from stack to output
+push 3 from input to stack
+pop 3 from stack to output
+
+
+Input : First array: 1, 2, 3  
+        Second array: 3, 1, 2
+Output : Not Possible  
+"""
+
+def checkStackPermutation(ip, op, n):
+	# we will be appending elements from input array to stack uptill top of our stack matches with first element of output array
+	s = []
+	# will maintain a variable j to iterate on output array
+	j = 0
+
+	# will iterate one by one in input array
+	for i in range(n):
+
+		# appended an element from input array to stack
+		s.append(ip[i])
+		# if our stack isn't empty and top matches with output array then we will keep popping out from stack uptill top matches with output array
+		while s and s[-1] == op[j]:
+			s.pop()
+
+			# increasing j so next time we can compare next element in output array
+			j += 1
+
+	# if output array was a correct permutation of arr array then by now our stack should be empty
+	if not s:
+		return True
+
+	return False
+	
+
+arr = [4,5,6,7,8] # Input Array
+output = [8,7,6,5,4] # Output Array
+n = 5
+if (checkStackPermutation(arr, output, n)):
+	print("Yes")
+else:
+	print("Not Possible")
 ```
 
 ## [Implement Queue using Stack](https://practice.geeksforgeeks.org/problems/queue-using-two-stacks/1)
 
 ```python
-
+from collections import deque
+ 
+class Queue:
+    def __init__(self):
+        self.s1 = deque()
+        self.s2 = deque()
+ 
+    def enqueue(self, data):
+        self.s1.append(data)
+    
+    def dequeue(self):
+        # if both stacks are empty
+        if not self.s1 and not self.s2:
+            print('Underflow!!')
+            exit(0)
+ 
+        # if the second stack is empty, move elements from the first stack to it
+        if not self.s2:
+            while self.s1:
+                self.s2.append(self.s1.pop())
+ 
+        # return the top item from the second stack
+        return self.s2.pop()
+ 
+ 
+keys = [1, 2, 3, 4, 5]
+q = Queue()
+for key in keys:
+    q.enqueue(key)
+print(q.dequeue())        # 1
+print(q.dequeue())        # 2
 ```
 
 ## [Implement "n" queue in an array](https://www.geeksforgeeks.org/efficiently-implement-k-queues-single-array/)
 
 ```python
+class KQueues:
+	def __init__(self, number_of_queues, array_length):
+		self.number_of_queues = number_of_queues
+		self.array_length = array_length
+		self.array = [-1] * array_length
+		self.front = [-1] * number_of_queues
+		self.rear = [-1] * number_of_queues
+		self.next_array = list(range(1, array_length))
+		self.next_array.append(-1)
+		self.free = 0
 
+	# To check whether the current queue_number is empty or not
+	def is_empty(self, queue_number):
+		return self.front[queue_number] == -1
+
+	# To check whether the current queue_number is full or not
+	def is_full(self, queue_number):
+		return self.free == -1
+
+	# To enqueue the given item in the given queue_number where queue_number is from 0 to number_of_queues-1
+	def enqueue(self, item, queue_number):
+		if self.is_full(queue_number):
+			print("Queue FULL")
+			return
+		next_free = self.next_array[self.free]
+		if self.is_empty(queue_number):
+			self.front[queue_number] = self.rear[queue_number] = self.free
+		else:
+			self.next_array[self.rear[queue_number]] = self.free
+			self.rear[queue_number] = self.free
+		self.next_array[self.free] = -1
+		self.array[self.free] = item
+		self.free = next_free
+
+	# To dequeue an item from the given queue_number where queue_number is from 0 to number_of_queues-1
+	def dequeue(self, queue_number):
+		if self.is_empty(queue_number):
+			print("Queue EMPTY")
+			return
+
+		front_index = self.front[queue_number]
+		self.front[queue_number] = self.next_array[front_index]
+		self.next_array[front_index] = self.free
+		self.free = front_index
+		return self.array[front_index]
+		
+# Let us create 3 queue in an array of size 10
+ks = KQueues(3, 10)
+	
+# Let us put some items in queue number 2
+ks.enqueue(15, 2)
+ks.enqueue(45, 2)
+# Let us put some items in queue number 1
+ks.enqueue(17, 1);
+ks.enqueue(49, 1);
+ks.enqueue(39, 1);
+	
+# Let us put some items in queue number 0
+ks.enqueue(11, 0);
+ks.enqueue(9, 0);
+ks.enqueue(7, 0);
+	
+print(f"Dequeued element from queue 2 is {ks.dequeue(2)}")
+print(f"Dequeued element from queue 1 is {ks.dequeue(1)}")
+print(f"Dequeued element from queue 0 is {ks.dequeue(0)}")
 ```
 
 ## [Implement a Circular queue](https://www.geeksforgeeks.org/circular-queue-set-1-introduction-array-implementation/)
 
 ```python
+class CircularQueue():
+	def __init__(self, size): 
+		self.size = size
+		self.queue = [None for _ in range(size)]
+		self.front = self.rear = -1
 
+	def enqueue(self, data):
+		
+		# condition if queue is full
+		if ((self.rear + 1) % self.size == self.front):
+			print(" Queue is Full\n")
+			
+		# condition for empty queue
+		elif (self.front == -1):
+			self.front = 0
+			self.rear = 0
+			self.queue[self.rear] = data
+		else:
+			
+			# next position of rear
+			self.rear = (self.rear + 1) % self.size
+			self.queue[self.rear] = data
+			
+	def dequeue(self):
+		if (self.front == -1): # condition for empty queue
+			print ("Queue is Empty\n")
+			
+		# condition for only one element
+		elif (self.front == self.rear):
+			temp=self.queue[self.front]
+			self.front = -1
+			self.rear = -1
+			return temp
+		else:
+			temp = self.queue[self.front]
+			self.front = (self.front + 1) % self.size
+			return temp
+
+	def display(self):
+		# condition for empty queue
+		if (self.front == -1):
+			print ("Queue is Empty")
+
+		elif (self.rear >= self.front):
+			print("Elements in the circular queue are:",
+											end = " ")
+			for i in range(self.front, self.rear + 1):
+				print(self.queue[i], end = " ")
+			print ()
+
+		else:
+			print ("Elements in Circular Queue are:",
+										end = " ")
+			for i in range(self.front, self.size):
+				print(self.queue[i], end = " ")
+			for i in range(self.rear + 1):
+				print(self.queue[i], end = " ")
+			print ()
+
+		if ((self.rear + 1) % self.size == self.front):
+			print("Queue is Full")
+
+ob = CircularQueue(5)
+ob.enqueue(14)
+ob.enqueue(22)
+ob.enqueue(13)
+ob.enqueue(-6)
+ob.display()
+print ("Deleted value = ", ob.dequeue())
+print ("Deleted value = ", ob.dequeue())
+ob.display()
+ob.enqueue(9)
+ob.enqueue(20)
+ob.enqueue(5)
+ob.display()
 ```
 
 ## [LRU Cache Implementationa](https://practice.geeksforgeeks.org/problems/lru-cache/1)
 
 ```python
+class DLLNode:
+    def __init__(self, key, val):
+        self.val = val
+        self.key = key
+        self.prev = None
+        self.next = None
+
+class LRUCache:
+    def __init__(self, capacity):
+        # capacity:  capacity of cache
+        # Initialize all variable
+        self.capacity = capacity
+        self.map = {}
+        self.head = DLLNode(0, 0)
+        self.tail = DLLNode(0, 0)
+        self.head.next = self.tail
+        self.tail.prev = self.head
+        self.count = 0
+
+    def deleteNode(self, node):
+        node.prev.next = node.next
+        node.next.prev = node.prev
+
+    def addToHead(self, node):
+        node.next = self.head.next
+        node.next.prev = node
+        node.prev = self.head
+        self.head.next = node
+
+    # This method works in O(1)
+    def get(self, key):
+        if key in self.map:
+            node = self.map[key]
+            result = node.val
+            self.deleteNode(node)
+            self.addToHead(node)
+            print(f'Got the value : {result} for the key: {key}')
+            return result
+        print(f'Did not get any value for the key: {key}')
+        return -1
+
+    # This method works in O(1)
+    def set(self, key, value):
+        print(f'going to set the (key, value) : ( {key}, {value})')
+        if key in self.map:
+            node = self.map[key]
+            node.val = value
+            self.deleteNode(node)
+        else:
+            node = DLLNode(key, value)
+            self.map[key] = node
+            if self.count < self.capacity:
+                self.count += 1
+            else:
+                del self.map[self.tail.prev.key]
+                self.deleteNode(self.tail.prev)
+
+        self.addToHead(node)
+
+
+print('Going to test the LRU Cache Implementation')
+cache = LRUCache(2)
+# it will store a key (1) with value 10 in the cache.
+cache.set(1, 10)
+# it will store a key (1) with value 10 in the cache.
+cache.set(2, 20)
+print(f'Value for the key: 1 is {cache.get(1)}')
+# evicts key 2 and store a key (3) with value 30 in the cache.
+cache.set(3, 30)
+print(f'Value for the key: 2 is {cache.get(2)}')
+# evicts key 1 and store a key (4) with value 40 in the cache.
+cache.set(4, 40)
+print(f'Value for the key: 1 is {cache.get(1)}')
+print(f'Value for the key: 3 is {cache.get(3)}')
+print(f'Value for the key: 4 is {cache.get(4)}')
 
 ```
 
 ## [Reverse a Queue using recursion](https://practice.geeksforgeeks.org/problems/queue-reversal/1)
 
 ```python
+from queue import Queue
+def Print(queue):
+	while (not queue.empty()):
+		print(queue.queue[0], end=", ")
+		queue.get()
 
+def reversequeue(queue):
+	Stack = []
+	while (not queue.empty()):
+		Stack.append(queue.queue[0])
+		queue.get()
+	while Stack:
+		queue.put(Stack[-1])
+		Stack.pop()
+
+
+queue = Queue()
+queue.put(10)
+queue.put(20)
+queue.put(30)
+queue.put(40)
+queue.put(50)
+queue.put(60)
+queue.put(70)
+queue.put(80)
+queue.put(90)
+queue.put(100)
+reversequeue(queue)
+Print(queue)
 ```
 
 ## [Reverse the first “K” elements of a queue](https://practice.geeksforgeeks.org/problems/reverse-first-k-elements-of-queue/1)
 
 ```python
+from queue import Queue
 
+def reverseQueueFirstKElements(k, Queue):
+	if (Queue.empty() == True or
+			k > Queue.qsize()):
+		return
+	if (k <= 0):
+		return
+
+	Stack = []
+
+	# put the first K elements into a Stack
+	for _ in range(k):
+		Stack.append(Queue.queue[0])
+		Queue.get()
+
+	# Enqueue the contents of stack at the back of the queue
+	while Stack:
+		Queue.put(Stack[-1])
+		Stack.pop()
+
+	# Remove the remaining elements and enqueue them at the end of the Queue
+	for _ in range(Queue.qsize() - k):
+		Queue.put(Queue.queue[0])
+		Queue.get()
+
+
+def Print(Queue):
+	while (not Queue.empty()):
+		print(Queue.queue[0], end =" ")
+		Queue.get()
+
+
+Queue = Queue()
+Queue.put(10)
+Queue.put(20)
+Queue.put(30)
+Queue.put(40)
+Queue.put(50)
+Queue.put(60)
+Queue.put(70)
+Queue.put(80)
+Queue.put(90)
+Queue.put(100)
+k = 5
+reverseQueueFirstKElements(k, Queue)
+Print(Queue)
 ```
 
 ## [Interleave the first half of the queue with second half](https://www.geeksforgeeks.org/interleave-first-half-queue-second-half/)
 
 ```python
+from queue import Queue
 
+def interLeaveQueue(q):
+	if (q.qsize() % 2 != 0):
+		print("Input even number of integers.")
+
+	# Initialize an empty stack of int type
+	s = []
+	halfSize = int(q.qsize() / 2)
+
+	# put first half elements into the stack queue:16 17 18 19 20, stack: 15(T) 14 13 12 11
+	for _ in range(halfSize):
+		s.append(q.queue[0])
+		q.get()
+
+	# enqueue back the stack elements queue: 16 17 18 19 20 15 14 13 12 11
+	while s:
+		q.put(s[-1])
+		s.pop()
+
+	# dequeue the first half elements of queue and enqueue them back queue: 15 14 13 12 11 16 17 18 19 20
+	for _ in range(halfSize):
+		q.put(q.queue[0])
+		q.get()
+
+	# Again put the first half elements into the stack queue: 16 17 18 19 20, stack: 11(T) 12 13 14 15
+	for _ in range(halfSize):
+		s.append(q.queue[0])
+		q.get()
+
+	# interleave the elements of queue and stack queue: 11 16 12 17 13 18 14 19 15 20
+	while s:
+		q.put(s[-1])
+		s.pop()
+		q.put(q.queue[0])
+		q.get()
+
+
+
+q = Queue()
+q.put(11)
+q.put(12)
+q.put(13)
+q.put(14)
+q.put(15)
+q.put(16)
+q.put(17)
+q.put(18)
+q.put(19)
+q.put(20)
+interLeaveQueue(q)
+length = q.qsize()
+for _ in range(length):
+	print(q.queue[0], end=" ")
+	q.get()
 ```
 
 ## [Find the first circular tour that visits all Petrol Pumps](https://practice.geeksforgeeks.org/problems/circular-tour/1)
 
 ```python
+"""
+Suppose there is a circle. There are N petrol pumps on that circle. You will be given two sets of data.
+1. The amount of petrol that every petrol pump has.
+2. Distance from that petrol pump to the next petrol pump.
+Find a starting point where the truck can start to get through the complete circle without exhausting its petrol in between.
+Note :  Assume for 1 litre petrol, the truck can go 1 unit of distance.
+
+Example 1:
+
+Input:
+N = 4
+Petrol = 4 6 7 4
+Distance = 6 5 3 5
+Output: 1
+Explanation: There are 4 petrol pumps with
+amount of petrol and distance to next
+petrol pump value pairs as {4, 6}, {6, 5},
+{7, 3} and {4, 5}. The first point from
+where truck can make a circular tour is
+2nd petrol pump. Output in this case is 1
+(index of 2nd petrol pump).
+"""
+
+# A petrol pump has petrol and distance to next petrol pump
+class petrolPump:
+    def __init__(self,a, b):
+        self.petrol = a
+        self.distance = b
+    
+# The function returns starting point if there is a possible solution, otherwise returns -1
+def printTour( p, n):
+    # deficit is used to store the value of the capacity as soon as the value of capacity becomes negative so as not to traverse the array twice in order to get the solution
+    start = 0
+    deficit = 0
+    capacity = 0
+    for i in range(n):
+        capacity += p[i].petrol - p[i].distance
+        if (capacity < 0):
+            # If this particular step is not done then the between steps would be redundant
+            start = i + 1
+            deficit += capacity
+            capacity = 0
+    return start if (capacity + deficit >= 0) else -1
+
+
+arr = [petrolPump(6, 4),petrolPump(3, 6),petrolPump(7, 3)] 
+n = len(arr)
+start = printTour(arr, n)
+if (start == -1):
+    print("No solution")
+else:
+    print("Start = " , start)
 
 ```
 
 ## [Minimum time required to rot all oranges](https://practice.geeksforgeeks.org/problems/rotten-oranges/0)
 
 ```python
+"""
+Given a matrix of dimension m*n where each cell in the matrix can have values 0, 1 or 2 which has the following meaning:  
 
+0: Empty cell
+1: Cells have fresh oranges
+2: Cells have rotten oranges
+Determine what is the minimum time required so that all the oranges become rotten. A rotten orange at index [i,j] can rot other fresh orange at indexes [i-1,j], [i+1,j], [i,j-1], [i,j+1] (up, down, left and right). If it is impossible to rot every orange then simply return -1.
+
+Examples: 
+
+Input:  arr[][C] = { {2, 1, 0, 2, 1},
+                     {1, 0, 1, 2, 1},
+                     {1, 0, 0, 2, 1}};
+Output:
+All oranges can become rotten in 2-time frames.
+Explanation: 
+At 0th time frame:
+ {2, 1, 0, 2, 1}
+ {1, 0, 1, 2, 1}
+ {1, 0, 0, 2, 1}
+
+At 1st time frame:
+ {2, 2, 0, 2, 2}
+ {2, 0, 2, 2, 2}
+ {1, 0, 0, 2, 2}
+
+At 2nd time frame:
+ {2, 2, 0, 2, 2}
+ {2, 0, 2, 2, 2}
+ {2, 0, 0, 2, 2}
+"""
+
+
+from collections import deque
+
+# function to check whether a cell is valid / invalid
+def isvalid(i, j):
+	return (i >= 0 and j >= 0 and i < 3 and j < 5)
+
+# Function to check whether the cell is delimiter which is (-1, -1)
+def isdelim(temp):
+	return (temp[0] == -1 and temp[1] == -1)
+
+# Function to check whether there is still a fresh orange remaining
+def checkall(arr):
+	for i in range(3):
+		for j in range(5):
+			if (arr[i][j] == 1):
+				return True
+	return False
+
+# This function finds if it is possible to rot all oranges or not. If possible, then it returns minimum time required to rot all, otherwise returns -1
+def rotOranges(arr):
+
+	# Create a queue of cells
+	Q = deque()
+	temp = [0, 0]
+	ans = 1
+
+	# Store all the cells having rotten orange in first time frame
+	for i in range(3):
+		for j in range(5):
+			if (arr[i][j] == 2):
+				temp[0]= i
+				temp[1] = j
+				Q.append([i, j])
+
+	# Separate these rotten oranges from the oranges which will rotten due the oranges in first time frame using delimiter which is (-1, -1)
+	temp[0] = -1
+	temp[1] = -1
+	Q.append([-1, -1])
+	# print(Q)
+
+	# Process the grid while there are rotten oranges in the Queue
+	while False:
+	
+		# This flag is used to determine whether even a single fresh orange gets rotten due to rotten oranges in current time frame so we can increase the count of the required time.
+		flag = False
+		print(len(Q))
+
+		# Process all the rotten oranges in current time frame.
+		while not isdelim(Q[0]):
+			temp = Q[0]
+			print(len(Q))
+
+			# Check right adjacent cell that if it can be rotten
+			if (isvalid(temp[0] + 1, temp[1]) and arr[temp[0] + 1][temp[1]] == 1):
+				
+				# if this is the first orange to get rotten, increase count and set the flag.
+				if (not flag):
+					ans, flag =ans + 1, True
+
+				# Make the orange rotten
+				arr[temp[0] + 1][temp[1]] = 2
+
+				# append the adjacent orange to Queue
+				temp[0] += 1
+				Q.append(temp)
+
+				temp[0] -= 1 # Move back to current cell
+
+			# Check left adjacent cell that if it can be rotten
+			if (isvalid(temp[0] - 1, temp[1]) and arr[temp[0] - 1][temp[1]] == 1):
+				if (not flag):
+					ans, flag =ans + 1, True
+				arr[temp[0] - 1][temp[1]] = 2
+				temp[0] -= 1
+				Q.append(temp) # append this cell to Queue
+				temp[0] += 1
+
+			# Check top adjacent cell that if it can be rotten
+			if (isvalid(temp[0], temp[1] + 1) and arr[temp[0]][temp[1] + 1] == 1):
+				if (not flag):
+					ans, flag = ans + 1, True
+				arr[temp[0]][temp[1] + 1] = 2
+				temp[1] += 1
+				Q.append(temp) # Push this cell to Queue
+				temp[1] -= 1
+
+			# Check bottom adjacent cell if it can be rotten
+			if (isvalid(temp[0], temp[1] - 1) and arr[temp[0]][temp[1] - 1] == 1):
+				if (not flag):
+					ans, flag = ans + 1, True
+				arr[temp[0]][temp[1] - 1] = 2
+				temp[1] -= 1
+				Q.append(temp) # append this cell to Queue
+			Q.popleft()
+
+		# Pop the delimiter
+		Q.popleft()
+
+		# If oranges were rotten in current frame than separate the rotten oranges using delimiter for the next frame for processing.
+		if (len(Q) == 0):
+			temp[0] = -1
+			temp[1] = -1
+			Q.append(temp)
+
+		# If Queue was empty than no rotten oranges left to process so exit
+
+	# Return -1 if all arranges could not rot, otherwise return ans.
+	return ans + 1 if(checkall(arr)) else -1
+
+arr = [[2, 1, 0, 2, 1],
+	[1, 0, 1, 2, 1],
+	[1, 0, 0, 2, 1]]
+ans = rotOranges(arr)
+if (ans == -1):
+	print("All oranges cannot rotn")
+else:
+	print("Time required for all oranges to rot => " , ans)
 ```
 
 ## [Distance of nearest cell having 1 in a binary matrix](https://practice.geeksforgeeks.org/problems/distance-of-nearest-cell-having-1/0)
 
 ```python
+"""
+Given a binary matrix of N x M, containing at least a value 1. The task is to find the distance of nearest 1 in the matrix for each cell. The distance is calculated as |i1 – i2| + |j1 – j2|, where i1, j1 are the row number and column number of the current cell and i2, j2 are the row number and column number of the nearest cell having value 1.
 
+Examples: 
+
+Input : N = 3, M = 4
+        mat[][] = { 0, 0, 0, 1,
+                    0, 0, 1, 1,
+                    0, 1, 1, 0 }
+Output : 3 2 1 0
+         2 1 0 0
+         1 0 0 1
+Explanation:
+For cell at (0, 0), nearest 1 is at (0, 3),
+so distance = (0 - 0) + (3 - 0) = 3.
+Similarly, all the distance can be calculated.
+
+"""
+import sys
+class matrix_element:
+	def __init__(self, row, col):
+		self.row = row
+		self.col = col
+		
+def printDistance(arr):
+	Row_Count = len(arr)
+	Col_Count = len(arr[0])	
+	q = []
+
+	# Adding all ones in queue
+	for i in range(Row_Count):
+		for j in range(Col_Count):
+			if (arr[i][j] == 1):
+				q.append(matrix_element(i, j))
+			
+	# In order to find min distance we will again traverse all elements in Matrix. If its zero then it will check against all 1's in Queue. Whatever will be dequeued from queued, will be enqueued back again.
+	Queue_Size = len(q)
+	for i in range(Row_Count):
+		for j in range(Col_Count):
+			distance = 0
+			min_distance = sys.maxsize
+			
+			if (arr[i][j] == 0):
+				for k in range(Queue_Size):
+					One_Pos = q[0]
+					q = q[1:]
+					One_Row = One_Pos.row
+					One_Col = One_Pos.col
+					distance = abs(One_Row - i) + abs(One_Col - j)
+					min_distance = min(min_distance, distance)
+					if (min_distance == 1):
+						arr[i][j] = 1
+						q.append(matrix_element(One_Row, One_Col))
+						break
+					q.append(matrix_element(One_Row,One_Col))
+					arr[i][j] = min_distance
+			else:
+				arr[i][j] = 0
+								
+
+	for i in range(Row_Count):
+		for j in range(Col_Count):
+			print(arr[i][j] ,end = " ")
+		print()
+		
+
+arr = [ [ 0, 0, 0, 1 ], [ 0, 0, 1, 1 ], [ 0, 1, 1, 0 ] ]
+printDistance(arr)
 ```
 
 ## [First negative integer in every window of size “k”](https://practice.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k/0)
 
 ```python
+"""
+Given an array and a positive integer k, find the first negative integer for each window(contiguous subarray) of size k. If a window does not contain a negative integer, then print 0 for that window.
+
+Examples:  
+
+Input : arr[] = {-8, 2, 3, -6, 10}, k = 2
+Output : -8 0 -6 -6
+
+First negative integer for each window of size k
+{-8, 2} = -8
+{2, 3} = 0 (does not contain a negative integer)
+{3, -6} = -6
+{-6, 10} = -6
+
+Input : arr[] = {12, -1, -7, 8, -15, 30, 16, 28} , k = 3
+Output : -1 -1 -7 -15 -15 0
+
+"""
+
+def printFirstNegativeInteger(arr, k):
+	firstNegativeIndex = 0
+	for i in range(k - 1, len(arr)):
+		# skip out of window and positive elements
+		while firstNegativeIndex < i and (firstNegativeIndex <= i - k or arr[firstNegativeIndex] >= 0):
+			firstNegativeIndex += 1
+		# check if a negative element is found, otherwise use 0
+		firstNegativeElement = min(arr[firstNegativeIndex], 0)
+		print(firstNegativeElement, end=' ')
+
+arr = [12, -1, -7, 8, -15, 30, 16, 28]
+k = 3
+printFirstNegativeInteger(arr, k)
 
 ```
 
 ## [Check if all levels of two trees are anagrams or not.](https://www.geeksforgeeks.org/check-if-all-levels-of-two-trees-are-anagrams-or-not/)
 
 ```python
+class newNode:
+	def __init__(self, data):
+		self.data = data
+		self.left = self.right = None
+		
+# Returns true if trees with root1 and root2 are level by level anagram, else returns false.
+def areAnagrams(root1, root2):
 
+	if root1 is None and root2 is None:
+		return True
+	if root1 is None or root2 is None:
+		return False
+
+	q1 = [root1]
+	q2 = [root2]
+	while (1) :
+
+		# n1 (queue size) indicates number of Nodes at current level in first tree and n2 indicates number of nodes in current level of second tree.
+		n1 = len(q1)
+		n2 = len(q2)
+
+		# If n1 and n2 are different
+		if (n1 != n2):
+			return False
+
+		# If level order traversal is over
+		if (n1 == 0):
+			break
+
+		# Dequeue all Nodes of current level and Enqueue all Nodes of next level
+		curr_level1 = []
+		curr_level2 = []
+		while (n1 > 0):
+			node1 = q1[0]
+			q1.pop(0)
+			if (node1.left != None) :
+				q1.append(node1.left)
+			if (node1.right != None) :
+				q1.append(node1.right)
+			n1 -= 1
+
+			node2 = q2[0]
+			q2.pop(0)
+			if (node2.left != None) :
+				q2.append(node2.left)
+			if (node2.right != None) :
+				q2.append(node2.right)
+
+			curr_level1.append(node1.data)
+			curr_level2.append(node2.data)
+
+		# Check if nodes of current levels are anagrams or not.
+		curr_level1.sort()
+		curr_level2.sort()
+		if (curr_level1 != curr_level2) :
+			return False
+	return True
+
+
+root1 = newNode(1)
+root1.left = newNode(3)
+root1.right = newNode(2)
+root1.right.left = newNode(5)
+root1.right.right = newNode(4)
+root2 = newNode(1)
+root2.left = newNode(2)
+root2.right = newNode(3)
+root2.left.left = newNode(4)
+root2.left.right = newNode(5)
+if areAnagrams(root1, root2):
+	print("Yes")
+else:
+	print("No")
 ```
 
 ## [Sum of minimum and maximum elements of all subarrays of size “k”.](https://www.geeksforgeeks.org/sum-minimum-maximum-elements-subarrays-size-k/)
 
 ```python
+"""Given an array of both positive and negative integers, the task is to compute sum of minimum and maximum elements of all sub-array of size k.
 
+Examples: 
+
+Input : arr[] = {2, 5, -1, 7, -3, -1, -2}  
+        K = 4
+Output : 18
+Explanation : Subarrays of size 4 are : 
+     {2, 5, -1, 7},   min + max = -1 + 7 = 6
+     {5, -1, 7, -3},  min + max = -3 + 7 = 4      
+     {-1, 7, -3, -1}, min + max = -3 + 7 = 4
+     {7, -3, -1, -2}, min + max = -3 + 7 = 4   
+     Sum of all min & max = 6 + 4 + 4 + 4 
+                          = 18             """
+
+
+from collections import deque
+
+# Returns Sum of min and max element of all subarrays of size k
+def SumOfKsubArray(arr, n , k):
+
+	Sum = 0 # Initialize result
+
+	# The queue will store indexes of useful elements in every window In deque 'G' we maintain decreasing order of values from front to rear In deque 'S' we maintain increasing order of values from front to rear
+	S = deque()
+	G = deque()
+
+	for i in range(k):
+		# Remove all previous greater elements that are useless.
+		while ( len(S) > 0 and arr[S[-1]] >= arr[i]):
+			S.pop() # Remove from rear
+
+		# Remove all previous smaller that are elements are useless.
+		while ( len(G) > 0 and arr[G[-1]] <= arr[i]):
+			G.pop() # Remove from rear
+
+		# Add current element at rear of both deque
+		G.append(i)
+		S.append(i)
+
+	# Process rest of the Array elements
+	for i in range(k, n):
+		
+		# Element at the front of the deque 'G' & 'S' is the largest and smallest element of previous window respectively
+		Sum += arr[S[0]] + arr[G[0]]
+
+		# Remove all elements which are out of this window
+		while ( len(S) > 0 and S[0] <= i - k):
+			S.popleft()
+		while ( len(G) > 0 and G[0] <= i - k):
+			G.popleft()
+
+		# remove all previous greater element that are useless
+		while ( len(S) > 0 and arr[S[-1]] >= arr[i]):
+			S.pop() # Remove from rear
+
+		# remove all previous smaller that are elements are useless
+		while ( len(G) > 0 and arr[G[-1]] <= arr[i]):
+			G.pop() # Remove from rear
+
+		# Add current element at rear of both deque
+		G.append(i)
+		S.append(i)
+
+	# Sum of minimum and maximum element of last window
+	Sum += arr[S[0]] + arr[G[0]]
+	return Sum
+
+
+arr=[2, 5, -1, 7, -3, -1, -2]
+n = len(arr)
+k = 3
+print(SumOfKsubArray(arr, n, k))
 ```
 
 ## [Minimum sum of squares of character counts in a given string after removing “k” characters.](https://practice.geeksforgeeks.org/problems/game-with-string/0)
 
 ```python
+"""
+Given a string of lowercase alphabets and a number k, the task is to print the minimum value of the string after removal of ‘k’ characters. The value of a string is defined as the sum of squares of the count of each distinct character. 
+For example consider the string “saideep”, here frequencies of characters are s-1, a-1, i-1, e-2, d-1, p-1 and value of the string is 1^2 + 1^2 + 1^2 + 1^2 + 1^2 + 2^2 = 9.
+Expected Time Complexity: O(k*logn)
 
-```
+Examples: 
 
-## [Queue based approach or first non-repeating character in a stream.](https://practice.geeksforgeeks.org/problems/first-non-repeating-character-in-a-stream/0)
+Input :  str = abccc, K = 1
+Output :  6
+We remove c to get the value as 12 + 12 + 22
 
-```python
+Input :  str = aaab, K = 2
+Output :  2
+"""
+
+from queue import PriorityQueue
+MAX_CHAR = 26
+
+def minStringValue(str, k):
+	l = len(str) # find length of string
+
+	# if K is greater than length of string so reduced string will become 0
+	if(k >= l):
+		return 0
+	
+	# Else find Frequency of each character and store in an array
+	frequency = [0] * MAX_CHAR
+	for i in range(0, l):
+		frequency[ord(str[i]) - 97] += 1
+
+	# Push each char frequency negative into a priority_queue as the queue by default is minheap
+	q = PriorityQueue()
+	for i in range(0, MAX_CHAR):
+		q.put(-frequency[i])
+
+	# Removal of K characters
+	while(k > 0):
+		
+		# Get top element in priority_queue multiply it by -1 as temp is negative remove it. Increment by 1 and again push into priority_queue
+		temp = q.get()
+		temp = temp + 1
+		q.put(temp, temp)
+		k = k - 1
+
+	# After removal of K characters find sum of squares of string Value	
+	result = 0; # initialize result
+	while not q.empty():
+		temp = q.get()
+		temp = temp * (-1)
+		result += temp * temp
+	return result
+
+
+str1 = "abbccc"
+k = 2
+print(minStringValue(str1, k))
+str2 = "aaab"
+k = 2
+print(minStringValue(str2, k))
 
 ```
 
 ## [Next Smaller Element](https://www.geeksforgeeks.org/next-smaller-element/)
 
 ```python
+"""
+Given an array, print the Next Smaller Element (NSE) for every element. The NSE for an element x is the first smaller element on the right side of x in array. Elements for which no smaller element exist (on right side), consider NSE as -1. 
+Examples: 
+a) For any array, rightmost element always has NSE as -1. 
+b) For an array which is sorted in increasing order, all elements have NSE as -1. 
+c) For the input array [4, 8, 5, 2, 25}, the NSE for each element are as follows.
 
+Element         NSE
+   4      -->    2
+   8      -->    5
+   5      -->    2
+   2      -->   -1
+   25     -->   -1
+"""
+
+def printNSE(arr, n):
+	mp = {}
+	s = []
+	for i in range(n):
+		if not s:
+			s.append(arr[i])
+			continue
+
+		# if stack is not empty, then pop an element from stack. If the popped element is greater than next, then a) print the pair b) keep popping while elements are greater and stack is not empty 
+		while s and s[-1] > arr[i]:
+			mp[s[-1]] = arr[i]
+			s.pop()
+
+		# push next to stack so that we can find next smaller for it
+		s.append(arr[i])
+
+	# After iterating over the loop, the remaining elements in stack do not have the next smaller element, so print -1 for them
+	while s:
+		mp[s[-1]] = -1
+		s.pop()
+
+	for i in range(n):
+		print(arr[i], "--->", mp[arr[i]])
+
+
+arr = [11, 13, 21, 3]
+n = len(arr)
+printNSE(arr, n)
 ```
 
 # String
 
-## [Reverse a String](https://leetcode.com/problems/reverse-string/)
-
-```python
-
-```
-
 ## [Check whether a String is Palindrome or not](https://practice.geeksforgeeks.org/problems/palindrome-string0817/1)
 
 ```python
-
+def isPalindrome(s):
+    return s == s[::-1]
+ 
+s = "malayalam"
+ans = isPalindrome(s)
+ 
+if ans:
+    print("Yes")
+else:
+    print("No")
 ```
 
 ## [Find Duplicate characters in a string](https://www.geeksforgeeks.org/print-all-the-duplicates-in-the-input-string/)
 
 ```python
+def printDups(Str):
+ 
+    count = {}
+    for i in range(len(Str)):
+        if(Str[i] in count):
+            count[Str[i]] += 1
+        else:
+            count[Str[i]] = 1
+        #increase the count of characters by 1
+  
+    for it,it2 in count.items():  #iterating through the unordered map
+        if (it2 > 1):   #if the count of characters is greater then 1 then duplicate found
+            print(str(it) + ", count = "+str(it2))
 
-```
-
-## [Why strings are immutable in Java?](https://www.baeldung.com/java-string-immutable)
-
-```python
-
+Str = "test string"
+printDups(Str)
 ```
 
 ## [Write a Code to check whether one string is a rotation of another](https://www.geeksforgeeks.org/a-program-to-check-if-strings-are-rotations-of-each-other/)
 
 ```python
+def check_rotation(s, goal):
+
+	if (len(s) != len(goal)):
+		skip
+
+	q1 = []
+	for i in range(len(s)):
+		q1.insert(0, s[i])
+
+	q2 = []
+	for i in range(len(goal)):
+		q2.insert(0, goal[i])
+
+	k = len(goal)
+	while (k > 0):
+		ch = q2[0]
+		q2.pop(0)
+		q2.append(ch)
+		if (q2 == q1):
+			return True
+		k -= 1
+	return False
+
+
+s1 = "ABCD"
+s2 = "CDAB"
+if (check_rotation(s1, s2)):
+	print(s2, " is a rotated form of ", s1)
+else:
+	print(s2, " is not a rotated form of ", s1)
+s3 = "ACBD"
+if (check_rotation(s1, s3)):
+	print(s3, " is a rotated form of ", s1)
+else:
+	print(s3, " is not a rotated form of ", s1)
 
 ```
 
 ## [Write a Program to check whether a string is a valid shuffle of two strings or not](https://www.programiz.com/java-programming/examples/check-valid-shuffle-of-strings)
 
 ```python
+MAX = 256
 
+# This function returns true if contents of arr1[] and arr2[] are same otherwise false.
+def compare(arr1, arr2):
+	
+	global MAX
+
+	for i in range(MAX):
+		if (arr1[i] != arr2[i]):
+			return False
+			
+	return True
+
+# This function search for all permutations of pat[] in txt[]
+def search(pat, txt):
+	
+	M = len(pat)
+	N = len(txt)
+
+	# countP[]: Store count of all characters of pattern
+	# countTW[]: Store count of current window of text
+	countP = [0 for _ in range(MAX)]
+	countTW = [0 for _ in range(MAX)]
+
+	for i in range(M):
+		countP[ord(pat[i])] += 1
+		countTW[ord(txt[i])] += 1
+
+	# Traverse through remaining characters of pattern
+	for i in range(M, N):
+
+		# Compare counts of current window
+		# of text with counts of pattern[]
+		if (compare(countP, countTW)):
+			return True
+
+		# Add current character to current window
+		countTW[ord(txt[i])] += 1
+
+		# Remove the first character of previous window
+		countTW[ord(txt[i - M])] -= 1
+
+	# Check for the last window in text
+	if(compare(countP, countTW)):
+		return True
+	return False
+
+
+txt = "BACDGABCDA"
+pat = "ABCD"
+
+if (search(pat, txt)):
+	print("Yes")
+else:
+	print("No")
 ```
 
 ## [Count and Say problem](https://leetcode.com/problems/count-and-say/)
 
 ```python
+def countnndSay(n):
+	if (n == 1):
+		return "1"
+	if (n == 2):
+		return "11"
 
+	# Find n'th term by generating all terms from 3 to n-1. Every term is generated using previous term 
+	s = "11"
+	for _ in range(3, n + 1):
+		# In below for loop, previous character is processed in current iteration. That is why a dummy character is added to make sure that loop runs one extra iteration.
+		s += '$'
+		l = len(s)
+
+		cnt = 1 # Initialize count
+		tmp = "" # Initialize i'th
+		# Process previous term to find the next term
+		for j in range(1 , l):
+
+			# If current character doesn't match
+			if (s[j] != s[j - 1]):
+
+				# Append count of str[j-1] to temp
+				tmp += str(cnt + 0)
+
+				# Append str[j-1]
+				tmp += s[j - 1]
+
+				# Reset count
+				cnt = 1
+
+			# If matches, then increment count of matching characters
+			else:
+				cnt += 1
+
+		# Update str
+		s = tmp
+	return s;
+
+N = 3
+print(countnndSay(N))
 ```
 
 ## [Write a program to find the longest Palindrome in a string.[ Longest palindromic Substring]](https://practice.geeksforgeeks.org/problems/longest-palindrome-in-a-string/0)
 
 ```python
+def expand(s, low, high):
+    length = len(s)
+ 
+    # expand in both directions
+    while low >= 0 and high < length and s[low] == s[high]:
+        low = low - 1
+        high = high + 1
+ 
+    # return palindromic substring
+    return s[low + 1:high]
+ 
 
+def findLongestPalindromicSubstring(s):
+    if not s or not len(s):
+        return ''
+ 
+    # `max_str` stores the maximum length palindromic substring found so far
+    max_str = ''
+ 
+    # `max_length` stores the maximum length of palindromic substring found so far
+    max_length = 0
+ 
+    # consider every character of the given string as a midpoint and expand in both directions to find maximum length palindrome
+ 
+    for i in range(len(s)):
+ 
+        # find the longest odd length palindrome with `s[i]` as a midpoint
+        curr_str = expand(s, i, i)
+        curr_length = len(curr_str)
+ 
+        # update maximum length palindromic substring if the odd length palindrome has a greater length
+ 
+        if curr_length > max_length:
+            max_length = curr_length
+            max_str = curr_str
+ 
+        # Find the longest even length palindrome with `s[i]` and `s[i+1]` as midpoints. Note that an even length palindrome has two midpoints.
+ 
+        curr_str = expand(s, i, i + 1)
+        curr_length = len(curr_str)
+ 
+        # update maximum length palindromic substring if even length palindrome has a greater length
+ 
+        if curr_length > max_length:
+            max_length = curr_length
+            max_str = curr_str
+ 
+    return max_str
+ 
+
+s = 'ABDCBCDBDCBBC'
+print(f'The longest palindromic substring of {s} is', findLongestPalindromicSubstring(s))
 ```
 
 ## [Find Longest Recurring Subsequence in String](https://practice.geeksforgeeks.org/problems/longest-repeating-subsequence/0)
 
 ```python
+def findLongestRepeatingSubSeq( str):
+    n = len(str)
+    # Create and initialize DP table
+    dp = [[0 for _ in range(n+1)] for _ in range(n+1)]
 
+    # Fill dp table (similar to LCS loops)
+    for i in range(1,n+1):
+        for j in range(1,n+1):
+            # If characters match and indexes are not same
+            if (str[i-1] == str[j-1] and i != j):
+                dp[i][j] = 1 + dp[i-1][j-1]        
+            # If characters do not match
+            else:
+                dp[i][j] = max(dp[i][j-1], dp[i-1][j])
+    return dp[n][n]
+
+str1 = "aabb"
+print("The length of the largest subsequence that repeats itself is : " ,findLongestRepeatingSubSeq(str1))
+ 
 ```
 
 ## [Print all Subsequences of a string.](https://www.geeksforgeeks.org/print-subsequences-string/)
 
 ```python
+# Below is the implementation of the above approach
+def printSubsequence(input, output):
 
+	# Base Case if the input is empty print the output string
+	if len(input) == 0:
+		print(output, end=' ')
+		return
+
+	# output is passed with including the 1st character of input string
+	printSubsequence(input[1:], output+input[0])
+
+	# output is passed without including the 1st character of input string
+	printSubsequence(input[1:], output)
+
+
+output = ""
+str1 = "abcd"
+printSubsequence(str1, output)
 ```
 
 ## [Print all the permutations of the given string](https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string/0)
 
 ```python
+def permute(s, answer):
+	if (len(s) == 0):
+		print(answer, end = " ")
+		return
+	for i in range(len(s)):
+		ch = s[i]
+		left_substr = s[:i]
+		right_substr = s[i + 1:]
+		rest = left_substr + right_substr
+		permute(rest, answer + ch)
 
+answer = ""
+s = "alex"
+print("All possible strings are : ")
+permute(s, answer)
 ```
 
 ## [Split the Binary string into two substring with equal 0’s and 1’s](https://www.geeksforgeeks.org/split-the-binary-string-into-substrings-with-equal-number-of-0s-and-1s/)
 
 ```python
+def maxSubStr(str, n):
+	# To store the count of 0s and 1s
+	count0 = 0
+	count1 = 0
+	
+	# To store the count of maximum substrings str can be divided into
+	cnt = 0
+	
+	for i in range(n):
+		if str[i] == '0':
+			count0 += 1
+		else:
+			count1 += 1
+			
+		if count0 == count1:
+			cnt += 1
+
+# It is not possible to split the string
+	if count0 != count1:
+		return -1
+			
+	return cnt
+
+str1 = "0100110101"
+n = len(str1)
+print(maxSubStr(str1, n))
 
 ```
 
-## [Find next greater number with same set of digits. [Very Very IMP]](https://practice.geeksforgeeks.org/problems/next-permutation/0)
-
-```python
-
-```
-
-## [Balanced Parenthesis problem.[Imp]](https://practice.geeksforgeeks.org/problems/parenthesis-checker/0)
-
-```python
-
-```
 
 ## [Rabin Karp Algo](https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/)
 
 ```python
+# d is the number of characters in the input alphabet
+d = 256
 
+# pat -> pattern
+# txt -> text
+# q -> A prime number
+
+def search(pat, txt, q):
+	M = len(pat)
+	N = len(txt)
+	i = 0
+	j = 0
+	p = 0 # hash value for pattern
+	t = 0 # hash value for txt
+	h = 1
+
+	# The value of h would be "pow(d, M-1)%q"
+	for _ in range(M-1):
+		h = (h*d)%q
+
+	# Calculate the hash value of pattern and first window of text
+	for i in range(M):
+		p = (d*p + ord(pat[i]))%q
+		t = (d*t + ord(txt[i]))%q
+
+	# Slide the pattern over text one by one
+	for i in range(N-M+1):
+		# Check the hash values of current window of text and pattern if the hash values match then only check for characters one by one
+		if p==t:
+			# Check for characters one by one
+			for j in range(M):
+				if txt[i+j] != pat[j]:
+					break
+				else: j+=1
+
+			# if p == t and pat[0...M-1] = txt[i, i+1, ...i+M-1]
+			if j==M:
+				print(f"Pattern found at index {str(i)}")
+
+		# Calculate hash value for next window of text: Remove leading digit, add trailing digit
+		if i < N-M:
+			t = (d*(t-ord(txt[i])*h) + ord(txt[i+M]))%q
+
+			# We might get negative values of t, converting it to positive
+			if t < 0:
+				t = t+q
+
+
+txt = "GEEKS FOR GEEKS"
+pat = "GEEK"
+q = 101
+search(pat,txt,q)
 ```
 
 ## [KMP Algo](https://practice.geeksforgeeks.org/problems/longest-prefix-suffix2527/1)
 
 ```python
+def longestPrefixSuffix(s):
+	n = len(s)
+	lps = [0] * n # lps[0] is always 0
 
+	# length of the previous longest prefix suffix
+	l = 0
+
+	# the loop calculates lps[i] for i = 1 to n-1
+	i = 1
+	while (i < n):
+		if (s[i] == s[l]):
+			l = l + 1
+			lps[i] = l
+			i += 1
+
+		elif l == 0:
+
+			# if (len == 0)
+			lps[i] = 0
+			i += 1
+
+		else:
+			l = lps[l-1]
+			# Also, note that we do not increment i here
+
+	res = lps[n-1]
+
+	# Since we are looking for non overlapping parts.
+	return n//2 if (res > n/2) else res
+		
+
+s = "abcab"
+print(longestPrefixSuffix(s))
 ```
 
 ## [Convert a Sentence into its equivalent mobile numeric keypad sequence.](https://www.geeksforgeeks.org/convert-sentence-equivalent-mobile-numeric-keypad-sequence/)
 
 ```python
+"""
+Input : GEEKSFORGEEKS
+Output : 4333355777733366677743333557777
+For obtaining a number, we need to press a
+number corresponding to that character for 
+number of times equal to position of the 
+character. For example, for character C, 
+we press number 2 three times and accordingly.
 
+Input : HELLO WORLD
+Output : 4433555555666096667775553
+"""
+
+def printSequence(arr, mystr):
+	n = len(mystr)
+	output = ""
+	for i in range(n):
+
+		# checking for space
+		if (mystr[i] == ' '):
+			output = f"{output}0"
+		else:
+			# calculating index for each
+			# character		
+			position = ord(mystr[i]) - ord('A')
+			output = output + arr[position]
+	
+	return output
+	
+
+str1 = ["2", "22", "222",
+	"3", "33", "333",   
+	"4", "44", "444",
+	"5", "55", "555",
+	"6", "66", "666",
+	"7", "77", "777", "7777",
+	"8", "88", "888",
+	"9", "99", "999", "9999" ]
+
+mystr = "GEEKSFORGEEKS";
+print( printSequence(str1, mystr))
 ```
 
 ## [Minimum number of bracket reversals needed to make an expression balanced.](https://practice.geeksforgeeks.org/problems/count-the-reversals/0)
 
 ```python
+"""
+Input:  exp = "}{"
+Output: 2
+We need to change '}' to '{' and '{' to
+'}' so that the expression becomes balanced, 
+the balanced expression is '{}'
 
+Input:  exp = "{{{"
+Output: Can't be made balanced using reversals
+
+Input:  exp = "{{{{"
+Output: 2 
+
+Input:  exp = "{{{{}}"
+Output: 1 
+
+Input:  exp = "}{{}}{{{"
+Output: 3
+"""
+import math
+
+def countMinReversals(expr):
+	length = len(expr)
+
+	# Expressions of odd lengths cannot be balanced
+	if (length % 2 != 0):
+		return -1
+
+	left_brace = 0
+	right_brace = 0
+
+	for i in range(length):
+		# If we find a left bracket then we simply increment the left bracket
+		if (expr[i] == '{'):
+			left_brace += 1
+		elif (left_brace == 0):
+			right_brace += 1
+		else:
+			left_brace -= 1
+
+	return math.ceil(left_brace / 2) + math.ceil(right_brace / 2)
+
+
+expr = "}}{{"
+print(countMinReversals(expr))
 ```
 
 ## [Count All Palindromic Subsequence in a given String.](https://practice.geeksforgeeks.org/problems/count-palindromic-subsequences/1)
 
 ```python
+"""
+Input : str = "abcd"
+Output : 4
+Explanation :- palindromic  subsequence are : "a" ,"b", "c" ,"d" 
+
+Input : str = "aab"
+Output : 4
+Explanation :- palindromic subsequence are :"a", "a", "b", "aa"
+
+Input : str = "aaaa"
+Output : 15
+"""
+# Python 3 program to counts Palindromic
+# Subsequence in a given String using recursion
+
+def countPS(i, j):
+	if(i > j):
+		return 0
+
+	if(dp[i][j] != -1):
+		return dp[i][j]
+
+	if (i == j):
+		dp[i][j] = 1
+	elif str[i] == str[j]:
+		dp[i][j] = (countPS(i + 1, j) + countPS(i, j - 1) + 1)
+	else:
+		dp[i][j] = (countPS(i + 1, j) + countPS(i, j - 1) - countPS(i + 1, j - 1))
+	return dp[i][j]
+
+
+str = "abcb"
+dp = [[-1 for _ in range(1000)] for _ in range(1000)]
+n = len(str)
+print("Total palindromic subsequence are :", countPS(0, n - 1))
 
 ```
 
 ## [Count of number of given string in 2D character array](https://www.geeksforgeeks.org/find-count-number-given-string-present-2d-character-array/)
 
 ```python
+"""
+Given a 2-Dimensional character array and a string, we need to find the given string in 2-dimensional character array, such that individual characters can be present left to right, right to left, top to down or down to top.
+
+Examples: 
+
+Input : a ={
+            {D,D,D,G,D,D},
+            {B,B,D,E,B,S},
+            {B,S,K,E,B,K},
+            {D,D,D,D,D,E},
+            {D,D,D,D,D,E},
+            {D,D,D,D,D,G}
+           }
+        str= "GEEKS"
+Output :2
+"""
+
+
+def internalSearch(ii, needle, row, col, hay, row_max, col_max):
+	
+	found = 0
+	if (row >= 0 and row <= row_max and
+		col >= 0 and col <= col_max and
+		needle[ii] == hay[row][col]):
+		match = needle[ii]
+		ii += 1
+		hay[row][col] = 0
+		if (ii == len(needle)):
+			found = 1
+		else:
+			
+			# through Backtrack searching in every directions
+			found += internalSearch(ii, needle, row, col + 1, hay, row_max, col_max)
+			found += internalSearch(ii, needle, row, col - 1, hay, row_max, col_max)
+			found += internalSearch(ii, needle, row + 1, col, hay, row_max, col_max)
+			found += internalSearch(ii, needle, row - 1, col, hay, row_max, col_max)
+		hay[row][col] = match
+	return found
+
+# Function to search the string in 2d array
+def searchString(needle, row, col,strr, row_count, col_count):
+	found = 0
+	for r in range(row_count):
+		for c in range(col_count):
+			found += internalSearch(0, needle, r, c,
+						strr, row_count - 1, col_count - 1)		
+	return found
+
+
+needle = "MAGIC"
+inputt = ["BBABBM","CBMBBA","IBABBG","GOZBBI","ABBBBC","MCIGAM"]
+strr = [0] * len(inputt)
+for i in range(len(inputt)):
+	strr[i] = list(inputt[i])
+print("count: ", searchString(needle, 0, 0, strr, len(strr), len(strr[0])))
 
 ```
 
 ## [Search a Word in a 2D Grid of characters.](https://practice.geeksforgeeks.org/problems/find-the-string-in-grid/0)
 
 ```python
+"""
+Input:  grid[][] = {"GEEKSFORGEEKS",
+                    "GEEKSQUIZGEEK",
+                    "IDEQAPRACTICE"};
+        word = "GEEKS"
+
+Output: pattern found at 0, 0
+        pattern found at 0, 8
+        pattern found at 1, 0
+Explanation: 'GEEKS' can be found as prefix of
+1st 2 rows and suffix of first row
+
+Input:  grid[][] = {"GEEKSFORGEEKS",
+                    "GEEKSQUIZGEEK",
+                    "IDEQAPRACTICE"};
+        word = "EEE"
+
+Output: pattern found at 0, 2
+        pattern found at 0, 10
+        pattern found at 2, 2
+        pattern found at 2, 12
+Explanation: EEE can be found in first row 
+twice at index 2 and index 10
+and in second row at 2 and 12
+"""
+
+
+class GFG:	
+	def __init__(self):
+		self.R = None
+		self.C = None
+		self.dir = [[-1, 0], [1, 0], [1, 1],
+					[1, -1], [-1, -1], [-1, 1],
+					[0, 1], [0, -1]]
+					
+	def search2D(self, grid, row, col, word):
+		# If first character of word doesn't match with the given starting point in grid.
+		if grid[row][col] != word[0]:
+			return False
+			
+		# Search word in all 8 directions starting from (row, col)
+		for x, y in self.dir:
+			
+			# Initialize starting point for current direction
+			rd, cd = row + x, col + y
+			flag = True
+			
+			# First character is already checked, match remaining characters
+			for k in range(1, len(word)):
+				
+				# If out of bound or not matched, break
+				if (0 <= rd <self.R and 0 <= cd < self.C and word[k] == grid[rd][cd]):
+					# Moving in particular direction
+					rd += x
+					cd += y
+				else:
+					flag = False
+					break
+			
+			# If all character matched, then value of flag must be false	
+			if flag:
+				return True
+		return False
+		
+	# Searches given word in a given matrix in all 8 directions
+	def patternSearch(self, grid, word):
+		# Rows and columns in given grid
+		self.R = len(grid)
+		self.C = len(grid[0])
+		# Consider every point as starting point and search given word
+		for row in range(self.R):
+			for col in range(self.C):
+				if self.search2D(grid, row, col, word):
+					print("pattern found at ", f'{str(row)}, {str(col)}')
+					
+
+grid = ["GEEKSFORGEEKS",
+		"GEEKSQUIZGEEK",
+		"IDEQAPRACTICE"]
+gfg = GFG()
+gfg.patternSearch(grid, 'GEEKS')
+print('')
+gfg.patternSearch(grid, 'EEE')
 
 ```
 
 ## [Boyer Moore Algorithm for Pattern Searching.](https://www.geeksforgeeks.org/boyer-moore-algorithm-for-pattern-searching/)
 
 ```python
+"""
+Input:  txt[] = "THIS IS A TEST TEXT"
+        pat[] = "TEST"
+Output: Pattern found at index 10
 
+Input:  txt[] =  "AABAACAADAABAABA"
+        pat[] =  "AABA"
+Output: Pattern found at index 0
+        Pattern found at index 9
+        Pattern found at index 12
+"""
+
+
+NO_OF_CHARS = 256
+
+def badCharHeuristic(string, size):
+
+	# Initialize all occurrence as -1
+	badChar = [-1]*NO_OF_CHARS
+
+	# Fill the actual value of last occurrence
+	for i in range(size):
+		badChar[ord(string[i])] = i;
+
+	# return initialized list
+	return badChar
+
+def search(txt, pat):
+	m = len(pat)
+	n = len(txt)
+
+	# create the bad character list by calling the preprocessing function badCharHeuristic() for given pattern
+	badChar = badCharHeuristic(pat, m)
+
+	# s is shift of the pattern with respect to text
+	s = 0
+	while (s <= n-m):
+		j = m-1
+
+		# Keep reducing index j of pattern while characters of pattern and text are matching at this shift s
+		while j>=0 and pat[j] == txt[s+j]:
+			j -= 1
+
+		# If the pattern is present at current shift, then index j will become -1 after the above loop
+		if j<0:
+			print(f"Pattern occur at shift = {s}")
+
+				# Shift the pattern so that the next character in text 	aligns with the last occurrence of it in pattern. The condition s+m < n is necessary for the case when pattern occurs at the end of text
+			
+			s += (m-badChar[ord(txt[s+m])] if s+m<n else 1)
+		else:
+
+			# Shift the pattern so that the bad character in text aligns with the last occurrence of it in pattern. The max function is used to make sure that we get a positive shift. We may get a negative shift if the last occurrence of bad character in pattern is on the right side of the current character.
+			s += max(1, j-badChar[ord(txt[s+j])])
+
+
+txt = "ABAAABCD"
+pat = "ABC"
+search(txt, pat)
 ```
 
 ## [Converting Roman Numerals to Decimal](https://practice.geeksforgeeks.org/problems/roman-number-to-integer/0)
 
 ```python
 
+def romanToInt(s):
+        translations = {
+            "I": 1,
+            "V": 5,
+            "X": 10,
+            "L": 50,
+            "C": 100,
+            "D": 500,
+            "M": 1000
+        }
+        number = 0
+        s = s.replace("IV", "IIII").replace("IX", "VIIII")
+        s = s.replace("XL", "XXXX").replace("XC", "LXXXX")
+        s = s.replace("CD", "CCCC").replace("CM", "DCCCC")
+        for char in s:
+            number += translations[char]
+        print(number)
+         
+romanToInt('MCMIV')
 ```
 
 ## [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)
 
 ```python
-
+def LCP(X, Y):
+    i = j = 0
+    while i < len(X) and j < len(Y):
+        if X[i] != Y[j]:
+            break
+        i = i + 1
+        j = j + 1
+    return X[:i]
+ 
+ 
+# Function to find the longest common prefix (LCP) between a given set of strings
+def findLCP(words):
+    prefix = words[0]
+    for s in words:
+        prefix = LCP(prefix, s)
+    return prefix
+ 
+  
+words = ['techie delight', 'tech', 'techie', 'technology', 'technical']
+print('The longest common prefix is', findLCP(words))
 ```
 
 ## [Number of flips to make binary string alternate](https://practice.geeksforgeeks.org/problems/min-number-of-flips/0)
 
 ```python
+"""
+Input : str = “001”
+Output : 1
+Minimum number of flips required = 1
+We can flip 1st bit from 0 to 1 
 
+Input : str = “0001010111”
+Output : 2
+Minimum number of flips required = 2
+We can flip 2nd bit from 0 to 1 and 9th 
+bit from 1 to 0 to make alternate 
+string “0101010101”.
+"""
+
+def flip( ch):
+	return '1' if (ch == '0') else '0'
+
+# Utility method to get minimum flips when alternate string starts with expected char
+def getFlipWithStartingCharcter(str, expected):
+	flipCount = 0
+	for i in range(len( str)):
+		# if current character is not expected, increase flip count
+		if (str[i] != expected):
+			flipCount += 1
+
+		# flip expected character each time
+		expected = flip(expected)
+	return flipCount
+
+def minFlipToMakeStringAlternate(str):	
+	return min(getFlipWithStartingCharcter(str, '0'), getFlipWithStartingCharcter(str, '1'))
+
+
+str1 = "0001010111"
+print(minFlipToMakeStringAlternate(str1))
 ```
 
 ## [Find the first repeated word in string.](https://www.geeksforgeeks.org/find-first-repeated-word-string/)
 
 ```python
 
+from collections import Counter
+
+def firstRepeatedWord(sentence):
+	lis = list(sentence.split(" "))
+	frequency = Counter(lis)
+	for i in lis:
+		if(frequency[i] > 1):
+			return i
+
+sentence = "Vikram had been saying that he had been there"
+print(firstRepeatedWord(sentence))
 ```
 
 ## [Minimum number of swaps for bracket balancing.](https://practice.geeksforgeeks.org/problems/minimum-swaps-for-bracket-balancing/0)
 
 ```python
+"""Input  : []][][
+Output : 2
+First swap: Position 3 and 4
+[][]][
+Second swap: Position 5 and 6
+[][][]
+
+Input  : [[][]]
+Output : 0
+The string is already balanced.
+"""
+def swapCount(s):
+	swap = 0
+	imbalance = 0;
+	
+	for i in s:
+		if i == '[':
+			imbalance -= 1
+		else:
+			imbalance += 1
+			if imbalance > 0:
+				swap += imbalance
+	return swap
+
+s = "[]][][";
+print(swapCount(s))
+s = "[[][]]";
+print(swapCount(s))
 
 ```
 
 ## [Find the longest common subsequence between two strings.](https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0)
 
 ```python
+"""
+LCS for input Sequences “ABCDGH” and “AEDFHR” is “ADH” of length 3. 
+LCS for input Sequences “AGGTAB” and “GXTXAYB” is “GTAB” of length 4.
+"""
 
+def lcs(X, Y, m, n):
+	L = [[0 for _ in range(n+1)] for _ in range(m+1)]
+	# Following steps build L[m+1][n+1] in bottom up fashion. Note that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1]
+	for i in range(m+1):
+		for j in range(n+1):
+			if i == 0 or j == 0:
+				L[i][j] = 0
+			elif X[i-1] == Y[j-1]:
+				L[i][j] = L[i-1][j-1] + 1
+			else:
+				L[i][j] = max(L[i-1][j], L[i][j-1])
+
+		# Create a string variable to store the lcs string
+	lcs = ""
+
+	# Start from the right-most-bottom-most corner and one by one store characters in lcs[]
+	i = m
+	j = n
+	while i > 0 and j > 0:
+
+		# If current character in X[] and Y are same, then current character is part of LCS
+		if X[i-1] == Y[j-1]:
+			lcs += X[i-1]
+			i -= 1
+			j -= 1
+
+		# If not same, then find the larger of two and go in the direction of larger value
+		elif L[i-1][j] > L[i][j-1]:
+			i -= 1
+
+		else:
+			j -= 1
+
+	# We traversed the table in reverse order LCS is the reverse of what we got
+	lcs = lcs[::-1]
+	print(f"LCS of {X} and {Y} is {lcs}")
+
+
+X = "AGGTAB"
+Y = "GXTXAYB"
+m = len(X)
+n = len(Y)
+lcs(X, Y, m, n)
 ```
 
 ## [Program to generate all possible valid IP addresses from given  string.](https://www.geeksforgeeks.org/program-generate-possible-valid-ip-addresses-given-string/)
 
 ```python
+"""
+Input: 25525511135
+Output: [“255.255.11.135”, “255.255.111.35”]
+Explanation:
+These are the only valid possible
+IP addresses.
 
+"""
+
+def solve(s, i, j, level, temp, res):
+	if (i == (j + 1) and level == 5):
+		res.append(temp[1:])
+
+	# Digits of a number ranging 0-255 can lie only between  0-3
+	k = i
+	while (k < i + 3 and k <= j):
+		ad = s[i: k + 1]
+
+		# Return if string starting with '0' or it is greater than 255.
+		if ((s[i] == '0' and len(ad) > 1) or int(ad) > 255):
+			return
+
+		# Recursively call for another level.
+		solve(s, k + 1, j, level + 1, f'{temp}.{ad}', res)
+
+		k += 1
+
+
+s = "25525511135"
+n = len(s)
+ans = []
+solve(s, 0, n - 1, 1, "", ans)
+for s in ans:
+	print(s)
 ```
 
 ## [Write a program to find the smallest window that contains all characters of string itself.](https://practice.geeksforgeeks.org/problems/smallest-distant-window/0)
 
 ```python
+"""
+Input: aabcbcdbca
+Output: dbca
+Explanation: 
+Possible substrings= {aabcbcd, abcbcd, 
+bcdbca, dbca....}
+Of the set of possible substrings 'dbca' 
+is the shortest substring having all the 
+distinct characters of given string. 
 
-```
+Input: aaab
+Output: ab
+Explanation: 
+Possible substrings={aaab, aab, ab}
+Of the set of possible substrings 'ab' 
+is the shortest substring having all 
+the distinct characters of given string.    
+"""
+# Python program to find the smallest
+# window containing
+# all characters of a pattern
+from collections import defaultdict
 
-## [Rearrange characters in a string such that no two adjacent are same](https://practice.geeksforgeeks.org/problems/rearrange-characters/0)
+MAX_CHARS = 256
 
-```python
+def findSubString(strr):
+	n = len(strr)
+	if n <= 1:
+		return strr
+	dist_count = len(set(list(strr)))
+	curr_count = defaultdict(lambda: 0)
+	count = 0
+	start = 0
+	min_len = n
 
+	for j in range(min_len):
+		curr_count[strr[j]] += 1
+
+		# If any distinct character matched, then increment count
+		if curr_count[strr[j]] == 1:
+			count += 1
+
+		# Try to minimize the window i.e., check if any character is occurring more no. of times than its occurrence in pattern, if yes then remove it from starting and also remove the useless characters.
+		if count == dist_count:
+			while curr_count[strr[start]] > 1:
+				curr_count[strr[start]] -= 1
+				start += 1
+
+			# Update window size
+			len_window = j - start + 1
+			if min_len > len_window:
+				min_len = len_window
+				start_index = start
+
+	return str(strr[start_index: start_index + min_len])
+
+
+print(f'Smallest window containing all distinct characters is: {findSubString("aabcbcdbca")}')
 ```
 
 ## [Minimum characters to be added at front to make string palindrome](https://www.geeksforgeeks.org/minimum-characters-added-front-make-string-palindrome/)
 
 ```python
+"""
+Input  : str = "ABC"
+Output : 2
+We can make above string palindrome as "CBABC"
+by adding 'B' and 'C' at front.
 
-```
+Input  : str = "AACECAAAA";
+Output : 2
+We can make above string palindrome as AAAACECAAAA
+by adding two A's at front of string.
+"""
 
-## [Given a sequence of words, print all anagrams together](https://practice.geeksforgeeks.org/problems/k-anagrams-1/0)
+def ispalindrome(s):
+    l = len(s)
+    i = 0
+    j = l - 1
+    while i <= j:
+        if(s[i] != s[j]):
+            return False
+        i += 1
+        j -= 1
+    return True
+ 
+s = "BABABAA"
+cnt = 0
+flag = 0
+while s != "":
+    if(ispalindrome(s)):
+        flag = 1
+        break
+    else:
+        cnt += 1
+        # erase the last element of the string
+        s = s[:-1]
 
-```python
-
+# print the number of insertion at front
+if(flag):
+    print(cnt)
 ```
 
 ## [Find the smallest window in a string containing all characters of another string](https://practice.geeksforgeeks.org/problems/smallest-window-in-a-string-containing-all-the-characters-of-another-string/0)
 
 ```python
+"""
+nput: string = “this is a test string”, pattern = “tist” 
+Output: Minimum window is “t stri” 
+Explanation: “t stri” contains all the characters of pattern.
 
+Input: string = “geeksforgeeks”, pattern = “ork” 
+Output: Minimum window is “ksfor”
+"""
+
+
+def smallestWindow(s, p):
+	n = len(s)
+	if n < len(p):
+		return -1
+	mp = [0]*256
+	# Starting index of ans
+	start = 0
+	# Answer, Length of ans
+	ans = n + 1
+	cnt = 0
+	# creating map
+	for i in p:
+		mp[ord(i)] += 1
+		if mp[ord(i)] == 1:
+			cnt += 1
+	i = 0
+
+	# Traversing the window
+	for j in range(n):
+		mp[ord(s[j])] -= 1
+		if mp[ord(s[j])] == 0:
+			cnt -= 1
+			while cnt == 0:
+				if ans > j - i + 1:
+					ans = j - i + 1
+					start = i
+
+				# Sliding I
+				# Calculation for removing I
+				mp[ord(s[i])] += 1
+				if mp[ord(s[i])] > 0:
+					cnt += 1
+				i += 1
+	if ans > n:
+		return "-1"
+	return s[start:start+ans]
+
+
+s = "ADOBECODEBANC"
+p = "ABC"
+result = smallestWindow(s, p)
+print("Smallest window that contain all character :", result)
 ```
 
 ## [Recursively remove all adjacent duplicates](https://practice.geeksforgeeks.org/problems/consecutive-elements/0)
 
 ```python
+def removeDuplicates(S):
+	n = len(S)
+	# We don't need to do anything for empty or single character string.
+	if (n < 2):
+		return
+	# j is used to store index is result string (or index of current distinct character)
+	j = 0
+	
+	# Traversing string
+	for i in range(n):
+		# If current character S[i] is different from S[j]
+		if (S[j] != S[i]):
+			j += 1
+			S[j] = S[i]
+	
+	# Putting string termination character.
+	j += 1
+	S = S[:j]
+	return S
+	
 
+S1 = "geeksforgeeks"
+S1 = list(S1.rstrip())
+S1 = removeDuplicates(S1)
+print(*S1, sep = "")
+
+S2 = "aabcca"
+S2 = list(S2.rstrip())
+S2 = removeDuplicates(S2)
+print(*S2, sep = "")
 ```
 
 ## [String matching where one string contains wildcard characters](https://practice.geeksforgeeks.org/problems/wildcard-string-matching/0)
 
 ```python
+def match(first, second):
 
+	# If we reach at the end of both strings, we are done
+	if len(first) == 0 and len(second) == 0:
+		return True
+
+	# Make sure to eliminate consecutive '*'
+	if len(first) > 1 and first[0] == '*':
+		i = 0
+		while i+1 < len(first) and first[i+1] == '*':
+			i += 1
+		first = first[i:]
+
+	# Make sure that the characters after '*' are present
+	# in second string. This function assumes that the first
+	# string will not contain two consecutive '*'
+	if len(first) > 1 and first[0] == '*' and len(second) == 0:
+		return False
+
+	# If the first string contains '?', or current characters
+	# of both strings match
+	if (len(first) > 1 and first[0] == '?') or (len(first) != 0
+												and len(second) != 0 and first[0] == second[0]):
+		return match(first[1:], second[1:])
+
+	# If there is *, then there are two possibilities
+	# a) We consider current character of second string
+	# b) We ignore current character of second string.
+	if len(first) != 0 and first[0] == '*':
+		return match(first[1:], second) or match(first, second[1:])
+
+	return False
+
+
+def test(first, second):
+	if match(first, second):
+		print("Yes")
+	else:
+		print("No")
+
+
+test("g*ks", "geeks") # Yes
+test("ge?ks*", "geeksforgeeks") # Yes
+test("g*k", "gee") # No because 'k' is not in second
+test("*pqrs", "pqrst") # No because 't' is not in first
+test("abc*bcd", "abcdhghgbcd") # Yes
+test("abc*c?d", "abcd") # No because second must have 2 instances of 'c'
+test("*c*d", "abcd") # Yes
+test("*?c*d", "abcd") # Yes
+test("geeks**", "geeks") # Yes
 ```
 
 ## [Function to find Number of customers who could not get a computer](https://www.geeksforgeeks.org/function-to-find-number-of-customers-who-could-not-get-a-computer/)
 
 ```python
+"""
+Write a function “runCustomerSimulation” that takes following two inputs 
 
+An integer ‘n’: total number of computers in a cafe and a string: 
+A sequence of uppercase letters ‘seq’: Letters in the sequence occur in pairs. The first occurrence indicates the arrival of a customer; the second indicates the departure of that same customer. 
+A customer will be serviced if there is an unoccupied computer. No letter will occur more than two times. 
+Customers who leave without using a computer always depart before customers who are currently using the computers. There are at most 20 computers per cafe.
+
+For each set of input the function should output a number telling how many customers, if any walked away without using a computer. Return 0 if all the customers were able to use a computer.
+runCustomerSimulation (2, “ABBAJJKZKZ”) should return 0
+runCustomerSimulation (3, “GACCBDDBAGEE”) should return 1 as ‘D’ was not able to get any computer
+runCustomerSimulation (3, “GACCBGDDBAEE”) should return 0
+runCustomerSimulation (1, “ABCBCA”) should return 2 as ‘B’ and ‘C’ were not able to get any computer.
+runCustomerSimulation(1, “ABCBCADEED”) should return 3 as ‘B’, ‘C’ and ‘E’ were not able to get any computer.
+"""
+
+MAX_CHAR = 26
+
+# n is number of computers in cafe.
+# 'seq' is given sequence of customer entry, exit events
+def runCustomerSimulation(n, seq):
+
+	# seen[i] = 0, indicates that customer 'i' is not in cafe
+	# seen[1] = 1, indicates that customer 'i' is in cafe but computer is not assigned yet.
+	# seen[2] = 2, indicates that customer 'i' is in cafe and has occupied a computer.
+	seen = [0] * MAX_CHAR
+
+	# Initialize result which is number of customers who could not get any computer.
+	res = 0
+	occupied = 0 # To keep track of occupied
+
+	# Traverse the input sequence
+	for i in range(len(seq)):
+
+		# Find index of current character in seen[0...25]
+		ind = ord(seq[i]) - ord('A')
+
+		# If first occurrence of 'seq[i]'
+		if seen[ind] == 0:
+
+			# set the current character as seen
+			seen[ind] = 1
+
+			# If number of occupied computers is less than n, then assign a computer to new customer
+			if occupied < n:
+				occupied+=1
+
+				# Set the current character as occupying a computer
+				seen[ind] = 2
+
+			# Else this customer cannot get a computer, increment
+			else:
+				res+=1
+
+		# If this is second occurrence of 'seq[i]'
+		else:
+			# Decrement occupied only if this customer was using a computer
+			if seen[ind] == 2:
+				occupied-=1
+			seen[ind] = 0
+
+	return res
+
+
+print (runCustomerSimulation(2, "ABBAJJKZKZ"))
+print (runCustomerSimulation(3, "GACCBDDBAGEE"))
+print (runCustomerSimulation(3, "GACCBGDDBAEE"))
+print (runCustomerSimulation(1, "ABCBCA"))
+print (runCustomerSimulation(1, "ABCBCADEED"))
 ```
 
 ## [Transform One String to Another using Minimum Number of Given Operation](https://www.geeksforgeeks.org/transform-one-string-to-another-using-minimum-number-of-given-operation/)
 
 ```python
+"""
+Input:  A = "ABD", B = "BAD"
+Output: 1
+Explanation: Pick B and insert it at front.
 
+Input:  A = "EACBD", B = "EABCD"
+Output: 3
+Explanation: Pick B and insert at front, EACBD => BEACD
+             Pick A and insert at front, BEACD => ABECD
+             Pick E and insert at front, ABECD => EABCD
+"""
+
+# Function to find minimum number of operations required  transform A to B
+def minOps(A, B):
+	m = len(A)
+	n = len(B)
+
+	# This part checks whether conversion is possible or not
+	if n != m:
+		return -1
+
+	count = [0] * 256
+
+	for i in range(n):	 # count characters in A
+		count[ord(B[i])] += 1
+	for i in range(n):	 # subtract count for every char in B
+		count[ord(A[i])] -= 1
+	for i in range(256): # Check if all counts become 0
+		if count[i]:
+			return -1
+
+	# This part calculates the number of operations required
+	res = 0
+	i = n-1
+	j = n-1
+	while i >= 0:
+	
+		# if there is a mismatch, then keep incrementing result 'res' until B[j] is not found in A[0..i]
+		while i>= 0 and A[i] != B[j]:
+			i -= 1
+			res += 1
+
+		# if A[i] and B[j] match
+		if i >= 0:
+			i -= 1
+			j -= 1
+	return res
+
+A = "EACBD"
+B = "EABCD"
+print(f"Minimum number of operations required is {str(minOps(A,B))}")
 ```
 
 ## [Check if two given strings are isomorphic to each other](https://practice.geeksforgeeks.org/problems/isomorphic-strings/0)
 
 ```python
+"""
+Input:  str1 = "aab", str2 = "xxy"
+Output: True
+'a' is mapped to 'x' and 'b' is mapped to 'y'.
 
+Input:  str1 = "aab", str2 = "xyz"
+Output: False
+One occurrence of 'a' in str1 has 'x' in str2 and 
+other occurrence of 'a' has 'y'.
+"""
+
+def areIsomorphic(str1, str2):
+	#initializing a dictionary to store letters from str1 and str2 as key value pairs
+	charCount = {}
+	#initially setting c to "a"
+	c = "a"
+	#iterating over str1 and str2
+	for i in range(len(str1)):
+		#if str1[i] is a key in charCount
+		if str1[i] in charCount:
+			c = charCount[str1[i]]
+			if c != str2[i]:
+				return False
+		#if str2[i] is not a value in charCount
+		elif str2[i] not in charCount.values():
+			charCount[str1[i]] = str2[i]
+		else:
+			return False
+	return True
+		
+
+str1 = "aac"
+str2 = "xxy"
+if (len(str1) == len(str2) and areIsomorphic(str1, str2)):
+	print("Is Isomorphic")
+else:
+	print("Is Not Isomorphic")
 ```
 
 ## [Recursively print all sentences that can be formed from list of word lists](https://www.geeksforgeeks.org/recursively-print-all-sentences-that-can-be-formed-from-list-of-word-lists/)
 
 ```python
+"""
+Input: {{"you", "we"},
+        {"have", "are"},
+        {"sleep", "eat", "drink"}}
 
+Output:
+  you have sleep
+  you have eat
+  you have drink
+  you are sleep
+  you are eat
+  you are drink
+  we have sleep
+  we have eat
+  we have drink
+  we are sleep
+  we are eat
+  we are drink 
+"""
+
+R = 3
+C = 3
+
+# A recursive function to print all possible sentences that can be formed from a list of word list
+def printUtil(arr, m, n, output):
+	# Add current word to output array
+	output[m] = arr[m][n]
+
+	# If this is last word of current output sentence, then print the output sentence
+	if m==R-1:
+		for i in range(R):
+			print (output[i],end= " ")
+		print()
+		return
+
+	# Recur for next row
+	for i in range(C):
+		if arr[m+1][i] != "":
+			printUtil(arr, m+1, i, output)
+
+def printf(arr):
+
+	# Create an array to store sentence
+	output = [""] * R
+
+	# Consider all words for first row as starting points and print all sentences
+	for i in range(C):
+		if arr[0][i] != "":
+			printUtil(arr, 0, i, output)
+
+
+arr = [ ["you", "we",""],
+		["have", "are",""],
+		["sleep", "eat", "drink"]]
+printf(arr)
 ```
 
 # Trie
@@ -17975,9 +20922,7 @@ class Trie:
   
   
     def insert(self,key):
-        
-        # If not present, inserts key into trie
-        # If the key is prefix of trie node, just marks leaf node
+        # If not present, inserts key into trie. If the key is prefix of trie node, just marks leaf node
         pCrawl = self.root
         length = len(key)
         for level in range(length):
@@ -17992,9 +20937,7 @@ class Trie:
         pCrawl.isEndOfWord = True
   
     def search(self, key):
-          
-        # Search key in the trie
-        # Returns true if key presents in trie, else false
+        # Search key in the trie Returns true if key presents in trie, else false
         pCrawl = self.root
         length = len(key)
         for level in range(length):
@@ -18007,7 +20950,6 @@ class Trie:
   
 
 def constructTrie():
-  
     # Input keys (use only 'a' through 'z' and lower case)
     keys = ["the","a","there","answer","any", "by","their", "these"]
     output = ["Not present in trie", "Present in trie"]
@@ -18049,14 +20991,12 @@ class TrieNode:
         # each node stores a dictionary to its child nodes
         self.child = {}
  
-        # keep track of the total number of times the current node is visited
-        # while inserting data in Trie
+        # keep track of the total number of times the current node is visited while inserting data in Trie
         self.freq = 0
  
  
 # Function to insert a given string into a Trie
-def insert(root, word):
- 
+def insert(root, word): 
     # start from the root node
     curr = root
     for c in word:
@@ -18070,8 +21010,7 @@ def insert(root, word):
         curr = curr.child[c]
  
  
-# Function to recursively traverse the Trie in a preorder fashion and
-# print the shortest unique prefix for each word in the Trie
+# Function to recursively traverse the Trie in a preorder fashion and print the shortest unique prefix for each word in the Trie
 def printShortestPrefix(root, word_so_far):
     if root is None:
         return
@@ -18088,7 +21027,6 @@ def printShortestPrefix(root, word_so_far):
  
 # Find the shortest unique prefix for every word in a given array
 def findShortestPrefix(words):
- 
     # construct a Trie from the given items
     root = TrieNode()
     for s in words:
@@ -18097,20 +21035,19 @@ def findShortestPrefix(words):
     # Recursively traverse the Trie in a preorder fashion to list all prefixes
     printShortestPrefix(root, '')
  
- 
-if __name__ == '__main__':
-    words = ['AND', 'BONFIRE', 'BOOL', 'CASE', 'CATCH', 'CHAR']
-    findShortestPrefix(words)
+words = ['AND', 'BONFIRE', 'BOOL', 'CASE', 'CATCH', 'CHAR']
+findShortestPrefix(words)
+
 ```
 
 ## [Word Break Problem | (Trie solution)](https://www.geeksforgeeks.org/word-break-problem-trie-solution/)
 
 ```python
+
 # Currently, Trie supports lowercase English characters. So, the character size is 26.
 CHAR_SIZE = 26
  
  
-# A class to store a Trie node
 class Node:
     next = [None] * CHAR_SIZE
     exist = False       # true when the node is a leaf node
@@ -18138,8 +21075,7 @@ def insertTrie(head, s):
     node.exist = True
  
  
-# Function to determine if a string can be segmented into space-separated
-# sequence of one or more dictionary words
+# Function to determine if a string can be segmented into space-separated sequence of one or more dictionary words
 def wordBreak(head, s):
  
     # get the length of the string
@@ -18159,8 +21095,7 @@ def wordBreak(head, s):
                 index = ord(s[j]) - ord('a')
                 node = node.next[index]
  
-                # we can make [0, i] using our known decomposition
-                # and [i+1, j] using this string in a Trie
+                # we can make [0, i] using our known decomposition and [i+1, j] using this string in a Trie
                 if node and node.exist:
                     good[j + 1] = True
  
@@ -18168,24 +21103,22 @@ def wordBreak(head, s):
     return good[n]
  
  
-if __name__ == '__main__':
- 
-    # List of strings to represent a dictionary
-    words = ['self', 'th', 'is', 'famous', 'word', 'break', 'b', 'r', 'e', 'a', 'k', 'br', 'bre', 'brea', 'ak', 'prob', 'lem']
- 
-    # given string
-    s = 'wordbreakproblem'
- 
-    # create a Trie to store the dictionary
-    t = Node()
-    for word in words:
-        insertTrie(t, word)
- 
-    # check if the string can be segmented or not
-    if wordBreak(t, s):
-        print('The string can be segmented')
-    else:
-        print('The string can\'t be segmented')
+# List of strings to represent a dictionary
+words = ['self', 'th', 'is', 'famous', 'word', 'break', 'b', 'r', 'e', 'a', 'k', 'br', 'bre', 'brea', 'ak', 'prob', 'lem']
+
+# given string
+s = 'wordbreakproblem'
+
+# create a Trie to store the dictionary
+t = Node()
+for word in words:
+    insertTrie(t, word)
+
+# check if the string can be segmented or not
+if wordBreak(t, s):
+    print('The string can be segmented')
+else:
+    print('The string can\'t be segmented')
 ```
 
 ## [Given a sequence of words, print all anagrams together](https://practice.geeksforgeeks.org/problems/k-anagrams-1/0)
@@ -18202,24 +21135,16 @@ class TrieNode:
  
 # Function to insert a string into a Trie
 def insert(root, word, originalWord):
- 
-    # start from the root node
     curr = root
     for c in word:
-        # create a new node if the path doesn't exist
         curr.child.setdefault(c, TrieNode())
-        # go to the next node
         curr = curr.child[c]
  
     # anagrams will end up at the same leaf node
     curr.words.append(originalWord)
  
- 
-# A recursive function that traverses a Trie in preorder fashion and
-# prints all anagrams together
+
 def printAnagrams(root):
- 
-    # base case
     if root is None:
         return
  
@@ -18231,28 +21156,17 @@ def printAnagrams(root):
     for child in root.child.values():
         printAnagrams(child)
  
- 
-# Function to group anagrams from a given list of words
 def groupAnagrams(words):
- 
-    # construct an empty trie
     root = TrieNode()
- 
-    # do for each word
     for word in words:
-        # Sort the characters of the current word and insert it into the Trie.
-        # Note that the original word gets stored on the leaf
+        # Sort the characters of the current word and insert it into the Trie. Note that the original word gets stored on the leaf
         insert(root, ''.join(sorted(word)), word)
- 
-    # print all anagrams together
     printAnagrams(root)
  
  
-if __name__ == '__main__':
- 
-    words = ['auctioned', 'actors', 'altered', 'streaming', 'related', 'education', 'aspired', 'costar', 'despair', 'mastering', 'act','cat','tac'
-    ]
-    groupAnagrams(words)
+words = ['auctioned', 'actors', 'altered', 'streaming', 'related', 'education', 'aspired', 'costar', 'despair', 'mastering', 'act','cat','tac'
+]
+groupAnagrams(words)
 ```
 
 ## [Print unique rows in a given boolean matrix](https://practice.geeksforgeeks.org/problems/unique-rows-in-boolean-matrix/1)
@@ -18263,26 +21177,17 @@ ROW = 4
 COL = 5
 
 def findUniqueRows(M):
-    
-    # Traverse through the matrix
     for i in range(ROW):
         flag = 0
-
-        # Check if there is similar column is already printed, i.e if i and jth column match.
         for j in range(i):
             flag = 1
-
             for k in range(COL):
                 if (M[i][k] != M[j][k]):
                     flag = 0
 
             if (flag == 1):
                 break
-
-        # If no row is similar
         if (flag == 0):
-            
-            # Print the row
             for j in range(COL):
                 print(M[i][j], end = " ")
             print()    

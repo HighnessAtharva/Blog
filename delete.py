@@ -1,25 +1,57 @@
-def printCommonElements(mat):
-	mp = {mat[0][j]: 1 for j in range(N)}
+"""
+Input: {{"you", "we"},
+        {"have", "are"},
+        {"sleep", "eat", "drink"}}
 
-	# traverse the matrix
-	for i in range(1, M):
-		for j in range(N):
+Output:
+  you have sleep
+  you have eat
+  you have drink
+  you are sleep
+  you are eat
+  you are drink
+  we have sleep
+  we have eat
+  we have drink
+  we are sleep
+  we are eat
+  we are drink 
+"""
 
-			# If element is present in the map and is not duplicated in current row.
-			if mat[i][j] in mp and mp[mat[i][j]] == i:
-			# we increment count of the element in map by 1
-				mp[mat[i][j]] = i + 1
+R = 3
+C = 3
 
-				# If this is last row
-				if i == M - 1:
-					print(mat[i][j], end = " ")
+# A recursive function to print all possible sentences that can be formed from a list of word list
+def printUtil(arr, m, n, output):
 
-# Specify number of rows and columns
-M = 4
-N = 5
-mat = [[1, 2, 1, 4, 8],
-	[3, 7, 8, 5, 1],
-	[8, 7, 7, 3, 1],
-	[8, 1, 2, 7, 9]]
-printCommonElements(mat)
+	# Add current word to output array
+	output[m] = arr[m][n]
+
+	# If this is last word of current output sentence, then print the output sentence
+	if m==R-1:
+		for i in range(R):
+			print (output[i],end= " ")
+		print()
+		return
+
+	# Recur for next row
+	for i in range(C):
+		if arr[m+1][i] != "":
+			printUtil(arr, m+1, i, output)
+
+def printf(arr):
+
+	# Create an array to store sentence
+	output = [""] * R
+
+	# Consider all words for first row as starting points and print all sentences
+	for i in range(C):
+		if arr[0][i] != "":
+			printUtil(arr, 0, i, output)
+
+
+arr = [ ["you", "we",""],
+		["have", "are",""],
+		["sleep", "eat", "drink"]]
+printf(arr)
 
