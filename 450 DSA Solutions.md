@@ -40,37 +40,18 @@ print("After reversing:", A)
 ## [Find the maximum and minimum element in an array](https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1)
 
 ```python
-def getMinMax(arr: list, n: int):
-    min = 0
-    max = 0
- 
-    # If there is only one element then return it as min and max both
-    if n == 1:
-        max = arr[0]
-        min = arr[0]
-        return min, max
- 
-    # If there are more than one elements, then initialize min
-    # and max
-    if arr[0] > arr[1]:
-        max = arr[0]
-        min = arr[1]
-    else:
-        max = arr[1]
-        min = arr[0]
- 
-    for i in range(2, n):
+def getMinMax(arr):
+    min = arr[0]
+    max = arr[0]
+    for i in range(1, len(arr)):
+        if arr[i] < min:
+            min = arr[i]
         if arr[i] > max:
             max = arr[i]
-        elif arr[i] < min:
-            min = arr[i]
-
     return min, max
- 
 
 arr = [1000, 11, 445, 1, 330, 3000]
-arr_size = 6
-min, max = getMinMax(arr, arr_size)
+min, max = getMinMax(arr)
 print("Minimum element is", min)
 print("Maximum element is", max)
  
@@ -79,41 +60,16 @@ print("Maximum element is", max)
 ## [Find the "Kth" max and min element of an array](https://practice.geeksforgeeks.org/problems/kth-smallest-element/0)
 
 ```python
-import sys
+def kthSmallest(arr, k):
+    return sorted(arr)[k-1]
+
+def kthLargest(arr, k):
+    return sorted(arr, reverse=True)[k-1]
  
-# function to calculate number of elements less than equal to mid
-def count(nums, mid):
-    cnt = 0
-    for i in range(len(nums)):
-        if nums[i] <= mid:
-            cnt += 1
-    return cnt
- 
-def kthSmallest(nums, k):
-    low = sys.maxsize
-    high = -sys.maxsize 
-     
-    # calculate minimum and maximum the array.
-    for i in range(len(nums)):
-        low = min(low, nums[i])
-        high = max(high, nums[i])
- 
-        # Our answer range lies between minimum and maximum element
-        # of the array on which Binary Search is Applied
-    while low < high:
-        mid = low + (high - low) // 2
-        # if the count of number of elements in the array less than equal
-        # to mid is less than k then increase the number. Otherwise decrement
-        # the number and try to find a better answer.
-        if count(nums, mid) < k:
-            low = mid + 1
-        else:
-            high = mid
-    return low
- 
-nums = [1, 4, 5, 3, 19, 3]
+nums = [1, 4, 5, 3, 19, 1, 90, 99, 100]
 k = 3
 print("K'th smallest element is", kthSmallest(nums, k))
+print("K'th largest element is", kthLargest(nums, k))
 ```
 
 ## [Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo](https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s/0)
@@ -281,7 +237,7 @@ def getMinDiff(arr, k):
     return ans
 
 # Driver Code Starts
-k = 6 # total towers
+k = 6 # permissible increase or decrease in the height of each tower. 
 arr = [7, 4, 8, 8, 8, 9] # height of each array
 print("Maximum difference of height between all towers (minimized as much as possible) is", getMinDiff(arr, k))
 ```
@@ -315,13 +271,13 @@ def minJumps(arr, n):
     
     # Start traversing array
     
-    for i in range(1, n):
+    for start in range(1, n):
         # Check if we have reached the end of the array
-        if (i == n-1):
+        if (start == n-1):
           return jump
         
         # updating maxReach
-        maxReach = max(maxReach, i + arr[i])
+        maxReach = max(maxReach, start + arr[start])
         
         # we use a step to get to the current index
         step -= 1;
@@ -333,12 +289,12 @@ def minJumps(arr, n):
            
           # Check if the current index / position or lesser index
           # is the maximum reach point from the previous indexes
-            if(i >= maxReach):
+            if(start >= maxReach):
                 return -1
         
           # re-initialize the steps to the amount
           # of steps to reach maxReach from position i.
-            step = maxReach - i;
+            step = maxReach - start;
     return -1
     
  
