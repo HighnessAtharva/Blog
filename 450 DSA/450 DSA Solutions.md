@@ -744,7 +744,7 @@ print(findLongestConseqSubseq([1, 9, 3, 10, 4, 20, 2]))
 """
 Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.
 """
-def majorityElement(nums):
+def majorityElement(nums, k):
     if not nums:
         return []
     count1, count2, candidate1, candidate2 = 0, 0, None, None
@@ -764,10 +764,10 @@ def majorityElement(nums):
             count2 -= 1
     res = []
     for c in [candidate1, candidate2]:
-        if nums.count(c) > len(nums) // 3:
+        if nums.count(c) > len(nums) // k:
             res.append(c)
     return res
-print(majorityElement([3,2,3]))
+print(majorityElement([3,2,3], 3))
 ```
 
 ## [Maximum profit by buying and selling a share atmost twice](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)
