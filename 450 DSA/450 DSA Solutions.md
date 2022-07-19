@@ -419,11 +419,6 @@ print(nextPermutation("218765"))
 ## [Count Inversion](https://practice.geeksforgeeks.org/problems/inversion-of-array/0)
 
 ```python
-def mergeSort(arr, n):
-    # A temp_arr is created to store sorted array in merge function
-    temp_arr = [0]*n
-    return _mergeSort(arr, temp_arr, 0, n-1)
-  
 # This Function will use MergeSort to count inversions
 def _mergeSort(arr, temp_arr, left, right):
     inv_count = 0
@@ -482,14 +477,15 @@ def merge(arr, temp_arr, left, mid, right):
         j += 1
   
     # Copy the sorted subarray into Original array
-    for loop_var in range(left, right + 1):
-        arr[loop_var] = temp_arr[loop_var]
+    for x in range(left, right + 1):
+        arr[x] = temp_arr[x]
   
     return inv_count
   
 arr = [1, 20, 6, 4, 5]
 n = len(arr)
-result = mergeSort(arr, n)
+temp_arr = [0]*n
+result = _mergeSort(arr, temp_arr, 0, n-1)
 print("Number of inversions are", result)
 ```
 
@@ -520,15 +516,15 @@ An extended version of the two sum problem
 """
 # Returns number of pairs in arr[0..n-1] with sum equal to 'sum'
 def getPairsCount(arr, n, sum):
-  unordered_map = {}
+  seen = {}
   count = 0
   for i in range(n):
-    if sum - arr[i] in unordered_map:
-      count += unordered_map[sum - arr[i]]
-    if arr[i] in unordered_map:
-      unordered_map[arr[i]] += 1
+    if sum - arr[i] in seen:
+      count += seen[sum - arr[i]]
+    if arr[i] in seen:
+      seen[arr[i]] += 1
     else:
-      unordered_map[arr[i]] = 1
+      seen[arr[i]] = 1
   return count
   
 # Driver code
@@ -16270,34 +16266,58 @@ print(array)
 
 ## Merge Sort
 ```python
-def merge_sort(array):
-    if len(array) < 2:
-        return array
-    mid = len(array) // 2
-    left = merge_sort(array[:mid])
-    right = merge_sort(array[mid:])
-    return merge(left, right)
+# Python program for implementation of MergeSort
+def mergeSort(arr):
+	if len(arr) > 1:
 
-def merge(left, right):
-    result = []
-    i, j = 0, 0
-    while i < len(left) or j < len(right):
-        if left[i] <= right[j]:
-            result.append(left[i])
-            i += 1
-        else:
-            result.append(right[j])
-            j += 1
-        if i == len(left) or j == len(right):
-            result.extend(left[i:] or right[j:])
-            break
-    return result
+		# Finding the mid of the array
+		mid = len(arr)//2
 
-array=[5,2,3,1,4, -99, 0]
-print(merge_sort(array))
+		# Dividing the array elements
+		L = arr[:mid]
+
+		# into 2 halves
+		R = arr[mid:]
+
+		# Sorting the first half
+		mergeSort(L)
+
+		# Sorting the second half
+		mergeSort(R)
+
+		i = j = k = 0
+
+		# Copy data to temp arrays L[] and R[]
+		while i < len(L) and j < len(R):
+			if L[i] < R[j]:
+				arr[k] = L[i]
+				i += 1
+			else:
+				arr[k] = R[j]
+				j += 1
+			k += 1
+
+		# Checking if any element was left
+		while i < len(L):
+			arr[k] = L[i]
+			i += 1
+			k += 1
+
+		while j < len(R):
+			arr[k] = R[j]
+			j += 1
+			k += 1
+
+
+arr = [12, 11, 13, 5, 6, 7]
+mergeSort(arr)
+print(arr)
+
+
 ```
 
 ## Quick Sort
+
 ```python
 def partition(array, low, high):
     i = low - 1            # index of smaller element
@@ -16330,9 +16350,8 @@ print(array)
 ```
 
 ## Counting Sort
-```python
-# Counting sort in Python programming
 
+```python
 
 def countingSort(array):
     size = len(array)
