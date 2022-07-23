@@ -1,5 +1,10 @@
 # Blog
 My very own personal blog where I ruminate about technology, programming, books, entertainment and all the fine things in life. Currently hosted on Netlify but I sure do want my own domain for it some day. Hoping it blows up.
+
+![mywebsite](https://user-images.githubusercontent.com/68660002/180614089-ed51c89d-7948-49f0-aa3f-6f9ef50fbdcc.JPG)
+
+
+## File Hierarchy
 ```
 |   .gitmodules
 |   .hugo_build.lock
