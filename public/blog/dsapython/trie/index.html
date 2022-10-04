@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>DSA in Python - Trie | Atharva Shah</title>
+<meta name="keywords" content="DSA-Python">
+<meta name="description" content="Construct a trie from scratch Find shortest unique prefix for every word in a given list Word Break Problem | (Trie solution) Given a sequence of words, print all anagrams together Print unique rows in a given boolean matrix Construct a trie from scratch class TrieNode: def __init__(self): self.children = [None]*26 # isEndOfWord is True if node represent the end of the word self.isEndOfWord = False class Trie: def __init__(self): self.">
+<meta name="author" content="">
+<link rel="canonical" href="https://atharvashah.netlify.app/blog/dsapython/trie/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3aeba09d5c04bb513a113d9fd3cab93b81640d19be7d4d68e228d9263fd84b30.css" integrity="sha256-OuugnVwEu1E6ET2f08q5O4FkDRm&#43;fU1o4ijZJj/YSzA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://atharvashah.netlify.app/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://atharvashah.netlify.app/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://atharvashah.netlify.app/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://atharvashah.netlify.app/apple-touch-icon.png">
+<link rel="mask-icon" href="https://atharvashah.netlify.app/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-216150796-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-216150796-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-216150796-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><meta property="og:title" content="DSA in Python - Trie" />
+<meta property="og:description" content="Construct a trie from scratch Find shortest unique prefix for every word in a given list Word Break Problem | (Trie solution) Given a sequence of words, print all anagrams together Print unique rows in a given boolean matrix Construct a trie from scratch class TrieNode: def __init__(self): self.children = [None]*26 # isEndOfWord is True if node represent the end of the word self.isEndOfWord = False class Trie: def __init__(self): self." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://atharvashah.netlify.app/blog/dsapython/trie/" />
+<meta property="og:image" content="https://atharvashah.netlify.app/blog/dsa/trie.jpg" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2022-07-08T13:18:34&#43;05:30" />
+<meta property="article:modified_time" content="2022-07-08T13:18:34&#43;05:30" /><meta property="og:site_name" content="Atharva Shah" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://atharvashah.netlify.app/blog/dsa/trie.jpg" />
+<meta name="twitter:title" content="DSA in Python - Trie"/>
+<meta name="twitter:description" content="Construct a trie from scratch Find shortest unique prefix for every word in a given list Word Break Problem | (Trie solution) Given a sequence of words, print all anagrams together Print unique rows in a given boolean matrix Construct a trie from scratch class TrieNode: def __init__(self): self.children = [None]*26 # isEndOfWord is True if node represent the end of the word self.isEndOfWord = False class Trie: def __init__(self): self."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "https://atharvashah.netlify.app/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "DSA in Python - Trie",
+      "item": "https://atharvashah.netlify.app/blog/dsapython/trie/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "DSA in Python - Trie",
+  "name": "DSA in Python - Trie",
+  "description": "Construct a trie from scratch Find shortest unique prefix for every word in a given list Word Break Problem | (Trie solution) Given a sequence of words, print all anagrams together Print unique rows in a given boolean matrix Construct a trie from scratch class TrieNode: def __init__(self): self.children = [None]*26 # isEndOfWord is True if node represent the end of the word self.isEndOfWord = False class Trie: def __init__(self): self.",
+  "keywords": [
+    "DSA-Python"
+  ],
+  "articleBody": " Construct a trie from scratch Find shortest unique prefix for every word in a given list Word Break Problem | (Trie solution) Given a sequence of words, print all anagrams together Print unique rows in a given boolean matrix Construct a trie from scratch class TrieNode: def __init__(self): self.children = [None]*26 # isEndOfWord is True if node represent the end of the word self.isEndOfWord = False class Trie: def __init__(self): self.root = self.getNode() def getNode(self): # Returns new trie node (initialized to NULLs) return TrieNode() def _charToIndex(self,ch): # private helper function. # Converts key current character into index use only 'a' through 'z' and lower case return ord(ch)-ord('a') def insert(self,key): # If not present, inserts key into trie # If the key is prefix of trie node, just marks leaf node pCrawl = self.root length = len(key) for level in range(length): index = self._charToIndex(key[level]) # if current character is not present if not pCrawl.children[index]: pCrawl.children[index] = self.getNode() pCrawl = pCrawl.children[index] # mark last node as leaf pCrawl.isEndOfWord = True def search(self, key): # Search key in the trie # Returns true if key presents in trie, else false pCrawl = self.root length = len(key) for level in range(length): index = self._charToIndex(key[level]) if not pCrawl.children[index]: return False pCrawl = pCrawl.children[index] return pCrawl.isEndOfWord def constructTrie(): # Input keys (use only 'a' through 'z' and lower case) keys = [\"the\",\"a\",\"there\",\"answer\",\"any\", \"by\",\"their\", \"these\"] output = [\"Not present in trie\", \"Present in trie\"] # Trie object t = Trie() # Construct trie for key in keys: t.insert(key) # Search for different keys print(\"the-\u003e\",output[t.search(\"the\")]) print(\"these-\u003e\",output[t.search(\"these\")]) print(\"their-\u003e\",output[t.search(\"their\")]) print(\"thaw-\u003e\",output[t.search(\"thaw\")]) if __name__ == '__main__': constructTrie() Find shortest unique prefix for every word in a given list \"\"\" Input: [AND, BONFIRE, BOOL, CASE, CATCH, CHAR] Output: [A, BON, BOO, CAS, CAT, CH] Explanation: A can uniquely identify AND BON can uniquely identify BONFIRE BOO can uniquely identify BOOL CAS can uniquely identify CASE CAT can uniquely identify CATCH CH can uniquely identify CHAR \"\"\" # A class to store a Trie node class TrieNode: def __init__(self): # each node stores a dictionary to its child nodes self.child = {} # keep track of the total number of times the current node is visited # while inserting data in Trie self.freq = 0 # Function to insert a given string into a Trie def insert(root, word): # start from the root node curr = root for c in word: # create a new node if the path doesn't exist curr.child.setdefault(c, TrieNode()) # increment frequency curr.child[c].freq += 1 # go to the next node curr = curr.child[c] # Function to recursively traverse the Trie in a preorder fashion and # print the shortest unique prefix for each word in the Trie def printShortestPrefix(root, word_so_far): if root is None: return # print `word_so_far` if the current Trie node is visited only once if root.freq == 1: print(word_so_far) return # recur for all child nodes for k, v in root.child.items(): printShortestPrefix(v, word_so_far + k) # Find the shortest unique prefix for every word in a given array def findShortestPrefix(words): # construct a Trie from the given items root = TrieNode() for s in words: insert(root, s) # Recursively traverse the Trie in a preorder fashion to list all prefixes printShortestPrefix(root, '') if __name__ == '__main__': words = ['AND', 'BONFIRE', 'BOOL', 'CASE', 'CATCH', 'CHAR'] findShortestPrefix(words) Word Break Problem | (Trie solution) # Currently, Trie supports lowercase English characters. So, the character size is 26. CHAR_SIZE = 26 # A class to store a Trie node class Node: next = [None] * CHAR_SIZE exist = False # true when the node is a leaf node # Iterative function to insert a string into a Trie def insertTrie(head, s): # start from the root node node = head # do for each character in the string for c in s: index = ord(c) - ord('a') # create a new node if the path doesn't exist if node.next[index] is None: node.next[index] = Node() # go to the next node node = node.next[index] # mark the last node as a leaf node.exist = True # Function to determine if a string can be segmented into space-separated # sequence of one or more dictionary words def wordBreak(head, s): # get the length of the string n = len(s) # `good[i]` is true if the first `i` characters of `s` can be segmented good = [None] * (n + 1) good[0] = True # base case for i in range(n): if good[i]: node = head for j in range(i, n): if node is None: break index = ord(s[j]) - ord('a') node = node.next[index] # we can make [0, i] using our known decomposition # and [i+1, j] using this string in a Trie if node and node.exist: good[j + 1] = True # `good[n]` would be true if all characters of `s` can be segmented return good[n] if __name__ == '__main__': # List of strings to represent a dictionary words = ['self', 'th', 'is', 'famous', 'word', 'break', 'b', 'r', 'e', 'a', 'k', 'br', 'bre', 'brea', 'ak', 'prob', 'lem'] # given string s = 'wordbreakproblem' # create a Trie to store the dictionary t = Node() for word in words: insertTrie(t, word) # check if the string can be segmented or not if wordBreak(t, s): print('The string can be segmented') else: print('The string can\\'t be segmented') Given a sequence of words, print all anagrams together class TrieNode: def __init__(self): # each node stores a dictionary to its child nodes self.child = {} # stores anagrams in the leaf node self.words = [] # Function to insert a string into a Trie def insert(root, word, originalWord): # start from the root node curr = root for c in word: # create a new node if the path doesn't exist curr.child.setdefault(c, TrieNode()) # go to the next node curr = curr.child[c] # anagrams will end up at the same leaf node curr.words.append(originalWord) # A recursive function that traverses a Trie in preorder fashion and # prints all anagrams together def printAnagrams(root): # base case if root is None: return # print the current word if len(root.words) \u003e 1: print(root.words) # recur for all child nodes for child in root.child.values(): printAnagrams(child) # Function to group anagrams from a given list of words def groupAnagrams(words): # construct an empty trie root = TrieNode() # do for each word for word in words: # Sort the characters of the current word and insert it into the Trie. # Note that the original word gets stored on the leaf insert(root, ''.join(sorted(word)), word) # print all anagrams together printAnagrams(root) words = ['auctioned', 'actors', 'altered', 'streaming', 'related', 'education', 'aspired', 'costar', 'despair', 'mastering', 'act','cat','tac' ] groupAnagrams(words) Print unique rows in a given boolean matrix # Given a binary matrix of M X N of integers, you need to return only unique rows of binary array ROW = 4 COL = 5 def findUniqueRows(M): # Traverse through the matrix for i in range(ROW): flag = 0 # Check if there is similar column is already printed, i.e if i and jth column match. for j in range(i): flag = 1 for k in range(COL): if (M[i][k] != M[j][k]): flag = 0 if (flag == 1): break # If no row is similar if (flag == 0): # Print the row for j in range(COL): print(M[i][j], end = \" \") print() M = [ [ 0, 1, 0, 0, 1 ], [ 1, 0, 1, 1, 0 ], [ 0, 1, 0, 0, 1 ], [ 1, 0, 1, 0, 0 ] ] findUniqueRows(M) ",
+  "wordCount" : "1251",
+  "inLanguage": "en",
+  "image":"https://atharvashah.netlify.app/blog/dsa/trie.jpg","datePublished": "2022-07-08T13:18:34+05:30",
+  "dateModified": "2022-07-08T13:18:34+05:30",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://atharvashah.netlify.app/blog/dsapython/trie/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Atharva Shah",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://atharvashah.netlify.app/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://atharvashah.netlify.app/" accesskey="h" title="Atharva Shah (Alt + H)">
+                <img src="https://atharvashah.netlify.app/profile/header_button.gif" alt="" aria-label="logo"
+                    height="30">Atharva Shah</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://atharvashah.netlify.app/blog/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://atharvashah.netlify.app/">Home</a>&nbsp;»&nbsp;<a href="https://atharvashah.netlify.app/blog/">Blogs</a></div>
+    <h1 class="post-title">
+      DSA in Python - Trie
+    </h1>
+    <div class="post-meta"><span title='2022-07-08 13:18:34 +0530 IST'>July 8, 2022</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;1251 words
+
+</div>
+  </header> 
+<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/dsa/trie.jpg" alt="Trie">
+        <p>Learn Trie Algorithms in Python</p>
+</figure>
+  <div class="post-content"><ul>
+<li><a href="#construct-a-trie-from-scratch">Construct a trie from scratch</a></li>
+<li><a href="#find-shortest-unique-prefix-for-every-word-in-a-given-list">Find shortest unique prefix for every word in a given list</a></li>
+<li><a href="#word-break-problem--trie-solution">Word Break Problem | (Trie solution)</a></li>
+<li><a href="#given-a-sequence-of-words-print-all-anagrams-together">Given a sequence of words, print all anagrams together</a></li>
+<li><a href="#print-unique-rows-in-a-given-boolean-matrix">Print unique rows in a given boolean matrix</a></li>
+</ul>
+<h2 id="construct-a-trie-from-scratch">Construct a trie from scratch<a hidden class="anchor" aria-hidden="true" href="#construct-a-trie-from-scratch">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TrieNode</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>children <span style="color:#f92672">=</span> [<span style="color:#66d9ef">None</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">26</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># isEndOfWord is True if node represent the end of the word</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>isEndOfWord <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Trie</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>root <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>getNode()
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getNode</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Returns new trie node (initialized to NULLs)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> TrieNode()
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_charToIndex</span>(self,ch):
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># private helper function. </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Converts key current character into index use only &#39;a&#39; through &#39;z&#39; and lower case</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ord(ch)<span style="color:#f92672">-</span>ord(<span style="color:#e6db74">&#39;a&#39;</span>)
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">insert</span>(self,key):
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># If not present, inserts key into trie</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># If the key is prefix of trie node, just marks leaf node</span>
+</span></span><span style="display:flex;"><span>        pCrawl <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>root
+</span></span><span style="display:flex;"><span>        length <span style="color:#f92672">=</span> len(key)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> level <span style="color:#f92672">in</span> range(length):
+</span></span><span style="display:flex;"><span>            index <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_charToIndex(key[level])
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># if current character is not present</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> pCrawl<span style="color:#f92672">.</span>children[index]:
+</span></span><span style="display:flex;"><span>                pCrawl<span style="color:#f92672">.</span>children[index] <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>getNode()
+</span></span><span style="display:flex;"><span>            pCrawl <span style="color:#f92672">=</span> pCrawl<span style="color:#f92672">.</span>children[index]
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># mark last node as leaf</span>
+</span></span><span style="display:flex;"><span>        pCrawl<span style="color:#f92672">.</span>isEndOfWord <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search</span>(self, key):
+</span></span><span style="display:flex;"><span>          
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Search key in the trie</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Returns true if key presents in trie, else false</span>
+</span></span><span style="display:flex;"><span>        pCrawl <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>root
+</span></span><span style="display:flex;"><span>        length <span style="color:#f92672">=</span> len(key)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> level <span style="color:#f92672">in</span> range(length):
+</span></span><span style="display:flex;"><span>            index <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_charToIndex(key[level])
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> pCrawl<span style="color:#f92672">.</span>children[index]:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>            pCrawl <span style="color:#f92672">=</span> pCrawl<span style="color:#f92672">.</span>children[index]
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> pCrawl<span style="color:#f92672">.</span>isEndOfWord
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">constructTrie</span>():
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Input keys (use only &#39;a&#39; through &#39;z&#39; and lower case)</span>
+</span></span><span style="display:flex;"><span>    keys <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;the&#34;</span>,<span style="color:#e6db74">&#34;a&#34;</span>,<span style="color:#e6db74">&#34;there&#34;</span>,<span style="color:#e6db74">&#34;answer&#34;</span>,<span style="color:#e6db74">&#34;any&#34;</span>, <span style="color:#e6db74">&#34;by&#34;</span>,<span style="color:#e6db74">&#34;their&#34;</span>, <span style="color:#e6db74">&#34;these&#34;</span>]
+</span></span><span style="display:flex;"><span>    output <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Not present in trie&#34;</span>, <span style="color:#e6db74">&#34;Present in trie&#34;</span>]
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Trie object</span>
+</span></span><span style="display:flex;"><span>    t <span style="color:#f92672">=</span> Trie()
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Construct trie</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> key <span style="color:#f92672">in</span> keys:
+</span></span><span style="display:flex;"><span>        t<span style="color:#f92672">.</span>insert(key)
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Search for different keys</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;the-&gt;&#34;</span>,output[t<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#34;the&#34;</span>)])
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;these-&gt;&#34;</span>,output[t<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#34;these&#34;</span>)])
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;their-&gt;&#34;</span>,output[t<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#34;their&#34;</span>)])
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;thaw-&gt;&#34;</span>,output[t<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#34;thaw&#34;</span>)])
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    constructTrie()
+</span></span></code></pre></div><h2 id="find-shortest-unique-prefix-for-every-word-in-a-given-list">Find shortest unique prefix for every word in a given list<a hidden class="anchor" aria-hidden="true" href="#find-shortest-unique-prefix-for-every-word-in-a-given-list">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Input:  [AND, BONFIRE, BOOL, CASE, CATCH, CHAR]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Output: [A, BON, BOO, CAS, CAT, CH]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Explanation:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">A can uniquely identify AND
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">BON can uniquely identify BONFIRE
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">BOO can uniquely identify BOOL
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">CAS can uniquely identify CASE
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">CAT can uniquely identify CATCH
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">CH can uniquely identify CHAR
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A class to store a Trie node</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TrieNode</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># each node stores a dictionary to its child nodes</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>child <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># keep track of the total number of times the current node is visited</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># while inserting data in Trie</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>freq <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Function to insert a given string into a Trie</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">insert</span>(root, word):
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># start from the root node</span>
+</span></span><span style="display:flex;"><span>    curr <span style="color:#f92672">=</span> root
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> word:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># create a new node if the path doesn&#39;t exist</span>
+</span></span><span style="display:flex;"><span>        curr<span style="color:#f92672">.</span>child<span style="color:#f92672">.</span>setdefault(c, TrieNode())
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># increment frequency</span>
+</span></span><span style="display:flex;"><span>        curr<span style="color:#f92672">.</span>child[c]<span style="color:#f92672">.</span>freq <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># go to the next node</span>
+</span></span><span style="display:flex;"><span>        curr <span style="color:#f92672">=</span> curr<span style="color:#f92672">.</span>child[c]
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Function to recursively traverse the Trie in a preorder fashion and</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># print the shortest unique prefix for each word in the Trie</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">printShortestPrefix</span>(root, word_so_far):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> root <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># print `word_so_far` if the current Trie node is visited only once</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> root<span style="color:#f92672">.</span>freq <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>        print(word_so_far)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># recur for all child nodes</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> root<span style="color:#f92672">.</span>child<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>        printShortestPrefix(v, word_so_far <span style="color:#f92672">+</span> k)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Find the shortest unique prefix for every word in a given array</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findShortestPrefix</span>(words):
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># construct a Trie from the given items</span>
+</span></span><span style="display:flex;"><span>    root <span style="color:#f92672">=</span> TrieNode()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> words:
+</span></span><span style="display:flex;"><span>        insert(root, s)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Recursively traverse the Trie in a preorder fashion to list all prefixes</span>
+</span></span><span style="display:flex;"><span>    printShortestPrefix(root, <span style="color:#e6db74">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    words <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;AND&#39;</span>, <span style="color:#e6db74">&#39;BONFIRE&#39;</span>, <span style="color:#e6db74">&#39;BOOL&#39;</span>, <span style="color:#e6db74">&#39;CASE&#39;</span>, <span style="color:#e6db74">&#39;CATCH&#39;</span>, <span style="color:#e6db74">&#39;CHAR&#39;</span>]
+</span></span><span style="display:flex;"><span>    findShortestPrefix(words)
+</span></span></code></pre></div><h2 id="word-break-problem--trie-solution">Word Break Problem | (Trie solution)<a hidden class="anchor" aria-hidden="true" href="#word-break-problem--trie-solution">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Currently, Trie supports lowercase English characters. So, the character size is 26.</span>
+</span></span><span style="display:flex;"><span>CHAR_SIZE <span style="color:#f92672">=</span> <span style="color:#ae81ff">26</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A class to store a Trie node</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span>:
+</span></span><span style="display:flex;"><span>    next <span style="color:#f92672">=</span> [<span style="color:#66d9ef">None</span>] <span style="color:#f92672">*</span> CHAR_SIZE
+</span></span><span style="display:flex;"><span>    exist <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>       <span style="color:#75715e"># true when the node is a leaf node</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Iterative function to insert a string into a Trie</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">insertTrie</span>(head, s):
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># start from the root node</span>
+</span></span><span style="display:flex;"><span>    node <span style="color:#f92672">=</span> head
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># do for each character in the string</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> s:
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>        index <span style="color:#f92672">=</span> ord(c) <span style="color:#f92672">-</span> ord(<span style="color:#e6db74">&#39;a&#39;</span>)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># create a new node if the path doesn&#39;t exist</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> node<span style="color:#f92672">.</span>next[index] <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>            node<span style="color:#f92672">.</span>next[index] <span style="color:#f92672">=</span> Node()
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># go to the next node</span>
+</span></span><span style="display:flex;"><span>        node <span style="color:#f92672">=</span> node<span style="color:#f92672">.</span>next[index]
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># mark the last node as a leaf</span>
+</span></span><span style="display:flex;"><span>    node<span style="color:#f92672">.</span>exist <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Function to determine if a string can be segmented into space-separated</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sequence of one or more dictionary words</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wordBreak</span>(head, s):
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># get the length of the string</span>
+</span></span><span style="display:flex;"><span>    n <span style="color:#f92672">=</span> len(s)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># `good[i]` is true if the first `i` characters of `s` can be segmented</span>
+</span></span><span style="display:flex;"><span>    good <span style="color:#f92672">=</span> [<span style="color:#66d9ef">None</span>] <span style="color:#f92672">*</span> (n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    good[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>      <span style="color:#75715e"># base case</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> good[i]:
+</span></span><span style="display:flex;"><span>            node <span style="color:#f92672">=</span> head
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i, n):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> node <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>                index <span style="color:#f92672">=</span> ord(s[j]) <span style="color:#f92672">-</span> ord(<span style="color:#e6db74">&#39;a&#39;</span>)
+</span></span><span style="display:flex;"><span>                node <span style="color:#f92672">=</span> node<span style="color:#f92672">.</span>next[index]
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># we can make [0, i] using our known decomposition</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># and [i+1, j] using this string in a Trie</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> node <span style="color:#f92672">and</span> node<span style="color:#f92672">.</span>exist:
+</span></span><span style="display:flex;"><span>                    good[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># `good[n]` would be true if all characters of `s` can be segmented</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> good[n]
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># List of strings to represent a dictionary</span>
+</span></span><span style="display:flex;"><span>    words <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;self&#39;</span>, <span style="color:#e6db74">&#39;th&#39;</span>, <span style="color:#e6db74">&#39;is&#39;</span>, <span style="color:#e6db74">&#39;famous&#39;</span>, <span style="color:#e6db74">&#39;word&#39;</span>, <span style="color:#e6db74">&#39;break&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;k&#39;</span>, <span style="color:#e6db74">&#39;br&#39;</span>, <span style="color:#e6db74">&#39;bre&#39;</span>, <span style="color:#e6db74">&#39;brea&#39;</span>, <span style="color:#e6db74">&#39;ak&#39;</span>, <span style="color:#e6db74">&#39;prob&#39;</span>, <span style="color:#e6db74">&#39;lem&#39;</span>]
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># given string</span>
+</span></span><span style="display:flex;"><span>    s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;wordbreakproblem&#39;</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># create a Trie to store the dictionary</span>
+</span></span><span style="display:flex;"><span>    t <span style="color:#f92672">=</span> Node()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> words:
+</span></span><span style="display:flex;"><span>        insertTrie(t, word)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># check if the string can be segmented or not</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> wordBreak(t, s):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;The string can be segmented&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;The string can</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">t be segmented&#39;</span>)
+</span></span></code></pre></div><h2 id="given-a-sequence-of-words-print-all-anagrams-together">Given a sequence of words, print all anagrams together<a hidden class="anchor" aria-hidden="true" href="#given-a-sequence-of-words-print-all-anagrams-together">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TrieNode</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># each node stores a dictionary to its child nodes</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>child <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># stores anagrams in the leaf node</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>words <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Function to insert a string into a Trie</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">insert</span>(root, word, originalWord):
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># start from the root node</span>
+</span></span><span style="display:flex;"><span>    curr <span style="color:#f92672">=</span> root
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> word:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># create a new node if the path doesn&#39;t exist</span>
+</span></span><span style="display:flex;"><span>        curr<span style="color:#f92672">.</span>child<span style="color:#f92672">.</span>setdefault(c, TrieNode())
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># go to the next node</span>
+</span></span><span style="display:flex;"><span>        curr <span style="color:#f92672">=</span> curr<span style="color:#f92672">.</span>child[c]
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># anagrams will end up at the same leaf node</span>
+</span></span><span style="display:flex;"><span>    curr<span style="color:#f92672">.</span>words<span style="color:#f92672">.</span>append(originalWord)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A recursive function that traverses a Trie in preorder fashion and</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># prints all anagrams together</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">printAnagrams</span>(root):
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># base case</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> root <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># print the current word</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(root<span style="color:#f92672">.</span>words) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>        print(root<span style="color:#f92672">.</span>words)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># recur for all child nodes</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> child <span style="color:#f92672">in</span> root<span style="color:#f92672">.</span>child<span style="color:#f92672">.</span>values():
+</span></span><span style="display:flex;"><span>        printAnagrams(child)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Function to group anagrams from a given list of words</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">groupAnagrams</span>(words):
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># construct an empty trie</span>
+</span></span><span style="display:flex;"><span>    root <span style="color:#f92672">=</span> TrieNode()
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># do for each word</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> words:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Sort the characters of the current word and insert it into the Trie.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Note that the original word gets stored on the leaf</span>
+</span></span><span style="display:flex;"><span>        insert(root, <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(sorted(word)), word)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># print all anagrams together</span>
+</span></span><span style="display:flex;"><span>    printAnagrams(root)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>words <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;auctioned&#39;</span>, <span style="color:#e6db74">&#39;actors&#39;</span>, <span style="color:#e6db74">&#39;altered&#39;</span>, <span style="color:#e6db74">&#39;streaming&#39;</span>, <span style="color:#e6db74">&#39;related&#39;</span>, <span style="color:#e6db74">&#39;education&#39;</span>, <span style="color:#e6db74">&#39;aspired&#39;</span>, <span style="color:#e6db74">&#39;costar&#39;</span>, <span style="color:#e6db74">&#39;despair&#39;</span>, <span style="color:#e6db74">&#39;mastering&#39;</span>, <span style="color:#e6db74">&#39;act&#39;</span>,<span style="color:#e6db74">&#39;cat&#39;</span>,<span style="color:#e6db74">&#39;tac&#39;</span>
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>groupAnagrams(words)
+</span></span></code></pre></div><h2 id="print-unique-rows-in-a-given-boolean-matrix">Print unique rows in a given boolean matrix<a hidden class="anchor" aria-hidden="true" href="#print-unique-rows-in-a-given-boolean-matrix">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Given a binary matrix of M X N of integers, you need to return only unique rows of binary array</span>
+</span></span><span style="display:flex;"><span>ROW <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>COL <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findUniqueRows</span>(M):
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Traverse through the matrix</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(ROW):
+</span></span><span style="display:flex;"><span>        flag <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Check if there is similar column is already printed, i.e if i and jth column match.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i):
+</span></span><span style="display:flex;"><span>            flag <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(COL):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (M[i][k] <span style="color:#f92672">!=</span> M[j][k]):
+</span></span><span style="display:flex;"><span>                    flag <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (flag <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># If no row is similar</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (flag <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>):
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Print the row</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(COL):
+</span></span><span style="display:flex;"><span>                print(M[i][j], end <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34; &#34;</span>)
+</span></span><span style="display:flex;"><span>            print()    
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>M <span style="color:#f92672">=</span> [ [ <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span> ],
+</span></span><span style="display:flex;"><span>      [ <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span> ],
+</span></span><span style="display:flex;"><span>      [ <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span> ],
+</span></span><span style="display:flex;"><span>      [ <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span> ] ]
+</span></span><span style="display:flex;"><span>findUniqueRows(M)
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://atharvashah.netlify.app/tags/dsa-python/">DSA-Python</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://atharvashah.netlify.app/blog/dsapython/binary-tree/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>DSA in Python - Binary Trees</span>
+  </a>
+  <a class="next" href="https://atharvashah.netlify.app/blog/dsapython/arrays/">
+    <span class="title">Next »</span>
+    <br>
+    <span>DSA in Python - Arrays</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share DSA in Python - Trie on twitter"
+        href="https://twitter.com/intent/tweet/?text=DSA%20in%20Python%20-%20Trie&amp;url=https%3a%2f%2fatharvashah.netlify.app%2fblog%2fdsapython%2ftrie%2f&amp;hashtags=DSA-Python">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share DSA in Python - Trie on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fatharvashah.netlify.app%2fblog%2fdsapython%2ftrie%2f&amp;title=DSA%20in%20Python%20-%20Trie&amp;summary=DSA%20in%20Python%20-%20Trie&amp;source=https%3a%2f%2fatharvashah.netlify.app%2fblog%2fdsapython%2ftrie%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share DSA in Python - Trie on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fatharvashah.netlify.app%2fblog%2fdsapython%2ftrie%2f&title=DSA%20in%20Python%20-%20Trie">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share DSA in Python - Trie on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fatharvashah.netlify.app%2fblog%2fdsapython%2ftrie%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share DSA in Python - Trie on whatsapp"
+        href="https://api.whatsapp.com/send?text=DSA%20in%20Python%20-%20Trie%20-%20https%3a%2f%2fatharvashah.netlify.app%2fblog%2fdsapython%2ftrie%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share DSA in Python - Trie on telegram"
+        href="https://telegram.me/share/url?text=DSA%20in%20Python%20-%20Trie&amp;url=https%3a%2f%2fatharvashah.netlify.app%2fblog%2fdsapython%2ftrie%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+  </footer><div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-atharvashah-netlify-app" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function() {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        var disqus_shortname = 'https-atharvashah-netlify-app';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://atharvashah.netlify.app/">Atharva Shah</a></span> 
+    | <span><a href="/privacy-policy/" target="_blank">Privacy Policy</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function() {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function() {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) {};
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script></body>
+
+</html>
