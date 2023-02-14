@@ -94,13 +94,11 @@ params:
     
     # SEARCH
     fuseOpts:
-      isCaseSensitive: true
-      useExtendedSearch: true
-      location: 0
-      distance: 0
-      threshold: 0.0
-      minMatchCharLength: 4
-      keys: ["title","content", "tags", "author", "date", "description"]
+        isCaseSensitive: true
+        useExtendedSearch: false
+        includeMatches: false
+        minMatchCharLength: 3
+        keys: ["title", "description"]
     
     homeInfoParams:
       Title: "Howdy \U0001F44B"
