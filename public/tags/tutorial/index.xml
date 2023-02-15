@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>tutorial on Atharva Shah</title>
+    <link>https://atharvashah.netlify.app/tags/tutorial/</link>
+    <description>Recent content in tutorial on Atharva Shah</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Feb 2023 01:19:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Use ChatGPT to Generate Project UML Diagrams: A Step-by-Step Tutorial</title>
+      <link>https://atharvashah.netlify.app/blog/uml-diagrams-with-chatgpt/</link>
+      <pubDate>Wed, 15 Feb 2023 01:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/blog/uml-diagrams-with-chatgpt/</guid>
+      <description>Introduction Are you tired of spending hours designing UML diagrams for your projects? Look no further than ChatGPT, a powerful language model that can generate PlantUML code based on your project description. In this tutorial, we will guide you through the steps to use ChatGPT to generate UML diagrams for your projects in just a few clicks.
+Step 1: Write Your Project Description The first step is to write your project description or title.</description>
+    </item>
+    
+  </channel>
+</rss>
