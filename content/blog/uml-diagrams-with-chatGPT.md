@@ -27,14 +27,13 @@ Once you have your project description, you can ask ChatGPT to generate PlantUML
 
 ## Step 3: Copy and Paste the Generated Code to PlantText
 
-After ChatGPT generates the PlantUML code, copy and paste it into a PlantUML editor such as PlantText (https://www.planttext.com). The editor will render the image on the right side of the screen. You can modify the code to suit your needs or ask ChatGPT to regenerate the code based on your feedback.
+After ChatGPT generates the PlantUML code, copy and paste it into a PlantUML editor such as PlantText (<https://www.planttext.com>). The editor will render the image on the right side of the screen. You can modify the code to suit your needs or ask ChatGPT to regenerate the code based on your feedback.
 
 ![chatgpt-x-uml](/blog/uml-chat-3.png)
 
 ## Step 4: Verify the Diagram and Make Tweaks if Necessary
 
 Verify if the diagram meets your expectations. If not, you can ask ChatGPT to make tweaks based on your feedback. Mention any actors, events, or features that were missing or incorrect and paste the regenerated code back into the editor. Once the diagram looks good, you can save it and use it in your project.
-
 
 ## Step 5: Rinse & Repeat for Other Diagrams
 
@@ -47,7 +46,6 @@ Once you have your modified prompt, follow the same process as before: ask ChatG
 This way, you can use ChatGPT to generate a variety of diagrams for your project quickly and easily, without having to spend hours manually creating them. With the time you save, you can focus on other aspects of your project and make it even more successful.
 
 ![chatgpt-x-uml](/blog/uml-chat-4.png)
-
 
 ![chatgpt-x-uml](/blog/uml-chat-5.png)
 
