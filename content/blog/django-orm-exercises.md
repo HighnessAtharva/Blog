@@ -231,10 +231,10 @@ result12 = Books.objects.all().filter(author__popularity_score__gte=7).aggregate
 ### Query 13: Retrieve Titles of Books Written by Authors with 'a' in their Firstname
 
 ```py
-result13 = Books.objects.all().filter(author__firstname__contains='a').values_list('title', flat=True)
+result13 = Books.objects.all().filter(author__firstname__icontains='a').values_list('title', flat=True)
 ```
 
-**Explanation:** This query retrieves the titles of all books written by authors whose firstname contains the letter 'a'. The filter() method is used to filter the books based on the firstname of their respective authors. The values_list() method is used to retrieve only the title field of the resulting queryset. The flat=True parameter is used to return the resulting queryset as a flat list.
+**Explanation:** This query retrieves the titles of all books written by authors whose firstname contains the lowercase letter 'a'. The filter() method is used to filter the books based on the firstname of their respective authors. The values_list() method is used to retrieve only the title field of the resulting queryset. The flat=True parameter is used to return the resulting queryset as a flat list.
 
 ```py
 result13 = Books.objects.all().filter(author__firstname__contains='a').values_list('title', flat=True)
@@ -321,7 +321,7 @@ result22 = Authors.objects.all().filter(books__title__icontains='tle')
 ### Query 23: Retrieve all authors whose first name starts with the letter "a" and either have a popularity score greater than 5 or joined the platform after the year 2014
 
   ```py
-  result23 = Authors.objects.all().filter(Q(firstname__istartswith='a') and ( Q(popularity_score__gt=5) or Q(joindate__year__gt=2014)))
+  result23 = Authors.objects.filter(Q(firstname__istartswith='a') & (Q(popularity_score__gt=5) | Q(joindate__year__gt=2014)))
   ```
 
    **Explanation:**  This code retrieves all authors whose first name starts with the letter "a" and satisfies at least one of the two conditions:
@@ -340,7 +340,7 @@ result22 = Authors.objects.all().filter(books__title__icontains='tle')
 ### Query 25: Retrieve the first 10 authors in the database
 
   ```py
-  result25 = Authors.objects.all()[:10]
+  result25 = Authors.objects.all().order_by('joindate')[:10]
   ```
 
    **Explanation:** This code retrieves the first 10 authors in the database using the slice notation `[:10]`. It returns a queryset containing the first 10 records from the `Authors` model in the order they were created.
