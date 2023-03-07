@@ -2,11 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://atharvashah.netlify.app/tags/album-review/</loc>
+    <lastmod>2023-03-06T00:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/blog/music-review/loveless-mbv/</loc>
+    <lastmod>2023-03-06T00:18:34+05:30</lastmod>
+  </url><url>
     <loc>https://atharvashah.netlify.app/</loc>
-    <lastmod>2023-02-19T01:18:34+05:30</lastmod>
+    <lastmod>2023-03-06T00:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/blog/</loc>
-    <lastmod>2023-02-19T01:18:34+05:30</lastmod>
+    <lastmod>2023-03-06T00:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/dream-pop/</loc>
+    <lastmod>2023-03-06T00:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/music/</loc>
+    <lastmod>2023-03-06T00:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/shoegaze/</loc>
+    <lastmod>2023-03-06T00:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/</loc>
+    <lastmod>2023-03-06T00:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/database/</loc>
     <lastmod>2023-02-19T01:18:34+05:30</lastmod>
@@ -15,9 +33,6 @@
     <lastmod>2023-02-19T01:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/programming/</loc>
-    <lastmod>2023-02-19T01:18:34+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/tags/</loc>
     <lastmod>2023-02-19T01:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/blog/django-orm-exercises/</loc>
