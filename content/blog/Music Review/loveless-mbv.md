@@ -19,4 +19,4 @@ But as with any album, there are a few critiques to be made. Some of the tracks 
 
 Despite these minor criticisms, this record is an absolute must-listen for fans of the shoegaze genre and anyone who wants to experience the pinnacle of avant-garde music. My Bloody Valentine has truly outdone themselves with this album, creating a sonic landscape that is both mesmerizing and surreal.
 
-**Rating - 8/10**
+**Rating: 7/10**
