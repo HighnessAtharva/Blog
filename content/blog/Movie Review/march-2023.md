@@ -1,5 +1,5 @@
 ---
-title: "March 2023 Movie Madness"
+title: "March 2023 Movies: Magic and Melodrama"
 date: 2023-03-14T00:18:34+05:30
 draft: false
 cover: 
@@ -22,12 +22,7 @@ Lights, camera, action! March 2023 was a month filled with movie magic, and I ha
 - [Primer, 2004 - ★★★★](#primer-2004---)
 - [Creepshow, 1982 - ★★★½](#creepshow-1982---)
 
-
- 
-
-
 ---
-
 
 ## First Reformed, 2017 - ★★★
 
