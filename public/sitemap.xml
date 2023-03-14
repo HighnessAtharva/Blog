@@ -2,16 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://atharvashah.netlify.app/</loc>
+    <lastmod>2023-03-14T00:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/blog/</loc>
+    <lastmod>2023-03-14T00:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/blog/movie-review/march-2023/</loc>
+    <lastmod>2023-03-14T00:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/movie-review/</loc>
+    <lastmod>2023-03-14T00:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/</loc>
+    <lastmod>2023-03-14T00:18:34+05:30</lastmod>
+  </url><url>
     <loc>https://atharvashah.netlify.app/tags/album-review/</loc>
     <lastmod>2023-03-07T00:20:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/blog/music-review/stratosphere/</loc>
-    <lastmod>2023-03-07T00:20:34+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/</loc>
-    <lastmod>2023-03-07T00:20:34+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/blog/</loc>
     <lastmod>2023-03-07T00:20:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/indie-rock/</loc>
@@ -21,9 +30,6 @@
     <lastmod>2023-03-07T00:20:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/slowcore/</loc>
-    <lastmod>2023-03-07T00:20:34+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/tags/</loc>
     <lastmod>2023-03-07T00:20:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/blog/music-review/demon-days/</loc>
