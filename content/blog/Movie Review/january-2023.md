@@ -11,6 +11,13 @@ tags: ["Movie Review"]
 
 January 2023 brought a plethora of cinematic experiences my way, and I'm eager to share my take on them. From classic films to new releases, my viewing journey was diverse and exciting. This month I tackled a few movies that have been on my watchlist for a while, and I'm glad I finally got around to watching them. I enjoyed "The Menu" and "Moonrise Kingdom," but I was disappointed by "To Die For." I also watched a comedy special, and I was blown away by "Andrew Schulz: Infamous." It's one of the best comedy specials I've seen in a long time. Get your popcorn ready, because it's time to dive into my January 2023 movie reviews!
 
+---
+**Click the banner below to follow me on Letterboxd and see what I'm watching next!**
+
+[![Follow me on Letterboxd](/blog/movie-review/lbx-follow.png)](https://letterboxd.com/highnessatharva/)
+
+---
+
 - [To Die For, 1995 - ★★½](#to-die-for-1995---)
 - [Andrew Schulz: Infamous, 2022 - ★★★★](#andrew-schulz-infamous-2022---)
 - [Bio Hunter, 1995 - ★★★](#bio-hunter-1995---)

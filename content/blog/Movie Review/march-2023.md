@@ -11,6 +11,14 @@ tags: ["Movie Review"]
 
 Lights, camera, action! March 2023 was a month filled with movie magic, and I had the pleasure of watching some truly amazing films. From thought-provoking dramas to side-splitting comedies, this month had it all. I'm excited to share my thoughts on the movies I watched, which include the morally challenging First Reformed, the hilarious Game Night, the emotionally charged Spencer, and the classic Edward Scissorhands. I also delved into some cult classics, such as the offbeat Buffalo '66 and the spooky Creepshow. And let's not forget the amazing live performance by The Weeknd at SoFi Stadium, which left me in awe. So grab some popcorn and join me as I take you through my movie journey of March 2023.
 
+---
+**Click the banner below to follow me on Letterboxd and see what I'm watching next!**
+
+[![Follow me on Letterboxd](/blog/movie-review/lbx-follow.png)](https://letterboxd.com/highnessatharva/)
+
+---
+
+
 - [First Reformed, 2017 - ★★★](#first-reformed-2017---)
 - [Game Night, 2018 - ★★★½](#game-night-2018---)
 - [Buffalo '66, 1998 - ★★★★](#buffalo-66-1998---)
