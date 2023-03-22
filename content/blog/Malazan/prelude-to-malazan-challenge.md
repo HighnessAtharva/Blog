@@ -19,11 +19,10 @@ Fast forward to 2023, and I've made the decision to finally finish the series. A
 
 I know what I'm in for this time around, and that gives me tremendous confidence to topple this series once and for all. With the added bonus of it being incredibly well-written, richly worded, and immaculately crafted, it's sure to be a wild ride that I can't wait to experience. Here's to finally conquering the Malazan Book of the Fallen!
 
---- 
+---
 
 To see just what I am talking about, here is a comparitive image of the books I intend to read this year:
 ![Malazan Book Stack](/blog/malazan/malazan-book-stack.jpg)
-
 
 ---
 
@@ -54,7 +53,7 @@ And for the maps, I'm using an excellent website that has been recommended to me
 To supplement my reading, I'll also be an active member of the Malazan Discord server. It's a great community where I can discuss my thoughts and questions with other fans of the series. And if I need to look up anything non-spoilery, I'll be turning to the Malazan Wiki.
 
 💬 [Malazan Discord Server](https://discord.com/invite/t6b4gGw)  
- 
+
 📚 [Malazan Wiki](https://malazan.fandom.com/wiki/Malazan_Wiki)
 
 While I'm a little late to the party, I'm eager to dive into this series and see what all the fuss is about. With the Elder Gods willing and the encouragement from my fellow Malazan fans, I'm confident that I can reach my goal. So please, cheer me on down in the comments, and let's get started on this epic adventure together!
