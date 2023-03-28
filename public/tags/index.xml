@@ -6,7 +6,16 @@
     <description>Recent content in Tags on Atharva Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Mar 2023 01:18:35 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Mar 2023 00:18:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Movie Review</title>
+      <link>https://atharvashah.netlify.app/tags/movie-review/</link>
+      <pubDate>Tue, 28 Mar 2023 00:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/tags/movie-review/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>lists</title>
       <link>https://atharvashah.netlify.app/tags/lists/</link>
@@ -40,15 +49,6 @@
       <pubDate>Sat, 18 Mar 2023 00:19:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/tags/reading-challenge/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Movie Review</title>
-      <link>https://atharvashah.netlify.app/tags/movie-review/</link>
-      <pubDate>Tue, 14 Mar 2023 00:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/movie-review/</guid>
       <description></description>
     </item>
     

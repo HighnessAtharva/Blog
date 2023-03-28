@@ -1,6 +1,6 @@
 ---
 title: "March 2023 Movies: Magic and Melodrama"
-date: 2023-03-14T00:18:34+05:30
+date: 2023-03-28T00:18:34+05:30
 draft: false
 cover: 
     image: blog/movie-review/March-2023.jpg
@@ -9,7 +9,7 @@ cover:
 tags: ["Movie Review"]
 ---
 
-Lights, camera, action! March 2023 was a month filled with movie magic, and I had the pleasure of watching some truly amazing films. From thought-provoking dramas to side-splitting comedies, this month had it all. I'm excited to share my thoughts on the movies I watched, which include the morally challenging First Reformed, the hilarious Game Night, the emotionally charged Spencer, and the classic Edward Scissorhands. I also delved into some cult classics, such as the offbeat Buffalo '66 and the spooky Creepshow. And let's not forget the amazing live performance by The Weeknd at SoFi Stadium, which left me in awe. So grab some popcorn and join me as I take you through my movie journey of March 2023.
+Lights, camera, action! March 2023 was a month filled with movie magic, and I had the pleasure of watching some truly amazing films. From thought-provoking dramas to side-splitting comedies, this month had it all. I'm excited to share my thoughts on the movies I watched, which include the morally challenging First Reformed, the hilarious Game Night, the emotionally charged Spencer, and the classic Edward Scissorhands. I also delved into some cult classics, such as the offbeat Buffalo '66 and the spooky Creepshow. I also managed to watch all the Scream sequels, which were a lot of fun. Ghostface killah baby! Woodsboro gang for life! And let's not forget the amazing live performance by The Weeknd at SoFi Stadium, which left me in awe. So grab some popcorn and join me as I take you through my movie journey of March 2023.
 
 ---
 **Click the banner below to follow me on Letterboxd and see what I'm watching next!**
@@ -18,7 +18,10 @@ Lights, camera, action! March 2023 was a month filled with movie magic, and I ha
 
 ---
 
-
+- [Scream, 2022 - ★★½](#scream-2022---)
+- [Scream 4, 2011 - ★★★½](#scream-4-2011---)
+- [Scream 3, 2000 - ★★★](#scream-3-2000---)
+- [Scream 2, 1997 - ★★★½](#scream-2-1997---)
 - [First Reformed, 2017 - ★★★](#first-reformed-2017---)
 - [Game Night, 2018 - ★★★½](#game-night-2018---)
 - [Buffalo '66, 1998 - ★★★★](#buffalo-66-1998---)
@@ -31,6 +34,52 @@ Lights, camera, action! March 2023 was a month filled with movie magic, and I ha
 - [Creepshow, 1982 - ★★★½](#creepshow-1982---)
 
 ---
+
+## Scream, 2022 - ★★½
+
+![Scream, 2022 - ★★½](https://a.ltrbxd.com/resized/film-poster/5/7/2/1/1/9/572119-scream-0-600-0-900-crop.jpg?v=9dc682121f)
+
+**Watched on**: 25 March 2023
+
+**Review**
+
+ "Scream 5" - the franchise loses its scream! The fifth installment in the "Scream" franchise brings back the surviving characters from the previous films once again, this time investigating a new series of murders.While it's nice to see the old characters back in action, their age is starting to show, and the movie struggles to recapture the magic of the original films. The new characters, while entertaining, are not quite as memorable as their predecessors, and the dialogues are often cheesy and self-aware to a fault.The movie also suffers from some editing issues, with certain scenes feeling disjointed and rushed. The pacing is a bit off, and the film never quite manages to build the same level of suspense as the earlier entries in the franchise.That being said, the mystery of the killer's identity is still engaging, and the reveal is satisfying. The movie does a good job of keeping the audience guessing until the very end.Overall, "Scream 5" is a decent enough horror movie, but it falls short of the high standards set by the earlier films in the franchise. While the mystery is engaging, the characters are showing their age, and the dialogues and editing issues detract from the overall experience. I'd give it a 2.5 out of 5 stars, with a recommendation to diehard fans of the franchise who are looking for closure.
+
+[Read on Letterboxd](https://letterboxd.com/highnessatharva/film/scream-2022/)
+
+## Scream 4, 2011 - ★★★½
+
+![Scream 4, 2011 - ★★★½](https://a.ltrbxd.com/resized/sm/upload/xw/xb/gx/5p/xEl8QQunHWUtf0dlKEbMXlfKSdr-0-600-0-900-crop.jpg?v=47e41f3237)
+
+**Watched on**: 23 March 2023
+
+**Review**
+
+ Time for a soft reboot. the series gets a reboot! This fourth installment in the "Scream" franchise takes place ten years after the events of the previous film and introduces a new generation of characters.The movie attempts to update the franchise for a modern audience, with references to social media and internet culture. While this soft reboot approach can be hit or miss, "Scream 4" manages to blend the old and the new fairly well. The film is able to capture the essence of the original while still feeling fresh.However, one thing that does detract from the film is the coloring and lighting. The movie's bright and colorful aesthetic doesn't quite match the darker, grittier style of the first three films. While this can be seen as an attempt to modernize the franchise, it does take away from the signature "Scream" style.As for the characters, the new additions are mostly enjoyable, with a standout performance from Emma Roberts as Jill. The returning characters are also a welcome presence, with their chemistry and banter still as enjoyable as ever.The identity of the killer is once again a mystery, with the movie doing a good job of keeping the audience guessing. The reveal is satisfying, with a few twists and turns that keep things interesting.Overall, "Scream 4" is a decent addition to the franchise. While the bright and colorful aesthetic may not be for everyone, the movie does a good job of blending the old and the new. Fans of the franchise will enjoy the return of their favorite characters, and the new additions bring their own unique flavor to the mix.
+
+[Read on Letterboxd](https://letterboxd.com/highnessatharva/film/scream-4/)
+
+## Scream 3, 2000 - ★★★
+
+![Scream 3, 2000 - ★★★](https://a.ltrbxd.com/resized/film-poster/4/9/4/5/3/49453-scream-3-0-600-0-900-crop.jpg?v=7ba5075018)
+
+**Watched on**: 19 March 2023
+
+**Review**
+
+ The third installment in the "Scream" franchise brings back the surviving characters from the previous films as they are once again targeted by a new killer in a Ghostface mask.While the film does have its share of suspense and scares, it falls short in comparison to its predecessors. The plot is a bit convoluted and doesn't quite pack the same punch as the first two movies. The characters, while still entertaining, don't have the same level of depth as they did in previous films.One thing that does work well in this movie is the exploration of the idea of trilogies, with the characters reflecting on the concept and its impact on the horror genre. However, this theme doesn't quite make up for the film's shortcomings in other areas.As for the identity of the killer, it doesn't quite live up to the mystery and suspense of the first two films. The reveal is a bit underwhelming, and the motivations behind the killings feel a bit contrived. Still, an essential scream movie. Goes without saying.
+
+[Read on Letterboxd](https://letterboxd.com/highnessatharva/film/scream-3/)
+
+## Scream 2, 1997 - ★★★½
+
+![Scream 2, 1997 - ★★★½](https://a.ltrbxd.com/resized/sm/upload/ju/sr/4r/t3/c5AyWNWooMGkJXlqLwmPQCjUwHt-0-600-0-900-crop.jpg?v=b19f368866)
+
+**Watched on**: 18 March 2023
+
+**Review**
+
+ One thing that sets the "Scream" franchise apart from other horror movies is its self-awareness and willingness to poke fun at horror movie tropes. "Scream 2" is no exception, with characters often referencing horror movies and their clichés, adding a layer of humor to the film.As for the identity of the Ghostface killer, the movie does a great job of keeping the audience guessing until the end. The revelation is a bit of a shocker, with the killer's motivations being revealed in a dramatic twist. I won't spoil it for those who haven't seen it, but I will say that it's a satisfying conclusion to the film.Overall, "Scream 2" is a great example of a self-aware horror movie that both scares and entertains. It's a solid sequel that manages to capture the essence of the original while adding its own unique spin. If you're a fan of horror movies or just looking for a good scare, "Scream 2" is definitely worth checking out."Scream 2" - the sequel that slays! This horror flick from the late 90s is a scream-fest that will have you jumping out of your seat. With its fair share of twists and turns, "Scream 2" manages to keep the audience on the edge of their seats until the very end.The film picks up with Sidney Prescott (Neve Campbell) trying to move on from the horrors of the first film, only to find herself targeted yet again by a new killer in a Ghostface mask. With the help of her friends and a few new characters, Sidney must once again outsmart the killer and survive the night.One thing that stands out in "Scream 2" is the impressive makeup and special effects, which truly bring the horror to life. The characters are also well-developed, with each one bringing a unique personality to the screen. However, the movie does fall into some clichés that are common in the horror genre, which may disappoint some viewers.Overall, "Scream 2" is a worthy follow-up to the original film, with plenty of suspense and scares to keep horror fans entertained. While it may not reinvent the wheel, it certainly delivers on the thrills and spills.
 
 ## First Reformed, 2017 - ★★★
 
