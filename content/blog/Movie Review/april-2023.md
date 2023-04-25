@@ -18,6 +18,10 @@ April 2023 was an exciting month for movie enthusiasts, with a variety of genres
 
 ---
 
+- [Scream VI, 2023 - ★★★★](#scream-vi-2023---)
+- [Fresh, 2022 - ★★★★](#fresh-2022---)
+- [The Sixth Sense, 1999 - ★½](#the-sixth-sense-1999---)
+- [Ant-Man and the Wasp: Quantumania, 2023 - ★★★](#ant-man-and-the-wasp-quantumania-2023---)
 - [About Time, 2013 - ★★★★](#about-time-2013---)
 - [Shazam! Fury of the Gods, 2023 - ★★½](#shazam-fury-of-the-gods-2023---)
 - [The Last Kingdom: Seven Kings Must Die, 2023 - ★★★★](#the-last-kingdom-seven-kings-must-die-2023---)
@@ -28,6 +32,54 @@ April 2023 was an exciting month for movie enthusiasts, with a variety of genres
 - [Barry Lyndon, 1975 - ★★★★½](#barry-lyndon-1975---)
 - [Creed III, 2023 - ★★★](#creed-iii-2023---)
 - [Avatar: The Way of Water, 2022 - ★★★★½](#avatar-the-way-of-water-2022---)
+
+## Scream VI, 2023 - ★★★★
+
+![Scream VI, 2023 - ★★★★](https://a.ltrbxd.com/resized/film-poster/8/3/9/2/4/4/839244-scream-vi-0-600-0-900-crop.jpg?v=07a255685d)
+
+**Watched on**: 26 April 2023
+
+**Review**
+
+ Well, well, well, looks like the Scream franchise still has some life left in it! Scream VI is a slasher masterpiece that will have you screaming for more! This movie is the epitome of meta, self-aware and expectation defying, and I must say, it is an absolute thrill ride from start to finish.The SFX and sound were top-notch, and the gore was so unhinged that it had me covering my eyes and gasping in equal measure. The character development was awesome, especially Jenna Ortega's performance, which was simply outstanding. This movie had me on my toes most of the time, and the payoff was well worth the wait.The references, jokes, and editing were all top-notch, and the overall balance of the movie was impressive. However, there were some instances where some characters survived due to plot armor and unlikely events, but that's a minor gripe compared to the sheer entertainment value of this movie.Overall, Scream VI is a must-watch for any slasher fan, and it definitely brings back the energy to the franchise. I'm giving this movie an A+ and would highly recommend it to anyone who loves a good scare. So go ahead and scream your lungs out with Scream VI!
+
+[Read on Letterboxd](https://letterboxd.com/highnessatharva/film/scream-vi/)
+
+## Fresh, 2022 - ★★★★
+
+![Fresh, 2022 - ★★★★](https://a.ltrbxd.com/resized/film-poster/7/0/6/0/6/4/706064-fresh-0-600-0-900-crop.jpg?v=546285b96d)
+
+**Watched on**: 21 April 2023
+
+**Review**
+
+ Hold on to your seats, because Fresh is a movie that will leave you feeling, well, fresh! This movie is not for the faint of heart, but for those who love a good psychological thriller, Fresh is a must-watch.The build-up to the title drop is so important and well-crafted that it sets the tone for the entire movie. Shot in a good spot, with interesting interior design and set pieces, Fresh is a feast for the eyes. However, don't let the beautiful aesthetics fool you, because this movie goes deep into some disturbing themes that might be too much for some viewers.The fight sequences were entertaining, but it was the psychological warfare and the subtle ways that characters treated, behaved, or expressed their feelings non-verbally that really intrigued me. And let's not forget about the gross scenes, because Fresh doubles down on them and delivers some truly memorable shit.In many ways, Fresh is a more cultured version of "Raw", with a similar focus on the human psyche and the disturbing things that can happen when it's pushed to its limits. Overall, Fresh is a captivating, intriguing, and thought-provoking movie that will leave you feeling, well, fresh. I'm giving this movie a solid 4 out of 5 and highly recommend it to anyone who loves a good psychological thriller.
+
+[Read on Letterboxd](https://letterboxd.com/highnessatharva/film/fresh-2022/)
+
+## The Sixth Sense, 1999 - ★½
+
+![The Sixth Sense, 1999 - ★½](https://a.ltrbxd.com/resized/film-poster/5/1/4/0/7/51407-the-sixth-sense-0-600-0-900-crop.jpg?v=3a05a55f47)
+
+**Watched on**: 20 April 2023
+
+**Review**
+
+ Boring ahh movie. Saw the ending plot twist coming miles before it happened. Any movie with a 6 to 13-year-old as a central character is bound to come off more or less as boring to me. Did not enjoy at all.
+
+[Read on Letterboxd](https://letterboxd.com/highnessatharva/film/the-sixth-sense/)
+
+## Ant-Man and the Wasp: Quantumania, 2023 - ★★★
+
+![Ant-Man and the Wasp: Quantumania, 2023 - ★★★](https://a.ltrbxd.com/resized/film-poster/5/6/6/2/3/7/566237-ant-man-and-the-wasp-quantumania-0-600-0-900-crop.jpg?v=27ced3fac4)
+
+**Watched on**: 20 April 2023
+
+**Review**
+
+ Ant Man and the Wasp: Quantumania - a marvel movie that packs in the puns, action, and family fun, yet leaves a little something to be desired. This movie may not have the same punch as some of Marvel's recent hits, but it still brings a good dose of humor and action that's perfect for a night out with the family. The chemistry between Scott and his daughter is a heartwarming touch, and the scene with the multiverse core doppelgangers is a highlight. But let's be real, Kang steals the show. He's the centerpiece of the movie and is played with delicious villainous glee. It's a shame that the build-up to him was bogged down and sludgy, though.While the VFX is impressive for most scenes, there are moments where it's a bit shoddy, which is a bummer. But the action scenes, music, and jokes make up for it, even if the dialogue can be cheesy at times. Overall, this is a decent Marvel movie, but it feels a bit juvenile and parodic. The characters with outrageous designs and Wasp's Mom are not favorites, but the good ending still leaves a positive impression. This is a movie that you can enjoy with the family, but don't expect it to be the best of the Marvel Universe.
+
+[Read on Letterboxd](https://letterboxd.com/highnessatharva/film/ant-man-and-the-wasp-quantumania/)
 
 ## About Time, 2013 - ★★★★
 
