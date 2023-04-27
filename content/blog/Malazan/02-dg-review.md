@@ -10,7 +10,6 @@ tags: ["Malazan Book of the Fallen", "Fantasy"]
 ---
 
 **Rating:** 4/5 ⭐
-just a test!
 
 After reading two books in the Malazan Book of the Fallen series, my impression of the writer's work has shifted slightly. While this book, Deadhouse Gates, connected with me on a character-driven level, its bleakness, plethora of new faces, and the desert setting made it slightly more confusing than the previous book, Gardens of the Moon.
 
