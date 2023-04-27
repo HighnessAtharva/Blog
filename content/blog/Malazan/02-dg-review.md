@@ -10,7 +10,7 @@ tags: ["Malazan Book of the Fallen", "Fantasy"]
 ---
 
 **Rating:** 4/5 ⭐
-
+How about now?
 After reading two books in the Malazan Book of the Fallen series, my impression of the writer's work has shifted slightly. While this book, Deadhouse Gates, connected with me on a character-driven level, its bleakness, plethora of new faces, and the desert setting made it slightly more confusing than the previous book, Gardens of the Moon.
 
 Erikson, known for his world-building skills, takes the already extensive cast of characters and places and expands them even further, leaving little respite for readers who struggled to keep up with the first book. However, this book does improve on characterization compared to the previous one.
