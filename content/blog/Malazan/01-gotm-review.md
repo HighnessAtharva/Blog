@@ -54,3 +54,4 @@ The worldbuilding in "Gardens of the Moon" is stupendous. Erikson has fashioned 
 As someone who adores absorbing worldbuilding, I was overwhelmed by it for perhaps the first time while reading a fantasy book. However, I can only blame my own shortcomings rather than Erikson for the fact that I was sometimes deluged by the book's worldbuilding and labyrinthine plot. My advice to those new to Erikson's work is to relax and read without overthinking it. Although I found myself irked at times trying to comprehend everything I was reading, I learned to appreciate the story and writing without feeling the need to understand everything all at once.
 
 I am captivated and eager to press on, and in a few days' time, I will commence my journey with "Deadhouse Gates". Expect a review of that book in the coming weeks.
+ 
