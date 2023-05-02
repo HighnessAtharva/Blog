@@ -4,10 +4,22 @@ date: 2023-05-01T23:20:34+05:30
 draft: false
 cover: 
     image: blog/django-crypto-app/cover-3.png
-    alt: Part 2 - Templates, Views and URLs
+    alt: Part 3 - Wrap-Up and Testing
     caption: Here, we will wrap the series up by discussing testing approach by writing test cases for Models, Views and Templates using Pytest.
 tags: ["Django", "Python"]
 ---
+
+- [Introduction](#introduction)
+- [Test Driven Development Approach Explained](#test-driven-development-approach-explained)
+  - [URL Testing](#url-testing)
+  - [Model Testing](#model-testing)
+  - [View Testing](#view-testing)
+- [Writing Tests](#writing-tests)
+  - [Testing URLS](#testing-urls)
+  - [Testing Models](#testing-models)
+  - [Testing Views](#testing-views)
+- [How to Run Tests](#how-to-run-tests)
+- [Conclusion](#conclusion)
 
 ## Introduction
 
