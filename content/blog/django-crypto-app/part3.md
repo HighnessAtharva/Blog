@@ -9,6 +9,7 @@ cover:
 tags: ["Django", "Python"]
 ---
 
+
 - [Introduction](#introduction)
 - [Test Driven Development Approach Explained](#test-driven-development-approach-explained)
   - [URL Testing](#url-testing)
@@ -20,6 +21,8 @@ tags: ["Django", "Python"]
   - [Testing Views](#testing-views)
 - [How to Run Tests](#how-to-run-tests)
 - [Conclusion](#conclusion)
+
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png "Buy Me A Coffee")](https://www.buymeacoffee.com/AtharvaShah)
 
 ## Introduction
 

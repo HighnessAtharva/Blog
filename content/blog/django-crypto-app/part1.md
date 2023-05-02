@@ -23,6 +23,8 @@ tags: ["Django", "Python"]
 - [Registering Models in Admin](#registering-models-in-admin)
 - [Conclusion](#conclusion)
 
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png "Buy Me A Coffee")](https://www.buymeacoffee.com/AtharvaShah)
+
 ## Introduction
 
 Welcome to this 3-part technical tutorial series, where we'll be building a Django project that enables users to manage their cryptocurrency portfolios. To implement the functionalities and additional features, we'll be utilizing API calls to coingecko or any other cryptocurrency API.
