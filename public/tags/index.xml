@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Atharva Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Apr 2023 00:19:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 May 2023 23:20:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Django</title>
+      <link>https://atharvashah.netlify.app/tags/django/</link>
+      <pubDate>Mon, 01 May 2023 23:20:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://atharvashah.netlify.app/tags/python/</link>
+      <pubDate>Mon, 01 May 2023 23:20:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/tags/python/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Fantasy</title>
       <link>https://atharvashah.netlify.app/tags/fantasy/</link>
@@ -94,15 +112,6 @@
       <pubDate>Sun, 19 Feb 2023 01:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/tags/database/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>django</title>
-      <link>https://atharvashah.netlify.app/tags/django/</link>
-      <pubDate>Sun, 19 Feb 2023 01:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/django/</guid>
       <description></description>
     </item>
     
@@ -202,15 +211,6 @@
       <pubDate>Thu, 26 Jan 2023 23:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/tags/hackathon/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://atharvashah.netlify.app/tags/python/</link>
-      <pubDate>Thu, 26 Jan 2023 23:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/python/</guid>
       <description></description>
     </item>
     

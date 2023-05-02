@@ -3,10 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://atharvashah.netlify.app/</loc>
-    <lastmod>2023-04-27T00:19:34+05:30</lastmod>
+    <lastmod>2023-05-01T23:20:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/blog/</loc>
-    <lastmod>2023-04-27T00:19:34+05:30</lastmod>
+    <lastmod>2023-05-01T23:20:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/django/</loc>
+    <lastmod>2023-05-01T23:20:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/blog/django-crypto-app/part3/</loc>
+    <lastmod>2023-05-01T23:20:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/python/</loc>
+    <lastmod>2023-05-01T23:20:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/</loc>
+    <lastmod>2023-05-01T23:20:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/blog/django-crypto-app/part2/</loc>
+    <lastmod>2023-05-01T23:19:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/blog/django-crypto-app/part1/</loc>
+    <lastmod>2023-05-01T23:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/blog/malazan/02-dg-review/</loc>
     <lastmod>2023-04-27T00:19:34+05:30</lastmod>
@@ -15,9 +33,6 @@
     <lastmod>2023-04-27T00:19:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/malazan-book-of-the-fallen/</loc>
-    <lastmod>2023-04-27T00:19:34+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/tags/</loc>
     <lastmod>2023-04-27T00:19:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/blog/malazan/01-gotm-review/</loc>
@@ -66,9 +81,6 @@
     <lastmod>2023-02-27T00:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/database/</loc>
-    <lastmod>2023-02-19T01:18:34+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/tags/django/</loc>
     <lastmod>2023-02-19T01:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/programming/</loc>
@@ -120,9 +132,6 @@
     <lastmod>2023-01-26T23:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/hackathon/</loc>
-    <lastmod>2023-01-26T23:18:34+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/tags/python/</loc>
     <lastmod>2023-01-26T23:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/alan-moore/</loc>
