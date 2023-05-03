@@ -6,7 +6,19 @@
     <description>Recent content in Blogs on Atharva Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 May 2023 23:20:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 May 2023 19:18:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Critical Analysis of Pulp Fiction</title>
+      <link>https://atharvashah.netlify.app/blog/critical-analysis-pulp-fiction/</link>
+      <pubDate>Tue, 02 May 2023 19:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/blog/critical-analysis-pulp-fiction/</guid>
+      <description>Directed By : Quentin Tarantino
+Release Year : 1994
+Starring : John Travolta, Samuel L. Jackson, Uma Thurman, Bruce Willis
+Narrative Pulp Fiction adopts a non-linear narrative with three protagonists, namely, Vincent Vega (a quirky hitman), Jules Winnfield (Vega’s partner in crime) and Butch Coolidge(a prizefighter). The movie is split into seven episodic events which do not follow a chronological order. All the episodic stories are a blend of genres and Tarantino is known to sprinkle various Easter-eggs and references throughout.</description>
+    </item>
+    
     <item>
       <title>Django Crypto App Part 3: Wrap-Up and Testing</title>
       <link>https://atharvashah.netlify.app/blog/django-crypto-app/part3/</link>

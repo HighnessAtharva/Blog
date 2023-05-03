@@ -6,7 +6,16 @@
     <description>Recent content in Tags on Atharva Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 May 2023 23:20:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 May 2023 19:18:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>movie review</title>
+      <link>https://atharvashah.netlify.app/tags/movie-review/</link>
+      <pubDate>Tue, 02 May 2023 19:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/tags/movie-review/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Django</title>
       <link>https://atharvashah.netlify.app/tags/django/</link>
@@ -40,15 +49,6 @@
       <pubDate>Thu, 27 Apr 2023 00:19:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/tags/malazan-book-of-the-fallen/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Movie Review</title>
-      <link>https://atharvashah.netlify.app/tags/movie-review/</link>
-      <pubDate>Sun, 16 Apr 2023 00:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/movie-review/</guid>
       <description></description>
     </item>
     
