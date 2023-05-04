@@ -9,6 +9,13 @@ cover:
 tags: ["movie review"]
 ---
 
+- [Narrative](#narrative)
+- [Screenplay](#screenplay)
+- [Costumes and Set Design](#costumes-and-set-design)
+- [Soundtrack](#soundtrack)
+- [Camera and Lighting](#camera-and-lighting)
+- [Awards and Accolades](#awards-and-accolades)
+- [Closing Thoughts](#closing-thoughts)
 
 **Directed By** : Quentin Tarantino
 

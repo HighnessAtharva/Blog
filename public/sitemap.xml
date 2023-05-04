@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://atharvashah.netlify.app/</loc>
+    <lastmod>2023-05-03T19:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/blog/</loc>
+    <lastmod>2023-05-03T19:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/devops/</loc>
+    <lastmod>2023-05-03T19:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/blog/netlify-ci-cd/</loc>
+    <lastmod>2023-05-03T19:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/</loc>
+    <lastmod>2023-05-03T19:18:34+05:30</lastmod>
+  </url><url>
     <loc>https://atharvashah.netlify.app/blog/critical-analysis-pulp-fiction/</loc>
     <lastmod>2023-05-02T19:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/</loc>
-    <lastmod>2023-05-02T19:18:34+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/blog/</loc>
-    <lastmod>2023-05-02T19:18:34+05:30</lastmod>
-  </url><url>
     <loc>https://atharvashah.netlify.app/tags/movie-review/</loc>
-    <lastmod>2023-05-02T19:18:34+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/tags/</loc>
     <lastmod>2023-05-02T19:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/django/</loc>

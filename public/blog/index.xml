@@ -6,17 +6,26 @@
     <description>Recent content in Blogs on Atharva Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 May 2023 19:18:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 May 2023 19:18:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting Up CI/CD to Netlify for Static Sites via Github</title>
+      <link>https://atharvashah.netlify.app/blog/netlify-ci-cd/</link>
+      <pubDate>Wed, 03 May 2023 19:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/blog/netlify-ci-cd/</guid>
+      <description>Description I. Introduction II. Setting Up a Netlify Account III. Setting Up CI/CD to Netlify Configuring the Build Settings on Netlify Configuring the Deployment Settings on Netlify IV. Setting Up CI/CD with Github Actions Introduction to Github Actions Creating a Github Actions Workflow for the Static Site Configuring the Workflow to Deploy to Netlify V. Best Practices for CI/CD with Netlify and Github VI. Troubleshooting CI/CD Issues VII. Conclusion Description This article provides step-by-step instructions on how to set up continuous integration and continuous deployment (CI/CD) to Netlify for static site deployments using Github.</description>
+    </item>
+    
     <item>
       <title>A Critical Analysis of Pulp Fiction</title>
       <link>https://atharvashah.netlify.app/blog/critical-analysis-pulp-fiction/</link>
       <pubDate>Tue, 02 May 2023 19:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/blog/critical-analysis-pulp-fiction/</guid>
-      <description>Directed By : Quentin Tarantino
+      <description>Narrative Screenplay Costumes and Set Design Soundtrack Camera and Lighting Awards and Accolades Closing Thoughts Directed By : Quentin Tarantino
 Release Year : 1994
 Starring : John Travolta, Samuel L. Jackson, Uma Thurman, Bruce Willis
-Narrative Pulp Fiction adopts a non-linear narrative with three protagonists, namely, Vincent Vega (a quirky hitman), Jules Winnfield (Vega’s partner in crime) and Butch Coolidge(a prizefighter). The movie is split into seven episodic events which do not follow a chronological order. All the episodic stories are a blend of genres and Tarantino is known to sprinkle various Easter-eggs and references throughout.</description>
+Narrative Pulp Fiction adopts a non-linear narrative with three protagonists, namely, Vincent Vega (a quirky hitman), Jules Winnfield (Vega’s partner in crime) and Butch Coolidge(a prizefighter). The movie is split into seven episodic events which do not follow a chronological order.</description>
     </item>
     
     <item>
