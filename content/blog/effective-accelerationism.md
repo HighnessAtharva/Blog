@@ -6,7 +6,7 @@ cover:
     image: blog/eacc-cover.png
     alt: Cyberpunk Sci-Fi Analysis of Accelerationism
     caption: Navigating the Intersection of Technology and Humanity through the Lens of Accelerationism. 
-tags: ["philosophy", "science", "AI"]
+tags: ["ruminations", "science", "AI"]
 ---
 
 - [Introduction](#introduction)

@@ -6,7 +6,7 @@ cover:
     image: blog/django-crypto-app/cover-2.png
     alt: Part 2 - Templates, Views and URLs
     caption: Here, we will add the templates, views and urls and code up the entire project. This will be the most complex and detailed part of this series.
-tags: ["Django", "Python"]
+tags: ["Django", "Python","tutorial"]
 ---
 
 - [Introduction](#introduction)

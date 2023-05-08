@@ -43,6 +43,13 @@ tags: ["technology", "programming", "web-development"]
 - Advanced security features
 - Design patterns and best practices for building scalable and maintainable Django applications.
 
+[**<u>Completion Goals</u>**](#)
+
+- Make 3 capstone projects documenting the process, testing, and deployment
+- Learn advanced django development with migrations, OAuth, Forms, and more
+- Learn how to use Django with Docker and AWS
+- Master Django Rest Framework and build a RESTful API, monetize it, and deploy it
+
 ## FastAPI
 
 Next, I'm gonna take FastAPI for a spin 🏎. This new web framework is all the rage these days and I wanna see what all the hype is about. Plus, it's built on top of Starlette and Pydantic, and promises to be easy, fast and efficient. I'm ready to put it to the test and compare it to other popular options like Flask and Django.
@@ -68,6 +75,10 @@ Next, I'm gonna take FastAPI for a spin 🏎. This new web framework is all the 
 - Testing and debugging
 - Integrating with other libraries and frameworks
 - Best practices and design patterns for building web applications with FastAPI.
+
+[**<u>Completion Goals</u>**](#)
+
+- Make 2 FastAPI Projects and deploy them with monetization
 
 ## React.js
 
@@ -96,6 +107,12 @@ ReactJS is another technology that's caught my eye 🧐. This JavaScript library
 - Working with Third-party Libraries
 - Best Practices and Code Organization.
 
+[**<u>Completion Goals</u>**](#)
+
+- Make 5 Capstone Projects
+- Learn React development with TypeScript
+- Learn React development with Next.js
+
 ## PostgreSQL
 
 PostgreSQL is next on my list, and I'm ready to get my hands dirty 🎆 with this powerful open-source relational database management system. It's known for its reliability, performance and support for advanced features like full-text search and spatial data.
@@ -123,6 +140,12 @@ PostgreSQL is next on my list, and I'm ready to get my hands dirty 🎆 with thi
 - Best practices and code organization
 - Advanced topics such as window functions and CTEs.
 
+[**<u>Completion Goals</u>**](#)
+
+- Improve Data Modeling Skills
+- Learn how to use PostgreSQL with Django and FastAPI
+- Learn how to deploy PostgreSQL on AWS using RDS
+
 ## AWS and Docker
 
 AWS and Docker are the cherry on top 🍒. AWS is a cloud computing platform that offers a wide range of services to build, deploy and manage applications. I'm looking forward to exploring the platform and learning how to use its various services to improve the scalability and reliability of my applications. Docker, on the other hand, is a platform for building, shipping, and running distributed applications. It allows for easy deployment and management of applications, and is a great tool for creating a consistent development environment across different machines.
@@ -139,5 +162,18 @@ AWS and Docker are the cherry on top 🍒. AWS is a cloud computing platform tha
 - Managing network and security using VPC, security groups and IAM
 - Managing and monitoring using CloudWatch and CloudTrail
 - Best practices and automation using AWS CLI and CloudFormation.
+
+[**<u>Completion Goals</u>**](#)
+
+- Get AWS Solutions Architect Associate Certification
+- Dockerize my Django and FastAPI applications
+- Deploy my applications on AWS using ECS and EKS
+
+## Kafka, Redis, RabbitMQ, Celery, Elasticsearch, GraphQL, RedShift, AppSmith
+
+- Get a general overview of each of these technologies
+- Get a 5 hour course on each of these technologies
+- Read up interesting articles on each of these technologies
+- Review interview questions on each of these technologies
 
 Overall, I'm ready to dive into these technologies and see how they can help me build better and more efficient applications. I believe that learning these technologies will not only help me as a developer but will also help me to create better solutions for my clients and users. 📺

@@ -6,7 +6,7 @@ cover:
     image: blog/django-crypto-app/cover-3.png
     alt: Part 3 - Wrap-Up and Testing
     caption: Here, we will wrap the series up by discussing testing approach by writing test cases for Models, Views and Templates using Pytest.
-tags: ["Django", "Python"]
+tags: ["Django", "Python", "tutorial"]
 ---
 
 
