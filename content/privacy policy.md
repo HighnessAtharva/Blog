@@ -1,4 +1,5 @@
 --- 
+title: Privacy Policy
 url: "/privacy-policy/" 
 summary: Privacy Policy
 ShowWordCount: false
