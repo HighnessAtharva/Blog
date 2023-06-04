@@ -1,7 +1,7 @@
 ---
 title: "DSA in Python - Binary Search Trees"
 date: 2022-07-09T13:10:34+05:30
-draft: false
+draft: true
 cover: 
     image: blog/dsa/bst.jpg
     alt: Binary Search Trees

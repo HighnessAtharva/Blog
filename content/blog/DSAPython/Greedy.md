@@ -1,7 +1,7 @@
 ---
 title: "DSA in Python - Greedy"
 date: 2022-07-09T13:14:34+05:30
-draft: false
+draft: true
 cover: 
     image: blog/dsa/greedy.jpg
     alt: Greedy
@@ -23,7 +23,7 @@ tags: ["DSA-Python"]
 - [Check if it is possible to survive on Island](#check-if-it-is-possible-to-survive-on-island)
 - [Maximum product subset of an array](#maximum-product-subset-of-an-array)
 - [Maximize array sum after K negations](#maximize-array-sum-after-k-negations)
-- [Maximize the sum of arr[i]*i](#maximize-the-sum-of-arrii)
+- [Maximize the sum of arr\[i\]\*i](#maximize-the-sum-of-arrii)
 - [Maximum sum of absolute difference of an array](#maximum-sum-of-absolute-difference-of-an-array)
 - [Maximize sum of consecutive differences in a circular array](#maximize-sum-of-consecutive-differences-in-a-circular-array)
 - [Minimum sum of absolute difference of pairs of two arrays](#minimum-sum-of-absolute-difference-of-pairs-of-two-arrays)

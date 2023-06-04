@@ -1,7 +1,7 @@
 ---
 title: "DSA in Python - Linked List"
 date: 2022-07-09T13:14:34+05:30
-draft: false
+draft: true
 cover: 
     image: blog/dsa/ll.jpg
     alt: Linked List
@@ -34,7 +34,7 @@ tags: ["DSA-Python"]
 - [Rotate DoublyLinked list by N nodes](#rotate-doublylinked-list-by-n-nodes)
 - [Rotate a Doubly Linked list in group of Given Size](#rotate-a-doubly-linked-list-in-group-of-given-size)
 - [Can we reverse a linked list in less than O(n) ?](#can-we-reverse-a-linked-list-in-less-than-on-)
-- [Why Quicksort is preferred for. Arrays and Merge Sort for LinkedLists ?]](#why-quicksort-is-preferred-for-arrays-and-merge-sort-for-linkedlists-)
+- [Why Quicksort is preferred for. Arrays and Merge Sort for LinkedLists ?\]](#why-quicksort-is-preferred-for-arrays-and-merge-sort-for-linkedlists-)
 - [Flatten a Linked List](#flatten-a-linked-list)
 - [Sort a LL of 0's, 1's and 2's](#sort-a-ll-of-0s-1s-and-2s)
 - [Clone a linked list with next and random pointer](#clone-a-linked-list-with-next-and-random-pointer)

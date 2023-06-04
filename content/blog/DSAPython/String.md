@@ -1,7 +1,7 @@
 ---
 title: "DSA in Python - Strings"
 date: 2022-07-09T13:14:34+05:30
-draft: false
+draft: true
 cover: 
     image: blog/dsa/string.jpg
     alt: Strings
@@ -15,7 +15,7 @@ tags: ["DSA-Python"]
 - [Write a Code to check whether one string is a rotation of another](#write-a-code-to-check-whether-one-string-is-a-rotation-of-another)
 - [Write a Program to check whether a string is a valid shuffle of two strings or not](#write-a-program-to-check-whether-a-string-is-a-valid-shuffle-of-two-strings-or-not)
 - [Count and Say problem](#count-and-say-problem)
-- [Write a program to find the longest Palindrome in a string.[ Longest palindromic Substring]](#write-a-program-to-find-the-longest-palindrome-in-a-string-longest-palindromic-substring)
+- [Write a program to find the longest Palindrome in a string.\[ Longest palindromic Substring\]](#write-a-program-to-find-the-longest-palindrome-in-a-string-longest-palindromic-substring)
 - [Find Longest Recurring Subsequence in String](#find-longest-recurring-subsequence-in-string)
 - [Print all Subsequences of a string.](#print-all-subsequences-of-a-string)
 - [Print all the permutations of the given string](#print-all-the-permutations-of-the-given-string)

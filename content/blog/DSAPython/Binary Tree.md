@@ -1,7 +1,7 @@
 ---
 title: "DSA in Python - Binary Trees"
 date: 2022-07-08T13:18:34+05:30
-draft: false
+draft: true
 cover: 
     image: blog/dsa/binary-tree.jpg
     alt: Binary Tree

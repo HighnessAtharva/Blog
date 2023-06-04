@@ -1,7 +1,7 @@
 ---
 title: "DSA in Python - Dynamic Programming"
 date: 2022-07-10T13:11:34+05:30
-draft: false
+draft: true
 cover: 
     image: blog/dsa/dp.jpg
     alt: Dynamic Programming
@@ -40,7 +40,7 @@ tags: ["DSA-Python"]
 - [Maximum difference of zeros and ones in binary string](#maximum-difference-of-zeros-and-ones-in-binary-string)
 - [Minimum number of jumps to reach end](#minimum-number-of-jumps-to-reach-end)
 - [Minimum cost to fill given weight in a bag](#minimum-cost-to-fill-given-weight-in-a-bag)
-- [Minimum removals from array to make max –min <= K](#minimum-removals-from-array-to-make-max-min--k)
+- [Minimum removals from array to make max –min \<= K](#minimum-removals-from-array-to-make-max-min--k)
 - [Longest Common Substring](#longest-common-substring)
 - [Count number of ways to reacha given score in a game](#count-number-of-ways-to-reacha-given-score-in-a-game)
 - [Count Balanced Binary Trees of Height h](#count-balanced-binary-trees-of-height-h)

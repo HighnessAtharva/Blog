@@ -1,7 +1,7 @@
 ---
 title: "DSA in Python - Arrays"
 date: 2022-07-07T23:18:34+05:30
-draft: false
+draft: true
 cover: 
     image: blog/dsa/array.jpg
     alt: Arrays
@@ -17,7 +17,7 @@ tags: ["DSA-Python"]
 - [Move all the negative elements to one side of the array](#move-all-the-negative-elements-to-one-side-of-the-array)
 - [Find the Union and Intersection of the two sorted arrays](#find-the-union-and-intersection-of-the-two-sorted-arrays)
 - [Write a program to cyclically rotate an array by one](#write-a-program-to-cyclically-rotate-an-array-by-one)
-- [Find Largest sum contiguous Subarray [V. IMP] / Kadne's Algorithm](#find-largest-sum-contiguous-subarray-v-imp--kadnes-algorithm)
+- [Find Largest sum contiguous Subarray \[V. IMP\] / Kadne's Algorithm](#find-largest-sum-contiguous-subarray-v-imp--kadnes-algorithm)
 - [Minimise the maximum difference between heights](#minimise-the-maximum-difference-between-heights)
 - [Minimum no. of Jumps to reach end of an array](#minimum-no-of-jumps-to-reach-end-of-an-array)
 - [Find duplicate in an array of N+1 Integers](#find-duplicate-in-an-array-of-n1-integers)

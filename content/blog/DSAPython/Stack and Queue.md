@@ -1,7 +1,7 @@
 ---
 title: "DSA in Python - Stacks and Queues"
 date: 2022-07-09T13:14:34+05:30
-draft: false
+draft: true
 cover: 
     image: blog/dsa/stack-queue.jpg
     alt: Stacks and Queues

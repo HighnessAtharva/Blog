@@ -1,7 +1,7 @@
 ---
 title: "DSA in Python - Trie"
 date: 2022-07-08T13:18:34+05:30
-draft: false
+draft: true
 cover: 
     image: blog/dsa/trie.jpg
     alt: Trie

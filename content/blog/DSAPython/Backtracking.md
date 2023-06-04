@@ -1,7 +1,7 @@
 ---
 title: "DSA in Python - Backtracking"
 date: 2022-07-07T23:18:34+05:30
-draft: false
+draft: true
 cover: 
     image: blog/dsa/backtracking.jpg
     alt: Backtracking

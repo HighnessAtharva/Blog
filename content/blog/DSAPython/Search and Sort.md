@@ -1,7 +1,7 @@
 ---
 title: "DSA in Python - Search and Sort"
 date: 2022-07-09T13:14:34+05:30
-draft: false
+draft: true
 cover: 
     image: blog/dsa/search-sort.jpg
     alt: Search and Sort
