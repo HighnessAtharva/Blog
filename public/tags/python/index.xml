@@ -6,7 +6,17 @@
     <description>Recent content in Python on Atharva Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 May 2023 23:20:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Jun 2023 01:18:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Digital Product Series Launch!</title>
+      <link>https://atharvashah.netlify.app/blog/gumroad-dsa-announcement/</link>
+      <pubDate>Mon, 05 Jun 2023 01:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/blog/gumroad-dsa-announcement/</guid>
+      <description>Boost Your Interview Success with our Exclusive Digital Product Series We are thrilled to announce the launch of our brand new series of digital products on Gumroad, designed to help you excel in your interviews and land your dream job! Our products are carefully crafted to provide you with the necessary tools and resources to master key concepts, enhance your problem-solving skills, and confidently tackle coding interviews.
+Introducing the First Set of Resources We are excited to release the first few resources that are now available for purchase at an incredibly affordable rate:</description>
+    </item>
+    
     <item>
       <title>Django Crypto App Part 3: Wrap-Up and Testing</title>
       <link>https://atharvashah.netlify.app/blog/django-crypto-app/part3/</link>
