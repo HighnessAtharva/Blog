@@ -9,46 +9,46 @@
     <lastBuildDate>Wed, 03 May 2023 19:18:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting Up CI/CD to Netlify for Static Sites via Github</title>
-      <link>https://atharvashah.netlify.app/blog/netlify-ci-cd/</link>
+      <link>https://atharvashah.netlify.app/tech/netlify-ci-cd/</link>
       <pubDate>Wed, 03 May 2023 19:18:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/blog/netlify-ci-cd/</guid>
+      <guid>https://atharvashah.netlify.app/tech/netlify-ci-cd/</guid>
       <description>Description I. Introduction II. Setting Up a Netlify Account III. Setting Up CI/CD to Netlify Configuring the Build Settings on Netlify Configuring the Deployment Settings on Netlify IV. Setting Up CI/CD with Github Actions Introduction to Github Actions Creating a Github Actions Workflow for the Static Site Configuring the Workflow to Deploy to Netlify V. Best Practices for CI/CD with Netlify and Github VI. Troubleshooting CI/CD Issues VII. Conclusion Description This article provides step-by-step instructions on how to set up continuous integration and continuous deployment (CI/CD) to Netlify for static site deployments using Github.</description>
     </item>
     
     <item>
       <title>Django Crypto App Part 3: Wrap-Up and Testing</title>
-      <link>https://atharvashah.netlify.app/blog/django-crypto-app/part3/</link>
+      <link>https://atharvashah.netlify.app/tech/django-crypto-app/part3/</link>
       <pubDate>Mon, 01 May 2023 23:20:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/blog/django-crypto-app/part3/</guid>
+      <guid>https://atharvashah.netlify.app/tech/django-crypto-app/part3/</guid>
       <description>Introduction Test Driven Development Approach Explained URL Testing Model Testing View Testing Writing Tests Testing URLS Testing Models Testing Views How to Run Tests Conclusion Introduction Welcome to the final part of the 3-part technical tutorial series, where have been building a Django project that enables users to manage their cryptocurrency portfolios. To implement the functionalities and additional features, we&amp;rsquo;ll be utilizing API calls to coingecko or any other cryptocurrency API.</description>
     </item>
     
     <item>
       <title>Django Crypto App Part 2: Templates, Views and URLs</title>
-      <link>https://atharvashah.netlify.app/blog/django-crypto-app/part2/</link>
+      <link>https://atharvashah.netlify.app/tech/django-crypto-app/part2/</link>
       <pubDate>Mon, 01 May 2023 23:19:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/blog/django-crypto-app/part2/</guid>
+      <guid>https://atharvashah.netlify.app/tech/django-crypto-app/part2/</guid>
       <description>Introduction Setting up the URLs Setting Up Templates Setting Up Views Signup Login Screen Forgot Password Page Password Reset Email Password Reset Success Home Page Add Currency / Search Result Page Wallet Page Run the crypto app Conclusion Introduction Welcome to the second part of the 3-part technical tutorial series, where we&amp;rsquo;ll be building a Django project that enables users to manage their cryptocurrency portfolios. To implement the functionalities and additional features, we&amp;rsquo;ll be utilizing API calls to coingecko or any other cryptocurrency API.</description>
     </item>
     
     <item>
       <title>Django Crypto App Part 1: Functional Requirements and Setup</title>
-      <link>https://atharvashah.netlify.app/blog/django-crypto-app/part1/</link>
+      <link>https://atharvashah.netlify.app/tech/django-crypto-app/part1/</link>
       <pubDate>Mon, 01 May 2023 23:18:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/blog/django-crypto-app/part1/</guid>
+      <guid>https://atharvashah.netlify.app/tech/django-crypto-app/part1/</guid>
       <description>Table of contents Table of contents Introduction Defining Functional Requirements Tech Stack Planned Endpoints Creating a New Django Project Configuring settings.py Configuring urls.py Create App Models Registering Models in Admin Conclusion Introduction Welcome to this 3-part technical tutorial series, where we&amp;rsquo;ll be building a Django project that enables users to manage their cryptocurrency portfolios. To implement the functionalities and additional features, we&amp;rsquo;ll be utilizing API calls to coingecko or any other cryptocurrency API.</description>
     </item>
     
     <item>
       <title>Use ChatGPT to Generate Project UML Diagrams: A Step-by-Step Tutorial</title>
-      <link>https://atharvashah.netlify.app/blog/uml-diagrams-with-chatgpt/</link>
+      <link>https://atharvashah.netlify.app/tech/uml-diagrams-with-chatgpt/</link>
       <pubDate>Wed, 15 Feb 2023 01:19:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/blog/uml-diagrams-with-chatgpt/</guid>
+      <guid>https://atharvashah.netlify.app/tech/uml-diagrams-with-chatgpt/</guid>
       <description>Introduction Are you tired of spending hours designing UML diagrams for your projects? Look no further than ChatGPT, a powerful language model that can generate PlantUML code based on your project description. In this tutorial, we will guide you through the steps to use ChatGPT to generate UML diagrams for your projects in just a few clicks.
 Step 1: Write Your Project Description The first step is to write your project description or title.</description>
     </item>

@@ -27,19 +27,22 @@ imaging:
 #SITE MENU
 menu:
   main:
-    - identifier: blog
-      name: Blog
-      url: /blog/
-      weight : 1
+    - identifier: tech
+      name: Tech
+      url: /tech/
+      weight: 1
+    - identifier: personal
+      name: Personal
+      url: /personal/
+      weight : 2
     - identifier: about
       name: About
       url: /about/
-      weight: 2
-    
+      weight: 3
     - identifier: search
       name: Search
       url: /search/
-      weight: 3
+      weight: 4
 
 #REQUIRED FOR SEARCH FUNCTIONALITY.
 outputs:

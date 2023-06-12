@@ -23,7 +23,7 @@ tags: ["DSA-Python"]
 - [Check if it is possible to survive on Island](#check-if-it-is-possible-to-survive-on-island)
 - [Maximum product subset of an array](#maximum-product-subset-of-an-array)
 - [Maximize array sum after K negations](#maximize-array-sum-after-k-negations)
-- [Maximize the sum of arr\[i\]\*i](#maximize-the-sum-of-arrii)
+- [Maximize the sum of arr i\*i](#maximize-the-sum-of-arr-ii)
 - [Maximum sum of absolute difference of an array](#maximum-sum-of-absolute-difference-of-an-array)
 - [Maximize sum of consecutive differences in a circular array](#maximize-sum-of-consecutive-differences-in-a-circular-array)
 - [Minimum sum of absolute difference of pairs of two arrays](#minimum-sum-of-absolute-difference-of-pairs-of-two-arrays)
@@ -31,12 +31,6 @@ tags: ["DSA-Python"]
 - [Program for Least Recently Used (LRU) Page Replacement algorithm](#program-for-least-recently-used-lru-page-replacement-algorithm)
 - [Smallest subset with sum greater than all other elements](#smallest-subset-with-sum-greater-than-all-other-elements)
 - [Chocolate Distribution Problem](#chocolate-distribution-problem)
-- [DEFKIN -Defense of a Kingdom](#defkin--defense-of-a-kingdom)
-- [DIEHARD -DIE HARD](#diehard--die-hard)
-- [GERGOVIA -Wine trading in Gergovia](#gergovia--wine-trading-in-gergovia)
-- [Picking Up Chicks](#picking-up-chicks)
-- [CHOCOLA –Chocolate](#chocola-chocolate)
-- [ARRANGE -Arranging Amplifiers](#arrange--arranging-amplifiers)
 - [K Centers Problem](#k-centers-problem)
 - [Minimum Cost of ropes](#minimum-cost-of-ropes)
 - [Find smallest number with given number of digits and sum of digits](#find-smallest-number-with-given-number-of-digits-and-sum-of-digits)
@@ -691,7 +685,7 @@ arr = [-2, 0, 5, -1, 2]
 print(sol(arr, 4))
 ```
 
-## Maximize the sum of arr[i]*i
+## Maximize the sum of arr i*i
 
 ```python
 """
@@ -962,42 +956,6 @@ arr = [12, 4, 7, 9, 2, 23, 25, 41, 30, 40, 28, 42, 30, 44, 48, 43, 50]
 m = 7 # Number of students
 n = len(arr)
 print("Minimum difference is", findMinDiff(arr, n, m))
-```
-
-## DEFKIN -Defense of a Kingdom
-
-```python
-TODO
-```
-
-## DIEHARD -DIE HARD
-
-```python
-TODO
-```
-
-## GERGOVIA -Wine trading in Gergovia
-
-```python
-TODO
-```
-
-## Picking Up Chicks
-
-```python
-TODO
-```
-
-## CHOCOLA –Chocolate
-
-```python
-TODO
-```
-
-## ARRANGE -Arranging Amplifiers
-
-```python
-TODO
 ```
 
 ## K Centers Problem
