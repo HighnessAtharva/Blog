@@ -6,9 +6,16 @@ cover:
     image: blog/quotes/mike-ma-gv.png
     alt: Gothic Violence by Mika Ma
     caption: A few notable quotes from the wild and wondeful mind of Mike Ma in his book Gothic Violence.
-tags: ["Book Quotes", "Mike Ma"] 
-
+tags: ["Book Quotes", "Mike Ma"]
 ---
+
+## TEST
+
+## Another Test
+
+### Test 3
+
+### Test 4
 
 Emerging from the literary depths, following the consuming voyage through "Harassment Architecture," I eagerly embarked upon the haunting terrain of "Gothic Violence." In this eagerly awaited sequel, my anticipation was richly rewarded, for within its pages lie potent and evocative fragments of prose that reverberate with profound resonance. While the quantity may be lesser than its predecessor, the impact remains undiminished, as the narrative unfurls with a potent force, relentlessly piercing the reader's consciousness.
 

@@ -1,0 +1,62 @@
+<!--如果单独复制这段代码，需要从 extend_head.html 中找到 font-awesome 引入，如下-->
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">-->
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>
+            {{- (.Date.Format (default "January 2, 2006" .Site.Params.DateFormat)) }}
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <!--    <span id="post_meta_style_2">-->
+    <!--        <span class="fa fa-calendar-plus-o"></span>-->
+    <!--        <span>-->
+    <!--            &nbsp;更新&nbsp;{{- (.Lastmod.Format (.Site.Params.dateFormat | default "2006-01-02")) }}-->
+    <!--            &nbsp;|&nbsp;-->
+    <!--        </span>-->
+    <!--    </span>-->
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>
+            {{- .WordCount }} words
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>
+            {{- .ReadingTime }} mins
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            {{- if .Params.tags }}
+            <span class="post-tags-meta">
+                {{- range $index, $value := ($.GetTerms "tags") }}
+                {{- if eq $index 0}}
+                <a href="{{ .Permalink }}" style="color: var(--secondary)!important;">{{ .LinkTitle }}</a>
+                {{- else }}
+                &nbsp;<a href="{{ .Permalink }}" style="color: var(--secondary)!important;">{{ .LinkTitle }}</a>
+                {{- end }}
+                {{- end }}
+            </span>
+            {{- end }}
+        </span>
+    </span>
+</span>

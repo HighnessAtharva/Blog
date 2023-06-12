@@ -1,5 +1,4 @@
 --- 
-title: About Me
 url: "/about/" 
 summary: Get to know me better
 ShowWordCount: false

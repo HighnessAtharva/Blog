@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://atharvashah.netlify.app/posts/tech/</loc>
+    <lastmod>2023-06-05T01:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/</loc>
+    <lastmod>2023-06-05T01:18:34+05:30</lastmod>
+  </url><url>
     <loc>https://atharvashah.netlify.app/</loc>
     <lastmod>2023-06-05T01:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/tech/gumroad-dsa-announcement/</loc>
+    <loc>https://atharvashah.netlify.app/posts/tech/gumroad-dsa-announcement/</loc>
     <lastmod>2023-06-05T01:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/python/</loc>
@@ -14,25 +20,22 @@
     <loc>https://atharvashah.netlify.app/tags/</loc>
     <lastmod>2023-06-05T01:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/tech/</loc>
-    <lastmod>2023-06-05T01:18:34+05:30</lastmod>
-  </url><url>
     <loc>https://atharvashah.netlify.app/tags/book-quotes/</loc>
     <lastmod>2023-06-04T02:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/mike-ma/</loc>
     <lastmod>2023-06-04T02:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-gothic-violence-by-mike-ma/</loc>
     <lastmod>2023-06-04T02:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/book-quotes/the-best-quotes-from-gothic-violence-by-mike-ma/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/</loc>
     <lastmod>2023-06-04T02:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/book-quotes/the-best-quotes-from-harassment-architechture-by-mike-ma/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-harassment-architechture-by-mike-ma/</loc>
     <lastmod>2023-06-04T01:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/movie-review/may-2023/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/movie-review/may-2023/</loc>
     <lastmod>2023-05-25T00:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/movie-review/</loc>
@@ -41,28 +44,28 @@
     <loc>https://atharvashah.netlify.app/tags/devops/</loc>
     <lastmod>2023-05-03T19:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/tech/netlify-ci-cd/</loc>
+    <loc>https://atharvashah.netlify.app/posts/tech/netlify-ci-cd/</loc>
     <lastmod>2023-05-03T19:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/tutorial/</loc>
     <lastmod>2023-05-03T19:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/critical-analysis-pulp-fiction/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/critical-analysis-pulp-fiction/</loc>
     <lastmod>2023-05-02T19:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/django/</loc>
     <lastmod>2023-05-01T23:20:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/tech/django-crypto-app/part3/</loc>
+    <loc>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part3/</loc>
     <lastmod>2023-05-01T23:20:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/tech/django-crypto-app/part2/</loc>
+    <loc>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part2/</loc>
     <lastmod>2023-05-01T23:19:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/tech/django-crypto-app/part1/</loc>
+    <loc>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part1/</loc>
     <lastmod>2023-05-01T23:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/malazan/02-dg-review/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/malazan/02-dg-review/</loc>
     <lastmod>2023-04-27T00:19:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/fantasy/</loc>
@@ -71,10 +74,10 @@
     <loc>https://atharvashah.netlify.app/tags/malazan-book-of-the-fallen/</loc>
     <lastmod>2023-04-27T00:19:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/malazan/01-gotm-review/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/malazan/01-gotm-review/</loc>
     <lastmod>2023-04-26T00:19:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/movie-review/april-2023/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/movie-review/april-2023/</loc>
     <lastmod>2023-04-16T00:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/h.p-lovecraft/</loc>
@@ -86,28 +89,28 @@
     <loc>https://atharvashah.netlify.app/tags/science-fiction/</loc>
     <lastmod>2023-04-14T23:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/book-quotes/the-best-quotes-from-h.p.-lovecraft/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-h.p.-lovecraft/</loc>
     <lastmod>2023-04-14T23:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/movie-review/march-2023/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/movie-review/march-2023/</loc>
     <lastmod>2023-03-28T00:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/lists/list-favorite-youtube-channels/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/lists/list-favorite-youtube-channels/</loc>
     <lastmod>2023-03-20T01:18:35+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/lists/</loc>
     <lastmod>2023-03-20T01:18:35+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/lists/list-favorite-podcasts/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/lists/list-favorite-podcasts/</loc>
     <lastmod>2023-03-20T01:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/malazan/prelude-to-malazan-challenge/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/malazan/prelude-to-malazan-challenge/</loc>
     <lastmod>2023-03-18T00:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/reading-challenge/</loc>
     <lastmod>2023-03-18T00:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/movie-review/february-2023/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/movie-review/february-2023/</loc>
     <lastmod>2023-02-27T00:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/database/</loc>
@@ -116,7 +119,7 @@
     <loc>https://atharvashah.netlify.app/tags/programming/</loc>
     <lastmod>2023-02-19T01:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/tech/django-orm-exercises/</loc>
+    <loc>https://atharvashah.netlify.app/posts/tech/django-orm-exercises/</loc>
     <lastmod>2023-02-19T01:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/chatgpt/</loc>
@@ -125,10 +128,10 @@
     <loc>https://atharvashah.netlify.app/tags/uml/</loc>
     <lastmod>2023-02-15T01:19:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/tech/uml-diagrams-with-chatgpt/</loc>
+    <loc>https://atharvashah.netlify.app/posts/tech/uml-diagrams-with-chatgpt/</loc>
     <lastmod>2023-02-15T01:19:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/movie-review/january-2023/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/movie-review/january-2023/</loc>
     <lastmod>2023-01-28T00:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/technology/</loc>
@@ -137,10 +140,10 @@
     <loc>https://atharvashah.netlify.app/tags/web-development/</loc>
     <lastmod>2023-01-27T01:19:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/tech/what-i-am-learning-2023/</loc>
+    <loc>https://atharvashah.netlify.app/posts/tech/what-i-am-learning-2023/</loc>
     <lastmod>2023-01-27T01:19:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/tech/effective-accelerationism/</loc>
+    <loc>https://atharvashah.netlify.app/posts/tech/effective-accelerationism/</loc>
     <lastmod>2023-01-27T01:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/ai/</loc>
@@ -152,7 +155,7 @@
     <loc>https://atharvashah.netlify.app/tags/science/</loc>
     <lastmod>2023-01-27T01:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/tech/crif-hackathon-2023/</loc>
+    <loc>https://atharvashah.netlify.app/posts/tech/crif-hackathon-2023/</loc>
     <lastmod>2023-01-26T23:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/data-science/</loc>
@@ -182,31 +185,31 @@
     <loc>https://atharvashah.netlify.app/tags/robin-hobb/</loc>
     <lastmod>2022-07-11T23:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/book-quotes/the-best-quotes-from-first-law-trilogy-by-joe-abercrombie/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-first-law-trilogy-by-joe-abercrombie/</loc>
     <lastmod>2022-07-11T23:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/book-quotes/the-best-quotes-from-nevernight-trilogy-by-jay-kristoff/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-nevernight-trilogy-by-jay-kristoff/</loc>
     <lastmod>2022-07-11T23:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/book-quotes/the-best-quotes-from-realm-of-the-elderlings-by-robin-hobb/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-realm-of-the-elderlings-by-robin-hobb/</loc>
     <lastmod>2022-07-11T23:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/book-quotes/the-best-quotes-from-sandman-graphic-novel-by-neil-gaiman/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-sandman-graphic-novel-by-neil-gaiman/</loc>
     <lastmod>2022-07-11T23:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/book-quotes/the-best-quotes-from-witcher-series-by-andrzej-sapkowski/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-witcher-series-by-andrzej-sapkowski/</loc>
     <lastmod>2022-07-11T23:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/book-quotes/the-best-quotes-from-watchmen-graphic-novel-by-alan-moore/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-watchmen-graphic-novel-by-alan-moore/</loc>
     <lastmod>2022-07-11T23:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/mark-lawrence/</loc>
     <lastmod>2022-07-10T23:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/book-quotes/the-best-quotes-from-book-of-the-ancestors-trilogy-by-mark-lawrence/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-book-of-the-ancestors-trilogy-by-mark-lawrence/</loc>
     <lastmod>2022-07-10T23:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/personal/book-quotes/the-best-quotes-from-broken-empire-trilogy-by-mark-lawrence/</loc>
+    <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-broken-empire-trilogy-by-mark-lawrence/</loc>
     <lastmod>2022-07-10T23:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/about/</loc>

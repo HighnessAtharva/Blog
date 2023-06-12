@@ -28,21 +28,30 @@ imaging:
 menu:
   main:
     - identifier: tech
-      name: Tech
-      url: /tech/
+      name: 💻Tech
+      url: /posts/tech/
       weight: 1
     - identifier: personal
-      name: Personal
-      url: /personal/
+      name: 🍿Personal
+      url: /posts/personal/
       weight : 2
     - identifier: about
-      name: About
+      name: 👨🏻About
       url: /about/
       weight: 3
     - identifier: search
-      name: Search
+      name: 🔍Search
       url: /search/
       weight: 4
+    - identifier: archive
+      name: 📜Archive
+      url: /archives/
+      weight: 4
+    - identifier: tags
+      name: 🏷️Tags
+      url: /tags/
+      weight: 4
+    
 
 #REQUIRED FOR SEARCH FUNCTIONALITY.
 outputs:
@@ -129,10 +138,10 @@ params:
       imageTitle: AS
       
       buttons:
-        - name: About Me 👋
-          url: /about/
-        - name: Blog 📝
-          url: blog
+        # - name: About Me 👋
+        #   url: /about/
+        # - name: Blog 📝
+        #   url: blog
         - name : Archive ⌛
           url: /archives/
         - name : Tags 🏷️

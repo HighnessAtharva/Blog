@@ -9,47 +9,47 @@
     <lastBuildDate>Mon, 05 Jun 2023 01:18:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Digital Product Series Launch!</title>
-      <link>https://atharvashah.netlify.app/tech/gumroad-dsa-announcement/</link>
+      <link>https://atharvashah.netlify.app/posts/tech/gumroad-dsa-announcement/</link>
       <pubDate>Mon, 05 Jun 2023 01:18:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/tech/gumroad-dsa-announcement/</guid>
+      <guid>https://atharvashah.netlify.app/posts/tech/gumroad-dsa-announcement/</guid>
       <description>Boost Your Interview Success with our Exclusive Digital Product Series We are thrilled to announce the launch of our brand new series of digital products on Gumroad, designed to help you excel in your interviews and land your dream job! Our products are carefully crafted to provide you with the necessary tools and resources to master key concepts, enhance your problem-solving skills, and confidently tackle coding interviews.
 Introducing the First Set of Resources We are excited to release the first few resources that are now available for purchase at an incredibly affordable rate:</description>
     </item>
     
     <item>
       <title>Django Crypto App Part 3: Wrap-Up and Testing</title>
-      <link>https://atharvashah.netlify.app/tech/django-crypto-app/part3/</link>
+      <link>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part3/</link>
       <pubDate>Mon, 01 May 2023 23:20:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/tech/django-crypto-app/part3/</guid>
+      <guid>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part3/</guid>
       <description>Introduction Test Driven Development Approach Explained URL Testing Model Testing View Testing Writing Tests Testing URLS Testing Models Testing Views How to Run Tests Conclusion Introduction Welcome to the final part of the 3-part technical tutorial series, where have been building a Django project that enables users to manage their cryptocurrency portfolios. To implement the functionalities and additional features, we&amp;rsquo;ll be utilizing API calls to coingecko or any other cryptocurrency API.</description>
     </item>
     
     <item>
       <title>Django Crypto App Part 2: Templates, Views and URLs</title>
-      <link>https://atharvashah.netlify.app/tech/django-crypto-app/part2/</link>
+      <link>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part2/</link>
       <pubDate>Mon, 01 May 2023 23:19:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/tech/django-crypto-app/part2/</guid>
+      <guid>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part2/</guid>
       <description>Introduction Setting up the URLs Setting Up Templates Setting Up Views Signup Login Screen Forgot Password Page Password Reset Email Password Reset Success Home Page Add Currency / Search Result Page Wallet Page Run the crypto app Conclusion Introduction Welcome to the second part of the 3-part technical tutorial series, where we&amp;rsquo;ll be building a Django project that enables users to manage their cryptocurrency portfolios. To implement the functionalities and additional features, we&amp;rsquo;ll be utilizing API calls to coingecko or any other cryptocurrency API.</description>
     </item>
     
     <item>
       <title>Django Crypto App Part 1: Functional Requirements and Setup</title>
-      <link>https://atharvashah.netlify.app/tech/django-crypto-app/part1/</link>
+      <link>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part1/</link>
       <pubDate>Mon, 01 May 2023 23:18:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/tech/django-crypto-app/part1/</guid>
+      <guid>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part1/</guid>
       <description>Table of contents Table of contents Introduction Defining Functional Requirements Tech Stack Planned Endpoints Creating a New Django Project Configuring settings.py Configuring urls.py Create App Models Registering Models in Admin Conclusion Introduction Welcome to this 3-part technical tutorial series, where we&amp;rsquo;ll be building a Django project that enables users to manage their cryptocurrency portfolios. To implement the functionalities and additional features, we&amp;rsquo;ll be utilizing API calls to coingecko or any other cryptocurrency API.</description>
     </item>
     
     <item>
       <title>Celebrating victory at CRIF Hackathon 2023</title>
-      <link>https://atharvashah.netlify.app/tech/crif-hackathon-2023/</link>
+      <link>https://atharvashah.netlify.app/posts/tech/crif-hackathon-2023/</link>
       <pubDate>Thu, 26 Jan 2023 23:18:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/tech/crif-hackathon-2023/</guid>
+      <guid>https://atharvashah.netlify.app/posts/tech/crif-hackathon-2023/</guid>
       <description>Winning a hackathon is an incredible feeling, and it&amp;rsquo;s even more special when it&amp;rsquo;s your very first one. The adrenaline rush of competing against some of the brightest minds in the industry, the satisfaction of solving complex problems, and the thrill of being recognized for your hard work are all emotions that are hard to put into words. In this article, I&amp;rsquo;ll walk you through the journey of our team who recently won their first ever hackathon, the CRIF Hackathon 2023.</description>
     </item>
     

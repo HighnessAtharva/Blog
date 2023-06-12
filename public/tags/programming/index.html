@@ -87,18 +87,18 @@ if (!doNotTrack) {
     <nav class="nav">
         <div class="logo">
             <a href="https://atharvashah.netlify.app/" accesskey="h" title="Atharva Shah (Alt + H)">
-                <img src="https://atharvashah.netlify.app/profile/header_button.gif" alt="" aria-label="logo"
-                    height="30">Atharva Shah</a>
+            <img src="https://atharvashah.netlify.app/profile/header_button.gif" alt="logo" aria-label="logo"
+                 height="30">Atharva Shah</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
                         <line x1="12" y1="1" x2="12" y2="3"></line>
                         <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -114,30 +114,39 @@ if (!doNotTrack) {
         </div>
         <ul id="menu">
             <li>
-                <a href="https://atharvashah.netlify.app/tech/" title="Tech">
-                    <span>Tech</span>
+                <a href="https://atharvashah.netlify.app/posts/tech/" title="💻Tech">
+                <span>💻Tech</span>
                 </a>
             </li>
             <li>
-                <a href="https://atharvashah.netlify.app/personal/" title="Personal">
-                    <span>Personal</span>
+                <a href="https://atharvashah.netlify.app/posts/personal/" title="🍿Personal">
+                <span>🍿Personal</span>
                 </a>
             </li>
             <li>
-                <a href="https://atharvashah.netlify.app/about/" title="About">
-                    <span>About</span>
+                <a href="https://atharvashah.netlify.app/about/" title="👨🏻About">
+                <span>👨🏻About</span>
                 </a>
             </li>
             <li>
-                <a href="https://atharvashah.netlify.app/search/" title="Search (Alt &#43; /)" accesskey=/>
-                    <span>Search</span>
+                <a href="https://atharvashah.netlify.app/tags/" title="🏷️Tags">
+                <span>🏷️Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/archives/" title="📜Archive">
+                <span>📜Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/search/" title="🔍Search (Alt &#43; /)" accesskey=/>
+                <span>🔍Search</span>
                 </a>
             </li>
         </ul>
     </nav>
-</header>
-<main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://atharvashah.netlify.app/">Home</a>&nbsp;»&nbsp;<a href="https://atharvashah.netlify.app/tags/">Tags</a></div>
+</header><main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://atharvashah.netlify.app/">Home</a>&nbsp;»&nbsp;<a href="https://atharvashah.netlify.app/tags/">🏷️ Tags</a></div>
   <h1>
     programming
     <a href="/tags/programming/index.xml" title="RSS" aria-label="RSS">
@@ -161,8 +170,60 @@ if (!doNotTrack) {
   <div class="entry-content">
     <p>Querying Django Models with Examples Terminology Models Used in the Examples QuerySet API Exercises Query 1: Fetching all books from the database Query 2: Fetching selected columns from the Books table Query 3: Filtering records based on a condition Query 4: Filtering records based on multiple conditions Query 5: Searching records based on a substring Query 6: Retrieve authors with specific primary keys Query 7: Retrieve authors who joined after a specific date Query 8: Retrieve distinct publisher last name Query 9: Retrieve the latest joined author and the earliest joined publisher Query 10: Retrieve the first name, last name, and join date of the most recently joined author Query 11: Retrieve Authors Joined After 2013 Query 12: Calculate Total Price of Books Written by Popular Authors Query 13: Retrieve Titles of Books Written by Authors with ‘a’ in their Firstname Query 14: Calculate Average Book Price of Selected Authors Query 15: Retrieve first name of authors and their recommended author’s first name Query 16: Retrieve authors whose books are published by a specific publisher Query 17: Add followers to an author Query 18: Set followers for an author Query 19: Add a follower to an author Query 20: Remove a follower from an author Query 21: Retrieve the first names of all authors followed by the user with primary key (pk) equal to 1 Query 22: Retrieve all authors who have books with titles containing the string “tle” Query 23: Retrieve all authors whose first name starts with the letter “a” and either have a popularity score greater than 5 or joined the platform after the year 2014 Query 24: Retrieve the author with primary key (pk) equal to 1 Query 25: Retrieve the first 10 authors in the database Query 26: Retrieve the first and last author in the database with a popularity score of 7 Query 27: Retrieve all authors whose joindate year is greater than or equal to 2012, popularity_score is greater than or equal to 4, joindate day is greater than or equal to 12, and firstname starts with ‘a’ Query 28: Retrieve all authors whose joindate year is not equal to 2012 Query 29: Retrieve the oldest joindate among all authors, the newest joindate among all authors, the average popularity_score of all authors, and the sum of price of all books Query 30: Retrieve all authors who have not been recommended by anyone Query 31: Retrieve all books that have an author, and all books that have an author who has not been recommended by anyone Query 32: Calculate the sum of the price of all books authored by the author with primary key (pk) equal to 1 Query 33: Retrieve the title of the most recently published book Query 34: Calculate the average price of all books Query 35: Calculate the maximum popularity score of all the publishers that have published a book written by the author with primary key 1 Query 36: Count Authors with Books containing ‘ab’ in the title Query 37: Filter Authors by Number of Followers Query 38: Average Popularity Score of Authors who joined after 20th Sep 2014 Query 39: Filter Books by Authors who have written more than 10 Books Query 40: Filter Books by Title Count Conclusion Querying Django Models with Examples In Django, querying the database is an essential task when working with models....</p>
   </div>
-  <footer class="entry-footer"><span title='2023-02-19 01:18:34 +0530 IST'>February 19, 2023</span>&nbsp;·&nbsp;17 min&nbsp;·&nbsp;3586 words</footer>
-  <a class="entry-link" aria-label="post link to Ultimate Django ORM Cheatsheet &#43; Exercises" href="https://atharvashah.netlify.app/tech/django-orm-exercises/"></a>
+  <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>February 19, 2023
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>3586 words
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>17 mins
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://atharvashah.netlify.app/tags/programming/" style="color: var(--secondary)!important;">programming</a>
+                &nbsp;<a href="https://atharvashah.netlify.app/tags/django/" style="color: var(--secondary)!important;">Django</a>
+                &nbsp;<a href="https://atharvashah.netlify.app/tags/database/" style="color: var(--secondary)!important;">database</a>
+            </span>
+        </span>
+    </span>
+</span></footer>
+  <a class="entry-link" aria-label="post link to Ultimate Django ORM Cheatsheet &#43; Exercises" href="https://atharvashah.netlify.app/posts/tech/django-orm-exercises/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -175,8 +236,60 @@ if (!doNotTrack) {
   <div class="entry-content">
     <p>Django 🚀2023 is here, and I’m ready to blast off into the world of new tech! First up on my list is the one and only Django 🤘. This bad boy is known for its ease of use and flexibility, plus it’s got a huge community of cool kids using it. I can’t wait to dive deeper and discover all its hidden gems like the ORM, admin interface, and built-in security features....</p>
   </div>
-  <footer class="entry-footer"><span title='2023-01-27 01:19:34 +0530 IST'>January 27, 2023</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;946 words</footer>
-  <a class="entry-link" aria-label="post link to What I am Learning in 2023" href="https://atharvashah.netlify.app/tech/what-i-am-learning-2023/"></a>
+  <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>January 27, 2023
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>946 words
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>5 mins
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://atharvashah.netlify.app/tags/technology/" style="color: var(--secondary)!important;">technology</a>
+                &nbsp;<a href="https://atharvashah.netlify.app/tags/programming/" style="color: var(--secondary)!important;">programming</a>
+                &nbsp;<a href="https://atharvashah.netlify.app/tags/web-development/" style="color: var(--secondary)!important;">web-development</a>
+            </span>
+        </span>
+    </span>
+</span></footer>
+  <a class="entry-link" aria-label="post link to What I am Learning in 2023" href="https://atharvashah.netlify.app/posts/tech/what-i-am-learning-2023/"></a>
 </article>
     </main>
     
