@@ -1,7 +1,7 @@
 ---
 title: "Album Review: Plastic Beach by Gorillaz"
-date: 2023-03-07T00:18:34+05:30
-draft: true
+date: 2023-06-12T00:18:34+05:32
+draft: false
 cover: 
     image: blog/music-review/plastic-beach.jpeg
     alt: Plastic Beach by Gorillaz

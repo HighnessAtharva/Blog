@@ -1,7 +1,7 @@
 ---
 title: "Album Review: Loveless by My Bloody Valentine"
-date: 2023-03-06T00:18:34+05:30
-draft: true
+date: 2023-06-12T00:18:34+05:31
+draft: false
 cover: 
     image: blog/music-review/loveless.jpg
     alt: Loveless by My Bloody Valentine
