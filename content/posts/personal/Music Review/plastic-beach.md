@@ -6,7 +6,7 @@ cover:
     image: blog/music-review/plastic-beach.jpeg
     alt: Plastic Beach by Gorillaz
     caption: An entertaining record from the virtual band
-tags: ["Music", "Album Review", "Hip Hop", "Alternative Rock"]
+tags: ["Music", "Album Review"]
 ---
 
 Gorillaz's "Plastic Beach" album is a magnificent work of art that takes the listener on a surreal journey through a digital island filled with both beauty and decay. This is a place where the vibrant colors of the natural world blend with the metallic tones of machinery, and the music echoes that duality with its unique fusion of hip-hop, pop, and psychedelic sounds.
@@ -27,4 +27,4 @@ If there is one critique to be made of the album, it is perhaps that its length 
 
 In conclusion, "Plastic Beach" is a remarkable album that solidifies Gorillaz's place as one of the most innovative and creative bands in the world. With its eclectic mix of musical styles, thought-provoking lyrics, and stunning visuals, this album is an essential addition to any music lover's collection.
 
-**Rating: 8/10**
+**Rating: 7/10**

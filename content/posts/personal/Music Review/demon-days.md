@@ -6,7 +6,7 @@ cover:
     image: blog/music-review/demon-days.jpg
     alt: Demon Days by Gorillaz
     caption: A wild ride of a record
-tags: ["Music", "Album Review", "Hip Hop", "Alternative Rock"]
+tags: ["Music", "Album Review"]
 ---
 
 

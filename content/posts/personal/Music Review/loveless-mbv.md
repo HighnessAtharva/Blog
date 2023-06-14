@@ -6,7 +6,7 @@ cover:
     image: blog/music-review/loveless.jpg
     alt: Loveless by My Bloody Valentine
     caption: A masterpiece of shoegaze and dream pop
-tags: ["Music", "Album Review", "Shoegaze", "Dream Pop"]
+tags: ["Music", "Album Review"]
 ---
 
 As a connoisseur of the avant-garde music scene, I was thrilled to dive headfirst into My Bloody Valentine's iconic album, "Loveless." And let me tell you, this album is a wild ride, bursting with the iconic and distinguishing shoegazy sound that enraptured me from my very first listen.
@@ -19,4 +19,4 @@ But as with any album, there are a few critiques to be made. Some of the tracks 
 
 Despite these minor criticisms, this record is an absolute must-listen for fans of the shoegaze genre and anyone who wants to experience the pinnacle of avant-garde music. My Bloody Valentine has truly outdone themselves with this album, creating a sonic landscape that is both mesmerizing and surreal.
 
-**Rating: 7/10**
+**Rating: 8/10**

@@ -6,7 +6,7 @@ cover:
     image: blog/music-review/stratosphere.jpg
     alt: Stratosphere by Duster
     caption: An idyllic journey through the great outdoors
-tags: ["Music", "Album Review", "Indie Rock", "Slowcore"]
+tags: ["Music", "Album Review"]
 ---
 
 Stratosphere, the 1998 slowcore classic by Duster, is a sonic force to be reckoned with. From the minimalist album cover to the dreamy soundscapes, this album evokes a sense of tranquility and longing that is both nostalgic and futuristic. The songs are slow and atmospheric, each one feeling like a journey through space and time, with recurring beats and tempo changes that keep things interesting.
@@ -21,4 +21,4 @@ The standout tracks on the album include "Constellations," a slow and introspect
 
 Overall, Duster's Stratosphere is a must-listen for fans of slowcore and ambient music. It's a mesmerizing and transportive experience that will leave you feeling relaxed and contemplative. This album is perfect for those moments when you need to escape the chaos of the world and retreat into your own personal space. It's a timeless classic that deserves to be heard by anyone who loves music that is both beautiful and contemplative.
 
-**Rating: 7/10**
+**Rating: 8/10**
