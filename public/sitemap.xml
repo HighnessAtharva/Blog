@@ -2,11 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://atharvashah.netlify.app/posts/tech/</loc>
+    <lastmod>2023-06-14T01:18:34+05:30</lastmod>
+  </url><url>
     <loc>https://atharvashah.netlify.app/posts/</loc>
-    <lastmod>2023-06-14T00:18:34+05:31</lastmod>
+    <lastmod>2023-06-14T01:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/</loc>
-    <lastmod>2023-06-14T00:18:34+05:31</lastmod>
+    <lastmod>2023-06-14T01:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/data-science/</loc>
+    <lastmod>2023-06-14T01:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/python/</loc>
+    <lastmod>2023-06-14T01:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/tech/sales-data-analysis/</loc>
+    <lastmod>2023-06-14T01:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/</loc>
+    <lastmod>2023-06-14T01:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/album-review/</loc>
     <lastmod>2023-06-14T00:18:34+05:31</lastmod>
@@ -18,9 +33,6 @@
     <lastmod>2023-06-14T00:18:34+05:31</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/posts/personal/</loc>
-    <lastmod>2023-06-14T00:18:34+05:31</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/tags/</loc>
     <lastmod>2023-06-14T00:18:34+05:31</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/posts/personal/music-review/demon-days/</loc>
@@ -35,13 +47,7 @@
     <loc>https://atharvashah.netlify.app/posts/personal/music-review/stratosphere/</loc>
     <lastmod>2023-06-12T00:18:34+05:33</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/posts/tech/</loc>
-    <lastmod>2023-06-05T01:18:34+05:30</lastmod>
-  </url><url>
     <loc>https://atharvashah.netlify.app/posts/tech/gumroad-dsa-announcement/</loc>
-    <lastmod>2023-06-05T01:18:34+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/tags/python/</loc>
     <lastmod>2023-06-05T01:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/book-quotes/</loc>
@@ -177,9 +183,6 @@
     <lastmod>2023-01-27T01:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/posts/tech/crif-hackathon-2023/</loc>
-    <lastmod>2023-01-26T23:18:34+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/tags/data-science/</loc>
     <lastmod>2023-01-26T23:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/hackathon/</loc>

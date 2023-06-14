@@ -6,7 +6,17 @@
     <description>Recent content in Python on Atharva Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Jun 2023 01:18:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jun 2023 01:18:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sales Data Analysis with Python</title>
+      <link>https://atharvashah.netlify.app/posts/tech/sales-data-analysis/</link>
+      <pubDate>Wed, 14 Jun 2023 01:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/sales-data-analysis/</guid>
+      <description>Introduction ABC Private Limited, a retail company, aims to gain valuable insights into their customers&amp;rsquo; purchasing habits. By analyzing the provided summary of high-volume product purchase history, which includes customer demographics and product details, ABC can uncover patterns and trends in customer spending across different product categories.
+We will explore the analysis step-by-step using the test.csv and train.csv files. Through a combination of theoretical explanations and practical demonstrations, we will delve into data preprocessing, exploratory data analysis, feature engineering, and model building.</description>
+    </item>
+    
     <item>
       <title>Digital Product Series Launch!</title>
       <link>https://atharvashah.netlify.app/posts/tech/gumroad-dsa-announcement/</link>
