@@ -2,13 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://atharvashah.netlify.app/posts/tech/</loc>
-    <lastmod>2023-06-14T01:18:34+05:30</lastmod>
-  </url><url>
     <loc>https://atharvashah.netlify.app/posts/</loc>
-    <lastmod>2023-06-14T01:18:34+05:30</lastmod>
+    <lastmod>2023-06-18T00:00:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/</loc>
+    <lastmod>2023-06-18T00:00:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/personal/movie-review/june-2023/</loc>
+    <lastmod>2023-06-18T00:00:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/movie-review/</loc>
+    <lastmod>2023-06-18T00:00:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/personal/</loc>
+    <lastmod>2023-06-18T00:00:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/</loc>
+    <lastmod>2023-06-18T00:00:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/tech/</loc>
     <lastmod>2023-06-14T01:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/data-science/</loc>
@@ -20,9 +32,6 @@
     <loc>https://atharvashah.netlify.app/posts/tech/sales-data-analysis/</loc>
     <lastmod>2023-06-14T01:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/tags/</loc>
-    <lastmod>2023-06-14T01:18:34+05:30</lastmod>
-  </url><url>
     <loc>https://atharvashah.netlify.app/tags/album-review/</loc>
     <lastmod>2023-06-14T00:18:34+05:31</lastmod>
   </url><url>
@@ -30,9 +39,6 @@
     <lastmod>2023-06-14T00:18:34+05:31</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/music/</loc>
-    <lastmod>2023-06-14T00:18:34+05:31</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/posts/personal/</loc>
     <lastmod>2023-06-14T00:18:34+05:31</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/posts/personal/music-review/demon-days/</loc>
@@ -63,9 +69,6 @@
     <lastmod>2023-06-04T01:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/posts/personal/movie-review/may-2023/</loc>
-    <lastmod>2023-05-25T00:18:34+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/tags/movie-review/</loc>
     <lastmod>2023-05-25T00:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/devops/</loc>
