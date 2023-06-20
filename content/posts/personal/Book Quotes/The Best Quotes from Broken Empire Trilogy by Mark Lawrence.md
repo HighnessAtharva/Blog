@@ -6,7 +6,7 @@ cover:
     image: blog/quotes/broken-empire-quotes.jpg
     alt: Broken Empire Trilogy by Mark Lawrence
     caption: War, my friends, is a thing of beauty. Those as says otherwise are losing.
-tags: ["Book Quotes", "Fantasy", "Mark Lawrence"] 
+tags: ["Book Quotes", "Fantasy"] 
 
 ---
 

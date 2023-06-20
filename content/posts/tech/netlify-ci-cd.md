@@ -6,7 +6,7 @@ cover:
     image: blog/netlify-logo.png
     alt: Setting Up CI/CD to Netlify for Static Sites via Github
     caption: Using Github Actions and Netlify to set up CI/CD for static sites like Hugo, Jekyll, etc.
-tags: ["devops", "tutorial"]
+tags: ["technology", "tutorial"]
 ---
 
 - [Description](#description)

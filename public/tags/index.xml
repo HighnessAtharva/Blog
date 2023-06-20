@@ -17,20 +17,20 @@
     </item>
     
     <item>
-      <title>Data Science</title>
-      <link>https://atharvashah.netlify.app/tags/data-science/</link>
-      <pubDate>Wed, 14 Jun 2023 01:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/data-science/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Python</title>
       <link>https://atharvashah.netlify.app/tags/python/</link>
       <pubDate>Wed, 14 Jun 2023 01:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://atharvashah.netlify.app/tags/tutorial/</link>
+      <pubDate>Wed, 14 Jun 2023 01:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/tags/tutorial/</guid>
       <description></description>
     </item>
     
@@ -62,29 +62,20 @@
     </item>
     
     <item>
-      <title>Mike Ma</title>
-      <link>https://atharvashah.netlify.app/tags/mike-ma/</link>
+      <title>Fiction</title>
+      <link>https://atharvashah.netlify.app/tags/fiction/</link>
       <pubDate>Sun, 04 Jun 2023 02:18:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/tags/mike-ma/</guid>
+      <guid>https://atharvashah.netlify.app/tags/fiction/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>devops</title>
-      <link>https://atharvashah.netlify.app/tags/devops/</link>
+      <title>technology</title>
+      <link>https://atharvashah.netlify.app/tags/technology/</link>
       <pubDate>Wed, 03 May 2023 19:18:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/tags/devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tutorial</title>
-      <link>https://atharvashah.netlify.app/tags/tutorial/</link>
-      <pubDate>Wed, 03 May 2023 19:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/tutorial/</guid>
+      <guid>https://atharvashah.netlify.app/tags/technology/</guid>
       <description></description>
     </item>
     
@@ -116,24 +107,6 @@
     </item>
     
     <item>
-      <title>H.P Lovecraft</title>
-      <link>https://atharvashah.netlify.app/tags/h.p-lovecraft/</link>
-      <pubDate>Fri, 14 Apr 2023 23:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/h.p-lovecraft/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Horror</title>
-      <link>https://atharvashah.netlify.app/tags/horror/</link>
-      <pubDate>Fri, 14 Apr 2023 23:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/horror/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Science Fiction</title>
       <link>https://atharvashah.netlify.app/tags/science-fiction/</link>
       <pubDate>Fri, 14 Apr 2023 23:18:34 +0530</pubDate>
@@ -152,74 +125,11 @@
     </item>
     
     <item>
-      <title>Reading Challenge</title>
-      <link>https://atharvashah.netlify.app/tags/reading-challenge/</link>
-      <pubDate>Sat, 18 Mar 2023 00:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/reading-challenge/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>database</title>
-      <link>https://atharvashah.netlify.app/tags/database/</link>
-      <pubDate>Sun, 19 Feb 2023 01:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/database/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>programming</title>
       <link>https://atharvashah.netlify.app/tags/programming/</link>
-      <pubDate>Sun, 19 Feb 2023 01:18:34 +0530</pubDate>
+      <pubDate>Fri, 27 Jan 2023 01:19:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/tags/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>chatgpt</title>
-      <link>https://atharvashah.netlify.app/tags/chatgpt/</link>
-      <pubDate>Wed, 15 Feb 2023 01:19:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/chatgpt/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>uml</title>
-      <link>https://atharvashah.netlify.app/tags/uml/</link>
-      <pubDate>Wed, 15 Feb 2023 01:19:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/uml/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>technology</title>
-      <link>https://atharvashah.netlify.app/tags/technology/</link>
-      <pubDate>Fri, 27 Jan 2023 01:19:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/technology/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web-development</title>
-      <link>https://atharvashah.netlify.app/tags/web-development/</link>
-      <pubDate>Fri, 27 Jan 2023 01:19:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/web-development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AI</title>
-      <link>https://atharvashah.netlify.app/tags/ai/</link>
-      <pubDate>Fri, 27 Jan 2023 01:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/ai/</guid>
       <description></description>
     </item>
     
@@ -233,15 +143,6 @@
     </item>
     
     <item>
-      <title>science</title>
-      <link>https://atharvashah.netlify.app/tags/science/</link>
-      <pubDate>Fri, 27 Jan 2023 01:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/science/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Hackathon</title>
       <link>https://atharvashah.netlify.app/tags/hackathon/</link>
       <pubDate>Thu, 26 Jan 2023 23:18:34 +0530</pubDate>
@@ -251,74 +152,11 @@
     </item>
     
     <item>
-      <title>Alan Moore</title>
-      <link>https://atharvashah.netlify.app/tags/alan-moore/</link>
-      <pubDate>Mon, 11 Jul 2022 23:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/alan-moore/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Andrzej Sapkowski</title>
-      <link>https://atharvashah.netlify.app/tags/andrzej-sapkowski/</link>
-      <pubDate>Mon, 11 Jul 2022 23:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/andrzej-sapkowski/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Graphic Novels</title>
       <link>https://atharvashah.netlify.app/tags/graphic-novels/</link>
       <pubDate>Mon, 11 Jul 2022 23:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/tags/graphic-novels/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jay Kristoff</title>
-      <link>https://atharvashah.netlify.app/tags/jay-kristoff/</link>
-      <pubDate>Mon, 11 Jul 2022 23:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/jay-kristoff/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Joe Abercrombie</title>
-      <link>https://atharvashah.netlify.app/tags/joe-abercrombie/</link>
-      <pubDate>Mon, 11 Jul 2022 23:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/joe-abercrombie/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Neil Gaiman</title>
-      <link>https://atharvashah.netlify.app/tags/neil-gaiman/</link>
-      <pubDate>Mon, 11 Jul 2022 23:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/neil-gaiman/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Robin Hobb</title>
-      <link>https://atharvashah.netlify.app/tags/robin-hobb/</link>
-      <pubDate>Mon, 11 Jul 2022 23:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/robin-hobb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mark Lawrence</title>
-      <link>https://atharvashah.netlify.app/tags/mark-lawrence/</link>
-      <pubDate>Sun, 10 Jul 2022 23:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/mark-lawrence/</guid>
       <description></description>
     </item>
     

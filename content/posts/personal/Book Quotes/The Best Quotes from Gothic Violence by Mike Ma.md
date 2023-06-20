@@ -6,7 +6,7 @@ cover:
     image: blog/quotes/mike-ma-gv.png
     alt: Gothic Violence by Mika Ma
     caption: A few notable quotes from the wild and wondeful mind of Mike Ma in his book Gothic Violence.
-tags: ["Book Quotes", "Mike Ma"]
+tags: ["Book Quotes", "Fiction"]
 ---
 
 ## TEST

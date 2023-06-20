@@ -6,7 +6,7 @@ cover:
     image: blog/django-orm.png
     alt: Django ORM Cheatsheet + Exercises
     caption: Master the basics of Django ORM with this comprehensive cheatsheet and exercises to level up your skills in database querying, model relationships, aggregations, annotations, and more. 
-tags: ["programming", "django", "database"]
+tags: ["Python", "django"]
 ---
 
 - [Querying Django Models with Examples](#querying-django-models-with-examples)

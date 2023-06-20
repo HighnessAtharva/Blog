@@ -6,7 +6,7 @@ cover:
     image: blog/quotes/sandman-quotes.jpg
     alt: Sandman (Graphic Novel) by Neil Gaiman
     caption: There's but three Furies found in spacious hell. But in a great man's breast three thousand dwell.
-tags: ["Book Quotes", "Graphic Novels", "Neil Gaiman"] 
+tags: ["Book Quotes", "Graphic Novels"] 
 
 ---
 

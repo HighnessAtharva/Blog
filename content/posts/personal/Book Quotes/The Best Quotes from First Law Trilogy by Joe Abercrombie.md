@@ -6,7 +6,7 @@ cover:
     image: blog/quotes/first-law-quotes.jpg
     alt: First Law Trilogy by Joe Abercrombie
     caption: The blade itself incites to deeds of violence.
-tags: ["Book Quotes", "Fantasy", "Joe Abercrombie"] 
+tags: ["Book Quotes", "Fantasy"] 
 
 ---
 

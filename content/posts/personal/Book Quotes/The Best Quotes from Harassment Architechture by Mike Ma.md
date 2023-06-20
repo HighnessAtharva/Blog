@@ -6,7 +6,7 @@ cover:
     image: blog/quotes/mike-ma-ha.jpg
     alt: Harassment Architechture by Mika Ma
     caption: I am the aesthete and the ethicist. I am the alpha and the omega. I am war and peace. I am ying and yang. I am calling girls fat on the internet.
-tags: ["Book Quotes", "Mike Ma"] 
+tags: ["Book Quotes", "Fiction"] 
 
 ---
 

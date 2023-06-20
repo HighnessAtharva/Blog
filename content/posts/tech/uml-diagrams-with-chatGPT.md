@@ -6,7 +6,7 @@ cover:
     image: blog/uml-chat-thumb.png
     alt: 2023 Tech Stack
     caption: Design Like a Pro! How ChatGPT Generates UML Diagrams for Your Project in Just a Few Clicks! 
-tags: ["chatgpt", "uml", "tutorial"]
+tags: ["technology", "tutorial"]
 ---
 
 ## Introduction

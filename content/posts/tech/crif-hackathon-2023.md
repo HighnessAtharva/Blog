@@ -6,7 +6,7 @@ cover:
     image: blog/crif-hackathon/CRIF3.jpg
     alt: Developer experience at CRIF Hackathon 2023. Innovating the future, one hackathon at a time
     caption: The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination. Few media of creation are so flexible, so easy to polish and rework, so readily capable of realizing grand conceptual structures. 
-tags: ["Hackathon", "Data Science", "Python"]
+tags: ["Hackathon", "Python"]
 ---
 
 Winning a hackathon is an incredible feeling, and it's even more special when it's your very first one. The adrenaline rush of competing against some of the brightest minds in the industry, the satisfaction of solving complex problems, and the thrill of being recognized for your hard work are all emotions that are hard to put into words. In this article, I'll walk you through the journey of our team who recently won their first ever hackathon, the CRIF Hackathon 2023. From the initial idea to the final presentation, we'll explore the ups and downs of the experience, and the valuable lessons that were learned along the way. So join us as we relive the excitement of a hackathon victory, and learn what it takes to come out on top.

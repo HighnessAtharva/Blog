@@ -6,7 +6,7 @@ cover:
     image: blog/malazan/prelude-cover.jpeg
     alt: A Prelude to my Malazan Book of the Fallen Reading Challenge
     caption: Opening the door to a new high fantasy universe
-tags: ["Malazan Book of the Fallen", "Reading Challenge", "Fantasy"]
+tags: ["Malazan Book of the Fallen", "Fantasy"]
 ---
 
 Embarking on a massive high fantasy book series is no small feat, especially when you're looking for a breathtaking, complex, and engaging story that spans decades and continents. As an experienced reader of ASoIaF, WoT, Tchaikovsky's works, Mistborn, and the First Law Trilogy, I knew I needed a challenge that would test my mettle.

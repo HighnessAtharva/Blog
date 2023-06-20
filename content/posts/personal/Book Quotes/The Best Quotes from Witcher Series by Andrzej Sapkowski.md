@@ -6,7 +6,7 @@ cover:
     image: blog/quotes/witcher-quotes.png
     alt: The Witcher Series by Andrzej Sapkowski
     caption: I know that in order to unite two people, destiny is insufficient. Something more is necessary than destiny.
-tags: ["Book Quotes", "Fantasy", "Andrzej Sapkowski"] 
+tags: ["Book Quotes", "Fantasy"] 
 
 ---
 

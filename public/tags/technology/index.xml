@@ -6,14 +6,33 @@
     <description>Recent content in technology on Atharva Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Jan 2023 01:19:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/technology/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 May 2023 19:18:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/technology/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>What I am Learning in 2023</title>
-      <link>https://atharvashah.netlify.app/posts/tech/what-i-am-learning-2023/</link>
-      <pubDate>Fri, 27 Jan 2023 01:19:34 +0530</pubDate>
+      <title>Setting Up CI/CD to Netlify for Static Sites via Github</title>
+      <link>https://atharvashah.netlify.app/posts/tech/netlify-ci-cd/</link>
+      <pubDate>Wed, 03 May 2023 19:18:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/posts/tech/what-i-am-learning-2023/</guid>
-      <description>Django 🚀2023 is here, and I&amp;rsquo;m ready to blast off into the world of new tech! First up on my list is the one and only Django 🤘. This bad boy is known for its ease of use and flexibility, plus it&amp;rsquo;s got a huge community of cool kids using it. I can&amp;rsquo;t wait to dive deeper and discover all its hidden gems like the ORM, admin interface, and built-in security features.</description>
+      <guid>https://atharvashah.netlify.app/posts/tech/netlify-ci-cd/</guid>
+      <description>Description I. Introduction II. Setting Up a Netlify Account III. Setting Up CI/CD to Netlify Configuring the Build Settings on Netlify Configuring the Deployment Settings on Netlify IV. Setting Up CI/CD with Github Actions Introduction to Github Actions Creating a Github Actions Workflow for the Static Site Configuring the Workflow to Deploy to Netlify V. Best Practices for CI/CD with Netlify and Github VI. Troubleshooting CI/CD Issues VII. Conclusion Description This article provides step-by-step instructions on how to set up continuous integration and continuous deployment (CI/CD) to Netlify for static site deployments using Github.</description>
+    </item>
+    
+    <item>
+      <title>Use ChatGPT to Generate Project UML Diagrams: A Step-by-Step Tutorial</title>
+      <link>https://atharvashah.netlify.app/posts/tech/uml-diagrams-with-chatgpt/</link>
+      <pubDate>Wed, 15 Feb 2023 01:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/uml-diagrams-with-chatgpt/</guid>
+      <description>Introduction Are you tired of spending hours designing UML diagrams for your projects? Look no further than ChatGPT, a powerful language model that can generate PlantUML code based on your project description. In this tutorial, we will guide you through the steps to use ChatGPT to generate UML diagrams for your projects in just a few clicks.
+Step 1: Write Your Project Description The first step is to write your project description or title.</description>
+    </item>
+    
+    <item>
+      <title>Accelerating into the Future: An Exploration of Effective Accelerationism and its Impact on AI and Society</title>
+      <link>https://atharvashah.netlify.app/posts/tech/effective-accelerationism/</link>
+      <pubDate>Fri, 27 Jan 2023 01:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/effective-accelerationism/</guid>
+      <description>Introduction Brief overview of accelerationism The advent of AI and its impact on society Theories of Accelerationism Historical context of accelerationism Left and right-wing accelerationism Critiques of accelerationism AI and the Future of Society Advancements in AI technology Potential consequences of widespread AI integration Ethical considerations of AI development Accelerationism and Transhumanism: A Complex Intersection The intersection of accelerationism and transhumanism Potential benefits and drawbacks of merging technology with humanity Final thoughts on the Post-AI Society Introduction Yo, what&amp;rsquo;s good, internet?</description>
     </item>
     
   </channel>

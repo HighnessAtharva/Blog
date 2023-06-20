@@ -6,7 +6,7 @@ cover:
     image: blog/sales-data-analysis/cover.jpg
     alt: EDA, Preprocessing, Feature Engineering, Model Building with Python
     caption:  EDA, Preprocessing, Feature Engineering, Model Building with Python
-tags: ["python", "data science"]
+tags: ["python", "tutorial"]
 showtoc: true
 tocopen: true
 ---

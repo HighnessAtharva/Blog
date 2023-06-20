@@ -6,7 +6,7 @@ cover:
     image: blog/quotes/rote-quotes.jpg
     alt: Realm of the Elderlings by Robin Hobb
     caption: If ever you make it so they don't need you, they will kill you.
-tags: ["Book Quotes", "Fantasy", "Robin Hobb"] 
+tags: ["Book Quotes", "Fantasy"] 
 
 ---
 
