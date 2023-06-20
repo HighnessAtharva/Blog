@@ -6,6 +6,7 @@ cover:
     image: blog/quotes/nevernight-quotes.jpeg
     alt: Nevernight Trilogy by Jay Kristoff
     caption: That goat-loving, mule-sucking, pig-fucking sonofabitch
+description: "Favorite Quotes from Nevernight Trilogy by Jay Kristoff. A blood-curdling, brutalist masterpiece."
 tags: ["Book Quotes", "Fantasy"] 
 
 ---

@@ -6,6 +6,7 @@ cover:
     image: blog/quotes/lovecraft.jpg
     alt: "H.P. Lovecraft"
     caption: "The horror from the mind of H.P. Lovecraft"
+description: "Favorite Quotes from the mind of H.P. Lovecraft. Everything from Eldritch Monsters to the Necronomicon, we have them all."
 tags: ["Book Quotes", "Science Fiction"] 
 ---
 

@@ -6,6 +6,7 @@ cover:
     image: blog/movie-review/January-2023.jpg
     alt: January 2023 Movie Reviews
     caption: Reviews of the movies I watched in January 2023
+description: "January 2023 brought a plethora of cinematic experiences my way, and I'm eager to share my take on them. From classic films to new releases, my viewing journey was diverse and exciting."
 tags: ["Movie Review"]
 ---
 

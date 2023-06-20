@@ -6,15 +6,16 @@ cover:
     image: blog/quotes/rote-quotes.jpg
     alt: Realm of the Elderlings by Robin Hobb
     caption: If ever you make it so they don't need you, they will kill you.
+description: "Favorite Quotes from Realm of the Elderlings by Robin Hobb. All the trilogies and the charm all in one place."
 tags: ["Book Quotes", "Fantasy"] 
 
 ---
 
 Currently, I have only managed to finish off the first trilogy in the mammoth that Realm of the Elderlings happens to be but I plan to power through the series soon and add the remainder of the quotes so sit back and enjoy what I have to offer. If you feel a few hidden gems are missing, email me!
 
-# Farseer Trilogy
+## Farseer Trilogy
 
-## Assassin’s Apprentice
+### Assassin’s Apprentice
 
 - When you cut pieces out of the truth to avoid looking like a fool you end up looking like a moron instead.
 - Don’t do what you can’t undo, until you’ve considered what you can’t do once you’ve done it.
@@ -42,7 +43,7 @@ Currently, I have only managed to finish off the first trilogy in the mammoth th
 - I idly wished for something else, for any situation that was neither this forsaken chamber nor the tenseness of Burrich’s room. For a restfulness that perhaps I had once known somewhere else but could no longer recall. And so I drowsed into oblivion.
 - But take him now, Regal, and shape him, and a decade hence you will command his loyalty. [...] A bastard, Regal, is a unique thing. Put a signet ring on his hand and send him forth, and you have created a diplomat no foreign ruler will dare to turn away. He may safely be sent where a prince of the blood may not be risked. Imagine the uses for one who is and yet is not of the royal bloodline. Hostage exchanges. Martial alliances. Quiet work. The diplomacy of the knife.
 
-## Royal Assassin
+### Royal Assassin
 
 - He shook his head pityingly. “This, more than anything else, is what I have never understood about your people. You can roll dice, and understand that the whole game may hinge on one turn of a die. You deal out cards, and say that all a man's fortune for the night may turn upon one hand. But a man's whole life, you sniff at, and say, what, this naught of a human, this fisherman, this carpenter, this thief, this cook, why, what can they do in the great wide world? And so you putter and sputter your lives away, like candles burning in a draft.”
 “Not all men are destined for greatness,” I reminded him.“Are you sure, Fitz? Are you sure? What good is a life lived as if it made no difference at all to the great life of the world? A sadder thing I cannot imagine. Why should not a mother say to herself, if I raise this child aright, if I love and care for her, she shall live a life that brings joy to those about her, and thus I have changed the world? Why should not the farmer that plants a seed say to his neighbor, this seed I plant today will feed someone, and that is how I change the world today?”
@@ -63,7 +64,7 @@ Currently, I have only managed to finish off the first trilogy in the mammoth th
 - Always I have possessed the loneliness of one raised amid intrigues and clustering secrets, the isolation of a boy who cannot trust the completeness of his heart to anyone.
 - We cannot put old heads on young shoulders.
 
-## Assassin’s Quest
+### Assassin’s Quest
 
 - There is a dead spot in the night, that coldest, blackest time when the world has forgotten evening and dawn is not yet a promise. A time when it is far too early to arise, but so late that going to bed makes small sense.
 - Someday is someday, and maybe it will be or maybe it won't. This is a human thing, to worry about things that may or may not come to be. You can't eat meat until you've killed it.
@@ -85,62 +86,62 @@ Currently, I have only managed to finish off the first trilogy in the mammoth th
 - I supposed there was something about me that made all elderly folk assume my time was at their disposal.
 - Death is always at the edge of now.
 
-# Liveship Traders Trilogy
+## Liveship Traders Trilogy
 
-## Ship of Magic
-
--
-
-## The Mad Ship
+### Ship of Magic
 
 -
 
-## Ship of Destiny
+### The Mad Ship
 
 -
 
-# Tawny Man Trilogy
-
-## Fool’s Errand
+### Ship of Destiny
 
 -
 
-## Golden Fool
+## Tawny Man Trilogy
+
+### Fool’s Errand
 
 -
 
-## Fool’s Fate
+### Golden Fool
 
 -
 
-# Rain Wild Chronicles
-
-## Dragon Keeper
+### Fool’s Fate
 
 -
 
-## Dragon Haven
+## Rain Wild Chronicles
+
+### Dragon Keeper
 
 -
 
-## City of Dragons
+### Dragon Haven
 
 -
 
-## Blood of Dragons
+### City of Dragons
 
 -
 
-# The Fitz and the Fool Trilogy
-
-## Fool’s Assassin
+### Blood of Dragons
 
 -
 
-## Fool’s Quest
+## The Fitz and the Fool Trilogy
+
+### Fool’s Assassin
 
 -
 
-## Assassin’s Fate
+### Fool’s Quest
+
+-
+
+### Assassin’s Fate
 
 -

@@ -6,6 +6,7 @@ cover:
     image: blog/list-youtube.png
     alt: Awesome Youtube Channels I am Subscribed To
     caption: A perpetually growing list of youtube channels I am subscribed to. All of them are awesome.
+description: "A perpetually growing list of youtube channels I am subscribed to. All of them are awesome."
 tags: ["lists"]
 ---
 

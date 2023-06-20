@@ -6,6 +6,7 @@ cover:
     image: blog/list-web.png
     alt: Awesome Websites and Webpages
     caption: A perpetually growing list of cool things I discover over the internet. All of them are awesome.
+description: "A perpetually growing list of cool things I discover over the internet. All of them are awesome."
 tags: ["lists"]
 ---
 

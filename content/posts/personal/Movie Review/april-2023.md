@@ -6,6 +6,7 @@ cover:
     image: blog/movie-review/April-2023.jpg
     alt: April 2023 Movie Reviews
     caption: Reviews of the movies I watched in April 2023
+description: "April 2023 was an exciting month for movie enthusiasts, with a variety of genres and eras represented in the films released and viewed."
 tags: ["Movie Review"]
 ---
 

@@ -6,6 +6,7 @@ cover:
     image: blog/list-podcast.png
     alt: Awesome Podcasts I am Listening To
     caption: A perpetually growing list of podcasts I am listening to. All of them are awesome. 
+description: "A perpetually growing list of podcasts I am listening to. All of them are awesome. Insightful,entertaining and eye-opening."
 tags: ["lists"]
 ---
 

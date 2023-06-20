@@ -6,6 +6,7 @@ cover:
     image: blog/malazan/prelude-cover.jpeg
     alt: A Prelude to my Malazan Book of the Fallen Reading Challenge
     caption: Opening the door to a new high fantasy universe
+description: "Opening thoughts and ponderings before taking on the humungous Malazan Book of the Fallen series. Setting expectations and challenges before embarking on a fantasy adventure."
 tags: ["Malazan Book of the Fallen", "Fantasy"]
 ---
 

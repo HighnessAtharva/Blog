@@ -6,6 +6,7 @@ cover:
     image: blog/malazan/02-dg-cover.jpg
     alt: Deadhouse Gates by Steven Erikson
     caption: Rising rebellions, ancient secrets, and an Empire on the brink of war. The second book in the Malazan Book of the Fallen series is a thrilling and tragic tale of war and its consequences.
+description: "Rising rebellions, ancient secrets, and an Empire on the brink of war. The second book in the Malazan Book of the Fallen series is a thrilling and tragic tale of war and its consequences."
 tags: ["Malazan Book of the Fallen", "Fantasy"]
 ---
 

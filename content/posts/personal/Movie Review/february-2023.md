@@ -6,6 +6,7 @@ cover:
     image: blog/movie-review/February-2023.jpg
     alt: February 2023 Movie Reviews
     caption: Reviews of the movies I watched in February 2023
+description: "February was a month for the ages as I indulged in a smorgasbord of movies. Consumed movies across a ton of genres."
 tags: ["Movie Review"]
 ---
 

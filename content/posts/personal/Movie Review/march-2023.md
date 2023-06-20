@@ -6,6 +6,7 @@ cover:
     image: blog/movie-review/March-2023.jpg
     alt: March 2023 Movie Reviews
     caption: Reviews of the movies I watched in March 2023
+description: "A month filled with movie magic, and I had the pleasure of watching some truly amazing films."
 tags: ["Movie Review"]
 ---
 
