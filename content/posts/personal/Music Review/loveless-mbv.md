@@ -6,6 +6,7 @@ cover:
     image: blog/music-review/loveless.jpg
     alt: Loveless by My Bloody Valentine
     caption: A masterpiece of shoegaze and dream pop
+description: "An album review for Loveless by My Bloody Valentine. A masterpiece of shoegaze and dream pop."
 tags: ["Music", "Album Review"]
 ---
 

@@ -42,7 +42,7 @@ Introducing the First Set of Resources We are excited to release the first few r
       <pubDate>Mon, 01 May 2023 23:20:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part3/</guid>
-      <description>Introduction Test Driven Development Approach Explained URL Testing Model Testing View Testing Writing Tests Testing URLS Testing Models Testing Views How to Run Tests Conclusion Introduction Welcome to the final part of the 3-part technical tutorial series, where have been building a Django project that enables users to manage their cryptocurrency portfolios. To implement the functionalities and additional features, we&amp;rsquo;ll be utilizing API calls to coingecko or any other cryptocurrency API.</description>
+      <description>Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django.</description>
     </item>
     
     <item>
@@ -51,7 +51,7 @@ Introducing the First Set of Resources We are excited to release the first few r
       <pubDate>Mon, 01 May 2023 23:19:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part2/</guid>
-      <description>Introduction Setting up the URLs Setting Up Templates Setting Up Views Signup Login Screen Forgot Password Page Password Reset Email Password Reset Success Home Page Add Currency / Search Result Page Wallet Page Run the crypto app Conclusion Introduction Welcome to the second part of the 3-part technical tutorial series, where we&amp;rsquo;ll be building a Django project that enables users to manage their cryptocurrency portfolios. To implement the functionalities and additional features, we&amp;rsquo;ll be utilizing API calls to coingecko or any other cryptocurrency API.</description>
+      <description>Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django.</description>
     </item>
     
     <item>
@@ -60,7 +60,7 @@ Introducing the First Set of Resources We are excited to release the first few r
       <pubDate>Mon, 01 May 2023 23:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part1/</guid>
-      <description>Table of contents Table of contents Introduction Defining Functional Requirements Tech Stack Planned Endpoints Creating a New Django Project Configuring settings.py Configuring urls.py Create App Models Registering Models in Admin Conclusion Introduction Welcome to this 3-part technical tutorial series, where we&amp;rsquo;ll be building a Django project that enables users to manage their cryptocurrency portfolios. To implement the functionalities and additional features, we&amp;rsquo;ll be utilizing API calls to coingecko or any other cryptocurrency API.</description>
+      <description>Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django.</description>
     </item>
     
     <item>

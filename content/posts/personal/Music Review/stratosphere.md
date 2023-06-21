@@ -6,6 +6,7 @@ cover:
     image: blog/music-review/stratosphere.jpg
     alt: Stratosphere by Duster
     caption: An idyllic journey through the great outdoors
+description: "An album review for Stratosphere by Duster. An idyllic journey through the great outdoors."
 tags: ["Music", "Album Review"]
 ---
 

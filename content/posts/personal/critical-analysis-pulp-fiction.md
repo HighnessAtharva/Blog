@@ -6,6 +6,7 @@ cover:
     image: blog/pulp-fiction.jpg
     alt: Pulp Fiction
     caption: A detailed critique of the movie Pulp Fiction 
+description: "Reviewing my favorite movie of all time - Pulp Fiction by Quentin Tarantino starring John Travolta, Samuel L. Jackson, Uma Thurman, Bruce Willis."
 tags: ["movie review"]
 ---
 

@@ -6,6 +6,7 @@ cover:
     image: blog/music-review/plastic-beach.jpeg
     alt: Plastic Beach by Gorillaz
     caption: An entertaining record from the virtual band
+description: "An album review for Plastic Beach by Gorillaz. An entertaining record from the virtual band."
 tags: ["Music", "Album Review"]
 ---
 
