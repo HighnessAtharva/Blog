@@ -4,8 +4,9 @@ date: 2023-01-26T23:18:34+05:30
 draft: false
 cover: 
     image: blog/crif-hackathon/CRIF3.jpg
-    alt: Developer experience at CRIF Hackathon 2023. Innovating the future, one hackathon at a time
-    caption: The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination. Few media of creation are so flexible, so easy to polish and rework, so readily capable of realizing grand conceptual structures. 
+    alt: Developer experience at CRIF Hackathon 2023. Innovating the future, one hackathon at a time.
+    caption: The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination. Few media of creation are so flexible, so easy to polish and rework, so readily capable of realizing grand conceptual structures.
+description: "Developer experience at CRIF Hackathon 2023. We built a News Media Analysis Utility leveraging NLP, Text Processing, and Visualization with Tableau." 
 tags: ["Hackathon", "Python"]
 ---
 

@@ -13,8 +13,7 @@
       <pubDate>Wed, 14 Jun 2023 01:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/sales-data-analysis/</guid>
-      <description>Introduction ABC Private Limited, a retail company, aims to gain valuable insights into their customers&amp;rsquo; purchasing habits. By analyzing the provided summary of high-volume product purchase history, which includes customer demographics and product details, ABC can uncover patterns and trends in customer spending across different product categories.
-We will explore the analysis step-by-step using the test.csv and train.csv files. Through a combination of theoretical explanations and practical demonstrations, we will delve into data preprocessing, exploratory data analysis, feature engineering, and model building.</description>
+      <description>Through a combination of theoretical explanations and practical demonstrations, we will delve into data preprocessing, exploratory data analysis, feature engineering, and model building.</description>
     </item>
     
     <item>
@@ -23,7 +22,7 @@ We will explore the analysis step-by-step using the test.csv and train.csv files
       <pubDate>Wed, 03 May 2023 19:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/netlify-ci-cd/</guid>
-      <description>Description I. Introduction II. Setting Up a Netlify Account III. Setting Up CI/CD to Netlify Configuring the Build Settings on Netlify Configuring the Deployment Settings on Netlify IV. Setting Up CI/CD with Github Actions Introduction to Github Actions Creating a Github Actions Workflow for the Static Site Configuring the Workflow to Deploy to Netlify V. Best Practices for CI/CD with Netlify and Github VI. Troubleshooting CI/CD Issues VII. Conclusion Description This article provides step-by-step instructions on how to set up continuous integration and continuous deployment (CI/CD) to Netlify for static site deployments using Github.</description>
+      <description>A step-by-step beginner friendly guide to setting up CI/CD to Netlify for static sites like Hugo, Jekyll, etc. Code snippets for Github actions included.</description>
     </item>
     
     <item>
@@ -59,8 +58,7 @@ We will explore the analysis step-by-step using the test.csv and train.csv files
       <pubDate>Wed, 15 Feb 2023 01:19:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/uml-diagrams-with-chatgpt/</guid>
-      <description>Introduction Are you tired of spending hours designing UML diagrams for your projects? Look no further than ChatGPT, a powerful language model that can generate PlantUML code based on your project description. In this tutorial, we will guide you through the steps to use ChatGPT to generate UML diagrams for your projects in just a few clicks.
-Step 1: Write Your Project Description The first step is to write your project description or title.</description>
+      <description>5 Step process to use ChatGPT to generate UML diagrams for your projects in just a few clicks. Easy to follow instructions with visual illustrations.</description>
     </item>
     
   </channel>

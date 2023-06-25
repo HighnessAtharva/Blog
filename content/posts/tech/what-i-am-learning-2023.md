@@ -7,6 +7,7 @@ cover:
     alt: 2023 Tech Stack
     caption: Diving into the Latest Developments in React.js, Docker, AWS, Django and FastAPI 
 tags: ["lists", "programming"]
+description: "Diving into the Latest Developments in React.js, Docker, AWS, Django and FastAPI. My personal goals for the year along with topic breakup."
 ---
 
 
