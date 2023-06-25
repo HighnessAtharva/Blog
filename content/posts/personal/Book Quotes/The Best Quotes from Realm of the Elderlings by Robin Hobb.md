@@ -1,5 +1,5 @@
 ---
-title: "The Best Quotes from Realm of the Elderlings by Robin Hobb"
+title: "Best Quotes from Realm of the Elderlings"
 date: 2022-07-11T23:18:34+05:30
 draft: false
 cover: 

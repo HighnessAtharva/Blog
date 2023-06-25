@@ -1,5 +1,5 @@
 ---
-title: "The Best Quotes from First Law Trilogy by Joe Abercrombie"
+title: "Best Quotes from First Law Trilogy"
 date: 2022-07-11T23:18:34+05:30
 draft: false
 cover: 

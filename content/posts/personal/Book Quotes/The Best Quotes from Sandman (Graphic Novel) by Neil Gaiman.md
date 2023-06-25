@@ -1,5 +1,5 @@
 ---
-title: "The Best Quotes from Sandman (Graphic Novel) by Neil Gaiman"
+title: "Best Quotes from Sandman (Neil Gaiman)"
 date: 2022-07-11T23:18:34+05:30
 draft: false
 cover: 

@@ -1,5 +1,5 @@
 ---
-title: "The Best Quotes from Nevernight Trilogy by Jay Kristoff"
+title: "Best Quotes from Nevernight Trilogy"
 date: 2022-07-11T23:18:34+05:30
 draft: false
 cover: 

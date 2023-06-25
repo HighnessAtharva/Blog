@@ -1,5 +1,5 @@
 ---
-title: "The Best Quotes from The Witcher Series by Andrzej Sapkowski"
+title: "Best Quotes from The Witcher"
 date: 2022-07-11T23:18:34+05:30
 draft: false
 cover: 

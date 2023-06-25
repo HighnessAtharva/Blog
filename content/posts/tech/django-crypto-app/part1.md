@@ -1,5 +1,5 @@
 ---
-title: "Django Crypto App Part 1: Functional Requirements and Setup"
+title: "Django Crypto App Part 1"
 date: 2023-05-01T23:18:34+05:30
 draft: false
 cover: 

@@ -1,5 +1,5 @@
 ---
-title: "Django Crypto App Part 2: Templates, Views and URLs"
+title: "Django Crypto App Part 2"
 date: 2023-05-01T23:19:34+05:30
 draft: false
 cover: 

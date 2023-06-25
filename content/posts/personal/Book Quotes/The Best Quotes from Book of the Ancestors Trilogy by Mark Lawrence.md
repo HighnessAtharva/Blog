@@ -1,5 +1,5 @@
 ---
-title: "The Best Quotes from Book of the Ancestors Trilogy by Mark Lawrence"
+title: "Best Quotes from Book of the Ancestors"
 date: 2022-07-10T23:18:34+05:30
 draft: false
 cover: 

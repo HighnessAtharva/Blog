@@ -1,5 +1,5 @@
 ---
-title: "Django Crypto App Part 3: Wrap-Up and Testing"
+title: "Django Crypto App Part 3"
 date: 2023-05-01T23:20:34+05:30
 draft: false
 cover: 

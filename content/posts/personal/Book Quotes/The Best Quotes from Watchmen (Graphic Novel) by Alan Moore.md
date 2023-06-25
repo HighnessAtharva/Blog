@@ -1,5 +1,5 @@
 ---
-title: "The Best Quotes from Watchmen (Graphic Novel) by Alan Moore"
+title: "Best Quotes from Watchmen (Alan Moore)"
 date: 2022-07-11T23:18:34+05:30
 draft: false
 cover: 

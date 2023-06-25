@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 01 May 2023 23:20:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/django/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Django Crypto App Part 3: Wrap-Up and Testing</title>
+      <title>Django Crypto App Part 3</title>
       <link>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part3/</link>
       <pubDate>Mon, 01 May 2023 23:20:34 +0530</pubDate>
       
@@ -17,7 +17,7 @@
     </item>
     
     <item>
-      <title>Django Crypto App Part 2: Templates, Views and URLs</title>
+      <title>Django Crypto App Part 2</title>
       <link>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part2/</link>
       <pubDate>Mon, 01 May 2023 23:19:34 +0530</pubDate>
       
@@ -26,7 +26,7 @@
     </item>
     
     <item>
-      <title>Django Crypto App Part 1: Functional Requirements and Setup</title>
+      <title>Django Crypto App Part 1</title>
       <link>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part1/</link>
       <pubDate>Mon, 01 May 2023 23:18:34 +0530</pubDate>
       

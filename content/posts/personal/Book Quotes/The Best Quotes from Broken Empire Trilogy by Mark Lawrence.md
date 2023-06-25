@@ -1,5 +1,5 @@
 ---
-title: "The Best Quotes from Broken Empire Trilogy by Mark Lawrence"
+title: "Best Quotes from Broken Empire Trilogy"
 date: 2022-07-10T23:18:34+05:30
 draft: false
 cover: 

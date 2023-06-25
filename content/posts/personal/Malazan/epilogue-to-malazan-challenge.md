@@ -1,5 +1,5 @@
 ---
-title: "An Epilogue to my Malazan Book of the Fallen Reading Challenge"
+title: "Epilogue to Malazan Book of the Fallen Challenge"
 date: 2023-03-18T00:18:34+05:30
 draft: true
 cover: 

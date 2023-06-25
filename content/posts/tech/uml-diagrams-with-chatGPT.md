@@ -1,5 +1,5 @@
 ---
-title: "Use ChatGPT to Generate Project UML Diagrams: A Step-by-Step Tutorial"
+title: "UML Diagrams with ChatGPT: Step-by-Step Tutorial"
 date: 2023-02-15T01:19:34+05:30
 draft: false
 cover: 

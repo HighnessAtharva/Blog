@@ -1,5 +1,5 @@
 ---
-title: "The Best Quotes from Harassment Architechture by Mika Ma"
+title: "Best Quotes from Harassment Architechture by Mika Ma"
 date: 2023-06-04T01:18:34+05:30
 draft: false
 cover: 

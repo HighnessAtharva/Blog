@@ -1,5 +1,5 @@
 ---
-title: "Accelerating into the Future: An Exploration of Effective Accelerationism and its Impact on AI and Society"
+title: "Accelerating into the Future: e/acc Ruminations"
 date: 2023-01-27T01:18:34+05:30
 draft: false
 cover: 
