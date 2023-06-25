@@ -6,7 +6,16 @@
     <description>Recent content in 💻 Tech Posts on Atharva Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Jun 2023 01:18:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Jun 2023 01:18:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Comprehensive Guide to Testing Django Applications</title>
+      <link>https://atharvashah.netlify.app/posts/tech/django-testing-guide/</link>
+      <pubDate>Sat, 24 Jun 2023 01:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/django-testing-guide/</guid>
+      <description>Best Practices and Strategies for Testing Django Applications. Everything from setting up the testing environment to mastering unit testing, integration testing, and end-to-end testing.</description>
+    </item>
+    
     <item>
       <title>Sales Data Analysis with Python</title>
       <link>https://atharvashah.netlify.app/posts/tech/sales-data-analysis/</link>
