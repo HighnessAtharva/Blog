@@ -8,6 +8,8 @@ cover:
     caption: Reviews of the movies I watched in April 2023
 description: "April 2023 was an exciting month for movie enthusiasts, with a variety of genres and eras represented in the films released and viewed."
 tags: ["Movie Review"]
+showToc: true
+TocOpen: true
 ---
 
 April 2023 was an exciting month for movie enthusiasts, with a variety of genres and eras represented in the films released and viewed. As an avid movie-goer, I had the opportunity to watch a diverse selection of films, ranging from classic dramas to modern blockbusters. In this monthly post, I'll be sharing my thoughts and opinions on the movies I watched during April 2023. From high-octane action flicks to introspective character studies, these films have something for everyone. So, let's dive in and explore the world of cinema together!
@@ -18,21 +20,6 @@ April 2023 was an exciting month for movie enthusiasts, with a variety of genres
 [![Follow me on Letterboxd](/blog/movie-review/lbx-follow.png)](https://letterboxd.com/highnessatharva/)
 
 ---
-
-- [Scream VI, 2023 - ★★★★](#scream-vi-2023---)
-- [Fresh, 2022 - ★★★★](#fresh-2022---)
-- [The Sixth Sense, 1999 - ★½](#the-sixth-sense-1999---)
-- [Ant-Man and the Wasp: Quantumania, 2023 - ★★★](#ant-man-and-the-wasp-quantumania-2023---)
-- [About Time, 2013 - ★★★★](#about-time-2013---)
-- [Shazam! Fury of the Gods, 2023 - ★★½](#shazam-fury-of-the-gods-2023---)
-- [The Last Kingdom: Seven Kings Must Die, 2023 - ★★★★](#the-last-kingdom-seven-kings-must-die-2023---)
-- [Red Rocket, 2021 - ★★★](#red-rocket-2021---)
-- [Inland Empire, 2006 - ★★½](#inland-empire-2006---)
-- [Hush, 2016 - ★★★](#hush-2016---)
-- [Creep, 2014 - ★★★](#creep-2014---)
-- [Barry Lyndon, 1975 - ★★★★½](#barry-lyndon-1975---)
-- [Creed III, 2023 - ★★★](#creed-iii-2023---)
-- [Avatar: The Way of Water, 2022 - ★★★★½](#avatar-the-way-of-water-2022---)
 
 ## Scream VI, 2023 - ★★★★
 

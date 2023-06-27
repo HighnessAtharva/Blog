@@ -8,6 +8,8 @@ cover:
     caption: Reviews of the movies I watched in March 2023
 description: "A month filled with movie magic, and I had the pleasure of watching some truly amazing films."
 tags: ["Movie Review"]
+showToc: true
+TocOpen: true
 ---
 
 Lights, camera, action! March 2023 was a month filled with movie magic, and I had the pleasure of watching some truly amazing films. From thought-provoking dramas to side-splitting comedies, this month had it all. I'm excited to share my thoughts on the movies I watched, which include the morally challenging First Reformed, the hilarious Game Night, the emotionally charged Spencer, and the classic Edward Scissorhands. I also delved into some cult classics, such as the offbeat Buffalo '66 and the spooky Creepshow. I also managed to watch all the Scream sequels, which were a lot of fun. Ghostface killah baby! Woodsboro gang for life! And let's not forget the amazing live performance by The Weeknd at SoFi Stadium, which left me in awe. So grab some popcorn and join me as I take you through my movie journey of March 2023.
@@ -16,23 +18,6 @@ Lights, camera, action! March 2023 was a month filled with movie magic, and I ha
 **Click the banner below to follow me on Letterboxd and see what I'm watching next!**
 
 [![Follow me on Letterboxd](/blog/movie-review/lbx-follow.png)](https://letterboxd.com/highnessatharva/)
-
----
-
-- [Scream, 2022 - ★★½](#scream-2022---)
-- [Scream 4, 2011 - ★★★½](#scream-4-2011---)
-- [Scream 3, 2000 - ★★★](#scream-3-2000---)
-- [Scream 2, 1997 - ★★★½](#scream-2-1997---)
-- [First Reformed, 2017 - ★★★](#first-reformed-2017---)
-- [Game Night, 2018 - ★★★½](#game-night-2018---)
-- [Buffalo '66, 1998 - ★★★★](#buffalo-66-1998---)
-- [Spencer, 2021 - ★★★½](#spencer-2021---)
-- [Edward Scissorhands, 1990 - ★★★½](#edward-scissorhands-1990---)
-- [Promising Young Woman, 2020 - ★★★★](#promising-young-woman-2020---)
-- [Secretary, 2002 - ★★★](#secretary-2002---)
-- [The Weeknd: Live at SoFi Stadium, 2023 - ★★★½](#the-weeknd-live-at-sofi-stadium-2023---)
-- [Primer, 2004 - ★★★★](#primer-2004---)
-- [Creepshow, 1982 - ★★★½](#creepshow-1982---)
 
 ---
 

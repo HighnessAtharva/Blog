@@ -8,24 +8,9 @@ cover:
     caption: Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django.
 description: "Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django."
 tags: ["Django", "Python","tutorial"]
+showToc: true 
+TocOpen: true
 ---
-
-## Table of contents
-
-- [Table of contents](#table-of-contents)
-- [Introduction](#introduction)
-- [Defining Functional Requirements](#defining-functional-requirements)
-- [Tech Stack](#tech-stack)
-- [Planned Endpoints](#planned-endpoints)
-- [Creating a New Django Project](#creating-a-new-django-project)
-- [Configuring `settings.py`](#configuring-settingspy)
-- [Configuring `urls.py`](#configuring-urlspy)
-- [Create App Models](#create-app-models)
-- [Registering Models in Admin](#registering-models-in-admin)
-- [Conclusion](#conclusion)
-
-[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png "Buy Me A Coffee")](https://www.buymeacoffee.com/AtharvaShah)
-
 ## Introduction
 
 Welcome to this 3-part technical tutorial series, where we'll be building a Django project that enables users to manage their cryptocurrency portfolios. To implement the functionalities and additional features, we'll be utilizing API calls to coingecko or any other cryptocurrency API.
@@ -38,6 +23,8 @@ In Part 3, we will wrap the series up by discussing testing approach by writing 
 
 The code for the entirety of the project can be found here ->  **[Github Repo for Django Crypto App](
 <https://github.com/HighnessAtharva/django-crypto-app>)**
+
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/AtharvaShah)
 
 ## Defining Functional Requirements
 

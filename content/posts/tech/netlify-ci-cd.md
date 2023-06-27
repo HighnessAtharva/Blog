@@ -8,21 +8,9 @@ cover:
     caption: Using Github Actions and Netlify to set up CI/CD for static sites like Hugo, Jekyll, etc.
 description: "A step-by-step beginner friendly guide to setting up CI/CD to Netlify for static sites like Hugo, Jekyll, etc. Code snippets for Github actions included."
 tags: ["technology", "tutorial"]
+showToc: true 
+TocOpen: true
 ---
-
-- [Description](#description)
-- [I. Introduction](#i-introduction)
-- [II. Setting Up a Netlify Account](#ii-setting-up-a-netlify-account)
-- [III. Setting Up CI/CD to Netlify](#iii-setting-up-cicd-to-netlify)
-  - [Configuring the Build Settings on Netlify](#configuring-the-build-settings-on-netlify)
-  - [Configuring the Deployment Settings on Netlify](#configuring-the-deployment-settings-on-netlify)
-- [IV. Setting Up CI/CD with Github Actions](#iv-setting-up-cicd-with-github-actions)
-  - [Introduction to Github Actions](#introduction-to-github-actions)
-  - [Creating a Github Actions Workflow for the Static Site](#creating-a-github-actions-workflow-for-the-static-site)
-    - [Configuring the Workflow to Deploy to Netlify](#configuring-the-workflow-to-deploy-to-netlify)
-- [V. Best Practices for CI/CD with Netlify and Github](#v-best-practices-for-cicd-with-netlify-and-github)
-- [VI. Troubleshooting CI/CD Issues](#vi-troubleshooting-cicd-issues)
-- [VII. Conclusion](#vii-conclusion)
 
 ## Description
 

@@ -8,6 +8,8 @@ cover:
     caption: Reviews of the movies I watched in February 2023
 description: "February was a month for the ages as I indulged in a smorgasbord of movies. Consumed movies across a ton of genres."
 tags: ["Movie Review"]
+showToc: true
+TocOpen: true
 ---
 
 February was a month for the ages as I indulged in a smorgasbord of movies. From the laugh-out-loud comedy of "Rush Hour" to the mind-bending sci-fi of "Solaris" and everything in between, I've got a lot to say about the films I watched. There were some classics from the past like "Nausicaä of the Valley of the Wind" and "Porco Rosso," as well as newer releases like "Infinity Pool" and "Babylon." I also braved the horror genre with "Gonjiam: Haunted Asylum" and "Incantation," and explored the dark side of humanity with "Only God Forgives" and "A Cure for Wellness." So buckle up and get ready for my take on these 14 movies, ranging from a half-star dud to a four-and-a-half-star masterpiece. I hope you enjoy reading my reviews as much as I enjoyed watching these films! Let's get started.
@@ -16,23 +18,6 @@ February was a month for the ages as I indulged in a smorgasbord of movies. From
 **Click the banner below to follow me on Letterboxd and see what I'm watching next!**
 
 [![Follow me on Letterboxd](/blog/movie-review/lbx-follow.png)](https://letterboxd.com/highnessatharva/)
-
----
-
-- [Rush Hour 3, 2007 - ★★★](#rush-hour-3-2007---)
-- [Rush Hour 2, 2001 - ★★★★](#rush-hour-2-2001---)
-- [Rush Hour, 1998 - ★★★½](#rush-hour-1998---)
-- [Nausicaä of the Valley of the Wind, 1984 - ★★★★](#nausicaä-of-the-valley-of-the-wind-1984---)
-- [Only God Forgives, 2013 - ★★★](#only-god-forgives-2013---)
-- [Porco Rosso, 1992 - ★★★](#porco-rosso-1992---)
-- [Infinity Pool, 2023 - ★★★★½](#infinity-pool-2023---)
-- [Gonjiam: Haunted Asylum, 2018 - ★★★](#gonjiam-haunted-asylum-2018---)
-- [Incantation, 2022 - ★★★](#incantation-2022---)
-- [A Cure for Wellness, 2016 - ★★★★](#a-cure-for-wellness-2016---)
-- [T2 Trainspotting, 2017 - ★★★½](#t2-trainspotting-2017---)
-- [Solaris, 1972 - ★★★](#solaris-1972---)
-- [Spring Breakers, 2012 - ★½](#spring-breakers-2012---)
-- [Babylon, 2022 - ★★★½](#babylon-2022---)
 
 ---
 

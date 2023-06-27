@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>manga on Atharva Shah</title>
+    <link>https://atharvashah.netlify.app/tags/manga/</link>
+    <description>Recent content in manga on Atharva Shah</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Jun 2023 00:19:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/manga/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Manga Review: BLAME! by Tsutomu Nihei</title>
+      <link>https://atharvashah.netlify.app/posts/personal/book-review/blame-manga-review/</link>
+      <pubDate>Tue, 27 Jun 2023 00:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/personal/book-review/blame-manga-review/</guid>
+      <description>Thoughts on all six of the master edition volumes of the BLAME! manga series by Tsutomu Nihei. A dark, violent, brutal, fast-paced cyberpunk battle manga.</description>
+    </item>
+    
+  </channel>
+</rss>

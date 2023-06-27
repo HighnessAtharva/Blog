@@ -10,7 +10,7 @@
 <meta name="description" content="Through a combination of theoretical explanations and practical demonstrations, we will delve into data preprocessing, exploratory data analysis, feature engineering, and model building.">
 <meta name="author" content="">
 <link rel="canonical" href="https://atharvashah.netlify.app/posts/tech/sales-data-analysis/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.abeea9d0e045d279dcf6c4139102181dfa671e6572a860e1ab3c64c266ab004c.css" integrity="sha256-q&#43;6p0OBF0nnc9sQTkQIYHfpnHmVyqGDhqzxkwmarAEw=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.24d0783ae240573db408aebb846a9cb674507f8de9bbfd6742f436c143f1ccf8.css" integrity="sha256-JNB4OuJAVz20CK67hGqctnRQf43pu/1nQvQ2wUPxzPg=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://atharvashah.netlify.app/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://atharvashah.netlify.app/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://atharvashah.netlify.app/favicon-32x32.png">
@@ -288,8 +288,9 @@ if (!doNotTrack) {
   </header> 
 <figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/sales-data-analysis/cover.jpg" alt="EDA, Preprocessing, Feature Engineering, Model Building with Python">
         <p>EDA, Preprocessing, Feature Engineering, Model Building with Python</p>
-</figure><div class="toc">
-    <details  open>
+</figure><aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
         <summary accesskey="c" title="(Alt + C)">
             <span class="details">Table of Contents</span>
         </summary>
@@ -320,9 +321,69 @@ if (!doNotTrack) {
                 </li>
             </ul>
         </div>
-    </details>
-</div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
 
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        
+        activeElement = elements[0];
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+    }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        if (elements) {
+            activeElement = Array.from(elements).find((element) => {
+                if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                    (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                    return element;
+                }
+            }) || activeElement
+
+            elements.forEach(element => {
+                const id = encodeURI(element.getAttribute('id')).toLowerCase();
+                if (element === activeElement){
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+                } else {
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+                }
+            })
+        }
+    }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
   <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
 <p>ABC Private Limited, a retail company, aims to gain valuable insights into their customers&rsquo; purchasing habits. By analyzing the provided summary of high-volume product purchase history, which includes customer demographics and product details, ABC can uncover patterns and trends in customer spending across different product categories.</p>
 <p>We will explore the analysis step-by-step using the <strong>test.csv</strong> and <strong>train.csv</strong> files. Through a combination of theoretical explanations and practical demonstrations, we will delve into data preprocessing, exploratory data analysis, feature engineering, and model building. We will be utilizing the power of Python for conducting Exploratory Data Analysis, performing data visualization, and training machine learning models. It is recommended to follow along using a Jupyter Notebook, as it provides an interactive and user-friendly environment for code execution and documentation.</p>
@@ -521,9 +582,77 @@ dtype: int64
 </span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>figure()
 </span></span><span style="display:flex;"><span>    sns<span style="color:#f92672">.</span>boxplot(data<span style="color:#f92672">=</span>sales_df[[column]])
 </span></span></code></pre></div><p><strong>OUTPUT</strong></p>
-<p><img loading="lazy" src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.004.png" alt="A picture containing text, screenshot, number, line automatically generated"  /><img loading="lazy" src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.005.png" alt="output-ss"  /></p>
-<p><img loading="lazy" src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.006.png" alt="A picture containing screenshot, text, rectangle, plot automatically generated"  /></p>
-<p><img loading="lazy" src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.007.png" alt="A picture containing screenshot, text, rectangle, line Description automatically generated"  /></p>
+<p>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.004.png"
+      alt="A picture containing text, screenshot, number, line automatically generated"
+      loading="lazy"
+      >
+  
+  
+</figure>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.005.png"
+      alt="output-ss"
+      loading="lazy"
+      >
+  
+  
+</figure></p>
+<p>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.006.png"
+      alt="A picture containing screenshot, text, rectangle, plot automatically generated"
+      loading="lazy"
+      >
+  
+  
+</figure></p>
+<p>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.007.png"
+      alt="A picture containing screenshot, text, rectangle, line Description automatically generated"
+      loading="lazy"
+      >
+  
+  
+</figure></p>
 <p>To deal with outliers using boxplots, one approach is to identify and remove the outliers based on predetermined thresholds. This can be done by considering values that fall below the lower whisker or above the upper whisker as outliers. Alternatively, instead of removing outliers, they can be treated or transformed using techniques such as winsorization (replacing extreme values with a specified percentile value) or logarithmic transformations.</p>
 <p>In the provided code, a boxplot is created for each numerical column (&lsquo;Purchase&rsquo;, &lsquo;Product_Category_1&rsquo;, &lsquo;Product_Category_2&rsquo;, &lsquo;Occupation&rsquo;) using seaborn&rsquo;s boxplot function. This allows visual identification of any outliers present in the data for these specific columns.</p>
 <h2 id="a-namexde973c9a92a75ef55aa425326f5364dcc8fad3aaconvert-categorical-and-range-variables-to-integers"><!-- raw HTML omitted --><!-- raw HTML omitted -->Convert Categorical and Range Variables to Integers<a hidden class="anchor" aria-hidden="true" href="#a-namexde973c9a92a75ef55aa425326f5364dcc8fad3aaconvert-categorical-and-range-variables-to-integers">#</a></h2>
@@ -665,7 +794,24 @@ Product_Category_2 Mean_Purchase_Price
 </span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;Correlation between different features&#39;</span>)
 </span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
 </span></span></code></pre></div><p><strong>OUTPUT</strong></p>
-<p><img loading="lazy" src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.008.png" alt="output-ss"  /></p>
+<p>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.008.png"
+      alt="output-ss"
+      loading="lazy"
+      >
+  
+  
+</figure></p>
 <p>Based on the correlation heatmap, we can observe that certain variables have a stronger correlation with the &ldquo;Purchase&rdquo; column. The variables &ldquo;User_ID,&rdquo; &ldquo;Marital Status,&rdquo; and &ldquo;Product_Category_3&rdquo; show relatively weak correlation with the purchase power of the customer. Conversely, the variables &ldquo;Occupation,&rdquo; &ldquo;Product Category 1,&rdquo; and &ldquo;Product Category 2&rdquo; exhibit a significantly higher impact on the purchase behavior. It&rsquo;s important to note that this correlation analysis is based on numerical fields only, and we will be generating an even more insightful heatmap right before preparing the ML model.</p>
 <h2 id="data-visualization">Data Visualization<a hidden class="anchor" aria-hidden="true" href="#data-visualization">#</a></h2>
 <p><strong>The graphical depiction of data using graphs, charts, and other visual components is known as data visualisation and it is a way to visually explore and communicate patterns, relationships, and trends within the data.</strong></p>
@@ -690,7 +836,24 @@ Product_Category_2 Mean_Purchase_Price
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Display the plot</span>
 </span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
 </span></span></code></pre></div><p><strong>OUTPUT</strong></p>
-<p><img loading="lazy" src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.009.png" alt="A picture containing text, screenshot, diagram, plot Description automatically generated"  /></p>
+<p>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.009.png"
+      alt="A picture containing text, screenshot, diagram, plot Description automatically generated"
+      loading="lazy"
+      >
+  
+  
+</figure></p>
 <p>Based on the data provided in train.csv, males have purchased significantly more than females, almost 3x more. This would lead us to the conclusion that either the data set is skewed, or men are willing to spend much more on products by company ABC. This also speaks about purchase power parity.</p>
 <p><strong>CODE</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#75715e"># Check the purchase distribution with respect to Age</span>
@@ -712,7 +875,24 @@ Product_Category_2 Mean_Purchase_Price
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Display the plot</span>
 </span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
 </span></span></code></pre></div><p><strong>OUTPUT</strong></p>
-<p><img loading="lazy" src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.010.png" alt="A picture containing text, screenshot, diagram, plot Description automatically generated"  /></p>
+<p>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.010.png"
+      alt="A picture containing text, screenshot, diagram, plot Description automatically generated"
+      loading="lazy"
+      >
+  
+  
+</figure></p>
 <p>Again, this graph makes sense since most of the audience is represented by the centre curve, which gives the appearance of a normal curve. Most of the audience is between the ages of 26 and 35, while young people and the elderly have the lowest levels of purchasing power.</p>
 <p><strong>CODE</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#75715e"># Check the purchase distribution with respect to City_Category</span>
@@ -736,7 +916,24 @@ Product_Category_2 Mean_Purchase_Price
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Display the plot</span>
 </span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
 </span></span></code></pre></div><p><strong>OUTPUT</strong></p>
-<p><img loading="lazy" src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.011.png" alt="output-ss"  /></p>
+<p>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.011.png"
+      alt="output-ss"
+      loading="lazy"
+      >
+  
+  
+</figure></p>
 <p>We can determine the percentage distribution of the city category by plotting a pie chart, and this helps us conclude that people from category B cities have the greatest purchasing power and willingness to spend, while category A cities have the fewest purchases made—nearly 1.8 times fewer than city type B.</p>
 <p><strong>CODE</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#75715e"># Check the purchase distribution with respect to Occupation</span>
@@ -764,7 +961,24 @@ Product_Category_2 Mean_Purchase_Price
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Display the plot</span>
 </span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
 </span></span></code></pre></div><p><strong>OUTPUT</strong></p>
-<p><img loading="lazy" src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.012.png" alt="A picture containing text, screenshot, line, diagram Description automatically generated"  /></p>
+<p>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.012.png"
+      alt="A picture containing text, screenshot, line, diagram Description automatically generated"
+      loading="lazy"
+      >
+  
+  
+</figure></p>
 <p>As various employment categories pay varying incomes, it stands to reason that category 0, 4, and 7 occupations may potentially have the greatest earnings, which would therefore likely result in more expenditure on goods and services.</p>
 <p>But the lowest purchase amounts are made by jobs in categories 8, 9, and 18.</p>
 <p>This may be because individuals in these jobs don&rsquo;t require the items made by business ABC, or it may be because of the extremely low earnings in the industrial sector.</p>
@@ -790,7 +1004,24 @@ Product_Category_2 Mean_Purchase_Price
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Display the plot</span>
 </span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
 </span></span></code></pre></div><p><strong>OUTPUT</strong></p>
-<p><img loading="lazy" src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.013.png" alt="A picture containing text, screenshot, diagram, rectangle Description automatically generated"  /></p>
+<p>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.013.png"
+      alt="A picture containing text, screenshot, diagram, rectangle Description automatically generated"
+      loading="lazy"
+      >
+  
+  
+</figure></p>
 <p>This bar graph reflects the needs of newcomers to the city who require products and services to establish themselves. As a result, those who have been in the city for a year have made the most purchases, which quickly decline as they continue to live there.</p>
 <p><strong>CODE</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#75715e"># check the purchase distribution with respect to Marital_Status</span>
@@ -821,7 +1052,24 @@ Product_Category_2 Mean_Purchase_Price
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Display the plot</span>
 </span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
 </span></span></code></pre></div><p><strong>OUTPUT</strong></p>
-<p><img loading="lazy" src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.014.png" alt="A picture containing text, screenshot, diagram, plot Description automatically generated"  /></p>
+<p>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.014.png"
+      alt="A picture containing text, screenshot, diagram, plot Description automatically generated"
+      loading="lazy"
+      >
+  
+  
+</figure></p>
 <p>When contrasted to married people, the bias obviously favours single people, probably because of the costs associated with education, travel, and other products and services. Nonetheless, because of financial considerations like family planning and long-term savings, married people may tend to spend less.</p>
 <p>A <strong>scatter plot</strong> is a type of data visualization that represents the relationship between two variables. It displays individual data points as dots on a two-dimensional graph, with one variable plotted along the x-axis and the other variable plotted along the y-axis. Scatter plots are useful for visualizing the correlation or relationship between two continuous variables.</p>
 <p>To see the relationship between product category 1 (categorical) and purchase using a scatter plot, we need to convert the categorical variable into a numerical representation. One way to achieve this is by assigning a numeric code to each category. For example, we can map &lsquo;Product_Category_1&rsquo; values like &lsquo;Category A&rsquo; to 1, &lsquo;Category B&rsquo; to 2, and so on.</p>
@@ -847,7 +1095,24 @@ Product_Category_2 Mean_Purchase_Price
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Display the plot</span>
 </span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
 </span></span></code></pre></div><p><strong>OUTPUT</strong></p>
-<p><img loading="lazy" src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.015.png" alt="A picture containing text, screenshot, diagram Description automatically generated"  /></p>
+<p>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.015.png"
+      alt="A picture containing text, screenshot, diagram Description automatically generated"
+      loading="lazy"
+      >
+  
+  
+</figure></p>
 <p>As seen above, product categories 4, 13, 19 and 20 have products which are not priced more than 5000 hence these product categories, although numerous will generate the least revenue. On the other hand, product categories 9, 10, 6, and 7 have items with prices that typically start at or exceed 5,000 and can even reach 20,000 or 25,000, generating more revenue for the business. You can also probabilisticlaly determine the name of these categories from the price ranges. Most other categories are somewhere in between.</p>
 <p><strong>CODE</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#75715e"># Scatter plot</span>
@@ -872,7 +1137,24 @@ Product_Category_2 Mean_Purchase_Price
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Display the plot</span>
 </span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
 </span></span></code></pre></div><p><strong>OUTPUT</strong></p>
-<p><img loading="lazy" src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.016.png" alt="output-ss"  /></p>
+<p>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.016.png"
+      alt="output-ss"
+      loading="lazy"
+      >
+  
+  
+</figure></p>
 <p><strong>CODE</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#75715e"># Plot the most frequently bought products</span>
 </span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">5</span>))
@@ -894,8 +1176,42 @@ Product_Category_2 Mean_Purchase_Price
 </span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()  <span style="color:#75715e"># Adjust spacing</span>
 </span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
 </span></span></code></pre></div><p><strong>OUTPUT</strong></p>
-<p><img loading="lazy" src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.017.png" alt="A picture containing text, screenshot, line, rectangle Description automatically generated"  /></p>
-<p><img loading="lazy" src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.018.png" alt="A picture containing text, screenshot, rectangle, line Description automatically generated"  /></p>
+<p>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.017.png"
+      alt="A picture containing text, screenshot, line, rectangle Description automatically generated"
+      loading="lazy"
+      >
+  
+  
+</figure></p>
+<p>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.018.png"
+      alt="A picture containing text, screenshot, rectangle, line Description automatically generated"
+      loading="lazy"
+      >
+  
+  
+</figure></p>
 <p>This code is plotting two bar charts. The first chart shows the most frequently bought products, displaying the purchase count for each product. The second chart displays the products that generated the most revenue, showing the revenue (in millions) for each product.</p>
 <p>These visualizations provide valuable insights into the popular products and their revenue contribution, which can help identify best-selling items and inform business decisions related to inventory management, marketing strategies, and product promotions. This will prove beneficial for the company to analyze their sales data and identify which products are most popular among their customers.</p>
 <h2 id="label-encoding-and-feature-selection">Label Encoding and Feature Selection<a hidden class="anchor" aria-hidden="true" href="#label-encoding-and-feature-selection">#</a></h2>
@@ -1088,7 +1404,24 @@ Product_Category_2  Product_Category_3  Purchase
 </span></span></code></pre></div><p><strong>OUTPUT</strong></p>
 <pre tabindex="0"><code>Linear REG Mean Square Error:  21708175.443769183
 Linear REG Root Mean Square Error:  4659.203305691777
-</code></pre><p><img loading="lazy" src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.019.png" alt="output-ss"  /></p>
+</code></pre><p>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.019.png"
+      alt="output-ss"
+      loading="lazy"
+      >
+  
+  
+</figure></p>
 <p><strong>XGBOOST REGRESSION</strong></p>
 <p>It is an optimized gradient boosting framework that excels in handling structured data. It is an ensemble model that combines multiple weak learners (decision trees) to make accurate predictions. XGBoost Regression is specifically designed for regression tasks and provides excellent performance and flexibility. It handles missing values, supports regularization techniques, and offers advanced features like early stopping to prevent overfitting.</p>
 <p><strong>CODE</strong></p>
@@ -1159,7 +1492,24 @@ Linear REG Root Mean Square Error:  4659.203305691777
 </span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;Relative Importance&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">12</span>)
 </span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
 </span></span></code></pre></div><p><strong>OUTPUT</strong></p>
-<p><img loading="lazy" src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.020.png" alt="A picture containing text, screenshot, number, font Description automatically generated"  /></p>
+<p>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.020.png"
+      alt="A picture containing text, screenshot, number, font Description automatically generated"
+      loading="lazy"
+      >
+  
+  
+</figure></p>
 <p>You can explore other popular and well-known regression techniques to boost accuracy even more. Just note that these are CPU-intensive and training time can go from several minutes to several hours depending on the scale of the dataset.</p>
 <ol>
 <li>

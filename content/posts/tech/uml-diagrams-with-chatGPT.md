@@ -8,6 +8,8 @@ cover:
     caption: Design Like a Pro! How ChatGPT Generates UML Diagrams for Your Project in Just a Few Clicks! 
 description: "5 Step process to use ChatGPT to generate UML diagrams for your projects in just a few clicks. Easy to follow instructions with visual illustrations."
 tags: ["technology", "tutorial"]
+showToc: true 
+TocOpen: true
 ---
 
 ## Introduction
@@ -19,6 +21,18 @@ Are you tired of spending hours designing UML diagrams for your projects? Look n
 The first step is to write your project description or title. ChatGPT can generate UML diagrams for a wide range of projects, from software systems to business processes. Write a concise and clear description of your project, and if you need help, you can ask ChatGPT to generate it for you.
 
 ![chatgpt-x-uml](/blog/uml-chat-1.png)
+
+>📃 Get the prompt here
+
+```txt
+I want to generate several UML diagrams for my project based on the details below. Provide the PlantUML code for the same. Make it detailed and expansive and feel free to add your own ideas to it as well.
+
+Topic- [ENTER YOUR TOPIC HERE] 
+
+Description - [ENTER DETAILED DESCRIPTION HERE] 
+
+Give me the Use Case Diagram PlantUML code for the same.
+```
 
 ## Step 2: Ask ChatGPT to Generate PlantUML Code
 

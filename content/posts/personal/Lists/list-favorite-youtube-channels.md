@@ -8,19 +8,13 @@ cover:
     caption: A perpetually growing list of youtube channels I am subscribed to. All of them are awesome.
 description: "A perpetually growing list of youtube channels I am subscribed to. All of them are awesome."
 tags: ["lists"]
+showToc: true
+TocOpen: true
 ---
-
-- [Technology](#technology)
-- [Comedy Skits](#comedy-skits)
-- [Interviews and Banter](#interviews-and-banter)
-- [Gaming](#gaming)
-- [Music](#music)
-- [Movies and TV](#movies-and-tv)
-- [Misc](#misc)
 
 Herein lies a compilation of my most cherished YouTube channels. Having subscribed to most of these for a number of years, I make it a point to regularly tune into their content. These channels are categorized for your ease of reference, and will be continually updated as I stumble upon more gems. I invite you to share your own recommendations in the comments section below, as this list shall remain perpetual. Do note that this is by no means an exhaustive inventory of my subscriptions, but rather a selection of the most exceptional, entertaining, and enlightening channels.
 
-**LAST UPDATED: 22 Mar 2023**
+*{{< highlight "LAST UPDATED:" >}}* 22 Mar 2023
 
 ### Technology
 
@@ -140,7 +134,7 @@ Fightin' Cowboy's YouTube channel is focused on walkthroughs and guides for some
 [Fantano](https://www.youtube.com/@fantano) -
 This is the YouTube channel of Anthony Fantano, a music critic known for his deep knowledge of a wide range of genres and his ability to express his opinions in an entertaining and insightful way. He reviews both popular and underground music, and his videos are well-researched, well-edited, and often humorous. If you're a music fan who likes to keep up with the latest releases and discover new artists, this channel is definitely worth checking out.
 
-[Larissa Liveir](https://www.youtube.com/@LarissaLiveir) -  
+[Larissa Liveir](https://www.youtube.com/@LarissaLiveir) -
 Talented and charismatic singer-songwriter who covers a wide range of genres, from pop to rock to country. Her covers are always well-produced and well-performed, and she often adds her own unique spin to the songs she covers. If you're a fan of pop music or just want to discover some great new artists, this channel is definitely worth checking out. Brings a lot of energy to her videos and is very entertaining to watch. Shreds on the guitar.
 
 [Normal Person Reviews](https://www.youtube.com/@normalpersonreviews) -

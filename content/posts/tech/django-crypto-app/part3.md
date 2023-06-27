@@ -8,23 +8,9 @@ cover:
     caption: Here, we will wrap the series up by discussing testing approach by writing test cases for Models, Views and Templates using Pytest.
 description: "Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django."
 tags: ["Django", "Python", "tutorial"]
+showToc: true 
+TocOpen: true
 ---
-
-
-- [Introduction](#introduction)
-- [Test Driven Development Approach Explained](#test-driven-development-approach-explained)
-  - [URL Testing](#url-testing)
-  - [Model Testing](#model-testing)
-  - [View Testing](#view-testing)
-- [Writing Tests](#writing-tests)
-  - [Testing URLS](#testing-urls)
-  - [Testing Models](#testing-models)
-  - [Testing Views](#testing-views)
-- [How to Run Tests](#how-to-run-tests)
-- [Conclusion](#conclusion)
-
-[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png "Buy Me A Coffee")](https://www.buymeacoffee.com/AtharvaShah)
-
 ## Introduction
 
 Welcome to the final part of the 3-part technical tutorial series, where have been building a Django project that enables users to manage their cryptocurrency portfolios. To implement the functionalities and additional features, we'll be utilizing API calls to coingecko or any other cryptocurrency API.
@@ -36,7 +22,9 @@ The code for the entirety of the project can be found here ->  **[Github Repo fo
 
 Testing is an important part of software development. It helps us to ensure that our code is working as expected and also helps us to catch bugs early on. It also helps us to ensure that our code is maintainable and readable. So, let's get started.
 
-## Test Driven Development Approach Explained
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/AtharvaShah)
+
+## Test Driven Development Explained
 
 In Django, automated testing can be performed at three levels: URL testing, model testing, and view testing.
 
@@ -52,7 +40,7 @@ Model testing in Django is used to check if the data stored in the database matc
 
 View testing in Django is used to check if the business logic defined in the views.py file is functioning correctly. It is used to test whether the views are handling requests as expected and returning the appropriate responses. View testing is typically performed using the Django TestCase class and its various assertion methods, which allow the developer to simulate requests and verify the responses.
 
-> For this crypto-wallet app, I used all three types of automated testing.
+> {{< highlight "For this crypto-wallet app, I used all three types of automated testing." >}}  
 
 **For URL testing**, I created a series of test cases that used the Django Client class to simulate requests to various endpoints in the application. Each test case sent a request to the endpoint and verified that the response was the expected template.
 

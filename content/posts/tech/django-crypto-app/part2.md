@@ -8,25 +8,9 @@ cover:
     caption: Here, we will add the templates, views and urls and code up the entire project. This will be the most complex and detailed part of this series.
 description: "Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django."
 tags: ["Django", "Python","tutorial"]
+showToc: true
+TocOpen: true
 ---
-
-- [Introduction](#introduction)
-- [Setting up the URLs](#setting-up-the-urls)
-- [Setting Up Templates](#setting-up-templates)
-- [Setting Up Views](#setting-up-views)
-  - [Signup](#signup)
-  - [Login Screen](#login-screen)
-  - [Forgot Password Page](#forgot-password-page)
-  - [Password Reset Email](#password-reset-email)
-  - [Password Reset Success](#password-reset-success)
-  - [Home Page](#home-page)
-  - [Add Currency / Search Result Page](#add-currency--search-result-page)
-  - [Wallet Page](#wallet-page)
-  - [Run the crypto app](#run-the-crypto-app)
-- [Conclusion](#conclusion)
-
-[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png "Buy Me A Coffee")](https://www.buymeacoffee.com/AtharvaShah)
-
 ## Introduction
 
 Welcome to the second part of the 3-part technical tutorial series, where we'll be building a Django project that enables users to manage their cryptocurrency portfolios. To implement the functionalities and additional features, we'll be utilizing API calls to coingecko or any other cryptocurrency API.
@@ -35,6 +19,8 @@ In the previous part, we set up the project and created the models. Now, we will
 
 The code for the entirety of the project can be found here ->  **[Github Repo for Django Crypto App](
 <https://github.com/HighnessAtharva/django-crypto-app>)**
+
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/AtharvaShah)
 
 ## Setting up the URLs
 

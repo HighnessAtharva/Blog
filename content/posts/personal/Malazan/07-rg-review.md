@@ -6,5 +6,5 @@ cover:
     image: blog/malazan/07-rg-cover.jpg
     alt: Reaper's Gale by Steven Erikson
     caption: Reaper's Gale by Steven Erikson
-tags: ["Malazan Book of the Fallen", "Fantasy"]
+tags: ["Malazan Book of the Fallen", "Fantasy", "Book Review"]
 ---

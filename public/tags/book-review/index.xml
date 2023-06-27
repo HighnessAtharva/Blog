@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Book Review on Atharva Shah</title>
+    <link>https://atharvashah.netlify.app/tags/book-review/</link>
+    <description>Recent content in Book Review on Atharva Shah</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Jun 2023 00:19:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/book-review/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Manga Review: BLAME! by Tsutomu Nihei</title>
+      <link>https://atharvashah.netlify.app/posts/personal/book-review/blame-manga-review/</link>
+      <pubDate>Tue, 27 Jun 2023 00:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/personal/book-review/blame-manga-review/</guid>
+      <description>Thoughts on all six of the master edition volumes of the BLAME! manga series by Tsutomu Nihei. A dark, violent, brutal, fast-paced cyberpunk battle manga.</description>
+    </item>
+    
+    <item>
+      <title>Book Review: Deadhouse Gates by Steven Erikson</title>
+      <link>https://atharvashah.netlify.app/posts/personal/malazan/02-dg-review/</link>
+      <pubDate>Thu, 27 Apr 2023 00:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/personal/malazan/02-dg-review/</guid>
+      <description>Rising rebellions, ancient secrets, and an Empire on the brink of war. The second book in the Malazan Book of the Fallen series is a thrilling and tragic tale of war and its consequences.</description>
+    </item>
+    
+    <item>
+      <title>Book Review: Gardens of the Moon by Steven Erikson</title>
+      <link>https://atharvashah.netlify.app/posts/personal/malazan/01-gotm-review/</link>
+      <pubDate>Wed, 26 Apr 2023 00:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/personal/malazan/01-gotm-review/</guid>
+      <description>The Gardens of the Moon, the first volume of the Malazan Book of the Fallen, is a sprawling epic fantasy of monumental proportions.</description>
+    </item>
+    
+  </channel>
+</rss>

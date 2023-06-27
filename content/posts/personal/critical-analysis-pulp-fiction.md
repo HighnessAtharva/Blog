@@ -8,21 +8,13 @@ cover:
     caption: A detailed critique of the movie Pulp Fiction 
 description: "Reviewing my favorite movie of all time - Pulp Fiction by Quentin Tarantino starring John Travolta, Samuel L. Jackson, Uma Thurman, Bruce Willis."
 tags: ["movie review"]
+showToc: true
+TocOpen: true
 ---
 
-- [Narrative](#narrative)
-- [Screenplay](#screenplay)
-- [Costumes and Set Design](#costumes-and-set-design)
-- [Soundtrack](#soundtrack)
-- [Camera and Lighting](#camera-and-lighting)
-- [Awards and Accolades](#awards-and-accolades)
-- [Closing Thoughts](#closing-thoughts)
-
-**Directed By** : Quentin Tarantino
-
-**Release Year** : 1994
-
-**Starring** : John Travolta, Samuel L. Jackson, Uma Thurman, Bruce Willis
+>**Directed By** : Quentin Tarantino  
+>**Release Year** : 1994  
+>**Starring** : John Travolta, Samuel L. Jackson, Uma Thurman, Bruce Willis
 
 ## Narrative
 
