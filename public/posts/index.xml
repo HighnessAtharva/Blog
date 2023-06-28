@@ -7,5 +7,113 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 27 Jun 2023 00:19:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Comprehensive Guide to Testing Django Applications</title>
+      <link>https://atharvashah.netlify.app/posts/tech/django-testing-guide/</link>
+      <pubDate>Sat, 24 Jun 2023 01:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/django-testing-guide/</guid>
+      <description>Best Practices and Strategies for Testing Django Applications. Everything from setting up the testing environment to mastering unit testing, integration testing, and end-to-end testing.</description>
+    </item>
+    
+    <item>
+      <title>Sales Data Analysis with Python</title>
+      <link>https://atharvashah.netlify.app/posts/tech/sales-data-analysis/</link>
+      <pubDate>Wed, 14 Jun 2023 01:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/sales-data-analysis/</guid>
+      <description>Through a combination of theoretical explanations and practical demonstrations, we will delve into data preprocessing, exploratory data analysis, feature engineering, and model building.</description>
+    </item>
+    
+    <item>
+      <title>Digital Product Series Launch!</title>
+      <link>https://atharvashah.netlify.app/posts/tech/gumroad-dsa-announcement/</link>
+      <pubDate>Mon, 05 Jun 2023 01:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/gumroad-dsa-announcement/</guid>
+      <description>Boost your interview success with our exclusive digital product series! Most asked Python Interview questions (Data Structures and Algorithms) are now available on Gumroad!</description>
+    </item>
+    
+    <item>
+      <title>Setting Up CI/CD to Netlify for Static Sites via Github</title>
+      <link>https://atharvashah.netlify.app/posts/tech/netlify-ci-cd/</link>
+      <pubDate>Wed, 03 May 2023 19:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/netlify-ci-cd/</guid>
+      <description>A step-by-step beginner friendly guide to setting up CI/CD to Netlify for static sites like Hugo, Jekyll, etc. Code snippets for Github actions included.</description>
+    </item>
+    
+    <item>
+      <title>Django Crypto App Part 3</title>
+      <link>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part3/</link>
+      <pubDate>Mon, 01 May 2023 23:20:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part3/</guid>
+      <description>Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django.</description>
+    </item>
+    
+    <item>
+      <title>Django Crypto App Part 2</title>
+      <link>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part2/</link>
+      <pubDate>Mon, 01 May 2023 23:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part2/</guid>
+      <description>Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django.</description>
+    </item>
+    
+    <item>
+      <title>Django Crypto App Part 1</title>
+      <link>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part1/</link>
+      <pubDate>Mon, 01 May 2023 23:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part1/</guid>
+      <description>Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django.</description>
+    </item>
+    
+    <item>
+      <title>Ultimate Django ORM Cheatsheet &#43; Exercises</title>
+      <link>https://atharvashah.netlify.app/posts/tech/django-orm-exercises/</link>
+      <pubDate>Sun, 19 Feb 2023 01:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/django-orm-exercises/</guid>
+      <description>Master the basics of Django ORM with this comprehensive cheatsheet and exercises to level up your skills in database querying, model relationships, aggregations, annotations, and more.</description>
+    </item>
+    
+    <item>
+      <title>UML Diagrams with ChatGPT: Step-by-Step Tutorial</title>
+      <link>https://atharvashah.netlify.app/posts/tech/uml-diagrams-with-chatgpt/</link>
+      <pubDate>Wed, 15 Feb 2023 01:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/uml-diagrams-with-chatgpt/</guid>
+      <description>5 Step process to use ChatGPT to generate UML diagrams for your projects in just a few clicks. Easy to follow instructions with visual illustrations.</description>
+    </item>
+    
+    <item>
+      <title>What I am Learning in 2023</title>
+      <link>https://atharvashah.netlify.app/posts/tech/what-i-am-learning-2023/</link>
+      <pubDate>Fri, 27 Jan 2023 01:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/what-i-am-learning-2023/</guid>
+      <description>Diving into the Latest Developments in React.js, Docker, AWS, Django and FastAPI. My personal goals for the year along with topic breakup.</description>
+    </item>
+    
+    <item>
+      <title>Accelerating into the Future: e/acc Ruminations</title>
+      <link>https://atharvashah.netlify.app/posts/tech/effective-accelerationism/</link>
+      <pubDate>Fri, 27 Jan 2023 01:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/effective-accelerationism/</guid>
+      <description>A long form essay on Navigating the Intersection of Technology and Humanity through the Lens of Accelerationism.</description>
+    </item>
+    
+    <item>
+      <title>Celebrating victory at CRIF Hackathon 2023</title>
+      <link>https://atharvashah.netlify.app/posts/tech/crif-hackathon-2023/</link>
+      <pubDate>Thu, 26 Jan 2023 23:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/crif-hackathon-2023/</guid>
+      <description>Developer experience at CRIF Hackathon 2023. We built a News Media Analysis Utility leveraging NLP, Text Processing, and Visualization with Tableau.</description>
+    </item>
+    
   </channel>
 </rss>
