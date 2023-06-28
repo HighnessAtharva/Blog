@@ -29,3 +29,5 @@ If there is one critique to be made of the album, it is perhaps that its length 
 In conclusion, "Plastic Beach" is a remarkable album that solidifies Gorillaz's place as one of the most innovative and creative bands in the world. With its eclectic mix of musical styles, thought-provoking lyrics, and stunning visuals, this album is an essential addition to any music lover's collection.
 
 **Rating: 7/10**
+
+{{< spotify type="album" id="2dIGnmEIy1WZIcZCFSj6i8" >}}

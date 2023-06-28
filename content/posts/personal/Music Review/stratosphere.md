@@ -23,3 +23,5 @@ The standout tracks on the album include "Constellations," a slow and introspect
 Overall, Duster's Stratosphere is a must-listen for fans of slowcore and ambient music. It's a mesmerizing and transportive experience that will leave you feeling relaxed and contemplative. This album is perfect for those moments when you need to escape the chaos of the world and retreat into your own personal space. It's a timeless classic that deserves to be heard by anyone who loves music that is both beautiful and contemplative.
 
 **Rating: 8/10**
+
+{{< spotify type="album" id="2S3289mypNw2zP0OpFexMb" >}}

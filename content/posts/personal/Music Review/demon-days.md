@@ -11,7 +11,7 @@ tags: ["music", "album review"]
 ---
 
 
-I'm thrilled to be reviewing the album "Demon Days" by Gorillaz, a group that has really put themselves on the map with their unique blend of various genres. This album is truly a soul food and a trip down memory lane. Let's dig in, shall we?
+Gorillaz, a group that has really put themselves on the map with their unique blend of various genres. This album is truly a soul food and a trip down memory lane. Let's dig in, shall we?
 
 Starting with the hits that have become internet classics, we have the pulsating "Feel Good Inc." that has become a fan-favorite and an anthem for the virtual generation. The infectious beat, catchy hook, and the poetic lyrics are a masterclass in itself. The track "O Green World" is a musical kaleidoscope of sounds, bringing together various genres that truly leave you feeling green with envy. Then we have "Don't Get Lost in Heaven" and "Dirty Harry," two tracks that ooze with social preaching and are a plea for natural sustenance and conservation, something that is the need of the hour.
 
@@ -26,3 +26,5 @@ It's a solid offering that has something for everyone, with tracks that cater to
 In conclusion, "Demon Days" is a testament to Gorillaz's musical prowess, showcasing their ability to blend various genres and tackle important issues. It's an album that feeds your soul and leaves you feeling satisfied, with tracks that will stay with you long after you've hit the stop button. It's a must-listen for anyone who appreciates good music and wants to take a trip down memory lane.
 
 **Rating: 7/10**
+
+{{< spotify type="album" id="0bUTHlWbkSQysoM3VsWldT" >}}

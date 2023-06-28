@@ -24,3 +24,5 @@ Among the myriad treasures that adorn this auditory voyage, two particular gems 
 In closing, 오미일곱 [Omilgop] has crafted a masterpiece that transcends the boundaries of genre, delivering an auditory experience that is as captivating as it is bewitching. "Foghorn in the Dawn" possesses an otherworldly quality, an ineffable charm that transports the listener to realms unknown. With its evocative beauty, unorthodox composition, and captivating allure, this album ignites a fervent desire within my heart that this gifted artist will ascend to the pinnacle of recognition they so richly deserve.
 
 **Rating - 8/10**
+
+{{< spotify type="album" id="40MGMzThZzzq6l1PocVjgp" >}}

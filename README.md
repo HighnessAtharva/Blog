@@ -80,11 +80,15 @@ Quote with author, link and title
 
 ### Tweet
 
+```md
 {{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}
+```
 
 ### YouTube
 
+```md
 {{< youtube w7Ft2ymGmfc >}}
+```
 
 ### Spotify
 

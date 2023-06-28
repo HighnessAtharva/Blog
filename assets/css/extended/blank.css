@@ -4,15 +4,6 @@
     --toc-width: 300px;
 }
 
-a.next:hover {
-    background-color: black;
-}
-
-
-a.prev:hover {
-    background-color: black;
-}
-
 .toc {
     margin: 0 2px 40px 2px;
     border: 1px solid var(--border);
