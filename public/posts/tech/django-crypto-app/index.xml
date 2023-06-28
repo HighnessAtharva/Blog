@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Django Crypto App Walkthrough on Atharva Shah</title>
+    <link>https://atharvashah.netlify.app/posts/tech/django-crypto-app/</link>
+    <description>Recent content in Django Crypto App Walkthrough on Atharva Shah</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 May 2023 23:20:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/posts/tech/django-crypto-app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Django Crypto App Part 3</title>
+      <link>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part3/</link>
+      <pubDate>Mon, 01 May 2023 23:20:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part3/</guid>
+      <description>Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django.</description>
+    </item>
+    
+    <item>
+      <title>Django Crypto App Part 2</title>
+      <link>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part2/</link>
+      <pubDate>Mon, 01 May 2023 23:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part2/</guid>
+      <description>Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django.</description>
+    </item>
+    
+    <item>
+      <title>Django Crypto App Part 1</title>
+      <link>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part1/</link>
+      <pubDate>Mon, 01 May 2023 23:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part1/</guid>
+      <description>Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django.</description>
+    </item>
+    
+  </channel>
+</rss>

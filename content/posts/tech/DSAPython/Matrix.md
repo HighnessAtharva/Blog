@@ -6,7 +6,7 @@ cover:
     image: blog/dsa/matrix.jpg
     alt: Matrix
     caption: Learn Matrix Algorithms in Python
-tags: ["DSA-Python"] 
+tags: ["python"] 
 
 ---
 

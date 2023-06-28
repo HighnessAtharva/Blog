@@ -7,7 +7,7 @@ cover:
     alt: Watchmen (Graphic Novel) by Alan Moore
     caption: No. Not even in the face of Armageddon. Never compromise.
 description: "Favorite Quotes from Watchmen (Graphic Novel) by Alan Moore. Who watches the watchmen?"
-tags: ["Book Quotes", "Graphic Novels"] 
+tags: ["book quotes", "graphic novel"] 
 
 ---
 

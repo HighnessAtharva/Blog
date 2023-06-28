@@ -7,7 +7,7 @@ cover:
     alt: Stratosphere by Duster
     caption: An idyllic journey through the great outdoors
 description: "An album review for Stratosphere by Duster. An idyllic journey through the great outdoors."
-tags: ["Music", "Album Review"]
+tags: ["music", "album review"]
 ---
 
 Stratosphere, the 1998 slowcore classic by Duster, is a sonic force to be reckoned with. From the minimalist album cover to the dreamy soundscapes, this album evokes a sense of tranquility and longing that is both nostalgic and futuristic. The songs are slow and atmospheric, each one feeling like a journey through space and time, with recurring beats and tempo changes that keep things interesting.

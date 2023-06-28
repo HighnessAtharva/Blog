@@ -6,7 +6,7 @@ cover:
     image: blog/dsa/bst.jpg
     alt: Binary Search Trees
     caption: Learn BST Algorithms in Python
-tags: ["DSA-Python"] 
+tags: ["python"] 
 
 ---
 

@@ -7,54 +7,10 @@ cover:
     alt: Django ORM Cheatsheet + Exercises
     caption: Master the basics of Django ORM with this comprehensive cheatsheet and exercises to level up your skills in database querying, model relationships, aggregations, annotations, and more. 
 description: "Master the basics of Django ORM with this comprehensive cheatsheet and exercises to level up your skills in database querying, model relationships, aggregations, annotations, and more."
-tags: ["Python", "django"]
+tags: ["python", "django"]
+showToc: true
+tocOpen: true
 ---
-
-- [Querying Django Models with Examples](#querying-django-models-with-examples)
-- [Terminology](#terminology)
-- [Models Used in the Examples](#models-used-in-the-examples)
-- [QuerySet API Exercises](#queryset-api-exercises)
-  - [Query 1: Fetching all books from the database](#query-1-fetching-all-books-from-the-database)
-  - [Query 2: Fetching selected columns from the Books table](#query-2-fetching-selected-columns-from-the-books-table)
-  - [Query 3: Filtering records based on a condition](#query-3-filtering-records-based-on-a-condition)
-  - [Query 4: Filtering records based on multiple conditions](#query-4-filtering-records-based-on-multiple-conditions)
-  - [Query 5: Searching records based on a substring](#query-5-searching-records-based-on-a-substring)
-  - [Query 6: Retrieve authors with specific primary keys](#query-6-retrieve-authors-with-specific-primary-keys)
-  - [Query 7: Retrieve authors who joined after a specific date](#query-7-retrieve-authors-who-joined-after-a-specific-date)
-  - [Query 8: Retrieve distinct publisher last name](#query-8-retrieve-distinct-publisher-last-name)
-  - [Query 9: Retrieve the latest joined author and the earliest joined publisher](#query-9-retrieve-the-latest-joined-author-and-the-earliest-joined-publisher)
-  - [Query 10: Retrieve the first name, last name, and join date of the most recently joined author](#query-10-retrieve-the-first-name-last-name-and-join-date-of-the-most-recently-joined-author)
-  - [Query 11: Retrieve Authors Joined After 2013](#query-11-retrieve-authors-joined-after-2013)
-  - [Query 12: Calculate Total Price of Books Written by Popular Authors](#query-12-calculate-total-price-of-books-written-by-popular-authors)
-  - [Query 13: Retrieve Titles of Books Written by Authors with 'a' in their Firstname](#query-13-retrieve-titles-of-books-written-by-authors-with-a-in-their-firstname)
-  - [Query 14: Calculate Average Book Price of Selected Authors](#query-14-calculate-average-book-price-of-selected-authors)
-  - [Query 15: Retrieve first name of authors and their recommended author's first name](#query-15-retrieve-first-name-of-authors-and-their-recommended-authors-first-name)
-  - [Query 16: Retrieve authors whose books are published by a specific publisher](#query-16-retrieve-authors-whose-books-are-published-by-a-specific-publisher)
-  - [Query 17: Add followers to an author](#query-17-add-followers-to-an-author)
-  - [Query 18: Set followers for an author](#query-18-set-followers-for-an-author)
-  - [Query 19: Add a follower to an author](#query-19-add-a-follower-to-an-author)
-  - [Query 20: Remove a follower from an author](#query-20-remove-a-follower-from-an-author)
-  - [Query 21: Retrieve the first names of all authors followed by the user with primary key (pk) equal to 1](#query-21-retrieve-the-first-names-of-all-authors-followed-by-the-user-with-primary-key-pk-equal-to-1)
-  - [Query 22: Retrieve all authors who have books with titles containing the string "tle"](#query-22-retrieve-all-authors-who-have-books-with-titles-containing-the-string-tle)
-  - [Query 23: Retrieve all authors whose first name starts with the letter "a" and either have a popularity score greater than 5 or joined the platform after the year 2014](#query-23-retrieve-all-authors-whose-first-name-starts-with-the-letter-a-and-either-have-a-popularity-score-greater-than-5-or-joined-the-platform-after-the-year-2014)
-  - [Query 24: Retrieve the author with primary key (pk) equal to 1](#query-24-retrieve-the-author-with-primary-key-pk-equal-to-1)
-  - [Query 25: Retrieve the first 10 authors in the database](#query-25-retrieve-the-first-10-authors-in-the-database)
-  - [Query 26: Retrieve the first and last author in the database with a popularity score of 7](#query-26-retrieve-the-first-and-last-author-in-the-database-with-a-popularity-score-of-7)
-  - [Query 27: Retrieve all authors whose joindate year is greater than or equal to 2012, popularity\_score is greater than or equal to 4, joindate day is greater than or equal to 12, and firstname starts with 'a'](#query-27-retrieve-all-authors-whose-joindate-year-is-greater-than-or-equal-to-2012-popularity_score-is-greater-than-or-equal-to-4-joindate-day-is-greater-than-or-equal-to-12-and-firstname-starts-with-a)
-  - [Query 28: Retrieve all authors whose joindate year is not equal to 2012](#query-28-retrieve-all-authors-whose-joindate-year-is-not-equal-to-2012)
-  - [Query 29: Retrieve the oldest `joindate` among all authors, the newest `joindate` among all authors, the average `popularity_score` of all authors, and the sum of `price` of all books](#query-29-retrieve-the-oldest-joindate-among-all-authors-the-newest-joindate-among-all-authors-the-average-popularity_score-of-all-authors-and-the-sum-of-price-of-all-books)
-  - [Query 30: Retrieve all authors who have not been recommended by anyone](#query-30-retrieve-all-authors-who-have-not-been-recommended-by-anyone)
-  - [Query 31: Retrieve all books that have an author, and all books that have an author who has not been recommended by anyone](#query-31-retrieve-all-books-that-have-an-author-and-all-books-that-have-an-author-who-has-not-been-recommended-by-anyone)
-  - [Query 32: Calculate the sum of the price of all books authored by the author with primary key (pk) equal to 1](#query-32-calculate-the-sum-of-the-price-of-all-books-authored-by-the-author-with-primary-key-pk-equal-to-1)
-  - [Query 33: Retrieve the title of the most recently published book](#query-33-retrieve-the-title-of-the-most-recently-published-book)
-  - [Query 34: Calculate the average price of all books](#query-34-calculate-the-average-price-of-all-books)
-  - [Query 35: Calculate the maximum popularity score of all the publishers that have published a book written by the author with primary key 1](#query-35-calculate-the-maximum-popularity-score-of-all-the-publishers-that-have-published-a-book-written-by-the-author-with-primary-key-1)
-  - [Query 36: Count Authors with Books containing 'ab' in the title](#query-36-count-authors-with-books-containing-ab-in-the-title)
-  - [Query 37: Filter Authors by Number of Followers](#query-37-filter-authors-by-number-of-followers)
-  - [Query 38: Average Popularity Score of Authors who joined after 20th Sep 2014](#query-38-average-popularity-score-of-authors-who-joined-after-20th-sep-2014)
-  - [Query 39: Filter Books by Authors who have written more than 10 Books](#query-39-filter-books-by-authors-who-have-written-more-than-10-books)
-  - [Query 40: Filter Books by Title Count](#query-40-filter-books-by-title-count)
-- [Conclusion](#conclusion)
 
 ## Querying Django Models with Examples
 

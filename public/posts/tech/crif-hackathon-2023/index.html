@@ -6,11 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Celebrating victory at CRIF Hackathon 2023 | Atharva Shah</title>
-<meta name="keywords" content="Hackathon, Python">
+<meta name="keywords" content="Hackathon, python">
 <meta name="description" content="Developer experience at CRIF Hackathon 2023. We built a News Media Analysis Utility leveraging NLP, Text Processing, and Visualization with Tableau.">
 <meta name="author" content="">
 <link rel="canonical" href="https://atharvashah.netlify.app/posts/tech/crif-hackathon-2023/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.24d0783ae240573db408aebb846a9cb674507f8de9bbfd6742f436c143f1ccf8.css" integrity="sha256-JNB4OuJAVz20CK67hGqctnRQf43pu/1nQvQ2wUPxzPg=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.57d19ee47fb6afecb8be1197043075c8de7c64e795bf832acdc14c45aab8b56c.css" integrity="sha256-V9Ge5H&#43;2r&#43;y4vhGXBDB1yN58ZOeVv4MqzcFMRaq4tWw=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://atharvashah.netlify.app/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://atharvashah.netlify.app/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://atharvashah.netlify.app/favicon-32x32.png">
@@ -102,7 +102,7 @@ if (!doNotTrack) {
   "name": "Celebrating victory at CRIF Hackathon 2023",
   "description": "Developer experience at CRIF Hackathon 2023. We built a News Media Analysis Utility leveraging NLP, Text Processing, and Visualization with Tableau.",
   "keywords": [
-    "Hackathon", "Python"
+    "Hackathon", "python"
   ],
   "articleBody": "Winning a hackathon is an incredible feeling, and it’s even more special when it’s your very first one. The adrenaline rush of competing against some of the brightest minds in the industry, the satisfaction of solving complex problems, and the thrill of being recognized for your hard work are all emotions that are hard to put into words. In this article, I’ll walk you through the journey of our team who recently won their first ever hackathon, the CRIF Hackathon 2023. From the initial idea to the final presentation, we’ll explore the ups and downs of the experience, and the valuable lessons that were learned along the way. So join us as we relive the excitement of a hackathon victory, and learn what it takes to come out on top.\nWant to jump right into the code? Check out the GitHub repo.\nProblem Statement We were give five problem statements to choose from. The first one was to build a framework/utility that takes a company name as an input. The utility should search all the media articles about the input company and present any reputational threatening data on a concise dashboard. With the help of NLP, we were able to build a framework that could scrape news articles from search engines like Google, Yahoo, Duckduckgo and present any reputational threatening data on a concise dashboard.\nYou can read more about other problem statements here.\nMedia Analytics Build a framework/utility that takes a company name as an input. The utility should search all the media articles about the input company and present any reputational threatening data on a concise dashboard.\nFollowing are the functionalities that need to be achieved in order to build a complete solution -\nDownloader - Download news articles using company name from search engines (Google, Yahoo, Duckduckgo) - Selenium, News API\nNER module - Named Entity Recognition (Organization + Risk Entity) - Out of the box Spacy NLP models / Taxonomy searches\nRelationship module - Analyze the articles and carve out sentences(context) where reputation risk elements and company names are present. Can use dependency parsing or predicate classifiers to establish relationships between risk elements and company names\nDashboard - Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau\nTeam Atharva Shah (Yours Truly) - Implementation of the first three modules leveraging NLP, Text Processing, Web Scraping and Debugging. In-charge of leading the team and making the presentation in the final round\nGurjas Gandhi - Administration, Management, Insightful Feedback\nAli Asger Saifee - Problem-Solving, Curating Word Lists and Generating Tableau Dashboards\nAditya Patil - Documentation, Testing and Generating Tableau Dashboards\nThe Team (Code Giants) L to R: Gurjas, Aditya, Ali and Atharva 24-Hour Code Sprint Since the project heavily relies on Web Scraping, Text Processing, NLP and Data Analysis using Python was an obvious choice for it.\nHaving prior experience with BeautifulSoup, APIs and Spacy for NLP I immediately got to work and got the first two modules up and running within the first few hours of the hackathon.\nNewsAPI - Scraping the latest and relevant news about an organization based on the input query\nRegex, BeautifulSoup, Trifulatura - To parse the main content from the webpages and discard irrelevant data. Cleaning up news articles.\nTensorflow - Sentiment Analysis (returning a logit score between 1 to 5)\nSpacy - pre-trained roBERta model for improving sentiment analysis and tagging of Named Entity Relationships\nCustom Word Stores - to employ a “weighted list” score system based on the word count of negative and offensive words. Three other lists (harassment.txt, countries.txt, lawsuits.txt) were used to tag the articles if repeated words related to it were detected.\nProcessing CSVs - A lot of file handling was performed. The pipeline consisted of 3 CSVs.\nCommon.csv that simply stores the scraped articles Common-processed.csv that performs sentiment analysis on headline and stores the tags, offensive/negative words with the score based on the SpaCy NER module Common-Analysis.csv that used pandas to join all the fields together and prepare a final CSV for automating the Tableau dashboard. Spent the most time with this. Most CSVs that made the final\nCustom CLI Tool to Scrape Relevant News Articles based on user input Sanitization, cleanup and pre-processing with Sentiment Analysis being written to CSV files Named Entity Relationship Mapping with DisplaCy Tableau - Taking input of the COMMON-ANALYSIS.csv file, we designed 8 dashboards to present or narrate a story with all our data. Since we had plenty of fields like Article Count, Title,Description, Content (which holds the entire article text), URL, Publisher, Published Date, Headline, Headline Sentiment, Offensive Rating, Negative Words, Offensive Words and Tags it was not much of a hassle. We made good use of several plotting and graphing methods and presented a diverse yet insightful story. Each Tableau report updates after looking up a new organization.\nTableau Dashboard #1 Tableau Dashboard #2 Tableau Dashboard #3 Tableau Dashboard #4 Tableau Dashboard #5 Tableau Dashboard #6 Tableau Dashboard #7 Tableau Dashboard #8 Obstacles, Setbacks and Challenges faced Cleaning up the article body and parsing proper text.\nExtrapolating the context to base the negative score on.\nOptimizing NLP processing and reducing the scraping time.\nTableau was a completely new tool for us, nonetheless we took a 2-hour crash course and got our hands dirty thanks to which we could quickly get ahead of the game and visualize our gathered data seamlessly.\nHandling exceptions, 403, 404, Date Parsing, Tagging and taking care of API throttling.\nModule 3 felt to be the most challenging since we had to add our own “risk-entity” NER support to the SpaCy “roBERTa” model while also not losing application efficiency.\nRewards We worked around the clock in an organized manner and secured the first rank competing against 36 other teams (nearly 140+ participants). All the effort paid off at the end as we secured the first position after an exhaustive and interview-based project presentation with the panel of judges.\nWith the prestige and recognition we also received:-\n50K Cash Prize Goodies for each team member Victory Certificate for each team member A “winner takes it all” trophy The taste of victory ",
   "wordCount" : "1017",
@@ -137,7 +137,7 @@ if (!doNotTrack) {
     <nav class="nav">
         <div class="logo">
             <a href="https://atharvashah.netlify.app/" accesskey="h" title="Atharva Shah (Alt + H)">
-            <img src="https://atharvashah.netlify.app/profile/header_button.gif" alt="logo" aria-label="logo"
+            <img src="https://atharvashah.netlify.app/profile/header_button.webp" alt="logo" aria-label="logo"
                  height="30">Atharva Shah</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
@@ -253,7 +253,7 @@ if (!doNotTrack) {
         <span>
             <span class="post-tags-meta">
                 <a href="https://atharvashah.netlify.app/tags/hackathon/" style="color: var(--secondary)!important;">Hackathon</a>
-                &nbsp;<a href="https://atharvashah.netlify.app/tags/python/" style="color: var(--secondary)!important;">Python</a>
+                &nbsp;<a href="https://atharvashah.netlify.app/tags/python/" style="color: var(--secondary)!important;">python</a>
             </span>
         </span>
     </span>
@@ -263,7 +263,96 @@ if (!doNotTrack) {
   </header> 
 <figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/crif-hackathon/CRIF3.jpg" alt="Developer experience at CRIF Hackathon 2023. Innovating the future, one hackathon at a time.">
         <p>The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination. Few media of creation are so flexible, so easy to polish and rework, so readily capable of realizing grand conceptual structures.</p>
-</figure>
+</figure><aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#problem-statement" aria-label="Problem Statement">Problem Statement</a><ul>
+                        
+                <li>
+                    <a href="#media-analytics" aria-label="Media Analytics">Media Analytics</a></li></ul>
+                </li>
+                <li>
+                    <a href="#team" aria-label="Team">Team</a></li>
+                <li>
+                    <a href="#24-hour-code-sprint" aria-label="24-Hour Code Sprint">24-Hour Code Sprint</a><ul>
+                        
+                <li>
+                    <a href="#obstacles-setbacks-and-challenges-faced" aria-label="Obstacles, Setbacks and Challenges faced">Obstacles, Setbacks and Challenges faced</a></li></ul>
+                </li>
+                <li>
+                    <a href="#rewards" aria-label="Rewards">Rewards</a>
+                </li>
+            </ul>
+        </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        
+        activeElement = elements[0];
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+    }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        if (elements) {
+            activeElement = Array.from(elements).find((element) => {
+                if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                    (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                    return element;
+                }
+            }) || activeElement
+
+            elements.forEach(element => {
+                const id = encodeURI(element.getAttribute('id')).toLowerCase();
+                if (element === activeElement){
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+                } else {
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+                }
+            })
+        }
+    }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
   <div class="post-content"><p>Winning a hackathon is an incredible feeling, and it&rsquo;s even more special when it&rsquo;s your very first one. The adrenaline rush of competing against some of the brightest minds in the industry, the satisfaction of solving complex problems, and the thrill of being recognized for your hard work are all emotions that are hard to put into words. In this article, I&rsquo;ll walk you through the journey of our team who recently won their first ever hackathon, the CRIF Hackathon 2023. From the initial idea to the final presentation, we&rsquo;ll explore the ups and downs of the experience, and the valuable lessons that were learned along the way. So join us as we relive the excitement of a hackathon victory, and learn what it takes to come out on top.</p>
 <p><strong>Want to jump right into the code?</strong> <em><a href="https://github.com/HighnessAtharva/CRIF-Hackathon-2023">Check out the GitHub repo</a>.</em></p>
 <h2 id="problem-statement">Problem Statement<a hidden class="anchor" aria-hidden="true" href="#problem-statement">#</a></h2>
@@ -736,7 +825,7 @@ Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau</p
   <footer class="post-footer">
     <ul class="post-tags">
       <li><a href="https://atharvashah.netlify.app/tags/hackathon/">Hackathon</a></li>
-      <li><a href="https://atharvashah.netlify.app/tags/python/">Python</a></li>
+      <li><a href="https://atharvashah.netlify.app/tags/python/">python</a></li>
     </ul>
 <nav class="paginav">
   <a class="prev" href="https://atharvashah.netlify.app/posts/tech/effective-accelerationism/">
@@ -754,7 +843,7 @@ Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau</p
 
 <div class="share-buttons">
     <a target="_blank" rel="noopener noreferrer" aria-label="share Celebrating victory at CRIF Hackathon 2023 on twitter"
-        href="https://twitter.com/intent/tweet/?text=Celebrating%20victory%20at%20CRIF%20Hackathon%202023&amp;url=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2fcrif-hackathon-2023%2f&amp;hashtags=Hackathon%2cPython">
+        href="https://twitter.com/intent/tweet/?text=Celebrating%20victory%20at%20CRIF%20Hackathon%202023&amp;url=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2fcrif-hackathon-2023%2f&amp;hashtags=Hackathon%2cpython">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />

@@ -73,7 +73,7 @@ params:
     
     label:
       text: "Atharva Shah"
-      icon: "/profile/header_button.gif"
+      icon: "/profile/header_button.webp"
       iconHeight: 30
       iconWidth: 30
     

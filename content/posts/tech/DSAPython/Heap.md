@@ -6,7 +6,7 @@ cover:
     image: blog/dsa/heap.jpg
     alt: Heap
     caption: Learn Heap Algorithms in Python
-tags: ["DSA-Python"] 
+tags: ["python"] 
 
 ---
 

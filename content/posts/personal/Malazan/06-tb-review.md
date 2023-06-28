@@ -6,5 +6,5 @@ cover:
     image: blog/malazan/06-tb-cover.jpg
     alt: The Bonehunters by Steven Erikson
     caption: The Bonehunters by Steven Erikson
-tags: ["Malazan Book of the Fallen", "Fantasy", "Book Review"]
+tags: ["malazan", "fantasy", "book review"]
 ---

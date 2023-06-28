@@ -6,7 +6,7 @@ cover:
     image: blog/dsa/stack-queue.jpg
     alt: Stacks and Queues
     caption: Learn Stack and Queue Algorithms in Python
-tags: ["DSA-Python"] 
+tags: ["python"] 
 
 ---
 - [Implement Stack from Scratch](#implement-stack-from-scratch)

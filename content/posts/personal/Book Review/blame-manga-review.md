@@ -7,7 +7,7 @@ cover:
     alt: BLAME!
     caption: A dark, violent, brutal, fast-paced cyberpunk battle manga.
 description: "Thoughts on all six of the master edition volumes of the BLAME! manga series by Tsutomu Nihei. A dark, violent, brutal, fast-paced cyberpunk battle manga."
-tags: ["manga", "Book Review"]
+tags: ["manga", "book review"]
 showToc: true
 TocOpen: true
 ---

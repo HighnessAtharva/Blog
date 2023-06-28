@@ -8,6 +8,8 @@ cover:
     caption:  Boost your interview success with our exclusive digital product series!
 description: "Boost your interview success with our exclusive digital product series! Most asked Python Interview questions (Data Structures and Algorithms) are now available on Gumroad!"
 tags: ["python"]
+showtoc: true
+tocopen: true
 ---
 
 ## Boost Your Interview Success with our Exclusive Digital Product Series

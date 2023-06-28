@@ -6,7 +6,7 @@ cover:
     image: blog/dsa/array.jpg
     alt: Arrays
     caption: Learn Array Algorithms in Python
-tags: ["DSA-Python"] 
+tags: ["python"] 
 
 ---
 

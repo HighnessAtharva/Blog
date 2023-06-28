@@ -7,7 +7,7 @@ cover:
     alt: Broken Empire Trilogy by Mark Lawrence
     caption: War, my friends, is a thing of beauty. Those as says otherwise are losing.
 description: "Favorite Quotes from Broken Empire Trilogy by Mark Lawrence. War, my friends, is a thing of beauty. Those as says otherwise are losing."
-tags: ["Book Quotes", "Fantasy"] 
+tags: ["book quotes", "fantasy"] 
 
 ---
 

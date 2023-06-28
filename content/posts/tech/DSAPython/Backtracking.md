@@ -6,7 +6,7 @@ cover:
     image: blog/dsa/backtracking.jpg
     alt: Backtracking
     caption: Learn Backtracking Algorithms in Python
-tags: ["DSA-Python"] 
+tags: ["python"] 
 
 ---
 

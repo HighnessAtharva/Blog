@@ -38,6 +38,9 @@
     <loc>https://atharvashah.netlify.app/posts/personal/movie-review/june-2023/</loc>
     <lastmod>2023-06-18T00:00:34+05:30</lastmod>
   </url><url>
+    <loc>https://atharvashah.netlify.app/posts/personal/movie-review/</loc>
+    <lastmod>2023-06-18T00:00:34+05:30</lastmod>
+  </url><url>
     <loc>https://atharvashah.netlify.app/tags/movie-review/</loc>
     <lastmod>2023-06-18T00:00:34+05:30</lastmod>
   </url><url>
@@ -54,6 +57,9 @@
     <lastmod>2023-06-14T00:18:34+05:31</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/posts/personal/music-review/foghorn-in-dawn/</loc>
+    <lastmod>2023-06-14T00:18:34+05:31</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/personal/music-review/</loc>
     <lastmod>2023-06-14T00:18:34+05:31</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/music/</loc>
@@ -80,6 +86,9 @@
     <loc>https://atharvashah.netlify.app/tags/book-quotes/</loc>
     <lastmod>2023-06-04T02:18:34+05:30</lastmod>
   </url><url>
+    <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/</loc>
+    <lastmod>2023-06-04T02:18:34+05:30</lastmod>
+  </url><url>
     <loc>https://atharvashah.netlify.app/tags/fiction/</loc>
     <lastmod>2023-06-04T02:18:34+05:30</lastmod>
   </url><url>
@@ -98,6 +107,9 @@
     <loc>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part3/</loc>
     <lastmod>2023-05-01T23:20:34+05:30</lastmod>
   </url><url>
+    <loc>https://atharvashah.netlify.app/posts/tech/django-crypto-app/</loc>
+    <lastmod>2023-05-01T23:20:34+05:30</lastmod>
+  </url><url>
     <loc>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part2/</loc>
     <lastmod>2023-05-01T23:19:34+05:30</lastmod>
   </url><url>
@@ -110,7 +122,10 @@
     <loc>https://atharvashah.netlify.app/tags/fantasy/</loc>
     <lastmod>2023-04-27T00:19:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/tags/malazan-book-of-the-fallen/</loc>
+    <loc>https://atharvashah.netlify.app/tags/malazan/</loc>
+    <lastmod>2023-04-27T00:19:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/personal/malazan/</loc>
     <lastmod>2023-04-27T00:19:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/posts/personal/malazan/01-gotm-review/</loc>
@@ -119,7 +134,7 @@
     <loc>https://atharvashah.netlify.app/posts/personal/movie-review/april-2023/</loc>
     <lastmod>2023-04-16T00:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/tags/science-fiction/</loc>
+    <loc>https://atharvashah.netlify.app/tags/sci-fi/</loc>
     <lastmod>2023-04-14T23:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-h.p.-lovecraft/</loc>
@@ -132,6 +147,9 @@
     <lastmod>2023-03-20T01:18:35+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/lists/</loc>
+    <lastmod>2023-03-20T01:18:35+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/personal/lists/</loc>
     <lastmod>2023-03-20T01:18:35+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/posts/personal/lists/list-favorite-podcasts/</loc>
@@ -188,7 +206,7 @@
     <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-watchmen-graphic-novel-by-alan-moore/</loc>
     <lastmod>2022-07-11T23:18:34+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/tags/graphic-novels/</loc>
+    <loc>https://atharvashah.netlify.app/tags/graphic-novel/</loc>
     <lastmod>2022-07-11T23:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-book-of-the-ancestors-trilogy-by-mark-lawrence/</loc>
@@ -200,6 +218,8 @@
     <loc>https://atharvashah.netlify.app/about/</loc>
   </url><url>
     <loc>https://atharvashah.netlify.app/categories/</loc>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/tech/dsapython/</loc>
   </url><url>
     <loc>https://atharvashah.netlify.app/privacy-policy/</loc>
   </url><url>

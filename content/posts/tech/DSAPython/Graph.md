@@ -6,7 +6,7 @@ cover:
     image: blog/dsa/graph.jpg
     alt: Graph
     caption: Learn Graph Algorithms in Python
-tags: ["DSA-Python"] 
+tags: ["python"] 
 
 ---
 

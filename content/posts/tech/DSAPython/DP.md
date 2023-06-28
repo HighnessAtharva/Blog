@@ -6,7 +6,7 @@ cover:
     image: blog/dsa/dp.jpg
     alt: Dynamic Programming
     caption: Learn DP Algorithms in Python
-tags: ["DSA-Python"] 
+tags: ["python"] 
 
 ---
 

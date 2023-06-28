@@ -8,23 +8,9 @@ cover:
     caption: Navigating the Intersection of Technology and Humanity through the Lens of Accelerationism. 
 description: "A long form essay on Navigating the Intersection of Technology and Humanity through the Lens of Accelerationism."
 tags: ["ruminations", "technology"]
+showToc: true 
+TocOpen: true
 ---
-
-- [Introduction](#introduction)
-  - [Brief overview of accelerationism](#brief-overview-of-accelerationism)
-  - [The advent of AI and its impact on society](#the-advent-of-ai-and-its-impact-on-society)
-- [Theories of Accelerationism](#theories-of-accelerationism)
-  - [Historical context of accelerationism](#historical-context-of-accelerationism)
-  - [Left and right-wing accelerationism](#left-and-right-wing-accelerationism)
-  - [Critiques of accelerationism](#critiques-of-accelerationism)
-- [AI and the Future of Society](#ai-and-the-future-of-society)
-  - [Advancements in AI technology](#advancements-in-ai-technology)
-  - [Potential consequences of widespread AI integration](#potential-consequences-of-widespread-ai-integration)
-  - [Ethical considerations of AI development](#ethical-considerations-of-ai-development)
-- [Accelerationism and Transhumanism: A Complex Intersection](#accelerationism-and-transhumanism-a-complex-intersection)
-  - [The intersection of accelerationism and transhumanism](#the-intersection-of-accelerationism-and-transhumanism)
-  - [Potential benefits and drawbacks of merging technology with humanity](#potential-benefits-and-drawbacks-of-merging-technology-with-humanity)
-- [Final thoughts on the Post-AI Society](#final-thoughts-on-the-post-ai-society)
 
 ## Introduction
 

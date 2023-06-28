@@ -6,7 +6,7 @@ cover:
     image: blog/dsa/binary-tree.jpg
     alt: Binary Tree
     caption: Learn Binary Tree Algorithms in Python
-tags: ["DSA-Python"] 
+tags: ["python"] 
 
 ---
 

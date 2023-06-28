@@ -6,7 +6,7 @@ cover:
     image: blog/dsa/ll.jpg
     alt: Linked List
     caption: Learn LL Algorithms in Python
-tags: ["DSA-Python"] 
+tags: ["python"] 
 
 ---
 - [Write a Program to reverse the Linked List. (Both Iterative and recursive)](#write-a-program-to-reverse-the-linked-list-both-iterative-and-recursive)

@@ -7,7 +7,7 @@ cover:
     alt: Gothic Violence by Mika Ma
     caption: A few notable quotes from the wild and wondeful mind of Mike Ma in his book Gothic Violence.
 description: "A few notable quotes from the wild and wondeful mind of Mike Ma in his book Gothic Violence."
-tags: ["Book Quotes", "Fiction"]
+tags: ["book quotes", "fiction"]
 ---
 
 ## TEST

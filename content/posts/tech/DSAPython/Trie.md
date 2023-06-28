@@ -6,7 +6,7 @@ cover:
     image: blog/dsa/trie.jpg
     alt: Trie
     caption: Learn Trie Algorithms in Python
-tags: ["DSA-Python"] 
+tags: ["python"] 
 
 ---
 

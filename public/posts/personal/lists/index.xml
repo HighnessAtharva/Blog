@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Lists on Atharva Shah</title>
+    <link>https://atharvashah.netlify.app/posts/personal/lists/</link>
+    <description>Recent content in Lists on Atharva Shah</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Mar 2023 01:18:35 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/posts/personal/lists/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Awesome Youtube Channels I am Subscribed To</title>
+      <link>https://atharvashah.netlify.app/posts/personal/lists/list-favorite-youtube-channels/</link>
+      <pubDate>Mon, 20 Mar 2023 01:18:35 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/personal/lists/list-favorite-youtube-channels/</guid>
+      <description>A perpetually growing list of youtube channels I am subscribed to. All of them are awesome.</description>
+    </item>
+    
+    <item>
+      <title>Awesome Podcasts I am Listening To</title>
+      <link>https://atharvashah.netlify.app/posts/personal/lists/list-favorite-podcasts/</link>
+      <pubDate>Mon, 20 Mar 2023 01:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/personal/lists/list-favorite-podcasts/</guid>
+      <description>A perpetually growing list of podcasts I am listening to. All of them are awesome. Insightful,entertaining and eye-opening.</description>
+    </item>
+    
+  </channel>
+</rss>

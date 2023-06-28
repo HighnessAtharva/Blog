@@ -6,7 +6,7 @@ cover:
     image: blog/dsa/search-sort.jpg
     alt: Search and Sort
     caption: Learn Searching & Sorting Algorithms in Python
-tags: ["DSA-Python"] 
+tags: ["python"] 
 
 ---
 - [Bubble Sort](#bubble-sort)

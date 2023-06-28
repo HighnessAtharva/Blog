@@ -7,7 +7,7 @@ cover:
     alt: Plastic Beach by Gorillaz
     caption: An entertaining record from the virtual band
 description: "An album review for Plastic Beach by Gorillaz. An entertaining record from the virtual band."
-tags: ["Music", "Album Review"]
+tags: ["music", "album review"]
 ---
 
 Gorillaz's "Plastic Beach" album is a magnificent work of art that takes the listener on a surreal journey through a digital island filled with both beauty and decay. This is a place where the vibrant colors of the natural world blend with the metallic tones of machinery, and the music echoes that duality with its unique fusion of hip-hop, pop, and psychedelic sounds.

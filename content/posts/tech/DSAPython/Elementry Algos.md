@@ -6,7 +6,7 @@ cover:
     image: blog/dsa/elementary.jpg
     alt: elementary
     caption: Learn Elementary Algorithms in Python
-tags: ["DSA-Python"] 
+tags: ["python"] 
 
 ---
 

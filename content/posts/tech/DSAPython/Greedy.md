@@ -6,7 +6,7 @@ cover:
     image: blog/dsa/greedy.jpg
     alt: Greedy
     caption: Learn Greedy Algorithms in Python
-tags: ["DSA-Python"] 
+tags: ["python"] 
 
 ---
 

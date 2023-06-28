@@ -6,7 +6,7 @@ cover:
     image: blog/dsa/string.jpg
     alt: Strings
     caption: Learn String Algorithms in Python
-tags: ["DSA-Python"] 
+tags: ["python"] 
 
 ---
 

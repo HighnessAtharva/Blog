@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Malazan Book of the Fallen on Atharva Shah</title>
+    <link>https://atharvashah.netlify.app/posts/personal/malazan/</link>
+    <description>Recent content in Malazan Book of the Fallen on Atharva Shah</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Apr 2023 00:19:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/posts/personal/malazan/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Book Review: Deadhouse Gates by Steven Erikson</title>
+      <link>https://atharvashah.netlify.app/posts/personal/malazan/02-dg-review/</link>
+      <pubDate>Thu, 27 Apr 2023 00:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/personal/malazan/02-dg-review/</guid>
+      <description>Rising rebellions, ancient secrets, and an Empire on the brink of war. The second book in the Malazan Book of the Fallen series is a thrilling and tragic tale of war and its consequences.</description>
+    </item>
+    
+    <item>
+      <title>Book Review: Gardens of the Moon by Steven Erikson</title>
+      <link>https://atharvashah.netlify.app/posts/personal/malazan/01-gotm-review/</link>
+      <pubDate>Wed, 26 Apr 2023 00:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/personal/malazan/01-gotm-review/</guid>
+      <description>The Gardens of the Moon, the first volume of the Malazan Book of the Fallen, is a sprawling epic fantasy of monumental proportions.</description>
+    </item>
+    
+    <item>
+      <title>Prelude to Malazan Book of the Fallen Challenge</title>
+      <link>https://atharvashah.netlify.app/posts/personal/malazan/prelude-to-malazan-challenge/</link>
+      <pubDate>Sat, 18 Mar 2023 00:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/personal/malazan/prelude-to-malazan-challenge/</guid>
+      <description>Opening thoughts and ponderings before taking on the humungous Malazan Book of the Fallen series. Setting expectations and challenges before embarking on a fantasy adventure.</description>
+    </item>
+    
+  </channel>
+</rss>
