@@ -8,8 +8,6 @@ cover:
     caption: No. Not even in the face of Armageddon. Never compromise.
 description: "Favorite Quotes from Watchmen (Graphic Novel) by Alan Moore. Who watches the watchmen?"
 tags: ["book quotes", "graphic novel"] 
-showtoc: true
-tocopen: true
 ---
 
 >*Heard joke once: Man goes to doctor. Says he's depressed. Says life seems harsh and cruel. Says he feels all alone in a threatening world where what lies ahead is vague and uncertain. Doctor says, "Treatment is simple. Great clown Pagliacci is in town tonight. Go and see him. That should pick you up." Man bursts into tears. Says, "But doctor...I am Pagliacci.*

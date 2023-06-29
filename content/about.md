@@ -38,4 +38,4 @@ I am a strong believer in the power of technology to make positive change in the
 
 Overall, I am a dedicated, hard-working and curious person. I am always eager to learn new things and take on new challenges. I believe that the world of technology is constantly evolving and there is always more to discover. I am excited to see where my journey in this field will take me next.
 
-Wanna Hang? [Grab All My Social Links](https://linktr.ee/HighnessAtharva) 
+Wanna Hang? [Grab All My Social Links](https://linktr.ee/HighnessAtharva)

@@ -100,8 +100,8 @@ params:
     disableScrollToTop: false
     hidemeta: false
     hideSummary: false
-    showtoc: false
-    tocopen: false
+    showtoc: true
+    tocopen: true
     comments: true
     
     # SEARCH

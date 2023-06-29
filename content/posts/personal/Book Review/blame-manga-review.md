@@ -8,18 +8,7 @@ cover:
     caption: A dark, violent, brutal, fast-paced cyberpunk battle manga.
 description: "Thoughts on all six of the master edition volumes of the BLAME! manga series by Tsutomu Nihei. A dark, violent, brutal, fast-paced cyberpunk battle manga."
 tags: ["manga", "book review"]
-showToc: true
-TocOpen: true
 ---
-<!-- 
-- [A Dystopian Cyberpunk Masterpiece](#a-dystopian-cyberpunk-masterpiece)
-- [BLAME! Master Edition #1](#blame-master-edition-1)
-- [BLAME! Master Edition #2](#blame-master-edition-2)
-- [BLAME! Master Edition #3](#blame-master-edition-3)
-- [BLAME! Master Edition #4](#blame-master-edition-4)
-- [BLAME! Master Edition #5](#blame-master-edition-5)
-- [BLAME! Master Edition #6](#blame-master-edition-6)
-- [Ending Thoughts](#ending-thoughts) -->
 
 ## A Dystopian Cyberpunk Masterpiece
 

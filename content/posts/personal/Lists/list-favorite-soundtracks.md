@@ -8,8 +8,6 @@ cover:
     caption: "A list of my favorite soundtracks from movies, video games and other media"
 description: "A list of my favorite soundtracks from movies, video games and other media. I've been listening to these for years and they never get old."
 tags: ["music", "lists"] 
-showToc: true
-TocOpen: true
 ---
 
 *{{< highlight "LAST UPDATED:" >}}*

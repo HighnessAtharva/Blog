@@ -8,8 +8,6 @@ cover:
     caption: The blade itself incites to deeds of violence.
 description: "Favorite Quotes from First Law Trilogy by Joe Abercrombie. A grimdark collection that will take you to the edge of your seat."
 tags: ["book quotes", "fantasy"] 
-showtoc: true
-tocopen: true
 ---
 
 ## The Blade Itself

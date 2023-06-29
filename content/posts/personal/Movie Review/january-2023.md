@@ -8,8 +8,6 @@ cover:
     caption: Reviews of the movies I watched in January 2023
 description: "January 2023 brought a plethora of cinematic experiences my way, and I'm eager to share my take on them. From classic films to new releases, my viewing journey was diverse and exciting."
 tags: ["Movie Review"]
-showToc: true
-TocOpen: true
 ---
 
 January 2023 brought a plethora of cinematic experiences my way, and I'm eager to share my take on them. From classic films to new releases, my viewing journey was diverse and exciting. This month I tackled a few movies that have been on my watchlist for a while, and I'm glad I finally got around to watching them. I enjoyed "The Menu" and "Moonrise Kingdom," but I was disappointed by "To Die For." I also watched a comedy special, and I was blown away by "Andrew Schulz: Infamous." It's one of the best comedy specials I've seen in a long time. Get your popcorn ready, because it's time to dive into my January 2023 movie reviews!

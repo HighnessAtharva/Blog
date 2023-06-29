@@ -8,8 +8,6 @@ cover:
     caption: A perpetually growing list of podcasts I am listening to. All of them are awesome. 
 description: "A perpetually growing list of podcasts I am listening to. All of them are awesome. Insightful,entertaining and eye-opening."
 tags: ["lists"]
-showToc: true
-TocOpen: true
 ---
 
 Allow me to present a compendium of the podcasts to which I have been attending for some duration. Through my consistent engagement with this medium, I have unearthed a trove of noteworthy podcasts. It is my intention to continue expanding this list as I encounter additional stimulating programs. Please note that this registry is not arranged in any specific sequence, and I must emphasize that it is primarily a personal memorandum rather than an article for public dissemination. May you discover a podcast of interest amongst the contents of this assemblage.

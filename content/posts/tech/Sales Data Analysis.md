@@ -8,8 +8,6 @@ cover:
     caption:  EDA, Preprocessing, Feature Engineering, Model Building with Python
 tags: ["python", "tutorial"]
 description: "Through a combination of theoretical explanations and practical demonstrations, we will delve into data preprocessing, exploratory data analysis, feature engineering, and model building."
-showtoc: true
-tocopen: true
 ---
 
 ## Introduction

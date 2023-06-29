@@ -8,8 +8,6 @@ cover:
     caption: A perpetually growing list of youtube channels I am subscribed to. All of them are awesome.
 description: "A perpetually growing list of youtube channels I am subscribed to. All of them are awesome."
 tags: ["lists"]
-showToc: true
-TocOpen: true
 ---
 
 Herein lies a compilation of my most cherished YouTube channels. Having subscribed to most of these for a number of years, I make it a point to regularly tune into their content. These channels are categorized for your ease of reference, and will be continually updated as I stumble upon more gems. I invite you to share your own recommendations in the comments section below, as this list shall remain perpetual. Do note that this is by no means an exhaustive inventory of my subscriptions, but rather a selection of the most exceptional, entertaining, and enlightening channels.

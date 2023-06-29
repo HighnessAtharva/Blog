@@ -1,22 +1,17 @@
 ---
 title: "DSA in Python - Trie"
 date: 2022-07-08T13:18:34+05:30
-draft: true
+draft: false
 cover: 
-    image: blog/dsa/trie.jpg
+    image: blog/dsa/Trie.jpg
     alt: Trie
     caption: Learn Trie Algorithms in Python
 tags: ["python"] 
-
 ---
 
-- [Construct a trie from scratch](#construct-a-trie-from-scratch)
-- [Find shortest unique prefix for every word in a given list](#find-shortest-unique-prefix-for-every-word-in-a-given-list)
-- [Word Break Problem | (Trie solution)](#word-break-problem--trie-solution)
-- [Given a sequence of words, print all anagrams together](#given-a-sequence-of-words-print-all-anagrams-together)
-- [Print unique rows in a given boolean matrix](#print-unique-rows-in-a-given-boolean-matrix)
+## Free Preview - 5 Trie Problems
 
-## Construct a trie from scratch
+### Construct a trie from scratch
 
 ```python
 class TrieNode:
@@ -94,7 +89,7 @@ if __name__ == '__main__':
     constructTrie()
 ```
 
-## Find shortest unique prefix for every word in a given list
+### Find shortest unique prefix for every word in a given list
 
 ```python
 """
@@ -168,7 +163,7 @@ if __name__ == '__main__':
     findShortestPrefix(words)
 ```
 
-## Word Break Problem | (Trie solution)
+### Word Break Problem | (Trie solution)
 
 ```python
 # Currently, Trie supports lowercase English characters. So, the character size is 26.
@@ -253,7 +248,7 @@ if __name__ == '__main__':
         print('The string can\'t be segmented')
 ```
 
-## Given a sequence of words, print all anagrams together
+### Given a sequence of words, print all anagrams together
 
 ```python
 class TrieNode:
@@ -318,7 +313,7 @@ words = ['auctioned', 'actors', 'altered', 'streaming', 'related', 'education', 
 groupAnagrams(words)
 ```
 
-## Print unique rows in a given boolean matrix
+### Print unique rows in a given boolean matrix
 
 ```python
 # Given a binary matrix of M X N of integers, you need to return only unique rows of binary array
@@ -359,3 +354,8 @@ findUniqueRows(M)
 
 
 ```
+
+
+## Buy the Interview Guide
+
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-trie" "/blog/gumroad-marketing.png" >}}

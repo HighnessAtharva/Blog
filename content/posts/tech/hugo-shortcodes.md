@@ -8,6 +8,4 @@ cover:
     caption: Awesome hugo shortcodes I am running to power this site. Lightweight, fast and easy to use.
 description: "Awesome hugo shortcodes I am running to power this site. Lightweight, fast and easy to use. Everything from galleries, blockquotes, spotify embeds and more."
 tags: ["technology"]
-showToc: true
-TocOpen: true
 ---

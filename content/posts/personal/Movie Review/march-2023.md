@@ -8,8 +8,6 @@ cover:
     caption: Reviews of the movies I watched in March 2023
 description: "A month filled with movie magic, and I had the pleasure of watching some truly amazing films."
 tags: ["Movie Review"]
-showToc: true
-TocOpen: true
 ---
 
 Lights, camera, action! March 2023 was a month filled with movie magic, and I had the pleasure of watching some truly amazing films. From thought-provoking dramas to side-splitting comedies, this month had it all. I'm excited to share my thoughts on the movies I watched, which include the morally challenging First Reformed, the hilarious Game Night, the emotionally charged Spencer, and the classic Edward Scissorhands. I also delved into some cult classics, such as the offbeat Buffalo '66 and the spooky Creepshow. I also managed to watch all the Scream sequels, which were a lot of fun. Ghostface killah baby! Woodsboro gang for life! And let's not forget the amazing live performance by The Weeknd at SoFi Stadium, which left me in awe. So grab some popcorn and join me as I take you through my movie journey of March 2023.

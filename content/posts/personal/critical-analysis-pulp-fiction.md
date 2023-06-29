@@ -8,8 +8,6 @@ cover:
     caption: A detailed critique of the movie Pulp Fiction 
 description: "Reviewing my favorite movie of all time - Pulp Fiction by Quentin Tarantino starring John Travolta, Samuel L. Jackson, Uma Thurman, Bruce Willis."
 tags: ["movie review"]
-showToc: true
-TocOpen: true
 ---
 
 >**Directed By** : Quentin Tarantino  

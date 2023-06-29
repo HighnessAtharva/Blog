@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>DSA in Python - Graph | Atharva Shah</title>
+<meta name="keywords" content="python">
+<meta name="description" content="Free Preview - 5 Graph Problems Implement Graph class Graph: def __init__(self, edges, n): self.adjList = [[] for _ in range(n)] for (src, dest) in edges: self.adjList[src].append(dest) def printGraph(graph): for src in range(len(graph.adjList)): for dest in graph.adjList[src]: print(f&#39;({src} —&gt; {dest}) &#39;, end=&#39;&#39;) print() edges = [(0, 1), (1, 2), (2, 0), (2, 1), (3, 2), (4, 5), (5, 4)] n = 6 graph = Graph(edges, n) printGraph(graph) Implement Weighted Graph class Graph: def __init__(self, edges, n): self.">
+<meta name="author" content="">
+<link rel="canonical" href="https://atharvashah.netlify.app/posts/tech/dsapython/graph/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.e2ac30bcf8244624f0d65d8f6f09cfee2ebb42e51a464b7fcc48a89b2831bf65.css" integrity="sha256-4qwwvPgkRiTw1l2PbwnP7i67QuUaRkt/zEiomygxv2U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://atharvashah.netlify.app/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://atharvashah.netlify.app/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://atharvashah.netlify.app/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://atharvashah.netlify.app/apple-touch-icon.png">
+<link rel="mask-icon" href="https://atharvashah.netlify.app/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = ""; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9913536001930134" crossorigin="anonymous"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-216150796-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><meta property="og:title" content="DSA in Python - Graph" />
+<meta property="og:description" content="Free Preview - 5 Graph Problems Implement Graph class Graph: def __init__(self, edges, n): self.adjList = [[] for _ in range(n)] for (src, dest) in edges: self.adjList[src].append(dest) def printGraph(graph): for src in range(len(graph.adjList)): for dest in graph.adjList[src]: print(f&#39;({src} —&gt; {dest}) &#39;, end=&#39;&#39;) print() edges = [(0, 1), (1, 2), (2, 0), (2, 1), (3, 2), (4, 5), (5, 4)] n = 6 graph = Graph(edges, n) printGraph(graph) Implement Weighted Graph class Graph: def __init__(self, edges, n): self." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://atharvashah.netlify.app/posts/tech/dsapython/graph/" />
+<meta property="og:image" content="https://atharvashah.netlify.app/blog/dsa/Graph.jpg" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-09T13:14:34+05:30" />
+<meta property="article:modified_time" content="2022-07-09T13:14:34+05:30" /><meta property="og:site_name" content="Atharva Shah" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://atharvashah.netlify.app/blog/dsa/Graph.jpg" />
+<meta name="twitter:title" content="DSA in Python - Graph"/>
+<meta name="twitter:description" content="Free Preview - 5 Graph Problems Implement Graph class Graph: def __init__(self, edges, n): self.adjList = [[] for _ in range(n)] for (src, dest) in edges: self.adjList[src].append(dest) def printGraph(graph): for src in range(len(graph.adjList)): for dest in graph.adjList[src]: print(f&#39;({src} —&gt; {dest}) &#39;, end=&#39;&#39;) print() edges = [(0, 1), (1, 2), (2, 0), (2, 1), (3, 2), (4, 5), (5, 4)] n = 6 graph = Graph(edges, n) printGraph(graph) Implement Weighted Graph class Graph: def __init__(self, edges, n): self."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "📚 All Posts",
+      "item": "https://atharvashah.netlify.app/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "💻 Tech Posts",
+      "item": "https://atharvashah.netlify.app/posts/tech/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "DSA in Python - Graph",
+      "item": "https://atharvashah.netlify.app/posts/tech/dsapython/graph/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "DSA in Python - Graph",
+  "name": "DSA in Python - Graph",
+  "description": "Free Preview - 5 Graph Problems Implement Graph class Graph: def __init__(self, edges, n): self.adjList = [[] for _ in range(n)] for (src, dest) in edges: self.adjList[src].append(dest) def printGraph(graph): for src in range(len(graph.adjList)): for dest in graph.adjList[src]: print(f\u0026#39;({src} —\u0026gt; {dest}) \u0026#39;, end=\u0026#39;\u0026#39;) print() edges = [(0, 1), (1, 2), (2, 0), (2, 1), (3, 2), (4, 5), (5, 4)] n = 6 graph = Graph(edges, n) printGraph(graph) Implement Weighted Graph class Graph: def __init__(self, edges, n): self.",
+  "keywords": [
+    "python"
+  ],
+  "articleBody": "Free Preview - 5 Graph Problems Implement Graph class Graph: def __init__(self, edges, n): self.adjList = [[] for _ in range(n)] for (src, dest) in edges: self.adjList[src].append(dest) def printGraph(graph): for src in range(len(graph.adjList)): for dest in graph.adjList[src]: print(f'({src} —\u003e {dest}) ', end='') print() edges = [(0, 1), (1, 2), (2, 0), (2, 1), (3, 2), (4, 5), (5, 4)] n = 6 graph = Graph(edges, n) printGraph(graph) Implement Weighted Graph class Graph: def __init__(self, edges, n): self.adjList = [None] * n for i in range(n): self.adjList[i] = [] for (src, dest, weight) in edges: self.adjList[src].append((dest, weight)) def printGraph(graph): for src in range(len(graph.adjList)): for (dest, weight) in graph.adjList[src]: print(f'({src} —\u003e {dest}, {weight}) ', end='') print() # Input: Edges in a weighted digraph (as per the above diagram) # Edge (x, y, w) represents an edge from `x` to `y` having weight `w` edges = [(0, 1, 6), (1, 2, 7), (2, 0, 5), (2, 1, 4), (3, 2, 10), (4, 5, 1), (5, 4, 3)] n = 6 graph = Graph(edges, n) printGraph(graph) Implement BFS algorithm from collections import deque class Graph: def __init__(self, edges, n): self.adjList = [[] for _ in range(n)] for (src, dest) in edges: self.adjList[src].append(dest) self.adjList[dest].append(src) def BFS(graph, v, discovered): q = deque() discovered[v] = True q.append(v) while q: v = q.popleft() print(v, end=' ') for u in graph.adjList[v]: if not discovered[u]: discovered[u] = True q.append(u) edges = [ (1, 2), (1, 3), (1, 4), (2, 5), (2, 6), (5, 9), (5, 10), (4, 7), (4, 8), (7, 11), (7, 12) # vertex 0, 13, and 14 are single nodes ] n = 15 graph = Graph(edges, n) discovered = [False] * n for i in range(n): if not discovered[i]: BFS(graph, i, discovered) Implement DFS Algo from collections import deque class Graph: def __init__(self, edges, n): self.adjList = [[] for _ in range(n)] for (src, dest) in edges: self.adjList[src].append(dest) self.adjList[dest].append(src) def iterativeDFS(graph, v, discovered): stack = deque() stack.append(v) while stack: v = stack.pop() if discovered[v]: continue discovered[v] = True print(v, end=' ') adjList = graph.adjList[v] for i in reversed(range(len(adjList))): u = adjList[i] if not discovered[u]: stack.append(u) edges = [ # Notice that node 0 is unconnected (1, 2), (1, 7), (1, 8), (2, 3), (2, 6), (3, 4), (3, 5), (8, 9), (8, 12), (9, 10), (9, 11) # (6, 9) introduces a cycle ] n = 13 graph = Graph(edges, n) discovered = [False] * n for i in range(n): if not discovered[i]: iterativeDFS(graph, i, discovered) Detect Cycle in Directed Graph using BFS/DFS Algo class Graph: def __init__(self, edges, n): self.adjList = [[] for _ in range(n)] for (src, dest) in edges: self.adjList[src].append(dest) # Perform DFS on the graph and set the departure time of all vertices of the graph def DFS(graph, v, discovered, departure, time): # mark the current node as discovered discovered[v] = True # do for every edge (v, u) for u in graph.adjList[v]: # if `u` is not yet discovered if not discovered[u]: time = DFS(graph, u, discovered, departure, time) # ready to backtrack set departure time of vertex `v` departure[v] = time time = time + 1 return time # Returns true if the given directed graph is DAG def isDAG(graph, n): # keep track of whether a vertex is discovered or not discovered = [False] * n # keep track of the departure time of a vertex in DFS departure = [None] * n time = 0 # Perform DFS traversal from all undiscovered vertices to visit all connected components of a graph for i in range(n): if not discovered[i]: time = DFS(graph, i, discovered, departure, time) # check if the given directed graph is DAG or not for u in range(n): # check if (u, v) forms a back-edge. for v in graph.adjList[u]: # If the departure time of vertex `v` is greater than equal # to the departure time of `u`, they form a back edge. # Note that `departure[u]` will be equal to `departure[v]` # only if `u = v`, i.e., vertex contain an edge to itself if departure[u] \u003c= departure[v]: return False # no back edges return True # List of graph edges as per the above diagram edges = [(0, 1), (0, 3), (1, 2), (1, 3), (3, 2), (3, 4), (3, 0), (5, 6), (6, 3)] # total number of nodes in the graph (labelled from 0 to 6) n = 7 graph = Graph(edges, n) if isDAG(graph, n): print('Does not contain a Cycle') else: print('Contains a Cycle') Buy the Interview Guide This blog post only covers the preview of the product. Get the product from Gumroad to unlock all questions. The E-book includes in-depth explanation for each solution.\n🎯 Expert Curated List of Questions.\n💼 Guaranteed Interview Clearance.\n✅ Master FAANG Interviews.\n💸 Boost Skills, Get Paid.\nGet interview Ready.\r",
+  "wordCount" : "797",
+  "inLanguage": "en",
+  "image":"https://atharvashah.netlify.app/blog/dsa/Graph.jpg","datePublished": "2022-07-09T13:14:34+05:30",
+  "dateModified": "2022-07-09T13:14:34+05:30",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://atharvashah.netlify.app/posts/tech/dsapython/graph/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Atharva Shah",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://atharvashah.netlify.app/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://atharvashah.netlify.app/" accesskey="h" title="Atharva Shah (Alt + H)">
+            <img src="https://atharvashah.netlify.app/profile/header_button.webp" alt="logo" aria-label="logo"
+                 height="30">Atharva Shah</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://atharvashah.netlify.app/posts/tech/" title="💻Tech">
+                <span>💻Tech</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/posts/personal/" title="🍿Personal">
+                <span>🍿Personal</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/about/" title="👨🏻About">
+                <span>👨🏻About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/tags/" title="🏷️Tags">
+                <span>🏷️Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/archives/" title="📜Archive">
+                <span>📜Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/search/" title="🔍Search (Alt &#43; /)" accesskey=/>
+                <span>🔍Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header><main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://atharvashah.netlify.app/">Home</a>&nbsp;»&nbsp;<a href="https://atharvashah.netlify.app/posts/">📚 All Posts</a>&nbsp;»&nbsp;<a href="https://atharvashah.netlify.app/posts/tech/">💻 Tech Posts</a></div>
+    <h1 class="post-title">
+      DSA in Python - Graph
+    </h1>
+    <div class="post-meta">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>July 9, 2022
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>797 words
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>4 mins
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://atharvashah.netlify.app/tags/python/" style="color: var(--secondary)!important;">python</a>
+            </span>
+        </span>
+    </span>
+</span>
+
+</div>
+  </header> 
+<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/dsa/Graph.jpg" alt="Graph">
+        <p>Learn Graph Algorithms in Python</p>
+</figure><aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#free-preview---5-graph-problems" aria-label="Free Preview - 5 Graph Problems">Free Preview - 5 Graph Problems</a><ul>
+                        
+                <li>
+                    <a href="#implement-graph" aria-label="Implement Graph">Implement Graph</a></li>
+                <li>
+                    <a href="#implement-weighted-graph" aria-label="Implement Weighted Graph">Implement Weighted Graph</a></li>
+                <li>
+                    <a href="#implement-bfs-algorithm" aria-label="Implement BFS algorithm">Implement BFS algorithm</a></li>
+                <li>
+                    <a href="#implement-dfs-algo" aria-label="Implement DFS Algo">Implement DFS Algo</a></li>
+                <li>
+                    <a href="#detect-cycle-in-directed-graph-using-bfsdfs-algo" aria-label="Detect Cycle in Directed Graph using BFS/DFS Algo">Detect Cycle in Directed Graph using BFS/DFS Algo</a></li></ul>
+                </li>
+                <li>
+                    <a href="#buy-the-interview-guide" aria-label="Buy the Interview Guide">Buy the Interview Guide</a>
+                </li>
+            </ul>
+        </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        
+        activeElement = elements[0];
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+    }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        if (elements) {
+            activeElement = Array.from(elements).find((element) => {
+                if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                    (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                    return element;
+                }
+            }) || activeElement
+
+            elements.forEach(element => {
+                const id = encodeURI(element.getAttribute('id')).toLowerCase();
+                if (element === activeElement){
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+                } else {
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+                }
+            })
+        }
+    }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
+  <div class="post-content"><h2 id="free-preview---5-graph-problems">Free Preview - 5 Graph Problems<a hidden class="anchor" aria-hidden="true" href="#free-preview---5-graph-problems">#</a></h2>
+<h3 id="implement-graph">Implement Graph<a hidden class="anchor" aria-hidden="true" href="#implement-graph">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Graph</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, edges, n):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>adjList <span style="color:#f92672">=</span> [[] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (src, dest) <span style="color:#f92672">in</span> edges:
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>adjList[src]<span style="color:#f92672">.</span>append(dest)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">printGraph</span>(graph):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> src <span style="color:#f92672">in</span> range(len(graph<span style="color:#f92672">.</span>adjList)):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> dest <span style="color:#f92672">in</span> graph<span style="color:#f92672">.</span>adjList[src]:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;(</span><span style="color:#e6db74">{</span>src<span style="color:#e6db74">}</span><span style="color:#e6db74"> —&gt; </span><span style="color:#e6db74">{</span>dest<span style="color:#e6db74">}</span><span style="color:#e6db74">) &#39;</span>, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>        print()
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>edges <span style="color:#f92672">=</span> [(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>), (<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>), (<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>)]
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>graph <span style="color:#f92672">=</span> Graph(edges, n)
+</span></span><span style="display:flex;"><span>printGraph(graph)
+</span></span></code></pre></div><h3 id="implement-weighted-graph">Implement Weighted Graph<a hidden class="anchor" aria-hidden="true" href="#implement-weighted-graph">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Graph</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, edges, n):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>adjList <span style="color:#f92672">=</span> [<span style="color:#66d9ef">None</span>] <span style="color:#f92672">*</span> n
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>adjList[i] <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (src, dest, weight) <span style="color:#f92672">in</span> edges:
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>adjList[src]<span style="color:#f92672">.</span>append((dest, weight))
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">printGraph</span>(graph):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> src <span style="color:#f92672">in</span> range(len(graph<span style="color:#f92672">.</span>adjList)):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (dest, weight) <span style="color:#f92672">in</span> graph<span style="color:#f92672">.</span>adjList[src]:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;(</span><span style="color:#e6db74">{</span>src<span style="color:#e6db74">}</span><span style="color:#e6db74"> —&gt; </span><span style="color:#e6db74">{</span>dest<span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">{</span>weight<span style="color:#e6db74">}</span><span style="color:#e6db74">) &#39;</span>, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>        print()
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Input: Edges in a weighted digraph (as per the above diagram)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Edge (x, y, w) represents an edge from `x` to `y` having weight `w`</span>
+</span></span><span style="display:flex;"><span>edges <span style="color:#f92672">=</span> [(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">6</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">7</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">5</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>), (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">10</span>),
+</span></span><span style="display:flex;"><span>        (<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>)]
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>graph <span style="color:#f92672">=</span> Graph(edges, n)
+</span></span><span style="display:flex;"><span>printGraph(graph)
+</span></span></code></pre></div><h3 id="implement-bfs-algorithm">Implement BFS algorithm<a hidden class="anchor" aria-hidden="true" href="#implement-bfs-algorithm">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> deque
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Graph</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, edges, n):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>adjList <span style="color:#f92672">=</span> [[] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (src, dest) <span style="color:#f92672">in</span> edges:
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>adjList[src]<span style="color:#f92672">.</span>append(dest)
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>adjList[dest]<span style="color:#f92672">.</span>append(src)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">BFS</span>(graph, v, discovered):
+</span></span><span style="display:flex;"><span>    q <span style="color:#f92672">=</span> deque()
+</span></span><span style="display:flex;"><span>    discovered[v] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>    q<span style="color:#f92672">.</span>append(v)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> q:
+</span></span><span style="display:flex;"><span>        v <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span>popleft()
+</span></span><span style="display:flex;"><span>        print(v, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; &#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> u <span style="color:#f92672">in</span> graph<span style="color:#f92672">.</span>adjList[v]:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> discovered[u]:
+</span></span><span style="display:flex;"><span>                discovered[u] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>                q<span style="color:#f92672">.</span>append(u)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>edges <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">6</span>), (<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">9</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>), (<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">7</span>), (<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">8</span>), (<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">11</span>), (<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">12</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># vertex 0, 13, and 14 are single nodes</span>
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>
+</span></span><span style="display:flex;"><span>graph <span style="color:#f92672">=</span> Graph(edges, n)
+</span></span><span style="display:flex;"><span>discovered <span style="color:#f92672">=</span> [<span style="color:#66d9ef">False</span>] <span style="color:#f92672">*</span> n
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> discovered[i]:
+</span></span><span style="display:flex;"><span>        BFS(graph, i, discovered)
+</span></span></code></pre></div><h3 id="implement-dfs-algo">Implement DFS Algo<a hidden class="anchor" aria-hidden="true" href="#implement-dfs-algo">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> deque
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Graph</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, edges, n):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>adjList <span style="color:#f92672">=</span> [[] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (src, dest) <span style="color:#f92672">in</span> edges:
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>adjList[src]<span style="color:#f92672">.</span>append(dest)
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>adjList[dest]<span style="color:#f92672">.</span>append(src)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">iterativeDFS</span>(graph, v, discovered):
+</span></span><span style="display:flex;"><span>    stack <span style="color:#f92672">=</span> deque()
+</span></span><span style="display:flex;"><span>    stack<span style="color:#f92672">.</span>append(v)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> stack:
+</span></span><span style="display:flex;"><span>        v <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span>pop()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> discovered[v]:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>        discovered[v] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        print(v, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; &#39;</span>)
+</span></span><span style="display:flex;"><span>        adjList <span style="color:#f92672">=</span> graph<span style="color:#f92672">.</span>adjList[v]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> reversed(range(len(adjList))):
+</span></span><span style="display:flex;"><span>            u <span style="color:#f92672">=</span> adjList[i]
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> discovered[u]:
+</span></span><span style="display:flex;"><span>                stack<span style="color:#f92672">.</span>append(u)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>edges <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Notice that node 0 is unconnected</span>
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">7</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">8</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">6</span>), (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>), (<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>), (<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">12</span>), (<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>), (<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">11</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># (6, 9) introduces a cycle</span>
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> <span style="color:#ae81ff">13</span>
+</span></span><span style="display:flex;"><span>graph <span style="color:#f92672">=</span> Graph(edges, n)
+</span></span><span style="display:flex;"><span>discovered <span style="color:#f92672">=</span> [<span style="color:#66d9ef">False</span>] <span style="color:#f92672">*</span> n
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> discovered[i]:
+</span></span><span style="display:flex;"><span>        iterativeDFS(graph, i, discovered)
+</span></span></code></pre></div><h3 id="detect-cycle-in-directed-graph-using-bfsdfs-algo">Detect Cycle in Directed Graph using BFS/DFS Algo<a hidden class="anchor" aria-hidden="true" href="#detect-cycle-in-directed-graph-using-bfsdfs-algo">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Graph</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, edges, n):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>adjList <span style="color:#f92672">=</span> [[] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (src, dest) <span style="color:#f92672">in</span> edges:
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>adjList[src]<span style="color:#f92672">.</span>append(dest)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Perform DFS on the graph and set the departure time of all vertices of the graph</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">DFS</span>(graph, v, discovered, departure, time):
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># mark the current node as discovered</span>
+</span></span><span style="display:flex;"><span>    discovered[v] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># do for every edge (v, u)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> u <span style="color:#f92672">in</span> graph<span style="color:#f92672">.</span>adjList[v]:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># if `u` is not yet discovered</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> discovered[u]:
+</span></span><span style="display:flex;"><span>            time <span style="color:#f92672">=</span> DFS(graph, u, discovered, departure, time)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ready to backtrack set departure time of vertex `v`</span>
+</span></span><span style="display:flex;"><span>    departure[v] <span style="color:#f92672">=</span> time
+</span></span><span style="display:flex;"><span>    time <span style="color:#f92672">=</span> time <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> time
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Returns true if the given directed graph is DAG</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isDAG</span>(graph, n):
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># keep track of whether a vertex is discovered or not</span>
+</span></span><span style="display:flex;"><span>    discovered <span style="color:#f92672">=</span> [<span style="color:#66d9ef">False</span>] <span style="color:#f92672">*</span> n
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># keep track of the departure time of a vertex in DFS</span>
+</span></span><span style="display:flex;"><span>    departure <span style="color:#f92672">=</span> [<span style="color:#66d9ef">None</span>] <span style="color:#f92672">*</span> n
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    time <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Perform DFS traversal from all undiscovered vertices to visit all connected components of a graph</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> discovered[i]:
+</span></span><span style="display:flex;"><span>            time <span style="color:#f92672">=</span> DFS(graph, i, discovered, departure, time)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># check if the given directed graph is DAG or not</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> u <span style="color:#f92672">in</span> range(n):
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># check if (u, v) forms a back-edge.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> v <span style="color:#f92672">in</span> graph<span style="color:#f92672">.</span>adjList[u]:
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># If the departure time of vertex `v` is greater than equal</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># to the departure time of `u`, they form a back edge.</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Note that `departure[u]` will be equal to `departure[v]`</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># only if `u = v`, i.e., vertex contain an edge to itself</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> departure[u] <span style="color:#f92672">&lt;=</span> departure[v]:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># no back edges</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># List of graph edges as per the above diagram</span>
+</span></span><span style="display:flex;"><span>edges <span style="color:#f92672">=</span> [(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>), (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>), (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>), (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>), (<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">3</span>)]
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># total number of nodes in the graph (labelled from 0 to 6)</span>
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>graph <span style="color:#f92672">=</span> Graph(edges, n)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> isDAG(graph, n):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;Does not contain a Cycle&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;Contains a Cycle&#39;</span>)
+</span></span><span style="display:flex;"><span> 
+</span></span></code></pre></div><h2 id="buy-the-interview-guide">Buy the Interview Guide<a hidden class="anchor" aria-hidden="true" href="#buy-the-interview-guide">#</a></h2>
+<script src="https://gumroad.com/js/gumroad.js"></script>
+<article style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+    
+<img src="/blog/gumroad-marketing.png" alt="Buy on gumroad">
+<p>This blog post only covers the preview of the product. Get the product from Gumroad to unlock all questions. The E-book includes in-depth explanation for each solution.</p> 
+<p>🎯 Expert Curated List of Questions.</p> 
+<p>💼 Guaranteed Interview Clearance.</p>
+<p>✅ Master FAANG Interviews.</p> 
+<p>💸 Boost Skills, Get Paid.</p>
+<a class="gumroad-button" style="text-align: center; align-items: center;" href="https://highnessatharva.gumroad.com/l/dsa-python-graph" data-gumroad-overlay-checkout="true">Get interview Ready.</a>
+
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://atharvashah.netlify.app/tags/python/">python</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://atharvashah.netlify.app/posts/tech/dsapython/elementry-algos/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>DSA in Python - Elementry Algos</span>
+  </a>
+  <a class="next" href="https://atharvashah.netlify.app/posts/tech/dsapython/greedy/">
+    <span class="title">Next »</span>
+    <br>
+    <span>DSA in Python - Greedy</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share DSA in Python - Graph on twitter"
+        href="https://twitter.com/intent/tweet/?text=DSA%20in%20Python%20-%20Graph&amp;url=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2fdsapython%2fgraph%2f&amp;hashtags=python">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share DSA in Python - Graph on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2fdsapython%2fgraph%2f&amp;title=DSA%20in%20Python%20-%20Graph&amp;summary=DSA%20in%20Python%20-%20Graph&amp;source=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2fdsapython%2fgraph%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share DSA in Python - Graph on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2fdsapython%2fgraph%2f&title=DSA%20in%20Python%20-%20Graph">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share DSA in Python - Graph on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2fdsapython%2fgraph%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share DSA in Python - Graph on whatsapp"
+        href="https://api.whatsapp.com/send?text=DSA%20in%20Python%20-%20Graph%20-%20https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2fdsapython%2fgraph%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share DSA in Python - Graph on telegram"
+        href="https://telegram.me/share/url?text=DSA%20in%20Python%20-%20Graph&amp;url=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2fdsapython%2fgraph%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+  </footer><div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-atharvashah-netlify-app" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function() {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        var disqus_shortname = 'https-atharvashah-netlify-app';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://atharvashah.netlify.app/">Atharva Shah</a></span> 
+    | <span><a href="/privacy-policy/" target="_blank">Privacy Policy</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function() {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function() {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) {};
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script></body>
+
+</html>

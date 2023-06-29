@@ -8,8 +8,6 @@ cover:
     caption: Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django.
 description: "Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django."
 tags: ["django", "python","tutorial"]
-showToc: true 
-TocOpen: true
 ---
 ## Introduction
 

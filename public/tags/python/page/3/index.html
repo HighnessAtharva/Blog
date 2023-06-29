@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>python | Atharva Shah</title>
+<meta name="keywords" content="">
+<meta name="description" content="Howdy 👋! I am Atharva Shah and on this blog I ruminate about tech, programming, entertainment and the fine things in life.">
+<meta name="author" content="">
+<link rel="canonical" href="https://atharvashah.netlify.app/tags/python/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.e2ac30bcf8244624f0d65d8f6f09cfee2ebb42e51a464b7fcc48a89b2831bf65.css" integrity="sha256-4qwwvPgkRiTw1l2PbwnP7i67QuUaRkt/zEiomygxv2U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://atharvashah.netlify.app/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://atharvashah.netlify.app/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://atharvashah.netlify.app/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://atharvashah.netlify.app/apple-touch-icon.png">
+<link rel="mask-icon" href="https://atharvashah.netlify.app/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://atharvashah.netlify.app/tags/python/index.xml">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = ""; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9913536001930134" crossorigin="anonymous"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-216150796-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><meta property="og:title" content="python" />
+<meta property="og:description" content="Howdy 👋! I am Atharva Shah and on this blog I ruminate about tech, programming, entertainment and the fine things in life." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://atharvashah.netlify.app/tags/python/" /><meta property="og:site_name" content="Atharva Shah" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="python"/>
+<meta name="twitter:description" content="Howdy 👋! I am Atharva Shah and on this blog I ruminate about tech, programming, entertainment and the fine things in life."/>
+
+</head>
+
+<body class="list dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://atharvashah.netlify.app/" accesskey="h" title="Atharva Shah (Alt + H)">
+            <img src="https://atharvashah.netlify.app/profile/header_button.webp" alt="logo" aria-label="logo"
+                 height="30">Atharva Shah</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://atharvashah.netlify.app/posts/tech/" title="💻Tech">
+                <span>💻Tech</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/posts/personal/" title="🍿Personal">
+                <span>🍿Personal</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/about/" title="👨🏻About">
+                <span>👨🏻About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/tags/" title="🏷️Tags">
+                <span>🏷️Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/archives/" title="📜Archive">
+                <span>📜Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/search/" title="🔍Search (Alt &#43; /)" accesskey=/>
+                <span>🔍Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header><main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://atharvashah.netlify.app/">Home</a>&nbsp;»&nbsp;<a href="https://atharvashah.netlify.app/tags/">🏷️ Tags</a></div>
+  <h1>
+    python
+    <a href="/tags/python/index.xml" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/dsa/Greedy.jpg" alt="Greedy">
+</figure>
+  <header class="entry-header">
+    <h2>DSA in Python - Greedy
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Free Preview - 5 Greedy Problems Activity Selection Problem &#34;&#34;&#34; There is one meeting room in a firm. There are N meetings in the form of (start[i], end[i]) where start[i] is start time of meeting i and end[i] is finish time of meeting i. What is the maximum number of meetings that can be accommodated in the meeting room when only one meeting can be held in the meeting room at a particular time?...</p>
+  </div>
+  <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>July 9, 2022
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>1297 words
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>7 mins
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://atharvashah.netlify.app/tags/python/" style="color: var(--secondary)!important;">python</a>
+            </span>
+        </span>
+    </span>
+</span></footer>
+  <a class="entry-link" aria-label="post link to DSA in Python - Greedy" href="https://atharvashah.netlify.app/posts/tech/dsapython/greedy/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/dsa/Heap.jpg" alt="Heap">
+</figure>
+  <header class="entry-header">
+    <h2>DSA in Python - Heap
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Free Preview - 5 Heap Problems Implement a Maxheap/MinHeap using arrays and recursion. (Heapify) def heapify(arr, n, i): largest = i # Initialize largest as root l = 2 * i &#43; 1 # left = 2*i &#43; 1 r = 2 * i &#43; 2 # right = 2*i &#43; 2 # If left child is larger than root if l &lt; n and arr[l] &gt; arr[largest]: largest = l # If right child is larger than largest so far if r &lt; n and arr[r] &gt; arr[largest]: largest = r # If largest is not root if largest !...</p>
+  </div>
+  <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>July 9, 2022
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>1183 words
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>6 mins
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://atharvashah.netlify.app/tags/python/" style="color: var(--secondary)!important;">python</a>
+            </span>
+        </span>
+    </span>
+</span></footer>
+  <a class="entry-link" aria-label="post link to DSA in Python - Heap" href="https://atharvashah.netlify.app/posts/tech/dsapython/heap/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/dsa/Linked-List.jpg" alt="Linked List">
+</figure>
+  <header class="entry-header">
+    <h2>DSA in Python - Linked List
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Free Preview - 5 Linked List Problems Write a Program to reverse the Linked List. (Both Iterative and recursive) class Node: def __init__(self, data): self.data = data self.next = None class LinkedList: def __init__(self): self.head = None def reverse(self): prev = None current = self.head while current is not None: next = current.next current.next = prev prev = current current = next self.head = prev # Function to insert a new node at the beginning def push(self, new_data): new_node = Node(new_data) new_node....</p>
+  </div>
+  <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>July 9, 2022
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>1126 words
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>6 mins
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://atharvashah.netlify.app/tags/python/" style="color: var(--secondary)!important;">python</a>
+            </span>
+        </span>
+    </span>
+</span></footer>
+  <a class="entry-link" aria-label="post link to DSA in Python - Linked List" href="https://atharvashah.netlify.app/posts/tech/dsapython/ll/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/dsa/Matrix.jpg" alt="Matrix">
+</figure>
+  <header class="entry-header">
+    <h2>DSA in Python - Matrix
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Free Preview - 5 Matrix Problems Spiral traversal on a Matrix def spiralOrder(matrix): ans = [] if (len(matrix) == 0): return ans m = len(matrix) n = len(matrix[0]) seen = [[0 for _ in range(n)] for _ in range(m)] dr = [0, 1, 0, -1] dc = [1, 0, -1, 0] x = 0 y = 0 di = 0 # Iterate from 0 to R * C - 1 for _ in range(m * n): ans....</p>
+  </div>
+  <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>July 9, 2022
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>789 words
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>4 mins
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://atharvashah.netlify.app/tags/python/" style="color: var(--secondary)!important;">python</a>
+            </span>
+        </span>
+    </span>
+</span></footer>
+  <a class="entry-link" aria-label="post link to DSA in Python - Matrix" href="https://atharvashah.netlify.app/posts/tech/dsapython/matrix/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/dsa/Search-Sort.jpg" alt="Search and Sort">
+</figure>
+  <header class="entry-header">
+    <h2>DSA in Python - Search and Sort
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Free Preview - 5 Search and Sort Problems Bubble Sort def bubble_sort(array): n=len(array) for i in range(n): for j in range(n-i-1): if array[j] &gt; array[j &#43; 1]: array[j], array[j &#43; 1] = array[j &#43; 1], array[j] array=[5,2,3,1,4, -99, 0] bubble_sort(array) print(array) Selection Sort def selection_sort(array): global iterations iterations = 0 for i in range(len(array)): minimum_index = i for j in range(i &#43; 1, len(array)): iterations &#43;= 1 if array[minimum_index] &gt; array[j]: minimum_index = j # Swap the found minimum element with the first element if minimum_index !...</p>
+  </div>
+  <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>July 9, 2022
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>396 words
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>2 mins
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://atharvashah.netlify.app/tags/python/" style="color: var(--secondary)!important;">python</a>
+            </span>
+        </span>
+    </span>
+</span></footer>
+  <a class="entry-link" aria-label="post link to DSA in Python - Search and Sort" href="https://atharvashah.netlify.app/posts/tech/dsapython/search-and-sort/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="https://atharvashah.netlify.app/tags/python/page/2/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="https://atharvashah.netlify.app/tags/python/page/4/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://atharvashah.netlify.app/">Atharva Shah</a></span> 
+    | <span><a href="/privacy-policy/" target="_blank">Privacy Policy</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function() {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function() {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+</script></body>
+
+</html>

@@ -8,8 +8,6 @@ cover:
     caption:  Boost your interview success with our exclusive digital product series!
 description: "Boost your interview success with our exclusive digital product series! Most asked Python Interview questions (Data Structures and Algorithms) are now available on Gumroad!"
 tags: ["python"]
-showtoc: true
-tocopen: true
 ---
 
 ## Boost Your Interview Success with our Exclusive Digital Product Series
@@ -48,8 +46,10 @@ Our products go beyond providing solutions by offering in-depth explanations for
 
 Our ultimate goal is to boost your coding skills and help you excel in interviews. By incorporating our resources into your preparation routine, you'll be equipped with the knowledge and techniques needed to stand out from the competition. With our interview preparation resources, you'll be one step closer to landing your dream job.
 
-## Stay Tuned for More
+## Buy the Interview Guide
 
-This is just the beginning! We have exciting plans to expand our product series and provide you with an even broader range of resources in the near future. We are committed to continuously updating our offerings to ensure that you have the most relevant and effective materials to succeed in your career aspirations.
+We have exciting plans to expand our product series and provide you with an even broader range of resources in the near future. We are committed to continuously updating our offerings to ensure that you have the most relevant and effective materials to succeed in your career aspirations.
 
 Visit our **[Gumroad profile](https://highnessatharva.gumroad.com/)** today and grab these valuable resources at a special introductory price. Boost your interview success and unlock the opportunities you've been dreaming of!
+
+{{< gumroad "https://highnessatharva.gumroad.com/" "/blog/gumroad-marketing.png" >}}

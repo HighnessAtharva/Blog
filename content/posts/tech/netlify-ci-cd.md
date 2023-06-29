@@ -8,8 +8,6 @@ cover:
     caption: Using Github Actions and Netlify to set up CI/CD for static sites like Hugo, Jekyll, etc.
 description: "A step-by-step beginner friendly guide to setting up CI/CD to Netlify for static sites like Hugo, Jekyll, etc. Code snippets for Github actions included."
 tags: ["technology", "tutorial"]
-showToc: true 
-TocOpen: true
 ---
 
 ## Description

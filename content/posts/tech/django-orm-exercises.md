@@ -8,8 +8,6 @@ cover:
     caption: Master the basics of Django ORM with this comprehensive cheatsheet and exercises to level up your skills in database querying, model relationships, aggregations, annotations, and more. 
 description: "Master the basics of Django ORM with this comprehensive cheatsheet and exercises to level up your skills in database querying, model relationships, aggregations, annotations, and more."
 tags: ["python", "django"]
-showToc: true
-tocOpen: true
 ---
 
 ## Querying Django Models with Examples

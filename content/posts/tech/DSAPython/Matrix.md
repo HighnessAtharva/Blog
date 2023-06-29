@@ -1,27 +1,18 @@
 ---
 title: "DSA in Python - Matrix"
 date: 2022-07-09T13:14:34+05:30
-draft: true
+draft: false
 cover: 
-    image: blog/dsa/matrix.jpg
+    image: blog/dsa/Matrix.jpg
     alt: Matrix
     caption: Learn Matrix Algorithms in Python
 tags: ["python"] 
 
 ---
 
-- [Spiral traversal on a Matrix](#spiral-traversal-on-a-matrix)
-- [Search an element in a matrix](#search-an-element-in-a-matrix)
-- [Find median in a row wise sorted matrix](#find-median-in-a-row-wise-sorted-matrix)
-- [Find row with maximum no. of 1's](#find-row-with-maximum-no-of-1s)
-- [Print elements in sorted order using row-column wise sorted matrix](#print-elements-in-sorted-order-using-row-column-wise-sorted-matrix)
-- [Maximum size rectangle](#maximum-size-rectangle)
-- [Find a specific pair in matrix](#find-a-specific-pair-in-matrix)
-- [Rotate matrix by 90 degrees](#rotate-matrix-by-90-degrees)
-- [Kth smallest element in a row-column wise sorted matrix](#kth-smallest-element-in-a-row-column-wise-sorted-matrix)
-- [Common elements in all rows of a given matrix](#common-elements-in-all-rows-of-a-given-matrix)
+## Free Preview - 5 Matrix Problems
 
-## Spiral traversal on a Matrix
+### Spiral traversal on a Matrix
 
 ```python
 
@@ -66,7 +57,7 @@ for x in spiralOrder(a):
 print()
 ```
 
-## Search an element in a matrix
+### Search an element in a matrix
 
 ```python
 def search(mat, n, x):
@@ -85,7 +76,7 @@ mat = [[10, 20, 30, 40], [15, 25, 35, 45],[27, 29, 37, 48],[32, 33, 39, 50]]
 search(mat, 4, 29)
 ```
 
-## Find median in a row wise sorted matrix
+### Find median in a row wise sorted matrix
 
 ```python
 from bisect import bisect_right as upper_bound
@@ -121,7 +112,7 @@ m = [ [1, 3, 5], [2, 6, 9], [3, 6, 9]]
 binaryMedian(m, r, d)
 ```
 
-## Find row with maximum no. of 1's
+### Find row with maximum no. of 1's
 
 ```python
 def first(arr , low , high):
@@ -161,7 +152,7 @@ print(f"Index of row with maximum 1s is {str(rowWithMax1s(mat))}")
 
 ```
 
-## Print elements in sorted order using row-column wise sorted matrix
+### Print elements in sorted order using row-column wise sorted matrix
 
 ```python
 import sys
@@ -210,196 +201,6 @@ mat = [[10, 20, 30, 40],
 printSorted(mat)
 ```
 
-## Maximum size rectangle
+## Buy the Interview Guide
 
-```python
-class Solution():
-	def maxHist(self, row):
-		# Create an empty stack. The stack holds indexes of hist array / The bars stored in stack are always in increasing order of their heights.
-		result = []
-		top_val = 0 # Top of stack
-		max_area = 0 # Initialize max area in current
-		area = 0 # Initialize area with current top
-
-		# Run through all bars of given histogram (or row)
-		i = 0
-		while (i < len(row)):
-
-			# If this bar is higher than the bar on top stack, push it to stack
-			if not result or row[result[-1]] <= row[i]:
-				result.append(i)
-				i += 1
-			else:
-
-				# If this bar is lower than top of stack, then calculate area of rectangle with stack top as the smallest (or minimum height) bar. 'i' is 'right index' for the top and element before top in stack is 'left index'
-				top_val = row[result.pop()]
-				area = top_val * i
-
-				if (len(result)):
-					area = top_val * (i - result[-1] - 1)
-				max_area = max(area, max_area)
-
-		# Now pop the remaining bars from stack and calculate area with every popped bar as the smallest bar
-		while (len(result)):
-			top_val = row[result.pop()]
-			area = top_val * i
-			if (len(result)):
-				area = top_val * (i - result[-1] - 1)
-
-			max_area = max(area, max_area)
-
-		return max_area
-
-	# Returns area of the largest rectangle with all 1s in A
-	def maxRectangle(self, A):
-
-		# Calculate area for first row and initialize it as result
-		result = self.maxHist(A[0])
-
-		# iterate over row to find maximum rectangular area considering each row as histogram
-		for i in range(1, len(A)):
-			for j in range(len(A[i])):
-
-				# if A[i][j] is 1 then add A[i -1][j]
-				if (A[i][j]):
-					A[i][j] += A[i - 1][j]
-
-			# Update result if area with current row (as last row) of rectangle) is more
-			result = max(result, self.maxHist(A[i]))
-
-		return result
-
-A = [[0, 1, 1, 0],
-	[1, 1, 1, 1],
-	[1, 1, 1, 1],
-	[1, 1, 0, 0]]
-ans = Solution()
-print("Area of maximum rectangle is", ans.maxRectangle(A))
-```
-
-## Find a specific pair in matrix
-
-```python
-import sys
-
-# The function returns maximum value A(c,d) - A(a,b) over all choices of indexes such that both c > a and d > b.
-def findMaxValue(mat):
-
-	# stores maximum value
-	maxValue = -sys.maxsize -1
-
-	# maxArr[i][j] stores max of elements in matrix from (i, j) to (N-1, N-1)
-	maxArr = [[0 for _ in range(N)] for _ in range(N)]
-
-	# last element of maxArr will be same's as of the input matrix
-	maxArr[N - 1][N - 1] = mat[N - 1][N - 1]
-
-	# preprocess last row
-	maxv = mat[N - 1][N - 1]
-	for j in range (N - 2, -1, -1):
-
-		if (mat[N - 1][j] > maxv):
-			maxv = mat[N - 1][j]
-		maxArr[N - 1][j] = maxv
-
-	# preprocess last column
-	maxv = mat[N - 1][N - 1] # Initialize max
-	for i in range (N - 2, -1, -1):
-
-		if (mat[i][N - 1] > maxv):
-			maxv = mat[i][N - 1]
-		maxArr[i][N - 1] = maxv
-
-	# preprocess rest of the matrix from bottom
-	for i in range (N - 2, -1, -1):
-
-		for j in range (N - 2, -1, -1):
-
-			# Update maxValue
-			if (maxArr[i + 1][j + 1] -
-				mat[i][j] > maxValue):
-				maxValue = (maxArr[i + 1][j + 1] - mat[i][j])
-
-			# set maxArr (i, j)
-			maxArr[i][j] = max(mat[i][j], max(maxArr[i][j + 1], maxArr[i + 1][j]))
-
-	return maxValue
-
-N = 5
-mat = [[ 1, 2, -1, -4, -20 ],
-	[-8, -3, 4, 2, 1 ],
-	[ 3, 8, 6, 1, 3 ],
-	[ -4, -1, 1, 7, -6] ,
-	[0, -4, 10, -5, 1 ]]
-					
-print ("Maximum Value is", findMaxValue(mat))
-```
-
-## Rotate matrix by 90 degrees
-
-```python
-N = 4
-def rotate90Clockwise(arr) :
-	global N
-	for j in range(N) :
-		for i in range(N - 1, -1, -1) :
-			print(arr[i][j], end = " ")
-		print()
-		
-# Driver code	
-arr = [ [ 1, 2, 3, 4 ],
-		[ 5, 6, 7, 8 ],
-		[ 9, 10, 11, 12 ],
-		[ 13, 14, 15, 16 ] ]
-rotate90Clockwise(arr);
-```
-
-## Kth smallest element in a row-column wise sorted matrix
-
-```python
-def kthSmallest(mat, n, k):
-	a = [0 for _ in range(n*n)]
-	v=0
-	for i in range(n):
-		for j in range(n):
-			a[v] = mat[i][j]
-			v += 1
-	a.sort()
-	return a[k - 1]
-
-mat = [ [ 10, 20, 30, 40 ],
-			[ 15, 25, 35, 45 ],
-			[ 25, 29, 37, 48 ],
-			[ 32, 33, 39, 50 ] ]
-res = kthSmallest(mat, 4, 7)
-print(f"7th smallest element is {str(res)}")
-```
-
-## Common elements in all rows of a given matrix
-
-```python
-def printCommonElements(mat):
-	mp = {mat[0][j]: 1 for j in range(N)}
-
-	# traverse the matrix
-	for i in range(1, M):
-		for j in range(N):
-
-			# If element is present in the map and is not duplicated in current row.
-			if mat[i][j] in mp and mp[mat[i][j]] == i:
-			# we increment count of the element in map by 1
-				mp[mat[i][j]] = i + 1
-
-				# If this is last row
-				if i == M - 1:
-					print(mat[i][j], end = " ")
-
-# Specify number of rows and columns
-M = 4
-N = 5
-mat = [[1, 2, 1, 4, 8],
-	[3, 7, 8, 5, 1],
-	[8, 7, 7, 3, 1],
-	[8, 1, 2, 7, 9]]
-printCommonElements(mat)
-```
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-matrix" "/blog/gumroad-marketing.png" >}}

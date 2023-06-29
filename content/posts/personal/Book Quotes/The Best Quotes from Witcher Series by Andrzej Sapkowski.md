@@ -8,8 +8,6 @@ cover:
     caption: I know that in order to unite two people, destiny is insufficient. Something more is necessary than destiny.
 description: "A treasure trove of favorite quotes from The Witcher series by Andrzej Sapkowski. Covers all the seven books with Geralt of Rivia, Yenna, and Ciri."
 tags: ["book quotes", "fantasy"] 
-showtoc: true
-tocopen: true
 ---
 
 ## The Last Wish

@@ -8,8 +8,6 @@ cover:
     caption: Reviews of the movies I watched in February 2023
 description: "February was a month for the ages as I indulged in a smorgasbord of movies. Consumed movies across a ton of genres."
 tags: ["Movie Review"]
-showToc: true
-TocOpen: true
 ---
 
 February was a month for the ages as I indulged in a smorgasbord of movies. From the laugh-out-loud comedy of "Rush Hour" to the mind-bending sci-fi of "Solaris" and everything in between, I've got a lot to say about the films I watched. There were some classics from the past like "Nausicaä of the Valley of the Wind" and "Porco Rosso," as well as newer releases like "Infinity Pool" and "Babylon." I also braved the horror genre with "Gonjiam: Haunted Asylum" and "Incantation," and explored the dark side of humanity with "Only God Forgives" and "A Cure for Wellness." So buckle up and get ready for my take on these 14 movies, ranging from a half-star dud to a four-and-a-half-star masterpiece. I hope you enjoy reading my reviews as much as I enjoyed watching these films! Let's get started.

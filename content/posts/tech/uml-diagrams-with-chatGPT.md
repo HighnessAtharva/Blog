@@ -8,8 +8,6 @@ cover:
     caption: Design Like a Pro! How ChatGPT Generates UML Diagrams for Your Project in Just a Few Clicks! 
 description: "5 Step process to use ChatGPT to generate UML diagrams for your projects in just a few clicks. Easy to follow instructions with visual illustrations."
 tags: ["technology", "tutorial"]
-showToc: true 
-TocOpen: true
 ---
 
 ## Introduction

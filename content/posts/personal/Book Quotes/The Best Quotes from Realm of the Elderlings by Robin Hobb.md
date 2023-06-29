@@ -7,9 +7,7 @@ cover:
     alt: Realm of the Elderlings by Robin Hobb
     caption: If ever you make it so they don't need you, they will kill you.
 description: "Favorite Quotes from Realm of the Elderlings by Robin Hobb. All the trilogies and the charm all in one place."
-tags: ["book quotes", "fantasy"] 
-showtoc: true
-tocopen: true
+tags: ["book quotes", "fantasy"]
 ---
 
 Currently, I have only managed to finish off the first trilogy in the mammoth that Realm of the Elderlings happens to be but I plan to power through the series soon and add the remainder of the quotes so sit back and enjoy what I have to offer. If you feel a few hidden gems are missing, email me!
