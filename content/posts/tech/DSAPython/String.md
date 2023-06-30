@@ -6,6 +6,7 @@ cover:
     image: blog/dsa/String.webp
     alt: Strings
     caption: Learn String Algorithms in Python
+description: "Master FAANG Interviews with the most frequently asked String problems with solutions and comprehensive explanations. Boost Skills, Get Paid!"
 tags: ["python"] 
 ---
 

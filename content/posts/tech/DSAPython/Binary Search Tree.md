@@ -6,6 +6,7 @@ cover:
     image: blog/dsa/BST.webp
     alt: Binary Search Trees
     caption: Learn BST Algorithms in Python
+description: "Master FAANG Interviews with the most frequently asked Binary Search Tree solutions and comprehensive explanations. Boost Skills, Get Paid!"
 tags: ["python"] 
 ---
 

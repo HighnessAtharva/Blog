@@ -6,6 +6,7 @@ cover:
     image: blog/dsa/Linked-List.webp
     alt: Linked List
     caption: Learn LL Algorithms in Python
+description: "Master FAANG Interviews with the most frequently asked Linked List problems with solutions and comprehensive explanations. Boost Skills, Get Paid!"
 tags: ["python"] 
 ---
 ## Free Preview - 5 Linked List Problems

@@ -6,6 +6,7 @@ cover:
     image: blog/dsa/Trie.webp
     alt: Trie
     caption: Learn Trie Algorithms in Python
+description: "Master FAANG Interviews with the most frequently asked Trie problems with solutions and comprehensive explanations. Boost Skills, Get Paid!"
 tags: ["python"] 
 ---
 

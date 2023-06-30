@@ -6,6 +6,7 @@ cover:
     image: blog/dsa/Heap.webp
     alt: Heap
     caption: Learn Heap Algorithms in Python
+description: "Master FAANG Interviews with the most frequently asked Heap problems with solutions and comprehensive explanations. Boost Skills, Get Paid!"
 tags: ["python"] 
 
 ---

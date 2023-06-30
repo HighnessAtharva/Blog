@@ -6,6 +6,7 @@ cover:
     image: blog/dsa/Stack-Queue.webp
     alt: Stacks and Queues
     caption: Learn Stack and Queue Algorithms in Python
+description: "Master FAANG Interviews with the most frequently asked Stack and Queue solutions and comprehensive explanations. Boost Skills, Get Paid!"
 tags: ["python"] 
 ---
 

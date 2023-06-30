@@ -6,6 +6,7 @@ cover:
     image: blog/dsa/Greedy.webp
     alt: Greedy
     caption: Learn Greedy Algorithms in Python
+description: "Master FAANG Interviews with the most frequently asked Greedy problems with solutions and comprehensive explanations. Boost Skills, Get Paid!"
 tags: ["python"] 
 
 ---

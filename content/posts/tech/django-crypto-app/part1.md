@@ -6,7 +6,7 @@ cover:
     image: blog/django-crypto-app/cover-1.webp
     alt: Part 1 - Functional Requirements and Setup
     caption: Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django.
-description: "Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django."
+description: "Functional requirements of what we are building, the approach, the high-level design and the project setup using Django."
 tags: ["django", "python","tutorial"]
 ---
 ## Introduction

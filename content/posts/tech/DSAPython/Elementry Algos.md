@@ -6,6 +6,7 @@ cover:
     image: blog/dsa/Elementary.webp
     alt: elementary
     caption: Learn Elementary Algorithms in Python
+description: "Master FAANG Interviews with the most frequently asked Elementary problems with solutions and comprehensive explanations. Boost Skills, Get Paid!"
 tags: ["python"] 
 ---
 

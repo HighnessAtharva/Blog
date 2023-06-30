@@ -13,7 +13,7 @@
       <pubDate>Wed, 14 Jun 2023 01:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/sales-data-analysis/</guid>
-      <description>Through a combination of theoretical explanations and practical demonstrations, we will delve into data preprocessing, exploratory data analysis, feature engineering, and model building.</description>
+      <description>This tutorial explores data preprocessing, exploratory data analysis, feature engineering, and model building for sales data analysis.</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Mon, 05 Jun 2023 01:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/gumroad-dsa-announcement/</guid>
-      <description>Boost your interview success with our exclusive digital product series! Most asked Python Interview questions (Data Structures and Algorithms) are now available on Gumroad!</description>
+      <description>Most asked Python Interview questions (Data Structures and Algorithms) are now available on Gumroad!</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Mon, 01 May 2023 23:20:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part3/</guid>
-      <description>Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django.</description>
+      <description>Functional requirements of what we are building, the approach, the high-level design and the project setup using Django.</description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@
       <pubDate>Mon, 01 May 2023 23:19:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part2/</guid>
-      <description>Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django.</description>
+      <description>Functional requirements of what we are building, the approach, the high-level design and the project setup using Django</description>
     </item>
     
     <item>
@@ -49,7 +49,7 @@
       <pubDate>Mon, 01 May 2023 23:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/django-crypto-app/part1/</guid>
-      <description>Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django.</description>
+      <description>Functional requirements of what we are building, the approach, the high-level design and the project setup using Django.</description>
     </item>
     
     <item>
@@ -76,7 +76,7 @@
       <pubDate>Sun, 10 Jul 2022 13:11:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/dsapython/dp/</guid>
-      <description>Free Preview - 5 Dynamic Programming Problems Coin ChangeProblem &amp;#34;&amp;#34;&amp;#34; Given an unlimited supply of coins of given denominations, find the total number of distinct ways to get the desired change. For example, Input: S = { 1, 3, 5, 7 }, target = 8 The total number of ways is 6 { 1, 7 } { 3, 5 } { 1, 1, 3, 3 } { 1, 1, 1, 5 } { 1, 1, 1, 1, 1, 3 } { 1, 1, 1, 1, 1, 1, 1, 1 } Input: S = { 1, 2, 3 }, target = 4 The total number of ways is 4 { 1, 3 } { 2, 2 } { 1, 1, 2 } { 1, 1, 1, 1 } &amp;#34;&amp;#34;&amp;#34; def count(S, n, target): if target == 0: return 1 # return 0 (solution does not exist) if total becomes negative, no elements are left if target &amp;lt; 0 or n &amp;lt; 0: return 0 # Case 1.</description>
+      <description>Master FAANG Interviews with the most frequently asked Dynamic Programming solutions and comprehensive explanations. Boost Skills, Get Paid!</description>
     </item>
     
     <item>
@@ -85,7 +85,7 @@
       <pubDate>Sat, 09 Jul 2022 23:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/dsapython/elementry-algos/</guid>
-      <description>Free Preview - 5 Elementary Problems Check Leap Year year = 2000 # divided by 100 means century year (ending with 00) century year divided by 400 is leap year if (year % 400 == 0) and (year % 100 == 0): print(&amp;#34;{0} is a leap year&amp;#34;.format(year)) # not divided by 100 means not a century year year divided by 4 is a leap year elif (year % 4 ==0) and (year % 100 !</description>
+      <description>Master FAANG Interviews with the most frequently asked Elementary problems with solutions and comprehensive explanations. Boost Skills, Get Paid!</description>
     </item>
     
     <item>
@@ -94,7 +94,7 @@
       <pubDate>Sat, 09 Jul 2022 13:14:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/dsapython/graph/</guid>
-      <description>Free Preview - 5 Graph Problems Implement Graph class Graph: def __init__(self, edges, n): self.adjList = [[] for _ in range(n)] for (src, dest) in edges: self.adjList[src].append(dest) def printGraph(graph): for src in range(len(graph.adjList)): for dest in graph.adjList[src]: print(f&amp;#39;({src} —&amp;gt; {dest}) &amp;#39;, end=&amp;#39;&amp;#39;) print() edges = [(0, 1), (1, 2), (2, 0), (2, 1), (3, 2), (4, 5), (5, 4)] n = 6 graph = Graph(edges, n) printGraph(graph) Implement Weighted Graph class Graph: def __init__(self, edges, n): self.</description>
+      <description>Master FAANG Interviews with the most frequently asked Graph problems with solutions and comprehensive explanations. Boost Skills, Get Paid!</description>
     </item>
     
     <item>
@@ -103,7 +103,7 @@
       <pubDate>Sat, 09 Jul 2022 13:14:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/dsapython/greedy/</guid>
-      <description>Free Preview - 5 Greedy Problems Activity Selection Problem &amp;#34;&amp;#34;&amp;#34; There is one meeting room in a firm. There are N meetings in the form of (start[i], end[i]) where start[i] is start time of meeting i and end[i] is finish time of meeting i. What is the maximum number of meetings that can be accommodated in the meeting room when only one meeting can be held in the meeting room at a particular time?</description>
+      <description>Master FAANG Interviews with the most frequently asked Greedy problems with solutions and comprehensive explanations. Boost Skills, Get Paid!</description>
     </item>
     
     <item>
@@ -112,7 +112,7 @@
       <pubDate>Sat, 09 Jul 2022 13:14:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/dsapython/heap/</guid>
-      <description>Free Preview - 5 Heap Problems Implement a Maxheap/MinHeap using arrays and recursion. (Heapify) def heapify(arr, n, i): largest = i # Initialize largest as root l = 2 * i + 1 # left = 2*i + 1 r = 2 * i + 2 # right = 2*i + 2 # If left child is larger than root if l &amp;lt; n and arr[l] &amp;gt; arr[largest]: largest = l # If right child is larger than largest so far if r &amp;lt; n and arr[r] &amp;gt; arr[largest]: largest = r # If largest is not root if largest !</description>
+      <description>Master FAANG Interviews with the most frequently asked Heap problems with solutions and comprehensive explanations. Boost Skills, Get Paid!</description>
     </item>
     
     <item>
@@ -121,7 +121,7 @@
       <pubDate>Sat, 09 Jul 2022 13:14:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/dsapython/ll/</guid>
-      <description>Free Preview - 5 Linked List Problems Write a Program to reverse the Linked List. (Both Iterative and recursive) class Node: def __init__(self, data): self.data = data self.next = None class LinkedList: def __init__(self): self.head = None def reverse(self): prev = None current = self.head while current is not None: next = current.next current.next = prev prev = current current = next self.head = prev # Function to insert a new node at the beginning def push(self, new_data): new_node = Node(new_data) new_node.</description>
+      <description>Master FAANG Interviews with the most frequently asked Linked List problems with solutions and comprehensive explanations. Boost Skills, Get Paid!</description>
     </item>
     
     <item>
@@ -130,7 +130,7 @@
       <pubDate>Sat, 09 Jul 2022 13:14:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/dsapython/matrix/</guid>
-      <description>Free Preview - 5 Matrix Problems Spiral traversal on a Matrix def spiralOrder(matrix): ans = [] if (len(matrix) == 0): return ans m = len(matrix) n = len(matrix[0]) seen = [[0 for _ in range(n)] for _ in range(m)] dr = [0, 1, 0, -1] dc = [1, 0, -1, 0] x = 0 y = 0 di = 0 # Iterate from 0 to R * C - 1 for _ in range(m * n): ans.</description>
+      <description>Master FAANG Interviews with the most frequently asked Matrix problems with solutions and comprehensive explanations. Boost Skills, Get Paid!</description>
     </item>
     
     <item>
@@ -139,7 +139,7 @@
       <pubDate>Sat, 09 Jul 2022 13:14:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/dsapython/search-and-sort/</guid>
-      <description>Free Preview - 5 Search and Sort Problems Bubble Sort def bubble_sort(array): n=len(array) for i in range(n): for j in range(n-i-1): if array[j] &amp;gt; array[j + 1]: array[j], array[j + 1] = array[j + 1], array[j] array=[5,2,3,1,4, -99, 0] bubble_sort(array) print(array) Selection Sort def selection_sort(array): global iterations iterations = 0 for i in range(len(array)): minimum_index = i for j in range(i + 1, len(array)): iterations += 1 if array[minimum_index] &amp;gt; array[j]: minimum_index = j # Swap the found minimum element with the first element if minimum_index !</description>
+      <description>Master FAANG Interviews with the most frequently asked Searching and Sorting solutions and comprehensive explanations. Boost Skills, Get Paid!</description>
     </item>
     
     <item>
@@ -148,7 +148,7 @@
       <pubDate>Sat, 09 Jul 2022 13:14:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/dsapython/stack-and-queue/</guid>
-      <description>Free Preview - 5 Stack and Queue Problems Implement Stack from Scratch class Stack: def __init__(self, size): self.arr = [None] * size self.capacity = size self.top = -1 def push(self, val): if self.isFull(): print(&amp;#39;Stack Overflow!! Calling exit()…&amp;#39;) exit(-1) print(f&amp;#39;Inserting {val} into the stack…&amp;#39;) self.top = self.top + 1 self.arr[self.top] = val def pop(self): if self.isEmpty(): print(&amp;#39;Stack Underflow!! Calling exit()…&amp;#39;) exit(-1) print(f&amp;#39;Removing {self.peek()} from the stack&amp;#39;) # decrease stack size by 1 and (optionally) return the popped element top = self.</description>
+      <description>Master FAANG Interviews with the most frequently asked Stack and Queue solutions and comprehensive explanations. Boost Skills, Get Paid!</description>
     </item>
     
     <item>
@@ -157,7 +157,7 @@
       <pubDate>Sat, 09 Jul 2022 13:14:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/dsapython/string/</guid>
-      <description>Free Preview - 5 String Problems Check whether a String is Palindrome or not def isPalindrome(s): return s == s[::-1] s = &amp;#34;malayalam&amp;#34; ans = isPalindrome(s) if ans: print(&amp;#34;Yes&amp;#34;) else: print(&amp;#34;No&amp;#34;) Find Duplicate characters in a string def printDups(Str): count = {} for i in range(len(Str)): if(Str[i] in count): count[Str[i]] += 1 else: count[Str[i]] = 1 #increase the count of characters by 1 for it,it2 in count.items(): #iterating through the unordered map if (it2 &amp;gt; 1): #if the count of characters is greater then 1 then duplicate found print(str(it) + &amp;#34;, count = &amp;#34;+str(it2)) Str = &amp;#34;test string&amp;#34; printDups(Str) Write a Code to check whether one string is a rotation of another def check_rotation(s, goal): if (len(s) !</description>
+      <description>Master FAANG Interviews with the most frequently asked String problems with solutions and comprehensive explanations. Boost Skills, Get Paid!</description>
     </item>
     
     <item>
@@ -166,7 +166,7 @@
       <pubDate>Sat, 09 Jul 2022 13:10:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/dsapython/binary-search-tree/</guid>
-      <description>Free Preview - 5 Binary Search Tree Problems Find a value in a BST class Node: def __init__(self, data, left=None, right=None): self.data = data self.left = left self.right = right # Recursive function to insert a key into a BST def insert(root, key): # if the root is None, create a new node and return it if root is None: return Node(key) # if the given key is less than the root node, recur for the left subtree if key &amp;lt; root.</description>
+      <description>Master FAANG Interviews with the most frequently asked Binary Search Tree solutions and comprehensive explanations. Boost Skills, Get Paid!</description>
     </item>
     
     <item>
@@ -175,7 +175,7 @@
       <pubDate>Fri, 08 Jul 2022 13:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/dsapython/binary-tree/</guid>
-      <description>Free Preview - 5 Binary Tree Problems Level order traversal AKA BFS class Node: def __init__(self, key): self.data = key self.left = None self.right = None def printLevelOrder(root): # Base Case if root is None: return # Create an empty queue for level order traversal queue = [] # Enqueue Root and initialize height queue.append(root) while(len(queue) &amp;gt; 0): # Print front of queue and remove it from queue print(queue[0].data) node = queue.</description>
+      <description>Master FAANG Interviews with the most frequently asked Binary Tree problems with solutions and comprehensive explanations. Boost Skills, Get Paid!</description>
     </item>
     
     <item>
@@ -184,7 +184,7 @@
       <pubDate>Fri, 08 Jul 2022 13:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/dsapython/trie/</guid>
-      <description>Free Preview - 5 Trie Problems Construct a trie from scratch class TrieNode: def __init__(self): self.children = [None]*26 # isEndOfWord is True if node represent the end of the word self.isEndOfWord = False class Trie: def __init__(self): self.root = self.getNode() def getNode(self): # Returns new trie node (initialized to NULLs) return TrieNode() def _charToIndex(self,ch): # private helper function. # Converts key current character into index use only &amp;#39;a&amp;#39; through &amp;#39;z&amp;#39; and lower case return ord(ch)-ord(&amp;#39;a&amp;#39;) def insert(self,key): # If not present, inserts key into trie # If the key is prefix of trie node, just marks leaf node pCrawl = self.</description>
+      <description>Master FAANG Interviews with the most frequently asked Trie problems with solutions and comprehensive explanations. Boost Skills, Get Paid!</description>
     </item>
     
     <item>
@@ -202,7 +202,7 @@
       <pubDate>Thu, 07 Jul 2022 23:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/dsapython/backtracking/</guid>
-      <description>Free Preview - 5 Backtracking Problems Rat in a maze Problem &amp;#34;&amp;#34;&amp;#34; N = 4 m[][] = {{1, 0, 0, 0}, {1, 1, 0, 1}, {1, 1, 0, 0}, {0, 1, 1, 1}} Output: DDRDRR DRDDRR Explanation: The rat can reach the destination at (3, 3) from (0, 0) by two paths - DRDDRR and DDRDRR, when printed in sorted order we get DDRDRR DRDDRR. &amp;#34;&amp;#34;&amp;#34; def setup(): global v v = [[0 for i in range(100)] for j in range(100)] global ans ans = [] def path(arr, x, y, pth, n): if x==n-1 and y==n-1: global ans ans.</description>
+      <description>Master FAANG Interviews with the most frequently asked Backtracking problems with solutions and comprehensive explanations. Boost Skills, Get Paid!</description>
     </item>
     
   </channel>

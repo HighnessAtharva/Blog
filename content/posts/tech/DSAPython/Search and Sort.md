@@ -6,6 +6,7 @@ cover:
     image: blog/dsa/Search-Sort.webp
     alt: Search and Sort
     caption: Learn Searching & Sorting Algorithms in Python
+description: "Master FAANG Interviews with the most frequently asked Searching and Sorting solutions and comprehensive explanations. Boost Skills, Get Paid!"
 tags: ["python"] 
 ---
 

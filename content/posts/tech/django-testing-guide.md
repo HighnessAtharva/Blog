@@ -6,7 +6,7 @@ cover:
     image: blog/django-testing-guide.webp
     alt: Best Practices and Strategies for Testing Django Applications
     caption: Best Practices and Strategies for Testing Django Applications
-description: "Best Practices and Strategies for Testing Django Applications. Everything from setting up the testing environment to mastering unit testing, integration testing, and end-to-end testing."
+description: "Everything from setting up the testing environment to mastering unit testing, integration testing, and end-to-end testing."
 tags: ["django", "technology"]
 ---
 

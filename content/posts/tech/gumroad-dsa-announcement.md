@@ -6,7 +6,7 @@ cover:
     image: blog/gumroad-python-dsa.webp
     alt: Launching my digital product series on Gumroad!
     caption:  Boost your interview success with our exclusive digital product series!
-description: "Boost your interview success with our exclusive digital product series! Most asked Python Interview questions (Data Structures and Algorithms) are now available on Gumroad!"
+description: "Most asked Python Interview questions (Data Structures and Algorithms) are now available on Gumroad!"
 tags: ["python"]
 ---
 

@@ -6,6 +6,7 @@ cover:
     image: blog/dsa/Binary-Tree.webp
     alt: Binary Tree
     caption: Learn Binary Tree Algorithms in Python
+description: "Master FAANG Interviews with the most frequently asked Binary Tree problems with solutions and comprehensive explanations. Boost Skills, Get Paid!"
 tags: ["python"] 
 ---
 

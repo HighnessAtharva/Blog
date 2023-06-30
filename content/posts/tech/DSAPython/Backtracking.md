@@ -6,6 +6,7 @@ cover:
     image: blog/dsa/Backtracking.webp
     alt: Backtracking
     caption: Learn Backtracking Algorithms in Python
+description: "Master FAANG Interviews with the most frequently asked Backtracking problems with solutions and comprehensive explanations. Boost Skills, Get Paid!"
 tags: ["python"] 
 
 ---

@@ -6,6 +6,7 @@ cover:
     image: blog/dsa/DP.webp
     alt: Dynamic Programming
     caption: Learn DP Algorithms in Python
+description: "Master FAANG Interviews with the most frequently asked Dynamic Programming solutions and comprehensive explanations. Boost Skills, Get Paid!"
 tags: ["python"] 
 ---
 ## Free Preview - 5 Dynamic Programming Problems
