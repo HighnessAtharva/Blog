@@ -6,6 +6,7 @@ cover:
     image: blog/dsa/Array.webp
     alt: Arrays
     caption: Learn Array Algorithms in Python
+description: "Master FAANG Interviews with the most frequently asked Array problems with solutions and comprehensive explanations. Boost Skills, Get Paid!"
 tags: ["python"] 
 ---
 
