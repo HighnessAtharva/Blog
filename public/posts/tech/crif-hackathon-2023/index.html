@@ -58,12 +58,12 @@ if (!doNotTrack) {
 <meta property="og:description" content="Developer experience at CRIF Hackathon 2023. We built a News Media Analysis Utility leveraging NLP, Text Processing, and Visualization with Tableau." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://atharvashah.netlify.app/posts/tech/crif-hackathon-2023/" />
-<meta property="og:image" content="https://atharvashah.netlify.app/blog/crif-hackathon/CRIF3.jpg" /><meta property="article:section" content="posts" />
+<meta property="og:image" content="https://atharvashah.netlify.app/blog/crif-hackathon/CRIF3.webp" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-01-26T23:18:34+05:30" />
 <meta property="article:modified_time" content="2023-01-26T23:18:34+05:30" /><meta property="og:site_name" content="Atharva Shah" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://atharvashah.netlify.app/blog/crif-hackathon/CRIF3.jpg" />
+<meta name="twitter:image" content="https://atharvashah.netlify.app/blog/crif-hackathon/CRIF3.webp" />
 <meta name="twitter:title" content="Celebrating victory at CRIF Hackathon 2023"/>
 <meta name="twitter:description" content="Developer experience at CRIF Hackathon 2023. We built a News Media Analysis Utility leveraging NLP, Text Processing, and Visualization with Tableau."/>
 
@@ -107,7 +107,7 @@ if (!doNotTrack) {
   "articleBody": "Winning a hackathon is an incredible feeling, and it’s even more special when it’s your very first one. The adrenaline rush of competing against some of the brightest minds in the industry, the satisfaction of solving complex problems, and the thrill of being recognized for your hard work are all emotions that are hard to put into words. In this article, I’ll walk you through the journey of our team who recently won their first ever hackathon, the CRIF Hackathon 2023. From the initial idea to the final presentation, we’ll explore the ups and downs of the experience, and the valuable lessons that were learned along the way. So join us as we relive the excitement of a hackathon victory, and learn what it takes to come out on top.\nWant to jump right into the code? Check out the GitHub repo.\nProblem Statement We were give five problem statements to choose from. The first one was to build a framework/utility that takes a company name as an input. The utility should search all the media articles about the input company and present any reputational threatening data on a concise dashboard. With the help of NLP, we were able to build a framework that could scrape news articles from search engines like Google, Yahoo, Duckduckgo and present any reputational threatening data on a concise dashboard.\nYou can read more about other problem statements here.\nMedia Analytics Build a framework/utility that takes a company name as an input. The utility should search all the media articles about the input company and present any reputational threatening data on a concise dashboard.\nFollowing are the functionalities that need to be achieved in order to build a complete solution -\nDownloader - Download news articles using company name from search engines (Google, Yahoo, Duckduckgo) - Selenium, News API\nNER module - Named Entity Recognition (Organization + Risk Entity) - Out of the box Spacy NLP models / Taxonomy searches\nRelationship module - Analyze the articles and carve out sentences(context) where reputation risk elements and company names are present. Can use dependency parsing or predicate classifiers to establish relationships between risk elements and company names\nDashboard - Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau\nTeam Atharva Shah (Yours Truly) - Implementation of the first three modules leveraging NLP, Text Processing, Web Scraping and Debugging. In-charge of leading the team and making the presentation in the final round\nGurjas Gandhi - Administration, Management, Insightful Feedback\nAli Asger Saifee - Problem-Solving, Curating Word Lists and Generating Tableau Dashboards\nAditya Patil - Documentation, Testing and Generating Tableau Dashboards\nThe Team (Code Giants) L to R: Gurjas, Aditya, Ali and Atharva 24-Hour Code Sprint Since the project heavily relies on Web Scraping, Text Processing, NLP and Data Analysis using Python was an obvious choice for it.\nHaving prior experience with BeautifulSoup, APIs and Spacy for NLP I immediately got to work and got the first two modules up and running within the first few hours of the hackathon.\nNewsAPI - Scraping the latest and relevant news about an organization based on the input query\nRegex, BeautifulSoup, Trifulatura - To parse the main content from the webpages and discard irrelevant data. Cleaning up news articles.\nTensorflow - Sentiment Analysis (returning a logit score between 1 to 5)\nSpacy - pre-trained roBERta model for improving sentiment analysis and tagging of Named Entity Relationships\nCustom Word Stores - to employ a “weighted list” score system based on the word count of negative and offensive words. Three other lists (harassment.txt, countries.txt, lawsuits.txt) were used to tag the articles if repeated words related to it were detected.\nProcessing CSVs - A lot of file handling was performed. The pipeline consisted of 3 CSVs.\nCommon.csv that simply stores the scraped articles Common-processed.csv that performs sentiment analysis on headline and stores the tags, offensive/negative words with the score based on the SpaCy NER module Common-Analysis.csv that used pandas to join all the fields together and prepare a final CSV for automating the Tableau dashboard. Spent the most time with this. Most CSVs that made the final\nCustom CLI Tool to Scrape Relevant News Articles based on user input Sanitization, cleanup and pre-processing with Sentiment Analysis being written to CSV files Named Entity Relationship Mapping with DisplaCy Tableau - Taking input of the COMMON-ANALYSIS.csv file, we designed 8 dashboards to present or narrate a story with all our data. Since we had plenty of fields like Article Count, Title,Description, Content (which holds the entire article text), URL, Publisher, Published Date, Headline, Headline Sentiment, Offensive Rating, Negative Words, Offensive Words and Tags it was not much of a hassle. We made good use of several plotting and graphing methods and presented a diverse yet insightful story. Each Tableau report updates after looking up a new organization.\nTableau Dashboard #1 Tableau Dashboard #2 Tableau Dashboard #3 Tableau Dashboard #4 Tableau Dashboard #5 Tableau Dashboard #6 Tableau Dashboard #7 Tableau Dashboard #8 Obstacles, Setbacks and Challenges faced Cleaning up the article body and parsing proper text.\nExtrapolating the context to base the negative score on.\nOptimizing NLP processing and reducing the scraping time.\nTableau was a completely new tool for us, nonetheless we took a 2-hour crash course and got our hands dirty thanks to which we could quickly get ahead of the game and visualize our gathered data seamlessly.\nHandling exceptions, 403, 404, Date Parsing, Tagging and taking care of API throttling.\nModule 3 felt to be the most challenging since we had to add our own “risk-entity” NER support to the SpaCy “roBERTa” model while also not losing application efficiency.\nRewards We worked around the clock in an organized manner and secured the first rank competing against 36 other teams (nearly 140+ participants). All the effort paid off at the end as we secured the first position after an exhaustive and interview-based project presentation with the panel of judges.\nWith the prestige and recognition we also received:-\n50K Cash Prize Goodies for each team member Victory Certificate for each team member A “winner takes it all” trophy The taste of victory ",
   "wordCount" : "1017",
   "inLanguage": "en",
-  "image":"https://atharvashah.netlify.app/blog/crif-hackathon/CRIF3.jpg","datePublished": "2023-01-26T23:18:34+05:30",
+  "image":"https://atharvashah.netlify.app/blog/crif-hackathon/CRIF3.webp","datePublished": "2023-01-26T23:18:34+05:30",
   "dateModified": "2023-01-26T23:18:34+05:30",
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -261,7 +261,7 @@ if (!doNotTrack) {
 
 </div>
   </header> 
-<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/crif-hackathon/CRIF3.jpg" alt="Developer experience at CRIF Hackathon 2023. Innovating the future, one hackathon at a time.">
+<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/crif-hackathon/CRIF3.webp" alt="Developer experience at CRIF Hackathon 2023. Innovating the future, one hackathon at a time.">
         <p>The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination. Few media of creation are so flexible, so easy to polish and rework, so readily capable of realizing grand conceptual structures.</p>
 </figure><aside id="toc-container" class="toc-container wide">
     <div class="toc">
@@ -409,7 +409,7 @@ Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau</p
   
     <img
       sizes="100vw"
-      src="/blog/crif-hackathon/CRIF2.jpg"
+      src="/blog/crif-hackathon/CRIF2.webp"
       alt="CRIF-TEAM"
       loading="lazy"
       >
@@ -453,7 +453,7 @@ Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau</p
   
     <img
       sizes="100vw"
-      src="/blog/crif-hackathon/module1.png"
+      src="/blog/crif-hackathon/module1.webp"
       alt="MODULE 1"
       loading="lazy"
       >
@@ -482,7 +482,7 @@ Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau</p
   
     <img
       sizes="100vw"
-      src="/blog/crif-hackathon/module2.png"
+      src="/blog/crif-hackathon/module2.webp"
       alt="MODULE 2"
       loading="lazy"
       >
@@ -511,7 +511,7 @@ Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau</p
   
     <img
       sizes="100vw"
-      src="/blog/crif-hackathon/module3.png"
+      src="/blog/crif-hackathon/module3.webp"
       alt="MODULE 3"
       loading="lazy"
       >
@@ -541,7 +541,7 @@ Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau</p
   
     <img
       sizes="100vw"
-      src="/blog/crif-hackathon/module4.1.png"
+      src="/blog/crif-hackathon/module4.1.webp"
       alt="VISUALIZATION1"
       loading="lazy"
       >
@@ -570,7 +570,7 @@ Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau</p
   
     <img
       sizes="100vw"
-      src="/blog/crif-hackathon/module4.2.png"
+      src="/blog/crif-hackathon/module4.2.webp"
       alt="VISUALIZATION2"
       loading="lazy"
       >
@@ -599,7 +599,7 @@ Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau</p
   
     <img
       sizes="100vw"
-      src="/blog/crif-hackathon/module4.3.png"
+      src="/blog/crif-hackathon/module4.3.webp"
       alt="VISUALIZATION3"
       loading="lazy"
       >
@@ -628,7 +628,7 @@ Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau</p
   
     <img
       sizes="100vw"
-      src="/blog/crif-hackathon/module4.4.png"
+      src="/blog/crif-hackathon/module4.4.webp"
       alt="VISUALIZATION4"
       loading="lazy"
       >
@@ -657,7 +657,7 @@ Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau</p
   
     <img
       sizes="100vw"
-      src="/blog/crif-hackathon/module4.5.png"
+      src="/blog/crif-hackathon/module4.5.webp"
       alt="VISUALIZATION5"
       loading="lazy"
       >
@@ -686,7 +686,7 @@ Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau</p
   
     <img
       sizes="100vw"
-      src="/blog/crif-hackathon/module4.6.png"
+      src="/blog/crif-hackathon/module4.6.webp"
       alt="VISUALIZATION6"
       loading="lazy"
       >
@@ -715,7 +715,7 @@ Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau</p
   
     <img
       sizes="100vw"
-      src="/blog/crif-hackathon/module4.7.png"
+      src="/blog/crif-hackathon/module4.7.webp"
       alt="VISUALIZATION7"
       loading="lazy"
       >
@@ -744,7 +744,7 @@ Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau</p
   
     <img
       sizes="100vw"
-      src="/blog/crif-hackathon/module4.8.png"
+      src="/blog/crif-hackathon/module4.8.webp"
       alt="VISUALIZATION8"
       loading="lazy"
       >

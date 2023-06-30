@@ -3,7 +3,7 @@ title: "DSA in Python - Elementry Algos"
 date: 2022-07-09T23:18:34+05:30
 draft: false
 cover: 
-    image: blog/dsa/Elementary.jpg
+    image: blog/dsa/Elementary.webp
     alt: elementary
     caption: Learn Elementary Algorithms in Python
 tags: ["python"] 
@@ -98,4 +98,4 @@ else:
 
 ## Buy the Interview Guide
 
-{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-elementary" "/blog/gumroad-marketing.png" >}}
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-elementary" "/blog/gumroad-marketing.webp" >}}

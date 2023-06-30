@@ -3,7 +3,7 @@ title: "Manga Review: BLAME! by Tsutomu Nihei"
 date: 2023-06-27T00:19:34+05:30
 draft: false
 cover: 
-    image: blog/blame-cover.jpg
+    image: blog/blame-cover.webp
     alt: BLAME!
     caption: A dark, violent, brutal, fast-paced cyberpunk battle manga.
 description: "Thoughts on all six of the master edition volumes of the BLAME! manga series by Tsutomu Nihei. A dark, violent, brutal, fast-paced cyberpunk battle manga."
@@ -17,12 +17,12 @@ tags: ["manga", "book review"]
 BLAME!, a captivating manga by Tsutomu Nihei, possesses an allure that is difficult to resist. As an avid consumer of epic and fantastical world-building, I find Nihei's creation irresistible. Though the narrative may not always be coherent and leaves many questions unanswered, there is an undeniable magnitude to its scope. Moreover, Nihei's awe-inspiring artwork and technical drawing skills grant us sights that would be breathtaking and even beautiful if they weren't shrouded in such grimness.
 
 {{< galleries >}}
-{{< gallery src="/blog/blame-gallery-7.jpg" title="Anthropodic Horrors">}}
-{{< gallery src="/blog/blame-gallery-8.jpg" title="Bewitching Matrix Vibes">}}
-{{< gallery src="/blog/blame-gallery-9.jpg" title="Serial Experiments Lain">}}
-{{< gallery src="/blog/blame-gallery-10.jpg" title="Grimes-likeMurderbots">}}
-{{< gallery src="/blog/blame-gallery-11.jpg" title="Grim Atmosphere">}}
-{{< gallery src="/blog/blame-gallery-12.jpg" title="Harrowing Architechture">}}
+{{< gallery src="/blog/blame-gallery-7.webp" title="Anthropodic Horrors">}}
+{{< gallery src="/blog/blame-gallery-8.webp" title="Bewitching Matrix Vibes">}}
+{{< gallery src="/blog/blame-gallery-9.webp" title="Serial Experiments Lain">}}
+{{< gallery src="/blog/blame-gallery-10.webp" title="Grimes-likeMurderbots">}}
+{{< gallery src="/blog/blame-gallery-11.webp" title="Grim Atmosphere">}}
+{{< gallery src="/blog/blame-gallery-12.webp" title="Harrowing Architechture">}}
 {{< /galleries >}}
 >*Image credits: Tsutomu Nihei*
 
@@ -32,7 +32,7 @@ Note that I read the entirety of BLAME! back in 2020 and wrote some rushed revie
 
 ## BLAME! Master Edition #1
 
-![blame master edition vol 1](/blog/blame-1.jpg)
+![blame master edition vol 1](/blog/blame-1.webp)
 
 *{{< highlight "Rating" >}}*: ⭐⭐⭐⭐⭐
 
@@ -60,7 +60,7 @@ BLAME! reaches far beyond the conventional themes of android-human entanglements
 
 ## BLAME! Master Edition #2
 
-![blame master edition vol 2](/blog/blame-2.jpg)
+![blame master edition vol 2](/blog/blame-2.webp)
 
 *{{< highlight "Rating" >}}*: ⭐⭐⭐⭐
 
@@ -86,7 +86,7 @@ The figures of the antagonists and the subsequent battles reach an unprecedented
 
 ## BLAME! Master Edition #3
 
-![blame master edition vol 3](/blog/blame-3.jpg)
+![blame master edition vol 3](/blog/blame-3.webp)
 
 *{{< highlight "Rating" >}}*: ⭐⭐⭐⭐
 
@@ -112,7 +112,7 @@ While it is expected that Cibo's arc will undergo a revelation of larger-than-li
 
 ## BLAME! Master Edition #4
 
-![blame master edition vol 4](/blog/blame-4.jpg)
+![blame master edition vol 4](/blog/blame-4.webp)
 
 *{{< highlight "Rating" >}}*: ⭐⭐⭐⭐⭐
 
@@ -138,7 +138,7 @@ Having official covered more than half of the story that lies in BLAME!, this vo
 
 ## BLAME! Master Edition #5
 
-![blame master edition vol 5](/blog/blame-5.jpg)
+![blame master edition vol 5](/blog/blame-5.webp)
 
 *{{< highlight "Rating" >}}*: ⭐⭐⭐⭐⭐
 
@@ -162,7 +162,7 @@ Tsutomu Nihei skillfully balances the convergence of chaos and artistry, drawing
 
 ## BLAME! Master Edition #6
 
-![blame master edition vol 6](/blog/blame-6.jpg)
+![blame master edition vol 6](/blog/blame-6.webp)
 
 *{{< highlight "Rating" >}}*: ⭐⭐⭐⭐
 
@@ -195,12 +195,12 @@ There is something refreshing about a work of literature that forgoes attempting
 Nevertheless, while all these elements coexist within BLAME!, they remain secondary to its primary purpose: to narrate an enthralling story set in a fantastical world. In this aspect, I am reminded of George Miller's *Mad Max: Fury Road*, a cinematic spectacle that ranks among the best action movies of recent times and possibly all time. Miller's focus throughout the film lies in mesmerizing the audience with mind-blowing stunts and exhilarating chase sequences, rather than engaging in philosophical reflections on the human condition.
 
 {{< galleries >}}
-{{< gallery src="/blog/blame-gallery-1.png" title="Cyberpunk Interiors">}}
-{{< gallery src="/blog/blame-gallery-2.jpg" title="Unnerving Battle Scenes">}}
-{{< gallery src="/blog/blame-gallery-3.jpg" title="Macroscopic Beasts">}}
-{{< gallery src="/blog/blame-gallery-4.jpg" title="Abstract Imagery">}}
-{{< gallery src="/blog/blame-gallery-5.jpg" title="World Bending Dimensions">}}
-{{< gallery src="/blog/blame-gallery-6.jpg" title="Transhuman Mercs">}}
+{{< gallery src="/blog/blame-gallery-1.webp" title="Cyberpunk Interiors">}}
+{{< gallery src="/blog/blame-gallery-2.webp" title="Unnerving Battle Scenes">}}
+{{< gallery src="/blog/blame-gallery-3.webp" title="Macroscopic Beasts">}}
+{{< gallery src="/blog/blame-gallery-4.webp" title="Abstract Imagery">}}
+{{< gallery src="/blog/blame-gallery-5.webp" title="World Bending Dimensions">}}
+{{< gallery src="/blog/blame-gallery-6.webp" title="Transhuman Mercs">}}
 {{< /galleries >}}
 >*Image credits: Tsutomu Nihei*
 

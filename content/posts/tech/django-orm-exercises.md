@@ -3,7 +3,7 @@ title: "Ultimate Django ORM Cheatsheet + Exercises"
 date: 2023-02-19T01:18:34+05:30
 draft: false
 cover: 
-    image: blog/django-orm.png
+    image: blog/django-orm.webp
     alt: Django ORM Cheatsheet + Exercises
     caption: Master the basics of Django ORM with this comprehensive cheatsheet and exercises to level up your skills in database querying, model relationships, aggregations, annotations, and more. 
 description: "Master the basics of Django ORM with this comprehensive cheatsheet and exercises to level up your skills in database querying, model relationships, aggregations, annotations, and more."

@@ -3,7 +3,7 @@ title: "DSA in Python - Backtracking"
 date: 2022-07-07T23:18:34+05:30
 draft: false
 cover: 
-    image: blog/dsa/Backtracking.jpg
+    image: blog/dsa/Backtracking.webp
     alt: Backtracking
     caption: Learn Backtracking Algorithms in Python
 tags: ["python"] 
@@ -348,4 +348,4 @@ else:
 
 ## Buy the Interview Guide
 
-{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-backtracking" "/blog/gumroad-marketing.png" >}}
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-backtracking" "/blog/gumroad-marketing.webp" >}}

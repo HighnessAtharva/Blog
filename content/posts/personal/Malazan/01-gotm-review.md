@@ -3,7 +3,7 @@ title: "Book Review: Gardens of the Moon by Steven Erikson"
 date: 2023-04-26T00:19:34+05:30
 draft: false
 cover: 
-    image: blog/malazan/01-gotm-cover.jpg
+    image: blog/malazan/01-gotm-cover.webp
     alt: Gardens of the Moon by Steven Erikson
     caption: The Gardens of the Moon, the first volume of the Malazan Book of the Fallen, is a sprawling epic fantasy of monumental proportions.
 description: "The Gardens of the Moon, the first volume of the Malazan Book of the Fallen, is a sprawling epic fantasy of monumental proportions."

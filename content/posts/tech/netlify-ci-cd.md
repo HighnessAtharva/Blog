@@ -3,7 +3,7 @@ title: Setting Up CI/CD to Netlify for Static Sites via Github
 date: 2023-05-03T19:18:34+05:30
 draft: false
 cover: 
-    image: blog/netlify-logo.png
+    image: blog/netlify-logo.webp
     alt: Setting Up CI/CD to Netlify for Static Sites via Github
     caption: Using Github Actions and Netlify to set up CI/CD for static sites like Hugo, Jekyll, etc.
 description: "A step-by-step beginner friendly guide to setting up CI/CD to Netlify for static sites like Hugo, Jekyll, etc. Code snippets for Github actions included."
@@ -34,7 +34,7 @@ Netlify is a cloud-based service that offers continuous deployment, hosting, and
 
 3. Linking the site to a GitHub repository After selecting GitHub as the Git provider, Netlify will prompt you to authenticate with your GitHub account. Once authenticated, you will be able to select the repository that you want to link to your Netlify site. After selecting the repository, you will be presented with a list of configuration options for your site.
 
-![NETLIFY_1](/blog/NETLIFY_1.png)
+![NETLIFY_1](/blog/NETLIFY_1.webp)
 
 In the next section, we will discuss how to configure your GitHub repository for automatic deployments to Netlify.
 
@@ -58,7 +58,7 @@ To configure the build settings, follow these steps:
 - In the "Command" field, enter the build command for your static site. For example, if you're using Jekyll, the build command would be "jekyll build". If you're using Hugo, the build command would be "hugo".
 - Click "Save".
 
-![NETLIFY_2](/blog/NETLIFY_2.png)
+![NETLIFY_2](/blog/NETLIFY_2.webp)
 
 ### Configuring the Deployment Settings on Netlify
 
@@ -75,9 +75,9 @@ To configure the deployment settings, follow these steps:
 
 That's it! Netlify will now automatically build and deploy your static site every time you push a new commit to the linked GitHub repository. If there are any errors in the build process, Netlify will notify you via email or Slack.
 
-![NETLIFY_3](/blog/NETLIFY_3.png)
+![NETLIFY_3](/blog/NETLIFY_3.webp)
 
-![NETLIFY_4](/blog/NETLIFY_4.png)
+![NETLIFY_4](/blog/NETLIFY_4.webp)
 
 ## IV. Setting Up CI/CD with Github Actions
 

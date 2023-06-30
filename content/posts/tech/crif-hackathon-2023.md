@@ -3,7 +3,7 @@ title: "Celebrating victory at CRIF Hackathon 2023"
 date: 2023-01-26T23:18:34+05:30
 draft: false
 cover: 
-    image: blog/crif-hackathon/CRIF3.jpg
+    image: blog/crif-hackathon/CRIF3.webp
     alt: Developer experience at CRIF Hackathon 2023. Innovating the future, one hackathon at a time.
     caption: The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination. Few media of creation are so flexible, so easy to polish and rework, so readily capable of realizing grand conceptual structures.
 description: "Developer experience at CRIF Hackathon 2023. We built a News Media Analysis Utility leveraging NLP, Text Processing, and Visualization with Tableau." 
@@ -49,7 +49,7 @@ Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau
 
 4. Aditya Patil - Documentation, Testing and Generating Tableau Dashboards
 
-| ![CRIF-TEAM](/blog/crif-hackathon/CRIF2.jpg) |
+| ![CRIF-TEAM](/blog/crif-hackathon/CRIF2.webp) |
 |:--:|
 | *The Team (Code Giants) L to R: Gurjas, Aditya, Ali and Atharva* |
 
@@ -77,50 +77,50 @@ Having prior experience with BeautifulSoup, APIs and Spacy for NLP I immediately
 
 Spent the most time with this. Most CSVs that made the final
 
-| ![MODULE 1](/blog/crif-hackathon/module1.png) |
+| ![MODULE 1](/blog/crif-hackathon/module1.webp) |
 |:--:|
 | *Custom CLI Tool to Scrape Relevant News Articles based on user input* |
 
-| ![MODULE 2](/blog/crif-hackathon/module2.png) |
+| ![MODULE 2](/blog/crif-hackathon/module2.webp) |
 |:--:|
 | *Sanitization, cleanup and pre-processing with Sentiment Analysis being written to CSV files* |
 
-| ![MODULE 3](/blog/crif-hackathon/module3.png) |
+| ![MODULE 3](/blog/crif-hackathon/module3.webp) |
 |:--:|
 | *Named Entity Relationship Mapping with DisplaCy* |
 
 
 **Tableau** - Taking input of the `COMMON-ANALYSIS.csv` file, we designed 8 dashboards to present or narrate a story with all our data. Since we had plenty of fields like `Article Count`, `Title`,`Description`, `Content` (which holds the entire article text), `URL`, `Publisher`, `Published Date`, `Headline`, `Headline Sentiment`, `Offensive Rating`, `Negative Words`, `Offensive Words and Tags` it was not much of a hassle. We made good use of several plotting and graphing methods and presented a diverse yet insightful story. Each Tableau report updates after looking up a new organization.  
 
-| ![VISUALIZATION1](/blog/crif-hackathon/module4.1.png)|
+| ![VISUALIZATION1](/blog/crif-hackathon/module4.1.webp)|
 |:--:|
 | *Tableau Dashboard #1* |
 
-| ![VISUALIZATION2](/blog/crif-hackathon/module4.2.png)|
+| ![VISUALIZATION2](/blog/crif-hackathon/module4.2.webp)|
 |:--:|
 | *Tableau Dashboard #2* |
 
-| ![VISUALIZATION3](/blog/crif-hackathon/module4.3.png)|
+| ![VISUALIZATION3](/blog/crif-hackathon/module4.3.webp)|
 |:--:|
 | *Tableau Dashboard #3* |
 
-| ![VISUALIZATION4](/blog/crif-hackathon/module4.4.png)|
+| ![VISUALIZATION4](/blog/crif-hackathon/module4.4.webp)|
 |:--:|
 | *Tableau Dashboard #4* |
 
-| ![VISUALIZATION5](/blog/crif-hackathon/module4.5.png)|  
+| ![VISUALIZATION5](/blog/crif-hackathon/module4.5.webp)|  
 |:--:|
 | *Tableau Dashboard #5* |
 
-| ![VISUALIZATION6](/blog/crif-hackathon/module4.6.png) |
+| ![VISUALIZATION6](/blog/crif-hackathon/module4.6.webp) |
 |:--:|
 | *Tableau Dashboard #6* |
 
-| ![VISUALIZATION7](/blog/crif-hackathon/module4.7.png)|
+| ![VISUALIZATION7](/blog/crif-hackathon/module4.7.webp)|
 |:--:|
 | *Tableau Dashboard #7* |
 
-| ![VISUALIZATION8](/blog/crif-hackathon/module4.8.png)|
+| ![VISUALIZATION8](/blog/crif-hackathon/module4.8.webp)|
 |:--:|
 | *Tableau Dashboard #8* |
 

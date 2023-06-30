@@ -3,7 +3,7 @@ title: "Album Review: Foghorn in the Dawn by 오미일곱 [Omilgop]"
 date: 2023-06-14T00:18:34+05:31
 draft: false
 cover: 
-    image: blog/music-review/foghorn.jpg
+    image: blog/music-review/foghorn.webp
     alt: Foghorn in the Dawn by 오미일곱 [Omilgop]
     caption: City Lights and the Night Sky
 description: "Embark on an ethereal journey as 오미일곱 [Omilgop] unveils their mesmerizing opus, Foghorn in the Dawn."

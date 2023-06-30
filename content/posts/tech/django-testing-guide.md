@@ -3,7 +3,7 @@ title: "A Comprehensive Guide to Testing Django Applications"
 date: 2023-06-24T01:18:34+05:30
 draft: false
 cover:
-    image: blog/django-testing-guide.png
+    image: blog/django-testing-guide.webp
     alt: Best Practices and Strategies for Testing Django Applications
     caption: Best Practices and Strategies for Testing Django Applications
 description: "Best Practices and Strategies for Testing Django Applications. Everything from setting up the testing environment to mastering unit testing, integration testing, and end-to-end testing."
@@ -19,7 +19,7 @@ Testing is a crucial component of Django development to guarantee the integrity 
 
 Testing plays a crucial role in ensuring the integrity and dependability of Django applications. By thoroughly testing our code, we can uncover bugs, identify issues, and verify that our application behaves as expected. In this section, we will explore why testing is essential for Django applications and the benefits of adopting a comprehensive testing approach.
 
-![Why to Test Django Apps?](/blog/django-testing-2.png)
+![Why to Test Django Apps?](/blog/django-testing-2.webp)
 
 ### Ensuring Quality and Reliability: The Significance of Testing in Django Applications
 
@@ -178,7 +178,7 @@ python manage.py test
 
 This won't really run any tests since we haven't really written anything yet! By following these steps, you can set up a well-configured testing environment for your Django applications. This allows you to write and run tests effectively, ensuring the integrity and quality of your codebase.
 
-![Testing Types](/blog/django-testing-1.png)
+![Testing Types](/blog/django-testing-1.webp)
 
 ## Unit Testing in Django
 
@@ -444,7 +444,7 @@ Test-driven development is an approach where tests are written before the actual
 
 ### Test Coverage and Measuring Code Quality
 
-![eacc](/blog/django-testing-4.png)
+![eacc](/blog/django-testing-4.webp)
 
 Test coverage refers to the extent to which your code is tested by your test suite.
 
@@ -454,7 +454,7 @@ Test coverage refers to the extent to which your code is tested by your test sui
   - **Guiding development efforts:** Monitoring test coverage over time helps track progress and focus testing efforts on areas that require more attention.
   - **Encouraging best practices:** Higher test coverage encourages developers to write more modular, testable, and maintainable code.
 
-![Why to Test Django Apps?](/blog/django-testing-3.png)
+![Why to Test Django Apps?](/blog/django-testing-3.webp)
 
 ### Continuous Integration and Automated Testing Pipelines
 

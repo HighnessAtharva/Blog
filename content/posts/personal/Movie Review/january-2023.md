@@ -3,7 +3,7 @@ title: "January 2023 Movies: Toppling My Winter Watchlist"
 date: 2023-01-28T00:18:34+05:30
 draft: false
 cover: 
-    image: blog/movie-review/January-2023.jpg
+    image: blog/movie-review/January-2023.webp
     alt: January 2023 Movie Reviews
     caption: Reviews of the movies I watched in January 2023
 description: "January 2023 brought a plethora of cinematic experiences my way, and I'm eager to share my take on them. From classic films to new releases, my viewing journey was diverse and exciting."

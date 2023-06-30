@@ -58,12 +58,12 @@ if (!doNotTrack) {
 <meta property="og:description" content="Free Preview - 5 Search and Sort Problems Bubble Sort def bubble_sort(array): n=len(array) for i in range(n): for j in range(n-i-1): if array[j] &gt; array[j &#43; 1]: array[j], array[j &#43; 1] = array[j &#43; 1], array[j] array=[5,2,3,1,4, -99, 0] bubble_sort(array) print(array) Selection Sort def selection_sort(array): global iterations iterations = 0 for i in range(len(array)): minimum_index = i for j in range(i &#43; 1, len(array)): iterations &#43;= 1 if array[minimum_index] &gt; array[j]: minimum_index = j # Swap the found minimum element with the first element if minimum_index !" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://atharvashah.netlify.app/posts/tech/dsapython/search-and-sort/" />
-<meta property="og:image" content="https://atharvashah.netlify.app/blog/dsa/Search-Sort.jpg" /><meta property="article:section" content="posts" />
+<meta property="og:image" content="https://atharvashah.netlify.app/blog/dsa/Search-Sort.webp" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-09T13:14:34+05:30" />
 <meta property="article:modified_time" content="2022-07-09T13:14:34+05:30" /><meta property="og:site_name" content="Atharva Shah" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://atharvashah.netlify.app/blog/dsa/Search-Sort.jpg" />
+<meta name="twitter:image" content="https://atharvashah.netlify.app/blog/dsa/Search-Sort.webp" />
 <meta name="twitter:title" content="DSA in Python - Search and Sort"/>
 <meta name="twitter:description" content="Free Preview - 5 Search and Sort Problems Bubble Sort def bubble_sort(array): n=len(array) for i in range(n): for j in range(n-i-1): if array[j] &gt; array[j &#43; 1]: array[j], array[j &#43; 1] = array[j &#43; 1], array[j] array=[5,2,3,1,4, -99, 0] bubble_sort(array) print(array) Selection Sort def selection_sort(array): global iterations iterations = 0 for i in range(len(array)): minimum_index = i for j in range(i &#43; 1, len(array)): iterations &#43;= 1 if array[minimum_index] &gt; array[j]: minimum_index = j # Swap the found minimum element with the first element if minimum_index !"/>
 
@@ -107,7 +107,7 @@ if (!doNotTrack) {
   "articleBody": "Free Preview - 5 Search and Sort Problems Bubble Sort def bubble_sort(array): n=len(array) for i in range(n): for j in range(n-i-1): if array[j] \u003e array[j + 1]: array[j], array[j + 1] = array[j + 1], array[j] array=[5,2,3,1,4, -99, 0] bubble_sort(array) print(array) Selection Sort def selection_sort(array): global iterations iterations = 0 for i in range(len(array)): minimum_index = i for j in range(i + 1, len(array)): iterations += 1 if array[minimum_index] \u003e array[j]: minimum_index = j # Swap the found minimum element with the first element if minimum_index != i: array[i], array[minimum_index] = array[minimum_index], array[i] array=[5,2,3,1,4, -99, 0] selection_sort(array) print(array) Insertion Sort def insertion_sort(array): global iterations iterations = 0 for i in range(1, len(array)): current_value = array[i] for j in range(i - 1, -1, -1): iterations += 1 if array[j] \u003e current_value: array[j], array[j + 1] = array[j + 1], array[j] # swap else: array[j + 1] = current_value break array=[5,2,3,1,4, -99, 0] insertion_sort(array) print(array) Merge Sort def merge_sort(array): if len(array) \u003c 2: return array mid = len(array) // 2 left = merge_sort(array[:mid]) right = merge_sort(array[mid:]) return merge(left, right) def merge(left, right): result = [] i, j = 0, 0 while i \u003c len(left) or j \u003c len(right): if left[i] \u003c= right[j]: result.append(left[i]) i += 1 else: result.append(right[j]) j += 1 if i == len(left) or j == len(right): result.extend(left[i:] or right[j:]) break return result array=[5,2,3,1,4, -99, 0] print(merge_sort(array)) Quick Sort def partition(array, low, high): i = low - 1 # index of smaller element pivot = array[high] # pivot for j in range(low, high): # If current element is smaller than the pivot if array[j] \u003c pivot: # increment index of smaller element i += 1 array[i], array[j] = array[j], array[i] array[i + 1], array[high] = array[high], array[i + 1] return i + 1 def quick_sort(array, low, high): if low \u003c high: # pi is partitioning index, arr[p] is now at right place temp = partition(array, low, high) # Separately sort elements before partition and after partition quick_sort(array, low, temp - 1) quick_sort(array, temp + 1, high) array=[5,2,3,1,4, -99, 0] quick_sort(array, 0, len(array)-1) print(array) Buy the Interview Guide This blog post only covers the preview of the product. Get the product from Gumroad to unlock all questions. The E-book includes in-depth explanation for each solution.\n🎯 Expert Curated List of Questions.\n💼 Guaranteed Interview Clearance.\n✅ Master FAANG Interviews.\n💸 Boost Skills, Get Paid.\nGet interview Ready.\r",
   "wordCount" : "396",
   "inLanguage": "en",
-  "image":"https://atharvashah.netlify.app/blog/dsa/Search-Sort.jpg","datePublished": "2022-07-09T13:14:34+05:30",
+  "image":"https://atharvashah.netlify.app/blog/dsa/Search-Sort.webp","datePublished": "2022-07-09T13:14:34+05:30",
   "dateModified": "2022-07-09T13:14:34+05:30",
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -257,7 +257,7 @@ if (!doNotTrack) {
 
 </div>
   </header> 
-<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/dsa/Search-Sort.jpg" alt="Search and Sort">
+<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/dsa/Search-Sort.webp" alt="Search and Sort">
         <p>Learn Searching &amp; Sorting Algorithms in Python</p>
 </figure><aside id="toc-container" class="toc-container wide">
     <div class="toc">
@@ -456,7 +456,7 @@ if (!doNotTrack) {
 <script src="https://gumroad.com/js/gumroad.js"></script>
 <article style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
     
-<img src="/blog/gumroad-marketing.png" alt="Buy on gumroad">
+<img src="/blog/gumroad-marketing.webp" alt="Buy on gumroad">
 <p>This blog post only covers the preview of the product. Get the product from Gumroad to unlock all questions. The E-book includes in-depth explanation for each solution.</p> 
 <p>🎯 Expert Curated List of Questions.</p> 
 <p>💼 Guaranteed Interview Clearance.</p>

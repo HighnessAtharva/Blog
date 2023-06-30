@@ -3,7 +3,7 @@ title: "DSA in Python - Greedy"
 date: 2022-07-09T13:14:34+05:30
 draft: false
 cover: 
-    image: blog/dsa/Greedy.jpg
+    image: blog/dsa/Greedy.webp
     alt: Greedy
     caption: Learn Greedy Algorithms in Python
 tags: ["python"] 
@@ -308,4 +308,4 @@ print("Maximum value in Knapsack =", maxValue)
 
 ## Buy the Interview Guide
 
-{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-greedy" "/blog/gumroad-marketing.png" >}}
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-greedy" "/blog/gumroad-marketing.webp" >}}

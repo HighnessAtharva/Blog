@@ -3,7 +3,7 @@ title: "Best Quotes from Watchmen (Alan Moore)"
 date: 2022-07-11T23:18:34+05:30
 draft: false
 cover: 
-    image: blog/quotes/watchmen-quotes.jpg
+    image: blog/quotes/watchmen-quotes.webp
     alt: Watchmen (Graphic Novel) by Alan Moore
     caption: No. Not even in the face of Armageddon. Never compromise.
 description: "Favorite Quotes from Watchmen (Graphic Novel) by Alan Moore. Who watches the watchmen?"

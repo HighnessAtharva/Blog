@@ -3,7 +3,7 @@ title: "Django Crypto App Part 1"
 date: 2023-05-01T23:18:34+05:30
 draft: false
 cover: 
-    image: blog/django-crypto-app/cover-1.png
+    image: blog/django-crypto-app/cover-1.webp
     alt: Part 1 - Functional Requirements and Setup
     caption: Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django.
 description: "Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django."
@@ -157,12 +157,12 @@ pip freeze > requirements.txt
 
 These steps will create a basic Django project that can be used as a starting point for building the cryptocurrency portfolio management system.
 
-![startup](/blog/django-crypto-app/1.1.png)
+![startup](/blog/django-crypto-app/1.1.webp)
 
 ## Configuring `settings.py`
 
 Here is what the project file structure looks like:-
-![structure](/blog/django-crypto-app/1.2.png)
+![structure](/blog/django-crypto-app/1.2.webp)
 
 `crypto` - The main project folder. Contains the `settings.py` file and the `urls.py` file.
 
@@ -278,7 +278,7 @@ In this code snippet, we are creating four different models for our Django web a
 4. **Cryptocurrency Model:** This model is used to store information about cryptocurrencies. It has a foreign key relationship with the User model, allowing us to link cryptocurrencies to specific users. It stores the name, symbol, current price, and quantity of each cryptocurrency.
 5. **Portfolio Model**: This model is used to store information about a user's portfolio. It has a foreign key relationship with the User model, allowing us to link portfolios to specific users. It stores the total value of the portfolio.
 
-![models](/blog/django-crypto-app/1.3.png)
+![models](/blog/django-crypto-app/1.3.webp)
 
 Each of these models is defined using the `models.Model` class provided by Django. The fields for each model are defined using various field types, such as CharField and DecimalField. We are also using various model relationships, such as ForeignKey and OneToOneField, to link our models together.
 

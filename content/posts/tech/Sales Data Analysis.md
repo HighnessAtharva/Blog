@@ -3,7 +3,7 @@ title: "Sales Data Analysis with Python"
 date: 2023-06-14T01:18:34+05:30
 draft: false
 cover: 
-    image: blog/sales-data-analysis/cover.jpg
+    image: blog/sales-data-analysis/cover.webp
     alt: EDA, Preprocessing, Feature Engineering, Model Building with Python
     caption:  EDA, Preprocessing, Feature Engineering, Model Building with Python
 tags: ["python", "tutorial"]
@@ -264,11 +264,11 @@ for column in columns:
 
 **OUTPUT**
 
-![A picture containing text, screenshot, number, line automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.004.png)![output-ss](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.005.png)
+![A picture containing text, screenshot, number, line automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.004.webp)![output-ss](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.005.webp)
 
-![A picture containing screenshot, text, rectangle, plot automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.006.png)
+![A picture containing screenshot, text, rectangle, plot automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.006.webp)
 
-![A picture containing screenshot, text, rectangle, line Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.007.png)
+![A picture containing screenshot, text, rectangle, line Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.007.webp)
 
 To deal with outliers using boxplots, one approach is to identify and remove the outliers based on predetermined thresholds. This can be done by considering values that fall below the lower whisker or above the upper whisker as outliers. Alternatively, instead of removing outliers, they can be treated or transformed using techniques such as winsorization (replacing extreme values with a specified percentile value) or logarithmic transformations.
 
@@ -431,7 +431,7 @@ plt.show()
 
 **OUTPUT**
 
-![output-ss](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.008.png)
+![output-ss](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.008.webp)
 
 Based on the correlation heatmap, we can observe that certain variables have a stronger correlation with the "Purchase" column. The variables "User_ID," "Marital Status," and "Product_Category_3" show relatively weak correlation with the purchase power of the customer. Conversely, the variables "Occupation," "Product Category 1," and "Product Category 2" exhibit a significantly higher impact on the purchase behavior. It's important to note that this correlation analysis is based on numerical fields only, and we will be generating an even more insightful heatmap right before preparing the ML model.
 
@@ -466,7 +466,7 @@ plt.show()
 
 **OUTPUT**
 
-![A picture containing text, screenshot, diagram, plot Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.009.png)
+![A picture containing text, screenshot, diagram, plot Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.009.webp)
 
 Based on the data provided in train.csv, males have purchased significantly more than females, almost 3x more. This would lead us to the conclusion that either the data set is skewed, or men are willing to spend much more on products by company ABC. This also speaks about purchase power parity.
 
@@ -495,7 +495,7 @@ plt.show()
 
 **OUTPUT**
 
-![A picture containing text, screenshot, diagram, plot Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.010.png)
+![A picture containing text, screenshot, diagram, plot Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.010.webp)
 
 Again, this graph makes sense since most of the audience is represented by the centre curve, which gives the appearance of a normal curve. Most of the audience is between the ages of 26 and 35, while young people and the elderly have the lowest levels of purchasing power.
 
@@ -526,7 +526,7 @@ plt.show()
 
 **OUTPUT**
 
-![output-ss](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.011.png)
+![output-ss](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.011.webp)
 
 We can determine the percentage distribution of the city category by plotting a pie chart, and this helps us conclude that people from category B cities have the greatest purchasing power and willingness to spend, while category A cities have the fewest purchases made—nearly 1.8 times fewer than city type B.
 
@@ -561,7 +561,7 @@ plt.show()
 
 **OUTPUT**
 
-![A picture containing text, screenshot, line, diagram Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.012.png)
+![A picture containing text, screenshot, line, diagram Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.012.webp)
 
 As various employment categories pay varying incomes, it stands to reason that category 0, 4, and 7 occupations may potentially have the greatest earnings, which would therefore likely result in more expenditure on goods and services.
 
@@ -596,7 +596,7 @@ plt.show()
 
 **OUTPUT**
 
-![A picture containing text, screenshot, diagram, rectangle Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.013.png)
+![A picture containing text, screenshot, diagram, rectangle Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.013.webp)
 
 This bar graph reflects the needs of newcomers to the city who require products and services to establish themselves. As a result, those who have been in the city for a year have made the most purchases, which quickly decline as they continue to live there.
 
@@ -634,7 +634,7 @@ plt.show()
 
 **OUTPUT**
 
-![A picture containing text, screenshot, diagram, plot Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.014.png)
+![A picture containing text, screenshot, diagram, plot Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.014.webp)
 
 When contrasted to married people, the bias obviously favours single people, probably because of the costs associated with education, travel, and other products and services. Nonetheless, because of financial considerations like family planning and long-term savings, married people may tend to spend less.
 
@@ -669,7 +669,7 @@ plt.show()
 
 **OUTPUT**
 
-![A picture containing text, screenshot, diagram Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.015.png)
+![A picture containing text, screenshot, diagram Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.015.webp)
 
 As seen above, product categories 4, 13, 19 and 20 have products which are not priced more than 5000 hence these product categories, although numerous will generate the least revenue. On the other hand, product categories 9, 10, 6, and 7 have items with prices that typically start at or exceed 5,000 and can even reach 20,000 or 25,000, generating more revenue for the business. You can also probabilisticlaly determine the name of these categories from the price ranges. Most other categories are somewhere in between.
 
@@ -701,7 +701,7 @@ plt.show()
 
 **OUTPUT**
 
-![output-ss](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.016.png)
+![output-ss](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.016.webp)
 
 **CODE**
 
@@ -729,9 +729,9 @@ plt.show()
 
 **OUTPUT**
 
-![A picture containing text, screenshot, line, rectangle Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.017.png)
+![A picture containing text, screenshot, line, rectangle Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.017.webp)
 
-![A picture containing text, screenshot, rectangle, line Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.018.png)
+![A picture containing text, screenshot, rectangle, line Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.018.webp)
 
 This code is plotting two bar charts. The first chart shows the most frequently bought products, displaying the purchase count for each product. The second chart displays the products that generated the most revenue, showing the revenue (in millions) for each product.
 
@@ -948,7 +948,7 @@ Linear REG Mean Square Error:  21708175.443769183
 Linear REG Root Mean Square Error:  4659.203305691777
 ```
 
-![output-ss](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.019.png)
+![output-ss](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.019.webp)
 
 **XGBOOST REGRESSION**
 
@@ -1077,7 +1077,7 @@ plt.show()
 
 **OUTPUT**
 
-![A picture containing text, screenshot, number, font Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.020.png)
+![A picture containing text, screenshot, number, font Description automatically generated](/blog/sales-data-analysis/Aspose.Words.3f482350-c406-414e-b02b-91d71b09cc1b.020.webp)
 
 You can explore other popular and well-known regression techniques to boost accuracy even more. Just note that these are CPU-intensive and training time can go from several minutes to several hours depending on the scale of the dataset.
 

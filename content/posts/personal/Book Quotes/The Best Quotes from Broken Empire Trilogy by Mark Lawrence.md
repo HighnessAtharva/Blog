@@ -3,7 +3,7 @@ title: "Best Quotes from Broken Empire Trilogy"
 date: 2022-07-10T23:18:34+05:30
 draft: false
 cover: 
-    image: blog/quotes/broken-empire-quotes.jpg
+    image: blog/quotes/broken-empire-quotes.webp
     alt: Broken Empire Trilogy by Mark Lawrence
     caption: War, my friends, is a thing of beauty. Those as says otherwise are losing.
 description: "Favorite Quotes from Broken Empire Trilogy by Mark Lawrence. War, my friends, is a thing of beauty. Those as says otherwise are losing."

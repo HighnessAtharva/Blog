@@ -3,7 +3,7 @@ title: "Album Review: Stratosphere by Duster"
 date: 2023-06-12T00:18:34+05:33
 draft: false
 cover: 
-    image: blog/music-review/stratosphere.jpg
+    image: blog/music-review/stratosphere.webp
     alt: Stratosphere by Duster
     caption: An idyllic journey through the great outdoors
 description: "An album review for Stratosphere by Duster. An idyllic journey through the great outdoors."

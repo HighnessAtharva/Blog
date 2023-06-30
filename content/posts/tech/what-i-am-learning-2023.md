@@ -3,7 +3,7 @@ title: "What I am Learning in 2023"
 date: 2023-01-27T01:19:34+05:30
 draft: false
 cover: 
-    image: blog/2023-tech-stack.png
+    image: blog/2023-tech-stack.webp
     alt: 2023 Tech Stack
     caption: Diving into the Latest Developments in React.js, Docker, AWS, Django and FastAPI 
 tags: ["lists", "programming"]

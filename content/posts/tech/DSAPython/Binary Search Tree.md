@@ -3,7 +3,7 @@ title: "DSA in Python - Binary Search Trees"
 date: 2022-07-09T13:10:34+05:30
 draft: false
 cover: 
-    image: blog/dsa/BST.jpg
+    image: blog/dsa/BST.webp
     alt: Binary Search Trees
     caption: Learn BST Algorithms in Python
 tags: ["python"] 
@@ -395,4 +395,4 @@ checkForBST(root)
 
 ## Buy the Interview Guide
 
-{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-binary-search-tree" "/blog/gumroad-marketing.png" >}}
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-binary-search-tree" "/blog/gumroad-marketing.webp" >}}

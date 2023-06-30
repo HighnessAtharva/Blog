@@ -3,7 +3,7 @@ title: "Awesome Podcasts I am Listening To"
 date: 2023-03-20T01:18:34+05:30
 draft: false
 cover: 
-    image: blog/list-podcast.png
+    image: blog/list-podcast.webp
     alt: Awesome Podcasts I am Listening To
     caption: A perpetually growing list of podcasts I am listening to. All of them are awesome. 
 description: "A perpetually growing list of podcasts I am listening to. All of them are awesome. Insightful,entertaining and eye-opening."

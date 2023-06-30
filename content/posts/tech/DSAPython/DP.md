@@ -3,7 +3,7 @@ title: "DSA in Python - Dynamic Programming"
 date: 2022-07-10T13:11:34+05:30
 draft: false
 cover: 
-    image: blog/dsa/DP.jpg
+    image: blog/dsa/DP.webp
     alt: Dynamic Programming
     caption: Learn DP Algorithms in Python
 tags: ["python"] 
@@ -196,4 +196,4 @@ for i in range(10):
 
 ## Buy the Interview Guide
 
-{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-dynamic-programming" "/blog/gumroad-marketing.png" >}}
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-dynamic-programming" "/blog/gumroad-marketing.webp" >}}

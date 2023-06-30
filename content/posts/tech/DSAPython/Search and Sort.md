@@ -3,7 +3,7 @@ title: "DSA in Python - Search and Sort"
 date: 2022-07-09T13:14:34+05:30
 draft: false
 cover: 
-    image: blog/dsa/Search-Sort.jpg
+    image: blog/dsa/Search-Sort.webp
     alt: Search and Sort
     caption: Learn Searching & Sorting Algorithms in Python
 tags: ["python"] 
@@ -135,4 +135,4 @@ print(array)
 
 ## Buy the Interview Guide
 
-{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-searching-sorting" "/blog/gumroad-marketing.png" >}}
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-searching-sorting" "/blog/gumroad-marketing.webp" >}}

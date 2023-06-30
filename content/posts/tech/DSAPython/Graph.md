@@ -3,7 +3,7 @@ title: "DSA in Python - Graph"
 date: 2022-07-09T13:14:34+05:30
 draft: false
 cover: 
-    image: blog/dsa/Graph.jpg
+    image: blog/dsa/Graph.webp
     alt: Graph
     caption: Learn Graph Algorithms in Python
 tags: ["python"] 
@@ -220,4 +220,4 @@ else:
 
 ## Buy the Interview Guide
 
-{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-graph" "/blog/gumroad-marketing.png" >}}
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-graph" "/blog/gumroad-marketing.webp" >}}

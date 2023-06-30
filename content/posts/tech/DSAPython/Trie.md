@@ -3,7 +3,7 @@ title: "DSA in Python - Trie"
 date: 2022-07-08T13:18:34+05:30
 draft: false
 cover: 
-    image: blog/dsa/Trie.jpg
+    image: blog/dsa/Trie.webp
     alt: Trie
     caption: Learn Trie Algorithms in Python
 tags: ["python"] 
@@ -358,4 +358,4 @@ findUniqueRows(M)
 
 ## Buy the Interview Guide
 
-{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-trie" "/blog/gumroad-marketing.png" >}}
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-trie" "/blog/gumroad-marketing.webp" >}}

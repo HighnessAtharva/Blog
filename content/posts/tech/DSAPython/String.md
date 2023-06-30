@@ -3,7 +3,7 @@ title: "DSA in Python - Strings"
 date: 2022-07-09T13:14:34+05:30
 draft: false
 cover: 
-    image: blog/dsa/String.jpg
+    image: blog/dsa/String.webp
     alt: Strings
     caption: Learn String Algorithms in Python
 tags: ["python"] 
@@ -252,4 +252,4 @@ print(f'The longest palindromic substring of {s} is', findLongestPalindromicSubs
 
 ## Buy the Interview Guide
 
-{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-string" "/blog/gumroad-marketing.png" >}}
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-string" "/blog/gumroad-marketing.webp" >}}

@@ -3,7 +3,7 @@ title: "February 2023 Movies: Love and the Big Screen"
 date: 2023-02-27T00:18:34+05:30
 draft: false
 cover: 
-    image: blog/movie-review/February-2023.jpg
+    image: blog/movie-review/February-2023.webp
     alt: February 2023 Movie Reviews
     caption: Reviews of the movies I watched in February 2023
 description: "February was a month for the ages as I indulged in a smorgasbord of movies. Consumed movies across a ton of genres."

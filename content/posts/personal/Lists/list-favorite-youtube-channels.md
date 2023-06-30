@@ -3,7 +3,7 @@ title: "Awesome Youtube Channels I am Subscribed To"
 date: 2023-03-20T01:18:35+05:30
 draft: false
 cover: 
-    image: blog/list-youtube.png
+    image: blog/list-youtube.webp
     alt: Awesome Youtube Channels I am Subscribed To
     caption: A perpetually growing list of youtube channels I am subscribed to. All of them are awesome.
 description: "A perpetually growing list of youtube channels I am subscribed to. All of them are awesome."

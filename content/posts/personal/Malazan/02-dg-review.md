@@ -3,7 +3,7 @@ title: "Book Review: Deadhouse Gates by Steven Erikson"
 date: 2023-04-27T00:19:34+05:30
 draft: false
 cover: 
-    image: blog/malazan/02-dg-cover.jpg
+    image: blog/malazan/02-dg-cover.webp
     alt: Deadhouse Gates by Steven Erikson
     caption: Rising rebellions, ancient secrets, and an Empire on the brink of war. The second book in the Malazan Book of the Fallen series is a thrilling and tragic tale of war and its consequences.
 description: "Rising rebellions, ancient secrets, and an Empire on the brink of war. The second book in the Malazan Book of the Fallen series is a thrilling and tragic tale of war and its consequences."

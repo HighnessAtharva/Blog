@@ -3,7 +3,7 @@ title: "Best Quotes from Gothic Violence by Mika Ma"
 date: 2023-06-04T02:18:34+05:30
 draft: false
 cover: 
-    image: blog/quotes/mike-ma-gv.png
+    image: blog/quotes/mike-ma-gv.webp
     alt: Gothic Violence by Mika Ma
     caption: A few notable quotes from the wild and wondeful mind of Mike Ma in his book Gothic Violence.
 description: "A few notable quotes from the wild and wondeful mind of Mike Ma in his book Gothic Violence."

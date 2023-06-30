@@ -3,7 +3,7 @@ title: "Django Crypto App Part 2"
 date: 2023-05-01T23:19:34+05:30
 draft: false
 cover: 
-    image: blog/django-crypto-app/cover-2.png
+    image: blog/django-crypto-app/cover-2.webp
     alt: Part 2 - Templates, Views and URLs
     caption: Here, we will add the templates, views and urls and code up the entire project. This will be the most complex and detailed part of this series.
 description: "Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django."
@@ -316,7 +316,7 @@ Remember we defined the `urlpatterns` list in the `urls.py` file? Each URL patte
 
 Just to give you a peek into the structure of our app, here is a screenshot of the `templates` folder:
 
-![template](/blog/django-crypto-app/2-template.png)
+![template](/blog/django-crypto-app/2-template.webp)
 
 We will be creating the following templates in our app so you can go ahead and make empty HTML files for them. Now let's start writing our views and templates.
 
@@ -869,7 +869,7 @@ The view function handles the case where the user is not authenticated, in which
 
 The json response for the CoinGecko API [can be found here](https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=10&page=1&sparkline=true).
 
-![json response](/blog/django-crypto-app/2-json-response.png)
+![json response](/blog/django-crypto-app/2-json-response.webp)
 
 Create a new file called `home.html` in the templates directory and add the following code to it.
 

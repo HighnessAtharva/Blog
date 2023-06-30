@@ -3,7 +3,7 @@ title: "DSA in Python - Heap"
 date: 2022-07-09T13:14:34+05:30
 draft: false
 cover: 
-    image: blog/dsa/Heap.jpg
+    image: blog/dsa/Heap.webp
     alt: Heap
     caption: Learn Heap Algorithms in Python
 tags: ["python"] 
@@ -258,4 +258,4 @@ print("Kth Smallest Element is:", kthSmallest(arr, n, k))
 
 ## Buy the Interview Guide
 
-{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-heap" "/blog/gumroad-marketing.png" >}}
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-heap" "/blog/gumroad-marketing.webp" >}}

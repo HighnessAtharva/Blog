@@ -3,7 +3,7 @@ title: "March 2023 Movies: Magic and Melodrama"
 date: 2023-03-28T00:18:34+05:30
 draft: false
 cover: 
-    image: blog/movie-review/March-2023.jpg
+    image: blog/movie-review/March-2023.webp
     alt: March 2023 Movie Reviews
     caption: Reviews of the movies I watched in March 2023
 description: "A month filled with movie magic, and I had the pleasure of watching some truly amazing films."

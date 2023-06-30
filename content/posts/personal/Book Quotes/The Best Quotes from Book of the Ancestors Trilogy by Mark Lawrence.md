@@ -3,7 +3,7 @@ title: "Best Quotes from Book of the Ancestors"
 date: 2022-07-10T23:18:34+05:30
 draft: false
 cover: 
-    image: blog/quotes/book-of-the-ancestors-quotes.jpg
+    image: blog/quotes/book-of-the-ancestors-quotes.webp
     alt: Book of the Ancestors Trilogy by Mark Lawrence
     caption: Spend too long watching the long game and the short game will kill you.
 description: "Favorite Quotes from Book of the Ancestors Trilogy by Mark Lawrence. A book is as dangerous as any journey you might take."

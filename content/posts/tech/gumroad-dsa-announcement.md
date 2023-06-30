@@ -3,7 +3,7 @@ title: "Digital Product Series Launch!"
 date: 2023-06-05T01:18:34+05:30
 draft: false
 cover: 
-    image: blog/gumroad-python-dsa.png
+    image: blog/gumroad-python-dsa.webp
     alt: Launching my digital product series on Gumroad!
     caption:  Boost your interview success with our exclusive digital product series!
 description: "Boost your interview success with our exclusive digital product series! Most asked Python Interview questions (Data Structures and Algorithms) are now available on Gumroad!"
@@ -30,7 +30,7 @@ This comprehensive guide is packed with 25+ frequently asked array problems that
 
 In today's tech landscape, Python has become a go-to language for many developers. Our Python solutions resource provides you with a wide range of problem-solving techniques specifically tailored to Python. Whether you're a beginner looking to familiarize yourself with Python's syntax or an experienced programmer aiming to optimize your code, this resource is your ultimate companion for efficient problem-solving.
 
-![Gumroad Python DSA](/blog/gumroad-screen.png)
+![Gumroad Python DSA](/blog/gumroad-screen.webp)
 
 ### Access to a Convenient Code Editor for Hands-On Practice
 
@@ -40,7 +40,7 @@ We understand the importance of hands-on practice in honing your coding skills. 
 
 Our products go beyond providing solutions by offering in-depth explanations for each problem and concept covered. We believe that understanding the underlying principles is crucial for your long-term growth as a developer. With our detailed explanations, you'll gain a solid grasp of key concepts, enabling you to approach interviews with confidence and clarity.
 
-![Gumroad Python DSA](/blog/gumroad-screen-2.png)
+![Gumroad Python DSA](/blog/gumroad-screen-2.webp)
 
 ### Boost Your Coding Skills and Nail Interviews
 
@@ -52,4 +52,4 @@ We have exciting plans to expand our product series and provide you with an even
 
 Visit our **[Gumroad profile](https://highnessatharva.gumroad.com/)** today and grab these valuable resources at a special introductory price. Boost your interview success and unlock the opportunities you've been dreaming of!
 
-{{< gumroad "https://highnessatharva.gumroad.com/" "/blog/gumroad-marketing.png" >}}
+{{< gumroad "https://highnessatharva.gumroad.com/" "/blog/gumroad-marketing.webp" >}}

@@ -3,7 +3,7 @@ title: "Awesome Websites and Webpages"
 date: 2023-03-20T01:18:35+05:30
 draft: true
 cover: 
-    image: blog/list-web.png
+    image: blog/list-web.webp
     alt: Awesome Websites and Webpages
     caption: A perpetually growing list of cool things I discover over the internet. All of them are awesome.
 description: "A perpetually growing list of cool things I discover over the internet. All of them are awesome."

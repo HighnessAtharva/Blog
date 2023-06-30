@@ -3,7 +3,7 @@ title: "A Critical Analysis of Pulp Fiction"
 date: 2023-05-02T19:18:34+05:30
 draft: false
 cover: 
-    image: blog/pulp-fiction.jpg
+    image: blog/pulp-fiction.webp
     alt: Pulp Fiction
     caption: A detailed critique of the movie Pulp Fiction 
 description: "Reviewing my favorite movie of all time - Pulp Fiction by Quentin Tarantino starring John Travolta, Samuel L. Jackson, Uma Thurman, Bruce Willis."

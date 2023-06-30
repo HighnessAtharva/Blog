@@ -3,7 +3,7 @@ title: "Accelerating into the Future: e/acc Ruminations"
 date: 2023-01-27T01:18:34+05:30
 draft: false
 cover: 
-    image: blog/eacc-cover.png
+    image: blog/eacc-cover.webp
     alt: Cyberpunk Sci-Fi Analysis of Accelerationism
     caption: Navigating the Intersection of Technology and Humanity through the Lens of Accelerationism. 
 description: "A long form essay on Navigating the Intersection of Technology and Humanity through the Lens of Accelerationism."
@@ -28,7 +28,7 @@ So, without further ado, let's dive in and talk about the future of human societ
 
 TL;DR: Introduction to accelerationism, where we're going faster and stronger with AI technology and the future of human society
 
-![eacc](/blog/eacc1.png)
+![eacc](/blog/eacc1.webp)
 
 ## Theories of Accelerationism
 
@@ -60,7 +60,7 @@ As we continue to develop AI technology, it is crucial that we consider the ethi
 
 In conclusion, while there are certainly challenges to be faced in the integration of AI into society, the potential benefits are immense. With careful consideration of the ethical implications of AI development, we can work towards a future in which AI technology is used to improve the lives of all individuals and to address some of the world's most pressing issues. And as we progress, we can have a positive, hopeful, and inspiring future for the human society.
 
-![eacc](/blog/eacc2.png)
+![eacc](/blog/eacc2.webp)
 
 ## Accelerationism and Transhumanism: A Complex Intersection
 
@@ -86,7 +86,7 @@ Now, I know some of you are thinking, "Oh great, just what we need—more robots
 
 But with all the benefits come some potential drawbacks. We've all seen the movies like "Blade Runner" or "Ex Machina" and we know how things can turn out if we're not careful. It's important that we consider the ethical implications of all this tech before we go full steam ahead.
 
-![eacc](/blog/eacc3.png)
+![eacc](/blog/eacc3.webp)
 
 So in conclusion, let's not get too caught up in the hype. Sure, having a robotic arm would be pretty cool, but let's make sure we're doing it for the right reasons. And if you do end up with a robotic arm, please, for the love of god, don't use it to hack the Pentagon.
 

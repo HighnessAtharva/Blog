@@ -3,7 +3,7 @@ title: "UML Diagrams with ChatGPT: Step-by-Step Tutorial"
 date: 2023-02-15T01:19:34+05:30
 draft: false
 cover: 
-    image: blog/uml-chat-thumb.png
+    image: blog/uml-chat-thumb.webp
     alt: 2023 Tech Stack
     caption: Design Like a Pro! How ChatGPT Generates UML Diagrams for Your Project in Just a Few Clicks! 
 description: "5 Step process to use ChatGPT to generate UML diagrams for your projects in just a few clicks. Easy to follow instructions with visual illustrations."
@@ -18,7 +18,7 @@ Are you tired of spending hours designing UML diagrams for your projects? Look n
 
 The first step is to write your project description or title. ChatGPT can generate UML diagrams for a wide range of projects, from software systems to business processes. Write a concise and clear description of your project, and if you need help, you can ask ChatGPT to generate it for you.
 
-![chatgpt-x-uml](/blog/uml-chat-1.png)
+![chatgpt-x-uml](/blog/uml-chat-1.webp)
 
 >📃 Get the prompt here
 
@@ -36,13 +36,13 @@ Give me the Use Case Diagram PlantUML code for the same.
 
 Once you have your project description, you can ask ChatGPT to generate PlantUML code based on it. Be specific about the name of the diagrams you need and any other specifics that you require. ChatGPT can generate a wide range of diagrams, including use case diagrams, class diagrams, sequence diagrams, and more.
 
-![chatgpt-x-uml](/blog/uml-chat-2.png)
+![chatgpt-x-uml](/blog/uml-chat-2.webp)
 
 ## Step 3: Copy and Paste the Generated Code to PlantText
 
 After ChatGPT generates the PlantUML code, copy and paste it into a PlantUML editor such as PlantText (<https://www.planttext.com>). The editor will render the image on the right side of the screen. You can modify the code to suit your needs or ask ChatGPT to regenerate the code based on your feedback.
 
-![chatgpt-x-uml](/blog/uml-chat-3.png)
+![chatgpt-x-uml](/blog/uml-chat-3.webp)
 
 ## Step 4: Verify the Diagram and Make Tweaks if Necessary
 
@@ -58,9 +58,9 @@ Once you have your modified prompt, follow the same process as before: ask ChatG
 
 This way, you can use ChatGPT to generate a variety of diagrams for your project quickly and easily, without having to spend hours manually creating them. With the time you save, you can focus on other aspects of your project and make it even more successful.
 
-![chatgpt-x-uml](/blog/uml-chat-4.png)
+![chatgpt-x-uml](/blog/uml-chat-4.webp)
 
-![chatgpt-x-uml](/blog/uml-chat-5.png)
+![chatgpt-x-uml](/blog/uml-chat-5.webp)
 
 ## Conclusion
 

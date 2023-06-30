@@ -3,7 +3,7 @@ title: "Django Crypto App Part 3"
 date: 2023-05-01T23:20:34+05:30
 draft: false
 cover: 
-    image: blog/django-crypto-app/cover-3.png
+    image: blog/django-crypto-app/cover-3.webp
     alt: Part 3 - Wrap-Up and Testing
     caption: Here, we will wrap the series up by discussing testing approach by writing test cases for Models, Views and Templates using Pytest.
 description: "Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django."
@@ -822,9 +822,9 @@ coverage html
 # check the htmlcov folder and open the index.html file
 ```
 
-![test1](/blog/django-crypto-app/3-test1.png)
-![test2](/blog/django-crypto-app/3-test2.png)
-![test3](/blog/django-crypto-app/3-test3.png)
+![test1](/blog/django-crypto-app/3-test1.webp)
+![test2](/blog/django-crypto-app/3-test2.webp)
+![test3](/blog/django-crypto-app/3-test3.webp)
 
 ![coverage](https://github.com/HighnessAtharva/django-crypto-app/raw/main/assets/coverage.png?raw=true)
 

@@ -3,7 +3,7 @@ title: "DSA in Python - Linked List"
 date: 2022-07-09T13:14:34+05:30
 draft: false
 cover: 
-    image: blog/dsa/Linked-List.jpg
+    image: blog/dsa/Linked-List.webp
     alt: Linked List
     caption: Learn LL Algorithms in Python
 tags: ["python"] 
@@ -355,4 +355,4 @@ printList(head)
 
 ## Buy the Interview Guide
 
-{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-linked-list" "/blog/gumroad-marketing.png" >}}
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-linked-list" "/blog/gumroad-marketing.webp" >}}

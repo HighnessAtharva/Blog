@@ -3,7 +3,7 @@ title: "DSA in Python - Binary Trees"
 date: 2022-07-08T13:18:34+05:30
 draft: false
 cover: 
-    image: blog/dsa/Binary-Tree.jpg
+    image: blog/dsa/Binary-Tree.webp
     alt: Binary Tree
     caption: Learn Binary Tree Algorithms in Python
 tags: ["python"] 
@@ -277,4 +277,4 @@ preorder(root)
 
 ## Buy the Interview Guide
 
-{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-binary-tree" "/blog/gumroad-marketing.png" >}}
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-binary-tree" "/blog/gumroad-marketing.webp" >}}

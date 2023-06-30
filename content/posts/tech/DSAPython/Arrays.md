@@ -3,7 +3,7 @@ title: "DSA in Python - Arrays"
 date: 2022-07-07T23:18:34+05:30
 draft: false
 cover: 
-    image: blog/dsa/Array.jpg
+    image: blog/dsa/Array.webp
     alt: Arrays
     caption: Learn Array Algorithms in Python
 tags: ["python"] 
@@ -164,4 +164,4 @@ if __name__ == "__main__":
  print(arr)
 ```
 
-{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-array" "/blog/gumroad-marketing.png" >}}
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-array" "/blog/gumroad-marketing.webp" >}}

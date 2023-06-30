@@ -23,7 +23,7 @@ I know what I'm in for this time around, and that gives me tremendous confidence
 ---
 
 To see just what I am talking about, here is a comparitive image of the books I intend to read this year:
-![Malazan Book Stack](/blog/malazan/malazan-book-stack.jpg)
+![Malazan Book Stack](/blog/malazan/malazan-book-stack.webp)
 
 ---
 

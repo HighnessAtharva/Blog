@@ -3,7 +3,7 @@ title: "DSA in Python - Stacks and Queues"
 date: 2022-07-09T13:14:34+05:30
 draft: false
 cover: 
-    image: blog/dsa/Stack-Queue.jpg
+    image: blog/dsa/Stack-Queue.webp
     alt: Stacks and Queues
     caption: Learn Stack and Queue Algorithms in Python
 tags: ["python"] 
@@ -318,4 +318,4 @@ kstacks.printstack(0)
 
 ## Buy the Interview Guide
 
-{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-stack-queue" "/blog/gumroad-marketing.png" >}}
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-stack-queue" "/blog/gumroad-marketing.webp" >}}

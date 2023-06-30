@@ -3,7 +3,7 @@ title: "Best Quotes from Realm of the Elderlings"
 date: 2022-07-11T23:18:34+05:30
 draft: false
 cover: 
-    image: blog/quotes/rote-quotes.jpg
+    image: blog/quotes/rote-quotes.webp
     alt: Realm of the Elderlings by Robin Hobb
     caption: If ever you make it so they don't need you, they will kill you.
 description: "Favorite Quotes from Realm of the Elderlings by Robin Hobb. All the trilogies and the charm all in one place."

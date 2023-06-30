@@ -3,7 +3,7 @@ title: "Best Quotes from First Law Trilogy"
 date: 2022-07-11T23:18:34+05:30
 draft: false
 cover: 
-    image: blog/quotes/first-law-quotes.jpg
+    image: blog/quotes/first-law-quotes.webp
     alt: First Law Trilogy by Joe Abercrombie
     caption: The blade itself incites to deeds of violence.
 description: "Favorite Quotes from First Law Trilogy by Joe Abercrombie. A grimdark collection that will take you to the edge of your seat."

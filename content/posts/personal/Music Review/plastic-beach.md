@@ -3,7 +3,7 @@ title: "Album Review: Plastic Beach by Gorillaz"
 date: 2023-06-12T00:18:34+05:32
 draft: false
 cover: 
-    image: blog/music-review/plastic-beach.jpeg
+    image: blog/music-review/plastic-beach.webp
     alt: Plastic Beach by Gorillaz
     caption: An entertaining record from the virtual band
 description: "An album review for Plastic Beach by Gorillaz. An entertaining record from the virtual band."

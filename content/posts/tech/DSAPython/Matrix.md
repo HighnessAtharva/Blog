@@ -3,7 +3,7 @@ title: "DSA in Python - Matrix"
 date: 2022-07-09T13:14:34+05:30
 draft: false
 cover: 
-    image: blog/dsa/Matrix.jpg
+    image: blog/dsa/Matrix.webp
     alt: Matrix
     caption: Learn Matrix Algorithms in Python
 tags: ["python"] 
@@ -203,4 +203,4 @@ printSorted(mat)
 
 ## Buy the Interview Guide
 
-{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-matrix" "/blog/gumroad-marketing.png" >}}
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-matrix" "/blog/gumroad-marketing.webp" >}}
