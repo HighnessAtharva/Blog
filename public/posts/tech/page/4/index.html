@@ -176,6 +176,70 @@ if (!doNotTrack) {
 </header>
 
 <article class="post-entry"> 
+<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/dsa/Graph.webp" alt="Graph">
+</figure>
+  <header class="entry-header">
+    <h2>DSA in Python - Graph
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Free Preview - 5 Graph Problems Implement Graph class Graph: def __init__(self, edges, n): self.adjList = [[] for _ in range(n)] for (src, dest) in edges: self.adjList[src].append(dest) def printGraph(graph): for src in range(len(graph.adjList)): for dest in graph.adjList[src]: print(f&#39;({src} —&gt; {dest}) &#39;, end=&#39;&#39;) print() edges = [(0, 1), (1, 2), (2, 0), (2, 1), (3, 2), (4, 5), (5, 4)] n = 6 graph = Graph(edges, n) printGraph(graph) Implement Weighted Graph class Graph: def __init__(self, edges, n): self....</p>
+  </div>
+  <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>July 9, 2022
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>797 words
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>4 mins
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://atharvashah.netlify.app/tags/python/" style="color: var(--secondary)!important;">python</a>
+            </span>
+        </span>
+    </span>
+</span></footer>
+  <a class="entry-link" aria-label="post link to DSA in Python - Graph" href="https://atharvashah.netlify.app/posts/tech/dsapython/graph/"></a>
+</article>
+
+<article class="post-entry"> 
 <figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/dsa/Greedy.webp" alt="Greedy">
 </figure>
   <header class="entry-header">
@@ -429,70 +493,6 @@ if (!doNotTrack) {
     </span>
 </span></footer>
   <a class="entry-link" aria-label="post link to DSA in Python - Matrix" href="https://atharvashah.netlify.app/posts/tech/dsapython/matrix/"></a>
-</article>
-
-<article class="post-entry"> 
-<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/dsa/Search-Sort.webp" alt="Search and Sort">
-</figure>
-  <header class="entry-header">
-    <h2>DSA in Python - Search and Sort
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Free Preview - 5 Search and Sort Problems Bubble Sort def bubble_sort(array): n=len(array) for i in range(n): for j in range(n-i-1): if array[j] &gt; array[j &#43; 1]: array[j], array[j &#43; 1] = array[j &#43; 1], array[j] array=[5,2,3,1,4, -99, 0] bubble_sort(array) print(array) Selection Sort def selection_sort(array): global iterations iterations = 0 for i in range(len(array)): minimum_index = i for j in range(i &#43; 1, len(array)): iterations &#43;= 1 if array[minimum_index] &gt; array[j]: minimum_index = j # Swap the found minimum element with the first element if minimum_index !...</p>
-  </div>
-  <footer class="entry-footer">
-
-<style>
-    i[id*="post_meta_style"] {
-        display: flex;
-        align-items: center;
-        margin: 0 0 10px 0;
-    }
-
-    .parent-post-meta {
-        display: flex;
-        flex-wrap: wrap;
-        opacity: 0.8;
-    }
-</style>
-
-<span class="parent-post-meta">
-    <span id="post_meta_style_1">
-        <span class="fa fa-calendar-check-o"></span>
-        <span>July 9, 2022
-            &nbsp;&nbsp;
-        </span>
-    </span>
-    
-    
-    
-    
-    
-    
-    
-    <span id="post_meta_style_3">
-        <span class="fa fa-file-word-o"></span>
-        <span>396 words
-            &nbsp;&nbsp;
-        </span>
-    </span>
-    <span id="post_meta_style_4">
-        <span class="fa fa-clock-o"></span>
-        <span>2 mins
-            &nbsp;&nbsp;
-        </span>
-    </span>
-    <span id="post_meta_style_6">
-        <span class="fa fa-tags" style="opacity: 0.8"></span>
-        <span>
-            <span class="post-tags-meta">
-                <a href="https://atharvashah.netlify.app/tags/python/" style="color: var(--secondary)!important;">python</a>
-            </span>
-        </span>
-    </span>
-</span></footer>
-  <a class="entry-link" aria-label="post link to DSA in Python - Search and Sort" href="https://atharvashah.netlify.app/posts/tech/dsapython/search-and-sort/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

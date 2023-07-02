@@ -6,7 +6,16 @@
     <description>Recent content in 💻 Tech Posts on Atharva Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Jun 2023 01:18:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jul 2023 00:19:35 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Awesome Hugo Shortcodes For Your Websites</title>
+      <link>https://atharvashah.netlify.app/posts/tech/hugo-shortcodes/</link>
+      <pubDate>Sun, 02 Jul 2023 00:19:35 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/hugo-shortcodes/</guid>
+      <description>Awesome hugo shortcodes I am running to power this site. Lightweight, fast and easy to use. Everything from galleries, blockquotes, spotify embeds and more.</description>
+    </item>
+    
     <item>
       <title>A Comprehensive Guide to Testing Django Applications</title>
       <link>https://atharvashah.netlify.app/posts/tech/django-testing-guide/</link>
@@ -76,7 +85,7 @@
       <pubDate>Sun, 19 Feb 2023 01:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/django-orm-exercises/</guid>
-      <description>Master the basics of Django ORM with this comprehensive cheatsheet and exercises to level up your skills in database querying, model relationships, aggregations, annotations, and more.</description>
+      <description>Master Django ORM with exercises to level up database querying, model relationships, aggregations, annotations skills.</description>
     </item>
     
     <item>
@@ -238,7 +247,7 @@
       <pubDate>Thu, 07 Jul 2022 23:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/dsapython/arrays/</guid>
-      <description>Free Preview - 5 Array Problems Reverse the array def reverseArray(A: list): start, end= 0, len(A)-1 while start&amp;lt;end: A[start], A[end]= A[end], A[start] start+=1 end-=1 A=[1,54,21,51,2,353,2,1,99,121,5,5] reverseArray(A) print(&amp;#34;After reversing:&amp;#34;, A) Find the maximum and minimum element in an array def getMinMax(arr: list, n: int): min = 0 max = 0 # If there is only one element then return it as min and max both if n == 1: max = arr[0] min = arr[0] return min, max # If there are more than one elements, then initialize min # and max if arr[0] &amp;gt; arr[1]: max = arr[0] min = arr[1] else: max = arr[1] min = arr[0] for i in range(2, n): if arr[i] &amp;gt; max: max = arr[i] elif arr[i] &amp;lt; min: min = arr[i] return min, max # Driver Code if __name__ == &amp;#34;__main__&amp;#34;: arr = [1000, 11, 445, 1, 330, 3000] arr_size = 6 min, max = getMinMax(arr, arr_size) print(&amp;#34;Minimum element is&amp;#34;, min) print(&amp;#34;Maximum element is&amp;#34;, max) Find the &amp;ldquo;Kth&amp;rdquo; max and min element of an array import sys # function to calculate number of elements less than equal to mid def count(nums, mid): cnt = 0 for i in range(len(nums)): if nums[i] &amp;lt;= mid: cnt += 1 return cnt def kthSmallest(nums, k): low = sys.</description>
+      <description>Master FAANG Interviews with the most frequently asked Array problems with solutions and comprehensive explanations. Boost Skills, Get Paid!</description>
     </item>
     
     <item>

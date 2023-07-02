@@ -6,7 +6,16 @@
     <description>Recent content in 🏷️ Tags on Atharva Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Jun 2023 00:19:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jul 2023 00:19:35 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>technology</title>
+      <link>https://atharvashah.netlify.app/tags/technology/</link>
+      <pubDate>Sun, 02 Jul 2023 00:19:35 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/tags/technology/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>book review</title>
       <link>https://atharvashah.netlify.app/tags/book-review/</link>
@@ -31,15 +40,6 @@
       <pubDate>Sat, 24 Jun 2023 01:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/tags/django/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>technology</title>
-      <link>https://atharvashah.netlify.app/tags/technology/</link>
-      <pubDate>Sat, 24 Jun 2023 01:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/technology/</guid>
       <description></description>
     </item>
     

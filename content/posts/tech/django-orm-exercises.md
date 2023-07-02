@@ -6,7 +6,7 @@ cover:
     image: blog/django-orm.webp
     alt: Django ORM Cheatsheet + Exercises
     caption: Master the basics of Django ORM with this comprehensive cheatsheet and exercises to level up your skills in database querying, model relationships, aggregations, annotations, and more. 
-description: "Master the basics of Django ORM with this comprehensive cheatsheet and exercises to level up your skills in database querying, model relationships, aggregations, annotations, and more."
+description: "Master Django ORM with exercises to level up database querying, model relationships, aggregations, annotations skills."
 tags: ["python", "django"]
 ---
 
