@@ -19,7 +19,7 @@
     <item>
       <title>Elden Ring Gallery</title>
       <link>https://atharvashah.netlify.app/projects/elden-ring-gallery/</link>
-      <pubDate>Mon, 03 Jul 2023 19:19:34 +0530</pubDate>
+      <pubDate>Mon, 03 Jul 2023 18:19:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/projects/elden-ring-gallery/</guid>
       <description>A Slick Gallery of Elden Ring Characters, Bosses, Dragons and NPCs. Interactive cards made with anime.js that will leave you in awe of the game design.</description>
@@ -28,7 +28,7 @@
     <item>
       <title>Food Online - Multivendor Restaurant Management</title>
       <link>https://atharvashah.netlify.app/projects/food-online/</link>
-      <pubDate>Mon, 03 Jul 2023 19:19:34 +0530</pubDate>
+      <pubDate>Mon, 03 Jul 2023 17:19:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/projects/food-online/</guid>
       <description>GITHUB : https://github.com/HighnessAtharva/FoodOnline
@@ -36,57 +36,67 @@ Project Summary This project, developed during a Udemy course, aims to create a 
     </item>
     
     <item>
-      <title>Malazan Book of the Fallen Compendium</title>
-      <link>https://atharvashah.netlify.app/projects/malazan-compendium/</link>
-      <pubDate>Mon, 03 Jul 2023 19:19:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/projects/malazan-compendium/</guid>
-      <description>GITHUB :</description>
-    </item>
-    
-    <item>
       <title>Media Analysis - Entertainment Data Visualized</title>
       <link>https://atharvashah.netlify.app/projects/media-analysis/</link>
-      <pubDate>Mon, 03 Jul 2023 19:19:34 +0530</pubDate>
+      <pubDate>Mon, 03 Jul 2023 16:19:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/projects/media-analysis/</guid>
-      <description>GITHUB :</description>
+      <description>GITHUB : https://github.com/HighnessAtharva/Media-Analysis
+DEMO : https://highnessatharva-media-analysis-media-analysis-zhdell.streamlit.app/
+Project Summary This is a web application built with Streamlit that allows users to analyze data from various entertainment platforms. The Entertainment Data Analysis Web Application is a powerful tool for analyzing data from popular entertainment platforms such as Goodreads, Letterboxd, and Steam. It provides users with advanced data analysis techniques, statistical reports, and in-depth insights that are not available on the platforms themselves.</description>
     </item>
     
     <item>
-      <title>MusicCLI - Music Rating, Review and Tier List Maker</title>
-      <link>https://atharvashah.netlify.app/projects/musiccli/</link>
-      <pubDate>Mon, 03 Jul 2023 19:19:34 +0530</pubDate>
+      <title>MusiCLI - Music Rating, Review and Tier List Maker</title>
+      <link>https://atharvashah.netlify.app/projects/musicli/</link>
+      <pubDate>Mon, 03 Jul 2023 15:19:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/projects/musiccli/</guid>
-      <description>GITHUB :</description>
-    </item>
-    
-    <item>
-      <title>Reputation Analysis - Organizational Threats with NLP</title>
-      <link>https://atharvashah.netlify.app/projects/reputation-analysis-crif/</link>
-      <pubDate>Mon, 03 Jul 2023 19:19:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/projects/reputation-analysis-crif/</guid>
-      <description>**GITHUB :**GITHUB :</description>
-    </item>
-    
-    <item>
-      <title>What You Doing Right Now? Social Media Platform</title>
-      <link>https://atharvashah.netlify.app/projects/what-you-doing-right-now/</link>
-      <pubDate>Mon, 03 Jul 2023 19:19:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/projects/what-you-doing-right-now/</guid>
-      <description>GITHUB :</description>
+      <guid>https://atharvashah.netlify.app/projects/musicli/</guid>
+      <description>GITHUB : https://github.com/HighnessAtharva/musicli
+PACKAGE : https://pypi.org/project/musicli/
+Musicli is a powerful and user-friendly Python package that allows users to easily rate, review, and catalogue their favorite artists and albums from the command line. With intuitive search and selection features, users can quickly navigate their music library and rate each album on a 10-point scale. The package also offers the option to rate individual tracks and includes a variety of customization options to personalize the cataloguing experience.</description>
     </item>
     
     <item>
       <title>VocabCLI - Vocabulary Builder and TextStat Tool</title>
       <link>https://atharvashah.netlify.app/projects/vocabcli/</link>
-      <pubDate>Mon, 03 Jul 2023 19:18:34 +0530</pubDate>
+      <pubDate>Mon, 03 Jul 2023 14:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/projects/vocabcli/</guid>
       <description>Lightweight CLI for Dictionary Lookups, Vocabulary Building, Quote Saving with Rich Markup, Graph Reporting and Flashcard Exports</description>
+    </item>
+    
+    <item>
+      <title>Reputation Analysis - Organizational Threats with NLP</title>
+      <link>https://atharvashah.netlify.app/projects/reputation-analysis/</link>
+      <pubDate>Mon, 03 Jul 2023 13:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/projects/reputation-analysis/</guid>
+      <description>GITHUB : https://github.com/HighnessAtharva/CRIF-Hackathon-2023
+Project Summary The Reputation Analysis project aims to build a framework/utility that analyzes news articles related to a specific company and presents any reputational threatening data on a concise dashboard. The solution involves web scraping, text processing, natural language processing (NLP), and data analysis techniques to gather, analyze, and visualize information from media articles. &lt;!DOCTYPE html&gt;Project Tech Stack The project utilizes the following technologies and tools:</description>
+    </item>
+    
+    <item>
+      <title>What You Doing Right Now? Social Media Platform</title>
+      <link>https://atharvashah.netlify.app/projects/what-you-doing-right-now/</link>
+      <pubDate>Mon, 03 Jul 2023 12:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/projects/what-you-doing-right-now/</guid>
+      <description>GITHUB : https://github.com/HighnessAtharva/WYDRN
+Project Summary WYDRN is a Social Networking website where you can track your movies, TV shows, games, books, and music. The aim of this project is to provide a centralized platform to track all your favorite media, eliminating the need to use multiple platforms like IMDB, Goodreads, Steam, RateYourMusic, and TVTime. It&amp;rsquo;s one platform to rule them all!
+&lt;!DOCTYPE html&gt;Project Tech Stack FullStack Development with PHP and Bootstrap 5 Login, Signup, Add Media, Import and Export, Diary, Browse Media, Edit Profile, Verify Account, Upload Image, Social Follow/Unfollow, and Feed functionality Database Schema Design and management of project file hierarchy API service integration and making API requests for all 5 media types (Movies, TV, Books, Music, and Videogames) Debugging, Pagination, AJAX, URL Rerouting, Version Management, SQL Queries, System Design, Caching, Security, Templating, Exception Handling Enforcing best practices and providing template/boilerplate code for ML Models Integration of Python with PHP for designing a Machine Learning model to recommend media types to users based on their added media items Scrum Master responsibilities including reporting project developments and ensuring successful builds for every iteration &lt;!</description>
+    </item>
+    
+    <item>
+      <title>Malazan Book of the Fallen Compendium</title>
+      <link>https://atharvashah.netlify.app/projects/malazan-compendium/</link>
+      <pubDate>Mon, 03 Jul 2023 11:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/projects/malazan-compendium/</guid>
+      <description>GITHUB : https://github.com/HighnessAtharva/Malazan-Compendium
+DEMO : https://highnessatharva.github.io/Malazan-Compendium/
+This Malazan Book of the Fallen Compendium is a project created by Atharva Shah for educational purposes. It is an unofficial book compiled from the content written by the talented individuals at Tor, namely Bill Capossere and Amanda Rutter. The text content is released under Creative Commons BY-SA.
+Please note that this project is not affiliated with Tor or Steven Erikson, the author of the Malazan Book of the Fallen series.</description>
     </item>
     
   </channel>

@@ -2,9 +2,8 @@
 title: "⚒️ Projects"
 description: "All the projects that I've worked on which deserve a mention. "
 hidemeta: true
-layout: projects
-summary: projects
 showbreadcrumbs: false
+hideSummary: true
 ---
 
 ```goat

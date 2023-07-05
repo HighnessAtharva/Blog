@@ -59,8 +59,8 @@ if (!doNotTrack) {
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://atharvashah.netlify.app/projects/vocabcli/" />
 <meta property="og:image" content="https://atharvashah.netlify.app/projects/vocabCLI.webp" /><meta property="article:section" content="projects" />
-<meta property="article:published_time" content="2023-07-03T19:18:34+05:30" />
-<meta property="article:modified_time" content="2023-07-03T19:18:34+05:30" /><meta property="og:site_name" content="Atharva Shah" />
+<meta property="article:published_time" content="2023-07-03T14:18:34+05:30" />
+<meta property="article:modified_time" content="2023-07-03T14:18:34+05:30" /><meta property="og:site_name" content="Atharva Shah" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://atharvashah.netlify.app/projects/vocabCLI.webp" />
@@ -98,11 +98,11 @@ if (!doNotTrack) {
   "keywords": [
     
   ],
-  "articleBody": "\rGITHUB :\n",
-  "wordCount" : "2",
+  "articleBody": "\rGITHUB : https://github.com/HighnessAtharva/VocabCLI\nDOCS : https://vocabcli.github.io/\nProject Summary VocabularyCLI is a lightweight Command Line Interface (CLI) that provides users with quick and convenient access to word definitions, examples, synonyms, and antonyms. It is a powerful tool for linguaphiles and language enthusiasts, offering a range of utility-based commands and robust knowledge base capabilities. With features like flashcards, tagging, word management, graph reporting, and bulk import/export of word lists, VocabularyCLI is a definitive software for expanding vocabulary and improving language skills.\nThe CLI boasts a simple and intuitive interface, making it easy to use for anyone. It offers advanced text classification and processing through the use of Natural Language Processing (NLP) and Machine Learning algorithms, which will be discussed in detail in the “Scope and Features” section. Additionally, the CLI provides an enjoyable and interactive user experience with eye-catching panels, tables, animated symbols, emojis, interactive menus, spinners, colored fonts, and other rich features.\n\u003c!DOCTYPE html\u003e\rProject Tech Stack Primary Development Language: Python 3.10 Database Management System: SQLite3 API: DictionaryAPI (https://api.dictionaryapi.dev/api/v2/entries/en/hello) Deployment: PyPi (Python Package Index) Libraries: Rich, Typer, Matplotlib, Seaborn, NLTK, SpaCy, Pandas, Numpy, Requests, Beautiful Soup, PyDictionary Testing: PyTest (Unit Testing), PyTest-Cov (Code Coverage), PyTest-Benchmark (Benchmarking) Documentation: Sphinx, ReadTheDocs Learnings During the development of VocabularyCLI, the project team gained valuable insights and learnings. Some of the key takeaways include:\nUnderstanding and implementing NLP techniques for text classification and processing. Utilizing various Python libraries for data visualization, data manipulation, web scraping, and API integration. Effective database management using SQLite3 for storing and retrieving word-related data. Deployment of the CLI package on PyPi for easy installation and distribution. Writing comprehensive documentation using Sphinx and ReadTheDocs to guide users in utilizing the CLI to its full potential. Testing the CLI using PyTest for unit testing, code coverage analysis, and benchmarking. By applying these learnings, the project team was able to create a robust and feature-rich VocabularyCLI that meets the needs of language enthusiasts and provides a seamless user experience.\n",
+  "wordCount" : "325",
   "inLanguage": "en",
-  "image":"https://atharvashah.netlify.app/projects/vocabCLI.webp","datePublished": "2023-07-03T19:18:34+05:30",
-  "dateModified": "2023-07-03T19:18:34+05:30",
+  "image":"https://atharvashah.netlify.app/projects/vocabCLI.webp","datePublished": "2023-07-03T14:18:34+05:30",
+  "dateModified": "2023-07-03T14:18:34+05:30",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://atharvashah.netlify.app/projects/vocabcli/"
@@ -203,7 +203,86 @@ if (!doNotTrack) {
   </header> 
 <figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/projects/vocabCLI.webp" alt="VocabCLI">
         <p>Vocabulary Building right in your terminal.</p>
-</figure>
+</figure><aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#project-summary" aria-label="Project Summary">Project Summary</a></li>
+                <li>
+                    <a href="#project-tech-stack" aria-label="Project Tech Stack">Project Tech Stack</a></li>
+                <li>
+                    <a href="#learnings" aria-label="Learnings">Learnings</a>
+                </li>
+            </ul>
+        </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        
+        activeElement = elements[0];
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+    }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        if (elements) {
+            activeElement = Array.from(elements).find((element) => {
+                if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                    (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                    return element;
+                }
+            }) || activeElement
+
+            elements.forEach(element => {
+                const id = encodeURI(element.getAttribute('id')).toLowerCase();
+                if (element === activeElement){
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+                } else {
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+                }
+            })
+        }
+    }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
   <div class="post-content"><p><style>
       .ico {
         height: 1.15em;
@@ -231,7 +310,102 @@ if (!doNotTrack) {
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
 </svg>
- <strong>GITHUB :</strong></p>
+ <strong>GITHUB :</strong> <a href="https://github.com/HighnessAtharva/VocabCLI">https://github.com/HighnessAtharva/VocabCLI</a></p>
+<p><svg aria-hidden="true" class="default ico ico-archive "  xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+ <strong>DOCS :</strong> <a href="https://vocabcli.github.io/">https://vocabcli.github.io/</a></p>
+<h2 id="project-summary">Project Summary<a hidden class="anchor" aria-hidden="true" href="#project-summary">#</a></h2>
+<p>VocabularyCLI is a lightweight Command Line Interface (CLI) that provides users with quick and convenient access to word definitions, examples, synonyms, and antonyms. It is a powerful tool for linguaphiles and language enthusiasts, offering a range of utility-based commands and robust knowledge base capabilities. With features like flashcards, tagging, word management, graph reporting, and bulk import/export of word lists, VocabularyCLI is a definitive software for expanding vocabulary and improving language skills.</p>
+<p>The CLI boasts a simple and intuitive interface, making it easy to use for anyone. It offers advanced text classification and processing through the use of Natural Language Processing (NLP) and Machine Learning algorithms, which will be discussed in detail in the &ldquo;Scope and Features&rdquo; section. Additionally, the CLI provides an enjoyable and interactive user experience with eye-catching panels, tables, animated symbols, emojis, interactive menus, spinners, colored fonts, and other rich features.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/css/nanogallery2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/jquery.nanogallery2.min.js"></script>
+</head>
+<body>
+
+<div data-nanogallery2='{
+	 "thumbnailDisplayTransition":          "none",
+     "thumbnailDisplayTransitionDuration":  500,
+     "thumbnailDisplayInterval":            30,
+     "galleryDisplayTransition":            "none",
+     "galleryDisplayTransitionDuration":    500,
+     "galleryDisplayMode": "rows",
+     "thumbnailDisplayOutsideScreen": "false",
+     "eventsDebounceDelay": 10,
+     "thumbnailL1BorderHorizontal": 0,
+     "thumbnailL1BorderVertical": 0,
+     "thumbnailLabel": {
+        "titleFontSize": "0.6em"
+     },
+     "thumbnailHoverEffect2": "image_scale_1.00_1.10|label_backgroundColor_rgba(0,0,0,0)_rgba(255,255,255,0)",
+     "galleryTheme": {
+        "thumbnail": {
+            "borderRadius": "5px"
+        }
+     },
+     "thumbnailToolbarImage": {
+        "topLeft": "",
+        "topRight": "",
+        "bottomLeft": "",
+        "bottomRight": ""
+     },
+     "viewerToolbar":   {
+        "display": true,
+        "standard": "label"
+     },
+     "viewerTools":     {
+        "topLeft":    "pageCounter, playPauseButton",
+        "topRight":   "downloadButton, rotateLeft, zoomButton, fullscreenButton, closeButton"
+     },
+     "viewerGalleryTWidth": 40,
+     "viewerGalleryTHeight": 40
+}'>
+    
+<a href="/projects/vocab1.webp" data-ngThumb="/projects/vocab1.webp"></a>
+
+<a href="/projects/vocab2.webp" data-ngThumb="/projects/vocab2.webp"></a>
+
+<a href="/projects/vocab3.webp" data-ngThumb="/projects/vocab3.webp"></a>
+
+<a href="/projects/vocab4.webp" data-ngThumb="/projects/vocab4.webp"></a>
+
+<a href="/projects/vocab5.webp" data-ngThumb="/projects/vocab5.webp"></a>
+
+<a href="/projects/vocab6.webp" data-ngThumb="/projects/vocab6.webp"></a>
+
+
+</div>
+</body>
+</html>
+
+<h2 id="project-tech-stack">Project Tech Stack<a hidden class="anchor" aria-hidden="true" href="#project-tech-stack">#</a></h2>
+<ul>
+<li>Primary Development Language: Python 3.10</li>
+<li>Database Management System: SQLite3</li>
+<li>API: DictionaryAPI (<a href="https://api.dictionaryapi.dev/api/v2/entries/en/hello">https://api.dictionaryapi.dev/api/v2/entries/en/hello</a>)</li>
+<li>Deployment: PyPi (Python Package Index)</li>
+<li>Libraries: Rich, Typer, Matplotlib, Seaborn, NLTK, SpaCy, Pandas, Numpy, Requests, Beautiful Soup, PyDictionary</li>
+<li>Testing: PyTest (Unit Testing), PyTest-Cov (Code Coverage), PyTest-Benchmark (Benchmarking)</li>
+<li>Documentation: Sphinx, ReadTheDocs</li>
+</ul>
+<h2 id="learnings">Learnings<a hidden class="anchor" aria-hidden="true" href="#learnings">#</a></h2>
+<p>During the development of VocabularyCLI, the project team gained valuable insights and learnings. Some of the key takeaways include:</p>
+<ul>
+<li>Understanding and implementing NLP techniques for text classification and processing.</li>
+<li>Utilizing various Python libraries for data visualization, data manipulation, web scraping, and API integration.</li>
+<li>Effective database management using SQLite3 for storing and retrieving word-related data.</li>
+<li>Deployment of the CLI package on PyPi for easy installation and distribution.</li>
+<li>Writing comprehensive documentation using Sphinx and ReadTheDocs to guide users in utilizing the CLI to its full potential.</li>
+<li>Testing the CLI using PyTest for unit testing, code coverage analysis, and benchmarking.</li>
+</ul>
+<p>By applying these learnings, the project team was able to create a robust and feature-rich VocabularyCLI that meets the needs of language enthusiasts and provides a seamless user experience.</p>
 
 
   </div>

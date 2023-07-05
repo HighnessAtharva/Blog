@@ -1,6 +1,6 @@
 ---
 title: "Elden Ring Gallery"
-date: 2023-07-03T19:19:34+05:30
+date: 2023-07-03T18:19:34+05:30
 draft: false
 cover: 
     image: projects/elden-ring.webp
@@ -12,7 +12,7 @@ hidemeta: true
 
 {{< ico "brand-github" >}} **GITHUB :** PRIVATE REPO.  
 
-**DEMO :** <https://highnessatharva.github.io/Elden-Ring-Gallery/>
+{{< ico "archive">}} **DEMO :** <https://highnessatharva.github.io/Elden-Ring-Gallery/>
 
 - Recruiters, please [email](mailto:HighnessAtharva@gmail.com) to request access.
 - Developers and Creatives, if you need this content, please [email](mailto:HighnessAtharva@gmail.com) to request access. I can make a similar content for you if needed (charges will apply).

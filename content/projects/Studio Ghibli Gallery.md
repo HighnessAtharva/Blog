@@ -12,7 +12,7 @@ hidemeta: true
 
 {{< ico "brand-github" >}} **GITHUB :** PRIVATE REPO.  
 
-**DEMO :** <https://highnessatharva.github.io/Studio-Ghibli-Gallery/>
+{{< ico "archive">}} **DEMO :** <https://highnessatharva.github.io/Studio-Ghibli-Gallery/>
 
 - Recruiters, please [email](mailto:HighnessAtharva@gmail.com) to request access.
 - Developers and Creatives, if you need this content, please [email](mailto:HighnessAtharva@gmail.com) to request access. I can make a similar content for you if needed (charges will apply).
