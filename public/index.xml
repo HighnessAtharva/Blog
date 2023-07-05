@@ -6,7 +6,89 @@
     <description>Recent content in 📚All Posts on Atharva Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Jul 2023 00:19:35 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Jul 2023 19:19:36 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Studio Ghibli Gallery</title>
+      <link>https://atharvashah.netlify.app/projects/studio-ghibli-gallery/</link>
+      <pubDate>Mon, 03 Jul 2023 19:19:36 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/projects/studio-ghibli-gallery/</guid>
+      <description>A Slick Gallery of Studio Ghibli Characters, Bosses, Dragons and NPCs. Interactive cards made with anime.js that will leave you in awe of the game design.</description>
+    </item>
+    
+    <item>
+      <title>Elden Ring Gallery</title>
+      <link>https://atharvashah.netlify.app/projects/elden-ring-gallery/</link>
+      <pubDate>Mon, 03 Jul 2023 19:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/projects/elden-ring-gallery/</guid>
+      <description>A Slick Gallery of Elden Ring Characters, Bosses, Dragons and NPCs. Interactive cards made with anime.js that will leave you in awe of the game design.</description>
+    </item>
+    
+    <item>
+      <title>Food Online - Multivendor Restaurant Management</title>
+      <link>https://atharvashah.netlify.app/projects/food-online/</link>
+      <pubDate>Mon, 03 Jul 2023 19:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/projects/food-online/</guid>
+      <description>GITHUB : https://github.com/HighnessAtharva/FoodOnline
+Project Summary This project, developed during a Udemy course, aims to create a multi-vendor restaurant marketplace in Ireland. The platform allows restaurant owners to register, manage their restaurant menus, receive orders, track earnings, and handle revenue payments. Customers can register, search for nearby restaurants, place orders, and purchase food from their favorite establishments. The focus of this project was on the backend development, utilizing the Django framework and various technologies to create a functional and user-friendly application.</description>
+    </item>
+    
+    <item>
+      <title>Malazan Book of the Fallen Compendium</title>
+      <link>https://atharvashah.netlify.app/projects/malazan-compendium/</link>
+      <pubDate>Mon, 03 Jul 2023 19:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/projects/malazan-compendium/</guid>
+      <description>GITHUB :</description>
+    </item>
+    
+    <item>
+      <title>Media Analysis - Entertainment Data Visualized</title>
+      <link>https://atharvashah.netlify.app/projects/media-analysis/</link>
+      <pubDate>Mon, 03 Jul 2023 19:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/projects/media-analysis/</guid>
+      <description>GITHUB :</description>
+    </item>
+    
+    <item>
+      <title>MusicCLI - Music Rating, Review and Tier List Maker</title>
+      <link>https://atharvashah.netlify.app/projects/musiccli/</link>
+      <pubDate>Mon, 03 Jul 2023 19:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/projects/musiccli/</guid>
+      <description>GITHUB :</description>
+    </item>
+    
+    <item>
+      <title>Reputation Analysis - Organizational Threats with NLP</title>
+      <link>https://atharvashah.netlify.app/projects/reputation-analysis-crif/</link>
+      <pubDate>Mon, 03 Jul 2023 19:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/projects/reputation-analysis-crif/</guid>
+      <description>**GITHUB :**GITHUB :</description>
+    </item>
+    
+    <item>
+      <title>What You Doing Right Now? Social Media Platform</title>
+      <link>https://atharvashah.netlify.app/projects/what-you-doing-right-now/</link>
+      <pubDate>Mon, 03 Jul 2023 19:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/projects/what-you-doing-right-now/</guid>
+      <description>GITHUB :</description>
+    </item>
+    
+    <item>
+      <title>VocabCLI - Vocabulary Builder and TextStat Tool</title>
+      <link>https://atharvashah.netlify.app/projects/vocabcli/</link>
+      <pubDate>Mon, 03 Jul 2023 19:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/projects/vocabcli/</guid>
+      <description>Lightweight CLI for Dictionary Lookups, Vocabulary Building, Quote Saving with Rich Markup, Graph Reporting and Flashcard Exports</description>
+    </item>
+    
     <item>
       <title>Awesome Hugo Shortcodes For Your Websites</title>
       <link>https://atharvashah.netlify.app/posts/tech/hugo-shortcodes/</link>

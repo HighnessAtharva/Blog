@@ -20,13 +20,13 @@ I have already covered my favorite quotes from this comic series in the previous
 
 {{< figure src="/blog/Chapter01.webp" width="180" alt="Watchmen Issue #1" class="left" >}}
 
-In this first issue, the foundation of Watchmen's narrative is skillfully laid by Alan Moore, leaving readers hungry for more. The character-driven storyline introduces a vast cast of characters, which may initially pose a challenge in keeping track, but the build-up toward the end is palpable on every page. The attention to detail and depth in both the storytelling and the artwork demand the reader's full attention. The art is commendable, but it is the script and the flow of the text bubbles that truly shine, immersing readers in the world of Watchmen.With just this taste, I am eagerly anticipating the rest of the series, eager to see where the story leads.
+In this first issue, the foundation of Watchmen's narrative is skillfully laid by Alan Moore, leaving readers hungry for more. The character-driven storyline introduces a vast cast of characters, which may initially pose a challenge in keeping track, but the build-up toward the end is palpable on every page. The attention to detail and depth in both the storytelling and the artwork demand the reader's full attention. The art is commendable, but it is the script and the flow of the text bubbles that truly shine, immersing readers in the world of Watchmen. With just this taste, I am eagerly anticipating the rest of the series, eager to see where the story leads.
 
 ### Issue #2: Absent Friends
 
 {{< figure src="/blog/Chapter02.webp" width="180" alt="Watchmen Issue #2" class="right" >}}
 
-As Watchmen progresses, the story becomes clearer, offering glimpses into character elements and hidden plot points. This issue delves into the disbanding of the Minutemen and the formation of the Watchmen, a league of superheroes striving for a better America and a better world.Dr. Manhattan's supernatural powers prove fascinating, adding a layer of intrigue to the unfolding events. The presence of a conspiratorial undertone yet to be fully revealed heightens the anticipation and deepens the complexity of the story. Through a seamless fusion of side quotes, tags, and merging comic panels, the writers and artists of Watchmen masterfully engross the reader in this steadily and boldly told masterpiece.
+As Watchmen progresses, the story becomes clearer, offering glimpses into character elements and hidden plot points. This issue delves into the disbanding of the Minutemen and the formation of the Watchmen, a league of superheroes striving for a better America and a better world. Dr. Manhattan's supernatural powers prove fascinating, adding a layer of intrigue to the unfolding events. The presence of a conspiratorial undertone yet to be fully revealed heightens the anticipation and deepens the complexity of the story. Through a seamless fusion of side quotes, tags, and merging comic panels, the writers and artists of Watchmen masterfully engross the reader in this steadily and boldly told masterpiece.
 
 ### Issue #3: The Judge of All the Earth
 
@@ -44,7 +44,7 @@ Issue #4 of Watchmen is a game-changer, reshaping the reading experience with it
 
 {{< figure src="/blog/Chapter05.webp" width="180" alt="Watchmen Issue #5" class="left" >}}
 
-Issue #5 of Watchmen returns with a surge of momentum, elevating the stakes and highlighting the world's decay. Rorschach's intense and reckless investigation pulls readers into a web of conspiracies and escalating dangers. The narrative explores the degradation of the world and the unchecked course of modern civilization, effectively painting a grim portrait.The story's symmetry, with parallels drawing intriguing connections, showcases the writers' keen storytelling instincts. Unexpected twists and the incorporation of another comic book within the narrative offer readers a contextual guide, deepening their understanding of Watchmen's themes and issues.
+Issue #5 of Watchmen returns with a surge of momentum, elevating the stakes and highlighting the world's decay. Rorschach's intense and reckless investigation pulls readers into a web of conspiracies and escalating dangers. The narrative explores the degradation of the world and the unchecked course of modern civilization, effectively painting a grim portrait. The story's symmetry, with parallels drawing intriguing connections, showcases the writers' keen storytelling instincts. Unexpected twists and the incorporation of another comic book within the narrative offer readers a contextual guide, deepening their understanding of Watchmen's themes and issues.
 
 ### Issue #6: The Abyss Gazes Also
 

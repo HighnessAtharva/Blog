@@ -2,7 +2,7 @@ baseURL: "https://atharvashah.netlify.app/"
 languageCode: en-us
 title: Atharva Shah
 paginate: 5
-theme: PaperMod
+theme: ['hugo-shortcode-roneo-collection','PaperMod']
 
 #This will stop tracking in July 2023. Just migrate to Analytics 4 and make changes in hugo. Google it. You'll be fine.
 googleAnalytics: UA-216150796-2 
@@ -117,14 +117,19 @@ params:
       Content: Welcome, this is where I blog about programming, entertainment and life.
     
     socialIcons:
-      - name: twitter
-        url: "https://twitter.com/HighnessAlex"
       - name: github
         url: "https://github.com/HighnessAtharva"
       - name : linkedin
         url : https://www.linkedin.com/in/atharva-shah-5873a2111/
       - name: email
         url: "mailto:highnessatharva@gmail.com"
+      - name: twitter
+        url: "https://twitter.com/cultist_dev"
+      - name: letterboxd
+        url: "https://letterboxd.com/HighnessAtharva"
+      - name: lastfm
+        url: "https://www.last.fm/user/HighnessAtharva"
+      
     
     profileMode:
       
@@ -142,10 +147,14 @@ params:
         #   url: /about/
         # - name: Blog 📝
         #   url: blog
-        - name : Archive ⌛
-          url: /archives/
-        - name : Tags 🏷️
-          url: /tags/
+        # - name : Archive ⌛
+        #   url: /archives/
+        # - name : Tags 🏷️
+        #   url: /tags/
+        - name: Projects 🛠️
+          url: /projects/
+        - name: Portfolio ⚡
+          url: https://highnessatharva.github.io 
         - name : Resume 🎓
           url: https://github.com/HighnessAtharva/Resume/blob/master/Atharva%20Shah%20Resume%202023.pdf 
 
