@@ -7,7 +7,7 @@ cover:
     alt: Gothic Violence by Mika Ma
     caption: A few notable quotes from the wild and wondeful mind of Mike Ma in his book Gothic Violence.
 description: "A few notable quotes from the wild and wondeful mind of Mike Ma in his book Gothic Violence."
-tags: ["book quotes", "fiction"]
+tags: ["quotes", "fiction"]
 ---
 
 Emerging from the literary depths, following the consuming voyage through "Harassment Architecture," I eagerly embarked upon the haunting terrain of "Gothic Violence." In this eagerly awaited sequel, my anticipation was richly rewarded, for within its pages lie potent and evocative fragments of prose that reverberate with profound resonance. While the quantity may be lesser than its predecessor, the impact remains undiminished, as the narrative unfurls with a potent force, relentlessly piercing the reader's consciousness.

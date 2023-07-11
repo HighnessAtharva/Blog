@@ -2,10 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://atharvashah.netlify.app/projects/</loc>
-    <lastmod>2023-07-03T19:19:36+05:30</lastmod>
+    <loc>https://atharvashah.netlify.app/posts/</loc>
+    <lastmod>2023-07-10T23:21:35+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/</loc>
+    <lastmod>2023-07-10T23:21:35+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/personal/game-quotes/elden-ring-quotes/</loc>
+    <lastmod>2023-07-10T23:21:35+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/quotes/</loc>
+    <lastmod>2023-07-10T23:21:35+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/personal/</loc>
+    <lastmod>2023-07-10T23:21:35+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/</loc>
+    <lastmod>2023-07-10T23:21:35+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/personal/anime-quotes/neon-genesis-evangelion-quotes/</loc>
+    <lastmod>2023-07-10T23:20:40+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/personal/anime-quotes/naruto-quotes/</loc>
+    <lastmod>2023-07-10T23:20:38+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/personal/game-quotes/doom-quotes/</loc>
+    <lastmod>2023-07-10T23:20:35+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/personal/anime-quotes/dbz-quotes/</loc>
+    <lastmod>2023-07-10T23:20:35+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/personal/anime-quotes/cowboy-bebop-quotes/</loc>
+    <lastmod>2023-07-10T23:19:35+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/personal/anime-quotes/berserk-quotes/</loc>
+    <lastmod>2023-07-10T23:19:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-sin-city-graphic-novel-by-frank-miller/</loc>
+    <lastmod>2023-07-10T02:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/fiction/</loc>
+    <lastmod>2023-07-10T02:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/projects/</loc>
     <lastmod>2023-07-03T19:19:36+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/projects/studio-ghibli-gallery/</loc>
@@ -38,16 +77,10 @@
     <loc>https://atharvashah.netlify.app/posts/tech/</loc>
     <lastmod>2023-07-02T00:19:35+05:30</lastmod>
   </url><url>
-    <loc>https://atharvashah.netlify.app/posts/</loc>
-    <lastmod>2023-07-02T00:19:35+05:30</lastmod>
-  </url><url>
     <loc>https://atharvashah.netlify.app/posts/tech/hugo-shortcodes/</loc>
     <lastmod>2023-07-02T00:19:35+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/technology/</loc>
-    <lastmod>2023-07-02T00:19:35+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/tags/</loc>
     <lastmod>2023-07-02T00:19:35+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/book-review/</loc>
@@ -57,9 +90,6 @@
     <lastmod>2023-07-02T00:19:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/posts/personal/book-review/watchmen-comic-review/</loc>
-    <lastmod>2023-07-02T00:19:34+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/posts/personal/</loc>
     <lastmod>2023-07-02T00:19:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/manga/</loc>
@@ -114,12 +144,6 @@
     <lastmod>2023-06-05T01:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-gothic-violence-by-mike-ma/</loc>
-    <lastmod>2023-06-04T02:18:34+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/tags/book-quotes/</loc>
-    <lastmod>2023-06-04T02:18:34+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/tags/fiction/</loc>
     <lastmod>2023-06-04T02:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-harassment-architechture-by-mike-ma/</loc>
@@ -231,6 +255,9 @@
     <lastmod>2022-07-10T23:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-broken-empire-trilogy-by-mark-lawrence/</loc>
+    <lastmod>2022-07-10T23:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/book-quotes/</loc>
     <lastmod>2022-07-10T23:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/posts/tech/dsapython/dp/</loc>

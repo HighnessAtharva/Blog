@@ -7,7 +7,7 @@ cover:
     alt: Nevernight Trilogy by Jay Kristoff
     caption: That goat-loving, mule-sucking, pig-fucking sonofabitch
 description: "Favorite Quotes from Nevernight Trilogy by Jay Kristoff. A blood-curdling, brutalist masterpiece."
-tags: ["book quotes", "fantasy"] 
+tags: ["quotes", "fantasy"] 
 ---
 
 >*Let's not mess around here. This series has just more than quotes to offer so I have included rich descriptive texts that boil the blood and wake something deep inside. Here's to the good times fellas. Read on for some savage blood-curdling brutalism.*
