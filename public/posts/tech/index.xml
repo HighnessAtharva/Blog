@@ -6,7 +6,16 @@
     <description>Recent content in 💻 Tech Posts on Atharva Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Jul 2023 00:19:35 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Jul 2023 15:18:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Stay Organized In Chrome</title>
+      <link>https://atharvashah.netlify.app/posts/tech/how-i-stay-organized-in-chrome/</link>
+      <pubDate>Wed, 12 Jul 2023 15:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/how-i-stay-organized-in-chrome/</guid>
+      <description>Super simple tab management to take the hassle of tab hoarding out of your life. Partizion is a Chrome extension to simplify your organization and boost your productivity.</description>
+    </item>
+    
     <item>
       <title>Awesome Hugo Shortcodes For Your Websites</title>
       <link>https://atharvashah.netlify.app/posts/tech/hugo-shortcodes/</link>
