@@ -1,7 +1,7 @@
 ---
 title: "Best Quotes from Avatar The Last Airbender"
 date: 2023-07-10T23:21:35+05:30
-draft: true
+draft: false
 cover: 
     image: blog/quotes/atla.webp
     alt: Awesome quotes from Avatar The Last Airbender

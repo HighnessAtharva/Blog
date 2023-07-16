@@ -2,7 +2,7 @@
 
 title: "Best Quotes from Mindhunter"
 date: 2023-07-10T23:21:38+05:30
-draft: true
+draft: false
 cover:
     image: blog/quotes/mindhunter.webp
     alt: Awesome quotes from Mindhunter

@@ -2,7 +2,7 @@
 
 title: "Best Quotes from Rick and Morty"
 date: 2023-07-10T23:21:40+05:30
-draft: true
+draft: false
 cover:
     image: blog/quotes/rick-and-morty.webp
     alt: Awesome quotes from Rick and Morty

@@ -1,7 +1,7 @@
 ---
 title: "Best Quotes from Game of Thrones"
 date: 2023-07-10T23:21:37+05:30
-draft: true
+draft: false
 cover: 
     image: blog/quotes/got.webp
     alt: Awesome quotes from Game of Thrones

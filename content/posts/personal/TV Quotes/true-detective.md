@@ -1,7 +1,7 @@
 ---
 title: "Best Quotes from True Detective"
 date: 2023-07-10T23:21:50+05:30
-draft: true
+draft: false
 cover:
     image: blog/quotes/true-detective.webp
     alt: Awesome quotes from True Detective

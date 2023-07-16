@@ -1,7 +1,7 @@
 ---
 title: "Best Quotes from Bojack Horseman"
 date: 2023-07-10T23:21:36+05:30
-draft: true
+draft: false
 cover: 
     image: blog/quotes/bojack.webp
     alt: Awesome quotes from Bojack Horseman

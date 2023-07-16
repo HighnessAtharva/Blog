@@ -2,7 +2,7 @@
 
 title: "Best Quotes from Mr Robot"
 date: 2023-07-10T23:21:39+05:30
-draft: true
+draft: false
 cover:
     image: blog/quotes/mr-robot.webp
     alt: Awesome quotes from Mr Robot
