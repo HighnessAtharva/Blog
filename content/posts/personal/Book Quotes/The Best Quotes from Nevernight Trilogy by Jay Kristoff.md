@@ -3,7 +3,7 @@ title: "Best Quotes from Nevernight Trilogy"
 date: 2022-07-11T23:18:34+05:30
 draft: false
 cover: 
-    image: blog/quotes/nevernight-quotes.jpeg
+    image: blog/quotes/nevernight-quotes.webp
     alt: Nevernight Trilogy by Jay Kristoff
     caption: That goat-loving, mule-sucking, pig-fucking sonofabitch
 description: "Favorite Quotes from Nevernight Trilogy by Jay Kristoff. A blood-curdling, brutalist masterpiece."

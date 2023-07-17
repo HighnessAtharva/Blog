@@ -3,7 +3,7 @@ title: "The Best Quotes from H.P. Lovecraft"
 date: 2023-04-14T23:18:34+05:30
 draft: false
 cover:
-    image: blog/quotes/lovecraft.webp
+    image: blog/quotes/lovecraft-quotes.webp
     alt: "H.P. Lovecraft"
     caption: "The horror from the mind of H.P. Lovecraft"
 description: "Favorite Quotes from the mind of H.P. Lovecraft. Everything from Eldritch Monsters to the Necronomicon, we have them all."
@@ -39,9 +39,9 @@ when shall happiness find you? Ye toil to live, but is not life made of beauty a
 
 
 {{< galleries >}}
-{{< gallery src="/blog/quotes/lovecraft-7.webp" title="Eldritch Horrors">}}
-{{< gallery src="/blog/quotes/lovecraft-8.webp" title="Cosmic Nightmares">}}
-{{< gallery src="/blog/quotes/lovecraft-9.webp" title="Otherwordly Dimension">}}
+{{< gallery src="/blog/quotes/lovecraft/lovecraft-7.webp" title="Eldritch Horrors">}}
+{{< gallery src="/blog/quotes/lovecraft/lovecraft-8.webp" title="Cosmic Nightmares">}}
+{{< gallery src="/blog/quotes/lovecraft/lovecraft-9.webp" title="Otherwordly Dimension">}}
 {{< /galleries >}}
 
 
@@ -62,9 +62,9 @@ when shall happiness find you? Ye toil to live, but is not life made of beauty a
 >*There was a night when winds from unknown spaces whirled us irresistibly into limitless vacum beyond all thought and entity. Perceptions of the most maddeningly untransmissible sort thronged upon us; perceptions of infinity which at the time convulsed us with joy, yet which are now partly lost to my memory and partly incapable of presentation to others.*
 
 {{< galleries >}}
-{{< gallery src="/blog/quotes/lovecraft-4.webp" title="Tentacled Abominations">}}
-{{< gallery src="/blog/quotes/lovecraft-5.webp" title="Desolate Ruins">}}
-{{< gallery src="/blog/quotes/lovecraft-6.webp" title="Ancient Evils">}}
+{{< gallery src="/blog/quotes/lovecraft/lovecraft-4.webp" title="Tentacled Abominations">}}
+{{< gallery src="/blog/quotes/lovecraft/lovecraft-5.webp" title="Desolate Ruins">}}
+{{< gallery src="/blog/quotes/lovecraft/lovecraft-6.webp" title="Ancient Evils">}}
 {{< /galleries >}}
 
 >*The most merciful thing in the world, I think, is the inability of the human mind to correlate all its contents. We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far. The sciences, each straining in its own direction, have hitherto harmed us little; but some day the piecing together of dissociated knowledge will open up such terrifying vistas of reality, and of our frightful position therein, that we shall either go mad from the revelation or flee from the deadly light into the peace and safety of a new dark age.*
@@ -88,9 +88,9 @@ when shall happiness find you? Ye toil to live, but is not life made of beauty a
 >*Madness rides the star-wind ... claws and teeth sharpened on centuries of corpses ... dripping death astride a bacchanale of bats from nigh-black ruins of buried temples of Belial.*
 
 {{< galleries >}}
-{{< gallery src="/blog/quotes/lovecraft-1.webp" title="Seething Darkness">}}
-{{< gallery src="/blog/quotes/lovecraft-2.webp" title="Cursed Artifacts">}}
-{{< gallery src="/blog/quotes/lovecraft-3.webp" title="Forbidden Knowledge">}}
+{{< gallery src="/blog/quotes/lovecraft/lovecraft-1.webp" title="Seething Darkness">}}
+{{< gallery src="/blog/quotes/lovecraft/lovecraft-2.webp" title="Cursed Artifacts">}}
+{{< gallery src="/blog/quotes/lovecraft/lovecraft-3.webp" title="Forbidden Knowledge">}}
 {{< /galleries >}}
 
 >*I should describe mine own nature as tripartite, my interests consisting of three parallel and dissociated groups--(a) Love of the strange and fantastic. (b) Love of the abstract truth and of scientific logic. (c) Love of the ancient and the permanent. Sundry combinations of these three strains will probably account for all my odd tastes and eccentricities.*
