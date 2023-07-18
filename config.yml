@@ -129,6 +129,8 @@ params:
         url: "https://letterboxd.com/HighnessAtharva"
       - name: lastfm
         url: "https://www.last.fm/user/HighnessAtharva"
+      - name: rss
+        url: "/index.xml"
       
     
     profileMode:
