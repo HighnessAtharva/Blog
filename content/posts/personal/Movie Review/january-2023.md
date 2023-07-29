@@ -15,7 +15,7 @@ January 2023 brought a plethora of cinematic experiences my way, and I'm eager t
 ---
 **Click the banner below to follow me on Letterboxd and see what I'm watching next!**
 
-[![Follow me on Letterboxd](/blog/movie-review/lbx-follow.png)](https://letterboxd.com/highnessatharva/)
+[![Follow me on Letterboxd](/blog/movie-review/lbx-follow.webp)](https://letterboxd.com/highnessatharva/)
 
 ---
 

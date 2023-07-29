@@ -2,22 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://atharvashah.netlify.app/posts/tech/</loc>
-    <lastmod>2023-07-13T15:18:34+05:30</lastmod>
-  </url><url>
     <loc>https://atharvashah.netlify.app/posts/</loc>
-    <lastmod>2023-07-13T15:18:34+05:30</lastmod>
+    <lastmod>2023-07-29T00:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/</loc>
+    <lastmod>2023-07-29T00:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/personal/movie-review/july-2023/</loc>
+    <lastmod>2023-07-29T00:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/movie-review/</loc>
+    <lastmod>2023-07-29T00:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/personal/</loc>
+    <lastmod>2023-07-29T00:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/tags/</loc>
+    <lastmod>2023-07-29T00:18:34+05:30</lastmod>
+  </url><url>
+    <loc>https://atharvashah.netlify.app/posts/tech/</loc>
     <lastmod>2023-07-13T15:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/posts/tech/aws-cheatsheet/</loc>
     <lastmod>2023-07-13T15:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/aws/</loc>
-    <lastmod>2023-07-13T15:18:34+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/tags/</loc>
     <lastmod>2023-07-13T15:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/guest-post/</loc>
@@ -33,9 +42,6 @@
     <lastmod>2023-07-10T23:21:50+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/quotes/</loc>
-    <lastmod>2023-07-10T23:21:50+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/posts/personal/</loc>
     <lastmod>2023-07-10T23:21:50+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/posts/personal/tv-quotes/rick-and-morty/</loc>
@@ -141,9 +147,6 @@
     <lastmod>2023-06-24T01:18:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/posts/personal/movie-review/june-2023/</loc>
-    <lastmod>2023-06-18T00:00:34+05:30</lastmod>
-  </url><url>
-    <loc>https://atharvashah.netlify.app/tags/movie-review/</loc>
     <lastmod>2023-06-18T00:00:34+05:30</lastmod>
   </url><url>
     <loc>https://atharvashah.netlify.app/tags/python/</loc>

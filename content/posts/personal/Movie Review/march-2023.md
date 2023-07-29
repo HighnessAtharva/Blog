@@ -15,7 +15,7 @@ Lights, camera, action! March 2023 was a month filled with movie magic, and I ha
 ---
 **Click the banner below to follow me on Letterboxd and see what I'm watching next!**
 
-[![Follow me on Letterboxd](/blog/movie-review/lbx-follow.png)](https://letterboxd.com/highnessatharva/)
+[![Follow me on Letterboxd](/blog/movie-review/lbx-follow.webp)](https://letterboxd.com/highnessatharva/)
 
 ---
 
