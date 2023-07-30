@@ -11,7 +11,7 @@
 Project Summary The Reputation Analysis project aims to build a framework/utility that analyzes news articles related to a specific company and presents any reputational threatening data on a concise dashboard. The solution involves web scraping, text processing, natural language processing (NLP), and data analysis techniques to gather, analyze, and visualize information from media articles. &lt;!DOCTYPE html&gt;Project Tech Stack The project utilizes the following technologies and tools:">
 <meta name="author" content="">
 <link rel="canonical" href="https://atharvashah.netlify.app/projects/reputation-analysis/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.c19a374e5be27b647387e70d296177fd3896b48c1447063d1d5f12f98bd15861.css" integrity="sha256-wZo3Tlvie2Rzh&#43;cNKWF3/TiWtIwURwY9HV8S&#43;YvRWGE=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.654a1c80c8e26dd6db8000f4efdce1f39ad50ad30541a0531274fff961afd7e8.css" integrity="sha256-ZUocgMjibdbbgAD079zh85rVCtMFQaBTEnT/&#43;WGv1&#43;g=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://atharvashah.netlify.app/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://atharvashah.netlify.app/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://atharvashah.netlify.app/favicon-32x32.png">
@@ -195,7 +195,8 @@ Project Summary The Reputation Analysis project aims to build a framework/utilit
             </li>
         </ul>
     </nav>
-</header><main class="main">
+</header>
+    <main class="main">
 
 <article class="post-single">
     <header class="post-header">
@@ -562,16 +563,15 @@ Project Summary The Reputation Analysis project aims to build a framework/utilit
 </script>
 </article>
 <script>
-    <!-- SCROLLING PROGRESS BAR -->
-    const scrollProgress = document.getElementById('scroll-progress');
-const height =
-  document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  <!-- SCROLLING PROGRESS BAR -->
+  const scrollProgress = document.getElementById('scroll-progress');
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
-window.addEventListener('scroll', () => {
-  const scrollTop =
-    document.body.scrollTop || document.documentElement.scrollTop;
-  scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
-});
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollPercentage = (scrollTop / height) * 100;
+    scrollProgress.style.width = `${scrollPercentage}%`;
+  });
 </script>
     </main>
     

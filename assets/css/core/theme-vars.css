@@ -68,10 +68,43 @@
 
 
   #scroll-progress {
-  position: fixed;
-  top: 0;
-  width: 0%;
-  height: 5px;
-  background: #7983ff;
-  z-index: 10000;
-}
+      position: fixed;
+      top: 0;
+      width: 0%;
+      height: 5px;
+      background: #7983ff;
+      z-index: 10000;
+  }
+
+  main.post-main {
+      position: relative;
+      min-height: calc(100vh - var(--header-height) - var(--footer-height));
+      max-width: 80%;
+      margin: auto;
+      grid-column-gap: 2%;
+      display: grid;
+      grid-template-columns: 6fr 6fr 6fr;
+      padding: var(--gap);
+  }
+
+
+  nav.pagination {
+      float: left;
+      left: 0;
+      right: 0;
+      position: absolute;
+  }
+
+  nav.pagination>a.next {
+      margin-right: 27%;
+      margin-left: auto;
+
+      width: max-content;
+  }
+
+  nav.pagination>a.prev {
+      margin-right: auto;
+      margin-left: 27%;
+      
+      width: max-content;
+  }

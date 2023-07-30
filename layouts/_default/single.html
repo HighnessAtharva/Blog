@@ -57,17 +57,17 @@
   {{- end }}
 </article>
 <script>
-    <!-- SCROLLING PROGRESS BAR -->
-    const scrollProgress = document.getElementById('scroll-progress');
-const height =
-  document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  <!-- SCROLLING PROGRESS BAR -->
+  const scrollProgress = document.getElementById('scroll-progress');
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
-window.addEventListener('scroll', () => {
-  const scrollTop =
-    document.body.scrollTop || document.documentElement.scrollTop;
-  scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
-});
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollPercentage = (scrollTop / height) * 100;
+    scrollProgress.style.width = `${scrollPercentage}%`;
+  });
 </script>
+
 
 {{- end }}{{/* end main */}}
 
