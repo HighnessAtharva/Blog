@@ -79,7 +79,7 @@
   main.post-main {
       position: relative;
       min-height: calc(100vh - var(--header-height) - var(--footer-height));
-      max-width: 80%;
+      max-width: 90%; /* Adjust width for tablets */
       margin: auto;
       grid-column-gap: 2%;
       display: grid;
@@ -106,5 +106,39 @@
       margin-right: auto;
       margin-left: 27%;
       
-      width: max-content;
   }
+  @media (max-width: 991px) {
+    main.post-main {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the minimum width as needed */
+      max-width: 90%; /* Adjust width for tablets */
+    }
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 767px) {
+    main.post-main {
+      grid-template-columns: 1fr; /* Single column for mobile */
+      max-width: 95%; /* Adjust width for smaller screens */
+      padding: 2% 5%; /* Adjust padding for smaller screens */
+    }
+  
+    nav.pagination {
+      position: relative; /* Remove absolute positioning for mobile */
+      float: none; /* Remove float for mobile */
+      text-align: center; /* Center the pagination links for mobile */
+      margin: 20px 0; /* Add margin to create space between content and pagination */
+    }
+  
+    nav.pagination>a.next {
+      margin-right: auto; /* Center the 'next' link for mobile */
+      margin-left: auto; /* Center the 'prev' link for mobile */
+      display: block; /* Display links as blocks to take full width */
+    }
+  
+    nav.pagination>a.prev {
+      margin-right: auto; /* Center the 'prev' link for mobile */
+      margin-left: auto; /* Center the 'next' link for mobile */
+      display: block; /* Display links as blocks to take full width */
+    }
+  }
+  
