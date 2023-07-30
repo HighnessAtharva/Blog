@@ -21,7 +21,7 @@ January 2023 brought a plethora of cinematic experiences my way, and I'm eager t
 
 ## To Die For, 1995 - ★★½
   
-![To Die For, 1995 - ★★½](https://a.ltrbxd.com/resized/sm/upload/6u/j0/hc/6e/zCREx8trzejNieDLUsRuwLU0cS3-0-600-0-900-crop.jpg?v=c8c48f0d2b)
+{{< figure src="https://a.ltrbxd.com/resized/sm/upload/6u/j0/hc/6e/zCREx8trzejNieDLUsRuwLU0cS3-0-600-0-900-crop.jpg?v=c8c48f0d2b" width="300" alt="To Die For" class="right" >}}
 
 **Watched on**: 31 January 2023
 
@@ -33,7 +33,7 @@ January 2023 brought a plethora of cinematic experiences my way, and I'm eager t
 
 ## Andrew Schulz: Infamous, 2022 - ★★★★
   
-![Andrew Schulz: Infamous, 2022 - ★★★★](https://a.ltrbxd.com/resized/film-poster/9/0/0/0/1/4/900014-andrew-schulz-infamous-0-600-0-900-crop.jpg?v=79fdd36d20)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/9/0/0/0/1/4/900014-andrew-schulz-infamous-0-600-0-900-crop.jpg?v=79fdd36d20" width="300" alt="Andrew Schulz: Infamous" class="left" >}}
 
 **Watched on**: 18 January 2023
 
@@ -45,7 +45,7 @@ January 2023 brought a plethora of cinematic experiences my way, and I'm eager t
 
 ## Bio Hunter, 1995 - ★★★
   
-![Bio Hunter, 1995 - ★★★](https://a.ltrbxd.com/resized/film-poster/8/9/2/3/8923-bio-hunter-0-600-0-900-crop.jpg?v=c2323548e7)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/8/9/2/3/8923-bio-hunter-0-600-0-900-crop.jpg?v=c2323548e7" width="300" alt="Bio Hunter" class="right" >}}
 
 **Watched on**: 15 January 2023
 
@@ -57,7 +57,7 @@ January 2023 brought a plethora of cinematic experiences my way, and I'm eager t
 
 ## Wicked City, 1987 - ★★★½
   
-![Wicked City, 1987 - ★★★½](https://a.ltrbxd.com/resized/film-poster/3/8/3/9/4/38394-wicked-city-0-600-0-900-crop.jpg?v=564e5b8ec8)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/3/8/3/9/4/38394-wicked-city-0-600-0-900-crop.jpg?v=564e5b8ec8" width="300" alt="Wicked City" class="left" >}}
 
 **Watched on**: 15 January 2023
 
@@ -69,7 +69,7 @@ January 2023 brought a plethora of cinematic experiences my way, and I'm eager t
 
 ## Bullet Train, 2022 - ★★★½
   
-![Bullet Train, 2022 - ★★★½](https://a.ltrbxd.com/resized/film-poster/6/4/1/9/6/1/641961-bullet-train-0-600-0-900-crop.jpg?v=9245faa1ba)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/6/4/1/9/6/1/641961-bullet-train-0-600-0-900-crop.jpg?v=9245faa1ba" width="300" alt="Bullet Train" class="right" >}}
 
 **Watched on**: 09 January 2023
 
@@ -81,7 +81,7 @@ January 2023 brought a plethora of cinematic experiences my way, and I'm eager t
 
 ## My Year of Dicks, 2022 - ★★★★
   
-![My Year of Dicks, 2022 - ★★★★](https://a.ltrbxd.com/resized/film-poster/8/7/3/7/9/9/873799-my-year-of-dicks-0-600-0-900-crop.jpg?v=75d391f993)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/8/7/3/7/9/9/873799-my-year-of-dicks-0-600-0-900-crop.jpg?v=75d391f993" width="300" alt="My Year of Dicks" class="left" >}}
 
 **Watched on**: 07 January 2023
 
@@ -93,7 +93,7 @@ January 2023 brought a plethora of cinematic experiences my way, and I'm eager t
 
 ## The Menu, 2022 - ★★★★½
   
-![The Menu, 2022 - ★★★★½](https://a.ltrbxd.com/resized/film-poster/5/2/1/3/2/3/521323-the-menu-0-600-0-900-crop.jpg?v=d00a0d03a8)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/5/2/1/3/2/3/521323-the-menu-0-600-0-900-crop.jpg?v=d00a0d03a8" width="300" alt="The Menu" class="right" >}}
 
 **Watched on**: 03 January 2023
 
@@ -105,7 +105,7 @@ January 2023 brought a plethora of cinematic experiences my way, and I'm eager t
 
 ## Moonrise Kingdom, 2012 - ★★★★
   
-![Moonrise Kingdom, 2012 - ★★★★](https://a.ltrbxd.com/resized/sm/upload/v5/7f/mn/y8/ysTohGF7NY9Z6MYz9vLNYiyzh0r-0-600-0-900-crop.jpg?v=689b2b9ee8)
+{{< figure src="https://a.ltrbxd.com/resized/sm/upload/v5/7f/mn/y8/ysTohGF7NY9Z6MYz9vLNYiyzh0r-0-600-0-900-crop.jpg?v=689b2b9ee8" width="300" alt="Moonrise Kingdom" class="left" >}}
 
 **Watched on**: 01 January 2023
 

@@ -21,7 +21,7 @@ February was a month for the ages as I indulged in a smorgasbord of movies. From
 
 ## Rush Hour 3, 2007 - ★★★
   
-![Rush Hour 3, 2007 - ★★★](https://a.ltrbxd.com/resized/film-poster/4/8/9/2/0/48920-rush-hour-3-0-600-0-900-crop.jpg?v=24f08c374e)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/4/8/9/2/0/48920-rush-hour-3-0-600-0-900-crop.jpg?v=24f08c374e" width="300" alt="Rush Hour 3" class="right" >}}
 
 **Watched on**: 26 February 2023
 
@@ -33,7 +33,7 @@ February was a month for the ages as I indulged in a smorgasbord of movies. From
 
 ## Rush Hour 2, 2001 - ★★★★
   
-![Rush Hour 2, 2001 - ★★★★](https://a.ltrbxd.com/resized/film-poster/4/8/9/1/9/48919-rush-hour-2-0-600-0-900-crop.jpg?v=3adbe0612d)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/4/8/9/1/9/48919-rush-hour-2-0-600-0-900-crop.jpg?v=3adbe0612d" width="300" alt="Rush Hour 2" class="left" >}}
 
 **Watched on**: 26 February 2023
 
@@ -45,7 +45,7 @@ February was a month for the ages as I indulged in a smorgasbord of movies. From
 
 ## Rush Hour, 1998 - ★★★½
   
-![Rush Hour, 1998 - ★★★½](https://a.ltrbxd.com/resized/film-poster/5/0/5/1/7/50517-rush-hour-0-600-0-900-crop.jpg?v=fa0689eb4f)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/5/0/5/1/7/50517-rush-hour-0-600-0-900-crop.jpg?v=fa0689eb4f" width="300" alt="Rush Hour" class="right" >}}
 
 **Watched on**: 25 February 2023
 
@@ -57,7 +57,7 @@ February was a month for the ages as I indulged in a smorgasbord of movies. From
 
 ## Nausicaä of the Valley of the Wind, 1984 - ★★★★
   
-![Nausicaä of the Valley of the Wind, 1984 - ★★★★](https://a.ltrbxd.com/resized/film-poster/5/1/9/6/9/51969-nausicaa-of-the-valley-of-the-wind-0-600-0-900-crop.jpg?v=059bc2bbc0)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/5/1/9/6/9/51969-nausicaa-of-the-valley-of-the-wind-0-600-0-900-crop.jpg?v=059bc2bbc0" width="300" alt="Nausicaä of the Valley of the Wind" class="left" >}}
 
 **Watched on**: 24 February 2023
 
@@ -69,7 +69,7 @@ February was a month for the ages as I indulged in a smorgasbord of movies. From
 
 ## Only God Forgives, 2013 - ★★★
   
-![Only God Forgives, 2013 - ★★★](https://a.ltrbxd.com/resized/film-poster/6/4/4/2/7/64427-only-god-forgives-0-600-0-900-crop.jpg?v=9f33177721)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/6/4/4/2/7/64427-only-god-forgives-0-600-0-900-crop.jpg?v=9f33177721" width="300" alt="Only God Forgives" class="right" >}}
 
 **Watched on**: 19 February 2023
 
@@ -81,7 +81,7 @@ February was a month for the ages as I indulged in a smorgasbord of movies. From
 
 ## Porco Rosso, 1992 - ★★★
   
-![Porco Rosso, 1992 - ★★★](https://a.ltrbxd.com/resized/sm/upload/pf/lk/cj/4e/nCx0EESDNxwXGn7rkCU6cvXTpIB-0-600-0-900-crop.jpg?v=67361260f7)
+{{< figure src="https://a.ltrbxd.com/resized/sm/upload/pf/lk/cj/4e/nCx0EESDNxwXGn7rkCU6cvXTpIB-0-600-0-900-crop.jpg?v=67361260f7" width="300" alt="Porco Rosso" class="left" >}}
 
 **Watched on**: 18 February 2023
 
@@ -93,7 +93,7 @@ February was a month for the ages as I indulged in a smorgasbord of movies. From
 
 ## Infinity Pool, 2023 - ★★★★½
   
-![Infinity Pool, 2023 - ★★★★½](https://a.ltrbxd.com/resized/film-poster/5/9/1/9/3/1/591931-infinity-pool-0-600-0-900-crop.jpg?v=1fdb8549ff)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/5/9/1/9/3/1/591931-infinity-pool-0-600-0-900-crop.jpg?v=1fdb8549ff" width="300" alt="Infinity Pool" class="right" >}}
 
 **Watched on**: 14 February 2023
 
@@ -105,7 +105,7 @@ February was a month for the ages as I indulged in a smorgasbord of movies. From
 
 ## Gonjiam: Haunted Asylum, 2018 - ★★★
   
-![Gonjiam: Haunted Asylum, 2018 - ★★★](https://a.ltrbxd.com/resized/film-poster/4/3/8/4/3/0/438430-gonjiam-haunted-asylum-0-600-0-900-crop.jpg?v=b15d8a88a6)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/4/3/8/4/3/0/438430-gonjiam-haunted-asylum-0-600-0-900-crop.jpg?v=b15d8a88a6" width="300" alt="Gonjiam: Haunted Asylum" class="left" >}}
 
 **Watched on**: 12 February 2023
 
@@ -117,7 +117,7 @@ February was a month for the ages as I indulged in a smorgasbord of movies. From
 
 ## Incantation, 2022 - ★★★
   
-![Incantation, 2022 - ★★★](https://a.ltrbxd.com/resized/film-poster/7/7/8/5/2/6/778526-incantation-0-600-0-900-crop.jpg?v=6c3dfde6b3)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/7/7/8/5/2/6/778526-incantation-0-600-0-900-crop.jpg?v=6c3dfde6b3" width="300" alt="Incantation" class="right" >}}
 
 **Watched on**: 12 February 2023
 
@@ -129,7 +129,7 @@ February was a month for the ages as I indulged in a smorgasbord of movies. From
 
 ## A Cure for Wellness, 2016 - ★★★★
   
-![A Cure for Wellness, 2016 - ★★★★](https://a.ltrbxd.com/resized/film-poster/2/7/0/1/7/7/270177-a-cure-for-wellness-0-600-0-900-crop.jpg?v=88a8852439)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/2/7/0/1/7/7/270177-a-cure-for-wellness-0-600-0-900-crop.jpg?v=88a8852439" width="300" alt="A Cure for Wellness" class="left" >}}
 
 **Watched on**: 10 February 2023
 
@@ -141,7 +141,7 @@ February was a month for the ages as I indulged in a smorgasbord of movies. From
 
 ## T2 Trainspotting, 2017 - ★★★½
   
-![T2 Trainspotting, 2017 - ★★★½](https://a.ltrbxd.com/resized/sm/upload/qb/bg/ys/eg/ckYQm2LWP7fqg16HvJ3hYfAXnpT-0-600-0-900-crop.jpg?v=5cbd8dc67c)
+{{< figure src="https://a.ltrbxd.com/resized/sm/upload/qb/bg/ys/eg/ckYQm2LWP7fqg16HvJ3hYfAXnpT-0-600-0-900-crop.jpg?v=5cbd8dc67c" width="300" alt="T2 Trainspotting" class="right" >}}
 
 **Watched on**: 07 February 2023
 
@@ -153,7 +153,7 @@ February was a month for the ages as I indulged in a smorgasbord of movies. From
 
 ## Solaris, 1972 - ★★★
   
-![Solaris, 1972 - ★★★](https://a.ltrbxd.com/resized/film-poster/5/1/5/2/8/51528-solaris-0-600-0-900-crop.jpg?v=18b2bcf9ce)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/5/1/5/2/8/51528-solaris-0-600-0-900-crop.jpg?v=18b2bcf9ce" width="300" alt="Solaris" class="left" >}}
 
 **Watched on**: 07 February 2023
 
@@ -165,7 +165,7 @@ February was a month for the ages as I indulged in a smorgasbord of movies. From
 
 ## Spring Breakers, 2012 - ★½
   
-![Spring Breakers, 2012 - ★½](https://a.ltrbxd.com/resized/film-poster/9/6/1/0/9/96109-spring-breakers-0-600-0-900-crop.jpg?v=419b8d6331)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/9/6/1/0/9/96109-spring-breakers-0-600-0-900-crop.jpg?v=419b8d6331" width="300" alt="Spring Breakers" class="right" >}}
 
 **Watched on**: 05 February 2023
 
@@ -177,7 +177,7 @@ February was a month for the ages as I indulged in a smorgasbord of movies. From
 
 ## Babylon, 2022 - ★★★½
   
-![Babylon, 2022 - ★★★½](https://a.ltrbxd.com/resized/film-poster/5/4/2/7/7/3/542773-babylon-0-600-0-900-crop.jpg?v=75f0bfce72)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/5/4/2/7/7/3/542773-babylon-0-600-0-900-crop.jpg?v=75f0bfce72" width="300" alt="Babylon" class="left" >}}
 
 **Watched on**: 01 February 2023
 

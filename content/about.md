@@ -1,27 +1,15 @@
 --- 
+title: About Me
 url: "/about/" 
 summary: Get to know me better
+type : page
 ShowWordCount: false
 ShowReadingTime: false
 ShowToc: false
 ShowBreadCrumbs: false
-type : page
 comments: false
 hidemeta: true
 ---
-
-```goat
- *  o  *  o  *  o  *  o  *  o  *  o  *  o  *  o  *  o  *  o  *  o  *  o  
-                                                                            
-  █████╗  ██████╗   ██████╗  ██╗   ██╗ ████████╗    ███╗   ███╗ ███████╗
- ██╔══██╗ ██╔══██╗ ██╔═══██╗ ██║   ██║ ╚══██╔══╝    ████╗ ████║ ██╔════╝
- ███████║ ██████╔╝ ██║   ██║ ██║   ██║    ██║       ██╔████╔██║ █████╗
- ██╔══██║ ██╔══██╗ ██║   ██║ ██║   ██║    ██║       ██║╚██╔╝██║ ██╔══╝    
- ██║  ██║ ██████╔╝ ╚██████╔╝ ╚██████╔╝    ██║       ██║ ╚═╝ ██║ ███████╗
- ╚═╝  ╚═╝ ╚═════╝   ╚═════╝   ╚═════╝     ╚═╝       ╚═╝     ╚═╝ ╚══════╝
- 
- *  o  *  o  *  o  *  o  *  o  *  o  *  o  *  o  *  o  *  o  *  o  *  o  
-```
 
 ![image info](/about/aboutcover.jpeg)
 

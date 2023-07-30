@@ -1,144 +1,200 @@
   /* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap'); */
 
   :root {
-      --gap: 24px;
-      --content-gap: 20px;
-      --nav-width: 1024px;
-      --main-width: 720px;
-      --header-height: 60px;
-      --footer-height: 60px;
-      --radius: 8px;
-      --theme: rgb(255, 255, 255);
-      --entry: rgb(255, 255, 255);
-      --primary: rgb(15, 15, 15);
-      --secondary: rgb(108, 108, 108);
-      --tertiary: rgb(214, 214, 214);
-      --content: rgb(31, 31, 31);
-      --hljs-bg: rgb(28, 29, 33);
-      --code-bg: rgb(245, 245, 245);
-      --border: rgb(238, 238, 238);
+    --gap: 24px;
+    --content-gap: 20px;
+    --nav-width: 1024px;
+    --main-width: 720px;
+    --header-height: 60px;
+    --footer-height: 60px;
+    --radius: 8px;
+    --theme: rgb(255, 255, 255);
+    --entry: rgb(255, 255, 255);
+    --primary: rgb(15, 15, 15);
+    --secondary: rgb(108, 108, 108);
+    --tertiary: rgb(214, 214, 214);
+    --content: rgb(31, 31, 31);
+    --hljs-bg: rgb(28, 29, 33);
+    --code-bg: rgb(245, 245, 245);
+    --border: rgb(238, 238, 238);
 
   }
 
   body {
-      /* font-family:  "Noto Serif", pingfang, sans-serif !important; */
+    /* font-family:  "Noto Serif", pingfang, sans-serif !important; */
   }
 
   .dark {
-      --theme: rgb(12, 12, 12);
-      --entry: rgb(46, 46, 51);
-      --primary: rgb(218, 218, 219);
-      --secondary: rgb(155, 156, 157);
-      --tertiary: rgb(65, 66, 68);
-      --content: rgb(196, 196, 197);
-      --hljs-bg: rgb(46, 46, 51);
-      --code-bg: rgb(55, 56, 62);
-      --border: rgb(51, 51, 51);
+    --theme: rgb(12, 12, 12);
+    --entry: rgb(46, 46, 51);
+    --primary: rgb(218, 218, 219);
+    --secondary: rgb(155, 156, 157);
+    --tertiary: rgb(65, 66, 68);
+    --content: rgb(196, 196, 197);
+    --hljs-bg: rgb(46, 46, 51);
+    --code-bg: rgb(55, 56, 62);
+    --border: rgb(51, 51, 51);
   }
 
   .list {
-      background: var(--code-bg);
+    background: var(--code-bg);
   }
 
   .dark.list {
-      background: var(--theme);
+    background: var(--theme);
   }
 
+  /* SHORTCODE IMAGE STYLING*/
+
   .right {
-      float: right;
-      max-width: 40%;
-      margin-left: 5px
+    float: right;
+    max-width: 40%;
+    margin-left: 5px
   }
 
   .left {
-      float: left;
-      max-width: 40%;
-      margin-right: 20px
+    float: left;
+    max-width: 40%;
+    margin-right: 20px;
   }
 
   .center {
-      display: block;
-      margin: auto;
-      text-align: center;
+    display: block;
+    margin: auto;
+    text-align: center;
   }
 
+  figure.left>img,
+  figure.right>img,
+  figure.center>img {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+
+
+  /* SHORTCODE IMAGE STYLING END*/
+
+
   #top-link {
-      margin-bottom: 40px;
+    margin-bottom: 40px;
   }
 
 
   #scroll-progress {
-      position: fixed;
-      top: 0;
-      width: 0%;
-      height: 5px;
-      background: #7983ff;
-      z-index: 10000;
+    position: fixed;
+    top: 0;
+    max-width: 100%;
+    width: 0%;
+    height: 5px;
+    background: #7983ff;
+    z-index: 10000;
+  }
+
+
+  /* FOOTER SOCIAL ICONS CUSTOM CSS ON HOVER */
+  div.share-buttons>:nth-child(1):hover {
+    color: rgb(0, 123, 255);
+  }
+
+  div.share-buttons>:nth-child(2):hover {
+    color: rgb(0, 46, 184);
+  }
+
+  div.share-buttons>:nth-child(3):hover {
+    color: rgb(255, 0, 0);
+  }
+
+  div.share-buttons>:nth-child(4):hover {
+    color: rgb(0, 46, 184);
+  }
+
+  div.share-buttons>:nth-child(5):hover {
+    color: rgb(0, 196, 78);
+  }
+
+  div.share-buttons>:nth-child(6):hover {
+    color: rgb(0, 123, 255);
   }
 
   main.post-main {
-      position: relative;
-      min-height: calc(100vh - var(--header-height) - var(--footer-height));
-      max-width: 90%; /* Adjust width for tablets */
-      margin: auto;
-      grid-column-gap: 2%;
-      display: grid;
-      grid-template-columns: 6fr 6fr 6fr;
-      padding: var(--gap);
+    position: relative;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    max-width: 90%;
+    /* Adjust width for tablets */
+    margin: auto;
+    grid-column-gap: 2%;
+    display: grid;
+    grid-template-columns: 6fr 6fr 6fr;
+    padding: var(--gap);
   }
 
 
   nav.pagination {
-      float: left;
-      left: 0;
-      right: 0;
-      position: absolute;
+    float: left;
+    left: 0;
+    right: 0;
+    position: absolute;
   }
 
   nav.pagination>a.next {
-      margin-right: 27%;
-      margin-left: auto;
+    margin-right: 27%;
+    margin-left: auto;
 
-      width: max-content;
+    width: max-content;
   }
 
   nav.pagination>a.prev {
-      margin-right: auto;
-      margin-left: 27%;
-      
+    margin-right: auto;
+    margin-left: 27%;
+
   }
+
   @media (max-width: 991px) {
     main.post-main {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the minimum width as needed */
-      max-width: 90%; /* Adjust width for tablets */
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      /* Adjust the minimum width as needed */
+      max-width: 90%;
+      /* Adjust width for tablets */
     }
   }
-  
+
   /* Mobile styles */
   @media (max-width: 767px) {
     main.post-main {
-      grid-template-columns: 1fr; /* Single column for mobile */
-      max-width: 95%; /* Adjust width for smaller screens */
-      padding: 2% 5%; /* Adjust padding for smaller screens */
+      grid-template-columns: 1fr;
+      /* Single column for mobile */
+      max-width: 95%;
+      /* Adjust width for smaller screens */
+      padding: 2% 5%;
+      /* Adjust padding for smaller screens */
     }
-  
+
     nav.pagination {
-      position: relative; /* Remove absolute positioning for mobile */
-      float: none; /* Remove float for mobile */
-      text-align: center; /* Center the pagination links for mobile */
-      margin: 20px 0; /* Add margin to create space between content and pagination */
+      position: relative;
+      /* Remove absolute positioning for mobile */
+      float: none;
+      /* Remove float for mobile */
+      text-align: center;
+      /* Center the pagination links for mobile */
+      margin: 20px 0;
+      /* Add margin to create space between content and pagination */
     }
-  
+
     nav.pagination>a.next {
-      margin-right: auto; /* Center the 'next' link for mobile */
-      margin-left: auto; /* Center the 'prev' link for mobile */
-      display: block; /* Display links as blocks to take full width */
+      margin-right: auto;
+      /* Center the 'next' link for mobile */
+      margin-left: auto;
+      /* Center the 'prev' link for mobile */
+      display: block;
+      /* Display links as blocks to take full width */
     }
-  
+
     nav.pagination>a.prev {
-      margin-right: auto; /* Center the 'prev' link for mobile */
-      margin-left: auto; /* Center the 'next' link for mobile */
-      display: block; /* Display links as blocks to take full width */
+      margin-right: auto;
+      /* Center the 'prev' link for mobile */
+      margin-left: auto;
+      /* Center the 'next' link for mobile */
+      display: block;
+      /* Display links as blocks to take full width */
     }
   }
-  

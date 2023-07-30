@@ -21,7 +21,7 @@ Lights, camera, action! March 2023 was a month filled with movie magic, and I ha
 
 ## Scream, 2022 - ★★½
 
-![Scream, 2022 - ★★½](https://a.ltrbxd.com/resized/film-poster/5/7/2/1/1/9/572119-scream-0-600-0-900-crop.jpg?v=9dc682121f)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/5/7/2/1/1/9/572119-scream-0-600-0-900-crop.jpg?v=9dc682121f" width="300" alt="Scream" class="right" >}}
 
 **Watched on**: 25 March 2023
 
@@ -33,7 +33,7 @@ Lights, camera, action! March 2023 was a month filled with movie magic, and I ha
 
 ## Scream 4, 2011 - ★★★½
 
-![Scream 4, 2011 - ★★★½](https://a.ltrbxd.com/resized/sm/upload/xw/xb/gx/5p/xEl8QQunHWUtf0dlKEbMXlfKSdr-0-600-0-900-crop.jpg?v=47e41f3237)
+{{< figure src="https://a.ltrbxd.com/resized/sm/upload/xw/xb/gx/5p/xEl8QQunHWUtf0dlKEbMXlfKSdr-0-600-0-900-crop.jpg?v=47e41f3237" width="300" alt="Scream 4" class="left" >}}
 
 **Watched on**: 23 March 2023
 
@@ -45,7 +45,7 @@ Lights, camera, action! March 2023 was a month filled with movie magic, and I ha
 
 ## Scream 3, 2000 - ★★★
 
-![Scream 3, 2000 - ★★★](https://a.ltrbxd.com/resized/film-poster/4/9/4/5/3/49453-scream-3-0-600-0-900-crop.jpg?v=7ba5075018)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/4/9/4/5/3/49453-scream-3-0-600-0-900-crop.jpg?v=7ba5075018" width="300" alt="Scream 3" class="right" >}}
 
 **Watched on**: 19 March 2023
 
@@ -57,7 +57,7 @@ Lights, camera, action! March 2023 was a month filled with movie magic, and I ha
 
 ## Scream 2, 1997 - ★★★½
 
-![Scream 2, 1997 - ★★★½](https://a.ltrbxd.com/resized/sm/upload/ju/sr/4r/t3/c5AyWNWooMGkJXlqLwmPQCjUwHt-0-600-0-900-crop.jpg?v=b19f368866)
+{{< figure src="https://a.ltrbxd.com/resized/sm/upload/ju/sr/4r/t3/c5AyWNWooMGkJXlqLwmPQCjUwHt-0-600-0-900-crop.jpg?v=b19f368866" width="300" alt="Scream 2" class="left" >}}
 
 **Watched on**: 18 March 2023
 
@@ -67,7 +67,7 @@ Lights, camera, action! March 2023 was a month filled with movie magic, and I ha
 
 ## First Reformed, 2017 - ★★★
 
-![First Reformed, 2017 - ★★★](https://a.ltrbxd.com/resized/sm/upload/25/z1/3z/xn/8HKA3Hwf8jQWy8TCYWr7C8Wft23-0-600-0-900-crop.jpg?v=79051e4cf2)
+{{< figure src="https://a.ltrbxd.com/resized/sm/upload/25/z1/3z/xn/8HKA3Hwf8jQWy8TCYWr7C8Wft23-0-600-0-900-crop.jpg?v=79051e4cf2" width="300" alt="First Reformed" class="right" >}}
 
 **Watched on**: 14 March 2023
 
@@ -79,7 +79,7 @@ First Reformed is a thought-provoking film that challenges the viewer's moral co
 
 ## Game Night, 2018 - ★★★½
 
-![Game Night, 2018 - ★★★½](https://a.ltrbxd.com/resized/film-poster/3/7/8/0/4/8/378048-game-night-0-600-0-900-crop.jpg?v=7216b8d79c)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/3/7/8/0/4/8/378048-game-night-0-600-0-900-crop.jpg?v=7216b8d79c" width="300" alt="Game Night" class="left" >}}
 
 **Watched on**: 12 March 2023
 
@@ -91,7 +91,7 @@ Game Night is like the ultimate game night with your coolest friends. And let's 
 
 ## Buffalo '66, 1998 - ★★★★
 
-![Buffalo '66, 1998 - ★★★★](https://a.ltrbxd.com/resized/sm/upload/eo/sj/w9/xl/taVFuUhUWoX9YE7bb2bWkSPjC9P-0-600-0-900-crop.jpg?v=94ae22e6f8)
+{{< figure src="https://a.ltrbxd.com/resized/sm/upload/eo/sj/w9/xl/taVFuUhUWoX9YE7bb2bWkSPjC9P-0-600-0-900-crop.jpg?v=94ae22e6f8" width="300" alt="Buffalo '66" class="right" >}}
 
 **Watched on**: 11 March 2023
 
@@ -103,7 +103,7 @@ Buffalo '66? More like Buffalo 'hits ya right in the feels'! This flick is the d
 
 ## Spencer, 2021 - ★★★½
 
-![Spencer, 2021 - ★★★½](https://a.ltrbxd.com/resized/film-poster/6/3/9/5/5/9/639559-spencer-0-600-0-900-crop.jpg?v=33938ea371)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/6/3/9/5/5/9/639559-spencer-0-600-0-900-crop.jpg?v=33938ea371" width="300" alt="Spencer" class="left" >}}
 
 **Watched on**: 11 March 2023
 
@@ -115,7 +115,7 @@ Spencer is like a peek into the life of a royal gone rogue. And let's be real - 
 
 ## Edward Scissorhands, 1990 - ★★★½
 
-![Edward Scissorhands, 1990 - ★★★½](https://a.ltrbxd.com/resized/film-poster/5/1/8/8/9/51889-edward-scissorhands-0-600-0-900-crop.jpg?v=38f2599419)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/5/1/8/8/9/51889-edward-scissorhands-0-600-0-900-crop.jpg?v=38f2599419" width="300" alt="Edward Scissorhands" class="right" >}}
 
 **Watched on**: 10 March 2023
 
@@ -127,7 +127,7 @@ Edward Scissorhands is like the Tim Burton movie to end all Tim Burton movies. J
 
 ## Promising Young Woman, 2020 - ★★★★
 
-![Promising Young Woman, 2020 - ★★★★](https://a.ltrbxd.com/resized/film-poster/5/1/0/0/4/7/510047-promising-young-woman-0-600-0-900-crop.jpg?v=21703347b6)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/5/1/0/0/4/7/510047-promising-young-woman-0-600-0-900-crop.jpg?v=21703347b6" width="300" alt="Promising Young Woman" class="left" >}}
 
 **Watched on**: 07 March 2023
 
@@ -139,7 +139,7 @@ Promising Young Woman is like the ultimate power play between men and women. The
 
 ## Secretary, 2002 - ★★★
 
-![Secretary, 2002 - ★★★](https://a.ltrbxd.com/resized/sm/upload/14/7l/a1/b6/dZaTYgy6sc6Z8ylaKdXw8yq5sRv-0-600-0-900-crop.jpg?v=59a0235b75)
+{{< figure src="https://a.ltrbxd.com/resized/sm/upload/14/7l/a1/b6/dZaTYgy6sc6Z8ylaKdXw8yq5sRv-0-600-0-900-crop.jpg?v=59a0235b75" width="300" alt="Secretary" class="right" >}}
 
 **Watched on**: 07 March 2023
 
@@ -151,7 +151,7 @@ Secretary, huh? This movie is definitely not your typical rom-com, that's for su
 
 ## The Weeknd: Live at SoFi Stadium, 2023 - ★★★½
 
-![The Weeknd: Live at SoFi Stadium, 2023 - ★★★½](https://a.ltrbxd.com/resized/film-poster/9/7/5/0/0/7/975007-the-weeknd-live-at-sofi-stadium-0-600-0-900-crop.jpg?v=b8fb5b5d83)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/9/7/5/0/0/7/975007-the-weeknd-live-at-sofi-stadium-0-600-0-900-crop.jpg?v=b8fb5b5d83" width="300" alt="The Weeknd: Live at SoFi Stadium" class="left" >}}
 
 **Watched on**: 05 March 2023
 
@@ -163,7 +163,7 @@ The Weeknd's concert had us feeling like we were part of the XO crew, with some 
 
 ## Primer, 2004 - ★★★★
 
-![Primer, 2004 - ★★★★](https://a.ltrbxd.com/resized/film-poster/2/6/8/2/2682-primer-0-600-0-900-crop.jpg?v=0e02010779)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/2/6/8/2/2682-primer-0-600-0-900-crop.jpg?v=0e02010779" width="300" alt="Primer" class="right" >}}
 
 **Watched on**: 04 March 2023
 
@@ -175,7 +175,7 @@ Primer takes time travel to a whole new level, leaving me in a loop that I can't
 
 ## Creepshow, 1982 - ★★★½
 
-![Creepshow, 1982 - ★★★½](https://a.ltrbxd.com/resized/sm/upload/n4/sm/so/1r/2oYLBnELBPbOKBQd9MKOqOmJ6aH-0-600-0-900-crop.jpg?v=6140c7ccce)
+{{< figure src="https://a.ltrbxd.com/resized/sm/upload/n4/sm/so/1r/2oYLBnELBPbOKBQd9MKOqOmJ6aH-0-600-0-900-crop.jpg?v=6140c7ccce" width="300" alt="Creepshow" class="left" >}}
 
 **Watched on**: 04 March 2023
 

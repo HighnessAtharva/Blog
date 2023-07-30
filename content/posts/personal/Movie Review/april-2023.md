@@ -21,7 +21,7 @@ April 2023 was an exciting month for movie enthusiasts, with a variety of genres
 
 ## Scream VI, 2023 - ★★★★
 
-![Scream VI, 2023 - ★★★★](https://a.ltrbxd.com/resized/film-poster/8/3/9/2/4/4/839244-scream-vi-0-600-0-900-crop.jpg?v=07a255685d)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/8/3/9/2/4/4/839244-scream-vi-0-600-0-900-crop.jpg?v=07a255685d" width="300" alt="Scream VI" class="right" >}}
 
 **Watched on**: 26 April 2023
 
@@ -33,7 +33,7 @@ April 2023 was an exciting month for movie enthusiasts, with a variety of genres
 
 ## Fresh, 2022 - ★★★★
 
-![Fresh, 2022 - ★★★★](https://a.ltrbxd.com/resized/film-poster/7/0/6/0/6/4/706064-fresh-0-600-0-900-crop.jpg?v=546285b96d)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/7/0/6/0/6/4/706064-fresh-0-600-0-900-crop.jpg?v=546285b96d" width="300" alt="Fresh" class="left" >}}
 
 **Watched on**: 21 April 2023
 
@@ -45,19 +45,23 @@ April 2023 was an exciting month for movie enthusiasts, with a variety of genres
 
 ## The Sixth Sense, 1999 - ★½
 
-![The Sixth Sense, 1999 - ★½](https://a.ltrbxd.com/resized/film-poster/5/1/4/0/7/51407-the-sixth-sense-0-600-0-900-crop.jpg?v=3a05a55f47)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/5/1/4/0/7/51407-the-sixth-sense-0-600-0-900-crop.jpg?v=3a05a55f47" width="300" alt="The Sixth Sense" class="right" >}}
 
 **Watched on**: 20 April 2023
 
 **Review**
 
- Boring ahh movie. Saw the ending plot twist coming miles before it happened. Any movie with a 6 to 13-year-old as a central character is bound to come off more or less as boring to me. Did not enjoy at all.
+ Boring ahh movie. Saw the ending plot twist coming miles before it happened. Any movie with a 6 to 13-year-old as a central character is bound to come off more or less as boring to me. Did not enjoy at all. Although there are a few cheats, it's a good idea. The following contains spoilers: His wife is staring at him in the restaurant, and how can a spirit open doors and engage in physical activity in the physical world? However, Osment's acting is really impressive for a ten-year-old.
+
+
+
+The Sixth Sense is a wannabe horror film that is simultaneously emotional and thought-provoking. It tries to convey horror but only sells on the aesthetic and the fear of the unknown.
 
 [Read on Letterboxd](https://letterboxd.com/highnessatharva/film/the-sixth-sense/)
 
 ## Ant-Man and the Wasp: Quantumania, 2023 - ★★★
 
-![Ant-Man and the Wasp: Quantumania, 2023 - ★★★](https://a.ltrbxd.com/resized/film-poster/5/6/6/2/3/7/566237-ant-man-and-the-wasp-quantumania-0-600-0-900-crop.jpg?v=27ced3fac4)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/5/6/6/2/3/7/566237-ant-man-and-the-wasp-quantumania-0-600-0-900-crop.jpg?v=27ced3fac4" width="300" alt="Ant Man and the Wasp: Quantumania" class="left" >}}
 
 **Watched on**: 20 April 2023
 
@@ -69,7 +73,7 @@ April 2023 was an exciting month for movie enthusiasts, with a variety of genres
 
 ## About Time, 2013 - ★★★★
 
-![About Time, 2013 - ★★★★](https://a.ltrbxd.com/resized/sm/upload/uo/th/yf/uz/zSuh8dGwqpsWR7ccvYbfxbSZ37o-0-600-0-900-crop.jpg?v=7276b6e978)
+{{< figure src="https://a.ltrbxd.com/resized/sm/upload/uo/th/yf/uz/zSuh8dGwqpsWR7ccvYbfxbSZ37o-0-600-0-900-crop.jpg?v=7276b6e978" width="300" alt="About Time" class="right" >}}
 
 **Watched on**: 17 April 2023
 
@@ -81,7 +85,7 @@ April 2023 was an exciting month for movie enthusiasts, with a variety of genres
 
 ## Shazam! Fury of the Gods, 2023 - ★★½
 
-![Shazam! Fury of the Gods, 2023 - ★★½](https://a.ltrbxd.com/resized/film-poster/5/2/2/4/0/5/522405-shazam-fury-of-the-gods-0-600-0-900-crop.jpg?v=6f53eef30f)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/5/2/2/4/0/5/522405-shazam-fury-of-the-gods-0-600-0-900-crop.jpg?v=6f53eef30f" width="300" alt="Shazam! Fury of the Gods" class="left" >}}
 
 **Watched on**: 15 April 2023
 
@@ -93,7 +97,7 @@ April 2023 was an exciting month for movie enthusiasts, with a variety of genres
 
 ## The Last Kingdom: Seven Kings Must Die, 2023 - ★★★★
 
-![The Last Kingdom: Seven Kings Must Die, 2023 - ★★★★](https://a.ltrbxd.com/resized/film-poster/8/5/3/3/7/8/853378-the-last-kingdom-seven-kings-must-die-0-600-0-900-crop.jpg?v=74ae569bab)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/8/5/3/3/7/8/853378-the-last-kingdom-seven-kings-must-die-0-600-0-900-crop.jpg?v=74ae569bab" width="300" alt="The Last Kingdom: Seven Kings Must Die" class="right" >}}
 
 **Watched on**: 15 April 2023
 
@@ -105,7 +109,7 @@ April 2023 was an exciting month for movie enthusiasts, with a variety of genres
 
 ## Red Rocket, 2021 - ★★★
 
-![Red Rocket, 2021 - ★★★](https://a.ltrbxd.com/resized/film-poster/6/8/3/6/2/0/683620-red-rocket-0-600-0-900-crop.jpg?v=073384c9e9)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/6/8/3/6/2/0/683620-red-rocket-0-600-0-900-crop.jpg?v=073384c9e9" width="300" alt="Red Rocket" class="left" >}}
 
 **Watched on**: 12 April 2023
 
@@ -117,7 +121,7 @@ April 2023 was an exciting month for movie enthusiasts, with a variety of genres
 
 ## Inland Empire, 2006 - ★★½
 
-![Inland Empire, 2006 - ★★½](https://a.ltrbxd.com/resized/film-poster/5/0/8/2/2/50822-inland-empire-0-600-0-900-crop.jpg?v=b4bd226d73)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/5/0/8/2/2/50822-inland-empire-0-600-0-900-crop.jpg?v=b4bd226d73" width="300" alt="Inland Empire" class="right" >}}
 
 **Watched on**: 11 April 2023
 
@@ -129,7 +133,7 @@ April 2023 was an exciting month for movie enthusiasts, with a variety of genres
 
 ## Hush, 2016 - ★★★
 
-![Hush, 2016 - ★★★](https://a.ltrbxd.com/resized/sm/upload/uy/c2/ed/fu/khDYdmPFlaTqeLQVD4ds4xC1mIf-0-600-0-900-crop.jpg?v=ae158bcac1)
+{{< figure src="https://a.ltrbxd.com/resized/sm/upload/uy/c2/ed/fu/khDYdmPFlaTqeLQVD4ds4xC1mIf-0-600-0-900-crop.jpg?v=ae158bcac1" width="300" alt="Hush" class="left" >}}
 
 **Watched on**: 11 April 2023
 
@@ -141,7 +145,7 @@ April 2023 was an exciting month for movie enthusiasts, with a variety of genres
 
 ## Creep, 2014 - ★★★
 
-![Creep, 2014 - ★★★](https://a.ltrbxd.com/resized/film-poster/1/7/4/9/2/8/174928-creep-0-600-0-900-crop.jpg?v=d01c2ba3a8)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/1/7/4/9/2/8/174928-creep-0-600-0-900-crop.jpg?v=d01c2ba3a8" width="300" alt="Creep" class="right" >}}
 
 **Watched on**: 11 April 2023
 
@@ -153,7 +157,7 @@ April 2023 was an exciting month for movie enthusiasts, with a variety of genres
 
 ## Barry Lyndon, 1975 - ★★★★½
 
-![Barry Lyndon, 1975 - ★★★★½](https://a.ltrbxd.com/resized/sm/upload/0f/r6/bn/w7/x2JQCgLjieWOwvImeGtLmuNgsrq-0-600-0-900-crop.jpg?v=9c250ee969)
+{{< figure src="https://a.ltrbxd.com/resized/sm/upload/0f/r6/bn/w7/x2JQCgLjieWOwvImeGtLmuNgsrq-0-600-0-900-crop.jpg?v=9c250ee969" width="300" alt="Barry Lyndon" class="left" >}}
 
 **Watched on**: 07 April 2023
 
@@ -165,7 +169,7 @@ April 2023 was an exciting month for movie enthusiasts, with a variety of genres
 
 ## Creed III, 2023 - ★★★
 
-![Creed III, 2023 - ★★★](https://a.ltrbxd.com/resized/film-poster/6/0/1/6/2/4/601624-creed-iii-0-600-0-900-crop.jpg?v=ca16bf66bc)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/6/0/1/6/2/4/601624-creed-iii-0-600-0-900-crop.jpg?v=ca16bf66bc" width="300" alt="Creed III" class="right" >}}
 
 **Watched on**: 01 April 2023
 
@@ -177,7 +181,7 @@ April 2023 was an exciting month for movie enthusiasts, with a variety of genres
 
 ## Avatar: The Way of Water, 2022 - ★★★★½
 
-![Avatar: The Way of Water, 2022 - ★★★★½](https://a.ltrbxd.com/resized/film-poster/6/3/0/5/8/63058-avatar-the-way-of-water-0-600-0-900-crop.jpg?v=37a1014065)
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/6/3/0/5/8/63058-avatar-the-way-of-water-0-600-0-900-crop.jpg?v=37a1014065" width="300" alt="Avatar: The Way of Water" class="left" >}}
 
 **Watched on**: 02 April 2023
 
