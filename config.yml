@@ -11,7 +11,7 @@ googleAnalytics: UA-216150796-2
 disqusShortname: https-atharvashah-netlify-app
 
 #FOR SEO
-enableRobotsTXT: true
+enableRobotsTXT: false
 
 
 buildDrafts: false
