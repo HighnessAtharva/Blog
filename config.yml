@@ -78,7 +78,7 @@ params:
       iconWidth: 30
     
     title: Atharva Shah
-    description: "Howdy 👋! I am Atharva Shah and on this blog I ruminate about tech, programming, entertainment and the fine things in life."
+    description: "👋 Howdy! I am Atharva Shah and on this blog I ruminate about tech, programming, entertainment and the fine things in life."
     keywords: [Blog, AtharvaShah, Entertainment, Technology]
     
     cover:
@@ -113,7 +113,7 @@ params:
         keys: ["title", "description"]
     
     homeInfoParams:
-      Title: "Howdy \U0001F44B"
+      Title: "\U0001F44B Howdy!"
       Content: Welcome, this is where I blog about programming, entertainment and life.
     
     socialIcons:
@@ -137,7 +137,7 @@ params:
       
       enabled: true # needs to be explicitly set
       title: Atharva Shah
-      subtitle: "Howdy 👋! I ruminate about tech, programming, entertainment and the fine things in life "                              
+      subtitle: "👋 Howdy! I ruminate about tech, programming, entertainment and the fine things in life."                              
       imageUrl: "/profile/profile_icon.gif"
       imageWidth: 250
       imageHeight: 250
