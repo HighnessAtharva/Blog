@@ -349,4 +349,6 @@ else:
 
 ## Buy the Interview Guide
 
-{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-backtracking" "/blog/gumroad-marketing.webp" >}}
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-backtracking" "/blog/gumroad-marketing.webp" >}}  
+
+---

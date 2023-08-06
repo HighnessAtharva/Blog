@@ -10,7 +10,7 @@ description: "Favorite Quotes from True Detective."
 tags: ["quotes"]
 ---
 
->*This is a world where nothing is solved. Someone once told me, time is a flat circle. Everything we’ve ever done or will do, we’re gonna do over and over and over again.
+>*This is a world where nothing is solved. Someone once told me, time is a flat circle. Everything we’ve ever done or will do, we’re gonna do over and over and over again.*
 
 >*If the only thing keeping a person decent is the expectation of divine reward then, brother, that person is a piece of s***. And I’d like to get as many of them out in the open as possible. You gotta get together and tell yourself stories that violate every law of the universe just to get through the goddamn day? What’s that say about your reality?*
 

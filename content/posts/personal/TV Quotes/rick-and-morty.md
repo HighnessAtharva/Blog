@@ -17,9 +17,9 @@ tags: ["quotes"]
 
 >*What, so everyone’s supposed to sleep every single night now? You realize that nighttime makes up half of all time?*
 
->*Rick, the only connection between your unquestionable intelligence and the sickness destroying your family is that everyone in your family, you included, use intelligence to justify sickness.
+>*Rick, the only connection between your unquestionable intelligence and the sickness destroying your family is that everyone in your family, you included, use intelligence to justify sickness.*
 
->*You’re the little brother. You’re not the cause of your parents’ misery, you’re just a symptom of it.
+>*You’re the little brother. You’re not the cause of your parents’ misery, you’re just a symptom of it.*
 
 >*Get out of here, Summer! You ruined the season 4 premiere!*
 

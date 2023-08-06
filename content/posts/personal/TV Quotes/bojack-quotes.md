@@ -22,7 +22,7 @@ tags: ["quotes"]
 
 >*BoJack : I feel like my life is just a series of unrelated wacky adventure*
 
->*Secretariat: BoJack, when I was your age, I got sad. A lot. I didn’t come from such a great home, but one day, I started running, and that seemed to make sense, so then I just kept running. BoJack, when you get sad, you run straight ahead and you keep running forward, no matter what. There are people in your life who are gonna try to hold you back, slow you down, but you don’t let them. Don’t you stop running and don’t you ever look behind you. There’s nothing for you behind you. All that exists is what’s ahead.
+>*Secretariat: BoJack, when I was your age, I got sad. A lot. I didn’t come from such a great home, but one day, I started running, and that seemed to make sense, so then I just kept running. BoJack, when you get sad, you run straight ahead and you keep running forward, no matter what. There are people in your life who are gonna try to hold you back, slow you down, but you don’t let them. Don’t you stop running and don’t you ever look behind you. There’s nothing for you behind you. All that exists is what’s ahead.*
 
 >*Princess Carolyn: So, are you available for Tuesday, or are you gonna be too busy masturbating to old pictures of yourself*
 

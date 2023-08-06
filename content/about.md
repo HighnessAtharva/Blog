@@ -2,6 +2,7 @@
 title: About Me
 url: "/about/" 
 summary: Get to know me better
+description: "Wish to break the ice with me? Here are some cool questions to get to know me better."
 type : page
 ShowWordCount: false
 ShowReadingTime: false
@@ -11,20 +12,150 @@ comments: false
 hidemeta: true
 ---
 
-![image info](/about/aboutcover.jpeg)
+![About Cover](/about/aboutcover.jpg)
 
-My journey in the tech industry began early on as my fascination with the way computers work and the endless possibilities they offer led to teaching myself how to code and eventually turning my passion into a career. As a self-proclaimed "code cruncher," I possess a deep understanding of the programming language Python and enjoy exploring the many libraries and frameworks available. I also have experience with a variety of data analysis tools and enjoy using them to uncover insights and patterns in large sets of data.
+## Who Am I?
 
-I am an avid reader and am always on the lookout for the latest books. My reading preferences include Sci-Fi, High Fantasy, Fiction, Thrillers, and Supernatural. I am also a fan of graphic novels and mangas. I believe that staying informed and educated is crucial in this constantly evolving industry.
+I am a techbro, a cinephile, a music aficionado, a gamer, a nerd, a bookworm, a data analyst, a software developer, a consultant, a volunteer, a traveler, a foodie, a dreamer, a doer, a thinker, a learner, a friend, a son, a human being and an e/acc enthusiast,
 
-Not just a tech nerd, I also have other interests and hobbies such as being a cinephile and a music aficionado. I enjoy watching films from all over the world, and love to discuss and debate the merits of different films and directors. I have a particular soft spot for classic, neo-noir, psychological thrillers and horror films. I enjoy traveling and exploring new places, and as a programmer, I fall into the Venn Diagram of a "gamer" and "nerd." I enjoy playing video games and have a particular fondness for RPGs and strategy games. I also enjoy playing board games and card games with my friends.
+---
 
-My taste in music is diverse, and I enjoy listening to everything from classic rock to hip-hop and electronic music. I love discovering new artists and attending live music events. I believe that music is a powerful tool that can evoke emotions and create memories.
+## What's My Dev Setup and Tech Arsenal?
 
-I have had the opportunity to work in a few different roles in the tech industry, and have developed a variety of skills including working as a software developer, a data analyst and a consultant. Each role has taught me something new, and I am always looking for new challenges and opportunities to learn.
+**Hardware:**
 
-I am a strong believer in the power of technology to make positive change in the world and am passionate about using my skills and knowledge to help others and make a difference. I have volunteered for various non-profit organizations and have participated in hackathons to develop solutions for social and environmental issues.
+- **OS:** Windows 11
+- **PC:** Lenovo Ideapad Gaming 3
+- **RAM:** 16GB
+- **GPU:** GTX 1650
+- **CPU:** AMD Ryzen 5 3600H
+- **Mouse:** Logitech Wireless Mouse
+- **Gaming Controller:** Readgear Pro (XBOX style)
+- **E-Reader:** Amazon Kindle 10th Edition
 
-Overall, I am a dedicated, hard-working and curious person. I am always eager to learn new things and take on new challenges. I believe that the world of technology is constantly evolving and there is always more to discover. I am excited to see where my journey in this field will take me next.
+**Coding Tools:**
+
+- **Code IDE:** Visual Studio Code (because I like to keep it sleek and powerful)
+- **Secondary Code IDE:** Sublime Text 3 (when simplicity is the key)
+- **Notes:** Typora, Google Keep, Notion (my virtual notepad party)
+- **Tasks:** Google Tasks (to conquer my coding to-do list)
+- **Calendar:** Google Calendar (for scheduled coding marathons)
+- **Version Control:** Git CLI, Github Desktop (keeping my code in check)
+
+*No emacs, no mechanical keyboards, and no fancy vim keyboard combos for me.* I prefer to stick to the basics and *actually* code (SHOTS FIRED! SHOTS FIRED!). And hey, one monitor is enough to fuel my coding prowess.
+
+Oh, and don't forget to check out my favorite extension packs for VSCode; you'll find the essentials (or maybe some hidden gems) in [this exhaustive (or outdated) list](https://gist.github.com/HighnessAtharva/5dd3dfd048fa5ae68d8c945a552e2d01).
+
+---
+
+## What's My Primary Technology Stack?
+
+I'm a Python guy at heart, juggling my passions for machine learning, data science, and web development. From crafting fancy CLIs to whipping up file handling scripts and performing bulk data magic, I'm your go-to guy for all things Pythonic.
+
+And let's not forget my love affair with Jupyter Notebook, where data analysis and machine learning projects come to life!  In the realm of web development, Django is my true love. HTML, CSS, JS, Bootstrap, Tailwind, and SSGs like Hugo are my trusty sidekicks, helping me build sleek and snappy static sites in a breeze. I made my most complex project yet using PHP. I'm fascinated by React.js and Next.js but I've yet to prove my worth.
+
+I often work with CSVs. NLP has piqued my interest and I've been neck deep into the SpaCy library. It is adorable.
+
+When it comes to data-intensive apps, Streamlit has my heart. It's the perfect companion for data analysis and visualization, while Seaborn and Matplotlib add that extra flair to my visualizations!  Seaborn and Matplotlib also come handy.
+
+I'm no stranger to Google Cloud Platform, and I'm currently on a quest for AWS SAC-002 certification. The cloud's the limit!
+
+But the journey doesn't end there! I've set my sights on mastering React, Docker, Django Rest Framework, and venturing into the exciting realms of blockchain and AI. I'll also be tinkering with deployment and scaling strategies—there's always room for growth and exploration!
+
+[View all my projects](/projects/)
+
+[![Github](/about/tech.webp)](https://github.com/highnessAtharva/)
+
+---
+
+## What I Do For a Living?
+
+I lead an exciting life with my tech ventures that keep the gears turning and the code flowing!
+
+- At **AccuKnox**, I'm a technical intern with a flair for crafting compelling copy and drafting impressive content for their website, products, and services. Writing captivating blogs on Cloud Native Application Protection Platform (CNAPP), Container Security, and Cloud Security is what I'm adept at.
+
+- I'm also a project consultant and freelance research writer at **PaperPedia**. Delivering high-quality research papers and code implementations on Python, Data Science, ML, and occasionally diving into JavaScript and Web Development tasks keeps me on my toes.
+
+- I get paid by **TutorialsPoint** to come up with programming tutorials, deep-dives, and Python scripts. I already have 42 articles under my belt, there's a lot more to come!
+
+When it comes to fancy websites, API integrations, and end-to-end testing, I'm your go-to guy. If you have any tech requirements, don't hesitate to reach out to me at [highnessatharva@gmail.com](mailto:highnessatharva@gmail.com). Only paid gigs are entertained.
+
+---
+
+## What do I Read? What are my favorite authors and works?
+
+In the realm of words and wonders, I find solace and delight. My literary appetite knows no bounds, from technical blogs to spine-chilling horror, and everything in between. A curious connoisseur, I traverse the realms of fantasy, science fiction, and classic literature, savoring each tale like a fine elixir.
+
+All of my reading happens either on my Amazon Kindle or my laptop. For as long as I remember I have been using [FB Reader](https://fbreader.org/) for Ebook Reading (MOBI, EPUB) are comfortable formats. I use [Calibre](https://calibre-ebook.com/) (the only sane choice) for library management and conversion. I exclusively read comics and graphic novels on [YACReader Library](https://yacreader.com/) with the CBZ/CBR formats. For manga, I use Tachiyomi on Android or [TachiDesk](https://github.com/Suwayomi/Tachidesk-Server) for the desktop, great clients to fetch the latest chapters from a variety of scanlated sources.
+
+Enough about the software, let's get to some of my favorites. Note that this is not an exhaustive list. It may also be outdated.
+
+- **Blogs and Newsletters** - DjangoStars, Smashing Magazine, Codrops, WIRED, ByteByteGo, etc. Too many to list.
+
+- **Fantasy** - Lord of the Rings, Witcher, Wardstone Chronicles, Skulduggery Pleasant, Wheel of Time, Malazan, The Broken Empire, The First Law Trilogy, etc.
+
+- **Science Fiction** - Discworld, Works of Patrick Ness, Mistborn, Ready Player One and the works of Philip K. Dick among others.
+
+- **Horror** - H.P. Lovecraft, Edgar Allen Poe, Ray Bradbury, Stephen King, and a choice of pulp magazines, novellas and anthologies.
+
+- **Classic Literature** - The Little Prince, The Great Gatsby, Catcher In The Rye, 1984, Animal Farm, Robin Hood, The Legend of King Arthur, etc.
+
+- **Graphic Novels** - Watchmen, Sandman, Preacher, Sin City, Spiderman, Batman, Conan the Barbarian, etc. I have read several indie comics!
+
+- **Manga** - Naruto, Dragon Ball, Berserk, One Piece, Yotsuba!, Dragon Ball, etc. I am a straight up shonen and seinen reader.
+
+Gothic literature's eerie embrace, action-packed thrillers, and the enigmatic world of cultist and paranormal tales leave me craving more. Medieval sword and shield fantasies bestow upon me the thrill of chivalrous quests.
+
+Mystery, charm, and a love for the written word bind my soul. In this literary labyrinth, my imagination soars, seeking stories that stir the senses and spark the imagination. A dance with words and worlds, forever enchanting, forever seeking the next page to turn.
+
+[![Goodreads](/about/books.webp)](https://www.goodreads.com/user/show/47064311-highness-atharva)
+
+---
+
+## What do I Watch? What are my favorite directors, movies and TV shows?
+
+A silver screen devotee and TV aficionado, I savor the world of video entertainment, with a penchant for movies over TV shows. Animated gems and anime hold a special place in my heart, and Studio Ghibli's enchanting creations leave me in awe. A24's masterpieces consistently exceed expectations, while indie and underground movies cast their unique spell on my imagination.
+
+Gory and extreme B-movies from the golden era tantalize me, a nostalgic journey reminiscent of the 80s and 90s. Horror, sci-fi, and fantasy films enthrall me. Try not to recommend me documentaries and biopics. They rarely captivate my interest.
+
+An audacious soundtrack, a whacky or entertaining plotline, a charming or atmospheric setting, and an unexpected climax—these elements fuel my cinematic desires.
+
+Here's a few of my most liked movies across the genres. Note that this is not an exhaustive list. It may also be outdated.
+
+- **Horror** - Suspiria, Possession, and Evil Dead, Friday the 13th.
+
+- **Thriller** - The Girl with the Dragon Tattoo, Gone Girl, Nightcrawler, and Get Out.
+
+- **Animation** - End of Evangelion, Spirited Away, It's such a beautiful day, and Into the Spiderverse.
+
+- **Western and War** - The Dollars Trilogy, Django Unchained, 1917, and Saving Private Ryan.
+
+- **Romance** - La La Land, Lost in Translation, Before Sunrise, and Her.
+
+- **SciFi** -  classics like Clockwork Orange, Ex Machina, The Prestige, Matrix, and Blade Runner 2049.
+
+- **Comedy** - The Big Lebowski, The Grand Budapest Hotel, The Nice Guys, The Wolf of Wall Street, and The Hangover.
+
+**Favorite Directors** - Martin Scorsese, Quentin Tarantino, Gaspar Noe, David Lynch, Christopher Nolan, Alfred Hitchcock, Hayao Miyazaki, Makoto Shinkai, Wes Anderson, Edgar Wright.
+
+I've watched too many TV shows to count but if I had to pick top 10 off the top of my head it would be Game of Thrones, Succession, Black Mirror, The Boys, Vikings, Sharp Objects, End of the F***ing World, Attack on Titan, Dragon Ball Z, Breaking Bad.
+
+Letterboxd is my companion, crafting lists, tracking ratings, and offering a portal to my cinematic musings. From monthly movie reviews to exploring new films, it is a treasure trove for the cinephile in me. The silver screen's allure beckons, and I embark on an enchanting quest through captivating realms of celluloid wonders.
+
+[![Letterboxd](/about/movies.webp)](https://letterboxd.com/HighnessAtharva/)
+
+---
+
+## What is my music taste like? What genre and artists do I prefer?
+
+[![LastFM](/about/music.webp)](https://www.last.fm/user/HighnessAtharva)
+
+---
+
+## Do you even game bro?
+
+'Course I do!
+
+---
 
 Wanna Hang? [Grab All My Social Links](https://linktr.ee/HighnessAtharva)

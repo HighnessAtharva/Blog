@@ -165,4 +165,6 @@ if __name__ == "__main__":
  print(arr)
 ```
 
-{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-array" "/blog/gumroad-marketing.webp" >}}
+{{< gumroad "https://highnessatharva.gumroad.com/l/dsa-python-array" "/blog/gumroad-marketing.webp" >}}  
+
+---

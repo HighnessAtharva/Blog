@@ -11,7 +11,7 @@ description: "Favorite Quotes from Mr Robot."
 tags: ["quotes"]
 ---
 
->*I’m good at reading people. My secret, I look for the worst in them.
+>*I’m good at reading people. My secret, I look for the worst in them.*
 
 >*Is that what God does? He helps? Tell me, why didn’t God help my innocent friend who died for no reason while the guilty roam free? Okay, fine. Forget the one-offs. How about the countless wars declared in his name? Okay, fine. Let’s skip the random, meaningless murder for a second, shall we? How about the racist, sexist, phobia soup we’ve all been drowning in because of Him? And I’m not just talking about Jesus. I’m talking about all organized religion, exclusive groups created to manage control, a dealer getting people hooked on the drug of hope, his followers nothing but addicts who want their hit of bull**** to keep their dopamine of ignorance, addicts afraid to believe the truth, that there is no order, there’s no power, that all religions are just metastasizing mind worms meant to divide us so it’s easier to rule us by the charlatans that want to run us. All we are to them are paying fanboys of their poorly written sci-fi franchise. If I don’t listen to my imaginary friend, why the f*** should I listen to yours? People think their worship’s some key to happiness. That’s just how he owns you. Even I’m not crazy enough to believe that distortion of reality. So f***God. He’s not a good enough scapegoat for me*
 
@@ -19,7 +19,7 @@ tags: ["quotes"]
 
 >*A bug is never just a mistake. It represents something bigger. An error of thinking. That makes you who you are.*
 
->*Power belongs to the people that take it. Nothing to do with their hard work, strong ambitions, or rightful qualifications, no. The actual will to take is often the only thing that’s necessary
+>*Power belongs to the people that take it. Nothing to do with their hard work, strong ambitions, or rightful qualifications, no. The actual will to take is often the only thing that’s necessary*
 
 >*I don’t like morning people or mornings or people.*
 
@@ -27,7 +27,7 @@ tags: ["quotes"]
 
 >*There it is. That sense of dread. It only happens when you cross a line you didn’t even know existed. Maybe that dread is a good thing. After all, when you realize you’ve crossed a line, that means you still had one. But when those crossed lines are all behind you, up ahead is only darkness.*
 
->*Getting information is one thing, but how it was created, where and by whom, can often be illuminating.
+>*Getting information is one thing, but how it was created, where and by whom, can often be illuminating.*
 
 >*Daemons, they call them. They perform action without user interaction. Monitoring, logging, notifications. Primal urges, repressed memories, unconscious habits. They’re always there, always active. We can try to be right, we can try to be good. We can try to make a difference, but it’s all bullshit. ‘Cause intentions are irrelevant. They don’t drive us. Daemons do.*
 
@@ -43,7 +43,7 @@ tags: ["quotes"]
 
 >*You don’t take down a conglomerate by shooting them in the heart. That’s the thing about conglomerates, they don’t have hearts. You take them down limb by limb. And as they unravel, their illusion of control unravels.*
 
->*Give a man a gun and he can rob a bank, but give a man a bank, and he can rob the world.
+>*Give a man a gun and he can rob a bank, but give a man a bank, and he can rob the world.*
 
 >*Everyone has their own if/then conditional programming, a situation where if certain conditions are met, then a logic bomb detonates. Everything blows up in your face.*
 

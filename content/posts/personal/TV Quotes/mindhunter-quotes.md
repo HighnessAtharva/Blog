@@ -25,6 +25,6 @@ tags: ["quotes"]
 
 >*One’s expansiveness of spirit needn’t be reflected by one’s personal surroundings.*
 
->*When you go from an abstract idea of murder to the visceral reality, you can no longer be objective.*Only when you feel the pain of those victims and their loved ones can you know the magnitude of the choice that killer made. And it's that choice that seals his fate*
+>*When you go from an abstract idea of murder to the visceral reality, you can no longer be objective. Only when you feel the pain of those victims and their loved ones can you know the magnitude of the choice that killer made. And it's that choice that seals his fate.*
 
 >*As with everything else in my life, I decided that if we were all going to get through this in one piece, I'd better have a sense of humor.*

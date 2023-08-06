@@ -15,24 +15,24 @@ tags: ["quotes", "graphic novel"]
 
 >*But where shall wisdom be found? And where is the place of understanding? Man knoweth not the price thereof; neither is it found in the land of the living … for the price of wisdom is above rubies.*
 
->*CHORONZON: I am a dire wolf, prey-stalking, lethal prowler.
-MORPHEUS: I am a hunter, horse-mounted, wolf-stabbing.
-CHORONZON: I am a horsefly, horse-stinging, hunter-throwing.
-MORPHEUS: I am a spider, fly-consuming, eight legged.
-CHORONZON: I am a snake, spider-devouring, posion-toothed.
-MORPHEUS: I am an ox, snake-crushing, heavy-footed.
-CHORONZON: I am an anthrax, butcher bacterium, warm-life destroying.
-MORPHEUS: I am a world, space-floating, life-nurturing.
-CHORONZON: I am a nova, all-exploding... planet-cremating.
-MORPHEUS: I am the Universe ->*all things encompassing, all life embracing.
-CHORONZON: I am Anti-Life, the Beast of Judgment. I am the dark at the end of everything. The end of universes, gods, worlds... of everything. Sss. And what will you be then, Dreamlord?
-MORPHEUS: I am hope.*
+>*CHORONZON: I am a dire wolf, prey-stalking, lethal prowler.*  
+>*MORPHEUS: I am a hunter, horse-mounted, wolf-stabbing.*  
+>*CHORONZON: I am a horsefly, horse-stinging, hunter-throwing.*  
+>*MORPHEUS: I am a spider, fly-consuming, eight legged.*  
+>*CHORONZON: I am a snake, spider-devouring, posion-toothed.*  
+>*MORPHEUS: I am an ox, snake-crushing, heavy-footed.*  
+>*CHORONZON: I am an anthrax, butcher bacterium, warm-life destroying.*  
+>*MORPHEUS: I am a world, space-floating, life-nurturing.*  
+>*CHORONZON: I am a nova, all-exploding... planet-cremating.*  
+>*MORPHEUS: I am the Universe; all things encompassing, all life embracing.*  
+>*CHORONZON: I am Anti-Life, the Beast of Judgment. I am the dark at the end of everything. The end of universes, gods, worlds... of everything. Sss. And what will you be then, Dreamlord?*  
+>*MORPHEUS: I am hope.*  
 
 >*I will be a wise and tolerant monarch, dispensing justice fairly, and only setting nightmares to rip out the minds of the evil and wicked. Or just anybody I don't like.*
 
 >*You are utterly the stupidest, most self-centered, appallingest excuse for an anthropomorphic personification in this or any other plane!*
 
->*You get what anybody gets >*you get a lifetime.*
+>*You get what anybody gets; you get a lifetime.*
 
 >*What power would hell have if those imprisoned here would not be able to dream of heaven?*
 
@@ -42,7 +42,7 @@ MORPHEUS: I am hope.*
 
 >*There is another version of the tale. That is the tale the women tell each other, in their private language that the men-children are not taught, and that the old men are too wise to learn.*
 
- And in that version of the tale perhaps things happened differently. But then, that is a women's tale, and it is never told to men.*
+>*And in that version of the tale perhaps things happened differently. But then, that is a women's tale, and it is never told to men.*
 
 >*For love is no part of the dream-world. Love belongs to desire, and desire is always cruel.*
 
@@ -50,7 +50,7 @@ MORPHEUS: I am hope.*
 
 >*If my dream was true, then everything we know, everything we think we know is a lie.*
 
- It means the world's about as solid and as reliable as a layer of scum on the top of a well of black water which goes down forever, and there are things in the depths that I don't even want to think about. It means that we're just dolls. We don't have a clue what's really going down, we just kid ourselves that we're in control of our lives while a paper's thickness away things that would drive us mad if we thought about them for too long play with us, and move us around from room to room, and put us away at night when they're tired, or bored.*
+>*It means the world's about as solid and as reliable as a layer of scum on the top of a well of black water which goes down forever, and there are things in the depths that I don't even want to think about. It means that we're just dolls. We don't have a clue what's really going down, we just kid ourselves that we're in control of our lives while a paper's thickness away things that would drive us mad if we thought about them for too long play with us, and move us around from room to room, and put us away at night when they're tired, or bored.*
 
 >*And Desire walks the endless pathways of its body, certain that he, or she, or it, is in sole and only control of its destiny. The only inhabitant of the twilight realm of Desire; and it feels nothing like a doll. Nothing like a doll at all.*
 
@@ -158,7 +158,7 @@ MORPHEUS: I am hope.*
 
 >*"Abel, the younger brother, had lots of sheep, and he had given the land's creator a sheep as present. Cain, who was the older, grew fruit and vegetables, and he'd given the land's creator some of them. The creator liked the sheep best, because it was all funny and fluffy and white — "*
 
-"Because it was warm, steaming meat. It was a bleeding sacrifice, you bloody idiot!"*
+>*"Because it was warm, steaming meat. It was a bleeding sacrifice, you bloody idiot!"*
 
 >*There was also in that room the Other Egg of the Phoenix. (For the Phoenix when its time comes to die lays two eggs, one black, one white: From the white egg hatches the Phoenix-bird itself, when its time is come, but what hatches from the black egg no one knows.)*
 
@@ -172,21 +172,19 @@ MORPHEUS: I am hope.*
 
 >*"I mean, does this always happen when a girlfriend walks out on him?"*
 
-"Not at all. For example, after the Nada affair he razed the Dreaming. It was a bleak, lonely desert for centuries. I remember the first flower that grew. The first time he smiled again …"*
+>*"Not at all. For example, after the Nada affair he razed the Dreaming. It was a bleak, lonely desert for centuries. I remember the first flower that grew. The first time he smiled again …"*
 
 >*You lived what anybody gets, Bernie. You got a lifetime. No more. No less.*
 
->*"What's the name of the word for the precise moment when you realize that you've actually forgotten how it felt to make love to somebody you really liked a long time ago?"
-
-"There isn't one."
-
-"Oh. I thought maybe there was."*
+>*"What's the name of the word for the precise moment when you realize that you've actually forgotten how it felt to make love to somebody you really liked a long time ago?"*  
+>*"There isn't one."*  
+>*"Oh. I thought maybe there was."*  
 
 >*"Is there a word for forgetting the name of someone when you want to introduce them to someone else at the same time you realize you've forgotten the name of the person you're introducing them to as well?" "No."*
 
 >*I know how gods begin, Roger. We start as dreams.*
 
- Then we walk out of dreams into the land. We are worshipped and loved, and take power to ourselves. And then one day there's no one left to worship us. And in the end, each little god and goddess takes its last journey back into dreams … and what comes after, not even we know.*
+>*Then we walk out of dreams into the land. We are worshipped and loved, and take power to ourselves. And then one day there's no one left to worship us. And in the end, each little god and goddess takes its last journey back into dreams … and what comes after, not even we know.*
 
 >*The garden of Destiny. Look behind you: shadow-plays of memory are forever being enacted, on paths you walked too long ago.*
 

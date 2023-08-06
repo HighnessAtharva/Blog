@@ -16,7 +16,7 @@ tags: ["quotes", "graphic novel"]
 
 >*Thermodynamic miracles... events with odds against so astronomical they're effectively impossible, like oxygen spontaneously becoming gold. I long to observe such a thing. And yet, in each human coupling, a thousand million sperm vie for a single egg. Multiply those odds by countless generations, against the odds of your ancestors being alive; meeting; siring this precise son; that exact daughter... Until your mother loves a man she has every reason to hate, and of that union, of the thousand million children competing for fertilization, it was you, only you, that emerged. To distill so specific a form from that chaos of improbability, like turning air to gold... that is the crowning unlikelihood. The thermodynamic miracle. But...if me, my birth, if that's a thermodynamic miracle... I mean, you could say that about anybody in the world!. Yes. Anybody in the world. ..But the world is so full of people, so crowded with these miracles that they become commonplace and we forget... I forget. We gaze continually at the world and it grows dull in our perceptions. Yet seen from the another's vantage point. As if new, it may still take our breath away. Come...dry your eyes. For you are life, rarer than a quark and unpredictable beyond the dreams of Heisenberg; the clay in which the forces that shape all things leave their fingerprints most clearly. Dry your eyes... and let's go home.*
 
->*No. Not even in the face of Armageddon. Never compromise.
+>*No. Not even in the face of Armageddon. Never compromise.*
 
 >*Dog carcass in alley this morning, tire tread on burst stomach. This city is afraid of me. I have seen its true face. The streets are extended gutters and the gutters are full of blood and when the drains finally scab over, all the vermin will drown. The accumulated filth of all their sex and murder will foam up about their waists and all the whores and politicians will look up and shout "Save us!"... and I'll look down and whisper "No.”*
 
@@ -26,9 +26,9 @@ tags: ["quotes", "graphic novel"]
 
 >*In an era of stress and anxiety, when the present seems unstable and the future unlikely, the natural response is to retreat and withdraw from reality, taking recourse either in fantasies of the future or in modified visions of a half-imagined past.*
 
->*You know what I wish? I wish all the scum of the Earth had one throat and I had my hands about it.
+>*You know what I wish? I wish all the scum of the Earth had one throat and I had my hands about it.*
 
->*We have laboured long to build a heaven, only to find it populated with horrors.
+>*We have laboured long to build a heaven, only to find it populated with horrors.*
 
 >*Nothing ends, Adrian. Nothing ever ends.*
 
@@ -66,12 +66,12 @@ tags: ["quotes", "graphic novel"]
 
 >*Everything is preordained. Even my responses.*
 
->*Dr. Malcolm Long: Walter, is what happened to Kitty Genovese really proof that the whole of mankind is rotten? I think you've been conditioned with a negative worldview. There are good people, too, like...
--Rorschach: Like you?
--Dr. Malcolm Long: Me? Oh, well, I wouldn't say that. I...
--Rorschach: No. You just think it. Think you're 'good people'. Why are you spending so much time with me, Doctor?
--Dr. Malcolm Long: Uh...well, because I care about you, and because I want to make you well...
--Rorschach: Other people, down in cells. Behavior more extreme than mine. You don't spend any time with them...but then, they're not famous. Won't get your name in the journals. You don't want to make me well. Just want to know what makes me sick. You'll find out. Have patience, Doctor. You'll find out.*
+>*Dr. Malcolm Long: Walter, is what happened to Kitty Genovese really proof that the whole of mankind is rotten? I think you've been conditioned with a negative worldview. There are good people, too, like...*  
+>*-Rorschach: Like you?*  
+>*-Dr. Malcolm Long: Me? Oh, well, I wouldn't say that. I...*  
+>*-Rorschach: No. You just think it. Think you're 'good people'. Why are you spending so much time with me, Doctor?*  
+>*-Dr. Malcolm Long: Uh...well, because I care about you, and because I want to make you well...*  
+>*-Rorschach: Other people, down in cells. Behavior more extreme than mine. You don't spend any time with them...but then, they're not famous. Won't get your name in the journals. You don't want to make me well. Just want to know what makes me sick. You'll find out. Have patience, Doctor. You'll find out.*  
 
 >*Once you realize what a joke everything is, being the Comedian is the only thing that makes sense.*
 

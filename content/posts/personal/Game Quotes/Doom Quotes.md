@@ -46,9 +46,9 @@ tags: ["quotes"]
 
 >*God rested on the seventh day. But imagine how much further along we would be if he hadn't? The UAC is committed to excellence, that's why we implemented the seven day work week. Now you can achieve greatness alongside your coworkers every day. Let's never stop achieving.*
 
->*They are rage, brutal, without mercy. But you. You will be worse. Rip and tear, until it is done.
+>*They are rage, brutal, without mercy. But you. You will be worse. Rip and tear, until it is done.*
 
->*My immortality is assured, while you will writhe in perpetual agony at the bottom of the darkest hole in Hell. You will be forgotten. Your life, your loved ones, your achievements, and failures are nothing. A blank space on the canvas of time. Thank you for your service. May you rot in Hell.
+>*My immortality is assured, while you will writhe in perpetual agony at the bottom of the darkest hole in Hell. You will be forgotten. Your life, your loved ones, your achievements, and failures are nothing. A blank space on the canvas of time. Thank you for your service. May you rot in Hell.*
 
 >*Against all the evil that Hell can conjure, all the wickedness that mankind can produce, we will send unto them... only you. Rip and tear, until it is done.*
 
@@ -56,5 +56,4 @@ tags: ["quotes"]
 
 >*Warning: the Slayer has entered the facility.*
 
->*Tell me... have you nothing to say to your creator... before you strike him down?*
-No. - The Doom Slayer*
+>*Tell me... have you nothing to say to your creator... before you strike him down? No. - The Doom Slayer*

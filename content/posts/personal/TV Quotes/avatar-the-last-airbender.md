@@ -31,6 +31,6 @@ tags: ["quotes"]
 
 >*“Destiny? What would a boy know of destiny? If a fish lives its whole life in this river, does he know the river’s destiny? No! Only that it runs on and on out of his control. He may follow where it flows, but he cannot see the end. He cannot imagine the ocean.” – Jeong Jeong*
 
->*In the darkest times, hope is something you give yourself. That is the meaning of inner strength.
+>*In the darkest times, hope is something you give yourself. That is the meaning of inner strength.*
 
 >*You must never give in to despair. Allow yourself to slip down that road, and you surrender to your lowest instincts.*

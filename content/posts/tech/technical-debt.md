@@ -10,8 +10,6 @@ description: ""
 tags: []
 ---
 
-
-
 Hey there! Ever heard of technical debt? It's not about money or interest rates. It's more like the little shortcuts we take when building software or systems. Imagine you're developing a new product, and you're excited to get it out to customers quickly. So, you build a quick prototype, and boom, it's out there! But here's the catch: you didn't do all the optimal things, like adding alarms, logging, and metrics.
 
 Sure, the feature works fine from the customer's perspective, and the business seems happy, but from a developer's perspective, it's like flying blind! You know there are things you should have done to make it better, but now it's hard to maintain. That's technical debt for you!
@@ -41,5 +39,3 @@ Now, unfortunately, this is going to take a lot of time. Dealing with technical 
 Now, like I said, one way is to refactor and make time. You know you're going to have to swallow the pain that goes along with that. The other way is to rebuild the system, and for a lot of folks, that is just out of the question because the amount of time that you need to spend just to get to parity to rebuild the system is incredibly prohibitive. So, it makes a lot of sense to just deal with the technical debt when the time comes, when time gets allocated for it.
 
 I think what you'll find is that if you don't end up dealing with this technical debt, you'll become so crippled in the sense of the speed at which you can deliver new features or make modifications to your existing system that you just won't be able to move. You'll be in a deadlock, essentially. So, again, I highly encourage you to deal with your technical debt as it arises. Try to prevent it, of course, from getting there in the first place. But again, if you have no choice, the technical debt's already there; you've got to deal with it.
-
-So hopefully this clarified technical debts for many people who may have had a vague sense that this was a thing but didn't know the formal term for it. Technical debt is what it is. If your system has technical debt, please let me know. Please let me know in the video's description section down below. I'm interested to learn about the discomfort you people experience within your bodies.

@@ -22,10 +22,11 @@ tags: ["quotes", "fantasy"]
 
 >*Knowledge is a rug of a certain size, and the world is larger. It’s not what remains uncovered at the edges that should worry you, rather what is swept beneath.*
 
->*I had a son and I breathed for him. When we buried him my sorrow consumed me. Was my grief holy? Was it unique? All our hurts and follies are repeated time and again. Generation after generation live the same mistakes. But we’re not like the fire, or the river, or the wind—we’re not a single tune, its variations played out forever, a game of numbers until the world dies.
+>*I had a son and I breathed for him. When we buried him my sorrow consumed me. Was my grief holy? Was it unique? All our hurts and follies are repeated time and again. Generation after generation live the same mistakes. But we’re not like the fire, or the river, or the wind—we’re not a single tune, its variations played out forever, a game of numbers until the world dies.*
+
 >*I have been too young to know, and I have been too old to care. It’s in that oh-so-narrow slice between that memories are made.*
 
->*And hunger must be fed. Any weapon begs use. The blade itself incites to violence.
+>*And hunger must be fed. Any weapon begs use. The blade itself incites to violence.*
 
 >*Nothing is as cruel as a righteous man. She had been righteous in her time.*
 
