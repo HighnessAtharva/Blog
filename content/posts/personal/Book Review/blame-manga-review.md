@@ -32,17 +32,17 @@ Note that I read the entirety of BLAME! back in 2020 and wrote some rushed revie
 
 ## BLAME! Master Edition #1
 
-![blame master edition vol 1](/blog/blame-1.webp)
+{{< figure src="/blog/blame-1.webp" width="250" alt="blame master edition vol 1" class="right" >}}
 
-*{{< highlight "Rating" >}}*: ⭐⭐⭐⭐⭐
+**Rating**: ⭐⭐⭐⭐⭐
 
-*{{< highlight "Summary" >}}*
+**Summary**
 
 Killy, the enigmatic protagonist armed with the formidable Gravitational Beam Emitter, embarks on a relentless quest through the sprawling technological landscape of "The City." His mission is to locate the elusive Net Terminal Genes, genetic markers that grant access to the Netsphere—an intricate computerized control network within The City. This awe-inspiring volume delves into a world inhabited by scattered human and transhuman tribes, as well as the menacing cyborgs known as Silicon Life. As the Megastructure barriers separate the vast floors of The City, Killy's pursuit of the Net Terminal Genes becomes intertwined with the desperate battle against the rampaging Safeguard robots, seeking to annihilate humanity and halt the chaotic expansion of the Megastructure.
 
 ---
 
-*{{< highlight "Review" >}}*
+**Review**
 
 Prepare to be immersed in a world that defies the limits of imagination. This master edition is an absolute marvel of science fiction storytelling within the manga medium. This awe-inspiring edition transcends expectations, delving into a realm where Silicon Life, mechanized robots, and weaponized systems thrive amidst the ultra-futuristic metallic skyscrapers and biochemical warfare. Never before have I encountered such fantastical heights in a manga, where each page unfolds an unpredictable narrative of peril, strange alliances, and blood-soaked battles.
 
@@ -60,17 +60,17 @@ BLAME! reaches far beyond the conventional themes of android-human entanglements
 
 ## BLAME! Master Edition #2
 
-![blame master edition vol 2](/blog/blame-2.webp)
+{{< figure src="/blog/blame-2.webp" width="250" alt="blame master edition vol 2" class="right" >}}
 
-*{{< highlight "Rating" >}}*: ⭐⭐⭐⭐
+**Rating**: ⭐⭐⭐⭐
 
-*{{< highlight "Summary" >}}*
+**Summary**
 
 We continue the epic journey of Killy, the enigmatic protagonist armed with cybernetic abilities and a relentless quest to obtain the elusive Net Gene. Along the way, he encounters Cibo, a resourceful engineer, and together they navigate a treacherous landscape indirectly supported by the City's Authority. As they strive to overcome the relentless opposition of the Safeguard, Killy and Cibo's path intertwines with a young girl named Sanakan and a tribe of warriors known as the Electro-Fishers. The intricate plot unravels as alliances are forged and the true nature of their adversaries is revealed, leading to a climactic confrontation that leaves an indelible mark on the characters' souls.
 
 ---
 
-*{{< highlight "Review" >}}*
+**Review**
 
 The second volume surpasses the majority of manga I've encountered in recent memory, propelled by its titanic and profoundly ambitious storytelling, the seamless progression of its plot, and the breakneck pace of action that perfectly complements the darker undertones permeating its artistic choices. Each page of this second master volume exudes a sense of premium quality, leaving me lamenting the lack of recognition this manga receives, for it truly deserves to be heralded as a masterpiece.
 
@@ -86,17 +86,17 @@ The figures of the antagonists and the subsequent battles reach an unprecedented
 
 ## BLAME! Master Edition #3
 
-![blame master edition vol 3](/blog/blame-3.webp)
+{{< figure src="/blog/blame-3.webp" width="250" alt="blame master edition vol 3" class="right" >}}
 
-*{{< highlight "Rating" >}}*: ⭐⭐⭐⭐
+**Rating**: ⭐⭐⭐⭐
 
-*{{< highlight "Summary" >}}*
+**Summary**
 
 This volume seamlessly carries forward the narrative from its predecessor, plunging readers into a whirlwind of relentless action and heightened stakes. Killy and Cibo find themselves defending the Electro-Fishers within the cylindrical megastructure of Toha Heavy Industries. Here, they encounter Mensab, an independent AI, and her guardian Seu, a human. As the Silicon Life and the formidable Sanakan launch devastating attacks, the megastructure teeters on the brink of destruction. Amidst the chaos, Mensab manages to provide Cibo with a sample of Seu's DNA, further adding to the intricate web of mysteries.
 
 ---
 
-*{{< highlight "Review" >}}*
+**Review**
 
 The stakes are raised to unprecedented heights, entangling the reader in a complex web of new characters and revelations about the true nature of the enigmatic Net-Realm. The artistry remains a pinnacle of excellence, captivating the senses with its exceptional choices and meticulous attention to detail.
 
@@ -112,17 +112,18 @@ While it is expected that Cibo's arc will undergo a revelation of larger-than-li
 
 ## BLAME! Master Edition #4
 
-![blame master edition vol 4](/blog/blame-4.webp)
 
-*{{< highlight "Rating" >}}*: ⭐⭐⭐⭐⭐
+{{< figure src="/blog/blame-4.webp" width="250" alt="blame master edition vol 4" class="right" >}}
 
-*{{< highlight "Summary" >}}*
+**Rating**: ⭐⭐⭐⭐⭐
+
+**Summary**
 
 BLAME! Master Edition Vol 4 takes Killy and Cibo into a realm within the City ruled by a formidable group of Silicon Life. Here, they forge an alliance with the "provisional Safeguards," Dhomochevsky and Iko. However, their efforts are hampered when the leader of the Silicon faction, Davine, steals Seu's DNA to gain access to the Netsphere. In a desperate bid to stop her, Dhomochevsky sacrifices himself, but not before Davine unleashes a Level 9 Safeguard within Cibo's body. The destructive power of the Cibo Safeguard brings about the annihilation of the entire region.
 
 ---
 
-*{{< highlight "Review" >}}*
+**Review**
 
 Readers are presented with a shift in tone from its predecessors, trading intense action for dialogue-driven moments. While this change of pace might catch some readers off guard, it is by no means a detriment to the story. In fact, it provides a much-needed breather for both the author and the audience after the relentless chaos and battles that have unfolded in the preceding volumes. It is a testament to the author's skill that they can seamlessly navigate between action-packed sequences and contemplative storytelling.
 
@@ -138,17 +139,17 @@ Having official covered more than half of the story that lies in BLAME!, this vo
 
 ## BLAME! Master Edition #5
 
-![blame master edition vol 5](/blog/blame-5.webp)
+{{< figure src="/blog/blame-5.webp" width="250" alt="blame master edition vol 5" class="right" >}}
 
-*{{< highlight "Rating" >}}*: ⭐⭐⭐⭐⭐
+**Rating**: ⭐⭐⭐⭐⭐
 
-*{{< highlight "Summary" >}}*
+**Summary**
 
 BLAME! Master Edition Vol 5 thrusts us into the future, 14 years after the devastating attack on Killy's body. As he embarks on his relentless journey, he stumbles upon a startling revelation: Cibo, now afflicted by amnesia, has been rescued by Sanakan, who has allied with the Authority against the remaining Safeguard forces. Within Cibo's body lies a precious "sphere" containing her genetic information. Tragedy unfolds as both Cibo and Sanakan meet their demise in a climactic showdown against the Safeguard. However, Killy emerges as the sole survivor, preserving the sphere. In a virtual reality encounter with a previously encountered AI, the echoes of Killy's quest reverberate through time.
 
 ---
 
-*{{< highlight "Review" >}}*
+**Review**
 
 This volume, with its intricate layers of fighting, violence, and scientific complexity, defies easy summarization. Davine Lu's relentless pursuit of accessing the Netsphere reveals the vulnerabilities of the Administration, while our main characters navigate the unofficial stratum, where the elusive Net Terminal Gene may not be the ultimate key to their destiny. With each passing volume, the destruction of the system and the megastructure becomes an increasingly conceivable outcome, leaving us to ponder the fate of our protagonists.
 
@@ -162,17 +163,17 @@ Tsutomu Nihei skillfully balances the convergence of chaos and artistry, drawing
 
 ## BLAME! Master Edition #6
 
-![blame master edition vol 6](/blog/blame-6.webp)
+{{< figure src="/blog/blame-6.webp" width="250" alt="blame master edition vol 6" class="right" >}}
 
-*{{< highlight "Rating" >}}*: ⭐⭐⭐⭐
+**Rating**: ⭐⭐⭐⭐
 
-*{{< highlight "Summary" >}}*
+**Summary**
 
 BLAME! Master Edition Vol 6 marks the culmination of this grand series. Killy, on his arduous journey, finally reaches the edge of the sprawling City, only to be struck down by a devastating gunshot to the head. Yet, in an unexpected turn of events, a torrential flood carries him to the surface, where he witnesses the ethereal beauty of the starry night sky. As the enigmatic sphere begins to hatch, the final page reveals Killy once again navigating the labyrinthine corridors of the City, this time accompanied by a young child clad in a hazmat suit.
 
 ---
 
-*{{< highlight "Review" >}}*
+**Review**
 
 In this last installment of the masterful BLAME! series, I am left with a tapestry of impressions that linger and resonate long after the final page is turned. The vastness of this city, spanning across an entire star system, beckons contemplation. It poses profound questions about the fate of digital life when its creators cease to exist. How does the replication of life in a silicon format shape the future? Are viruses destined to mutate and evolve within this new realm, or will they carve their own unique path? And what role does humanity play in this intricate framework?
 
