@@ -10,7 +10,7 @@ description: "The Gardens of the Moon, the first volume of the Malazan Book of t
 tags: ["malazan", "fantasy", "book review"]
 ---
 
-**Rating:** 4/5 ⭐
+**Rating:** 3.5/5 ⭐
 
 The Gardens of the Moon, the first volume of the Malazan Book of the Fallen, is a sprawling epic fantasy of monumental proportions. The vast array of characters is not just diverse, but uniquely and exquisitely crafted, and each of their roles is pivotal to the story's advancement. There are no throwaway scenes or chapters; every dialogue and action ripples and reverberates throughout the intricate narrative, creating a vivid tapestry of political intrigue, mystical manipulation, and fantastical landscapes.
 
