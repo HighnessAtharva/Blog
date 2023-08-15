@@ -224,16 +224,16 @@ nav.pagination>a.prev {
   }
 
   /* COMMENT ALL THIS TO RESTORE THE ORIGINAL NAVBAR */
-
   .nav {
     width: 100%;
     left: 0;
   }
 
-  .sticky {
+  /* .sticky {
     left: 0;
     min-width: 100%;
-  }
-/* COMMENT ALL THIS TO RESTORE THE ORIGINAL NAVBAR */
+  } */
+
+  /* COMMENT ALL THIS TO RESTORE THE ORIGINAL NAVBAR */
 
 }
