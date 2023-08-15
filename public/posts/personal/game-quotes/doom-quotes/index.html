@@ -10,7 +10,7 @@
 <meta name="description" content="Favorite Quotes from Doom (2016) and Doom Eternal videogame. Starring the Doom Slayer, the Hell Walker, the Unchained Predator, the one who brings fear where there is no hope.">
 <meta name="author" content="">
 <link rel="canonical" href="https://atharvashah.netlify.app/posts/personal/game-quotes/doom-quotes/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.dfd86a2d3c94da9519307537fb91ad9849b02bb3e5f743afa1aa31bb65e3a4c7.css" integrity="sha256-39hqLTyU2pUZMHU3&#43;5GtmEmwK7Pl90Ovoaoxu2XjpMc=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6b08b69f13baf5da97d759bb4a73b153d58d821488498cf39b7c53f4febda5d0.css" integrity="sha256-awi2nxO69dqX11m7SnOxU9WNghSISYzzm3xT9P69pdA=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://atharvashah.netlify.app/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://atharvashah.netlify.app/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://atharvashah.netlify.app/favicon-32x32.png">
@@ -133,10 +133,11 @@ if (!doNotTrack) {
 
 </script>
 
+
 <header class="header">
     
-    
     <div id="scroll-progress"></div> 
+    
     <nav class="nav">
         <div class="logo">
             <a href="https://atharvashah.netlify.app/" accesskey="h" title="Atharva Shah (Alt + H)">
@@ -198,6 +199,23 @@ if (!doNotTrack) {
             </li>
         </ul>
     </nav>
+
+<script>
+    const navbar = document.querySelector('.nav');
+    let navbarTop = navbar.offsetTop;
+
+    function stickynavbar() {
+        if (window.scrollY >= navbarTop) {
+            document.body.style.paddingTop = navbar.clientHeight + 'px';
+            navbar.classList.add('sticky');
+        } else {
+            document.body.style.paddingTop = '0';
+            navbar.classList.remove('sticky');
+        }
+    }
+    window.addEventListener('scroll', stickynavbar);
+</script>
+
 </header>
     <main class="main">
 

@@ -52,10 +52,11 @@
 </script>
 {{- end }}
 
+
 <header class="header">
-    
     <!-- SCROLLBAR PROGRESS / JS IS IN SINGLE.HTML-->
     <div id="scroll-progress"></div> 
+    
     <nav class="nav">
         <div class="logo">
             {{- $label_text := (site.Params.label.text | default site.Title) }}
@@ -152,4 +153,21 @@
             {{- end }}
         </ul>
     </nav>
+<!-- COMMENT THIS ENTIRE SCRIPT TAG TO RESTORE PREVIOUS NAVBAR STATE -->
+<script>
+    const navbar = document.querySelector('.nav');
+    let navbarTop = navbar.offsetTop;
+
+    function stickynavbar() {
+        if (window.scrollY >= navbarTop) {
+            document.body.style.paddingTop = navbar.clientHeight + 'px';
+            navbar.classList.add('sticky');
+        } else {
+            document.body.style.paddingTop = '0';
+            navbar.classList.remove('sticky');
+        }
+    }
+    window.addEventListener('scroll', stickynavbar);
+</script>
+<!-- COMMENT THIS ENTIRE SCRIPT TAG TO RESTORE PREVIOUS NAVBAR STATE -->
 </header>
