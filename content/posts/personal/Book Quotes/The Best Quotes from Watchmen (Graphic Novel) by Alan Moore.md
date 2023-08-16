@@ -10,6 +10,9 @@ description: "Favorite Quotes from Watchmen (Graphic Novel) by Alan Moore. Who w
 tags: ["quotes", "graphic novel"] 
 ---
 
+
+ {{< fancylink "Want to know my thoughts about the Watchmen Comic Series?" "Read my full review" "/posts/personal/book-review/watchmen-comic-review/" >}}
+
 >*Heard joke once: Man goes to doctor. Says he's depressed. Says life seems harsh and cruel. Says he feels all alone in a threatening world where what lies ahead is vague and uncertain. Doctor says, "Treatment is simple. Great clown Pagliacci is in town tonight. Go and see him. That should pick you up." Man bursts into tears. Says, "But doctor...I am Pagliacci.*
 
 >*Looked at sky through smoke heavy with human fat and God was not there. The cold, suffocating dark goes on forever and we are alone. Live our lives, lacking anything better to do. Devise reason later. Born from oblivion; bear children, hell-bound as ourselves, go into oblivion. There is nothing else. Existence is random. Has no pattern save what we imagine after staring at it for too long. No meaning save what we choose to impose. This rudderless world is not shaped by vague metaphysical forces. It is not God who kills the children. Not fate that butchers them or destiny that feeds them to the dogs. It’s us. Only us. Streets stank of fire. The void breathed hard on my heart, turning its illusions to ice, shattering them. Was reborn then, free to scrawl own design on this morally blank world.*

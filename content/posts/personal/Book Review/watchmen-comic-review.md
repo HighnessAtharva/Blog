@@ -14,7 +14,7 @@ tags: ["graphic novel", "book review"]
 
 For years, the Watchmen graphic novels by the legendary Alan Moore have captivated readers with their rich, complex, and meaningful narrative. As the highly anticipated HBO TV series looms on the horizon, I couldn't resist delving into this iconic series, and with each issue, I found myself drawn deeper into the intricate web spun by Moore. In this blog post, I'll be sharing my thoughts on each issue, exploring the characters, plot developments, and the profound themes that permeate the pages of Watchmen.
 
-I have already covered my favorite quotes from this comic series in the previous blog post. [The Best Quotes from Watchmen by Alan Moore](https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-watchmen-graphic-novel-by-alan-moore/)
+{{< fancylink "I've compiled a list of memorable quotes from Watchmen." "Read them now" "/posts/personal/book-quotes/the-best-quotes-from-watchmen-graphic-novel-by-alan-moore/" >}}
 
 ### Issue #1: At Midnight, All the Agents
 

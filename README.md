@@ -24,6 +24,12 @@ hugo
 
 ## Shortcodes
 
+### Fancy Link
+
+```md
+ {{< fancylink "Want to know my thoughts about the Watchmen Comic Series?" "Read my full review here" "/posts/personal/book-review/watchmen-comic-review/" >}}
+```
+
 ### Gallery
 
 ```md

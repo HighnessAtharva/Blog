@@ -1,0 +1,28 @@
+<style>
+    .fancy-link {
+        /* Add your fancy styling here */
+        color: #ff6600;
+        text-decoration: none !important;
+        font-weight: bolder;
+    }
+
+    .fancy-link:hover {
+        color: black;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.3s ease;
+        font-weight: bolder;
+    }
+
+    .fancy-text{
+        font-style: italic;
+        font-weight: bolder;
+        margin-top:50px;
+        margin-bottom: 50px !important;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid rgb(141, 141, 141);
+        border-bottom: 1px solid rgb(141, 141, 141);
+    }
+</style>
+
+<p class="fancy-text">{{ .Get 0 }} <a class="fancy-link" href="{{ .Get 2 }}">{{ .Get 1 }}</a></p>
