@@ -16,6 +16,8 @@ ABC Private Limited, a retail company, aims to gain valuable insights into their
 
 We will explore the analysis step-by-step using the **test.csv** and **train.csv** files. Through a combination of theoretical explanations and practical demonstrations, we will delve into data preprocessing, exploratory data analysis, feature engineering, and model building. We will be utilizing the power of Python for conducting Exploratory Data Analysis, performing data visualization, and training machine learning models. It is recommended to follow along using a Jupyter Notebook, as it provides an interactive and user-friendly environment for code execution and documentation.
 
+{{< fancylink "Learn to deploy confidently with this guide on" "Netlify CI/CD" "/posts/tech/netlify-ci-cd/" >}}
+
 To proceed with the analysis, we will make use of various Python libraries, including:
 
 - **pandas**: for data manipulation and analysis
@@ -1160,3 +1162,5 @@ Let's recap the sales analysis and prediction:
 - Evaluating the model's performance using metrics like R2 score, mean square error (MSE), and root mean square error (RMSE) revealed the accuracy and effectiveness of the models. The Gradient Boost Regression model achieved an R2 score of approximately 0.70, indicating that around 70% of the variation in customer spending was explained by the model.
 
 In conclusion, by analyzing customer purchasing habits and building predictive models, you gained valuable insights for tailored marketing strategies and business decision-making. Continuous refinement and improvement of the models, along with techniques like feature engineering, hyperparameter tuning, ensemble methods, cross-validation, and handling imbalanced data, can further enhance the accuracy and performance of the models. These insights and models contribute to maximizing customer satisfaction, optimizing business profitability, and driving success in customer purchasing analysis.
+
+{{< fancylink "Test your Django CRUD skills with" "Django Crypto App" "/posts/tech/django-crypto-app/part1/" >}}

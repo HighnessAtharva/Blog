@@ -10,6 +10,7 @@ description: "Discover the gritty brilliance of Sin City through its unforgettab
 tags: ["quotes", "fiction"]
 ---
 
+{{< fancylink "Who doesn't love Graphic Novels? Indulge in some of the best quotes from" "The Sandman" "/posts/personal/book-quotes/the-best-quotes-from-sandman-graphic-novel-by-neil-gaiman/" >}}
 
 >*I’ll stare the bastard in the face as he screams to God, and I’ll laugh harder when he whimpers like a baby. And when his eyes go dead, the hell I send him to will seem like heaven after what I’ve done to him.*
 

@@ -1,7 +1,7 @@
 ---
 title: "Album Review: Stratosphere by Duster"
 date: 2023-06-12T00:18:34+05:33
-draft: false
+draft: true
 cover: 
     image: blog/music-review/stratosphere.webp
     alt: Stratosphere by Duster

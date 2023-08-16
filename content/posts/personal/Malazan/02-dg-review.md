@@ -14,6 +14,8 @@ tags: ["malazan", "fantasy", "book review"]
 
 After reading two books in the Malazan Book of the Fallen series, my impression of the writer's work has shifted slightly. While this book, Deadhouse Gates, connected with me on a character-driven level, its bleakness, plethora of new faces, and the desert setting made it slightly more confusing than the previous book, Gardens of the Moon.
 
+{{< fancylink "Have you read my thoughts about Gardens of the Moon?" "Check it out" "/posts/personal/malazan/01-gotm-review/" >}}
+
 Erikson, known for his world-building skills, takes the already extensive cast of characters and places and expands them even further, leaving little respite for readers who struggled to keep up with the first book. However, this book does improve on characterization compared to the previous one.
 
 One significant difference from Gardens of the Moon is the portrayal of the Malazan Empire. While in the first book, the empire seemed almost unbeatable, in Deadhouse Gates, the opposite is true. Additionally, this book takes place in an entirely different location, the Seven Cities, and the heart of the empire, leaving behind the big players and settings of book one.
@@ -47,3 +49,5 @@ The book features both large-scale battles and smaller conflicts, and the fight 
 The author tackles a complex plot, but manages to keep it enthralling and moving forward cohesively. The impactful prose holds the reader's interest for nearly a thousand pages, which is no small feat. While there may be moments where the author falls short, it's under the weight of the complicated backstory, twisty plot, and vast cast of players. However, the author's uncompromising and meticulous approach to creating something grand and delivering on it to a large extent is nothing short of brilliant.
 
 This book is a tome, dense and laborious to read, but worth every page. It's a magnificent novel that demands mental exertion from the reader, but the payoff is immense. Despite the challenges, the reader will be compelled to continue the Malazan series, eager to uncover more of the Imperial developments. With "Memories of Ice" awaiting, the reader anticipates completing the epic saga before the end of 2023 and looks back on this journey with gratitude for having undertaken it.  
+
+{{< fancylink "I've managed to finish Memories of Ice!" "Read my review" "/posts/personal/malazan/03-moi-review/" >}}

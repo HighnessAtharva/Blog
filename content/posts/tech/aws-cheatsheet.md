@@ -10,6 +10,8 @@ description: "Dump of all the useful notes for SAA-C03 AWS Certification"
 tags: ["aws"]
 ---
 
+{{< fancylink "AWS is on my 'What I Am Learning in 2023' List." "See full list" "/posts/tech/what-i-am-learning-2023/" >}}
+
 Are you ready to level up your AWS game like a boss? Well, you're in for a treat 'cause we've got something wicked for you. We've compiled the ultimate collection of 35 AWS cheatsheets that'll have you speedrunning your way to AWS certification faster than a caffeine-fueled coder on a deadline.
 
 These cheatsheets are like your trusty sidekick, ready to dish out all the essential info you need to conquer the AWS certification exams. Whether you're a total newbie or a seasoned pro, we've got you covered. From EC2 to S3, from IAM to VPC, we've got the cheat codes to help you navigate the AWS universe with swagger.

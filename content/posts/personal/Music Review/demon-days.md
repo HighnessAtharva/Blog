@@ -1,7 +1,7 @@
 ---
 title: "Album Review: Demon Days by Gorillaz"
 date: 2023-06-12T00:18:34+05:30
-draft: false
+draft: true
 cover: 
     image: blog/music-review/demon-days.webp
     alt: Demon Days by Gorillaz

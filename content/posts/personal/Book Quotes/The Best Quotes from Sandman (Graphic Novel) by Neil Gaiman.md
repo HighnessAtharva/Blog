@@ -10,6 +10,7 @@ description: "Favorite Quotes from Sandman (Graphic Novel) volumes written by th
 tags: ["quotes", "graphic novel"] 
 ---
 
+{{< fancylink "Love dark comics? Take a look at some of the best" "Sin City Quotes" "/posts/personal/book-quotes/the-best-quotes-from-sin-city-graphic-novel-by-frank-miller/" >}}
 
 ## Vol 1: Preludes and Nocturnes
 

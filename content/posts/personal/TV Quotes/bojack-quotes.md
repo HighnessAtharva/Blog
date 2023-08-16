@@ -10,6 +10,8 @@ description: "Favorite Quotes from Bojack Horseman."
 tags: ["quotes"] 
 ---
 
+{{< fancylink "Read my collection of favorite quotes from" "Rick and Morty" "/posts/personal/tv-quotes/rick-and-morty/" >}}
+
 >*BoJack : He’s so stupid he doesn’t realize how miserable he should be.*
 
 >*BoJack : Settle. Because otherwise you’re just gonna get older and harder, and more alone. And you’re gonna do everything you can to fill that hole, with friends, and your career, and meaningless sex, but the hole doesn’t get filled. One day, you’re gonna look around and you’re going to realize that everybody loves you, but nobody likes you. And that is the loneliest feeling in the world.*

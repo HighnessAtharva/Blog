@@ -10,6 +10,8 @@ description: "A treasure trove of favorite quotes from The Witcher series by And
 tags: ["quotes", "fantasy"] 
 ---
 
+{{< fancylink "Love Reading Fantasy? You'll enjoy this collection of quotes from the " "First Law Trilogy" "/posts/personal/book-quotes/the-best-quotes-from-first-law-trilogy-by-joe-abercrombie/" >}}
+
 ## The Last Wish
 
 >*You make as good a fisherman as a goat’s arse makes a trumpet.*
@@ -127,3 +129,5 @@ tags: ["quotes", "fantasy"]
 >*You often disguise gaps in your education with sarcastic or exaggerated simplifications which you consider witty.*
 
 >*The world you envision is made for a witcher. A witcher would never be short of work in it. Instead of codes, articles and peevish platitudes about justice, your idea creates lawlessness, anarchy, the licence and self-serving of princelings and mandarins, the officiousness of careerists wanting to endear themselves to their superiors, the blind vindictiveness of fanatics, the cruelty of assassins, retribution and sadistic vengeance. Your vision is a world where people are afraid to venture out after dark; not for fear of cut-throats, but of the guardians of public order. For, after all, the result of all great crackdowns on miscreants is always that the miscreants enter the ranks of the guardians of public order en masse.*
+
+

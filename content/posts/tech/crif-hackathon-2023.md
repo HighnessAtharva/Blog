@@ -10,6 +10,9 @@ description: "Developer experience at CRIF Hackathon 2023. We built a News Media
 tags: ["hackathon", "python"]
 ---
 
+
+{{< fancylink "Like Machine Learning with Python? Try" "Sales Data Analysis Walkthrough" "/posts/tech/sales-data-analysis/" >}}
+
 Winning a hackathon is an incredible feeling, and it's even more special when it's your very first one. The adrenaline rush of competing against some of the brightest minds in the industry, the satisfaction of solving complex problems, and the thrill of being recognized for your hard work are all emotions that are hard to put into words. In this article, I'll walk you through the journey of our team who recently won their first ever hackathon, the CRIF Hackathon 2023. From the initial idea to the final presentation, we'll explore the ups and downs of the experience, and the valuable lessons that were learned along the way. So join us as we relive the excitement of a hackathon victory, and learn what it takes to come out on top.
 
 **Want to jump right into the code?** *[Check out the GitHub repo](https://github.com/HighnessAtharva/CRIF-Hackathon-2023).*
@@ -38,6 +41,9 @@ Can use dependency parsing or predicate classifiers to establish relationships b
 
 4. **Dashboard** -
 Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau
+
+{{< fancylink "Step-by-step guide on how to draw" "UML Diagrams with ChatGPT" "/posts/tech/uml-diagrams-with-chatgpt/" >}}
+
 
 ## Team
 

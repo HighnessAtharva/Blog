@@ -12,6 +12,8 @@ tags: [quotes]
 ---
 
 
+{{< fancylink "Check out my collection of favorite quotes from" "Dragon Ball " "/posts/personal/anime-quotes/dbz-quotes/" >}}
+
 >*I’ll admit that you’re stronger than before. But because of that, you seem to have lost sight of what’s truly important. Now listen carefully. The people of the village, who once abhorred you, have begun to admire you. They think of you as a comrade. It’s because you fought hard for their acceptance. You once said it was everyone who cares about you who helped you get where you are now. If you forget others because you have power, and become arrogant and egotistical, you’ll eventually become just like Madara. No matter how powerful you become, do not try to shoulder everything alone. Becoming the Hokage doesn’t mean people will acknowledge you. But when the people acknowledge you, you can become Hokage. Never forget your friends! – Itachi Uchiha*
 
 >*My name is Sasuke Uchiha. I hate a lot of things, and I don’t particularly like anything. What I have is not a dream, because I will make it a reality. I’m going to restore my clan, and kill a certain someone. – Sasuke Uchiha*

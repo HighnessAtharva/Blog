@@ -11,6 +11,8 @@ description: "Favorite Quotes from Rick and Morty."
 tags: ["quotes"]
 ---
 
+{{< fancylink "Read my collection of favorite quotes from" "Avatar The Last Airbender" "/posts/personal/tv-quotes/avatar-the-last-airbender/" >}}
+
 >*Nobody exists on purpose. Nobody belongs anywhere. Everybody’s gonna die. Come watch TV?*
 
 >*Think for yourselves. Don’t be sheep.*

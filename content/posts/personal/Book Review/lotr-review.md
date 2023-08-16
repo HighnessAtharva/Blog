@@ -12,6 +12,8 @@ tags: ["book review"]
 
 In the enchanted realm of Middle-Earth, where reality and fantasy intertwine, J.R.R. Tolkien weaves an unparalleled tale of heroism, sacrifice, and camaraderie in his legendary series, The Lord of the Rings. Spanning multiple volumes, this epic saga takes readers on a breathtaking journey through diverse lands and cultures, blending poetic compositions with riveting prose and delving deep into the richly developed characters that inhabit this fantastical realm.
 
+{{< fancylink "Does the name Geralt of Rivia ring a bell? Read my collection of quotes from" "The Witcher" "/posts/personal/book-quotes/the-best-quotes-from-witcher-series-by-andrzej-sapkowski/" >}}
+
 ## Volume 1: The Fellowship of the Ring
 
 {{< figure src="/blog/lotr_fellowship.webp" width="250" alt="Fellowship of the Ring" class="left" >}}

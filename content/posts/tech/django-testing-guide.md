@@ -12,6 +12,7 @@ tags: ["django", "technology"]
 
 **This walkthrough guide will be hands-on, include examples, code snippets, common use cases and stick to best practices laid by Django foundation and Python.**
 
+{{< fancylink "Test your Django CRUD skills with" "Django Crypto App" "/posts/tech/django-crypto-app/part1/" >}}
 
 Testing is a crucial component of Django development to guarantee the integrity and dependability of your applications. This in-depth guide will take you on a deep-dive tour of the best techniques and methods for testing Django applications. This article covers everything, from setting up the testing environment to mastering unit testing, integration testing, and end-to-end testing. Explore advanced techniques like performance and security testing, master how to write readable and maintainable tests, learn the advantages of comprehensive testing, and gain knowledge about automation and continuous testing. The knowledge and resources needed to create solid and reliable applications are provided by this practical guide, which is the best resource for any Django developer. Dive in and advance your Django development abilities! It’s a must-read, bookmark-worthy resource for newbies and seasoned developers alike.
 
@@ -472,6 +473,8 @@ By incorporating these testing strategies into your Django development workflow,
 
 To ensure the optimal performance, security, and usability of Django applications, it is essential to employ advanced testing techniques and leverage specialized tools. In this section, we will explore some of these techniques and tools that can enhance your testing efforts and help you deliver high-quality software.
 
+{{< fancylink "Like Machine Learning with Python? Try" "Sales Data Analysis Walkthrough" "/posts/tech/sales-data-analysis/" >}}
+
 ### Performance Testing Django Applications
 
 Performance testing focuses on assessing the speed, responsiveness, scalability, and stability of your application under different loads and scenarios.
@@ -762,3 +765,5 @@ Testing is a continuous journey, and there is always more to learn and explore. 
 I made a intermediate level Django project based on Test Driven Development (TDD). You can check it out [here](https://github.com/HighnessAtharva/django-crypto-app). It is a crypto currency app which uses CoinGecko API to fetch the latest crypto currency prices and displays them in a table. It also has a search functionality which allows you to search for a particular crypto currency.
 
 Remember, testing is not just about catching bugs; it's about building reliable, maintainable, and high-quality software. Embrace the testing mindset, and let testing be an integral part of your Django development process. Happy testing!
+
+{{< fancylink "Master Database Queries in Django with" "40 Django ORM Exercises" "/posts/tech/django-orm-exercises/" >}}

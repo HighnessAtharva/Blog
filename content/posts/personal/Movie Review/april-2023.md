@@ -10,6 +10,8 @@ description: "April 2023 was an exciting month for movie enthusiasts, with a var
 tags: ["Movie Review"]
 ---
 
+{{< fancylink "Wanna see what I watched last month? Check out" "March Movie Recap" "/posts/personal/movie-review/march-2023/" >}}
+
 April 2023 was an exciting month for movie enthusiasts, with a variety of genres and eras represented in the films released and viewed. As an avid movie-goer, I had the opportunity to watch a diverse selection of films, ranging from classic dramas to modern blockbusters. In this monthly post, I'll be sharing my thoughts and opinions on the movies I watched during April 2023. From high-octane action flicks to introspective character studies, these films have something for everyone. So, let's dive in and explore the world of cinema together!
 
 ---

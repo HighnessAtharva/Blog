@@ -13,6 +13,8 @@ tags: ["django", "python","tutorial"]
 
 Welcome to the second part of the 3-part technical tutorial series, where we'll be building a Django project that enables users to manage their cryptocurrency portfolios. To implement the functionalities and additional features, we'll be utilizing API calls to coingecko or any other cryptocurrency API.
 
+{{< fancylink "Missed the first part of the project? Check it out" "HERE" "/posts/tech/django-crypto-app/part1/" >}}
+
 In the previous part, we set up the project and created the models. Now, we will continue off from that point and add the templates, views and urls and code up the entire project. This will be the most complex and detailed part of this series.
 
 The code for the entirety of the project can be found here ->  **[Github Repo for Django Crypto App](
@@ -440,6 +442,8 @@ The `alerts.html` file will look like this:
 ## Setting Up Views
 
 To use views and templates in Django, we first need to import the necessary modules. The `requests` module is used for sending HTTP requests to external APIs. The `auth` module is used for user authentication related functionality. The `messages` module is used for displaying messages to the user. The `decorators` module is used for adding functionality to views based on certain conditions, such as requiring the user to be logged in or having certain permissions. The `forms` module is used for creating HTML forms that map to Django models. The `models` module is used for defining the database schema and ORM of the application.
+
+{{< fancylink "Master Database Queries in Django with" "40 Django ORM Exercises" "/posts/tech/django-orm-exercises/" >}}
 
 We can import these modules using the following code snippet in `views.py` since we will be using them in our views:
 
@@ -1419,3 +1423,5 @@ In our Django development journey, we covered the following topics:
 - Writing highly specifc views, decorators and request methods to handle complex business backend logic such as adding cryptocurrencies to the portfolio, deleting cryptocurrencies from the portfolio, and so on.
 
 Overall, we covered various aspects of Django development that will help us build robust and scalable web applications. In the final part of this tutorial, in the next post we will cover testing all endpoints, views and models so definitely do not miss that.
+
+{{< fancylink "Want to continue onwards?" "Read Part 3" "/posts/tech/django-crypto-app/part3/" >}}

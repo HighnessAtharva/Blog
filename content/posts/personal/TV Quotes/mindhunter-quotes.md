@@ -11,6 +11,8 @@ description: "Favorite Quotes from Mindhunter."
 tags: ["quotes"]
 ---
 
+{{< fancylink "Read my collection of favorite quotes from" "Mr. Robot" "/posts/personal/tv-quotes/mr-robot-quotes/" >}}
+
 >*We should be using every resource we can. Talking to the smartest people we find from the broadest possible spectrum.*
 
 >*It’s easier to ask for forgiveness than permission.*

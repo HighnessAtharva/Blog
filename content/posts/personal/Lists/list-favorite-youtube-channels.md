@@ -14,6 +14,8 @@ Herein lies a compilation of my most cherished YouTube channels. Having subscrib
 
 *{{< highlight "LAST UPDATED:" >}}* 22 Mar 2023
 
+{{< fancylink "YouTube Channels aren't the only thing I binge watch. Try my list of" "Favorite Podcasts" "/posts/personal/lists/list-favorite-podcasts/" >}}
+
 ### Technology
 
 [Andrej Karpathy](https://www.youtube.com/@AndrejKarpathy) -

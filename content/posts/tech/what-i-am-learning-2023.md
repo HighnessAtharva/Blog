@@ -12,6 +12,8 @@ description: "Diving into the Latest Developments in React.js, Docker, AWS, Djan
 
 ## Django
 
+{{< fancylink "Master Database Queries in Django with" "40 Django ORM Exercises" "/posts/tech/django-orm-exercises/" >}}
+
 🚀2023 is here, and I'm ready to blast off into the world of new tech! First up on my list is the one and only Django 🤘. This bad boy is known for its ease of use and flexibility, plus it's got a huge community of cool kids using it. I can't wait to dive deeper and discover all its hidden gems like the ORM, admin interface, and built-in security features.
 
 [**<u>My Checklist</u>**](#)
@@ -49,6 +51,8 @@ description: "Diving into the Latest Developments in React.js, Docker, AWS, Djan
 - Learn how to use Django with Docker and AWS
 - Master Django Rest Framework and build a RESTful API, monetize it, and deploy it
 
+{{< fancylink "Test your Django CRUD skills with" "Django Crypto App" "/posts/tech/django-crypto-app/part1/" >}}
+
 ## FastAPI
 
 Next, I'm gonna take FastAPI for a spin 🏎. This new web framework is all the rage these days and I wanna see what all the hype is about. Plus, it's built on top of Starlette and Pydantic, and promises to be easy, fast and efficient. I'm ready to put it to the test and compare it to other popular options like Flask and Django.
@@ -79,9 +83,13 @@ Next, I'm gonna take FastAPI for a spin 🏎. This new web framework is all the 
 
 - Make 2 FastAPI Projects and deploy them with monetization
 
+{{< fancylink "Check out my" "FastAPI Handbook" "https://www.freecodecamp.org/news/fastapi-quickstart" >}}
+
 ## React.js
 
 ReactJS is another technology that's caught my eye 🧐. This JavaScript library is a game-changer when it comes to building user interfaces, and I wanna learn all its tricks and tips. I'm particularly excited to see how it handles large amounts of data and creates reusable components.
+
+{{< fancylink "Learn to deploy confidently with this guide on" "Netlify CI/CD" "/posts/tech/netlify-ci-cd/" >}}
 
 [**<u>My Checklist</u>**](#)
 
@@ -162,6 +170,8 @@ AWS and Docker are the cherry on top 🍒. AWS is a cloud computing platform tha
 - Managing and monitoring using CloudWatch and CloudTrail
 - Best practices and automation using AWS CLI and CloudFormation.
 
+{{< fancylink "Read notes to help you prepare for" "AWS SAC-003 Certification" "/posts/tech/aws-cheatsheet/" >}}
+
 [**<u>Completion Goals</u>**](#)
 
 - Get AWS Solutions Architect Associate Certification
@@ -176,3 +186,5 @@ AWS and Docker are the cherry on top 🍒. AWS is a cloud computing platform tha
 - Review interview questions on each of these technologies
 
 Overall, I'm ready to dive into these technologies and see how they can help me build better and more efficient applications. I believe that learning these technologies will not only help me as a developer but will also help me to create better solutions for my clients and users. 📺
+
+{{< fancylink "Tired of managing hundreds of tabs? Discover how to" "Stay Organized in Chrome" "/posts/tech/how-i-stay-organized-in-chrome/" >}}

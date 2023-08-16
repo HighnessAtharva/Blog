@@ -10,6 +10,8 @@ description: Favorite Quotes from the Dragon Ball Z anime. This stuff will get y
 tags: [quotes] 
 ---
 
+{{< fancylink "Master the art of Ninjutsu by chanting the best quotes from" "Naruto" "/posts/personal/anime-quotes/naruto-quotes/" >}}
+
 >*Welcome To The End Of Your Life, And I Promise It's Going To Hurt.*
 
 >*There’s only one certainty in life. A strong man stands above and conquers all! – Vegeta*

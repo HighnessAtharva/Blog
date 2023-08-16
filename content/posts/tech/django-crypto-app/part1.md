@@ -17,7 +17,11 @@ In Part 1, we will be defining the functional requirements and give you the over
 
 In Part 2, we will add the templates, views and urls and code up the entire project. This will be the most complex and detailed part of this series.
 
+{{< fancylink "Check out part 2" "HERE" "/posts/tech/django-crypto-app/part2/" >}}
+
 In Part 3, we will wrap the series up by discussing testing approach by writing test cases for Models, Views and Templates using Pytest.
+
+{{< fancylink "Check out part 3" "HERE" "/posts/tech/django-crypto-app/part3/" >}}
 
 The code for the entirety of the project can be found here ->  **[Github Repo for Django Crypto App](
 <https://github.com/HighnessAtharva/django-crypto-app>)**
@@ -376,3 +380,5 @@ In this technical blog post, we covered the initial steps of building a web appl
 Next, we created our models and defined their relationships to each other, which helped us lay out the database schema. We also registered our models in the Django admin panel, allowing us to interact with them easily via the dashboard interface.
 
 Overall, we have successfully completed the introductory part of our project. In the next part, we will be working on views, forms, templates, and URLs to build the core functionalities of our application. This will help us to create a dynamic and responsive web application that meets our project requirements. Stay tuned for the next part!
+
+{{< fancylink "Master Database Queries in Django with" "40 Django ORM Exercises" "/posts/tech/django-orm-exercises/" >}}

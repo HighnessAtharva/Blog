@@ -13,6 +13,8 @@ tags: ["django", "python", "tutorial"]
 
 Welcome to the final part of the 3-part technical tutorial series, where have been building a Django project that enables users to manage their cryptocurrency portfolios. To implement the functionalities and additional features, we'll be utilizing API calls to coingecko or any other cryptocurrency API.
 
+{{< fancylink "Want to start from the beginning?" "Read Part 1" "/posts/tech/django-crypto-app/part1/" >}}
+
 In the first part, we set up the project and created the models. In the second part continued off from that point and added all the templates, views and urls and code up the entire crypto project. So, if you haven't read the previous parts, I highly recommend you to do so before continuing with this part. Here, we will exclusively discuss testing approach by writing test cases for Models, Views and Templates using Pytest. We will also write a ton of tests to ensure that our code is working as expected and generate a coverage report to see how much of our code is covered by the tests.
 
 The code for the entirety of the project can be found here ->  **[Github Repo for Django Crypto App](
@@ -33,6 +35,8 @@ URL testing in Django is used to check if the endpoints specified in the URL pat
 ### Model Testing
 
 Model testing in Django is used to check if the data stored in the database matches the expected schema and constraints specified in the models.py file. It helps ensure that the application is storing and retrieving data correctly and that the database is working as expected. Model testing is typically performed using the Django TestCase class and its various assertion methods, which allow the developer to create test data, save it to the database, and verify that the data has been saved correctly.
+
+{{< fancylink "Master Database Queries in Django with" "40 Django ORM Exercises" "/posts/tech/django-orm-exercises/" >}}
 
 ### View Testing
 

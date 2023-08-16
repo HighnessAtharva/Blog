@@ -25,6 +25,8 @@ They offer several advantages that make them a valuable tool in your web develop
 - **Enhanced Functionality**: Shortcodes allow you to extend the capabilities of your Hugo websites by adding dynamic elements such as customizable forms, interactive maps, social media embeds, and more.
 - **Developer Productivity**: With the ability to encapsulate complex code snippets into simple shortcodes, you can save time and effort by avoiding repetitive coding tasks.
 
+{{< fancylink "Tired of managing hundreds of tabs? Discover how to" "Stay Organized in Chrome" "/posts/tech/how-i-stay-organized-in-chrome/" >}}
+
 ## How to Write Custom Hugo Shortcodes?
 
 Creating custom Hugo Shortcodes is a straightforward process. Here's a step-by-step guide to get you started:
@@ -251,3 +253,5 @@ This is not really a shortcode, but more of a lesser know hack. Yes, you can add
 ## Conclusion
 
 Hugo Shortcodes are powerful tools that enable web developers to create dynamic, reusable content in their Hugo websites. By harnessing the reusability and enhanced functionality provided by shortcodes, you can streamline your development process and build more efficient and engaging websites. Whether you're a beginner or an experienced developer, incorporating Hugo Shortcodes into your workflow will undoubtedly elevate the quality and flexibility of your Hugo-powered projects. So go ahead, give it a try, and unlock the full potential of Hugo Shortcodes!
+
+{{< fancylink "Learn to deploy confidently with this guide on" "Netlify CI/CD" "/posts/tech/netlify-ci-cd/" >}}

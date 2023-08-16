@@ -104,8 +104,8 @@ if (!doNotTrack) {
   "keywords": [
     "hackathon", "python"
   ],
-  "articleBody": "Winning a hackathon is an incredible feeling, and it’s even more special when it’s your very first one. The adrenaline rush of competing against some of the brightest minds in the industry, the satisfaction of solving complex problems, and the thrill of being recognized for your hard work are all emotions that are hard to put into words. In this article, I’ll walk you through the journey of our team who recently won their first ever hackathon, the CRIF Hackathon 2023. From the initial idea to the final presentation, we’ll explore the ups and downs of the experience, and the valuable lessons that were learned along the way. So join us as we relive the excitement of a hackathon victory, and learn what it takes to come out on top.\nWant to jump right into the code? Check out the GitHub repo.\nProblem Statement We were give five problem statements to choose from. The first one was to build a framework/utility that takes a company name as an input. The utility should search all the media articles about the input company and present any reputational threatening data on a concise dashboard. With the help of NLP, we were able to build a framework that could scrape news articles from search engines like Google, Yahoo, Duckduckgo and present any reputational threatening data on a concise dashboard.\nYou can read more about other problem statements here.\nMedia Analytics Build a framework/utility that takes a company name as an input. The utility should search all the media articles about the input company and present any reputational threatening data on a concise dashboard.\nFollowing are the functionalities that need to be achieved in order to build a complete solution -\nDownloader - Download news articles using company name from search engines (Google, Yahoo, Duckduckgo) - Selenium, News API\nNER module - Named Entity Recognition (Organization + Risk Entity) - Out of the box Spacy NLP models / Taxonomy searches\nRelationship module - Analyze the articles and carve out sentences(context) where reputation risk elements and company names are present. Can use dependency parsing or predicate classifiers to establish relationships between risk elements and company names\nDashboard - Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau\nTeam Atharva Shah (Yours Truly) - Implementation of the first three modules leveraging NLP, Text Processing, Web Scraping and Debugging. In-charge of leading the team and making the presentation in the final round\nGurjas Gandhi - Administration, Management, Insightful Feedback\nAli Asger Saifee - Problem-Solving, Curating Word Lists and Generating Tableau Dashboards\nAditya Patil - Documentation, Testing and Generating Tableau Dashboards\nThe Team (Code Giants) L to R: Gurjas, Aditya, Ali and Atharva 24-Hour Code Sprint Since the project heavily relies on Web Scraping, Text Processing, NLP and Data Analysis using Python was an obvious choice for it.\nHaving prior experience with BeautifulSoup, APIs and Spacy for NLP I immediately got to work and got the first two modules up and running within the first few hours of the hackathon.\nNewsAPI - Scraping the latest and relevant news about an organization based on the input query\nRegex, BeautifulSoup, Trifulatura - To parse the main content from the webpages and discard irrelevant data. Cleaning up news articles.\nTensorflow - Sentiment Analysis (returning a logit score between 1 to 5)\nSpacy - pre-trained roBERta model for improving sentiment analysis and tagging of Named Entity Relationships\nCustom Word Stores - to employ a “weighted list” score system based on the word count of negative and offensive words. Three other lists (harassment.txt, countries.txt, lawsuits.txt) were used to tag the articles if repeated words related to it were detected.\nProcessing CSVs - A lot of file handling was performed. The pipeline consisted of 3 CSVs.\nCommon.csv that simply stores the scraped articles Common-processed.csv that performs sentiment analysis on headline and stores the tags, offensive/negative words with the score based on the SpaCy NER module Common-Analysis.csv that used pandas to join all the fields together and prepare a final CSV for automating the Tableau dashboard. Spent the most time with this. Most CSVs that made the final\nCustom CLI Tool to Scrape Relevant News Articles based on user input Sanitization, cleanup and pre-processing with Sentiment Analysis being written to CSV files Named Entity Relationship Mapping with DisplaCy Tableau - Taking input of the COMMON-ANALYSIS.csv file, we designed 8 dashboards to present or narrate a story with all our data. Since we had plenty of fields like Article Count, Title,Description, Content (which holds the entire article text), URL, Publisher, Published Date, Headline, Headline Sentiment, Offensive Rating, Negative Words, Offensive Words and Tags it was not much of a hassle. We made good use of several plotting and graphing methods and presented a diverse yet insightful story. Each Tableau report updates after looking up a new organization.\nTableau Dashboard #1 Tableau Dashboard #2 Tableau Dashboard #3 Tableau Dashboard #4 Tableau Dashboard #5 Tableau Dashboard #6 Tableau Dashboard #7 Tableau Dashboard #8 Obstacles, Setbacks and Challenges faced Cleaning up the article body and parsing proper text.\nExtrapolating the context to base the negative score on.\nOptimizing NLP processing and reducing the scraping time.\nTableau was a completely new tool for us, nonetheless we took a 2-hour crash course and got our hands dirty thanks to which we could quickly get ahead of the game and visualize our gathered data seamlessly.\nHandling exceptions, 403, 404, Date Parsing, Tagging and taking care of API throttling.\nModule 3 felt to be the most challenging since we had to add our own “risk-entity” NER support to the SpaCy “roBERTa” model while also not losing application efficiency.\nRewards We worked around the clock in an organized manner and secured the first rank competing against 36 other teams (nearly 140+ participants). All the effort paid off at the end as we secured the first position after an exhaustive and interview-based project presentation with the panel of judges.\nWith the prestige and recognition we also received:-\n50K Cash Prize Goodies for each team member Victory Certificate for each team member A “winner takes it all” trophy The taste of victory ",
-  "wordCount" : "1017",
+  "articleBody": "\rLike Machine Learning with Python? Try Sales Data Analysis Walkthrough\nWinning a hackathon is an incredible feeling, and it’s even more special when it’s your very first one. The adrenaline rush of competing against some of the brightest minds in the industry, the satisfaction of solving complex problems, and the thrill of being recognized for your hard work are all emotions that are hard to put into words. In this article, I’ll walk you through the journey of our team who recently won their first ever hackathon, the CRIF Hackathon 2023. From the initial idea to the final presentation, we’ll explore the ups and downs of the experience, and the valuable lessons that were learned along the way. So join us as we relive the excitement of a hackathon victory, and learn what it takes to come out on top.\nWant to jump right into the code? Check out the GitHub repo.\nProblem Statement We were give five problem statements to choose from. The first one was to build a framework/utility that takes a company name as an input. The utility should search all the media articles about the input company and present any reputational threatening data on a concise dashboard. With the help of NLP, we were able to build a framework that could scrape news articles from search engines like Google, Yahoo, Duckduckgo and present any reputational threatening data on a concise dashboard.\nYou can read more about other problem statements here.\nMedia Analytics Build a framework/utility that takes a company name as an input. The utility should search all the media articles about the input company and present any reputational threatening data on a concise dashboard.\nFollowing are the functionalities that need to be achieved in order to build a complete solution -\nDownloader - Download news articles using company name from search engines (Google, Yahoo, Duckduckgo) - Selenium, News API\nNER module - Named Entity Recognition (Organization + Risk Entity) - Out of the box Spacy NLP models / Taxonomy searches\nRelationship module - Analyze the articles and carve out sentences(context) where reputation risk elements and company names are present. Can use dependency parsing or predicate classifiers to establish relationships between risk elements and company names\nDashboard - Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau\nStep-by-step guide on how to draw UML Diagrams with ChatGPT\nTeam Atharva Shah (Yours Truly) - Implementation of the first three modules leveraging NLP, Text Processing, Web Scraping and Debugging. In-charge of leading the team and making the presentation in the final round\nGurjas Gandhi - Administration, Management, Insightful Feedback\nAli Asger Saifee - Problem-Solving, Curating Word Lists and Generating Tableau Dashboards\nAditya Patil - Documentation, Testing and Generating Tableau Dashboards\nThe Team (Code Giants) L to R: Gurjas, Aditya, Ali and Atharva 24-Hour Code Sprint Since the project heavily relies on Web Scraping, Text Processing, NLP and Data Analysis using Python was an obvious choice for it.\nHaving prior experience with BeautifulSoup, APIs and Spacy for NLP I immediately got to work and got the first two modules up and running within the first few hours of the hackathon.\nNewsAPI - Scraping the latest and relevant news about an organization based on the input query\nRegex, BeautifulSoup, Trifulatura - To parse the main content from the webpages and discard irrelevant data. Cleaning up news articles.\nTensorflow - Sentiment Analysis (returning a logit score between 1 to 5)\nSpacy - pre-trained roBERta model for improving sentiment analysis and tagging of Named Entity Relationships\nCustom Word Stores - to employ a “weighted list” score system based on the word count of negative and offensive words. Three other lists (harassment.txt, countries.txt, lawsuits.txt) were used to tag the articles if repeated words related to it were detected.\nProcessing CSVs - A lot of file handling was performed. The pipeline consisted of 3 CSVs.\nCommon.csv that simply stores the scraped articles Common-processed.csv that performs sentiment analysis on headline and stores the tags, offensive/negative words with the score based on the SpaCy NER module Common-Analysis.csv that used pandas to join all the fields together and prepare a final CSV for automating the Tableau dashboard. Spent the most time with this. Most CSVs that made the final\nCustom CLI Tool to Scrape Relevant News Articles based on user input Sanitization, cleanup and pre-processing with Sentiment Analysis being written to CSV files Named Entity Relationship Mapping with DisplaCy Tableau - Taking input of the COMMON-ANALYSIS.csv file, we designed 8 dashboards to present or narrate a story with all our data. Since we had plenty of fields like Article Count, Title,Description, Content (which holds the entire article text), URL, Publisher, Published Date, Headline, Headline Sentiment, Offensive Rating, Negative Words, Offensive Words and Tags it was not much of a hassle. We made good use of several plotting and graphing methods and presented a diverse yet insightful story. Each Tableau report updates after looking up a new organization.\nTableau Dashboard #1 Tableau Dashboard #2 Tableau Dashboard #3 Tableau Dashboard #4 Tableau Dashboard #5 Tableau Dashboard #6 Tableau Dashboard #7 Tableau Dashboard #8 Obstacles, Setbacks and Challenges faced Cleaning up the article body and parsing proper text.\nExtrapolating the context to base the negative score on.\nOptimizing NLP processing and reducing the scraping time.\nTableau was a completely new tool for us, nonetheless we took a 2-hour crash course and got our hands dirty thanks to which we could quickly get ahead of the game and visualize our gathered data seamlessly.\nHandling exceptions, 403, 404, Date Parsing, Tagging and taking care of API throttling.\nModule 3 felt to be the most challenging since we had to add our own “risk-entity” NER support to the SpaCy “roBERTa” model while also not losing application efficiency.\nRewards We worked around the clock in an organized manner and secured the first rank competing against 36 other teams (nearly 140+ participants). All the effort paid off at the end as we secured the first position after an exhaustive and interview-based project presentation with the panel of judges.\nWith the prestige and recognition we also received:-\n50K Cash Prize Goodies for each team member Victory Certificate for each team member A “winner takes it all” trophy The taste of victory ",
+  "wordCount" : "1037",
   "inLanguage": "en",
   "image":"https://atharvashah.netlify.app/blog/crif-hackathon/CRIF3.webp","datePublished": "2023-01-26T23:18:34+05:30",
   "dateModified": "2023-01-26T23:18:34+05:30",
@@ -260,7 +260,7 @@ if (!doNotTrack) {
     
     <span id="post_meta_style_3">
         <span class="fa fa-file-word-o"></span>
-        <span>1017 words
+        <span>1037 words
             &nbsp;&nbsp;
         </span>
     </span>
@@ -375,7 +375,36 @@ if (!doNotTrack) {
         return rect.top + win.pageYOffset;
     }
 </script>
-  <div class="post-content"><p>Winning a hackathon is an incredible feeling, and it&rsquo;s even more special when it&rsquo;s your very first one. The adrenaline rush of competing against some of the brightest minds in the industry, the satisfaction of solving complex problems, and the thrill of being recognized for your hard work are all emotions that are hard to put into words. In this article, I&rsquo;ll walk you through the journey of our team who recently won their first ever hackathon, the CRIF Hackathon 2023. From the initial idea to the final presentation, we&rsquo;ll explore the ups and downs of the experience, and the valuable lessons that were learned along the way. So join us as we relive the excitement of a hackathon victory, and learn what it takes to come out on top.</p>
+  <div class="post-content"><style>
+    .fancy-link {
+         
+        color: #ff6600;
+        text-decoration: none !important;
+        font-weight: bolder;
+    }
+
+    .fancy-link:hover {
+        color: black;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.3s ease;
+        font-weight: bolder;
+    }
+
+    .fancy-text{
+        font-style: italic;
+        font-weight: bolder;
+        margin-top:50px;
+        margin-bottom: 50px !important;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid rgb(141, 141, 141);
+        border-bottom: 1px solid rgb(141, 141, 141);
+    }
+</style>
+
+<p class="fancy-text">Like Machine Learning with Python? Try <a class="fancy-link" href="/posts/tech/sales-data-analysis/">Sales Data Analysis Walkthrough</a></p>
+
+<p>Winning a hackathon is an incredible feeling, and it&rsquo;s even more special when it&rsquo;s your very first one. The adrenaline rush of competing against some of the brightest minds in the industry, the satisfaction of solving complex problems, and the thrill of being recognized for your hard work are all emotions that are hard to put into words. In this article, I&rsquo;ll walk you through the journey of our team who recently won their first ever hackathon, the CRIF Hackathon 2023. From the initial idea to the final presentation, we&rsquo;ll explore the ups and downs of the experience, and the valuable lessons that were learned along the way. So join us as we relive the excitement of a hackathon victory, and learn what it takes to come out on top.</p>
 <p><strong>Want to jump right into the code?</strong> <em><a href="https://github.com/HighnessAtharva/CRIF-Hackathon-2023">Check out the GitHub repo</a>.</em></p>
 <h2 id="problem-statement">Problem Statement<a hidden class="anchor" aria-hidden="true" href="#problem-statement">#</a></h2>
 <p>We were give five problem statements to choose from. The first one was to build a framework/utility that takes a company name as an input. The utility should search all the media articles about the input company and present any reputational threatening data on a concise dashboard. With the help of NLP, we were able to build a framework that could scrape news articles from search engines like Google, Yahoo, Duckduckgo and present any reputational threatening data on a concise dashboard.</p>
@@ -402,6 +431,35 @@ Can use dependency parsing or predicate classifiers to establish relationships b
 Display these relationships in an appropriate Dashboard ⇒ PowerBI / Tableau</p>
 </li>
 </ol>
+<style>
+    .fancy-link {
+         
+        color: #ff6600;
+        text-decoration: none !important;
+        font-weight: bolder;
+    }
+
+    .fancy-link:hover {
+        color: black;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.3s ease;
+        font-weight: bolder;
+    }
+
+    .fancy-text{
+        font-style: italic;
+        font-weight: bolder;
+        margin-top:50px;
+        margin-bottom: 50px !important;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid rgb(141, 141, 141);
+        border-bottom: 1px solid rgb(141, 141, 141);
+    }
+</style>
+
+<p class="fancy-text">Step-by-step guide on how to draw <a class="fancy-link" href="/posts/tech/uml-diagrams-with-chatgpt/">UML Diagrams with ChatGPT</a></p>
+
 <h2 id="team">Team<a hidden class="anchor" aria-hidden="true" href="#team">#</a></h2>
 <ol>
 <li>

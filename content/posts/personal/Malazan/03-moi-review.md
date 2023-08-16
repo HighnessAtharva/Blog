@@ -10,6 +10,8 @@ description: "An odyssey through fantasy - exploring archetypes, sacrifice, and 
 tags: ["malazan", "fantasy", "book review"]
 ---
 
+{{< fancylink "Missed my thoughts on the first book?" "Gardens of the Moon Review" "/posts/personal/malazan/01-gotm-review/" >}}
+
 **Rating:** 4/5 ⭐  
 
 Within the exalted annals of modern epic fantasy, a singular tome emerges, standing as a luminous testament to the literary acumen of the early 2000s. In this magnum opus, "Memories of Ice," Steven Erikson, the maestro of the Malazan Book of the Fallen series, bestows upon the discerning reader an opulent tapestry of creation and destruction, enmeshing profound themes of birth, rebirth, motherhood, and self-sacrifice. Like a masterful symphony conductor, Erikson orchestrates the grand finale of the opening act on a celestial stage that spans millennia, entwining the fates of mortals, gods, and ethereal realms.
@@ -19,6 +21,8 @@ With an artistic deftness akin to a weaver of dreams, Erikson unfurls a saga awa
 A cavalcade of familiar visages gracefully reenters the limelight, accompanied by a cavalcade of neoteric protagonists. Amidst harrowing yet electrifying battlefields, arcane marvels, and flashes of humor, the reader is inexorably drawn into the maelstrom of emotion, culminating in a heartrending farewell to a cherished character.
 
 Erikson's narrative ingeniously entwines with the events of its predecessor, "Deadhouse Gates," rekindling the saga upon the war-ravaged canvas of Genabackis, mere moons after the events chronicled in "Gardens of the Moon."
+
+{{< fancylink "Get a quick recap of the second book by checking out my" "Deadhouse Gates Review" "/posts/personal/malazan/02-dg-review/" >}}
 
 The intricate plot unfurls along four cardinal threads, each possessing a labyrinthine tapestry of its own.
 

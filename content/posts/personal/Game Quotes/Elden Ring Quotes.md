@@ -10,6 +10,7 @@ description: "The most memorable quotes from the Elden Ring Video Game featuring
 tags: ["quotes"] 
 ---
 
+{{< fancylink "Love to rip and tear? Take a look at my collection of" "Doom Quotes" "/posts/personal/game-quotes/doom-quotes/" >}}
 
 
 >*I dreamt for so long. My flesh was dull gold... and my blood, rotted. Corpse after corpse, left in my wake. As I awaited... his return. Heed my words. I am Malenia. Blade of Miquella. And I have never known defeat.*

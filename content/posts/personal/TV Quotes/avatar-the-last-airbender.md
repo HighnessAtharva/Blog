@@ -10,6 +10,7 @@ description: "Favorite Quotes from Avatar The Last Airbender."
 tags: ["quotes"] 
 ---
 
+{{< fancylink "Read my collection of favorite quotes from" "Bojack Horseman" "/posts/personal/tv-quotes/bojack-quotes/" >}}
 
 >*Bad skin?! Normal teenagers worry about bad skin, I don’t have that luxury. – Zuko*
 

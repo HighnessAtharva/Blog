@@ -10,6 +10,8 @@ description: "The Gardens of the Moon, the first volume of the Malazan Book of t
 tags: ["malazan", "fantasy", "book review"]
 ---
 
+{{< fancylink "Before we begin, I would recommend reading my" "Prelude to Malazan Challenge" "/posts/personal/malazan/prelude-to-malazan-challenge/" >}}
+
 **Rating:** 3.5/5 ⭐
 
 The Gardens of the Moon, the first volume of the Malazan Book of the Fallen, is a sprawling epic fantasy of monumental proportions. The vast array of characters is not just diverse, but uniquely and exquisitely crafted, and each of their roles is pivotal to the story's advancement. There are no throwaway scenes or chapters; every dialogue and action ripples and reverberates throughout the intricate narrative, creating a vivid tapestry of political intrigue, mystical manipulation, and fantastical landscapes.
@@ -55,4 +57,5 @@ The worldbuilding in "Gardens of the Moon" is stupendous. Erikson has fashioned 
 As someone who adores absorbing worldbuilding, I was overwhelmed by it for perhaps the first time while reading a fantasy book. However, I can only blame my own shortcomings rather than Erikson for the fact that I was sometimes deluged by the book's worldbuilding and labyrinthine plot. My advice to those new to Erikson's work is to relax and read without overthinking it. Although I found myself irked at times trying to comprehend everything I was reading, I learned to appreciate the story and writing without feeling the need to understand everything all at once.
 
 I am captivated and eager to press on, and in a few days' time, I will commence my journey with "Deadhouse Gates". Expect a review of that book in the coming weeks.
- 
+
+{{< fancylink "My review of Deadhouse Gates is up!" "Read it here" "/posts/personal/malazan/02-dg-review/" >}}

@@ -14,6 +14,7 @@ tags: ["technology", "tutorial"]
 
 > This article provides step-by-step instructions on how to set up continuous integration and continuous deployment (CI/CD) to Netlify for static site deployments using Github. Readers will learn how to optimize their deployment pipeline for maximum efficiency, streamline their workflow and reduce the risk of errors.
 
+{{< fancylink "Like this website? It was built with" "Amazing Hugo Shortcodes" "/posts/tech/hugo-shortcodes/" >}}
 ## I. Introduction
 
 In today's fast-paced software development landscape, Continuous Integration and Continuous Deployment (CI/CD) have become crucial for ensuring high-quality software releases at a rapid pace. Netlify is a popular cloud-based hosting platform that provides an easy way to deploy static sites. By automating the deployment process with CI/CD, developers can focus on writing code and delivering features rather than manually deploying changes. In this article, we will explore how to set up CI/CD to Netlify for static site deployments. We will discuss the benefits of this approach, and provide a step-by-step guide for integrating Github with Netlify for a streamlined deployment process.
@@ -25,6 +26,8 @@ For this article, I will be using a Hugo static site  that I used to build a per
 ## II. Setting Up a Netlify Account
 
 In order to set up CI/CD to Netlify for static site deployment, you will need to create a Netlify account. If you already have a Netlify account, you can skip this section and move on to the next section.
+
+{{< fancylink "Tired of managing hundreds of tabs? Discover how to" "Stay Organized in Chrome" "/posts/tech/how-i-stay-organized-in-chrome/" >}}
 
 Netlify is a cloud-based service that offers continuous deployment, hosting, and serverless backend functionality for static websites. With Netlify, you can easily deploy and manage static sites with automatic CI/CD capabilities.
 

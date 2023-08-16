@@ -11,6 +11,8 @@ tags: [quotes]
 
 ---
 
+{{< fancylink "If you love gothic animes, you will definitely dig my collection of" "Berserk Quotes" "/posts/personal/anime-quotes/berserk-quotes/" >}}
+
 >*Mankind’s greatest fear is Mankind itself. – Gendo Ikari*
 
 >*Man fears the darkness, and so he scrapes away at the edges of it with fire. He creates life by diminishing the Darkness. – Rei Ayanami*

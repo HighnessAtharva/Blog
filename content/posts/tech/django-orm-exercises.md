@@ -30,6 +30,8 @@ Let us first go over some of the terminology that is used in conjunction with th
 - **Annotations:** Annotations allow you to add calculated fields to QuerySets based on database functions or other fields. They are used to add computed or aggregated data to QuerySets.
 - **Meta options:** Meta options provide additional settings for models, such as ordering, database table names, and unique constraints. They allow you to customize the behavior of models at the class level.
 
+{{< fancylink "Test your Django CRUD skills with" "Django Crypto App" "/posts/tech/django-crypto-app/part1/" >}}
+
 ## Models Used in the Examples
 
 The following models are used in the examples below. Take a look at the code to get a better understanding of the relationships between the models.
@@ -436,3 +438,5 @@ In conclusion, this Django ORM cheatsheet and exercises blog post provided an ov
 By working through the exercises, we learned how to use these elements to query and manipulate data from the database. These exercises provided practical examples of how to use Django's ORM to solve real-world problems.
 
 Django's ORM is a powerful tool that provides a high-level, intuitive interface for interacting with databases. It enables developers to write concise and readable code while also handling complex queries and transactions. By mastering Django's ORM, developers can build robust, scalable, and maintainable applications with ease.
+
+{{< fancylink "Level up your Django skills with this guide on" "Testing Django Applications" "/posts/tech/django-testing-guide" >}}

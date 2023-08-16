@@ -10,6 +10,7 @@ description: "Favorite Quotes from Game of Thrones."
 tags: ["quotes"] 
 ---
 
+{{< fancylink "Read my collection of favorite quotes from" "True Detective" "/posts/personal/tv-quotes/true-detective/" >}}
 
 >*Let me give you some advice, bastard. Never forget what you are, the rest of the world will not. Wear it like armor, and it can never be used to hurt you.*
 

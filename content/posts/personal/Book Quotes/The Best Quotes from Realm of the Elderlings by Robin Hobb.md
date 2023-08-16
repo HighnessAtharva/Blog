@@ -12,6 +12,8 @@ tags: ["quotes", "fantasy"]
 
 Currently, I have only managed to finish off the first trilogy in the mammoth that Realm of the Elderlings happens to be but I plan to power through the series soon and add the remainder of the quotes so sit back and enjoy what I have to offer. If you feel a few hidden gems are missing, email me!
 
+{{< fancylink "Hunting for more YA books? Get a taste of badassery with" "Nevernight Trilogy Quotes" "/posts/personal/book-quotes/the-best-quotes-from-nevernight-trilogy-by-jay-kristoff/" >}}
+
 ## Farseer Trilogy
 
 ### Assassin’s Apprentice

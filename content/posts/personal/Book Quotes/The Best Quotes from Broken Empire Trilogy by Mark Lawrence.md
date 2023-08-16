@@ -10,6 +10,7 @@ description: "Favorite Quotes from Broken Empire Trilogy by Mark Lawrence. War, 
 tags: ["book quotes", "fantasy"] 
 ---
 
+{{< fancylink "Grimdark books are the best! Explore the finest quotes from" "The First Law Trilogy" "/posts/personal/book-quotes/the-best-quotes-from-first-law-trilogy-by-joe-abercrombie/" >}}
 
 ## Prince of Thorns
 

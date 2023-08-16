@@ -3,7 +3,7 @@ title: "Prelude to Malazan Book of the Fallen Challenge"
 date: 2023-03-18T00:18:34+05:30
 draft: false
 cover: 
-    image: blog/malazan/prelude-cover.jpeg
+    image: blog/malazan/prelude-cover.webp
     alt: A Prelude to my Malazan Book of the Fallen Reading Challenge
     caption: Opening the door to a new high fantasy universe
 description: "Opening thoughts and ponderings for the Malazan Book of the Fallen series. Setting expectations for this fantasy adventure."
@@ -15,6 +15,8 @@ Embarking on a massive high fantasy book series is no small feat, especially whe
 Enter the Malazan Book of the Fallen. With rave reviews and a reputation for being one of the most epic fantasy series ever written, it seemed like the perfect choice for me. So, in 2022, I dived headfirst into the first book of the series, Gardens of the Moon. And oh boy, was I blown away by the sheer scale and scope of the book. It was everything I hoped for and more.
 
 Filled with excitement and high expectations, I immediately picked up Deadhouse Gates after finishing Gardens of the Moon. And the opening chapters did not disappoint. But as fate would have it, life got in the way, and I had to put the book down to deal with the responsibilities of adulthood. I lost my momentum and before I knew it, I had traded in my complex high fantasy reads for lighter, easier options.
+
+{{< fancylink "I've already made some progress. Read my review for" "Gardens of the Moon" "/posts/personal/malazan/01-gotm-review/" >}}
 
 Fast forward to 2023, and I've made the decision to finally finish the series. Armed with a lot of free time and a burning desire to tackle this mammoth of a series, I'm halfway through my reread of Gardens of the Moon. This time, however, I'm determined to push through and keep up with all the characters, no matter how complex or challenging it gets.
 

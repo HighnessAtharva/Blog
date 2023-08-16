@@ -40,6 +40,8 @@ The idea of accelerationism can be traced back to the 19th century, with thinker
 
 Accelerationism can be broken down into two main branches: left-wing and right-wing. Left-wing accelerationism, also known as "progressive accelerationism," argues that accelerating technological progress will ultimately lead to a more equitable and just society. This branch of accelerationism is often associated with Marxist and socialist ideologies. On the other hand, right-wing accelerationism, also known as "neoliberal accelerationism," argues that accelerating technological progress will lead to a more efficient and capitalist society. This branch of accelerationism is often associated with libertarian and capitalist ideologies.
 
+{{< fancylink "Let AI do the heavy lifiting. Read all about" "UML Diagrams with ChatGPT" "/posts/tech/uml-diagrams-with-chatgpt" >}}
+
 ### Critiques of accelerationism
 
 Accelerationism has not been without its critics. Some argue that accelerationism ignores the potential negative consequences of rapidly advancing technology, such as increased inequality and loss of privacy. Others argue that accelerationism is too optimistic about the ability of technology to solve societal problems and that it ignores the need for structural changes in society. Additionally, some argue that accelerationism is a form of technofascism, in which technology is used as a means of control and oppression. It's important to note that critiques of accelerationism come from both the left and right wings, and the topic is complex and requires deeper understanding.
@@ -91,3 +93,5 @@ But with all the benefits come some potential drawbacks. We've all seen the movi
 So in conclusion, let's not get too caught up in the hype. Sure, having a robotic arm would be pretty cool, but let's make sure we're doing it for the right reasons. And if you do end up with a robotic arm, please, for the love of god, don't use it to hack the Pentagon.
 
 TL;DR: accelerationism and transhumanism are important topics to consider, but let's be careful with how we implement it and not get too caught up in the hype.
+
+{{< fancylink "Tired of managing hundreds of tabs? Discover how to" "Stay Organized in Chrome" "/posts/tech/how-i-stay-organized-in-chrome/" >}}

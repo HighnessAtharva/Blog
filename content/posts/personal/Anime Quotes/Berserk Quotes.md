@@ -10,6 +10,7 @@ description: "Favorite Quotes from the Berserk (1997) anime. Put your grasses on
 tags: ["quotes"] 
 ---
 
+{{< fancylink "Remember when Goku went Super Saiyan? Reminisce with" "Dragon Ball quotes" "/posts/personal/anime-quotes/dbz-quotes/" >}}
 
 >*Griffith: Martyrdom for a merciless God. What a waste. On the battlefield the life of a common soldier isn't worth even a single silver piece. In today's world, most people's life are subject to the whims of the nobility and the royalty. Of course, even a king can't live exactly as he pleases. We are all at the mercy of the great tide and we will disappear in the end. Our lives spent never even knowing who we were. In life, unrelated to one's social standing or class as determined by man, there are some people who, by nature are keys that set the world in motion. They are the true elite as dictated by the Golden Rule of the Universe. That is what I want to know. What is my place in the world? Who am I? What am I capable of? What am I destined for?*
 

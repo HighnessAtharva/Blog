@@ -65,3 +65,5 @@ This way, you can use ChatGPT to generate a variety of diagrams for your project
 ## Conclusion
 
 Using ChatGPT to generate UML diagrams is a quick and easy way to speed up your design process. With its ability to generate PlantUML code based on your project description, you can save hours of work and focus on other aspects of your project. Give it a try and see how it can benefit you in your next project.
+
+{{< fancylink "Like this website? It was built with" "Amazing Hugo Shortcodes" "/posts/tech/hugo-shortcodes/" >}}

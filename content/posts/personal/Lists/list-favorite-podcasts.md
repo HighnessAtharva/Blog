@@ -14,6 +14,8 @@ Allow me to present a compendium of the podcasts to which I have been attending 
 
 *{{< highlight "LAST UPDATED:" >}}* 22 Mar 2023
 
+{{< fancylink "Podcasts aren't the only thing I listen to. Check out my list of" "Favorite Youtube Channels" "/posts/personal/lists/list-favorite-youtube-channels/" >}}
+
 ## Literature, Movies and TV Shows
 
 [Ten Very Big Books - A Malazan Readthrough Podcast](https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy50cmFuc2lzdG9yLmZtL3RlbnZlcnliaWdib29rcw?sa=X&ved=0CAMQ9sEGahcKEwiYsP_xqu39AhUAAAAAHQAAAAAQLA)

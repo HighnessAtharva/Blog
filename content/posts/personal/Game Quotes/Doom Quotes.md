@@ -10,6 +10,8 @@ description: "Favorite Quotes from Doom (2016) and Doom Eternal videogame. Starr
 tags: ["quotes"] 
 ---
 
+{{< fancylink "Fellow Tarnished, go right ahead and check out my collection of" "Elden Ring Quotes" "/posts/personal/game-quotes/elden-ring-quotes/" >}}
+
 >*For he will walk among us, and he will smite the evil from this earth. For he who comes in our time of need is not of mortal breed, he is the Destroyer, the right hand of our Creator and the one who brings fear where there is no hope.*
 
 >*SLAYER’S TESTAMENT I: In the first age, in the first battle, when the shadows first lengthened, one stood. Burned by the embers of Armageddon, his soul blistered by the fires of Hell and tainted beyond ascension, he chose the path of perpetual torment. In his ravenous hatred he found no peace; and with boiling blood he scoured the Umbral Plains seeking vengeance against the dark lords who had wronged him. He wore the crown of the Night Sentinels, and those that tasted the bite of his sword named him... the Doom Slayer.*

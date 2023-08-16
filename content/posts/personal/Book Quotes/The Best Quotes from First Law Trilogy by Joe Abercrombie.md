@@ -10,6 +10,8 @@ description: "Favorite Quotes from First Law Trilogy by Joe Abercrombie. A grimd
 tags: ["quotes", "fantasy"] 
 ---
 
+{{< fancylink "We get it. You love dark fantasy. Read the best quotes from" "The Broken Empire" "/posts/personal/book-quotes/the-best-quotes-from-broken-empire-trilogy-by-mark-lawrence/" >}}
+
 ## The Blade Itself
 
 >*Once you've got a task to do, it's better to do it than live with the fear of it.*
