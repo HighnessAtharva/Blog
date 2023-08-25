@@ -129,8 +129,13 @@ params:
         url: "https://letterboxd.com/HighnessAtharva"
       - name: lastfm
         url: "https://www.last.fm/user/HighnessAtharva"
+      - name: anilist
+        url: "https://anilist.co/user/HighnessAtharva/"
+      - name: goodreads
+        url: "https://www.goodreads.com/user/show/47064311-highness-atharva"
       - name: rss
         url: "/index.xml"
+        
       
     
     profileMode:
