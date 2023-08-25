@@ -1,5 +1,5 @@
 ---
-title: "January 2023 Movies: Toppling My Winter Watchlist"
+title: "January 2023 Movie Reviews"
 date: 2023-01-28T00:18:34+05:30
 draft: false
 cover: 

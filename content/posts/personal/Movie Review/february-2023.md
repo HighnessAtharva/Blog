@@ -1,5 +1,5 @@
 ---
-title: "February 2023 Movies: Love and the Big Screen"
+title: "February 2023 Movie Review"
 date: 2023-02-27T00:18:34+05:30
 draft: false
 cover: 

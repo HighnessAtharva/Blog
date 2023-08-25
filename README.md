@@ -24,6 +24,12 @@ hugo
 
 ## Shortcodes
 
+
+### Aligned Figure
+
+{{< figure src="https://a.ltrbxd.com/resized/film-poster/2/6/9/0/2690-apocalypse-now-0-600-0-900-crop.jpg?v=d4f99c09a3" width="300" alt="Apocalypse Now" class="right" >}}
+
+
 ### Fancy Link
 
 ```md

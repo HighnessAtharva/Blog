@@ -1,12 +1,12 @@
 ---
-title: "April 2023 Movies: Spring Screenings"
+title: "April 2023 Movie Reviews"
 date: 2023-04-16T00:18:34+05:30
 draft: false
 cover: 
     image: blog/movie-review/April-2023.webp
     alt: April 2023 Movie Reviews
     caption: Reviews of the movies I watched in April 2023
-description: "April 2023 was an exciting month for movie enthusiasts, with a variety of genres and eras represented in the films released and viewed."
+description: "This was an exciting month for movie enthusiasts, with a variety of genres and eras represented in the films released and viewed."
 tags: ["Movie Review"]
 ---
 

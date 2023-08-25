@@ -106,7 +106,7 @@ params:
     
     # SEARCH
     fuseOpts:
-        isCaseSensitive: true
+        isCaseSensitive: false
         useExtendedSearch: false
         includeMatches: false
         minMatchCharLength: 3

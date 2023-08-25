@@ -1,5 +1,5 @@
 ---
-title: "March 2023 Movies: Magic and Melodrama"
+title: "March 2023 Movie Reviews"
 date: 2023-03-28T00:18:34+05:30
 draft: false
 cover: 
