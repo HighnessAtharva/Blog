@@ -114,7 +114,7 @@ Mystery, charm, and a love for the written word bind my soul. In this literary l
 
 ## What do I Watch? What are my favorite directors, movies and TV shows?
 
-A silver screen devotee and TV aficionado, I savor the world of video entertainment, with a penchant for movies over TV shows. Animated gems and anime hold a special place in my heart, and Studio Ghibli's enchanting creations leave me in awe. A24's masterpieces consistently exceed expectations, while indie and underground movies cast their unique spell on my imagination.
+As a silver screen devotee and TV aficionado, I savor the world of video entertainment, with a penchant for movies over TV shows. Animated gems and anime hold a special place in my heart, and Studio Ghibli's enchanting creations leave me in awe. A24's masterpieces consistently exceed expectations, while indie and underground movies cast their unique spell on my imagination.
 
 Gory and extreme B-movies from the golden era tantalize me, a nostalgic journey reminiscent of the 80s and 90s. Horror, sci-fi, and fantasy films enthrall me. Try not to recommend me documentaries and biopics. They rarely captivate my interest.
 
@@ -148,13 +148,38 @@ Letterboxd is my companion, crafting lists, tracking ratings, and offering a por
 
 ## What is my music taste like? What genre and artists do I prefer?
 
+Some genres that I have been enjoying are alternative, rock, hip hop, rap, electronic, soundtrack, ambient, indie, pop, and retro. I am a sucker for 80s and 90s music. I am not a fan of metal, country, and jazz. I am not a fan of K-pop either, well sometimes.
+
+I'll let the visuals speak for this one.  
+
+### Most listened-to album chart
+
+![Image](/about/lastfm-albums.jpg)
+
+### Most listened-to artist chart
+
+![Image](/about/lastfm-artists.png)
+
+Note: These charts were generated on September 3, 2023.
 [![LastFM](/about/music.webp)](https://www.last.fm/user/HighnessAtharva)
 
 ---
 
 ## Do you even game bro?
 
-'Course I do!
+'Course I do! Growing up, I was knee-deep in pixels and polygons before I could tie my shoelaces properly.
+
+Parkouring across rooftops in Prince of Persia, causing virtual chaos in Grand Theft Auto, and silently stalking targets in Assassin's Creed—these games were my initiation into the gaming world. They weren't just games; they were adventures.
+
+Fast forward a bit, and I stumbled upon the world of indie games and metroidvanias. It was like finding a treasure chest full of gems. Hollow Knight? A masterpiece. GRIS? A work of art. Shadows of Mordor? An orc-slaying extravaganza. These games weren't just fun; they were emotional rollercoasters.
+
+And then there are isometric games. Hades? The devilishly good time I never knew I needed Cult of the Lamb? It's like a fuzzy, adorable nightmare. These games proved that perspective is everything.
+
+Speaking of perspective, Devolver Digital—these folks know how to twist it. Their games are like a wild fever dream. They're quirky, they're bold, and they're impossible to forget. Devolver Digital isn't just a game developer; they're a mad genius behind the screen.
+
+Of course, I can't forget the classics: Far Cry's exotic landscapes, Tomb Raider's adventurous spirit, Doom's relentless chaos, and Call of Duty's adrenaline-pumping battles. These games shaped the gaming industry and carved a special place in my heart.
+
+So, there you have it—a peek into my gaming journey. From rooftops to dungeons, from indie gems to triple-A classics.
 
 ---
 

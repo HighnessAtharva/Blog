@@ -50,28 +50,6 @@ div.buttons {
   max-width: 600px;
 }
 
-/* COMMENT ALL THIS TO RESTORE THE ORIGINAL NAVBAR */
-.nav {
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  border-bottom: 1px solid var(--border);
-  background: rgba(0, 0, 0, 0.0.25);
-  box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 5px;
-}
-
-.sticky {
-  position: fixed;
-  left: 45px;
-  min-width: calc(var(--nav-width) + var(--gap) * 2);
-}
-
-
-
-/* COMMENT ALL THIS TO RESTORE THE ORIGINAL NAVBAR */
 
 div.profile_inner>h1 {
   font-size: 3rem;
@@ -223,17 +201,5 @@ nav.pagination>a.prev {
     display: block;
   }
 
-  /* COMMENT ALL THIS TO RESTORE THE ORIGINAL NAVBAR */
-  .nav {
-    width: 100%;
-    left: 0;
-  }
-
-  /* .sticky {
-    left: 0;
-    min-width: 100%;
-  } */
-
-  /* COMMENT ALL THIS TO RESTORE THE ORIGINAL NAVBAR */
 
 }
