@@ -10,16 +10,14 @@ description: "A Slick Gallery of Elden Ring Characters, Bosses, Dragons and NPCs
 hidemeta: true
 ---
 
+The Elden Ring Gallery is a web project that showcases artwork inspired by the highly anticipated game, Elden Ring. The gallery features a collection of stunning illustrations created by the talented artist "drakkar2guerre" from Instagram. The goal of this project was to create an immersive and visually appealing gallery experience for fans of Elden Ring.
+
 {{< ico "brand-github" >}} **GITHUB :** PRIVATE REPO.  
 
 {{< ico "archive">}} **DEMO :** <https://highnessatharva.github.io/Elden-Ring-Gallery/>
 
 - Recruiters, please [email](mailto:HighnessAtharva@gmail.com) to request access.
 - Developers and Creatives, if you need this content, please [email](mailto:HighnessAtharva@gmail.com) to request access. I can make a similar content for you if needed (charges will apply).
-
-## Project Summary
-
-The Elden Ring Gallery is a web project that showcases artwork inspired by the highly anticipated game, Elden Ring. The gallery features a collection of stunning illustrations created by the talented artist "drakkar2guerre" from Instagram. The goal of this project was to create an immersive and visually appealing gallery experience for fans of Elden Ring.
 
 ## Project Tech Stack
 

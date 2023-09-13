@@ -15,7 +15,7 @@
 " id="top">
     {{- partialCached "header.html" . .Page -}}
 
-    {{ if or (in .Title "🍿Personal") (in .Title "💻Tech") }} 
+    {{ if or (in .Title "🍿Personal") (in .Title "💻Tech") (in .Title "⚒️ Projects")}} 
     <main class="post-main">
         {{- block "main" . }}{{ end }}
     </main>

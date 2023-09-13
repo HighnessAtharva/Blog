@@ -45,7 +45,9 @@
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
 {{- end }}
 
-{{- $paginator := .Paginate $pages }}
+<!-- CHANGE THE NUMBER OF POSTS PER PAGE / PAGINATION CONTROL-->
+{{- $paginator := .Paginate (where $pages "Params.hiddenInHomeList" "!=" "true") 11 }}
+
 
 {{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
 {{- partial "home_info.html" . }}

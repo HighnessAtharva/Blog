@@ -10,13 +10,9 @@ description: ""
 hidemeta: true
 ---
 
-
+WYDRN is a Social Networking website where you can track your movies, TV shows, games, books, and music. The aim of this project is to provide a centralized platform to track all your favorite media, eliminating the need to use multiple platforms like IMDB, Goodreads, Steam, RateYourMusic, and TVTime. It's one platform to rule them all!
 
 {{< ico "brand-github" >}} **GITHUB :** <https://github.com/HighnessAtharva/WYDRN>
-
-## Project Summary
-
-WYDRN is a Social Networking website where you can track your movies, TV shows, games, books, and music. The aim of this project is to provide a centralized platform to track all your favorite media, eliminating the need to use multiple platforms like IMDB, Goodreads, Steam, RateYourMusic, and TVTime. It's one platform to rule them all!
 
 {{< galleries >}}
 {{< gallery src="/projects/wydrn0.webp" title="" >}}

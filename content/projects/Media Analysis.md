@@ -10,14 +10,11 @@ description: ""
 hidemeta: true
 ---
 
+This is a web application built with Streamlit that allows users to analyze data from various entertainment platforms. The Entertainment Data Analysis Web Application is a powerful tool for analyzing data from popular entertainment platforms such as Goodreads, Letterboxd, and Steam. It provides users with advanced data analysis techniques, statistical reports, and in-depth insights that are not available on the platforms themselves.
 
 {{< ico "brand-github" >}} **GITHUB :** <https://github.com/HighnessAtharva/Media-Analysis>
 
 {{< ico "archive">}}  **DEMO :** <https://highnessatharva-media-analysis-media-analysis-zhdell.streamlit.app/>
-
-## Project Summary
-
-This is a web application built with Streamlit that allows users to analyze data from various entertainment platforms. The Entertainment Data Analysis Web Application is a powerful tool for analyzing data from popular entertainment platforms such as Goodreads, Letterboxd, and Steam. It provides users with advanced data analysis techniques, statistical reports, and in-depth insights that are not available on the platforms themselves.
 
 The application offers several services:
 

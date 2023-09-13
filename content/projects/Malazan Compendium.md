@@ -10,14 +10,13 @@ description: ""
 hidemeta: true
 ---
 
+This Malazan Book of the Fallen Compendium is a project created by Atharva Shah for educational purposes. It is an unofficial book compiled from the content written by the talented individuals at Tor, namely Bill Capossere and Amanda Rutter. The text content is released under Creative Commons BY-SA.
+
+Please note that this project is not affiliated with Tor or Steven Erikson, the author of the Malazan Book of the Fallen series. All trademarks and registered trademarks mentioned in this compendium belong to their respective company owners.
 
 {{< ico "brand-github" >}} **GITHUB :** <https://github.com/HighnessAtharva/Malazan-Compendium>
 
 {{< ico "archive">}} **DEMO :** <https://highnessatharva.github.io/Malazan-Compendium/>
-
-This Malazan Book of the Fallen Compendium is a project created by Atharva Shah for educational purposes. It is an unofficial book compiled from the content written by the talented individuals at Tor, namely Bill Capossere and Amanda Rutter. The text content is released under Creative Commons BY-SA.
-
-Please note that this project is not affiliated with Tor or Steven Erikson, the author of the Malazan Book of the Fallen series. All trademarks and registered trademarks mentioned in this compendium belong to their respective company owners.
 
 ## Project Summary
 

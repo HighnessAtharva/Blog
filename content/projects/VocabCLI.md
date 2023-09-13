@@ -10,15 +10,13 @@ description: "Lightweight CLI for Dictionary Lookups, Vocabulary Building, Quote
 hidemeta: true
 ---
 
-{{< ico "brand-github" >}} **GITHUB :** <https://github.com/HighnessAtharva/VocabCLI>
-
-{{< ico "archive">}} **DOCS :** <https://vocabcli.github.io/>
-
-## Project Summary
-
 VocabularyCLI is a lightweight Command Line Interface (CLI) that provides users with quick and convenient access to word definitions, examples, synonyms, and antonyms. It is a powerful tool for linguaphiles and language enthusiasts, offering a range of utility-based commands and robust knowledge base capabilities. With features like flashcards, tagging, word management, graph reporting, and bulk import/export of word lists, VocabularyCLI is a definitive software for expanding vocabulary and improving language skills.
 
 The CLI boasts a simple and intuitive interface, making it easy to use for anyone. It offers advanced text classification and processing through the use of Natural Language Processing (NLP) and Machine Learning algorithms, which will be discussed in detail in the "Scope and Features" section. Additionally, the CLI provides an enjoyable and interactive user experience with eye-catching panels, tables, animated symbols, emojis, interactive menus, spinners, colored fonts, and other rich features.
+
+{{< ico "brand-github" >}} **GITHUB :** <https://github.com/HighnessAtharva/VocabCLI>
+
+{{< ico "archive">}} **DOCS :** <https://vocabcli.github.io/>
 
 {{< galleries >}}
 {{< gallery src="/projects/vocab1.webp" title="" >}}

@@ -10,11 +10,10 @@ description: ""
 hidemeta: true
 ---
 
+The Reputation Analysis project aims to build a framework/utility that analyzes news articles related to a specific company and presents any reputational threatening data on a concise dashboard. The solution involves web scraping, text processing, natural language processing (NLP), and data analysis techniques to gather, analyze, and visualize information from media articles.
+
 {{< ico "brand-github" >}} **GITHUB :** <https://github.com/HighnessAtharva/CRIF-Hackathon-2023>
 
-### Project Summary
-
-The Reputation Analysis project aims to build a framework/utility that analyzes news articles related to a specific company and presents any reputational threatening data on a concise dashboard. The solution involves web scraping, text processing, natural language processing (NLP), and data analysis techniques to gather, analyze, and visualize information from media articles.
 {{< galleries >}}
 {{< gallery src="/projects/nlp2.webp" title="" >}}
 {{< gallery src="/projects/nlp3.webp" title="" >}}

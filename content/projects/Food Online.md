@@ -10,11 +10,10 @@ description: ""
 hidemeta: true
 ---
 
+This project, developed during a Udemy course, aims to create a multi-vendor restaurant marketplace in Ireland. The platform allows restaurant owners to register, manage their restaurant menus, receive orders, track earnings, and handle revenue payments. Customers can register, search for nearby restaurants, place orders, and purchase food from their favorite establishments. The focus of this project was on the backend development, utilizing the Django framework and various technologies to create a functional and user-friendly application.
+
 {{< ico "brand-github" >}} **GITHUB :** https://github.com/HighnessAtharva/FoodOnline
 
-## Project Summary
-
-This project, developed during a Udemy course, aims to create a multi-vendor restaurant marketplace in Ireland. The platform allows restaurant owners to register, manage their restaurant menus, receive orders, track earnings, and handle revenue payments. Customers can register, search for nearby restaurants, place orders, and purchase food from their favorite establishments. The focus of this project was on the backend development, utilizing the Django framework and various technologies to create a functional and user-friendly application.
 
 {{< galleries >}}
 {{< gallery src="/projects/FoodOnline.webp" title="Restaurant Lookup" >}}

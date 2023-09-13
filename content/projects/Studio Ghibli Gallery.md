@@ -10,6 +10,8 @@ description: "A Slick Gallery of Studio Ghibli Characters, Bosses, Dragons and N
 hidemeta: true
 ---
 
+This project showcases the beauty of Studio Ghibli's works by leveraging powerful Custom CSS, Parcel.js, and HTML. The main focus of this project is on the CSS implementation to create an immersive and visually stunning experience.
+
 {{< ico "brand-github" >}} **GITHUB :** PRIVATE REPO.  
 
 {{< ico "archive">}} **DEMO :** <https://highnessatharva.github.io/Studio-Ghibli-Gallery/>
@@ -18,8 +20,6 @@ hidemeta: true
 - Developers and Creatives, if you need this content, please [email](mailto:HighnessAtharva@gmail.com) to request access. I can make a similar content for you if needed (charges will apply).
 
 {{< video "/projects/ghibli.mp4" >}}
-
-This project showcases the beauty of Studio Ghibli's works by leveraging powerful Custom CSS, Parcel.js, and HTML. The main focus of this project is on the CSS implementation to create an immersive and visually stunning experience.
 
 ## Project Summary
 
