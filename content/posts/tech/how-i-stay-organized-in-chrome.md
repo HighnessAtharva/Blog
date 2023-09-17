@@ -8,7 +8,7 @@ cover:
     caption:  Partizion - Effective Tab Management for Modern Users
 description: "Super simple tab management to take the hassle of tab hoarding out of your life. Partizion is a Chrome extension to simplify your organization and boost your productivity."
 author: "Matthew Behan-Fossey"
-tags: ["productivity", "guest post"]
+tags: ["web", "guest post"]
 ---
 
 When I’m not writing in VSCode or playing around in Figma, I’m in the browser. Almost everything I do lives in the browser; All our modern apps, websites, and everything we need online is just a tab away. This is a blessing and a curse. Because everything is so easily accessible, it’s all too easy to get lost in a sea of tabs. Before you know it, you have way too many tabs open and you’re not able to get anything done.

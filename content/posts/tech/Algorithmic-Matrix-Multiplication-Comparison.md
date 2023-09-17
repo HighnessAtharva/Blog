@@ -7,7 +7,7 @@ cover:
     alt: Algorithmic Matrix Multiplication Comparison
     caption: Algorithmic Matrix Multiplication Comparison
 description: ""
-tags: ["django", "technology"]
+tags: ["python"]
 ---
 
 

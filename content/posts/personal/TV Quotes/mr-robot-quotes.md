@@ -8,7 +8,7 @@ cover:
     alt: Awesome quotes from Mr Robot
     caption: Best Quotes from Mr Robot
 description: "Favorite Quotes from Mr Robot."
-tags: ["quotes"]
+tags: ["tv quotes"]
 ---
 
 {{< fancylink "Read my collection of favorite quotes from" "True Detective" "/posts/personal/tv-quotes/true-detective/" >}}

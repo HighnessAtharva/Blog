@@ -6,5 +6,5 @@ cover:
     image: blog/malazan/07-rg-cover.webp
     alt: Reaper's Gale by Steven Erikson
     caption: Reaper's Gale by Steven Erikson
-tags: ["malazan", "fantasy", "book review"]
+tags: ["malazan", "fantasy", "reading"]
 ---

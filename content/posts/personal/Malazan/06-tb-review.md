@@ -6,5 +6,5 @@ cover:
     image: blog/malazan/06-tb-cover.webp
     alt: The Bonehunters by Steven Erikson
     caption: The Bonehunters by Steven Erikson
-tags: ["malazan", "fantasy", "book review"]
+tags: ["malazan", "fantasy", "reading"]
 ---

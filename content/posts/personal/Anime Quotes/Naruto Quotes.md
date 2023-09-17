@@ -7,7 +7,7 @@ cover:
     alt: Awesome quotes from the Naruto Anime
     caption: My dream is to one day become a Hokage
 description: Favorite Quotes from the Naruto anime. A handbook of ninja ways and motifs. Dattebayo! Gaara underrated for real!
-tags: [quotes] 
+tags: ["anime quotes"] 
 
 ---
 

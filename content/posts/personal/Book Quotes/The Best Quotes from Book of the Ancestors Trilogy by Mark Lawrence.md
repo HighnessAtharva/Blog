@@ -7,7 +7,7 @@ cover:
     alt: Book of the Ancestors Trilogy by Mark Lawrence
     caption: Spend too long watching the long game and the short game will kill you.
 description: "Favorite Quotes from Book of the Ancestors Trilogy by Mark Lawrence. A book is as dangerous as any journey you might take."
-tags: ["quotes", "fantasy"] 
+tags: ["book quotes", "fantasy"] 
 
 ---
 

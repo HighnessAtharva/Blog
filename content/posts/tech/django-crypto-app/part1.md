@@ -7,7 +7,7 @@ cover:
     alt: Part 1 - Functional Requirements and Setup
     caption: Here, we will be defining the functional requirements and give you the overview of what we are building, the approach, the high-level design and the project setup using Django.
 description: "Functional requirements of what we are building, the approach, the high-level design and the project setup using Django."
-tags: ["django", "python","tutorial"]
+tags: ["django", "python"]
 ---
 ## Introduction
 

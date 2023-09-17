@@ -7,7 +7,7 @@ cover:
     alt: Awesome quotes from True Detective
     caption: Best Quotes from True Detective
 description: "Favorite Quotes from True Detective."
-tags: ["quotes"]
+tags: ["tv quotes"]
 ---
 
 {{< fancylink "Read my collection of favorite quotes from" "Mindhunter" "/posts/personal/tv-quotes/mindhunter-quotes/" >}}

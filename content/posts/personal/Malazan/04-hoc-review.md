@@ -6,5 +6,5 @@ cover:
     image: blog/malazan/04-hoc-cover.webp
     alt: 	House of Chains by Steven Erikson
     caption: 	House of Chains by Steven Erikson
-tags: ["malazan", "fantasy", "book review"]
+tags: ["malazan", "fantasy", "reading"]
 ---

@@ -7,7 +7,7 @@ cover:
     alt: Loveless by My Bloody Valentine
     caption: A masterpiece of shoegaze and dream pop
 description: "An album review for Loveless by My Bloody Valentine. A masterpiece of shoegaze and dream pop."
-tags: ["music", "album review"]
+tags: ["album review"]
 ---
 
 As a connoisseur of the avant-garde music scene, I was thrilled to dive headfirst into My Bloody Valentine's iconic album, "Loveless." And let me tell you, this album is a wild ride, bursting with the iconic and distinguishing shoegazy sound that enraptured me from my very first listen.

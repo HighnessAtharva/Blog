@@ -7,7 +7,7 @@ cover:
     alt: Hugo Shortcodes
     caption: Unleashing the Potential of Hugo Shortcodes. A Step-by-Step Guide to Customization + 5 Inspiring Examples
 description: "Awesome hugo shortcodes I am running to power this site. Lightweight, fast and easy to use. Everything from galleries, blockquotes, spotify embeds and more."
-tags: ["technology"]
+tags: ["web"]
 ---
 
 As a web developer, you're constantly seeking efficient ways to streamline your workflow and enhance the functionality of your websites. In this blog post, we'll explore the concept of Hugo Shortcodes, their significance, and how you can leverage them to create dynamic and reusable content in your Hugo-powered websites. Whether you're new to Hugo or looking to level up your skills, this guide will provide you with a comprehensive understanding of Hugo Shortcodes and how to effectively use them.

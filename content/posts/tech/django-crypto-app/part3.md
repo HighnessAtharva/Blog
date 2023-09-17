@@ -7,7 +7,7 @@ cover:
     alt: Part 3 - Wrap-Up and Testing
     caption: Here, we will wrap the series up by discussing testing approach by writing test cases for Models, Views and Templates using Pytest.
 description: "Functional requirements of what we are building, the approach, the high-level design and the project setup using Django."
-tags: ["django", "python", "tutorial"]
+tags: ["django", "python"]
 ---
 ## Introduction
 

@@ -6,7 +6,7 @@ cover:
     image: blog/sales-data-analysis/cover.webp
     alt: EDA, Preprocessing, Feature Engineering, Model Building with Python
     caption:  EDA, Preprocessing, Feature Engineering, Model Building with Python
-tags: ["python", "tutorial"]
+tags: ["python"]
 description: "This tutorial explores data preprocessing, exploratory data analysis, feature engineering, and model building for sales data analysis."
 ---
 

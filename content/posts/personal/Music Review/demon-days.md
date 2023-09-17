@@ -7,7 +7,7 @@ cover:
     alt: Demon Days by Gorillaz
     caption: A wild ride of a record
 description: "An album review for Demon Days by Gorillaz. A wild ride of a record."
-tags: ["music", "album review"]
+tags: ["album review"]
 ---
 
 

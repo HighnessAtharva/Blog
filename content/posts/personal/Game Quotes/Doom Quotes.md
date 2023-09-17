@@ -7,7 +7,7 @@ cover:
     alt: Awesome quotes from Doom (2016) and Doom Eternal
     caption: Wake up and chant Slayer's Testament Everyday
 description: "Favorite Quotes from Doom (2016) and Doom Eternal videogame. Starring the Doom Slayer, the Hell Walker, the Unchained Predator, the one who brings fear where there is no hope."
-tags: ["quotes"] 
+tags: ["game quotes"] 
 ---
 
 {{< fancylink "Fellow Tarnished, go right ahead and check out my collection of" "Elden Ring Quotes" "/posts/personal/game-quotes/elden-ring-quotes/" >}}

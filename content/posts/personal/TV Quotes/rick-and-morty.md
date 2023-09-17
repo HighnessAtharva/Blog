@@ -8,7 +8,7 @@ cover:
     alt: Awesome quotes from Rick and Morty
     caption: Best Quotes from Rick and Morty
 description: "Favorite Quotes from Rick and Morty."
-tags: ["quotes"]
+tags: ["tv quotes"]
 ---
 
 {{< fancylink "Read my collection of favorite quotes from" "Avatar The Last Airbender" "/posts/personal/tv-quotes/avatar-the-last-airbender/" >}}

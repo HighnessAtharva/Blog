@@ -6,5 +6,5 @@ cover:
     image: blog/malazan/05-mt-cover.webp
     alt: Midnight Tides by Steven Erikson
     caption: Midnight Tides by Steven Erikson
-tags: ["malazan", "fantasy", "book review"]
+tags: ["malazan", "fantasy", "reading"]
 ---

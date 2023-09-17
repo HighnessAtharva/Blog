@@ -7,7 +7,7 @@ cover:
     alt: Lord of the Rings!
     caption: A review of all the three books of the Lord of the Rings series.
 description: "Reviewing my all time favorite fantasy epic series. The Lord of the Rings by J.R.R. Tolkien. This review has been edited for style and length."
-tags: ["book review"]
+tags: ["reading", "fantasy"]
 ---
 
 In the enchanted realm of Middle-Earth, where reality and fantasy intertwine, J.R.R. Tolkien weaves an unparalleled tale of heroism, sacrifice, and camaraderie in his legendary series, The Lord of the Rings. Spanning multiple volumes, this epic saga takes readers on a breathtaking journey through diverse lands and cultures, blending poetic compositions with riveting prose and delving deep into the richly developed characters that inhabit this fantastical realm.

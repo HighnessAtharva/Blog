@@ -7,7 +7,7 @@ cover:
     alt: Awesome quotes from Game of Thrones
     caption: Best Quotes from Game of Thrones
 description: "Favorite Quotes from Game of Thrones."
-tags: ["quotes"] 
+tags: ["tv quotes"] 
 ---
 
 {{< fancylink "Read my collection of favorite quotes from" "True Detective" "/posts/personal/tv-quotes/true-detective/" >}}

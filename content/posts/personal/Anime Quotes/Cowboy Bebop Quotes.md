@@ -7,7 +7,7 @@ cover:
     alt: Awesome quotes from the Cowboy Bebop Anime
     caption: Whatever happens, happens.
 description: "Favorite Quotes from the Cowboy Bebop anime. Starring the great Spike Spiegel, the suave Jet Black, and the charming Faye Valentine."
-tags: ["quotes"] 
+tags: ["anime quotes"] 
 
 ---
 

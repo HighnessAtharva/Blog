@@ -7,7 +7,7 @@ cover:
     alt: Sin City (Graphic Novel) by Frank Miller
     caption: A few notable quotes from the wild and wondeful mind of Frank Miller in his book Sin City.
 description: "Discover the gritty brilliance of Sin City through its unforgettable quotes. Dive into Frank Miller's graphic novel series and embrace the dark allure."
-tags: ["quotes", "fiction"]
+tags: ["book quotes", "graphic novel"]
 ---
 
 {{< fancylink "Who doesn't love Graphic Novels? Indulge in some of the best quotes from" "The Sandman" "/posts/personal/book-quotes/the-best-quotes-from-sandman-graphic-novel-by-neil-gaiman/" >}}

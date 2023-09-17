@@ -7,7 +7,7 @@ cover:
     alt: Awesome quotes from Bojack Horseman
     caption: Best Quotes from Bojack Horseman
 description: "Favorite Quotes from Bojack Horseman."
-tags: ["quotes"] 
+tags: ["tv quotes"] 
 ---
 
 {{< fancylink "Read my collection of favorite quotes from" "Rick and Morty" "/posts/personal/tv-quotes/rick-and-morty/" >}}

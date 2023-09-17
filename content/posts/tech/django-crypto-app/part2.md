@@ -7,7 +7,7 @@ cover:
     alt: Part 2 - Templates, Views and URLs
     caption: Here, we will add the templates, views and urls and code up the entire project. This will be the most complex and detailed part of this series.
 description: "Functional requirements of what we are building, the approach, the high-level design and the project setup using Django"
-tags: ["django", "python","tutorial"]
+tags: ["django", "python"]
 ---
 ## Introduction
 

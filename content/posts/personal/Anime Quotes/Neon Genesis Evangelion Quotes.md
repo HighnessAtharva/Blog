@@ -7,7 +7,7 @@ cover:
     alt: Awesome quotes from the Neon Genesis Evangelion Anime
     caption: Get in the robot Shinji!
 description: "Profound and thought-provoking quotes from Neon Genesis Evangelion, a captivating anime that delves into the depths of human nature. Immerse yourself in its cathartic and cultured brilliance."
-tags: [quotes] 
+tags: ["anime quotes"] 
 
 ---
 

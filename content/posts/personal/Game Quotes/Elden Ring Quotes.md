@@ -7,7 +7,7 @@ cover:
     alt: Awesome quotes from Elden Ring
     caption: Together We Shall Devour The Very Gods
 description: "The most memorable quotes from the Elden Ring Video Game featuring a cast of iconic characters and an epic story."
-tags: ["quotes"] 
+tags: ["game quotes"] 
 ---
 
 {{< fancylink "Love to rip and tear? Take a look at my collection of" "Doom Quotes" "/posts/personal/game-quotes/doom-quotes/" >}}

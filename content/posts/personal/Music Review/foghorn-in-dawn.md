@@ -7,7 +7,7 @@ cover:
     alt: Foghorn in the Dawn by 오미일곱 [Omilgop]
     caption: City Lights and the Night Sky
 description: "Embark on an ethereal journey as 오미일곱 [Omilgop] unveils their mesmerizing opus, Foghorn in the Dawn."
-tags: ["music", "album review"]
+tags: ["album review"]
 ---
 
 

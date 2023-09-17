@@ -7,7 +7,7 @@ cover:
     alt: Cyberpunk Sci-Fi Analysis of Accelerationism
     caption: Navigating the Intersection of Technology and Humanity through the Lens of Accelerationism. 
 description: "A long form essay on Navigating the Intersection of Technology and Humanity through the Lens of Accelerationism."
-tags: ["ruminations", "technology"]
+tags: ["ruminations"]
 ---
 
 ## Introduction

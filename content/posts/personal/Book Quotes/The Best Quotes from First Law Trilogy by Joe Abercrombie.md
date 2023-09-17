@@ -7,7 +7,7 @@ cover:
     alt: First Law Trilogy by Joe Abercrombie
     caption: The blade itself incites to deeds of violence.
 description: "Favorite Quotes from First Law Trilogy by Joe Abercrombie. A grimdark collection that will take you to the edge of your seat."
-tags: ["quotes", "fantasy"] 
+tags: ["book quotes", "fantasy"] 
 ---
 
 {{< fancylink "We get it. You love dark fantasy. Read the best quotes from" "The Broken Empire" "/posts/personal/book-quotes/the-best-quotes-from-broken-empire-trilogy-by-mark-lawrence/" >}}

@@ -7,7 +7,7 @@ cover:
     alt: Memories of Ice by Steven Erikson
     caption: Memories of Ice by Steven Erikson
 description: "An odyssey through fantasy - exploring archetypes, sacrifice, and profound character depths. A climax to the first part of the great chronicle."
-tags: ["malazan", "fantasy", "book review"]
+tags: ["malazan", "fantasy", "reading"]
 ---
 
 {{< fancylink "Missed my thoughts on the first book?" "Gardens of the Moon Review" "/posts/personal/malazan/01-gotm-review/" >}}

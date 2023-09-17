@@ -7,7 +7,7 @@ cover:
     alt: Awesome quotes from the Dragon Ball Z Anime
     caption: It's over 9000!!!!!!
 description: Favorite Quotes from the Dragon Ball Z anime. This stuff will get you all powered up and ready to go Super Saiyan in no time.
-tags: [quotes] 
+tags: ["anime quotes"] 
 ---
 
 {{< fancylink "Master the art of Ninjutsu by chanting the best quotes from" "Naruto" "/posts/personal/anime-quotes/naruto-quotes/" >}}

@@ -7,7 +7,7 @@ cover:
     alt: Nevernight Trilogy by Jay Kristoff
     caption: That goat-loving, mule-sucking, pig-fucking sonofabitch
 description: "Favorite Quotes from Nevernight Trilogy by Jay Kristoff. A blood-curdling, brutalist masterpiece."
-tags: ["quotes", "fantasy"] 
+tags: ["book quotes", "fantasy"] 
 ---
 
 {{< fancylink "Think Mia is the best? Taste true evil with quotes from" "The Broken Empire Trilogy" "/posts/personal/book-quotes/the-best-quotes-from-broken-empire-trilogy-by-mark-lawrence/" >}}

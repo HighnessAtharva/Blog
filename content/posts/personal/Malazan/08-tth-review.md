@@ -6,5 +6,5 @@ cover:
     image: blog/malazan/08-tth-cover.webp
     alt: Toll the Hounds by Steven Erikson
     caption: Toll the Hounds by Steven Erikson
-tags: ["malazan", "fantasy", "book review"]
+tags: ["malazan", "fantasy", "reading"]
 ---

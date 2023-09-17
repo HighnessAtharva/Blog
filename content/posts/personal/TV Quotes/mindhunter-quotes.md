@@ -8,7 +8,7 @@ cover:
     alt: Awesome quotes from Mindhunter
     caption: Best Quotes from Mindhunter
 description: "Favorite Quotes from Mindhunter."
-tags: ["quotes"]
+tags: ["tv quotes"]
 ---
 
 {{< fancylink "Read my collection of favorite quotes from" "Mr. Robot" "/posts/personal/tv-quotes/mr-robot-quotes/" >}}

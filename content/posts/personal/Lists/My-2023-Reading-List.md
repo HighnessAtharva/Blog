@@ -7,7 +7,7 @@ cover:
     alt: 
     caption: A curated list of programming books for the year 2023, focused on Django and FastAPI.
 description: "A curated list of programming books for the year 2023, focused on Django and FastAPI." 
-tags: ["lists", "programming"]
+tags: ["lists"]
 ---
 
 # My 2023 Reading List

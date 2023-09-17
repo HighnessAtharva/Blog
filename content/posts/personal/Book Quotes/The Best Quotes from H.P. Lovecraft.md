@@ -7,7 +7,7 @@ cover:
     alt: "H.P. Lovecraft"
     caption: "The horror from the mind of H.P. Lovecraft"
 description: "Favorite Quotes from the mind of H.P. Lovecraft. Everything from Eldritch Monsters to the Necronomicon, we have them all."
-tags: ["quotes", "sci-fi"]
+tags: ["book quotes", "sci-fi"]
 ---
 
 A chieftain of the macabre and the weird, H.P. Lovecraft is one of the most influential horror writers of the 20th century. His stories are filled with the supernatural and the occult and his works have inspired many other writers, including Stephen King, Neil Gaiman, and Clive Barker. Here are some of the best quotes from H.P. Lovecraft. My very personal favorites.

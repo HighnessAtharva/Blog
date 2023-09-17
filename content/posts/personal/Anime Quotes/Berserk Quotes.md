@@ -7,7 +7,7 @@ cover:
     alt: Awesome quotes from the Berserk 1997 Anime
     caption: I am a portent of doom. The remnant of a grudge. My aim is ever singular.
 description: "Favorite Quotes from the Berserk (1997) anime. Put your grasses on nothing will be wrong."
-tags: ["quotes"] 
+tags: ["anime quotes"] 
 ---
 
 {{< fancylink "Remember when Goku went Super Saiyan? Reminisce with" "Dragon Ball quotes" "/posts/personal/anime-quotes/dbz-quotes/" >}}

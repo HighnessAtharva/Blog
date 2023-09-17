@@ -7,7 +7,7 @@ cover:
     alt: Watchmen Graphic Novel
     caption: Alan Moore's Visionary Graphic Novel That Transcends Time
 description: "Thoughts on all of twelve issues of the Watchmen! A graphic novel that explores the complexity of superheroes and humanity."
-tags: ["graphic novel", "book review"]
+tags: ["graphic novel", "reading"]
 ---
 
 ## Unveiling the Masterpiece: A Journey through Watchmen Graphic Novels

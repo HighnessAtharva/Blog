@@ -7,7 +7,7 @@ cover:
     alt: Awesome quotes from Avatar The Last Airbender
     caption: Best Quotes from Avatar The Last Airbender
 description: "Favorite Quotes from Avatar The Last Airbender."
-tags: ["quotes"] 
+tags: ["tv quotes"] 
 ---
 
 {{< fancylink "Read my collection of favorite quotes from" "Bojack Horseman" "/posts/personal/tv-quotes/bojack-quotes/" >}}
