@@ -1,12 +1,12 @@
 ﻿---
-title: "AWS Security Scenario Case Study - S3 Migration"
+title: "AWS Security Best Practices: A Case Study on EC2"
 date: 2023-08-20T15:18:34+05:30
-draft: true
+draft: false
 cover: 
-    image: blog/aws/.webp
-    alt: A Personal AWS Cheatsheet Dump
-    caption:  A Personal Cheatsheet Dump
-description: "AWS Security Scenario Case Study - S3 Migration"
+    image: blog/aws/ec2-case-study.webp
+    alt: 
+    caption:  
+description: ""
 tags: ["aws"]
 ---
 
@@ -16,7 +16,7 @@ Analytica Soft Pty Ltd (ASPT) - analyticasoft.com.au is a global analytics compa
 
 Your task is to answer the following five questions:
 
-### a. Cloud Service model recommendation. Consider factors to choose a region. (3 marks)
+### a. Cloud Service model recommendation. Consider factors to choose a region.
 
 ASPT needs ready-to-use software applications without installation or maintenance.
 
@@ -25,14 +25,14 @@ ASPT needs ready-to-use software applications without installation or maintenanc
 3. Additionally, elaborate on the factors ASPT should consider when choosing an AWS region for a specific service deployment that is not available in both Melbourne and Sydney regions.
 Justify your answer by giving an explanation and diagram(s) (if any).
 
-### b. AWS Service(s) Selection (3 marks)
+### b. AWS Service(s) Selection
 
 1. Select the most appropriate AWS service(s) for ASPT's requirement to store documents and videos accessible to registered users as pre-signed URLs.
 2. Justify your choice by comparing different AWS storage services, considering scalability, performance, cost, security, and ease of implementation.
 3. As ASPT head office is in Australia, what is the best AWS region to choose for S3 and IAM resources.
 Support your answer with relevant explanations and diagrams (if any).
 
-### c. AWS Cloud Interaction Strategy & sequence of creation of cloud resources (3 marks)
+### c. AWS Cloud Interaction Strategy & sequence of creation of cloud resources
 
 ASPT should follow AWS best practices to interact with AWS services.
 
@@ -41,7 +41,7 @@ ASPT should follow AWS best practices to interact with AWS services.
 3. Additionally, propose the sequence of creation for AWS users (IAM User, IAM Groups, IAM Roles, and IAM Policies).
 Justify your approach with a clear explanation and diagrams (if any).
 
-### d. Storage Class Selection & Storage services identification (3 marks)
+### d. Storage Class Selection & Storage services identification
 
 Considering ASPT storage needs as mentioned in Case-1.
 
@@ -50,7 +50,7 @@ Considering ASPT storage needs as mentioned in Case-1.
 3. Additionally, identify other AWS storage services, and explain why they were not suitable for
 Justify your answer by giving an explanation and diagram(s) (if any).
 
-### e. Software Development Methodology Recommendation (3 marks)
+### e. Software Development Methodology Recommendation
 
 ASPT is evaluating software development methodologies.
 

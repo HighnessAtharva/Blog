@@ -27,9 +27,10 @@ So, there you have it – my August movie marathon. Each film carving out its ow
 
 ---
 
-# A Simple Favor, 2018 - ★★★½
+## A Simple Favor, 2018 - ★★★½
   
 {{< figure src="https://a.ltrbxd.com/resized/film-poster/4/1/5/2/0/8/415208-a-simple-favor-0-600-0-900-crop.jpg" width="300" alt="A Simple Favor" class="right" >}}
+
 **Watched on**: 23 August 2023
 
 **Review**
@@ -38,7 +39,7 @@ So, there you have it – my August movie marathon. Each film carving out its ow
 
 [Read on Letterboxd](https://letterboxd.com/highnessatharva/film/a-simple-favor/)
 
-# No Hard Feelings, 2023 - ★★★
+## No Hard Feelings, 2023 - ★★★
   
 {{< figure src="https://a.ltrbxd.com/resized/film-poster/7/9/5/8/9/7/795897-no-hard-feelings-0-600-0-900-crop.jpg" width="300" alt="No Hard Feelings" class="left" >}}
 
@@ -50,7 +51,7 @@ In the mesmerizing chiaroscuro of "No Hard Feelings," Jennifer Lawrence commands
 
 [Read on Letterboxd](https://letterboxd.com/highnessatharva/film/no-hard-feelings-2023/)
 
-# Trainwreck, 2015 - ★★★
+## Trainwreck, 2015 - ★★★
 
 {{< figure src="https://a.ltrbxd.com/resized/film-poster/1/9/4/9/7/5/194975-trainwreck-0-600-0-900-crop.jpg" width="300" alt="Trainwreck" class="right" >}}
 **Watched on**: 20 August 2023
@@ -61,7 +62,7 @@ Prepare to be taken on a wild and trashy ride through the chaotic world of Train
 
 [Read on Letterboxd](https://letterboxd.com/highnessatharva/film/trainwreck/)
 
-# Beetlejuice, 1988 - ★★★½
+## Beetlejuice, 1988 - ★★★½
 
 {{< figure src="https://a.ltrbxd.com/resized/sm/upload/rs/wk/3i/nt/gWnW7vxm8yr01TVLQhL4aI02orp-0-230-0-345-crop.jpg" width="300" alt="Beetlejuice" class="left" >}}  
 
@@ -73,7 +74,7 @@ This movie is a Whimsical Dance with the MacabreStep into the peculiar world con
 
 [Read on Letterboxd](https://letterboxd.com/highnessatharva/film/beetlejuice/)
 
-# Spider-Man: Across the Spider-Verse, 2023 - ★★★★½
+## Spider-Man: Across the Spider-Verse, 2023 - ★★★★½
 
 {{< figure src="https://a.ltrbxd.com/resized/film-poster/4/9/7/6/3/1/497631-spider-man-across-the-spider-verse-0-600-0-900-crop.jpg" width="300" alt="Spider-Man: Across the Spider-Verse" class="right" >}}
 

@@ -6,13 +6,22 @@
     <description>Recent content in 🏷️ Tags on Atharva Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Aug 2023 00:19:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Sep 2023 00:18:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>book review</title>
-      <link>https://atharvashah.netlify.app/tags/book-review/</link>
-      <pubDate>Mon, 14 Aug 2023 00:19:34 +0530</pubDate>
+      <title>movie review</title>
+      <link>https://atharvashah.netlify.app/tags/movie-review/</link>
+      <pubDate>Thu, 28 Sep 2023 00:18:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/tags/book-review/</guid>
+      <guid>https://atharvashah.netlify.app/tags/movie-review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aws</title>
+      <link>https://atharvashah.netlify.app/tags/aws/</link>
+      <pubDate>Sun, 20 Aug 2023 15:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/tags/aws/</guid>
       <description></description>
     </item>
     
@@ -35,20 +44,11 @@
     </item>
     
     <item>
-      <title>movie review</title>
-      <link>https://atharvashah.netlify.app/tags/movie-review/</link>
-      <pubDate>Sat, 29 Jul 2023 00:18:34 +0530</pubDate>
+      <title>reading</title>
+      <link>https://atharvashah.netlify.app/tags/reading/</link>
+      <pubDate>Mon, 14 Aug 2023 00:19:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/tags/movie-review/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>aws</title>
-      <link>https://atharvashah.netlify.app/tags/aws/</link>
-      <pubDate>Thu, 13 Jul 2023 15:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/aws/</guid>
+      <guid>https://atharvashah.netlify.app/tags/reading/</guid>
       <description></description>
     </item>
     
@@ -62,45 +62,54 @@
     </item>
     
     <item>
-      <title>productivity</title>
-      <link>https://atharvashah.netlify.app/tags/productivity/</link>
+      <title>web</title>
+      <link>https://atharvashah.netlify.app/tags/web/</link>
       <pubDate>Wed, 12 Jul 2023 15:18:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/tags/productivity/</guid>
+      <guid>https://atharvashah.netlify.app/tags/web/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>quotes</title>
-      <link>https://atharvashah.netlify.app/tags/quotes/</link>
+      <title>tv quotes</title>
+      <link>https://atharvashah.netlify.app/tags/tv-quotes/</link>
       <pubDate>Mon, 10 Jul 2023 23:21:50 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/tags/quotes/</guid>
+      <guid>https://atharvashah.netlify.app/tags/tv-quotes/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>fiction</title>
-      <link>https://atharvashah.netlify.app/tags/fiction/</link>
+      <title>game quotes</title>
+      <link>https://atharvashah.netlify.app/tags/game-quotes/</link>
+      <pubDate>Mon, 10 Jul 2023 23:21:35 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/tags/game-quotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>anime quotes</title>
+      <link>https://atharvashah.netlify.app/tags/anime-quotes/</link>
+      <pubDate>Mon, 10 Jul 2023 23:20:40 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/tags/anime-quotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>book quotes</title>
+      <link>https://atharvashah.netlify.app/tags/book-quotes/</link>
       <pubDate>Mon, 10 Jul 2023 02:18:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/tags/fiction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>technology</title>
-      <link>https://atharvashah.netlify.app/tags/technology/</link>
-      <pubDate>Sun, 02 Jul 2023 00:19:35 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/technology/</guid>
+      <guid>https://atharvashah.netlify.app/tags/book-quotes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>graphic novel</title>
       <link>https://atharvashah.netlify.app/tags/graphic-novel/</link>
-      <pubDate>Sun, 02 Jul 2023 00:19:34 +0530</pubDate>
+      <pubDate>Mon, 10 Jul 2023 02:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/tags/graphic-novel/</guid>
       <description></description>
@@ -134,11 +143,11 @@
     </item>
     
     <item>
-      <title>tutorial</title>
-      <link>https://atharvashah.netlify.app/tags/tutorial/</link>
-      <pubDate>Wed, 14 Jun 2023 01:18:34 +0530</pubDate>
+      <title>fiction</title>
+      <link>https://atharvashah.netlify.app/tags/fiction/</link>
+      <pubDate>Sun, 04 Jun 2023 01:18:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/tags/tutorial/</guid>
+      <guid>https://atharvashah.netlify.app/tags/fiction/</guid>
       <description></description>
     </item>
     
@@ -161,15 +170,6 @@
     </item>
     
     <item>
-      <title>programming</title>
-      <link>https://atharvashah.netlify.app/tags/programming/</link>
-      <pubDate>Fri, 27 Jan 2023 01:19:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>ruminations</title>
       <link>https://atharvashah.netlify.app/tags/ruminations/</link>
       <pubDate>Fri, 27 Jan 2023 01:18:34 +0530</pubDate>
@@ -184,15 +184,6 @@
       <pubDate>Thu, 26 Jan 2023 23:18:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/tags/hackathon/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>book quotes</title>
-      <link>https://atharvashah.netlify.app/tags/book-quotes/</link>
-      <pubDate>Sun, 10 Jul 2022 23:18:34 +0530</pubDate>
-      
-      <guid>https://atharvashah.netlify.app/tags/book-quotes/</guid>
       <description></description>
     </item>
     

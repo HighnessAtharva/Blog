@@ -1,12 +1,12 @@
 ﻿---
-title: "AWS Security Scenario Case Study - EC2 Hosting"
+title: "AWS Security Best Practices: A Case Study on IAM"
 date: 2023-08-20T15:19:34+05:30
-draft: true
+draft: false
 cover: 
-    image: blog/aws/.webp
-    alt: A Personal AWS Cheatsheet Dump
-    caption:  A Personal Cheatsheet Dump
-description: "AWS Security Scenario Case Study - EC2 Hosting"
+    image: blog/aws/iam-case-study.webp
+    alt: IAM Case Study
+    caption: "Master AWS security with insights into responsibilities, IAM, access, and protection" 
+description: "Learn AWS security best practices, including customer responsibilities, IAM risks, secure access to services, root account safeguarding, and credential management."
 tags: ["aws"]
 ---
 
@@ -15,7 +15,7 @@ tags: ["aws"]
 Aus Global Financial Services (AGFS) is a renowned financial service provider with a 50-year legacy, operating in 20 countries with multiple currencies. AGFS is currently setting up its dynamic website on AWS using EC2 instances running under a Load Balancer. All critical documents will be stored in the S3 bucket named "agfs-docs-bucket." Considering Sydney as multi- availability zone AWS region, for fail-over point of view, at least one EC2 instance is recommended to use in every availability zone in Sydney region (ap-southeast-2). AGFS emphasizes security and is committed to implementing robust security measures before migrating to the cloud. As an AWS professional working for AGFS, your task is to address the following questions, which will challenge your critical thinking and self-reflection skills.
 You task is to answer the following questions:
 
-### a. AWS and Customer Responsibilities (3 marks)
+### a. AWS and Customer Responsibilities
 
 The shared responsibility model is a crucial concept in AWS cloud security. Analyse AGFS's business needs and critically assess the division of responsibilities between AWS and AGFS for the following 6 points individually.
 
@@ -27,7 +27,7 @@ The shared responsibility model is a crucial concept in AWS cloud security. Anal
 6. AGFS employees must be trained on AWS skills.
 Present your recommendations in tabular form.
 
-### b. IAM Best Practices and Cross-Account Access (3 marks)
+### b. IAM Best Practices and Cross-Account Access
 
 IAM plays a pivotal role in cloud security and allows you to control access to your AWS resources.
 
@@ -36,7 +36,7 @@ IAM plays a pivotal role in cloud security and allows you to control access to y
 3. Propose innovative solutions for granting cross-account access while ensuring the principle of least privilege.
 Support your response with real-world examples, self-reflection, and diagrams.
 
-### c. Securely Accessing AWS Services (3 marks)
+### c. Securely Accessing AWS Services
 
 Security in the AWS cloud is AGFS’s high priority.
 
@@ -45,7 +45,7 @@ Security in the AWS cloud is AGFS’s high priority.
 3. As an AWS professional, propose advanced strategies for securely providing AWS credentials to web servers deployed on EC2 instances with a load balancer across multiple availability zones in Sydney region.
 Support your response with self-reflection, cutting-edge practices, and relevant diagrams.
 
-### d. Safeguarding Root Account and Admin Roles (3 marks)
+### d. Safeguarding Root Account and Admin Roles
 
 AGFS has users with various roles.
 
@@ -53,7 +53,7 @@ AGFS has users with various roles.
 2. Do AGFS needs to create access keys for a root user, if so do the need to rotate the access keys.? 3. What are the key differences between IAM roles and IAM users, and in what scenarios would you use one over the other for Admin roles?
 Support your response with a deep understanding of security principles, self-reflection, and relevant diagrams (if any).
 
-### e. IAM Access and Credential Management (3 marks)
+### e. IAM Access and Credential Management
 
 AGFS is storing all critical documents on S3.
 

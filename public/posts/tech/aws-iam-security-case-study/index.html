@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>AWS Security Best Practices: A Case Study on IAM | Atharva Shah</title>
+<meta name="keywords" content="aws">
+<meta name="description" content="Learn AWS security best practices, including customer responsibilities, IAM risks, secure access to services, root account safeguarding, and credential management.">
+<meta name="author" content="">
+<link rel="canonical" href="https://atharvashah.netlify.app/posts/tech/aws-iam-security-case-study/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.dfd86a2d3c94da9519307537fb91ad9849b02bb3e5f743afa1aa31bb65e3a4c7.css" integrity="sha256-39hqLTyU2pUZMHU3&#43;5GtmEmwK7Pl90Ovoaoxu2XjpMc=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://atharvashah.netlify.app/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://atharvashah.netlify.app/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://atharvashah.netlify.app/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://atharvashah.netlify.app/apple-touch-icon.png">
+<link rel="mask-icon" href="https://atharvashah.netlify.app/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = ""; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9913536001930134" crossorigin="anonymous"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-216150796-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><meta property="og:title" content="AWS Security Best Practices: A Case Study on IAM" />
+<meta property="og:description" content="Learn AWS security best practices, including customer responsibilities, IAM risks, secure access to services, root account safeguarding, and credential management." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://atharvashah.netlify.app/posts/tech/aws-iam-security-case-study/" />
+<meta property="og:image" content="https://atharvashah.netlify.app/blog/aws/iam-case-study.webp" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-08-20T15:19:34+05:30" />
+<meta property="article:modified_time" content="2023-08-20T15:19:34+05:30" /><meta property="og:site_name" content="Atharva Shah" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://atharvashah.netlify.app/blog/aws/iam-case-study.webp" />
+<meta name="twitter:title" content="AWS Security Best Practices: A Case Study on IAM"/>
+<meta name="twitter:description" content="Learn AWS security best practices, including customer responsibilities, IAM risks, secure access to services, root account safeguarding, and credential management."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "📚 All Posts",
+      "item": "https://atharvashah.netlify.app/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "💻Tech",
+      "item": "https://atharvashah.netlify.app/posts/tech/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "AWS Security Best Practices: A Case Study on IAM",
+      "item": "https://atharvashah.netlify.app/posts/tech/aws-iam-security-case-study/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AWS Security Best Practices: A Case Study on IAM",
+  "name": "AWS Security Best Practices: A Case Study on IAM",
+  "description": "Learn AWS security best practices, including customer responsibilities, IAM risks, secure access to services, root account safeguarding, and credential management.",
+  "keywords": [
+    "aws"
+  ],
+  "articleBody": "Case Study Scenario Aus Global Financial Services (AGFS) is a renowned financial service provider with a 50-year legacy, operating in 20 countries with multiple currencies. AGFS is currently setting up its dynamic website on AWS using EC2 instances running under a Load Balancer. All critical documents will be stored in the S3 bucket named “agfs-docs-bucket.” Considering Sydney as multi- availability zone AWS region, for fail-over point of view, at least one EC2 instance is recommended to use in every availability zone in Sydney region (ap-southeast-2). AGFS emphasizes security and is committed to implementing robust security measures before migrating to the cloud. As an AWS professional working for AGFS, your task is to address the following questions, which will challenge your critical thinking and self-reflection skills. You task is to answer the following questions:\na. AWS and Customer Responsibilities The shared responsibility model is a crucial concept in AWS cloud security. Analyse AGFS’s business needs and critically assess the division of responsibilities between AWS and AGFS for the following 6 points individually.\nData should be encrypted on the client side. Data should be protected in transit. Hardware should be safe. All Edge locations should be secure. Guest operating system and application should be patched properly. AGFS employees must be trained on AWS skills. Present your recommendations in tabular form. b. IAM Best Practices and Cross-Account Access IAM plays a pivotal role in cloud security and allows you to control access to your AWS resources.\nEvaluate the significance of IAM in managing access control and fostering a security-centric culture at AGFS for managing IAM users, groups, roles, and policies. Self-reflect on the challenges that AGFS might encounter while implementing IAM best practices across multiple AWS accounts (Production, UAT, and Development), where Production AWS account is the consolidated account. Propose innovative solutions for granting cross-account access while ensuring the principle of least privilege. Support your response with real-world examples, self-reflection, and diagrams. c. Securely Accessing AWS Services Security in the AWS cloud is AGFS’s high priority.\nExamine various methods AGFS web developers can use his access keys to interact with AWS services. Critically assess the potential risks associated with each approach and reflect on the trade-offs between convenience and security. As an AWS professional, propose advanced strategies for securely providing AWS credentials to web servers deployed on EC2 instances with a load balancer across multiple availability zones in Sydney region. Support your response with self-reflection, cutting-edge practices, and relevant diagrams. d. Safeguarding Root Account and Admin Roles AGFS has users with various roles.\nReflect on the significance of protecting the AWS root account and Admin roles (Console users) to maintain the highest level of security at AGFS. Do AGFS needs to create access keys for a root user, if so do the need to rotate the access keys.? 3. What are the key differences between IAM roles and IAM users, and in what scenarios would you use one over the other for Admin roles? Support your response with a deep understanding of security principles, self-reflection, and relevant diagrams (if any). e. IAM Access and Credential Management AGFS is storing all critical documents on S3.\nCritically evaluate AGFS’s approach to configure the “agfs-docs-bucket” S3 bucket as a static website hosting. Reflect on the implications of granting IAM access to different AWS Accounts (Pro, UAT, and Dev). Differentiate Credential files and Credential profiles, which one you recommend AGFS to access different AWS accounts (mentioned in ii) in the company. Support your response with self-reflection, innovative solutions, and relevant examples including diagrams (if any). Solutions a. AWS and Customer Responsibilities Security Point AWS Responsibilities AGFS Responsibilities Encrypt data on client side Provide tools and services for encryption and key management. Achieve client-side encryption using appropriate tools and manage encryption keys. Use AWS Key Management Service. Data should be protected in transit. Provide encryption options for data in transit between services. Set encryption settings and protocols for data in transit. Hardware should be safe. Ensure physical security of data centers and server hardware. Implement access controls, firewalls, and physical security measures for EC2 instances and other assets. Secure all Edge locations. Secure and maintain the edge locations and CDN infrastructure. Configure security settings and firewall rules for AGFS’s applications and services deployed at edge locations. Patch Guest OS and application. Provide patches and updates for underlying infrastructure. Regularly apply patches and updates to the operating system and applications running on EC2 instances. AGFS employees must be trained on AWS skills. Offer AWS training resources, certifications, and documentation. Ensure AGFS employees undergo training to understand AWS services, security practices, and best practices for cloud usage. https://docs.aws.amazon.com/, https://aws.amazon.com/certification/ b. IAM Best Practices and Cross-Account Access i) Identity and Access Management manages access control and fosters a security-centric culture. AGFS needs it for:\nGranular Access Control. AGFS can define fine-grained permissions for users, groups, and roles. This guarantees that each entity only has access to the resources and actions required for fulfilling its function. decreases the possibility of unauthorized access or unintentional data leakage. Principle of least privilege. IAM ensures that individuals and programs have the bare minimum of access necessary to do their tasks. By doing this, the potential harm from a security breach or configuration error is reduced. Audit and Accountability. With logging and monitoring via IAM, AGFS can keep track of who used which resources and when. Investigating security incidents is made easier by this. Centralized Management. IAM is a unified control point for security policies. AGFS can centrally manage access across a variety of AWS services and accounts. Security Culture. It encourages employees to adopt secure access practices and reinforces the importance of data protection. IAM and Security Implementation\rii) It might be difficult to implement IAM best practices across several AWS accounts, particularly in the case of consolidated production accounts.\nIt is challenging to manage IAM roles and policies across multiple accounts. increased chance of errors or oversights. Planning is necessary to coordinate access across several accounts (such as development and production) while retaining the separation of roles. Consistency in IAM policies and practices might lead to security flaws or inconsistent behaviors. It takes time to manage users and roles across many accounts while ensuring appropriate access and permissions. iii) To grant cross-account access while adhering to the principle of least privilege, AGFS should:\nGroup accounts together with AWS Organizations into a hierarchy. To enforce consistent security standards across accounts, use service control policies (SCPs). Trusted entities from one account can take on roles in another thanks to cross-account roles. For further security, use external IDs. Grant access based on user attributes and conditions using attribute-based access control. Choose permissions that are more dynamic and context-sensitive. Use AWS SSO to manage access to numerous accounts and applications from a single location User provisioning and access management are made easier as a result. Tools or scripts for automating the creation and management of cross-account IAM roles on demand. Reduce manual labor and maintain uniformity. Apply MFA requirements for cross-account access to increase security. A cross-account role can be used by the AGFS development team to gain temporary access to resources in use, guaranteeing restricted rights and limited permissions. To maintain security and compliance and to strike a balance between operational effectiveness and security, IAM policies across accounts must undergo regular audits and reviews.\nc. Securely Accessing AWS Services i) AGFS web developers can use access keys to interact with AWS services through -\nDevelopers instantly include access keys into the software code. The ability to connect to AWS services is made possible by this. Set access keys as environment variables on the server where the program is running. The software then reads these variables to authenticate with AWS. To interact with AWS services, developers need SDKs (Software Development Kits). Using the SDKs, access keys can be configured programmatically or using configuration files. EC2 instances can be given IAM roles. This provides programs running on the instance with temporary credentials without requiring access keys to be controlled directly. ii) Potential risks and trade-offs associated with:\nAccess Method Risk Level Notes Hardcoding Keys High Easily exposed if code is shared or leaked Environment Variables Moderate Slightly better, still susceptible AWS SDK Moderate More secure than hardcoding, still vulnerable Instance Profiles Lower Eliminates direct key management, EC2 risk iii) Advanced strategies for securely providing AWS credentials to web servers deployed on EC2 instances in the Sydney region:\nAWS Secrets Manager. The application retrieves credentials from Secrets Manager when needed. Reduced exposure and ensured regular rotation of keys. IAM Roles with Short Durations. Instead of using instance profiles, use IAM roles with short-duration sessions. This limits the time an application has access to AWS services, reducing the attack surface. Temporary Security Tokens. Security Token Service (STS) generates temporary security tokens for web servers. They have a limited lifespan and can be obtained using instance metadata or an identity broker. SSO and Identity Federation. It allows web servers to assume roles in multiple accounts without the need for long-lived access keys. As an AWS professional, I emphasize the need for a balance between developer convenience and security. Convenient methods like hardcoding and environment variables can introduce security risks. Modern AWS services like Secrets Manager can enhance AGFS’s cloud infrastructure, and regular security assessments and continuous education are crucial.\nEC2 Protection with AWS Security Services\rd. Safeguarding Root Account and Admin Roles i) Safeguarding the AWS root account and Admin roles (Console users) is of paramount importance for maintaining the highest level of security at AGFS:\nRoot Account Protection. The root account has unrestricted access to all AWS resources and services. If compromised, it could lead to a complete compromise of the entire AWS environment. Enforce multi-factor authentication (MFA), limit root account usage, and delegate day-to-day tasks to individual IAM users or roles for maximum protection. Admin Role Security. These roles grant significant permissions within the AWS environment. Only authorized personnel can make critical changes and access sensitive resources. Proper role separation, least privilege principles, and regular review of permissions are good security strategies to prevent unauthorized access. ii) AGFS should not create access keys for the root user. AWS strongly recommends not using access keys for the root account due to the high level of privilege associated with it. Access keys are long-term credentials that can be easily compromised. Using them with the root account increases the attack surface and potential impact of a security breach.\nIf access keys were inadvertently created for the root user, it is advisable to rotate them regularly. These are the best practices for access key management.\niii) Key differences between IAM roles and IAM users\nIAM Users Individual identities with distinct permissions. Suitable for users who require long-term access to AWS resources. E.g., developers, administrators, or other personnel. Often used for human users who need console access and programmatic access. IAM Roles: These are credentials for temporary security that reputable entities can use. E.g., EC2 instances, AWS services. Suitable for granting permissions to applications, services, or processes that need to interact with AWS resources without the need for long-lived credentials. Applicable for serverless applications, EC2 instances, Lambda functions, or cross-account access scenarios. IAM users with well-defined and restricted rights are more suitable for Admin jobs. For admins who need console access, IAM users provide more granularity. IAM roles, on the other hand, prove useful for temporary access where credentials are needed for a particular action or scenario. Examples include app deployment or data processing.\nAs an AWS professional, I would prioritize securing root account and Admin roles, adhering to best practices, monitoring permissions, and following the principle of least privilege to maintain a secure AWS environment.\ne. IAM Access and Credential Management i) Configuring “agfs-docs-bucket” S3 Bucket as a Static Website Hosting\nAGFS’s approach to configuring the S3 bucket as a static website hosting for https://www.agfs.com.au is a secure and cost-effective method. With S3’s static hosting, AGFS can serve the website directly from the S3 bucket. Benefits of S3 (high availability, scalability, and reduced operational overhead) carry over. Web hosting architecture is simplified and there is no need for traditional web server management.\nBucket object permissions need to be set to private. Access controls will prevent unauthorized access to sensitive documents. Implementing IAM and bucket policies will restrict access to only authorized users or roles. Non-internal entities won’t be able to access bucket objects even with the public URL.\nii) Implications of Granting IAM Access to Different AWS Accounts\nWhile this may allow AGFS to segregate environments and manage permissions well, it also presents challenges. It might be difficult to manage IAM roles and permissions across many accounts. requiring careful coordination and uniform rules. Harder to ensure effective governance and auditing of access and permissions when managing many accounts. IAM roles permit safe cross-account access, but their setup and management demand careful configuration. iii) Credential Files vs. Credential Profiles\nCredential Files are JSON-formatted files that store AWS credentials, including access keys, secret access keys, and session tokens. AWS CLI and SDKs use it to authenticate requests to AWS services. Credential Profiles are named configurations within credential files. They allow users to store multiple sets of credentials for different AWS accounts or regions. Each profile can contain different access keys, secret access keys, and session tokens. For accessing various AWS accounts, I would recommend using credential profiles within credential files. Developers will transition between accounts and environments without changing their code or scripts. Transient session tokens acquired via IAM roles improve overall security. Since AGFS configures S3 static website hosting and focuses on strict access, bucket objects cannot be set to public. A more practical and systematic method of controlling access to various accounts is provided by credential profiles within credential files.\n",
+  "wordCount" : "2286",
+  "inLanguage": "en",
+  "image":"https://atharvashah.netlify.app/blog/aws/iam-case-study.webp","datePublished": "2023-08-20T15:19:34+05:30",
+  "dateModified": "2023-08-20T15:19:34+05:30",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://atharvashah.netlify.app/posts/tech/aws-iam-security-case-study/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Atharva Shah",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://atharvashah.netlify.app/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+
+<header class="header">
+    
+    <div id="scroll-progress"></div> 
+    
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://atharvashah.netlify.app/" accesskey="h" title="Atharva Shah (Alt + H)">
+            <img src="https://atharvashah.netlify.app/profile/header_button.webp" alt="logo" aria-label="logo"
+                 height="30">Atharva Shah</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://atharvashah.netlify.app/posts/tech/" title="💻Tech">
+                <span>💻Tech</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/posts/personal/" title="🍿Personal">
+                <span>🍿Personal</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/about/" title="👨🏻About">
+                <span>👨🏻About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/tags/" title="🏷️Tags">
+                <span>🏷️Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/archives/" title="📜Archive">
+                <span>📜Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/search/" title="🔍Search (Alt &#43; /)" accesskey=/>
+                <span>🔍Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+</header>
+    <main class="main">
+
+<article class="post-single">
+    <header class="post-header">
+    <div class="breadcrumbs"><a href="https://atharvashah.netlify.app/">Home</a>&nbsp;»&nbsp;<a href="https://atharvashah.netlify.app/posts/">📚 All Posts</a>&nbsp;»&nbsp;<a href="https://atharvashah.netlify.app/posts/tech/">💻Tech</a></div>
+    <h1 class="post-title">
+      AWS Security Best Practices: A Case Study on IAM
+    </h1>
+    <div class="post-description">
+      Learn AWS security best practices, including customer responsibilities, IAM risks, secure access to services, root account safeguarding, and credential management.
+    </div>
+    <div class="post-meta">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>August 20, 2023
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>2286 words
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>11 mins
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://atharvashah.netlify.app/tags/aws/" style="color: var(--secondary)!important;">aws</a>
+            </span>
+        </span>
+    </span>
+</span>
+
+</div>
+  </header> 
+<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/aws/iam-case-study.webp" alt="IAM Case Study">
+        <p>Master AWS security with insights into responsibilities, IAM, access, and protection</p>
+</figure><aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#case-study-scenario" aria-label="Case Study Scenario">Case Study Scenario</a><ul>
+                        
+                <li>
+                    <a href="#a-aws-and-customer-responsibilities" aria-label="a. AWS and Customer Responsibilities">a. AWS and Customer Responsibilities</a></li>
+                <li>
+                    <a href="#b-iam-best-practices-and-cross-account-access" aria-label="b. IAM Best Practices and Cross-Account Access">b. IAM Best Practices and Cross-Account Access</a></li>
+                <li>
+                    <a href="#c-securely-accessing-aws-services" aria-label="c. Securely Accessing AWS Services">c. Securely Accessing AWS Services</a></li>
+                <li>
+                    <a href="#d-safeguarding-root-account-and-admin-roles" aria-label="d. Safeguarding Root Account and Admin Roles">d. Safeguarding Root Account and Admin Roles</a></li>
+                <li>
+                    <a href="#e-iam-access-and-credential-management" aria-label="e. IAM Access and Credential Management">e. IAM Access and Credential Management</a></li></ul>
+                </li>
+                <li>
+                    <a href="#solutions" aria-label="Solutions">Solutions</a><ul>
+                        
+                <li>
+                    <a href="#a-aws-and-customer-responsibilities-1" aria-label="a. AWS and Customer Responsibilities">a. AWS and Customer Responsibilities</a></li>
+                <li>
+                    <a href="#b-iam-best-practices-and-cross-account-access-1" aria-label="b. IAM Best Practices and Cross-Account Access">b. IAM Best Practices and Cross-Account Access</a></li>
+                <li>
+                    <a href="#c-securely-accessing-aws-services-1" aria-label="c. Securely Accessing AWS Services">c. Securely Accessing AWS Services</a></li>
+                <li>
+                    <a href="#d-safeguarding-root-account-and-admin-roles-1" aria-label="d. Safeguarding Root Account and Admin Roles">d. Safeguarding Root Account and Admin Roles</a></li>
+                <li>
+                    <a href="#e-iam-access-and-credential-management-1" aria-label="e. IAM Access and Credential Management">e. IAM Access and Credential Management</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        
+        activeElement = elements[0];
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+    }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        if (elements) {
+            activeElement = Array.from(elements).find((element) => {
+                if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                    (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                    return element;
+                }
+            }) || activeElement
+
+            elements.forEach(element => {
+                const id = encodeURI(element.getAttribute('id')).toLowerCase();
+                if (element === activeElement){
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+                } else {
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+                }
+            })
+        }
+    }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
+  <div class="post-content"><h2 id="case-study-scenario">Case Study Scenario<a hidden class="anchor" aria-hidden="true" href="#case-study-scenario">#</a></h2>
+<p>Aus Global Financial Services (AGFS) is a renowned financial service provider with a 50-year legacy, operating in 20 countries with multiple currencies. AGFS is currently setting up its dynamic website on AWS using EC2 instances running under a Load Balancer. All critical documents will be stored in the S3 bucket named &ldquo;agfs-docs-bucket.&rdquo; Considering Sydney as multi- availability zone AWS region, for fail-over point of view, at least one EC2 instance is recommended to use in every availability zone in Sydney region (ap-southeast-2). AGFS emphasizes security and is committed to implementing robust security measures before migrating to the cloud. As an AWS professional working for AGFS, your task is to address the following questions, which will challenge your critical thinking and self-reflection skills.
+You task is to answer the following questions:</p>
+<h3 id="a-aws-and-customer-responsibilities">a. AWS and Customer Responsibilities<a hidden class="anchor" aria-hidden="true" href="#a-aws-and-customer-responsibilities">#</a></h3>
+<p>The shared responsibility model is a crucial concept in AWS cloud security. Analyse AGFS&rsquo;s business needs and critically assess the division of responsibilities between AWS and AGFS for the following 6 points individually.</p>
+<ol>
+<li>Data should be encrypted on the client side.</li>
+<li>Data should be protected in transit.</li>
+<li>Hardware should be safe.</li>
+<li>All Edge locations should be secure.</li>
+<li>Guest operating system and application should be patched properly.</li>
+<li>AGFS employees must be trained on AWS skills.
+Present your recommendations in tabular form.</li>
+</ol>
+<h3 id="b-iam-best-practices-and-cross-account-access">b. IAM Best Practices and Cross-Account Access<a hidden class="anchor" aria-hidden="true" href="#b-iam-best-practices-and-cross-account-access">#</a></h3>
+<p>IAM plays a pivotal role in cloud security and allows you to control access to your AWS resources.</p>
+<ol>
+<li>Evaluate the significance of IAM in managing access control and fostering a security-centric culture at AGFS for managing IAM users, groups, roles, and policies.</li>
+<li>Self-reflect on the challenges that AGFS might encounter while implementing IAM best practices across multiple AWS accounts (Production, UAT, and Development), where Production AWS account is the consolidated account.</li>
+<li>Propose innovative solutions for granting cross-account access while ensuring the principle of least privilege.
+Support your response with real-world examples, self-reflection, and diagrams.</li>
+</ol>
+<h3 id="c-securely-accessing-aws-services">c. Securely Accessing AWS Services<a hidden class="anchor" aria-hidden="true" href="#c-securely-accessing-aws-services">#</a></h3>
+<p>Security in the AWS cloud is AGFS’s high priority.</p>
+<ol>
+<li>Examine various methods AGFS web developers can use his access keys to interact with AWS services.</li>
+<li>Critically assess the potential risks associated with each approach and reflect on the trade-offs between convenience and security.</li>
+<li>As an AWS professional, propose advanced strategies for securely providing AWS credentials to web servers deployed on EC2 instances with a load balancer across multiple availability zones in Sydney region.
+Support your response with self-reflection, cutting-edge practices, and relevant diagrams.</li>
+</ol>
+<h3 id="d-safeguarding-root-account-and-admin-roles">d. Safeguarding Root Account and Admin Roles<a hidden class="anchor" aria-hidden="true" href="#d-safeguarding-root-account-and-admin-roles">#</a></h3>
+<p>AGFS has users with various roles.</p>
+<ol>
+<li>Reflect on the significance of protecting the AWS root account and Admin roles (Console users) to maintain the highest level of security at AGFS.</li>
+<li>Do AGFS needs to create access keys for a root user, if so do the need to rotate the access keys.? 3. What are the key differences between IAM roles and IAM users, and in what scenarios would you use one over the other for Admin roles?
+Support your response with a deep understanding of security principles, self-reflection, and relevant diagrams (if any).</li>
+</ol>
+<h3 id="e-iam-access-and-credential-management">e. IAM Access and Credential Management<a hidden class="anchor" aria-hidden="true" href="#e-iam-access-and-credential-management">#</a></h3>
+<p>AGFS is storing all critical documents on S3.</p>
+<ol>
+<li>Critically evaluate AGFS&rsquo;s approach to configure the &ldquo;agfs-docs-bucket&rdquo; S3 bucket as a static website hosting.</li>
+<li>Reflect on the implications of granting IAM access to different AWS Accounts (Pro, UAT, and Dev).</li>
+<li>Differentiate Credential files and Credential profiles, which one you recommend AGFS to access different AWS accounts (mentioned in ii) in the company.
+Support your response with self-reflection, innovative solutions, and relevant examples including diagrams (if any).</li>
+</ol>
+<h2 id="solutions">Solutions<a hidden class="anchor" aria-hidden="true" href="#solutions">#</a></h2>
+<h3 id="a-aws-and-customer-responsibilities-1">a. AWS and Customer Responsibilities<a hidden class="anchor" aria-hidden="true" href="#a-aws-and-customer-responsibilities-1">#</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Security Point</strong></th>
+<th style="text-align:center"><strong>AWS Responsibilities</strong></th>
+<th style="text-align:center"><strong>AGFS Responsibilities</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Encrypt data on client side</td>
+<td style="text-align:center">Provide tools and services for encryption and key management.</td>
+<td style="text-align:center">Achieve client-side encryption using appropriate tools and manage encryption keys. Use AWS Key Management Service.</td>
+</tr>
+<tr>
+<td style="text-align:center">Data should be protected in transit.</td>
+<td style="text-align:center">Provide encryption options for data in transit between services.</td>
+<td style="text-align:center">Set encryption settings and protocols for data in transit.</td>
+</tr>
+<tr>
+<td style="text-align:center">Hardware should be safe.</td>
+<td style="text-align:center">Ensure physical security of data centers and server hardware.</td>
+<td style="text-align:center">Implement access controls, firewalls, and physical security measures for EC2 instances and other assets.</td>
+</tr>
+<tr>
+<td style="text-align:center">Secure all Edge locations.</td>
+<td style="text-align:center">Secure and maintain the edge locations and CDN infrastructure.</td>
+<td style="text-align:center">Configure security settings and firewall rules for AGFS&rsquo;s applications and services deployed at edge locations.</td>
+</tr>
+<tr>
+<td style="text-align:center">Patch Guest OS and application.</td>
+<td style="text-align:center">Provide patches and updates for underlying infrastructure.</td>
+<td style="text-align:center">Regularly apply patches and updates to the operating system and applications running on EC2 instances.</td>
+</tr>
+<tr>
+<td style="text-align:center">AGFS employees must be trained on AWS skills.</td>
+<td style="text-align:center">Offer AWS training resources, certifications, and documentation.</td>
+<td style="text-align:center"><!-- raw HTML omitted -->Ensure AGFS employees undergo training to understand AWS services, security practices, and best practices for cloud usage.  <a href="https://docs.aws.amazon.com/">https://docs.aws.amazon.com/</a>, <a href="https://aws.amazon.com/certification/">https://aws.amazon.com/certification/</a><!-- raw HTML omitted --></td>
+</tr>
+</tbody>
+</table>
+<h3 id="b-iam-best-practices-and-cross-account-access-1">b. IAM Best Practices and Cross-Account Access<a hidden class="anchor" aria-hidden="true" href="#b-iam-best-practices-and-cross-account-access-1">#</a></h3>
+<p>i) <a href="https://aws.amazon.com/iam/resources/best-practices/">Identity and Access Management</a> manages access control and fosters a security-centric culture. AGFS needs it for:</p>
+<ul>
+<li><strong>Granular Access Control.</strong> AGFS can define fine-grained permissions for users, groups, and roles. This guarantees that each entity only has access to the resources and actions required for fulfilling its function. decreases the possibility of unauthorized access or unintentional data leakage.</li>
+<li><strong>Principle of least privilege.</strong> IAM ensures that individuals and programs have the bare minimum of access necessary to do their tasks. By doing this, the potential harm from a security breach or configuration error is reduced.</li>
+<li><strong>Audit and Accountability.</strong> With logging and monitoring via IAM, AGFS can keep track of who used which resources and when. Investigating security incidents is made easier by this.</li>
+<li><strong>Centralized Management.</strong> IAM is a unified control point for security policies. AGFS can centrally manage access across a variety of AWS services and accounts.</li>
+<li><strong>Security Culture.</strong> It encourages employees to adopt secure access practices and reinforces the importance of data protection.</li>
+</ul>
+<p>
+
+
+
+
+
+  
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/aws-case-study/6.webp"
+      alt="IAM and Security Implementation"
+      loading="lazy"
+      >
+  
+  
+    <figcaption style="margin-top: -10px; font-size: 80%;">IAM and Security Implementation</figcaption>
+  
+</figure></p>
+<p>ii) It might be difficult to implement IAM best practices across several  AWS accounts, particularly in the case of consolidated production accounts.</p>
+<ul>
+<li>It is challenging to manage IAM roles and policies across multiple accounts. increased chance of errors or oversights.</li>
+<li>Planning is necessary to coordinate access across several accounts (such as development and production) while retaining the separation of roles.</li>
+<li>Consistency in IAM policies and practices might lead to security flaws or inconsistent behaviors.</li>
+<li>It takes time to manage users and roles across many accounts while ensuring appropriate access and permissions.</li>
+</ul>
+<p>iii) To grant cross-account access while adhering to the principle of least privilege, AGFS should:</p>
+<ul>
+<li>Group accounts together with <strong>AWS Organizations</strong> into a hierarchy. To enforce consistent security standards across accounts, use service control policies (SCPs).</li>
+<li>Trusted entities from one account can take on roles in another thanks to <strong>cross-account roles</strong>. For further security, use external IDs.</li>
+<li>Grant access based on user attributes and conditions using <strong>attribute-based access control</strong>. Choose permissions that are more dynamic and context-sensitive.</li>
+<li>Use <strong>AWS SSO</strong> to manage access to numerous accounts and applications from a single location User provisioning and access management are made easier as a result.</li>
+<li><strong>Tools or scripts</strong> for automating the creation and management of cross-account IAM roles on demand. Reduce manual labor and maintain uniformity.</li>
+<li>Apply <strong>MFA requirements</strong> for cross-account access to increase security.</li>
+</ul>
+<p>A cross-account role can be used by the AGFS development team to gain temporary access to resources in use, guaranteeing restricted rights and limited permissions. To maintain security and compliance and to strike a balance between operational effectiveness and security, IAM policies across accounts must undergo regular audits and reviews.</p>
+<h3 id="c-securely-accessing-aws-services-1">c. Securely Accessing AWS Services<a hidden class="anchor" aria-hidden="true" href="#c-securely-accessing-aws-services-1">#</a></h3>
+<p>i) AGFS web developers can use access keys to interact with AWS services through -</p>
+<ul>
+<li>Developers instantly include access keys into the software code. The ability to connect to AWS services is made possible by this.</li>
+<li>Set access keys as environment variables on the server where the program is running. The software then reads these variables to authenticate with AWS.</li>
+<li>To interact with AWS services, developers need SDKs (Software Development Kits). Using the SDKs, access keys can be configured programmatically or using configuration files.</li>
+<li>EC2 instances can be given IAM roles. This provides programs running on the instance with temporary credentials without requiring access keys to be controlled directly.</li>
+</ul>
+<p>ii) Potential risks and trade-offs associated with:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Access Method</strong></th>
+<th style="text-align:center"><strong>Risk Level</strong></th>
+<th style="text-align:center"><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Hardcoding Keys</td>
+<td style="text-align:center">High</td>
+<td style="text-align:center">Easily exposed if code is shared or leaked</td>
+</tr>
+<tr>
+<td style="text-align:center">Environment Variables</td>
+<td style="text-align:center">Moderate</td>
+<td style="text-align:center">Slightly better, still susceptible</td>
+</tr>
+<tr>
+<td style="text-align:center">AWS SDK</td>
+<td style="text-align:center">Moderate</td>
+<td style="text-align:center">More secure than hardcoding, still vulnerable</td>
+</tr>
+<tr>
+<td style="text-align:center">Instance Profiles</td>
+<td style="text-align:center">Lower</td>
+<td style="text-align:center">Eliminates direct key management, EC2 risk</td>
+</tr>
+</tbody>
+</table>
+<p>iii) Advanced strategies for securely providing AWS credentials to web servers deployed on EC2 instances in the Sydney region:</p>
+<ul>
+<li><strong>AWS Secrets Manager.</strong> The application retrieves credentials from Secrets Manager when needed. Reduced exposure and ensured regular rotation of keys.</li>
+<li><strong>IAM Roles with Short Durations</strong>. Instead of using instance profiles, use IAM roles with short-duration sessions. This limits the time an application has access to AWS services, reducing the attack surface.</li>
+<li><strong>Temporary Security Tokens</strong>. Security Token Service (STS) generates temporary security tokens for web servers. They have a limited lifespan and can be obtained using instance metadata or an identity broker.</li>
+<li><strong>SSO and Identity Federation</strong>. It allows web servers to assume roles in multiple accounts without the need for long-lived access keys.</li>
+</ul>
+<p>As an AWS professional, I emphasize the need for a balance between developer convenience and security. Convenient methods like hardcoding and environment variables can introduce security risks. Modern AWS services like Secrets Manager can enhance AGFS&rsquo;s cloud infrastructure, and regular security assessments and continuous education are crucial.</p>
+<p>
+
+
+
+
+
+  
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/aws-case-study/7.webp"
+      alt="EC2 Protection with AWS Security Services"
+      loading="lazy"
+      >
+  
+  
+    <figcaption style="margin-top: -10px; font-size: 80%;">EC2 Protection with AWS Security Services</figcaption>
+  
+</figure></p>
+<h3 id="d-safeguarding-root-account-and-admin-roles-1">d. Safeguarding Root Account and Admin Roles<a hidden class="anchor" aria-hidden="true" href="#d-safeguarding-root-account-and-admin-roles-1">#</a></h3>
+<p>i) Safeguarding the AWS root account and Admin roles (Console users) is of paramount importance for maintaining the <a href="https://docs.aws.amazon.com/accounts/latest/reference/best-practices-root-user.html">highest level of security</a> at AGFS:</p>
+<ul>
+<li><strong>Root Account Protection.</strong> The root account has unrestricted access to all AWS resources and services. If compromised, it could lead to a complete compromise of the entire AWS environment. Enforce multi-factor authentication (MFA), limit root account usage, and delegate day-to-day tasks to individual IAM users or roles for maximum protection.</li>
+<li><strong>Admin Role Security.</strong> These roles grant significant permissions within the AWS environment. Only authorized personnel can make critical changes and access sensitive resources. Proper role separation, least privilege principles, and regular review of permissions are good security strategies to prevent unauthorized access.</li>
+</ul>
+<p>ii) AGFS should not create access keys for the root user. AWS strongly recommends not using access keys for the root account due to the high level of privilege associated with it. Access keys are long-term credentials that can be easily compromised. Using them with the root account increases the attack surface and potential impact of a security breach.</p>
+<p>If access keys were inadvertently created for the root user, it is advisable to rotate them regularly. These are the best practices for access key management.</p>
+<p>iii) Key differences between <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html">IAM roles and IAM users</a></p>
+<ul>
+<li><strong>IAM Users</strong>
+<ul>
+<li>Individual identities with distinct permissions.</li>
+<li>Suitable for users who require long-term access to AWS resources. E.g., developers, administrators, or other personnel.</li>
+<li>Often used for human users who need console access and programmatic access.</li>
+</ul>
+</li>
+<li><strong>IAM Roles:</strong>
+<ul>
+<li>These are credentials for temporary security that reputable entities can use. E.g., EC2 instances, AWS services.</li>
+<li>Suitable for granting permissions to applications, services, or processes that need to interact with AWS resources without the need for long-lived credentials.</li>
+<li>Applicable for serverless applications, EC2 instances, Lambda functions, or cross-account access scenarios.</li>
+</ul>
+</li>
+</ul>
+<p>IAM users with well-defined and restricted rights are more suitable for Admin jobs. For admins who need console access, IAM users provide more granularity. IAM roles, on the other hand, prove useful for temporary access where credentials are needed for a particular action or scenario. Examples include app deployment or data processing.</p>
+<p>As an AWS professional, I would prioritize securing root account and Admin roles, adhering to best practices, monitoring permissions, and following the principle of least privilege to maintain a secure AWS environment.</p>
+<h3 id="e-iam-access-and-credential-management-1">e. IAM Access and Credential Management<a hidden class="anchor" aria-hidden="true" href="#e-iam-access-and-credential-management-1">#</a></h3>
+<p>i) <strong>Configuring &ldquo;agfs-docs-bucket&rdquo; S3 Bucket as a Static Website Hosting</strong></p>
+<p>AGFS&rsquo;s approach to configuring the S3 bucket as a static website hosting for <a href="https://www.agfs.com.au/">https://www.agfs.com.au</a> is a secure and cost-effective method. With S3&rsquo;s static hosting, AGFS can serve the website directly from the S3 bucket. Benefits of S3 (high availability, scalability, and reduced operational overhead) carry over. Web hosting architecture is simplified and there is no need for traditional web server management.</p>
+<p>Bucket object permissions need to be set to private. Access controls will prevent unauthorized access to sensitive documents. Implementing IAM and bucket policies will restrict access to only authorized users or roles. Non-internal entities won&rsquo;t be able to access bucket objects even with the public URL.</p>
+<p>ii) <strong>Implications of Granting IAM Access to Different AWS Accounts</strong></p>
+<ul>
+<li>While this may allow AGFS to segregate environments and manage permissions well, it also presents challenges.</li>
+<li>It might be difficult to manage IAM roles and permissions across many accounts. requiring careful coordination and uniform rules.</li>
+<li>Harder to ensure effective governance and auditing of access and permissions when managing many accounts.</li>
+<li>IAM roles permit safe cross-account access, but their setup and management demand careful configuration.</li>
+</ul>
+<p>iii) <strong>Credential Files vs. Credential Profiles</strong></p>
+<ol>
+<li><strong>Credential Files</strong> are JSON-formatted files that store AWS credentials, including access keys, secret access keys, and session tokens. AWS CLI and SDKs use it to authenticate requests to AWS services.</li>
+<li><strong>Credential Profiles</strong> are named configurations within credential files. They allow users to store multiple sets of credentials for different AWS accounts or regions. Each profile can contain different access keys, secret access keys, and session tokens.</li>
+</ol>
+<p>For accessing various AWS accounts, I would recommend using <strong>credential profiles within credential files</strong>. Developers will transition between accounts and environments without changing their code or scripts. Transient session tokens acquired via IAM roles improve overall security. Since AGFS configures S3 static website hosting and focuses on strict access, bucket objects cannot be set to public. A more practical and systematic method of controlling access to various accounts is provided by credential profiles within credential files.</p>
+
+
+  </div>
+
+  <script async data-uid="3bc620cccf" src="https://atharva-shah.ck.page/3bc620cccf/index.js"></script>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://atharvashah.netlify.app/tags/aws/">aws</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://atharvashah.netlify.app/posts/personal/movie-review/august-2023/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>August 2023 Movie Reviews</span>
+  </a>
+  <a class="next" href="https://atharvashah.netlify.app/posts/tech/aws-ec2-security-case-study/">
+    <span class="title">Next »</span>
+    <br>
+    <span>AWS Security Best Practices: A Case Study on EC2</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share AWS Security Best Practices: A Case Study on IAM on twitter"
+        href="https://twitter.com/intent/tweet/?text=AWS%20Security%20Best%20Practices%3a%20A%20Case%20Study%20on%20IAM&amp;url=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2faws-iam-security-case-study%2f&amp;hashtags=aws">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share AWS Security Best Practices: A Case Study on IAM on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2faws-iam-security-case-study%2f&amp;title=AWS%20Security%20Best%20Practices%3a%20A%20Case%20Study%20on%20IAM&amp;summary=AWS%20Security%20Best%20Practices%3a%20A%20Case%20Study%20on%20IAM&amp;source=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2faws-iam-security-case-study%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share AWS Security Best Practices: A Case Study on IAM on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2faws-iam-security-case-study%2f&title=AWS%20Security%20Best%20Practices%3a%20A%20Case%20Study%20on%20IAM">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share AWS Security Best Practices: A Case Study on IAM on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2faws-iam-security-case-study%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share AWS Security Best Practices: A Case Study on IAM on whatsapp"
+        href="https://api.whatsapp.com/send?text=AWS%20Security%20Best%20Practices%3a%20A%20Case%20Study%20on%20IAM%20-%20https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2faws-iam-security-case-study%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share AWS Security Best Practices: A Case Study on IAM on telegram"
+        href="https://telegram.me/share/url?text=AWS%20Security%20Best%20Practices%3a%20A%20Case%20Study%20on%20IAM&amp;url=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2faws-iam-security-case-study%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+  </footer><div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-atharvashah-netlify-app" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function() {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        var disqus_shortname = 'https-atharvashah-netlify-app';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+</article>
+<script>
+  <!-- SCROLLING PROGRESS BAR -->
+  const scrollProgress = document.getElementById('scroll-progress');
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollPercentage = (scrollTop / height) * 100;
+    scrollProgress.style.width = `${scrollPercentage}%`;
+  });
+</script>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://atharvashah.netlify.app/">Atharva Shah</a></span> 
+    
+    |<span><a href="/privacy-policy/" target="_blank">Privacy Policy</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="AtharvaShah" data-description="Support me on Buy me a coffee!" data-message="Every bit of support counts!" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function() {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function() {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) {};
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script></body>
+
+</html>

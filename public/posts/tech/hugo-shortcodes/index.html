@@ -6,11 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Awesome Hugo Shortcodes For Your Websites | Atharva Shah</title>
-<meta name="keywords" content="technology">
+<meta name="keywords" content="web">
 <meta name="description" content="Awesome hugo shortcodes I am running to power this site. Lightweight, fast and easy to use. Everything from galleries, blockquotes, spotify embeds and more.">
 <meta name="author" content="">
 <link rel="canonical" href="https://atharvashah.netlify.app/posts/tech/hugo-shortcodes/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.4f8039883a23aca6c0e6597b69bd15a1d671d1b1c3ad5d6abb91f131fd12ed57.css" integrity="sha256-T4A5iDojrKbA5ll7ab0VodZx0bHDrV1qu5HxMf0S7Vc=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.dfd86a2d3c94da9519307537fb91ad9849b02bb3e5f743afa1aa31bb65e3a4c7.css" integrity="sha256-39hqLTyU2pUZMHU3&#43;5GtmEmwK7Pl90Ovoaoxu2XjpMc=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://atharvashah.netlify.app/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://atharvashah.netlify.app/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://atharvashah.netlify.app/favicon-32x32.png">
@@ -102,7 +102,7 @@ if (!doNotTrack) {
   "name": "Awesome Hugo Shortcodes For Your Websites",
   "description": "Awesome hugo shortcodes I am running to power this site. Lightweight, fast and easy to use. Everything from galleries, blockquotes, spotify embeds and more.",
   "keywords": [
-    "technology"
+    "web"
   ],
   "articleBody": "As a web developer, you’re constantly seeking efficient ways to streamline your workflow and enhance the functionality of your websites. In this blog post, we’ll explore the concept of Hugo Shortcodes, their significance, and how you can leverage them to create dynamic and reusable content in your Hugo-powered websites. Whether you’re new to Hugo or looking to level up your skills, this guide will provide you with a comprehensive understanding of Hugo Shortcodes and how to effectively use them.\nWhat are Shortcodes? Hugo Shortcodes are simple, reusable snippets of code that enable you to add dynamic content or functionality to your Hugo static websites. They are essentially shortcuts that allow you to avoid repetitive coding and provide a convenient way to inject complex HTML, CSS, or JavaScript into your content.\nWhy do I need them? They offer several advantages that make them a valuable tool in your web development arsenal:\nReusability: Shortcodes enable you to create modular and reusable components that can be easily inserted into multiple pages or sections of your website. Code Organization: By encapsulating specific functionalities within shortcodes, you can keep your content clean and separate concerns, making it easier to maintain and update your website. Enhanced Functionality: Shortcodes allow you to extend the capabilities of your Hugo websites by adding dynamic elements such as customizable forms, interactive maps, social media embeds, and more. Developer Productivity: With the ability to encapsulate complex code snippets into simple shortcodes, you can save time and effort by avoiding repetitive coding tasks. Tired of managing hundreds of tabs? Discover how to Stay Organized in Chrome\nHow to Write Custom Hugo Shortcodes? Creating custom Hugo Shortcodes is a straightforward process. Here’s a step-by-step guide to get you started:\nDetermine the functionality or content you want to encapsulate within the shortcode. Navigate to the /layouts/shortcodes directory in your Hugo project. Create a new file with a descriptive name, ending in .html (e.g. myshortcode.html). Write the desired HTML, CSS, or JavaScript code within the file, following Hugo’s templating syntax. Save the file and close it. How to Invoke/Use Shortcodes? Once you’ve created a custom Hugo Shortcode, you can easily invoke it within your Markdown content using double curly braces with the shortcode name:\n{{\u003c myshortcode \u003e}} You can also pass parameters to your shortcodes by including key-value pairs within the opening tag:\n{{\u003c myshortcode param1=\"value1\" param2=\"value2\" \u003e}} Remember to replace myshortcode with the actual name of your custom shortcode.\nCustom Shortcodes By adding my favorite custom shortcodes and continuously expanding the collection, you can effortlessly enhance the fanciness of your website. Investing just 10 minutes in this simple and extendible process will yield remarkable results in improving the overall appeal and functionality of your site.\nGallery Paste the code for galleries shortcode in layouts/shortcodes/galleries.html and you are good to go! We use the nanogallery library to do all the good stuff for you. It will be a wraper div around the gallery shortcode.\nCODE\nUSAGE\n{{\u003c galleries \u003e}} {{\u003c gallery src=\"/blog/er-1.webp\" title=\"Elden Ring\" \u003e}} {{\u003c gallery src=\"/blog/er-2.webp\" title=\"Best Soulsborne Game\" \u003e}} {{\u003c gallery src=\"/blog/er-3.webp\" title=\"Deep Lore\" \u003e}} {{\u003c gallery src=\"/blog/er-4.webp\" title=\"Awesome Bosses\" \u003e}} {{\u003c gallery src=\"/blog/er-5.webp\" title=\"Dark Atmosphere\" \u003e}} {{\u003c gallery src=\"/blog/er-6.webp\" title=\"Perfectly Balanced Difficulty\" \u003e}} {{\u003c /galleries \u003e}} OUTPUT\n\u003c!DOCTYPE html\u003e\rElden Ring\rBest Soulsborne Game\rDeep Lore\rAwesome Bosses\rDark Atmosphere\rPerfectly Balanced Difficulty\rHighlight CODE\nUSAGE\nI wanna highlight {{\u003c highlight \"this particular text\" \u003e}}. Okay, did it! OUTPUT\nI wanna highlight this particular text. Okay, did it!\nSpotify CODE\nUSAGE\nAlbum {{\u003c spotify type=\"album\" id=\"6bQkurEvgWIUUvKeqaJRq2\" \u003e}} Track {{\u003c spotify type=\"track\" id=\"3dsz3hT88uR2RJhtegnilY\" \u003e}} Artist {{\u003c spotify type=\"artist\" id=\"00FQb4jTyendYWaN8pK0wa\" \u003e}} Playlist {{\u003c spotify type=\"playlist\" id=\"37i9dQZF1DX6dvuioZhoLo\" \u003e}} OUTPUT\nAlbum Track Artist Playlist Blockquote CODE USAGE\nNormal quote: {{\u003c blockquote \u003e}} This is a simple quote. {{\u003c /blockquote \u003e}} Quote with author: {{\u003c blockquote author=\"Author2\" \u003e}} This is a quote with only an Author named Author2. {{\u003c /blockquote \u003e}} Quote with author and source: {{\u003c blockquote author=\"Author3\" source=\"Source\" \u003e}} This is a quote from Author3 and source \"source.\" {{\u003c /blockquote \u003e}} Quote with author and link: {{\u003c blockquote author=\"Author4\" link=\"https://www.google.com\" \u003e}} This is a quote from Author4 and links to https://www.google.com. {{\u003c /blockquote \u003e}} Quote with author, link and title: {{\u003c blockquote author=\"Author5\" link=\"https://www.google.com\" title=\"Google\" \u003e}} This is a quote from Author5 and links to https://www.google.com with title \"Google.\" {{\u003c /blockquote \u003e}} OUTPUT\nNormal quote: This is a simple quote.\nQuote with author: This is a quote with only an Author named Author2.\nAuthor2\rQuote with author and source: This is a quote from Author3 and source “source.”\nAuthor3\rSource\rQuote with author and link: This is a quote from Author4 and links to https://www.google.com.\nAuthor4\rgoogle.com\u003e Quote with author, link and title: This is a quote from Author5 and links to https://www.google.com with title “Google.”\nAuthor5\rGoogle Built-In Shortcodes These useful shortcodes listed below do not require custom code or the need to create HTML files or place them in the layouts directory. Hugo provides built-in support for these shortcodes. You can explore more shortcodes by referring to the official documentation here.\nTweet {{\u003c tweet user=\"cutlist_dev\" id=\"1674315545175535616\" \u003e}} Cute little game @cultofthelamb pic.twitter.com/rAZ2J6jVG5\n— Atharva Shah - e/acc (@cultist_dev) June 29, 2023 YouTube {{\u003c youtube dQw4w9WgXcQ \u003e}} Images with Caption This is not really a shortcode, but more of a lesser know hack. Yes, you can add a caption natively to images in markdown by passing a caption right next to the image path.\n![Alt should always be set for reasons of inclusion](/blog/er-1.webp \"Together we shall devour the very gods.\") Together we shall devour the very gods.\rConclusion Hugo Shortcodes are powerful tools that enable web developers to create dynamic, reusable content in their Hugo websites. By harnessing the reusability and enhanced functionality provided by shortcodes, you can streamline your development process and build more efficient and engaging websites. Whether you’re a beginner or an experienced developer, incorporating Hugo Shortcodes into your workflow will undoubtedly elevate the quality and flexibility of your Hugo-powered projects. So go ahead, give it a try, and unlock the full potential of Hugo Shortcodes!\nLearn to deploy confidently with this guide on Netlify CI/CD\n",
   "wordCount" : "1016",
@@ -200,22 +200,6 @@ if (!doNotTrack) {
         </ul>
     </nav>
 
-<script>
-    const navbar = document.querySelector('.nav');
-    let navbarTop = navbar.offsetTop;
-
-    function stickynavbar() {
-        if (window.scrollY >= navbarTop) {
-            document.body.style.paddingTop = navbar.clientHeight + 'px';
-            navbar.classList.add('sticky');
-        } else {
-            document.body.style.paddingTop = '0';
-            navbar.classList.remove('sticky');
-        }
-    }
-    window.addEventListener('scroll', stickynavbar);
-</script>
-
 </header>
     <main class="main">
 
@@ -274,7 +258,7 @@ if (!doNotTrack) {
         <span class="fa fa-tags" style="opacity: 0.8"></span>
         <span>
             <span class="post-tags-meta">
-                <a href="https://atharvashah.netlify.app/tags/technology/" style="color: var(--secondary)!important;">technology</a>
+                <a href="https://atharvashah.netlify.app/tags/web/" style="color: var(--secondary)!important;">web</a>
             </span>
         </span>
     </span>
@@ -894,7 +878,7 @@ if (!doNotTrack) {
   <script async data-uid="3bc620cccf" src="https://atharva-shah.ck.page/3bc620cccf/index.js"></script>
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://atharvashah.netlify.app/tags/technology/">technology</a></li>
+      <li><a href="https://atharvashah.netlify.app/tags/web/">web</a></li>
     </ul>
 <nav class="paginav">
   <a class="prev" href="https://atharvashah.netlify.app/posts/personal/book-quotes/the-best-quotes-from-sin-city-graphic-novel-by-frank-miller/">
@@ -912,7 +896,7 @@ if (!doNotTrack) {
 
 <div class="share-buttons">
     <a target="_blank" rel="noopener noreferrer" aria-label="share Awesome Hugo Shortcodes For Your Websites on twitter"
-        href="https://twitter.com/intent/tweet/?text=Awesome%20Hugo%20Shortcodes%20For%20Your%20Websites&amp;url=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2fhugo-shortcodes%2f&amp;hashtags=technology">
+        href="https://twitter.com/intent/tweet/?text=Awesome%20Hugo%20Shortcodes%20For%20Your%20Websites&amp;url=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2fhugo-shortcodes%2f&amp;hashtags=web">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />

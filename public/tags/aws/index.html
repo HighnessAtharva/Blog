@@ -10,7 +10,7 @@
 <meta name="description" content="👋 Howdy! I am Atharva Shah and on this blog I ruminate about tech, programming, entertainment and the fine things in life.">
 <meta name="author" content="">
 <link rel="canonical" href="https://atharvashah.netlify.app/tags/aws/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.4f8039883a23aca6c0e6597b69bd15a1d671d1b1c3ad5d6abb91f131fd12ed57.css" integrity="sha256-T4A5iDojrKbA5ll7ab0VodZx0bHDrV1qu5HxMf0S7Vc=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.dfd86a2d3c94da9519307537fb91ad9849b02bb3e5f743afa1aa31bb65e3a4c7.css" integrity="sha256-39hqLTyU2pUZMHU3&#43;5GtmEmwK7Pl90Ovoaoxu2XjpMc=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://atharvashah.netlify.app/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://atharvashah.netlify.app/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://atharvashah.netlify.app/favicon-32x32.png">
@@ -141,22 +141,6 @@ if (!doNotTrack) {
         </ul>
     </nav>
 
-<script>
-    const navbar = document.querySelector('.nav');
-    let navbarTop = navbar.offsetTop;
-
-    function stickynavbar() {
-        if (window.scrollY >= navbarTop) {
-            document.body.style.paddingTop = navbar.clientHeight + 'px';
-            navbar.classList.add('sticky');
-        } else {
-            document.body.style.paddingTop = '0';
-            navbar.classList.remove('sticky');
-        }
-    }
-    window.addEventListener('scroll', stickynavbar);
-</script>
-
 </header>
     <main class="main"> 
 <header class="page-header"><div class="breadcrumbs"><a href="https://atharvashah.netlify.app/">Home</a>&nbsp;»&nbsp;<a href="https://atharvashah.netlify.app/tags/">🏷️ Tags</a></div>
@@ -172,6 +156,136 @@ if (!doNotTrack) {
     </a>
   </h1>
 </header>
+
+
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/aws/iam-case-study.webp" alt="IAM Case Study">
+</figure>
+  <header class="entry-header">
+    <h2>AWS Security Best Practices: A Case Study on IAM
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Case Study Scenario Aus Global Financial Services (AGFS) is a renowned financial service provider with a 50-year legacy, operating in 20 countries with multiple currencies. AGFS is currently setting up its dynamic website on AWS using EC2 instances running under a Load Balancer. All critical documents will be stored in the S3 bucket named “agfs-docs-bucket.” Considering Sydney as multi- availability zone AWS region, for fail-over point of view, at least one EC2 instance is recommended to use in every availability zone in Sydney region (ap-southeast-2)....</p>
+  </div>
+  <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>August 20, 2023
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>2286 words
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>11 mins
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://atharvashah.netlify.app/tags/aws/" style="color: var(--secondary)!important;">aws</a>
+            </span>
+        </span>
+    </span>
+</span></footer>
+  <a class="entry-link" aria-label="post link to AWS Security Best Practices: A Case Study on IAM" href="https://atharvashah.netlify.app/posts/tech/aws-iam-security-case-study/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/aws/ec2-case-study.webp" alt="">
+</figure>
+  <header class="entry-header">
+    <h2>AWS Security Best Practices: A Case Study on EC2
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Case Study Scenario Analytica Soft Pty Ltd (ASPT) - analyticasoft.com.au is a global analytics company with its head office in Australia. ASPT is planning to migrate its static website hosting to AWS Cloud in the first phase. One of the requirements is to setup a storage service on the cloud to store documents and videos. These documents will be available to the registered users as Presigned URLs. As part of the cloud team, your task is to analyze and recommend suitable AWS cloud services to meet ASPT’s requirements....</p>
+  </div>
+  <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>August 20, 2023
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>2247 words
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>11 mins
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://atharvashah.netlify.app/tags/aws/" style="color: var(--secondary)!important;">aws</a>
+            </span>
+        </span>
+    </span>
+</span></footer>
+  <a class="entry-link" aria-label="post link to AWS Security Best Practices: A Case Study on EC2" href="https://atharvashah.netlify.app/posts/tech/aws-ec2-security-case-study/"></a>
+</article>
 
 <article class="post-entry tag-entry"> 
 <figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/aws/aws-cheatsheet.webp" alt="A Personal AWS Cheatsheet Dump">

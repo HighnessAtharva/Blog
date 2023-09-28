@@ -6,7 +6,25 @@
     <description>Recent content in 💻Tech on Atharva Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Jul 2023 15:18:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Aug 2023 15:19:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS Security Best Practices: A Case Study on IAM</title>
+      <link>https://atharvashah.netlify.app/posts/tech/aws-iam-security-case-study/</link>
+      <pubDate>Sun, 20 Aug 2023 15:19:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/aws-iam-security-case-study/</guid>
+      <description>Learn AWS security best practices, including customer responsibilities, IAM risks, secure access to services, root account safeguarding, and credential management.</description>
+    </item>
+    
+    <item>
+      <title>AWS Security Best Practices: A Case Study on EC2</title>
+      <link>https://atharvashah.netlify.app/posts/tech/aws-ec2-security-case-study/</link>
+      <pubDate>Sun, 20 Aug 2023 15:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/aws-ec2-security-case-study/</guid>
+      <description>Case Study Scenario Analytica Soft Pty Ltd (ASPT) - analyticasoft.com.au is a global analytics company with its head office in Australia. ASPT is planning to migrate its static website hosting to AWS Cloud in the first phase. One of the requirements is to setup a storage service on the cloud to store documents and videos. These documents will be available to the registered users as Presigned URLs. As part of the cloud team, your task is to analyze and recommend suitable AWS cloud services to meet ASPT&amp;rsquo;s requirements.</description>
+    </item>
+    
     <item>
       <title>35 AWS Cheatsheets To Speedrun Certification</title>
       <link>https://atharvashah.netlify.app/posts/tech/aws-cheatsheet/</link>
