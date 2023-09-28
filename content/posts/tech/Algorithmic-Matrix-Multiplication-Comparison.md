@@ -1,12 +1,12 @@
 ---
 title: "Algorithmic Matrix Multiplication Comparison"
-date: 2023-08-20T01:20:34+05:30
-draft: true
+date: 2023-09-20T01:20:34+05:30
+draft: false
 cover:
-    image: blog/.webp
+    image: blog/algo-matmul-cover.webp
     alt: Algorithmic Matrix Multiplication Comparison
-    caption: Algorithmic Matrix Multiplication Comparison
-description: ""
+    caption: "Matrix Multiplication: Strassen vs. Naive Method"
+description: "Comparing Strassen's method and naive approach for matrix multiplication, exploring time and memory complexities in Python."
 tags: ["python"]
 ---
 

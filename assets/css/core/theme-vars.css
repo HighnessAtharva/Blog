@@ -132,6 +132,11 @@ div.share-buttons>:nth-child(6):hover {
   color: rgb(0, 123, 255);
 }
 
+.post-content figure>figcaption{
+  text-align: center;
+}
+
+
 main.post-main {
   position: relative;
   min-height: calc(100vh - var(--header-height) - var(--footer-height));

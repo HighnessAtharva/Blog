@@ -1,6 +1,6 @@
 ﻿---
 title: "AWS Security Best Practices: A Case Study on IAM"
-date: 2023-08-20T15:19:34+05:30
+date: 2023-09-25T15:19:34+05:30
 draft: false
 cover: 
     image: blog/aws/iam-case-study.webp

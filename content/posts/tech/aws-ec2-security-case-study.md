@@ -1,12 +1,12 @@
 ﻿---
 title: "AWS Security Best Practices: A Case Study on EC2"
-date: 2023-08-20T15:18:34+05:30
+date: 2023-09-26T15:18:34+05:30
 draft: false
 cover: 
     image: blog/aws/ec2-case-study.webp
-    alt: 
-    caption:  
-description: ""
+    alt: EC2 Case Study
+    caption: "EC2 Security: A Real-World AWS Case Study"  
+description: "Learn AWS security best practices through an EC2 case study, enhancing your cloud security strategy."
 tags: ["aws"]
 ---
 
