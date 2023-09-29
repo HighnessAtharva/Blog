@@ -62,6 +62,8 @@ AGFS is storing all critical documents on S3.
 3. Differentiate Credential files and Credential profiles, which one you recommend AGFS to access different AWS accounts (mentioned in ii) in the company.
 Support your response with self-reflection, innovative solutions, and relevant examples including diagrams (if any).
 
+{{< fancylink "Like Scenario Based Learning? Check out" "AWS EC2 Security Case Study" "/posts/tech/aws-ec2-security-case-study/" >}}
+
 ## Solutions
 
 ### a. AWS and Customer Responsibilities

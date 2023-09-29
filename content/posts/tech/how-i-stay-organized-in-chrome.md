@@ -13,6 +13,8 @@ tags: ["web", "guest post"]
 
 When I’m not writing in VSCode or playing around in Figma, I’m in the browser. Almost everything I do lives in the browser; All our modern apps, websites, and everything we need online is just a tab away. This is a blessing and a curse. Because everything is so easily accessible, it’s all too easy to get lost in a sea of tabs. Before you know it, you have way too many tabs open and you’re not able to get anything done.
 
+{{< fancylink "Here is how I Stay Focused and Rid Myself Of" "Technical Debt" "/posts/tech/technical-debt/" >}}
+
 - Your mail, calendar, and task management apps take up 3-6 tabs.
 - You have 4 StackOverflow tabs open, 3 of which are related to a database query you’re trying to optimize and 1 is something else you’ve already forgotten about.
 - A couple reddit tabs and some links your friends sent you are in the mix.
@@ -35,9 +37,9 @@ Tab Collections are simply just groups of tabs that you can save, name, and then
 
 For example you might create a tab collection called “Database Query Optimization” with 3 stackoverflow tabs, a database docs site tab, and a youtube tutorial tab. This way you can close these tabs anytime you don’t need them open **right this instant** (maybe you’re doing some shopping instead) and can also reopen or “restore” them at any time.
 
-{{< fancylink "Like this website? It was built with" "Amazing Hugo Shortcodes" "/posts/tech/hugo-shortcodes/" >}}
-
 Partizion lets you open these tab collections in one-click which makes context switching and staying on task easy.
+
+{{< fancylink "Like this website? It was built with" "Amazing Hugo Shortcodes" "/posts/tech/hugo-shortcodes/" >}}
 
 ## Auto-synced Sessions in Partizion
 

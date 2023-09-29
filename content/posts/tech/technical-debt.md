@@ -22,6 +22,8 @@ Now you might be wondering, "How do I avoid technical debt, and how do I deal wi
 
 You got it! Technical debt is all about those suboptimal shortcuts that come back to haunt us later. It's like leaving little messes behind for your future self to clean up. Not fun, right? But don't worry, I've got some solutions for you!
 
+{{< fancylink "Too many tabs? Here is a super simple way to" "Stay Organized in Chrome" "/posts/tech/how-i-stay-organized-in-chrome/" >}}
+
 First things first, we need to raise awareness about technical debt. Knowing its impact is the first step to preventing it. So, let's educate ourselves and others about its consequences.
 
 The second key is to have the courage to stand up for what's right. As developers, we need to push back when we're asked to build things in a hurry without considering the long-term consequences. Sure, we want to get to market quickly, but rushing can lead to more headaches down the road. So, let's have some backbone and advocate for building things the right way!

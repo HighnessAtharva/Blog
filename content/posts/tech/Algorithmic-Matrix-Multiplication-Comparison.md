@@ -21,6 +21,9 @@ The assessment goes over specific situations where one approach might be better 
 
 The expected outcome is to help in the selection of the most appropriate algorithm for a variety of matrix multiplication tasks. The tradeoff between space and memory optimization will be considered. The conclusion will deliver helpful insights into the advantages and disadvantages of each technique with a thorough analysis.
 
+{{< fancylink "Git Gud at Algorithms with my" "FAANG Interview Guidebook" "/posts/tech/gumroad-dsa-announcement/" >}}
+
+
 ## CPU Specifications
 
 At the time of writing this report, a Hexacore Computer with 6 cores and 12 threads is being used to run the tests. This needs to be taken into account. It reduces execution time for multi-threaded algorithms, but the impact depends on algorithmic implementation, memory access, and scheduling.

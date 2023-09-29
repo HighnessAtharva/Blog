@@ -58,6 +58,8 @@ ASPT is evaluating software development methodologies.
 2. Justify your suggestion with appropriate reasoning, considering ASPT's business environment, project requirements, and goals.
 3. Highlight the advantages and potential challenges of the recommended methodology.
 
+{{< fancylink "Like Scenario Based Learning? Check out" "AWS IAM Security Oriented Case Study" "/posts/tech/aws-iam-security-case-study/" >}}
+
 ## Solutions
 
 ### a. Cloud Service model recommendation. Consider factors to choose a region
