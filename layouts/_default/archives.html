@@ -10,6 +10,17 @@
     {{- end }}
 </header>
 
+<div class="legend">
+    <div class="legend-item">
+        <div class="legend-square personal"></div>
+        <div class="legend-label">Personal</div>
+    </div>
+    <div class="legend-item">
+        <div class="legend-square tech"></div>
+        <div class="legend-label">Tech</div>
+    </div>
+</div>
+
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }} {{- if site.Params.ShowAllPagesInArchive }} {{- $pages = site.RegularPages }} {{- end }} {{- range $pages.GroupByPublishDate "2006" }} {{- if ne .Key "0001" }}
 <div class="archive-year">
     <h2 class="archive-year-header">
@@ -21,7 +32,10 @@
         <div class="archive-posts">
             {{- range .Pages }} {{- if eq .Kind "page" }}
             <div class="archive-entry">
-                <h3 class="archive-entry-title">
+                
+                <h3 class="archive-entry-title {{ .File.Dir }}">
+                    <h3 class="archive-entry-title {{ if in .File.Dir "personal" }}archive-personal{{ else if in .File.Dir "tech" }}archive-tech{{ end }}">
+
                     {{- .Title | markdownify }} {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
                 </h3>
                 <div class="archive-meta">

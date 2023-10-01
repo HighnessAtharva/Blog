@@ -19,7 +19,8 @@
   --hljs-bg: rgb(28, 29, 33);
   --code-bg: rgb(245, 245, 245);
   --border: rgb(238, 238, 238);
-
+  --archive-personal-color: rgb(10, 0, 204);
+  --archive-tech-color: rgb(216, 0, 0);
 }
 
 body {
@@ -132,7 +133,7 @@ div.share-buttons>:nth-child(6):hover {
   color: rgb(0, 123, 255);
 }
 
-.post-content figure>figcaption{
+.post-content figure>figcaption {
   text-align: center;
 }
 
@@ -169,6 +170,51 @@ nav.pagination>a.prev {
   margin-left: 27%;
 
 }
+
+.archive-personal {
+  color: var(--archive-personal-color);
+}
+
+.archive-tech {
+  color: var(--archive-tech-color);
+}
+
+.legend {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: -30px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+
+.legend-square {
+  width: 20px;
+  /* Adjust the size of the square */
+  height: 20px;
+  /* Adjust the size of the square */
+  margin-right: 5px;
+  /* Adjust the spacing between the square and label */
+  border-radius: 50%;
+}
+
+.legend-item>.personal {
+  background-color: var(--archive-personal-color);
+}
+
+.legend-item>.tech {
+  background-color: var(--archive-tech-color)
+}
+
+.legend-label {
+  font-size: 14px;
+  /* Adjust the font size for the label */
+}
+
 
 @media (max-width: 991px) {
   main.post-main {
