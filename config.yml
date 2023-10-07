@@ -5,7 +5,7 @@ paginate: 5
 theme: ['hugo-shortcode-roneo-collection','PaperMod']
 
 #This will stop tracking in July 2023. Just migrate to Analytics 4 and make changes in hugo. Google it. You'll be fine.
-googleAnalytics: UA-216150796-2 
+googleAnalytics: G-7YWY1F15R3
  
 #COMMENTS
 disqusShortname: https-atharvashah-netlify-app
