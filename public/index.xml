@@ -17,30 +17,48 @@
     </item>
     
     <item>
-      <title>August 2023 Movie Reviews</title>
-      <link>https://atharvashah.netlify.app/posts/personal/movie-review/august-2023/</link>
-      <pubDate>Thu, 24 Aug 2023 00:18:34 +0530</pubDate>
+      <title>AWS Security Best Practices: A Case Study on EC2</title>
+      <link>https://atharvashah.netlify.app/posts/tech/aws-ec2-security-case-study/</link>
+      <pubDate>Tue, 26 Sep 2023 15:18:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/posts/personal/movie-review/august-2023/</guid>
-      <description>This was an exciting month for movie enthusiasts, with a variety of genres and eras represented in the films released and viewed.</description>
+      <guid>https://atharvashah.netlify.app/posts/tech/aws-ec2-security-case-study/</guid>
+      <description>Learn AWS security best practices through an EC2 case study, enhancing your cloud security strategy.</description>
     </item>
     
     <item>
       <title>AWS Security Best Practices: A Case Study on IAM</title>
       <link>https://atharvashah.netlify.app/posts/tech/aws-iam-security-case-study/</link>
-      <pubDate>Sun, 20 Aug 2023 15:19:34 +0530</pubDate>
+      <pubDate>Mon, 25 Sep 2023 15:19:34 +0530</pubDate>
       
       <guid>https://atharvashah.netlify.app/posts/tech/aws-iam-security-case-study/</guid>
       <description>Learn AWS security best practices, including customer responsibilities, IAM risks, secure access to services, root account safeguarding, and credential management.</description>
     </item>
     
     <item>
-      <title>AWS Security Best Practices: A Case Study on EC2</title>
-      <link>https://atharvashah.netlify.app/posts/tech/aws-ec2-security-case-study/</link>
-      <pubDate>Sun, 20 Aug 2023 15:18:34 +0530</pubDate>
+      <title>Algorithmic Matrix Multiplication Comparison</title>
+      <link>https://atharvashah.netlify.app/posts/tech/algorithmic-matrix-multiplication-comparison/</link>
+      <pubDate>Wed, 20 Sep 2023 01:20:34 +0530</pubDate>
       
-      <guid>https://atharvashah.netlify.app/posts/tech/aws-ec2-security-case-study/</guid>
-      <description>Case Study Scenario Analytica Soft Pty Ltd (ASPT) - analyticasoft.com.au is a global analytics company with its head office in Australia. ASPT is planning to migrate its static website hosting to AWS Cloud in the first phase. One of the requirements is to setup a storage service on the cloud to store documents and videos. These documents will be available to the registered users as Presigned URLs. As part of the cloud team, your task is to analyze and recommend suitable AWS cloud services to meet ASPT&amp;rsquo;s requirements.</description>
+      <guid>https://atharvashah.netlify.app/posts/tech/algorithmic-matrix-multiplication-comparison/</guid>
+      <description>Comparing Strassen&amp;#39;s method and naive approach for matrix multiplication, exploring time and memory complexities in Python.</description>
+    </item>
+    
+    <item>
+      <title>Technical Debt</title>
+      <link>https://atharvashah.netlify.app/posts/tech/technical-debt/</link>
+      <pubDate>Sun, 10 Sep 2023 23:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/technical-debt/</guid>
+      <description>Explore the concept of technical debt in software development and why managing it is essential for sustainable projects.</description>
+    </item>
+    
+    <item>
+      <title>August 2023 Movie Reviews</title>
+      <link>https://atharvashah.netlify.app/posts/personal/movie-review/august-2023/</link>
+      <pubDate>Thu, 24 Aug 2023 00:18:34 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/personal/movie-review/august-2023/</guid>
+      <description>This was an exciting month for movie enthusiasts, with a variety of genres and eras represented in the films released and viewed.</description>
     </item>
     
     <item>

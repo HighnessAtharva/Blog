@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Algorithmic Matrix Multiplication Comparison | Atharva Shah</title>
+<meta name="keywords" content="python">
+<meta name="description" content="Comparing Strassen&#39;s method and naive approach for matrix multiplication, exploring time and memory complexities in Python.">
+<meta name="author" content="">
+<link rel="canonical" href="https://atharvashah.netlify.app/posts/tech/algorithmic-matrix-multiplication-comparison/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.20bcbd30136eb7369c962bcab4266306b61384f3d171e085d6feae3e64376a84.css" integrity="sha256-ILy9MBNutzaclivKtCZjBrYThPPRceCF1v6uPmQ3aoQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://atharvashah.netlify.app/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://atharvashah.netlify.app/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://atharvashah.netlify.app/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://atharvashah.netlify.app/apple-touch-icon.png">
+<link rel="mask-icon" href="https://atharvashah.netlify.app/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = ""; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7YWY1F15R3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7YWY1F15R3');
+</script>
+
+<script async src="https://fundingchoicesmessages.google.com/i/pub-9913536001930134?ers=1" nonce="PtBXb_v6sVZIafilpE5Kzg"></script><script nonce="PtBXb_v6sVZIafilpE5Kzg">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9913536001930134" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7YWY1F15R3"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-7YWY1F15R3', { 'anonymize_ip': false });
+}
+</script>
+<meta property="og:title" content="Algorithmic Matrix Multiplication Comparison" />
+<meta property="og:description" content="Comparing Strassen&#39;s method and naive approach for matrix multiplication, exploring time and memory complexities in Python." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://atharvashah.netlify.app/posts/tech/algorithmic-matrix-multiplication-comparison/" />
+<meta property="og:image" content="https://atharvashah.netlify.app/blog/algo-matmul-cover.webp" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-20T01:20:34+05:30" />
+<meta property="article:modified_time" content="2023-09-20T01:20:34+05:30" /><meta property="og:site_name" content="Atharva Shah" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://atharvashah.netlify.app/blog/algo-matmul-cover.webp" />
+<meta name="twitter:title" content="Algorithmic Matrix Multiplication Comparison"/>
+<meta name="twitter:description" content="Comparing Strassen&#39;s method and naive approach for matrix multiplication, exploring time and memory complexities in Python."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "📚 All Posts",
+      "item": "https://atharvashah.netlify.app/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "💻Tech",
+      "item": "https://atharvashah.netlify.app/posts/tech/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Algorithmic Matrix Multiplication Comparison",
+      "item": "https://atharvashah.netlify.app/posts/tech/algorithmic-matrix-multiplication-comparison/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Algorithmic Matrix Multiplication Comparison",
+  "name": "Algorithmic Matrix Multiplication Comparison",
+  "description": "Comparing Strassen's method and naive approach for matrix multiplication, exploring time and memory complexities in Python.",
+  "keywords": [
+    "python"
+  ],
+  "articleBody": "Introduction This report compares Strassen’s method and the naive approach for matrix multiplication. The main goal is to empirically look into the causes of the naive method’s O(N^3) complexity. The focus is on proving how Strassen’s methods deliver a faster performance and lower time complexity.\nReal-world tests will be conducted with different matrix sizes. This will determine their time complexities. The Python code implementation across different matrix sizes will estimate the constants based on the implementation logic. Comparison between the two approaches’ memory needs determines which algorithm is more memory-efficient.\nThe assessment goes over specific situations where one approach might be better than the other. This is dealt with by taking into account factors such as matrix size, available memory, and computational resources. Performance variations are demonstrated using empirical examples. To predict the time complexity and the factors influencing the constant, the effects of using MapReduce for the naive method’s implementation will be analyzed.\nThe expected outcome is to help in the selection of the most appropriate algorithm for a variety of matrix multiplication tasks. The tradeoff between space and memory optimization will be considered. The conclusion will deliver helpful insights into the advantages and disadvantages of each technique with a thorough analysis.\nGit Gud at Algorithms with my FAANG Interview Guidebook\nCPU Specifications At the time of writing this report, a Hexacore Computer with 6 cores and 12 threads is being used to run the tests. This needs to be taken into account. It reduces execution time for multi-threaded algorithms, but the impact depends on algorithmic implementation, memory access, and scheduling.\nAnalyzing Time Complexity of the Naive Method for Matrix Multiplication To compute each element of the resulting matrix, the naive matrix multiplication method uses three nested loops. The resulting matrix C will be of size n x p for two matrices A of size n x m and B of size m x p. To calculate each component of C, the algorithm performs n * m * p scalar multiplications and additions.\nThe dominant term in the naive method is O(n^3). It shows how many rows there are in matrix A and the resulting matrix C.\nEach element of the resulting matrix C is computed using three nested loops in the naive 3x3 matrix multiplication algorithm. The algorithm calculates the ith row of matrix A and the jth column of matrix B as the dot product for each element C[i][j].\nAll components computation requires 27 (size times size) scalar multiplications and additions.\nThis calculation verifies whether the theoretically predicted time complexity of O(n^3) holds in practice. Any bottlenecks or improvements possible to this matrix multiplication are also pointed out.\nThe constant factor in the non-optimized 3x3 matrix multiplication algorithm would factor in memory access time, loop overhead, and other I/O machine-specific operations. Even if two computers have the same complexity, this overhead time differs.\nThe growth rate of the algorithm as the size of the input increases is unaffected by the constant factor. Concentrate on the dominant term in Big O notation. It represents the algorithm’s growth rate as the input size approaches infinity. A coefficient that scales the time complexity is the constant factor. But, it does not affect how big the time complexity is.\nIt displays the processing time and overhead unique to our system and implementation. The time complexity remains cubic even though different systems and implementations use different constant factors.\nimport numpy as np import time def naive_matrix_multiply(A, B): n, m = A.shape m, p = B.shape C = np.zeros((n, p)) # stores resultant matrix for i in range(n): for j in range(p): for k in range(m): C[i][j] += A[i][k] * B[k][j] return C # Testing empirical runtime for matrix multiplication sizes = [50, 100, 150, 200, 250] runtimes = [] for size in sizes: A = np.random.rand(size, size) B = np.random.rand(size, size) start_time = time.time() C = naive_matrix_multiply(A, B) end_time = time.time() runtime = end_time - start_time runtimes.append(runtime) # Fitting empirical data to O(n) model to estimate the constant factor coefficients = np.polyfit(sizes, runtimes, 1) constant_factor = coefficients[0] print(\"Estimated constant factor:\", constant_factor) Asymptotic Efficiency of Strassen’s Method Matrix multiplication using Strassen’s method is asymptotically quicker than using the traditional O(n^3) method. For large matrix multiplications, it lowers the number of scalar multiplications necessary. Each component of the resulting matrix C requires n scalar multiplications in the naive algorithm. But Strassen’s approach lowers the number of scalar multiplications to O(n^log2(7)), or roughly O(n2.81).\nThis efficient divide-and-conquer approach makes fewer recursive calls to perform matrix multiplication. Matrices are split into smaller submatrices, using only seven recursive multiplications instead of eight in each step. As a result, the complexity time is rouO(n^log2(7)). This is quicker than the simple 3x3 matrix multiplication algorithm, which has an O(n^3) complexity. As it requires fewer arithmetic operations, this should be used for large square matrices. But because of the recursive submatrices, it uses more memory than necessary.\nUsing addition and subtraction to combine the results, Strassen’s approach reduces the problem by iteratively breaking the matrix multiplication down into smaller subproblems. In comparison to scalar multiplications, these operations are less time-intensive. The difference between the two methods’ scalar multiplication rates grows more pronounced as matrix size (n) rises. The effectiveness of Strassen’s method is asymptotically improved as a result.\nBy varying the size of the matrices and observing execution time, perform a runtime analysis to determine the time complexity and constant factor of Strassen’s method. Estimate the constant factor for the specific implementation and computer by fitting the empirical data to the theoretical complexity O(n^log2(7)). The constant factor stands for system- and implementation-specific overhead and processing time. For large matrices, the time complexity is still O(n^log2(7)), which is quicker than the traditional O(n^3) method.\nimport numpy as np import time def strassen_matrix_multiply(Mat_A, Mat_B): Row_1, Col_1 = len(Mat_A), len(Mat_A[0]) Row_2, Col_2 = len(Mat_B), len(Mat_B[0]) # Matrix result to be stored in a matrix of size Row_1 rows and Col_2 columns result = [[0 for _ in range(Col_2)] for _ in range(Row_1)] # Verify if it is a square matrix. Otherwise multiplication is not possible. if Col_1 != Row_2: print(\"Matrix Multiplication not possible\") return None # Perform matrix multiplication using Strassen's method if Row_1 == Col_1 == Row_2 == Col_2 and Row_1 \u0026 (Row_1 - 1) == 0: return strassen_matrix_multiply_helper(Mat_A, Mat_B) # Use the traditional method for matrix multiplication for i in range(Row_1): for j in range(Col_2): for k in range(Row_2): result[i][j] += Mat_A[i][k] * Mat_B[k][j] return result def strassen_matrix_multiply_helper(a, b): # Helper function for Strassen's matrix multiplication (omitted for brevity) pass def constant_estimator(matrix_size): a = np.random.rand(matrix_size, matrix_size) b = np.random.rand(matrix_size, matrix_size) start_time = time.time() C = strassen_matrix_multiply(a, b) end_time = time.time() runtime = end_time - start_time return runtime # Example matrices Mat_A = [[3, 3, 1], [7, 9, 2], [4, 6, 4]] Mat_B = [[6, 1], [9, 2], [10, 3]] # Estimate the constant factor using empirical runtime analysis matrix_sizes = [50, 100, 150, 200, 250] runtimes = [] for size in matrix_sizes: runtime = constant_estimator(size) runtimes.append(runtime) # Fitting empirical data to O(n^log2(7)) model to estimate the constant factor coefficients = np.polyfit(np.log2(matrix_sizes), runtimes, 1) constant_factor = coefficients[0] print(\"Estimated constant factor:\", constant_factor) Memory Requirements Comparison: Naïve Method vs. Strassen’s Method In comparison to Strassen’s approach (3.3573), the naive algorithm’s predicted constant factor is lower (0.0578). This suggests that the naïve algorithm has reduced overhead in both time and memory. It indicates that it may perform better in practice for smaller matrices due to its lower memory needs and fewer arithmetic operations. But Strassen’s method has a superior asymptotic time complexity. The larger constant factor indicates this.\nUsage of Strassen’s method requires more memory compared to the previous method. This is primarily due to the recursive nature and storage of intermediate matrices. An exhaustive list of reasons is as follows:\nRecursive Calls: Strassen’s approach divides the matrices into smaller submatrices. There are recursive calls that need more memory at each level of recursion.\ndef strassen(a, b): if len(a) == 1: # Base case: 1x1 matrix, no further recursion return a[0][0] * b[0][0] # Recursive call Intermediate Matrices: There are seven recursive multiplications in Strassen’s algorithm. The result for each one involves the storage of intermediate matrices. These interim results increase the memory overhead.\ndef strassen(a, b): # ... p1 = strassen(add_m(a11,a22), add_m(b11,b22), q/2) p2 = strassen(add_m(a21,a22), b11, q/2) Matrix Partitioning: For each iteration, the returned matrix is split into smaller submatrices. This means increased memory usage.\ndef strassen(a, b): # ... a11, a12 = a[:m, :m], a[:m, m:] b11, b12 = b[:m, :m], b[:m, m:] Space Complexity Overhead: The space complexity of Strassen’s method is O(n^log2(7)). The complexity of the former sees rapid increase. This leads to higher memory needs.\nStack space a reserved memory area used to store function call information and local variables. It operates in a Last-In-First-Out (LIFO) manner. Here, it is consumed for function calls during recursive calls in Strassen’s method, which further increases memory usage.\ndef strassen(a, b): # ... p1 = strassen(add_m(a11,a22), add_m(b11,b22), q/2) Large Matrices: For larger matrices, Strassen’s method is more memory-efficient than the naive method. But, for smaller matrices, Strassen’s method loses efficiency.\nAs discussed, it is faster but has a higher memory overhead. This makes it memory-efficient for smaller matrices or critical memory constraints.\nTradeoff Between Naïve Method and Strassen’s Method for Matrix Multiplication The naive strategy is usually used when working with tiny matrix sizes or when memory is at a constraint. It is more useful since it works well for smaller matrices and has a reduced constant overhead. Contrarily, Strassen’s approach is more effective for bigger matrices. Particularly where time complexity is a major factor. It is more effective for large square matrices but less effective for otherwise. This is due to chances of memory overflow due to several factors seen in the previous answer. Despite its greater constant factor and memory utilization, Strassen’s technique could offer superior time efficiency for bigger matrices. An educated selection on the best method for matrix multiplication in your particular use case may be made by taking these variables into account and evaluating runtimes.\nsizes = [50, 100, 200, 500] for size in sizes: # Test empirical runtime for matrix multiplication A = np.random.rand(size, size) B = np.random.rand(size, size) # Naive method start_time_naive = time.time() C_naive = naive_matrix_multiply(A, B) end_time_naive = time.time() runtime_naive = end_time_naive - start_time_naive # Strassen's method start_time_strassen = time.time() C_strassen = strassen_matrix_multiply(A, B) end_time_strassen = time.time() runtime_strassen = end_time_strassen - start_time_strassen print(f\"Matrix size: {size}x{size}\") print(f\"Naive method runtime: {runtime_naive} seconds\") print(f\"Strassen's method runtime: {runtime_strassen} seconds\\n\") Matrix size: 50x50\rNaive method runtime: 0.09976315498352051 seconds\rStrassen's method runtime: 0.07229471206665039 seconds\rMatrix size: 100x100\rNaive method runtime: 0.7857158184051514 seconds\rStrassen's method runtime: 0.5759141445159912 seconds\rMatrix size: 200x200\rNaive method runtime: 6.21253776550293 seconds\rStrassen's method runtime: 4.710278511047363 seconds\rMatrix size: 500x500\rNaive method runtime: 96.04322266578674 seconds\rStrassen's method runtime: 69.35138845443726 seconds Plotting Runtime Comparison import matplotlib.pyplot as plt matrix_sizes = [50, 100, 200, 500] naive_runtimes = [0.0985569953918457, 0.7604336738586426, 6.080593585968018, 95.97012424468994] strassen_runtimes = [0.07361817359924316, 0.5590286254882812, 4.453122854232788, 70.3049566745758] plt.plot(matrix_sizes, naive_runtimes, marker='o', label='Naive Method') plt.plot(matrix_sizes, strassen_runtimes, marker='o', label=\"Strassen's Method\") plt.xlabel('Matrix Size') plt.ylabel('Runtime (seconds)') plt.title('Naive Method vs. Strassen\\'s Method for Matrix Multiplication') plt.legend() plt.grid() plt.show() Naive Matrix Multiplication Implementation Using MapReduce import findspark findspark.init() from pyspark import SparkContext, SparkConf import os def matrix_multiply_mapper(matrix_tuple): # Unpack the matrix tuple matrix_name, row_num, col_num, value = matrix_tuple if matrix_name == 'A': for k in range(matrix_size): # Emit a key-value pair with the key as (row_num, k) and the value as (matrix_name, col_num, value) yield ((row_num, k), (matrix_name, col_num, value)) else: for i in range(matrix_size): yield ((i, col_num), (matrix_name, row_num, value)) def matrix_multiply_reducer(key_value_pair): result = 0 # Convert the iterator to a list of tuples matrix_list = list(key_value_pair[1]) for i in range(matrix_size): # Get the value from matrix 'A' at column i a_value = next((t[2] for t in matrix_list if t[0] == 'A' and t[1] == i), 0) # Get the value from matrix 'B' at row i b_value = next((t[2] for t in matrix_list if t[0] == 'B' and t[1] == i), 0) # Compute the product of corresponding elements and add it to the result result += a_value * b_value return key_value_pair[0], result def matrix_multiply(matrix_A, matrix_B, sc): # Create RDDs for matrix 'A' and matrix 'B' using SparkContext 'sc' matrix_A_rdd = sc.parallelize(matrix_A, matrix_size) matrix_B_rdd = sc.parallelize(matrix_B, matrix_size) # Map the elements of matrix 'A' and matrix 'B' to key-value pairs using the mapper function mapped_matrix_A = matrix_A_rdd.flatMap(matrix_multiply_mapper) mapped_matrix_B = matrix_B_rdd.flatMap(matrix_multiply_mapper) # Combine mapped matrices using union operation combined_matrices = mapped_matrix_A.union(mapped_matrix_B) # Group combined matrices by their keys using groupByKey operation grouped_matrices = combined_matrices.groupByKey() # Reduce the grouped matrices using the reducer function to compute the final result result_rdd = grouped_matrices.map(matrix_multiply_reducer) # Collect the results from RDD and return the final matrix multiplication result result = result_rdd.collect() return result if **name** == \"**main**\": # Test matrices matrix_size = 3 matrix_A = [('A', 0, 0, 1), ('A', 0, 1, 2), ('A', 0, 2, 3), ('A', 1, 0, 4), ('A', 1, 1, 5), ('A', 1, 2, 6), ('A', 1, 1, 7), ('A', 8, 2, 2), ('A', 0, 1, 1)] matrix_B = [('B', 0, 0, 6), ('B', 0, 1, 1), ('B', 1, 0, 9), ('B', 1, 1, 2), ('B', 2, 0, 10), ('B', 2, 1, 3)] # Initialize SparkContext conf = SparkConf().setAppName(\"MatrixMultiplication\") sc = SparkContext(conf=conf) result_naive = matrix_multiply(matrix_A, matrix_B, sc) print(\"Naive Method Result:\") for row in result_naive: print(row) # Stop SparkContext sc.stop() Naive Method Result:\r((0, 2), 0)\r((8, 0), 0)\r((2, 0), 0)\r((0, 0), 54)\r((1, 0), 129)\r((1, 2), 0)\r((8, 1), 0)\r((1, 1), 32)\r((8, 2), 0)\r((0, 1), 14)\r((2, 1), 0) The time complexity of the algorithm remains unchanged. Whether matrix multiplication is performed by the naive method or the MapReduce method, the time complexity is still O(n^3).\nMapReduce breaks down large data into smaller tasks. These tasks are distributed across cluster nodes. This allows for massively parallel processing of large data.\nThe following factors influence the constant factor:\nHardware and System Configuration. Particularly the cluster where the MapReduce algorithm is being used. Variables like the number of nodes, memory, CPU cores, and network bandwidth are a factor\nData Distribution. Performance depends on how data is distributed and processed among nodes in the MapReduce cluster. More overhead and longer execution times can result from an unbalanced data distribution or excessive data movement between nodes.\nData Size. The MapReduce algorithm’s performance varies based on the size of the input matrices. Bigger matrices could take longer and need more processing power to process.\nImplementation Logic. The complexity and effectiveness of the map and reduce functions affect the runtime. Different implementation logic affects speed. Enhancing these processes can improve performance.\nCommunication Overhead. Node-to-node communication should be the least. Higher efficiency is possible by reducing data transfers and improving communication patterns.\nMapReduce can be useful for processing huge datasets and utilizing distributed computing resources. But it does not alter the matrix multiplication algorithm’s inherent time complexity. The time complexity remains O(n^3).\nConclusion According to the analysis, Strassen’s approach performs quicker and has a time complexity of O(N^log2(7)). Whereas the naive method has a time complexity of O(N^3) for matrix multiplication. The Python code implementation made it possible to identify the constants connected to each method.\nThe naive technique outperforms Strassen’s method of memory use. This makes it the better choice for smaller matrices. Contrarily, Strassen’s technique is superior for bigger matrices. This is due to its more effective computing strategy - reducing matrix calculations.\nThe naive technique’s time complexity stayed at O even after implementing it with MapReduce O(N^3). Yet it gave us the chance to use dispersed computer power for more complex calculations.\nConstants for both approaches depend on several variables. These include hardware requirements, data distribution, and algorithm layout among others. The effectiveness of each strategy should be optimized in light of these criteria.\nThe matrix sizes and computational resources are deciding factors to decide the most optimal matrix multiplication strategy. The key takeaway is that for smaller matrices go with the naive method. For bigger matrices (size \u003e 200) Strassen’s method is preferable.\nUsing the findings will help decision-makers select the best matrix multiplication technique. Note that these finds are only applied to square matrices.\n",
+  "wordCount" : "2694",
+  "inLanguage": "en",
+  "image":"https://atharvashah.netlify.app/blog/algo-matmul-cover.webp","datePublished": "2023-09-20T01:20:34+05:30",
+  "dateModified": "2023-09-20T01:20:34+05:30",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://atharvashah.netlify.app/posts/tech/algorithmic-matrix-multiplication-comparison/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Atharva Shah",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://atharvashah.netlify.app/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+
+<header class="header">
+    
+    <div id="scroll-progress"></div> 
+    
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://atharvashah.netlify.app/" accesskey="h" title="Atharva Shah (Alt + H)">
+            <img src="https://atharvashah.netlify.app/profile/header_button.webp" alt="logo" aria-label="logo"
+                 height="30">Atharva Shah</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://atharvashah.netlify.app/posts/tech/" title="💻Tech">
+                <span>💻Tech</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/posts/personal/" title="🍿Personal">
+                <span>🍿Personal</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/about/" title="👨🏻About">
+                <span>👨🏻About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/tags/" title="🏷️Tags">
+                <span>🏷️Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/archives/" title="📜Archive">
+                <span>📜Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://atharvashah.netlify.app/search/" title="🔍Search (Alt &#43; /)" accesskey=/>
+                <span>🔍Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+</header>
+    <main class="main">
+
+<article class="post-single">
+    <header class="post-header">
+    <div class="breadcrumbs"><a href="https://atharvashah.netlify.app/">Home</a>&nbsp;»&nbsp;<a href="https://atharvashah.netlify.app/posts/">📚 All Posts</a>&nbsp;»&nbsp;<a href="https://atharvashah.netlify.app/posts/tech/">💻Tech</a></div>
+    <h1 class="post-title">
+      Algorithmic Matrix Multiplication Comparison
+    </h1>
+    <div class="post-description">
+      Comparing Strassen&#39;s method and naive approach for matrix multiplication, exploring time and memory complexities in Python.
+    </div>
+    <div class="post-meta">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>September 20, 2023
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>2694 words
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>13 mins
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://atharvashah.netlify.app/tags/python/" style="color: var(--secondary)!important;">python</a>
+            </span>
+        </span>
+    </span>
+</span>
+
+</div>
+  </header> 
+<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/algo-matmul-cover.webp" alt="Algorithmic Matrix Multiplication Comparison">
+        <p>Matrix Multiplication: Strassen vs. Naive Method</p>
+</figure><aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#introduction" aria-label="Introduction">Introduction</a></li>
+                <li>
+                    <a href="#cpu-specifications" aria-label="CPU Specifications">CPU Specifications</a></li>
+                <li>
+                    <a href="#analyzing-time-complexity-of-the-naive-method-for-matrix-multiplication" aria-label="Analyzing Time Complexity of the Naive Method for Matrix Multiplication">Analyzing Time Complexity of the Naive Method for Matrix Multiplication</a></li>
+                <li>
+                    <a href="#asymptotic-efficiency-of-strassens-method" aria-label="Asymptotic Efficiency of Strassen&amp;rsquo;s Method">Asymptotic Efficiency of Strassen&rsquo;s Method</a></li>
+                <li>
+                    <a href="#memory-requirements-comparison-na%c3%afve-method-vs-strassens-method" aria-label="Memory Requirements Comparison: Naïve Method vs. Strassen&amp;rsquo;s Method">Memory Requirements Comparison: Naïve Method vs. Strassen&rsquo;s Method</a></li>
+                <li>
+                    <a href="#tradeoff-between-na%c3%afve-method-and-strassens-method-for-matrix-multiplication" aria-label="Tradeoff Between Naïve Method and Strassen’s Method for Matrix Multiplication">Tradeoff Between Naïve Method and Strassen’s Method for Matrix Multiplication</a><ul>
+                        
+                <li>
+                    <a href="#plotting-runtime-comparison" aria-label="Plotting Runtime Comparison">Plotting Runtime Comparison</a></li></ul>
+                </li>
+                <li>
+                    <a href="#naive-matrix-multiplication-implementation-using-mapreduce" aria-label="Naive Matrix Multiplication Implementation Using MapReduce">Naive Matrix Multiplication Implementation Using MapReduce</a></li>
+                <li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        
+        activeElement = elements[0];
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+    }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        if (elements) {
+            activeElement = Array.from(elements).find((element) => {
+                if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                    (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                    return element;
+                }
+            }) || activeElement
+
+            elements.forEach(element => {
+                const id = encodeURI(element.getAttribute('id')).toLowerCase();
+                if (element === activeElement){
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+                } else {
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+                }
+            })
+        }
+    }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
+  <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
+<p>This report compares Strassen&rsquo;s method and the naive approach for matrix multiplication. The main goal is to empirically look into the causes of the naive method&rsquo;s O(N^3) complexity. The focus is on proving how Strassen&rsquo;s methods deliver a faster performance and lower time complexity.</p>
+<p>Real-world tests will be conducted with different matrix sizes. This will determine their time complexities. The Python code implementation across different matrix sizes will estimate the constants based on the implementation logic. Comparison between the two approaches&rsquo; memory needs determines which algorithm is more memory-efficient.</p>
+<p>The assessment goes over specific situations where one approach might be better than the other. This is dealt with by taking into account factors such as matrix size, available memory, and computational resources. Performance variations are demonstrated using empirical examples. To predict the time complexity and the factors influencing the constant, the effects of using MapReduce for the naive method&rsquo;s implementation will be analyzed.</p>
+<p>The expected outcome is to help in the selection of the most appropriate algorithm for a variety of matrix multiplication tasks. The tradeoff between space and memory optimization will be considered. The conclusion will deliver helpful insights into the advantages and disadvantages of each technique with a thorough analysis.</p>
+<style>
+    .fancy-link {
+         
+        color: #ff6600;
+        text-decoration: none !important;
+        font-weight: bolder;
+    }
+
+    .fancy-link:hover {
+        color: black;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.3s ease;
+        font-weight: bolder;
+    }
+
+    .fancy-text{
+        font-style: italic;
+        font-weight: bolder;
+        margin-top:50px;
+        margin-bottom: 50px !important;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid rgb(141, 141, 141);
+        border-bottom: 1px solid rgb(141, 141, 141);
+    }
+</style>
+
+<p class="fancy-text">Git Gud at Algorithms with my <a class="fancy-link" href="/posts/tech/gumroad-dsa-announcement/">FAANG Interview Guidebook</a></p>
+
+<h2 id="cpu-specifications">CPU Specifications<a hidden class="anchor" aria-hidden="true" href="#cpu-specifications">#</a></h2>
+<p>At the time of writing this report, a Hexacore Computer with 6 cores and 12 threads is being used to run the tests. This needs to be taken into account. It reduces execution time for multi-threaded algorithms, but the impact depends on algorithmic implementation, memory access, and scheduling.</p>
+<p>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/cpu-config.png"
+      alt="adsd"
+      loading="lazy"
+      >
+  
+  
+</figure></p>
+<h2 id="analyzing-time-complexity-of-the-naive-method-for-matrix-multiplication">Analyzing Time Complexity of the Naive Method for Matrix Multiplication<a hidden class="anchor" aria-hidden="true" href="#analyzing-time-complexity-of-the-naive-method-for-matrix-multiplication">#</a></h2>
+<p>To compute each element of the resulting matrix, the naive matrix multiplication method uses three nested loops. The resulting matrix <code>C</code> will be of size <code>n</code> x <code>p</code> for two matrices <code>A</code> of size <code>n</code> x <code>m</code> and <code>B</code> of size <code>m</code> x <code>p</code>. To calculate each component of <code>C</code>, the algorithm performs <code>n * m * p</code> scalar multiplications and additions.</p>
+<p>The dominant term in the naive method is <code>O(n^3)</code>. It shows how many rows there are in matrix A and the resulting matrix <code>C</code>.</p>
+<p>Each element of the resulting matrix <code>C</code> is computed using three nested loops in the naive 3x3 matrix multiplication algorithm. The algorithm calculates the ith row of matrix <code>A</code> and the jth column of matrix <code>B</code> as the dot product for each element <code>C[i][j]</code>.</p>
+<p>All components computation requires 27 (size times size) scalar multiplications and additions.</p>
+<p>This calculation verifies whether the theoretically predicted time complexity of O(n^3) holds in practice. Any bottlenecks or improvements possible to this matrix multiplication are also pointed out.</p>
+<p>The constant factor in the non-optimized 3x3 matrix multiplication algorithm would factor in memory access time, loop overhead, and other I/O machine-specific operations. Even if two computers have the same complexity, this overhead time differs.</p>
+<p>The growth rate of the algorithm as the size of the input increases is unaffected by the constant factor. Concentrate on the dominant term in Big O notation. It represents the algorithm&rsquo;s growth rate as the input size approaches infinity. A coefficient that scales the time complexity is the constant factor. But, it does not affect how big the time complexity is.</p>
+<p>It displays the processing time and overhead unique to our system and implementation. The time complexity remains cubic even though different systems and implementations use different constant factors.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">naive_matrix_multiply</span>(A, B):
+</span></span><span style="display:flex;"><span>    n, m <span style="color:#f92672">=</span> A<span style="color:#f92672">.</span>shape
+</span></span><span style="display:flex;"><span>    m, p <span style="color:#f92672">=</span> B<span style="color:#f92672">.</span>shape
+</span></span><span style="display:flex;"><span>    C <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>zeros((n, p)) <span style="color:#75715e"># stores resultant matrix</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(p):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(m):
+</span></span><span style="display:flex;"><span>                C[i][j] <span style="color:#f92672">+=</span> A[i][k] <span style="color:#f92672">*</span> B[k][j]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> C
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Testing empirical runtime for matrix multiplication</span>
+</span></span><span style="display:flex;"><span>sizes <span style="color:#f92672">=</span> [<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">250</span>]
+</span></span><span style="display:flex;"><span>runtimes <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> size <span style="color:#f92672">in</span> sizes:
+</span></span><span style="display:flex;"><span>    A <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(size, size)
+</span></span><span style="display:flex;"><span>    B <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(size, size)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    start_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>    C <span style="color:#f92672">=</span> naive_matrix_multiply(A, B)
+</span></span><span style="display:flex;"><span>    end_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    runtime <span style="color:#f92672">=</span> end_time <span style="color:#f92672">-</span> start_time
+</span></span><span style="display:flex;"><span>    runtimes<span style="color:#f92672">.</span>append(runtime)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Fitting empirical data to O(n) model to estimate the constant factor</span>
+</span></span><span style="display:flex;"><span>coefficients <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>polyfit(sizes, runtimes, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>constant_factor <span style="color:#f92672">=</span> coefficients[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Estimated constant factor:&#34;</span>, constant_factor)
+</span></span></code></pre></div><h2 id="asymptotic-efficiency-of-strassens-method">Asymptotic Efficiency of Strassen&rsquo;s Method<a hidden class="anchor" aria-hidden="true" href="#asymptotic-efficiency-of-strassens-method">#</a></h2>
+<p>Matrix multiplication using Strassen&rsquo;s method is asymptotically quicker than using the traditional <code>O(n^3)</code> method. For large matrix multiplications, it lowers the number of scalar multiplications necessary. Each component of the resulting matrix C requires n scalar multiplications in the naive algorithm. But Strassen&rsquo;s approach lowers the number of scalar multiplications to <code>O(n^log2(7))</code>, or roughly <code>O(n2.81)</code>.</p>
+<p>This efficient divide-and-conquer approach makes fewer recursive calls to perform matrix multiplication. Matrices are split into smaller submatrices, using only seven recursive multiplications instead of eight in each step. As a result, the complexity time is rouO(n^log2(7)). This is quicker than the simple <code>3x3</code> matrix multiplication algorithm, which has an <code>O(n^3)</code> complexity. As it requires fewer arithmetic operations, this should be used for large square matrices. But because of the recursive submatrices, it uses more memory than necessary.</p>
+<p>Using addition and subtraction to combine the results, Strassen&rsquo;s approach reduces the problem by iteratively breaking the matrix multiplication down into smaller subproblems. In comparison to scalar multiplications, these operations are less time-intensive. The difference between the two methods&rsquo; scalar multiplication rates grows more pronounced as matrix size (n) rises. The effectiveness of Strassen&rsquo;s method is asymptotically improved as a result.</p>
+<p>By varying the size of the matrices and observing execution time, perform a runtime analysis to determine the time complexity and constant factor of Strassen&rsquo;s method. Estimate the constant factor for the specific implementation and computer by fitting the empirical data to the theoretical complexity <code>O(n^log2(7))</code>. The constant factor stands for system- and implementation-specific overhead and processing time. For large matrices, the time complexity is still <code>O(n^log2(7))</code>, which is quicker than the traditional <code>O(n^3)</code> method.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">strassen_matrix_multiply</span>(Mat_A, Mat_B):
+</span></span><span style="display:flex;"><span>    Row_1, Col_1 <span style="color:#f92672">=</span> len(Mat_A), len(Mat_A[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>    Row_2, Col_2 <span style="color:#f92672">=</span> len(Mat_B), len(Mat_B[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Matrix result to be stored in a matrix of size Row_1 rows and Col_2 columns</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(Col_2)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(Row_1)]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Verify if it is a square matrix. Otherwise multiplication is not possible.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> Col_1 <span style="color:#f92672">!=</span> Row_2:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Matrix Multiplication not possible&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Perform matrix multiplication using Strassen&#39;s method</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> Row_1 <span style="color:#f92672">==</span> Col_1 <span style="color:#f92672">==</span> Row_2 <span style="color:#f92672">==</span> Col_2 <span style="color:#f92672">and</span> Row_1 <span style="color:#f92672">&amp;</span> (Row_1 <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> strassen_matrix_multiply_helper(Mat_A, Mat_B)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Use the traditional method for matrix multiplication</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(Row_1):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(Col_2):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(Row_2):
+</span></span><span style="display:flex;"><span>                result[i][j] <span style="color:#f92672">+=</span> Mat_A[i][k] <span style="color:#f92672">*</span> Mat_B[k][j]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">strassen_matrix_multiply_helper</span>(a, b):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Helper function for Strassen&#39;s matrix multiplication (omitted for brevity)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">constant_estimator</span>(matrix_size):
+</span></span><span style="display:flex;"><span>    a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(matrix_size, matrix_size)
+</span></span><span style="display:flex;"><span>    b <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(matrix_size, matrix_size)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    start_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>    C <span style="color:#f92672">=</span> strassen_matrix_multiply(a, b)
+</span></span><span style="display:flex;"><span>    end_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    runtime <span style="color:#f92672">=</span> end_time <span style="color:#f92672">-</span> start_time
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> runtime
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Example matrices</span>
+</span></span><span style="display:flex;"><span>Mat_A <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">2</span>], [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">4</span>]]
+</span></span><span style="display:flex;"><span>Mat_B <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">2</span>], [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">3</span>]]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Estimate the constant factor using empirical runtime analysis</span>
+</span></span><span style="display:flex;"><span>matrix_sizes <span style="color:#f92672">=</span> [<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">250</span>]
+</span></span><span style="display:flex;"><span>runtimes <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> size <span style="color:#f92672">in</span> matrix_sizes:
+</span></span><span style="display:flex;"><span>    runtime <span style="color:#f92672">=</span> constant_estimator(size)
+</span></span><span style="display:flex;"><span>    runtimes<span style="color:#f92672">.</span>append(runtime)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Fitting empirical data to O(n^log2(7)) model to estimate the constant factor</span>
+</span></span><span style="display:flex;"><span>coefficients <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>polyfit(np<span style="color:#f92672">.</span>log2(matrix_sizes), runtimes, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>constant_factor <span style="color:#f92672">=</span> coefficients[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Estimated constant factor:&#34;</span>, constant_factor)
+</span></span></code></pre></div><h2 id="memory-requirements-comparison-naïve-method-vs-strassens-method">Memory Requirements Comparison: Naïve Method vs. Strassen&rsquo;s Method<a hidden class="anchor" aria-hidden="true" href="#memory-requirements-comparison-naïve-method-vs-strassens-method">#</a></h2>
+<p>In comparison to Strassen&rsquo;s approach (3.3573), the naive algorithm&rsquo;s predicted constant factor is lower (0.0578). This suggests that the naïve algorithm has reduced overhead in both time and memory. It indicates that it may perform better in practice for smaller matrices due to its lower memory needs and fewer arithmetic operations. But Strassen&rsquo;s method has a superior asymptotic time complexity. The larger constant factor indicates this.</p>
+<p>Usage of Strassen&rsquo;s method requires more memory compared to the previous method. This is primarily due to the recursive nature and storage of intermediate matrices. An exhaustive list of reasons is as follows:</p>
+<ul>
+<li>
+<p><strong>Recursive Calls</strong>: Strassen&rsquo;s approach divides the matrices into smaller submatrices. There are recursive calls that need more memory at each level of recursion.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">strassen</span>(a, b):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(a) <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Base case: 1x1 matrix, no further recursion</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> a[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> b[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Recursive call </span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Intermediate Matrices</strong>: There are seven recursive multiplications in Strassen&rsquo;s algorithm. The result for each one involves the storage of intermediate matrices. These interim results increase the memory overhead.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">strassen</span>(a, b):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ...</span>
+</span></span><span style="display:flex;"><span>    p1 <span style="color:#f92672">=</span> strassen(add_m(a11,a22), add_m(b11,b22), q<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>    p2 <span style="color:#f92672">=</span> strassen(add_m(a21,a22), b11, q<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Matrix Partitioning</strong>: For each iteration, the returned matrix is split into smaller submatrices. This means increased memory usage.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">strassen</span>(a, b):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ...</span>
+</span></span><span style="display:flex;"><span>    a11, a12 <span style="color:#f92672">=</span> a[:m, :m], a[:m, m:]
+</span></span><span style="display:flex;"><span>    b11, b12 <span style="color:#f92672">=</span> b[:m, :m], b[:m, m:]
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Space Complexity Overhead</strong>: The space complexity of Strassen&rsquo;s method is O(n^log2(7)). The complexity of the former sees rapid increase. This leads to higher memory needs.</p>
+</li>
+<li>
+<p><strong>Stack space</strong> a reserved memory area used to store function call information and local variables. It operates in a Last-In-First-Out (LIFO) manner. Here, it is consumed for function calls during recursive calls in Strassen&rsquo;s method, which further increases memory usage.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">strassen</span>(a, b):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ...</span>
+</span></span><span style="display:flex;"><span>    p1 <span style="color:#f92672">=</span> strassen(add_m(a11,a22), add_m(b11,b22), q<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Large Matrices</strong>: For larger matrices, Strassen&rsquo;s method is more memory-efficient than the naive method. But, for smaller matrices, Strassen&rsquo;s method loses efficiency.</p>
+</li>
+</ul>
+<p>As discussed, it is faster but has a higher memory overhead. This makes it memory-efficient for smaller matrices or critical memory constraints.</p>
+<h2 id="tradeoff-between-naïve-method-and-strassens-method-for-matrix-multiplication">Tradeoff Between Naïve Method and Strassen’s Method for Matrix Multiplication<a hidden class="anchor" aria-hidden="true" href="#tradeoff-between-naïve-method-and-strassens-method-for-matrix-multiplication">#</a></h2>
+<p>The naive strategy is usually used when working with tiny matrix sizes or when memory is at a constraint. It is more useful since it works well for smaller matrices and has a reduced constant overhead. Contrarily, Strassen&rsquo;s approach is more effective for bigger matrices. Particularly where time complexity is a major factor. It is more effective for large square matrices but less effective for otherwise. This is due to chances of memory overflow due to several factors seen in the previous answer. Despite its greater constant factor and memory utilization, Strassen&rsquo;s technique could offer superior time efficiency for bigger matrices. An educated selection on the best method for matrix multiplication in your particular use case may be made by taking these variables into account and evaluating runtimes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>sizes <span style="color:#f92672">=</span> [<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">500</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> size <span style="color:#f92672">in</span> sizes:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Test empirical runtime for matrix multiplication</span>
+</span></span><span style="display:flex;"><span>    A <span style="color:#f92672">=</span>  np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(size, size)
+</span></span><span style="display:flex;"><span>    B <span style="color:#f92672">=</span>  np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>rand(size, size)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Naive method</span>
+</span></span><span style="display:flex;"><span>    start_time_naive <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>    C_naive <span style="color:#f92672">=</span> naive_matrix_multiply(A, B)
+</span></span><span style="display:flex;"><span>    end_time_naive <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>    runtime_naive <span style="color:#f92672">=</span> end_time_naive <span style="color:#f92672">-</span> start_time_naive
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Strassen&#39;s method</span>
+</span></span><span style="display:flex;"><span>    start_time_strassen <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>    C_strassen <span style="color:#f92672">=</span> strassen_matrix_multiply(A, B)
+</span></span><span style="display:flex;"><span>    end_time_strassen <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>    runtime_strassen <span style="color:#f92672">=</span> end_time_strassen <span style="color:#f92672">-</span> start_time_strassen
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Matrix size: </span><span style="color:#e6db74">{</span>size<span style="color:#e6db74">}</span><span style="color:#e6db74">x</span><span style="color:#e6db74">{</span>size<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Naive method runtime: </span><span style="color:#e6db74">{</span>runtime_naive<span style="color:#e6db74">}</span><span style="color:#e6db74"> seconds&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Strassen&#39;s method runtime: </span><span style="color:#e6db74">{</span>runtime_strassen<span style="color:#e6db74">}</span><span style="color:#e6db74"> seconds</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><pre tabindex="0"><code>Matrix size: 50x50
+Naive method runtime: 0.09976315498352051 seconds
+Strassen&#39;s method runtime: 0.07229471206665039 seconds
+
+Matrix size: 100x100
+Naive method runtime: 0.7857158184051514 seconds
+Strassen&#39;s method runtime: 0.5759141445159912 seconds
+
+Matrix size: 200x200
+Naive method runtime: 6.21253776550293 seconds
+Strassen&#39;s method runtime: 4.710278511047363 seconds
+
+Matrix size: 500x500
+Naive method runtime: 96.04322266578674 seconds
+Strassen&#39;s method runtime: 69.35138845443726 seconds
+</code></pre><h3 id="plotting-runtime-comparison">Plotting Runtime Comparison<a hidden class="anchor" aria-hidden="true" href="#plotting-runtime-comparison">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>matrix_sizes <span style="color:#f92672">=</span> [<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">500</span>]
+</span></span><span style="display:flex;"><span>naive_runtimes <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0.0985569953918457</span>, <span style="color:#ae81ff">0.7604336738586426</span>, <span style="color:#ae81ff">6.080593585968018</span>, <span style="color:#ae81ff">95.97012424468994</span>]
+</span></span><span style="display:flex;"><span>strassen_runtimes <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0.07361817359924316</span>, <span style="color:#ae81ff">0.5590286254882812</span>, <span style="color:#ae81ff">4.453122854232788</span>, <span style="color:#ae81ff">70.3049566745758</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>plot(matrix_sizes, naive_runtimes, marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;o&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Naive Method&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>plot(matrix_sizes, strassen_runtimes, marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;o&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Strassen&#39;s Method&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;Matrix Size&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Runtime (seconds)&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;Naive Method vs. Strassen</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">s Method for Matrix Multiplication&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>legend()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>grid()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+<figure>
+  
+    <img
+      sizes="100vw"
+      src="/blog/plot.png"
+      alt="plot"
+      loading="lazy"
+      >
+  
+  
+</figure></p>
+<h2 id="naive-matrix-multiplication-implementation-using-mapreduce">Naive Matrix Multiplication Implementation Using MapReduce<a hidden class="anchor" aria-hidden="true" href="#naive-matrix-multiplication-implementation-using-mapreduce">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> findspark
+</span></span><span style="display:flex;"><span>findspark<span style="color:#f92672">.</span>init()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pyspark <span style="color:#f92672">import</span> SparkContext, SparkConf
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">matrix_multiply_mapper</span>(matrix_tuple):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Unpack the matrix tuple</span>
+</span></span><span style="display:flex;"><span>    matrix_name, row_num, col_num, value <span style="color:#f92672">=</span> matrix_tuple
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> matrix_name <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;A&#39;</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(matrix_size):
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Emit a key-value pair with the key as (row_num, k) and the value as (matrix_name, col_num, value)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">yield</span> ((row_num, k), (matrix_name, col_num, value))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(matrix_size):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">yield</span> ((i, col_num), (matrix_name, row_num, value))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">matrix_multiply_reducer</span>(key_value_pair):
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Convert the iterator to a list of tuples</span>
+</span></span><span style="display:flex;"><span>    matrix_list <span style="color:#f92672">=</span> list(key_value_pair[<span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(matrix_size):
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Get the value from matrix &#39;A&#39; at column i</span>
+</span></span><span style="display:flex;"><span>        a_value <span style="color:#f92672">=</span> next((t[<span style="color:#ae81ff">2</span>] <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> matrix_list <span style="color:#66d9ef">if</span> t[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;A&#39;</span> <span style="color:#f92672">and</span> t[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> i), <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Get the value from matrix &#39;B&#39; at row i</span>
+</span></span><span style="display:flex;"><span>        b_value <span style="color:#f92672">=</span> next((t[<span style="color:#ae81ff">2</span>] <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> matrix_list <span style="color:#66d9ef">if</span> t[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;B&#39;</span> <span style="color:#f92672">and</span> t[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> i), <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Compute the product of corresponding elements and add it to the result</span>
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">+=</span> a_value <span style="color:#f92672">*</span> b_value
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> key_value_pair[<span style="color:#ae81ff">0</span>], result
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">matrix_multiply</span>(matrix_A, matrix_B, sc):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Create RDDs for matrix &#39;A&#39; and matrix &#39;B&#39; using SparkContext &#39;sc&#39;</span>
+</span></span><span style="display:flex;"><span>    matrix_A_rdd <span style="color:#f92672">=</span> sc<span style="color:#f92672">.</span>parallelize(matrix_A, matrix_size)
+</span></span><span style="display:flex;"><span>    matrix_B_rdd <span style="color:#f92672">=</span> sc<span style="color:#f92672">.</span>parallelize(matrix_B, matrix_size)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Map the elements of matrix &#39;A&#39; and matrix &#39;B&#39; to key-value pairs using the mapper function</span>
+</span></span><span style="display:flex;"><span>    mapped_matrix_A <span style="color:#f92672">=</span> matrix_A_rdd<span style="color:#f92672">.</span>flatMap(matrix_multiply_mapper)
+</span></span><span style="display:flex;"><span>    mapped_matrix_B <span style="color:#f92672">=</span> matrix_B_rdd<span style="color:#f92672">.</span>flatMap(matrix_multiply_mapper)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Combine mapped matrices using union operation</span>
+</span></span><span style="display:flex;"><span>    combined_matrices <span style="color:#f92672">=</span> mapped_matrix_A<span style="color:#f92672">.</span>union(mapped_matrix_B)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Group combined matrices by their keys using groupByKey operation</span>
+</span></span><span style="display:flex;"><span>    grouped_matrices <span style="color:#f92672">=</span> combined_matrices<span style="color:#f92672">.</span>groupByKey()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Reduce the grouped matrices using the reducer function to compute the final result</span>
+</span></span><span style="display:flex;"><span>    result_rdd <span style="color:#f92672">=</span> grouped_matrices<span style="color:#f92672">.</span>map(matrix_multiply_reducer)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Collect the results from RDD and return the final matrix multiplication result</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> result_rdd<span style="color:#f92672">.</span>collect()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">**</span>name<span style="color:#f92672">**</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;**main**&#34;</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Test matrices</span>
+</span></span><span style="display:flex;"><span>    matrix_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>    matrix_A <span style="color:#f92672">=</span> [(<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>), (<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>),
+</span></span><span style="display:flex;"><span>                (<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">4</span>), (<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>), (<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">6</span>),
+</span></span><span style="display:flex;"><span>                (<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">7</span>), (<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>), (<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>)]
+</span></span><span style="display:flex;"><span>    matrix_B <span style="color:#f92672">=</span> [(<span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">6</span>), (<span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>),
+</span></span><span style="display:flex;"><span>                (<span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">9</span>), (<span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>),
+</span></span><span style="display:flex;"><span>                (<span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">10</span>), (<span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Initialize SparkContext</span>
+</span></span><span style="display:flex;"><span>    conf <span style="color:#f92672">=</span> SparkConf()<span style="color:#f92672">.</span>setAppName(<span style="color:#e6db74">&#34;MatrixMultiplication&#34;</span>)
+</span></span><span style="display:flex;"><span>    sc <span style="color:#f92672">=</span> SparkContext(conf<span style="color:#f92672">=</span>conf)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    result_naive <span style="color:#f92672">=</span> matrix_multiply(matrix_A, matrix_B, sc)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Naive Method Result:&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> result_naive:
+</span></span><span style="display:flex;"><span>        print(row)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Stop SparkContext</span>
+</span></span><span style="display:flex;"><span>    sc<span style="color:#f92672">.</span>stop()
+</span></span></code></pre></div><pre tabindex="0"><code>Naive Method Result:
+((0, 2), 0)
+((8, 0), 0)
+((2, 0), 0)
+((0, 0), 54)
+((1, 0), 129)
+((1, 2), 0)
+((8, 1), 0)
+((1, 1), 32)
+((8, 2), 0)
+((0, 1), 14)
+((2, 1), 0)
+</code></pre><p>The time complexity of the algorithm remains unchanged. Whether matrix multiplication is performed by the naive method or the MapReduce method, the time complexity is still O(n^3).</p>
+<p>MapReduce breaks down large data into smaller tasks. These tasks are distributed across cluster nodes. This allows for massively parallel processing of large data.</p>
+<p>The following factors influence the constant factor:</p>
+<ol>
+<li>
+<p><strong>Hardware and System Configuration</strong>. Particularly the cluster where the MapReduce algorithm is being used. Variables like the number of nodes, memory, CPU cores, and network bandwidth are a factor</p>
+</li>
+<li>
+<p><strong>Data Distribution</strong>. Performance depends on how data is distributed and processed among nodes in the MapReduce cluster. More overhead and longer execution times can result from an unbalanced data distribution or excessive data movement between nodes.</p>
+</li>
+<li>
+<p><strong>Data Size</strong>. The MapReduce algorithm&rsquo;s performance varies based on the size of the input matrices. Bigger matrices could take longer and need more processing power to process.</p>
+</li>
+<li>
+<p><strong>Implementation Logic</strong>. The complexity and effectiveness of the map and reduce functions affect the runtime. Different implementation logic affects speed. Enhancing these processes can improve performance.</p>
+</li>
+<li>
+<p><strong>Communication Overhead</strong>. Node-to-node communication should be the least. Higher efficiency is possible by reducing data transfers and improving communication patterns.</p>
+</li>
+</ol>
+<p>MapReduce can be useful for processing huge datasets and utilizing distributed computing resources. But it does not alter the matrix multiplication algorithm&rsquo;s inherent time complexity. The time complexity remains O(n^3).</p>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<p>According to the analysis, Strassen&rsquo;s approach performs quicker and has a time complexity of O(N^log2(7)). Whereas the naive method has a time complexity of O(N^3) for matrix multiplication. The Python code implementation made it possible to identify the constants connected to each method.</p>
+<p>The naive technique outperforms Strassen&rsquo;s method of memory use. This makes it the better choice for smaller matrices. Contrarily, Strassen&rsquo;s technique is superior for bigger matrices. This is due to its more effective computing strategy - reducing matrix calculations.</p>
+<p>The naive technique&rsquo;s time complexity stayed at O even after implementing it with MapReduce O(N^3). Yet it gave us the chance to use dispersed computer power for more complex calculations.</p>
+<p>Constants for both approaches depend on several variables. These include hardware requirements, data distribution, and algorithm layout among others. The effectiveness of each strategy should be optimized in light of these criteria.</p>
+<p>The matrix sizes and computational resources are deciding factors to decide the most optimal matrix multiplication strategy. The key takeaway is that for smaller matrices go with the naive method. For bigger matrices (size &gt; 200) Strassen&rsquo;s method is preferable.</p>
+<p>Using the findings will help decision-makers select the best matrix multiplication technique. Note that these finds are only applied to square matrices.</p>
+
+
+  </div>
+
+  <script async data-uid="3bc620cccf" src="https://atharva-shah.ck.page/3bc620cccf/index.js"></script>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://atharvashah.netlify.app/tags/python/">python</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://atharvashah.netlify.app/posts/tech/aws-iam-security-case-study/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>AWS Security Best Practices: A Case Study on IAM</span>
+  </a>
+  <a class="next" href="https://atharvashah.netlify.app/posts/tech/technical-debt/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Technical Debt</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Algorithmic Matrix Multiplication Comparison on twitter"
+        href="https://twitter.com/intent/tweet/?text=Algorithmic%20Matrix%20Multiplication%20Comparison&amp;url=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2falgorithmic-matrix-multiplication-comparison%2f&amp;hashtags=python">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Algorithmic Matrix Multiplication Comparison on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2falgorithmic-matrix-multiplication-comparison%2f&amp;title=Algorithmic%20Matrix%20Multiplication%20Comparison&amp;summary=Algorithmic%20Matrix%20Multiplication%20Comparison&amp;source=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2falgorithmic-matrix-multiplication-comparison%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Algorithmic Matrix Multiplication Comparison on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2falgorithmic-matrix-multiplication-comparison%2f&title=Algorithmic%20Matrix%20Multiplication%20Comparison">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Algorithmic Matrix Multiplication Comparison on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2falgorithmic-matrix-multiplication-comparison%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Algorithmic Matrix Multiplication Comparison on whatsapp"
+        href="https://api.whatsapp.com/send?text=Algorithmic%20Matrix%20Multiplication%20Comparison%20-%20https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2falgorithmic-matrix-multiplication-comparison%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Algorithmic Matrix Multiplication Comparison on telegram"
+        href="https://telegram.me/share/url?text=Algorithmic%20Matrix%20Multiplication%20Comparison&amp;url=https%3a%2f%2fatharvashah.netlify.app%2fposts%2ftech%2falgorithmic-matrix-multiplication-comparison%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+  </footer><div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-atharvashah-netlify-app" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function() {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        var disqus_shortname = 'https-atharvashah-netlify-app';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+</article>
+<script>
+  <!-- SCROLLING PROGRESS BAR -->
+  const scrollProgress = document.getElementById('scroll-progress');
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollPercentage = (scrollTop / height) * 85;
+    scrollProgress.style.width = `${scrollPercentage}%`;
+  });
+</script>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://atharvashah.netlify.app/">Atharva Shah</a></span> 
+    
+    |<span><a href="/privacy-policy/" target="_blank">Privacy Policy</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="AtharvaShah" data-description="Support me on Buy me a coffee!" data-message="Every bit of support counts!" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function() {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function() {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) {};
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script></body>
+
+</html>
