@@ -196,6 +196,134 @@ if (!doNotTrack) {
 
 
 <article class="post-entry"> 
+<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/dsa/Trie.webp" alt="Trie">
+</figure>
+  <header class="entry-header">
+    <h2>DSA in Python - Trie
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Free Preview - 5 Trie Problems Construct a trie from scratch class TrieNode: def __init__(self): self.children = [None]*26 # isEndOfWord is True if node represent the end of the word self.isEndOfWord = False class Trie: def __init__(self): self.root = self.getNode() def getNode(self): # Returns new trie node (initialized to NULLs) return TrieNode() def _charToIndex(self,ch): # private helper function. # Converts key current character into index use only &#39;a&#39; through &#39;z&#39; and lower case return ord(ch)-ord(&#39;a&#39;) def insert(self,key): # If not present, inserts key into trie # If the key is prefix of trie node, just marks leaf node pCrawl = self....</p>
+  </div>
+  <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>July 8, 2022
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>1271 words
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>6 mins
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://atharvashah.netlify.app/tags/python/" style="color: var(--secondary)!important;">python</a>
+            </span>
+        </span>
+    </span>
+</span></footer>
+  <a class="entry-link" aria-label="post link to DSA in Python - Trie" href="https://atharvashah.netlify.app/posts/tech/dsapython/trie/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/dsa/Array.webp" alt="Arrays">
+</figure>
+  <header class="entry-header">
+    <h2>DSA in Python - Arrays
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Free Preview - 5 Array Problems Reverse the array def reverseArray(A: list): start, end= 0, len(A)-1 while start&lt;end: A[start], A[end]= A[end], A[start] start&#43;=1 end-=1 A=[1,54,21,51,2,353,2,1,99,121,5,5] reverseArray(A) print(&#34;After reversing:&#34;, A) Find the maximum and minimum element in an array def getMinMax(arr: list, n: int): min = 0 max = 0 # If there is only one element then return it as min and max both if n == 1: max = arr[0] min = arr[0] return min, max # If there are more than one elements, then initialize min # and max if arr[0] &gt; arr[1]: max = arr[0] min = arr[1] else: max = arr[1] min = arr[0] for i in range(2, n): if arr[i] &gt; max: max = arr[i] elif arr[i] &lt; min: min = arr[i] return min, max # Driver Code if __name__ == &#34;__main__&#34;: arr = [1000, 11, 445, 1, 330, 3000] arr_size = 6 min, max = getMinMax(arr, arr_size) print(&#34;Minimum element is&#34;, min) print(&#34;Maximum element is&#34;, max) Find the “Kth” max and min element of an array import sys # function to calculate number of elements less than equal to mid def count(nums, mid): cnt = 0 for i in range(len(nums)): if nums[i] &lt;= mid: cnt &#43;= 1 return cnt def kthSmallest(nums, k): low = sys....</p>
+  </div>
+  <footer class="entry-footer">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>July 7, 2022
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>550 words
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>3 mins
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://atharvashah.netlify.app/tags/python/" style="color: var(--secondary)!important;">python</a>
+            </span>
+        </span>
+    </span>
+</span></footer>
+  <a class="entry-link" aria-label="post link to DSA in Python - Arrays" href="https://atharvashah.netlify.app/posts/tech/dsapython/arrays/"></a>
+</article>
+
+<article class="post-entry"> 
 <figure class="entry-cover"><img loading="lazy" src="https://atharvashah.netlify.app/blog/dsa/Backtracking.webp" alt="Backtracking">
 </figure>
   <header class="entry-header">

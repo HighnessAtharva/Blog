@@ -6,7 +6,25 @@
     <description>Recent content in 💻Tech on Atharva Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Sep 2023 15:18:34 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Dec 2023 00:19:36 +0530</lastBuildDate><atom:link href="https://atharvashah.netlify.app/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zero Day Attacks - The What, Why, and How?</title>
+      <link>https://atharvashah.netlify.app/posts/tech/zero-day-attacks-explained/</link>
+      <pubDate>Thu, 07 Dec 2023 00:19:36 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/zero-day-attacks-explained/</guid>
+      <description>Explore cloud-based Microservice Architecture, security challenges, and best practices for securing microservices in multi-cloud environments, including isolation, fault tolerance, and DevSecOps.</description>
+    </item>
+    
+    <item>
+      <title>Developers Guide to Microservice Security in the Cloud</title>
+      <link>https://atharvashah.netlify.app/posts/tech/microservice-security/</link>
+      <pubDate>Thu, 07 Dec 2023 00:19:35 +0530</pubDate>
+      
+      <guid>https://atharvashah.netlify.app/posts/tech/microservice-security/</guid>
+      <description>Discover Microservice Architecture, a cloud-based approach with best practices for securing microservices through API gateways, defense strategies, and DevSecOps.</description>
+    </item>
+    
     <item>
       <title>AWS Security Best Practices: A Case Study on EC2</title>
       <link>https://atharvashah.netlify.app/posts/tech/aws-ec2-security-case-study/</link>
