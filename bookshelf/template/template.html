@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Bookshelf</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Inter:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* STOLEN FROM https://frontend.horse/articles/thinking-outside-the-box-with-css-grid/ */
+
+    :root {
+      font-size: 62.5%;
+
+      --columns: 3;
+      --c-bg: #182028;
+      --sky-blue: hsl(122deg 33% 84% / 100%);
+      --blue-green: hsl(151deg 28% 63% / 100%);
+      --selective-yellow: hsl(190deg 24% 44% / 100%);
+      --ut-orange: hsl(186deg 26% 31% / 100%);
+      --white: hsl(206deg 24% 28% / 100%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      line-height: 1;
+      font-weight: 400;
+      background: #182028;
+      color: var(--sky-blue);
+      background: var(--c-bg);
+      background: linear-gradient(-45deg, var(--white), var(--c-bg));
+    }
+
+    a:link,
+    a:visited {
+      color: var(--sky-blue);
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1rem;
+      padding: 1rem 2rem;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 4rem auto;
+      padding: 4rem 4rem;
+      max-width: 1800px;
+    }
+
+    h1 {
+      font-size: 6rem;
+      font-weight: 500;
+      text-align: center;
+      margin-top: 6%;
+    }
+
+    h2 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-60%);
+      font-size: 2.2rem;
+      color: var(--sky-blue);
+      font-weight: 500;
+      text-align: center;
+    }
+
+    ul {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(var(--columns), 1fr);
+      list-style: none;
+      width: 100%;
+      margin-top: 15%;
+    }
+
+    li {
+      grid-column-end: span 2;
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+      margin-top: -50%;
+    }
+
+    li::before,
+    li::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-size:
+        50% 100%,
+        50% 100%;
+      background-position: left, right;
+    }
+
+    .tile:nth-child(2n) {
+      grid-column-start: 2;
+    }
+
+    .year::before {
+      z-index: -10;
+      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+      background-repeat: no-repeat;
+      background-image: linear-gradient(-45deg,
+          transparent 65%,
+          var(--sky-blue) 65%),
+        linear-gradient(45deg, transparent 65%, var(--sky-blue) 65%);
+    }
+
+    .year::after {
+      clip-path: polygon(100% 50%, 50% 100%, 0 50%, 20% 50%, 50% 80%, 80% 50%);
+      background-repeat: no-repeat;
+      background-image: linear-gradient(45deg, var(--sky-blue) 35%, transparent 35%),
+        linear-gradient(-45deg, var(--sky-blue) 35%, transparent 35%);
+    }
+
+    .book::before {
+      z-index: -10;
+      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+      background-repeat: no-repeat;
+      background-image: linear-gradient(-45deg,
+          var(--selective-yellow) 53.5%,
+          var(--blue-green) 53.5%,
+          var(--blue-green) 60%,
+          var(--selective-yellow) 60%),
+        linear-gradient(45deg,
+          var(--selective-yellow) 53.5%,
+          var(--blue-green) 53.5%,
+          var(--blue-green) 60%,
+          var(--selective-yellow) 60%);
+    }
+
+    .book::after {
+      clip-path: polygon(100% 50%, 50% 100%, 0 50%, 20% 50%, 50% 80%, 80% 50%);
+      background-repeat: no-repeat;
+      background-image: linear-gradient(45deg,
+          var(--selective-yellow) 40%,
+          var(--blue-green) 40%),
+        linear-gradient(-45deg, var(--selective-yellow) 40%, var(--blue-green) 40%);
+    }
+
+    .book:nth-child(2n)::before {
+      background-image: linear-gradient(-45deg,
+          var(--ut-orange) 53.5%,
+          var(--sky-blue) 53.5%,
+          var(--sky-blue) 60%,
+          var(--ut-orange) 60%),
+        linear-gradient(45deg,
+          var(--ut-orange) 53.5%,
+          var(--sky-blue) 53.5%,
+          var(--sky-blue) 60%,
+          var(--ut-orange) 60%);
+    }
+
+    .book:nth-child(2n)::after {
+      background-image: linear-gradient(45deg,
+          var(--ut-orange) 40%,
+          var(--sky-blue) 40%),
+        linear-gradient(-45deg, var(--ut-orange) 40%, var(--sky-blue) 40%);
+    }
+
+    .book:nth-child(5n)::before {
+      background-image: linear-gradient(-45deg,
+          var(--blue-green) 53.5%,
+          var(--ut-orange) 53.5%,
+          var(--ut-orange) 60%,
+          var(--blue-green) 60%),
+        linear-gradient(45deg,
+          var(--blue-green) 53.5%,
+          var(--ut-orange) 53.5%,
+          var(--ut-orange) 60%,
+          var(--blue-green) 60%);
+    }
+
+    .book:nth-child(5n)::after {
+      background-image: linear-gradient(45deg,
+          var(--blue-green) 40%,
+          var(--ut-orange) 40%),
+        linear-gradient(-45deg, var(--blue-green) 40%, var(--ut-orange) 40%);
+    }
+
+    .book:nth-child(7n)::before,
+    .book:nth-child(7n-4)::before {
+      background-image: linear-gradient(-45deg,
+          var(--sky-blue) 53.5%,
+          var(--white) 53.5%,
+          var(--white) 60%,
+          var(--sky-blue) 60%),
+        linear-gradient(45deg,
+          var(--sky-blue) 53.5%,
+          var(--white) 53.5%,
+          var(--white) 60%,
+          var(--sky-blue) 60%);
+    }
+
+    .book:nth-child(7n)::after,
+    .book:nth-child(7n-4)::after {
+      background-image: linear-gradient(45deg,
+          var(--sky-blue) 40%,
+          var(--white) 40%),
+        linear-gradient(-45deg, var(--sky-blue) 40%, var(--white) 40%);
+    }
+
+    .book:nth-child(9n)::before,
+    .book:nth-child(9n-5)::before {
+      background-image: linear-gradient(-45deg,
+          var(--white) 53.5%,
+          var(--blue-green) 53.5%,
+          var(--blue-green) 60%,
+          var(--white) 60%),
+        linear-gradient(45deg,
+          var(--white) 53.5%,
+          var(--blue-green) 53.5%,
+          var(--blue-green) 60%,
+          var(--white) 60%);
+    }
+
+    .book:nth-child(9n)::after,
+    .book:nth-child(9n-5)::after {
+      background-image: linear-gradient(45deg,
+          var(--white) 40%,
+          var(--blue-green) 40%),
+        linear-gradient(-45deg, var(--white) 40%, var(--blue-green) 40%);
+    }
+
+    img {
+      position: absolute;
+      width: 43%;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-60%);
+      box-shadow: 5px -5px 10px rgb(0 0 0 / 20%);
+      opacity: 0;
+      transition:
+        transform 0.3s,
+        box-shadown 0.3s,
+        opacity ease 0.4s;
+    }
+
+    img:hover {
+      transform: translateX(-50%) translateY(-70%) scale(110%);
+      box-shadow: 5px -5px 20px rgb(0 0 0 / 15%);
+    }
+
+    @media (width >=375px) {
+      footer {
+        font-size: 2rem;
+        padding: 2rem 4rem;
+      }
+
+      h2 {
+        font-size: 4rem;
+      }
+    }
+
+    @media (width >=600px) {
+      :root {
+        --columns: 5;
+      }
+
+      h2 {
+        font-size: 5.2rem;
+      }
+
+      .tile:nth-child(2n) {
+        grid-column-start: auto;
+      }
+
+      .tile:nth-child(4n-1) {
+        grid-column-start: 2;
+      }
+    }
+
+    @media (width >=900px) {
+      :root {
+        --columns: 7;
+      }
+
+      ul {
+        margin-top: 10%;
+      }
+
+      h2 {
+        font-size: 6.2rem;
+      }
+
+      .tile:nth-child(4n-1) {
+        grid-column-start: auto;
+      }
+
+      .tile:nth-child(6n-2) {
+        grid-column-start: 2;
+      }
+    }
+
+    @media (width >=1200px) {
+      :root {
+        --columns: 9;
+      }
+
+      .tile:nth-child(6n-2) {
+        grid-column-start: auto;
+      }
+
+      .tile:nth-child(8n-3) {
+        grid-column-start: 2;
+      }
+    }
+
+    @media (width >=1500px) {
+      :root {
+        --columns: 11;
+      }
+
+      .tile:nth-child(8n-3) {
+        grid-column-start: auto;
+      }
+
+      .tile:nth-child(10n-4) {
+        grid-column-start: 2;
+      }
+    }
+  </style>
+</head>
+
+<body></body>
+
+</html>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="date" content="$date-meta$" />
+  <title>$title$</title>
+</head>
+
+<body>
+  <h1>$title$</h1>
+  <section>
+    <ul>
+      $for(years)$
+      <li class="tile year">
+        <h2>$years.year$</h2>
+      </li>
+      $for(years.books)$
+      <li class="tile book">
+        <a href="$years.books.link$">
+          <img onload="this.style.opacity=1" loading="lazy" src="$years.books.img$" alt="" />
+        </a>
+      </li>
+      $endfor$ $endfor$
+    </ul>
+  </section>
+  <footer>
+    <p>Made by <a href="https://github.com/HighnessAtharva">Atharva</a></p>
+    <p>
+      Inspired by
+      <a href="https://frontend.horse/articles/thinking-outside-the-box-with-css-grid/">Frontend Horse</a>
+    </p>
+  </footer>
+</body>
+
+</html>

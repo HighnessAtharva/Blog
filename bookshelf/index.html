@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Bookshelf</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Inter:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* STOLEN FROM https://frontend.horse/articles/thinking-outside-the-box-with-css-grid/ */
+
+    :root {
+      font-size: 62.5%;
+
+      --columns: 3;
+      --c-bg: #182028;
+      --sky-blue: hsl(122deg 33% 84% / 100%);
+      --blue-green: hsl(151deg 28% 63% / 100%);
+      --selective-yellow: hsl(190deg 24% 44% / 100%);
+      --ut-orange: hsl(186deg 26% 31% / 100%);
+      --white: hsl(206deg 24% 28% / 100%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      line-height: 1;
+      font-weight: 400;
+      background: #182028;
+      color: var(--sky-blue);
+      background: var(--c-bg);
+      background: linear-gradient(-45deg, var(--white), var(--c-bg));
+    }
+
+    a:link,
+    a:visited {
+      color: var(--sky-blue);
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1rem;
+      padding: 1rem 2rem;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 4rem auto;
+      padding: 4rem 4rem;
+      max-width: 1800px;
+    }
+
+    h1 {
+      font-size: 6rem;
+      font-weight: 500;
+      text-align: center;
+      margin-top: 6%;
+    }
+
+    h2 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-60%);
+      font-size: 2.2rem;
+      color: var(--sky-blue);
+      font-weight: 500;
+      text-align: center;
+    }
+
+    ul {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(var(--columns), 1fr);
+      list-style: none;
+      width: 100%;
+      margin-top: 15%;
+    }
+
+    li {
+      grid-column-end: span 2;
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+      margin-top: -50%;
+    }
+
+    li::before,
+    li::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-size:
+        50% 100%,
+        50% 100%;
+      background-position: left, right;
+    }
+
+    .tile:nth-child(2n) {
+      grid-column-start: 2;
+    }
+
+    .year::before {
+      z-index: -10;
+      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+      background-repeat: no-repeat;
+      background-image: linear-gradient(-45deg,
+          transparent 65%,
+          var(--sky-blue) 65%),
+        linear-gradient(45deg, transparent 65%, var(--sky-blue) 65%);
+    }
+
+    .year::after {
+      clip-path: polygon(100% 50%, 50% 100%, 0 50%, 20% 50%, 50% 80%, 80% 50%);
+      background-repeat: no-repeat;
+      background-image: linear-gradient(45deg, var(--sky-blue) 35%, transparent 35%),
+        linear-gradient(-45deg, var(--sky-blue) 35%, transparent 35%);
+    }
+
+    .book::before {
+      z-index: -10;
+      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+      background-repeat: no-repeat;
+      background-image: linear-gradient(-45deg,
+          var(--selective-yellow) 53.5%,
+          var(--blue-green) 53.5%,
+          var(--blue-green) 60%,
+          var(--selective-yellow) 60%),
+        linear-gradient(45deg,
+          var(--selective-yellow) 53.5%,
+          var(--blue-green) 53.5%,
+          var(--blue-green) 60%,
+          var(--selective-yellow) 60%);
+    }
+
+    .book::after {
+      clip-path: polygon(100% 50%, 50% 100%, 0 50%, 20% 50%, 50% 80%, 80% 50%);
+      background-repeat: no-repeat;
+      background-image: linear-gradient(45deg,
+          var(--selective-yellow) 40%,
+          var(--blue-green) 40%),
+        linear-gradient(-45deg, var(--selective-yellow) 40%, var(--blue-green) 40%);
+    }
+
+    .book:nth-child(2n)::before {
+      background-image: linear-gradient(-45deg,
+          var(--ut-orange) 53.5%,
+          var(--sky-blue) 53.5%,
+          var(--sky-blue) 60%,
+          var(--ut-orange) 60%),
+        linear-gradient(45deg,
+          var(--ut-orange) 53.5%,
+          var(--sky-blue) 53.5%,
+          var(--sky-blue) 60%,
+          var(--ut-orange) 60%);
+    }
+
+    .book:nth-child(2n)::after {
+      background-image: linear-gradient(45deg,
+          var(--ut-orange) 40%,
+          var(--sky-blue) 40%),
+        linear-gradient(-45deg, var(--ut-orange) 40%, var(--sky-blue) 40%);
+    }
+
+    .book:nth-child(5n)::before {
+      background-image: linear-gradient(-45deg,
+          var(--blue-green) 53.5%,
+          var(--ut-orange) 53.5%,
+          var(--ut-orange) 60%,
+          var(--blue-green) 60%),
+        linear-gradient(45deg,
+          var(--blue-green) 53.5%,
+          var(--ut-orange) 53.5%,
+          var(--ut-orange) 60%,
+          var(--blue-green) 60%);
+    }
+
+    .book:nth-child(5n)::after {
+      background-image: linear-gradient(45deg,
+          var(--blue-green) 40%,
+          var(--ut-orange) 40%),
+        linear-gradient(-45deg, var(--blue-green) 40%, var(--ut-orange) 40%);
+    }
+
+    .book:nth-child(7n)::before,
+    .book:nth-child(7n-4)::before {
+      background-image: linear-gradient(-45deg,
+          var(--sky-blue) 53.5%,
+          var(--white) 53.5%,
+          var(--white) 60%,
+          var(--sky-blue) 60%),
+        linear-gradient(45deg,
+          var(--sky-blue) 53.5%,
+          var(--white) 53.5%,
+          var(--white) 60%,
+          var(--sky-blue) 60%);
+    }
+
+    .book:nth-child(7n)::after,
+    .book:nth-child(7n-4)::after {
+      background-image: linear-gradient(45deg,
+          var(--sky-blue) 40%,
+          var(--white) 40%),
+        linear-gradient(-45deg, var(--sky-blue) 40%, var(--white) 40%);
+    }
+
+    .book:nth-child(9n)::before,
+    .book:nth-child(9n-5)::before {
+      background-image: linear-gradient(-45deg,
+          var(--white) 53.5%,
+          var(--blue-green) 53.5%,
+          var(--blue-green) 60%,
+          var(--white) 60%),
+        linear-gradient(45deg,
+          var(--white) 53.5%,
+          var(--blue-green) 53.5%,
+          var(--blue-green) 60%,
+          var(--white) 60%);
+    }
+
+    .book:nth-child(9n)::after,
+    .book:nth-child(9n-5)::after {
+      background-image: linear-gradient(45deg,
+          var(--white) 40%,
+          var(--blue-green) 40%),
+        linear-gradient(-45deg, var(--white) 40%, var(--blue-green) 40%);
+    }
+
+    img {
+      position: absolute;
+      width: 43%;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-60%);
+      box-shadow: 5px -5px 10px rgb(0 0 0 / 20%);
+      opacity: 0;
+      transition:
+        transform 0.3s,
+        box-shadown 0.3s,
+        opacity ease 0.4s;
+    }
+
+    img:hover {
+      transform: translateX(-50%) translateY(-70%) scale(110%);
+      box-shadow: 5px -5px 20px rgb(0 0 0 / 15%);
+    }
+
+    @media (width >=375px) {
+      footer {
+        font-size: 2rem;
+        padding: 2rem 4rem;
+      }
+
+      h2 {
+        font-size: 4rem;
+      }
+    }
+
+    @media (width >=600px) {
+      :root {
+        --columns: 5;
+      }
+
+      h2 {
+        font-size: 5.2rem;
+      }
+
+      .tile:nth-child(2n) {
+        grid-column-start: auto;
+      }
+
+      .tile:nth-child(4n-1) {
+        grid-column-start: 2;
+      }
+    }
+
+    @media (width >=900px) {
+      :root {
+        --columns: 7;
+      }
+
+      ul {
+        margin-top: 10%;
+      }
+
+      h2 {
+        font-size: 6.2rem;
+      }
+
+      .tile:nth-child(4n-1) {
+        grid-column-start: auto;
+      }
+
+      .tile:nth-child(6n-2) {
+        grid-column-start: 2;
+      }
+    }
+
+    @media (width >=1200px) {
+      :root {
+        --columns: 9;
+      }
+
+      .tile:nth-child(6n-2) {
+        grid-column-start: auto;
+      }
+
+      .tile:nth-child(8n-3) {
+        grid-column-start: 2;
+      }
+    }
+
+    @media (width >=1500px) {
+      :root {
+        --columns: 11;
+      }
+
+      .tile:nth-child(8n-3) {
+        grid-column-start: auto;
+      }
+
+      .tile:nth-child(10n-4) {
+        grid-column-start: 2;
+      }
+    }
+  </style>
+</head>
+
+<body></body>
+
+</html>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="date" content="" />
+  <title>Atharva’s Bookshelf</title>
+</head>
+
+<body>
+  <h1>Atharva’s Bookshelf</h1>
+  <section>
+    <ul>
+            <li class="tile year">
+        <h2>2024</h2>
+      </li>
+            <li class="tile book">
+        <a href="Placeholder">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://galapagos-pro.com/wp-content/uploads/2021/03/book-placeholder.jpg" alt="" />
+        </a>
+      </li>
+             <li class="tile year">
+        <h2>2023</h2>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/21787.The_Princess_Bride">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327903636i/21787.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/48566725-effective-python">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1571876584i/48566725.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/40613322-the-maddest-obsession">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1552162019i/40613322.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/10534.The_Art_of_War">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1630683326i/10534.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/38447021-5">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1531487218i/38447021.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/36956714-4-jag-n-4">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1520203603i/36956714.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/35801094-3-jag-n-3">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1512547844i/35801094.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/35217950-2-jag-n-2">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1500858091i/35217950.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/34230313-1-jag-n-1">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1495222700i/34230313.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/6219656-the-lottery">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348757577i/6219656.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/485894.The_Metamorphosis">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1646444605i/485894.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/60715988-one-piece-103">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1658945965i/60715988.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/60715990-one-piece-104">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1666793019i/60715990.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/62612807-one-piece-105">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1677566950i/62612807.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/123001698-one-piece-106">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1687322285i/123001698.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/41023400-django-orm-cookbook">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1533154336i/41023400.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/45306631-django-for-apis">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1556273497i/45306631.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/54109255-system-design-interview-an-insider-s-guide">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1592265780i/54109255.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/50048171-django-for-professionals">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1563872246l/50048171.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/38825280-django-for-beginners">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1519767216i/38825280.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/175983.Memories_of_Ice">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1548497075i/175983.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/55401.Deadhouse_Gates">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1385272744i/55401.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/55399.Gardens_of_the_Moon">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1548497031i/55399.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/58356116-gothic-violence">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1701256075i/58356116.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/45363333-harassment-architecture">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1701256052i/45363333.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/34504.Wyrd_Sisters">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1275974472i/34504.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/18369296-conan-vol-16">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1395287738i/21518510.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/17343090-conan-vol-15">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1377295978i/18369295.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/17343090-conan-vol-14">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1360418654i/17343090.jpg" alt="" />
+        </a>
+      </li>
+             <li class="tile year">
+        <h2>2022</h2>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/33396914-assassin-s-quest">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1481883253i/33396914.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/25300956-royal-assassin">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1428234219i/25300956.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/77197.Assassin_s_Apprentice">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1673728072i/77197.jpg" alt="" />
+        </a>
+      </li>
+            <li class="tile book">
+        <a href="https://www.goodreads.com/book/show/52843028-the-mysterious-affair-at-styles">
+          <img onload="this.style.opacity=1" loading="lazy" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1585632445i/52843028.jpg" alt="" />
+        </a>
+      </li>
+           </ul>
+  </section>
+  <footer>
+    <p>Made by <a href="https://github.com/HighnessAtharva">Atharva</a></p>
+    <p>
+      Inspired by
+      <a href="https://frontend.horse/articles/thinking-outside-the-box-with-css-grid/">Frontend Horse</a>
+    </p>
+  </footer>
+</body>
+
+</html>
