@@ -1,16 +1,14 @@
 ---
 title: "Reading Log #1"
-date: 2023-09-28T19:18:34+05:30
-draft: true
+date: 2023-11-28T19:18:34+05:30
+draft: false
 cover: 
-    image: blog/reading-log-2023.webp
-    alt: A collection of all the treasure worthy technical reading I did in 2023. 
-    caption: A collection of all the treasure worthy technical reading I did in 2023. 
-description: "My top tech reads of September 2023 - a curated collection of must-read blogs and articles for fellow enthusiasts!"
+    image: blog/read-log-i.webp
+    alt: A collection of all the treasure worthy technical reading I did, in parts. 
+    caption: A collection of all the treasure worthy technical reading I did, in parts. 
+description: "My top tech reads Vol. 1 - a curated collection of must-read blogs and articles for fellow enthusiasts!"
 tags: ["reading"]
 ---
-
-## September
 
 [You are not an “average” user - by Adam Singer - Hot Takes](https://adamsinger.substack.com/p/you-are-not-an-average-user)
 

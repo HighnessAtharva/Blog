@@ -1,7 +1,7 @@
 ---
 title: "Ten Tips for Visualizing Data Effectively"
 date: 2023-09-18T23:18:34+05:30
-draft: true
+draft: false
 cover: 
     image: blog/data-viz-youtube.webp
     alt: Ten Tips for Visualizing Data Effectively

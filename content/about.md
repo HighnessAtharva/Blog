@@ -18,6 +18,8 @@ hidemeta: true
 
 I am a techbro, a cinephile, a music aficionado, a gamer, a nerd, a bookworm, a data analyst, a software developer, a consultant, a volunteer, a traveler, a foodie, a dreamer, a doer, a thinker, a learner, a friend, a son, a human being and an e/acc enthusiast,
 
+[View timeline of my professional and personal growth](https://highnessatharva.github.io/timeline)
+
 ---
 
 ## What's My Dev Setup and Tech Arsenal?
@@ -45,6 +47,7 @@ I am a techbro, a cinephile, a music aficionado, a gamer, a nerd, a bookworm, a 
 *No emacs, no mechanical keyboards, and no fancy vim keyboard combos for me.* I prefer to stick to the basics and *actually* code (SHOTS FIRED! SHOTS FIRED!). And hey, one monitor is enough to fuel my coding prowess.
 
 Oh, and don't forget to check out my favorite extension packs for VSCode; you'll find the essentials (or maybe some hidden gems) in [this exhaustive (or outdated) list](https://gist.github.com/HighnessAtharva/5dd3dfd048fa5ae68d8c945a552e2d01).
+
 
 ---
 
@@ -107,6 +110,8 @@ Enough about the software, let's get to some of my favorites. Note that this is 
 Gothic literature's eerie embrace, action-packed thrillers, and the enigmatic world of cultist and paranormal tales leave me craving more. Medieval sword and shield fantasies bestow upon me the thrill of chivalrous quests.
 
 Mystery, charm, and a love for the written word bind my soul. In this literary labyrinth, my imagination soars, seeking stories that stir the senses and spark the imagination. A dance with words and worlds, forever enchanting, forever seeking the next page to turn.
+
+[Get a Tour of My Bookshelf](https://atharvashah.netlify.app/bookshelf)
 
 [![Goodreads](/about/books.webp)](https://www.goodreads.com/user/show/47064311-highness-atharva)
 
