@@ -10,7 +10,7 @@ description: "This was an exciting month for movie enthusiasts, with a variety o
 tags: ["Movie Review"]
 ---
 
-{{< fancylink "Wanna see what I watched last month? Check out" "July Movie Recap" "/posts/personal/movie-review/july-2023/" >}}
+{{< fancylink "Wanna see what I watched last month? Check out" "July Movie Recap" "/posts/personal/movie-review/2023/july-2023/" >}}
 
 Hey folks, gather 'round! So, August 2023 was like a movie buffet, and you know I couldn't resist digging in. Picture me, popcorn in hand, ready for a wild cinematic ride. From old gold to shiny new, I hopped through time and genres, soaking in stories that tugged at my heartstrings and set my imagination on fire.
 

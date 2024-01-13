@@ -10,7 +10,7 @@ description: "This was an exciting month for movie enthusiasts, with a variety o
 tags: ["Movie Review"]
 ---
 
-{{< fancylink "Wanna see what I watched last month? Check out" "August Movie Recap" "/posts/personal/movie-review/august-2023/" >}}
+{{< fancylink "Wanna see what I watched last month? Check out" "August Movie Recap" "/posts/personal/movie-review/2023/august-2023/" >}}
 
 September 2023 turned out to be a pretty awesome month for movies! I've been on a bit of a movie binge, and I'm excited to chat about the ones I've watched. So, let's dive in, shall we?
 
