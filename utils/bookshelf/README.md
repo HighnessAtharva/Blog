@@ -1,6 +1,6 @@
 # Instructions to Generate Bookshelf
 
-## Start Docker
+## Start Docker (Desktop)
 
 ## Run this strictly in powershell in the current directory
 
@@ -10,4 +10,4 @@ docker run --rm -v "$(pwd):/data" -u 1000:1000 pandoc/core --standalone --templa
 
 ## Move File to Hugo Public Directory
 
-Then place the generated `index.html` in the public directory
+Then place the generated `index.html` in the public directory and make sure you rename it to `bookshelf.html` so it routes to <your-site>/bookshelf

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>$title$</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&amp;display=swap'>
+    <style>
+        * {
+            border: 0;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --hue: 223;
+            --bg: hsl(var(--hue), 10%, 90%);
+            --fg: hsl(var(--hue), 10%, 10%);
+            --primary: hsl(var(--hue), 90%, 50%);
+            --trans-dur: 0.3s;
+            --trans-timing: cubic-bezier(0.65, 0, 0.35, 1);
+            font-size: calc(16px + (24 - 16) * (100vw - 320px) / (2560 - 320));
+        }
+
+        a {
+            color: var(--primary);
+            transition: color var(--trans-dur);
+        }
+
+        .rounded-pill {
+            border-radius: 1.5rem;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.5rem;
+            color: rgb(231, 231, 231);
+            background-color: var(--bg);
+            transition:
+                background-color var(--trans-dur),
+                color var(--trans-dur);
+            margin-left: 0.5rem;
+        }
+
+        .rounded-pill:hover {
+            background-color: hsl(var(--hue), 10%, 50%);
+            cursor: pointer;
+        }
+
+        body,
+        button {
+            color: var(--fg);
+            font: 1em/1.5 "IBM Plex Sans", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.85) 0%, /* Very dark color with 0.7 opacity */
+            rgba(0, 0, 0, 0.95) 100% /* Very dark color with 0.6 opacity */
+        ),url('./madness.png') no-repeat center center fixed;
+            background-color: var(--bg);
+            background-size: cover;
+            height: 100vh;
+            transition:
+                background-color var(--trans-dur),
+                color var(--trans-dur);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 0 0 3rem;
+            padding-top: 1.5rem;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: var(--fg);
+            border-radius: 0.25em;
+            color: var(--bg);
+            cursor: pointer;
+            padding: 0.375em 0.75em;
+            transition:
+                background-color calc(var(--trans-dur) / 2) linear,
+                color var(--trans-dur);
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .btn:hover {
+            background-color: hsl(var(--hue), 10%, 50%);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 0.375em;
+            margin-bottom: 1.5em;
+        }
+
+        .timeline {
+            margin: auto;
+            padding: 0 1.5em;
+            width: 100%;
+            max-width: 36em;
+        }
+
+        .timeline__arrow {
+            background-color: transparent;
+            border-radius: 0.25em;
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-inline-end: 0.25em;
+            outline: transparent;
+            width: 2em;
+            height: 2em;
+            transition:
+                background-color calc(var(--trans-dur) / 2) linear,
+                color var(--trans-dur);
+            -webkit-appearance: none;
+            appearance: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .timeline__arrow:focus-visible,
+        .timeline__arrow:hover {
+            background-color: hsl(var(--hue), 10%, 50%, 0.4);
+        }
+
+        .timeline__arrow-icon {
+            display: block;
+            pointer-events: none;
+            transform: rotate(-90deg);
+            transition: transform var(--trans-dur) var(--trans-timing);
+            width: 100%;
+            height: auto;
+        }
+
+        .timeline__date {
+            font-size: 0.833em;
+            line-height: 2.4;
+        }
+
+        .timeline__dot {
+            background-color: currentColor;
+            border-radius: 50%;
+            display: inline-block;
+            flex-shrink: 0;
+            margin: 0.625em 0;
+            margin-inline-end: 1em;
+            position: relative;
+            width: 0.75em;
+            height: 0.75em;
+        }
+
+        .timeline__item {
+            position: relative;
+            padding-bottom: 2.25em;
+        }
+
+        .timeline__item:not(:last-child):before {
+            background-color: currentColor;
+            content: "";
+            display: block;
+            position: absolute;
+            top: 1em;
+            left: 2.625em;
+            width: 0.125em;
+            height: 100%;
+            transform: translateX(-50%);
+        }
+
+        [dir="rtl"] .timeline__arrow-icon {
+            transform: rotate(90deg);
+        }
+
+        [dir="rtl"] .timeline__item:not(:last-child):before {
+            right: 2.625em;
+            left: auto;
+            transform: translateX(50%);
+        }
+
+        .timeline__item-header {
+            display: flex;
+        }
+
+        .timeline__item-body {
+            border-radius: 0.375em;
+            overflow: hidden;
+            margin-top: 0.5em;
+            margin-inline-start: 4em;
+            height: 0;
+        }
+
+        .timeline__item-body-content {
+            background-color: hsl(var(--hue), 10%, 50%, 0.2);
+            opacity: 0;
+            padding: 0.5em 0.75em;
+            visibility: hidden;
+            transition:
+                opacity var(--trans-dur) var(--trans-timing),
+                visibility var(--trans-dur) steps(1, end);
+        }
+
+        .timeline__meta {
+            width: 100%;
+        }
+
+        .timeline__title {
+            font-size: 1.5em;
+            line-height: 1.333;
+        }
+
+        /* Expanded state */
+        .timeline__item-body--expanded {
+            height: auto;
+        }
+
+        .timeline__item-body--expanded .timeline__item-body-content {
+            opacity: 1;
+            visibility: visible;
+            transition-delay: var(--trans-dur), 0s;
+        }
+
+        .timeline__arrow[aria-expanded="true"] .timeline__arrow-icon {
+            transform: rotate(0);
+        }
+
+        /* Dark theme */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: hsl(var(--hue), 10%, 10%);
+                --fg: hsl(var(--hue), 10%, 90%);
+                --primary: hsl(var(--hue), 90%, 70%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <svg display="none">
+        <symbol id="arrow">
+            <polyline points="7 10,12 15,17 10" fill="none" stroke="currentcolor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2" />
+        </symbol>
+    </svg>
+    <h1>Favorite Reads Archive</h1>
+    <div class="timeline" style="margin-bottom: 2em; font-size: 0.8em; text-align: center">
+        Explore a curated collection of timeless blogs that I've cherished over the years. This list, constantly evolving, features only the crème de la crème of content.
+    </div>
+    <div id="timeline" class="timeline">
+        <div class="btn-group">
+            <button class="btn" type="button" data-action="expand">Expand All</button>
+            <button class="btn" type="button" data-action="collapse">Collapse All</button>
+        </div>
+
+        $for(years)$
+        <div class="timeline__item">
+            <div class="timeline__item-header">
+                <button class="timeline__arrow" type="button" id="item$years.year$"
+                    aria-labelledby="item$years.year$-name" aria-expanded="false" aria-controls="item$years.year$-ctrld"
+                    aria-haspopup="true" data-item="$years.year$">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                        <use href="#arrow" />
+                    </svg>
+                </button>
+                <span class="timeline__dot"></span>
+                <span id="item$years.year$-name" class="timeline__meta">
+                    <strong class="timeline__title">$years.year$</strong>
+                </span>
+            </div>
+            <div class="timeline__item-body" id="item$years.year$-ctrld" role="region"
+                aria-labelledby="item$years.year$" aria-hidden="true">
+                $for(years.blogs)$
+                <div class="timeline__item-body-content">
+                    <p class="timeline__item-p"><a href="$years.blogs.link$">$years.blogs.title$</a> <span
+                            class="rounded-pill">$years.blogs.tag$</span></p>
+                </div>
+                $endfor$
+            </div>
+        </div>
+        $endfor$
+    </div>
+    <!-- partial -->
+    <script src="./reads.js"></script>
+
+</body>
+
+</html>
