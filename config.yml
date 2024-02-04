@@ -40,15 +40,15 @@ menu:
       url: /about/
       weight: 3
     - identifier: search
-      name: 🔍Search
+      name: 🔍
       url: /search/
       weight: 4
     - identifier: archive
-      name: 📜Archive
+      name: 📜
       url: /archives/
       weight: 4
     - identifier: tags
-      name: 🏷️Tags
+      name: 🏷️
       url: /tags/
       weight: 4
     
@@ -150,18 +150,14 @@ params:
       imageTitle: AS
       
       buttons:
-        # - name: About Me 👋
-        #   url: /about/
-        # - name: Blog 📝
-        #   url: blog
-        # - name : Archive ⌛
-        #   url: /archives/
-        # - name : Tags 🏷️
-        #   url: /tags/
         - name: Projects 🛠️
           url: /projects/
+        - name: 📚
+          url: /bookshelf
+        - name: 📰
+          url: /reads
         - name: Portfolio ⚡
           url: https://highnessatharva.github.io 
-        - name : Resume 🎓
+        - name : CV 🎓
           url: https://github.com/HighnessAtharva/Resume/blob/master/Atharva-Shah-Resume-2023.pdf 
-
+        
