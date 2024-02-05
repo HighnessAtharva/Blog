@@ -71,15 +71,19 @@ But the journey doesn't end there! I've set my sights on mastering React, Docker
 
 ---
 
-## What I Do For a Living?
+## Work Much?
 
 I lead an exciting life with my tech ventures that keep the gears turning and the code flowing!
 
-- At **AccuKnox**, I'm a technical intern with a flair for crafting compelling copy and drafting impressive content for their website, products, and services. Writing captivating blogs on Cloud Native Application Protection Platform (CNAPP), Container Security, and Cloud Security is what I'm adept at.
+- At **[AccuKnox](https://www.accuknox.com/)**, I'm a technical intern with a flair for crafting compelling copy and drafting impressive content for their website, products, and services. Writing captivating blogs on Cloud Native Application Protection Platform (CNAPP), Container Security, and Cloud Security is what I'm adept at.
 
-- I'm also a project consultant and freelance research writer at **PaperPedia**. Delivering high-quality research papers and code implementations on Python, Data Science, ML, and occasionally diving into JavaScript and Web Development tasks keeps me on my toes.
+- As a project consultant and freelance research writer at **PaperPedia**, I deliver high-quality research papers and code implementations on Python, Data Science, ML, and occasionally diving into JavaScript and Web Development tasks keeps me on my toes.
 
-- I get paid by **TutorialsPoint** to come up with programming tutorials, deep-dives, and Python scripts. I already have 42 articles under my belt, there's a lot more to come!
+- I get paid by **[TutorialsPoint](https://www.tutorialspoint.com/authors/atharva-shah)** to come up with programming tutorials, deep-dives, and Python scripts. I already have 80 articles under my belt, there's a lot more to come!
+
+- I'm a **[FreeCodeCamp](https://www.freecodecamp.com/news/author/atharva)** contributor, crafting Python and Data Science tutorials, and sharing my knowledge with the world. I've already published 3 handbooks and a few tutorial style articles, with more in the pipeline.
+
+- I also work as a freelance developer and consultant, helping clients with their tech requirements.
 
 When it comes to fancy websites, API integrations, and end-to-end testing, I'm your go-to guy. If you have any tech requirements, don't hesitate to reach out to me at [highnessatharva@gmail.com](mailto:highnessatharva@gmail.com). Only paid gigs are entertained.
 
